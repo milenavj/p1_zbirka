@@ -1,0 +1,662 @@
+
+\section{Petlje}
+
+
+
+
+
+
+\begin{Exercise}[label=v1.3_01] 
+Tekst
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_02] 
+Tekst
+\linkresenje{v1.3_02}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_02]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_02.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_03] 
+Tekst
+\linkresenje{v1.3_03}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_03]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_03.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_04] 
+Tekst
+\linkresenje{v1.3_04}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_04]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_04.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_05] 
+Tekst
+\linkresenje{v1.3_05}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_05]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_05.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_06] 
+Tekst
+\linkresenje{v1.3_06}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_06]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_06.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_07] 
+Tekst
+\linkresenje{v1.3_07}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_07]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_07.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_08] 
+Tekst
+\linkresenje{v1.3_08}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_08]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_09] 
+Tekst
+\linkresenje{v1.3_09}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_09]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_09.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_10] 
+Tekst
+\linkresenje{v1.3_10}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_10]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_11] 
+Tekst
+\linkresenje{v1.3_11}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_11]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_11.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_12] 
+Tekst
+\linkresenje{v1.3_12}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_12]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_12.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_13] 
+Tekst
+\linkresenje{v1.3_13}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_13]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_13.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_14] 
+Tekst
+\linkresenje{v1.3_14}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_14]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+
+
+\begin{enumerate}
+\item Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  brojeva. Izračunati i ispisati zbir onih brojeva koji su neparni i negativni. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{1 -5 -6 3 -11}#
+#\izlaz{-16}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}\ulaz{-1 1 0 3}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}\ulaz{5 8 13 17}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa  standardnog  ulaza  unosi se realan broj $m$, ceo pozitivan broj $n$ i $n$ realnih brojeva. Izračunati i ispisati koliko je brojeva među unetima manje od zadatog broja $m$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj m:}\ulaz{12.37}#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{11 54.13 -6 13 8}#
+#\izlaz{3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj m:}\ulaz{2}#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}\ulaz{-1 11 4.32 3}#
+#\izlaz{1}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a potom i $n$ karaktera. Za svaki od samoglasnika ispisati koliko puta se pojavio među unetim karakterima. Prilikom implementacije koristiti \textit{switch} naredbu. Ne praviti razliku između malih i velikih slova. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n karaktera:}\ulaz{u A b a o}#
+#\izlaz{Samoglasnik a: 2}#
+#\izlaz{Samoglasnik e: 0}#
+#\izlaz{Samoglasnik i: 0}#
+#\izlaz{Samoglasnik o: 1}#
+#\izlaz{Samoglasnik u: 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{7}#
+#\izlaz{Unesite n karaktera:}\ulaz{j k + E E a e}#
+#\izlaz{Samoglasnik a: 1}#
+#\izlaz{Samoglasnik e: 3}#
+#\izlaz{Samoglasnik i: 0}#
+#\izlaz{Samoglasnik o: 0}#
+#\izlaz{Samoglasnik u: 0}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza unosi se ceo neoznačen broj. Napisati program koji proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu ili ne.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1857}#
+#\izlaz{Cifra 5 se nalazi u zapisu!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{84}#
+#\izlaz{Cifra 5 se ne nalazi u zapisu!}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji unetom broju uklanja nule sa desne strane. Novodobijeni broj ispisati na standardni izlaz.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{12000}#
+#\izlaz{12}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{856}#
+#\izlaz{856}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{140}#
+#\izlaz{14}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Napisati program koji uneti neoznačeni ceo  broj  transformiše  tako što svaku parnu cifru u
+zapisu broja uveća za 1.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{2417}#
+#\izlaz{3517}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{138}#
+#\izlaz{139}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{59}#
+#\izlaz{59}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program koji formira i ispisuje broj koji se dobija izbacivanjem svake druge cifre polaznog broja. Cifre se posmatraju sa desna na levo.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{21854}#
+#\izlaz{284}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{18}#
+#\izlaz{8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1}#
+#\izlaz{1}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standradnog ulaza unose se realan broj $x$ i ceo neoznačen broj $n$. Napisati program koji izračunava $x^n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{4 3}#
+#\izlaz{64.00000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{5.8 5}#
+#\izlaz{6563.56768}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{11.43 0}#
+#\izlaz{1.00000}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standradnog ulaza unose se realan broj $x$ i ceo broj $n$. Napisati program koji izračunava $x^n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 -3}#
+#\izlaz{0.125}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{-3 2}#
+#\izlaz{9.000}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj $n$. Napisati program koji izračunava sumu  $S=x+2\cdot x^2+3\cdot x^3+\ldots+n\cdot x^n$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 3}#
+#\izlaz{S=34.000000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{1.5 5}#
+#\izlaz{S=74.343750}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj $n$. Napisati program koji izračunava sumu  $S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 4}#
+#\izlaz{S=1.937500}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{1.8 6}#
+#\izlaz{S=2.213249}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Napisati program koji sa zadatom tačnošću izračunava sumu $S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{2}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.001}#
+#\izlaz{S=7.388713}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{3}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.01}#
+#\izlaz{S=20.079666}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Napisati program koji sa zadatom tačnošću izračunava sumu $S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}\ldots$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{3}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.001}#
+#\izlaz{S=0.049997}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{3.14}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.01}#
+#\izlaz{S=0.049072}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program koji formira i ispisuje broj koji se dobija izbacivanjem cifara koje su jednake zbiru svojih suseda. Cifre se posmatraju sa desna na levo.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{28631}#
+#\izlaz{2631}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{440}#
+#\izlaz{40}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{242}#
+#\izlaz{22}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji proverava da li je dati prirodan broj palindrom. Broj je palindrom ako se isto čita i sa leve i sa desne strane.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{25452}#
+#\izlaz{Broj je palindrom!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{895}#
+#\izlaz{Broj nije palindrom!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{5}#
+#\izlaz{Broj je palindrom!}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa  standardnog  ulaza  se unosi ceo pozitivan broj $n$, a  zatim i $n$ celih  brojeva. Napisati program koji ispisuje broj sa najvećom cifrom desetica. Ukoliko ima više takvih, ispisati prvi. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{18 365 25 1 78}#
+#\izlaz{78}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa  standardnog  ulaza  se unosi ceo pozitivan broj $n$, a  zatim i $n$ celih  brojeva. Napisati program koji ispisuje broj sa najvećim brojem cifara. Ukoliko ima više takvih, ispisati prvi. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{18 365 25 1 78}#
+#\izlaz{365}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{7}#
+#\izlaz{Unesite n brojeva:}\ulaz{3 892 18 21 639 742 85}#
+#\izlaz{892}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$ celih brojeva. Napisati program koji ispisuje broj sa najvećom vodećom cifrom. Vodeća cifra je prva cifra iz zapisa broja. Ukoliko ima više takvih, ispisati prvi. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{8 964 32 511 27}#
+#\izlaz{964}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{Unesite n brojeva:}\ulaz{41 669 8}#
+#\izlaz{8}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se unose celi pozitivni brojevi $n$ ($n>1$) i $d$, a zatim i $n$ celih brojeva. Napisati program koji izračunava koliko ima parova uzastopnih brojeva među unetim brojevima koji se nalaze na rastojanju $d$. Rastojanje između brojeva je definisano sa $d(x,y)=|y-x|$. Rezultat ispisati na standardni izlaz. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve n i d:}\ulaz{5 2}#
+#\izlaz{Unesite n brojeva:}\ulaz{2 3 5 1 -1}#
+#\izlaz{Broj parova: 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve n i d:}\ulaz{10 5}#
+#\izlaz{Unesite n brojeva:}\ulaz{-3 6 11 -20 -25 -8 42 37 1 6}#
+#\izlaz{Broj parova: 4}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se unosi ceo broj $n$, a zatim i $n$ karaktera. Napisati program koji proverava da li se od unetih karaktera može napisati reč \textit{Zima}.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unestite 1. karakter: }\ulaz{+}#
+#\izlaz{Unestite 2. karakter: }\ulaz{o}#
+#\izlaz{Unestite 3. karakter: }\ulaz{Z}#
+#\izlaz{Unestite 4. karakter: }\ulaz{j}#
+#\izlaz{Ne moze se napisati rec Zima.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{10}#
+#\izlaz{Unestite 1. karakter: }\ulaz{i}#
+#\izlaz{Unestite 2. karakter: }\ulaz{9}#
+#\izlaz{Unestite 3. karakter: }\ulaz{0}#
+#\izlaz{Unestite 4. karakter: }\ulaz{p}#
+#\izlaz{Unestite 5. karakter: }\ulaz{a}#
+#\izlaz{Unestite 6. karakter: }\ulaz{Z}#
+#\izlaz{Unestite 7. karakter: }\ulaz{o}#
+#\izlaz{Unestite 8. karakter: }\ulaz{m}#
+#\izlaz{Unestite 9. karakter: }\ulaz{M}#
+#\izlaz{Unestite 10. karakter: }\ulaz{-}#
+#\izlaz{Moze se napisati rec Zima.}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se unose celi brojevi sve do unosa broja 0. Napisati program koji izračunava i ispisuje razliku najvećeg i najmanjeg unetog broja. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{8 6 5 2 11 7 0}#
+#\izlaz{Razlika: 9}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{8 -1 8 6 0}#
+#\izlaz{Razlika: 9}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se unose realni brojevi sve do unosa broja 0. Napisati program koji izračunava i ispisuje aritmetičku sredinu unetih brojeva. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{8 5.2 6.11 3 0}#
+#\izlaz{Aritmeticka sredina: 5.5775}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji za uneti ceo broj $n$ iscrtava rub kvadrata dimenzije $n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{*****}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{*****}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{**}#
+#\izlaz{**}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji za uneti ceo broj $n$ i karakter $c$ iscrtava rub jednakokrako pravouglog trougla čije su katete dužine $n$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite karakter c:}\ulaz{*}#
+#\izlaz{*}#
+#\izlaz{**}#
+#\izlaz{*\ *}#
+#\izlaz{****}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite karakter c:}\ulaz{+}#
+#\izlaz{+}#
+#\izlaz{++}#
+#\izlaz{+\ +}#
+#\izlaz{+\ \ +}#
+#\izlaz{+++++}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji za uneti ceo broj $n$ iscrtava \textit{krstiće} dimenzije $n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{\ *\ *\ }#
+#\izlaz{\ \ *\ \ }#
+#\izlaz{\ *\ *\ }#
+#\izlaz{*\ \ \ *}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{*\ *}#
+#\izlaz{\ *\ }#
+#\izlaz{*\ *}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji za uneti ceo broj $n$ iscrtava strelice dimenzije $n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{*}#
+#\izlaz{\ *}#
+#\izlaz{***}#
+#\izlaz{\ *}#
+#\izlaz{*}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{*}#
+#\izlaz{\ *}#
+#\izlaz{\ \ *}#
+#\izlaz{\ \ \ *}#
+#\izlaz{*****}#
+#\izlaz{\ \ \ *}#
+#\izlaz{\ \ *}#
+#\izlaz{\ *}#
+#\izlaz{*}#
+\end{upotreba}
+\end{miditest} 
+\end{enumerate}
+
+
+
+
+
+
+

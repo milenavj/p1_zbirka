@@ -1,0 +1,594 @@
+
+\chapter{Predstavljanje podataka}
+
+\section{Nizovi}
+
+
+
+\begin{Exercise}[label=v2.1_01] 
+Tekst
+\linkresenje{v2.1_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_02] 
+Tekst
+\linkresenje{v2.1_02}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_02]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_02.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_03] 
+Tekst
+\linkresenje{v2.1_03}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_03]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_03.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_04] 
+Tekst
+\linkresenje{v2.1_04}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_04]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_04.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_05] 
+Tekst
+\linkresenje{v2.1_05}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_05]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_05.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_06] 
+Tekst
+\linkresenje{v2.1_06}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_06]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_06.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_07] 
+Tekst
+\linkresenje{v2.1_07}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_07]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_07.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_08] 
+Tekst
+\linkresenje{v2.1_08}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_08]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_09] 
+Tekst
+\linkresenje{v2.1_09}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_09]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_09.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.1_10] 
+Tekst
+\linkresenje{v2.1_10}
+\end{Exercise}
+\begin{Answer}[ref=v2.1_10]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{enumerate}
+\item Sa standardnog ulaza se unosi dimenzija niza (broj manji od 100), a zatim i njegovi elementi. Napisati program koji kvadrira sve negativne elemente niza i ispisuje rezultujući niz. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{6}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{12.34 -6 1 8 32.4 -16}#
+#\izlaz{12.34 36 1 8 32.4 256}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{9}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-8.25 6 17 2 -1.5 1 -7 2.65 -125.2}#
+#\izlaz{68.0625 6 17 2 2.25 1 49 2.65 15675.04}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{9.53 5 1 4.89}#
+#\izlaz{9.53 5 1 4.89}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente niza i jedan ceo broj $k$. Napisati program koji štampa indekse elemenata koji su deljivi sa $k$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{10 14 86 20}#
+#\izlaz{Unesite broj k:}\ulaz{5}#
+#\izlaz{0 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{6 14 8 9}#
+#\izlaz{Unesite broj k:}\ulaz{5}#
+#\izlaz{U nizu nema elemenata koji su deljivi brojem 5!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{6}#
+#\izlaz{Unesite elemente niza:}\ulaz{8 9 11 -4 8 11}#
+#\izlaz{Unesite broj k:}\ulaz{2}#
+#\izlaz{0 3 4}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji od 100) i elemente niza, a zatim štampa niz u kojem su najveći i najmanji element niza razmenili mesta. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{8 -2 11 19 4}#
+#\izlaz{8 19 11 -2 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{10}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{46 -2 51 8 -5 66 2 8 3 14}#
+#\izlaz{46 -2 51 8 66 -5 2 8 3 14}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{145}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji učitava karaktere sa ulaza (najviše njih 100) sve do pojave karaktera \textit{*}, a zatim ih ispisuje u redosledu suprotnom od redosleda čitanja. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite karakter:}\ulaz{a}#
+#\izlaz{Unesite karakter:}\ulaz{8}#
+#\izlaz{Unesite karakter:}\ulaz{5}#
+#\izlaz{Unesite karakter:}\ulaz{Y}#
+#\izlaz{Unesite karakter:}\ulaz{I}#
+#\izlaz{Unesite karakter:}\ulaz{o}#
+#\izlaz{Unesite karakter:}\ulaz{?}#
+#\izlaz{Unesite karakter:}\ulaz{*}#
+#\izlaz{? o I Y 5 8 a}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite karakter:}\ulaz{g}#
+#\izlaz{Unesite karakter:}\ulaz{g}#
+#\izlaz{Unesite karakter:}\ulaz{2}#
+#\izlaz{Unesite karakter:}\ulaz{2}#
+#\izlaz{Unesite karakter:}\ulaz{)}#
+#\izlaz{Unesite karakter:}\ulaz{)}#
+#\izlaz{Unesite karakter:}\ulaz{*}#
+#\izlaz{) ) 2 2 g g}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite karakter:}\ulaz{U}#
+#\izlaz{Unesite karakter:}\ulaz{4}#
+#\izlaz{Unesite karakter:}\ulaz{a}#
+#\izlaz{Unesite karakter:}\ulaz{u}#
+#\izlaz{Unesite karakter:}\ulaz{*}#
+#\izlaz{u a 4 U}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji za dva cela broja $x$ i $y$ koja se učitavaju sa standardnog ulaza proverava da li se zapisuju pomoću istih cifara. Napomena: iskoristiti niz za čuvanje broja pojavljivanja svake od cifara. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{251 125}#
+#\izlaz{Brojevi se zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
+#\izlaz{Brojevi se ne zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
+#\izlaz{Brojevi se zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest} 
+
+\item Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), zatim i elementi dvaju nizova $a$ i $b$. Napisati program koji formira i ispisuje niz $c$ čiju prvu polovinu čine elementi niza $b$, a drugu polovinu elementi niza $a$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{Unesite elemente niza a:}\ulaz{4 -8 32}#
+#\izlaz{Unesite elemente niza b:}\ulaz{5 2 11}#
+#\izlaz{5 2 11 4 -8 32}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite elemente niza a:}\ulaz{1 0 -1 0}#
+#\izlaz{Unesite elemente niza b:}\ulaz{5 5 5 3}#
+#\izlaz{5 5 5 3 1 0 -1 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{145}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se unosi dimenzija niza $a$ (broj manji od 100), a zatim i njegovi elementi. Napisati program koji od datog niza formira niz $b$ u koji ulaze elementi niza $a$ koji se pojavljuju tačno 3 puta. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{4 11 4 6 8 4 6 6}#
+#\izlaz{Elementi niza b: 4 6}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{13}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{-8 26 7 2 1 1 7 2 2 2 7 5 1}#
+#\izlaz{Elementi niza b: 7 1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{2}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{9 5}#
+#\izlaz{Elementi niza b: }#
+\end{upotreba}
+\end{miditest}
+
+\item Sa standardnog ulaza se, redom, učitavaju dimenzija i elementi dvaju nizova $a$ i $b$. Napisati program koji određuje njihovu uniju, presek i razliku (redosled prikaza elemenata nije bitan). Pretpostaviti da će nizovi imati manje od 100 elemenata. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza a:}\ulaz{5}#
+#\izlaz{Unesite elemente niza a:}\ulaz{2 8 1 5 2}#
+#\izlaz{Unesite broj elemenata niza b:}\ulaz{3}#
+#\izlaz{Unesite elemente niza b:}\ulaz{5 7 8}#
+#\izlaz{Unija: 2 8 1 5 2 5 7 8}#
+#\izlaz{Presek: 5}#
+#\izlaz{Razlika: 2 1 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza a:}\ulaz{3}#
+#\izlaz{Unesite elemente niza a:}\ulaz{11 4 4}#
+#\izlaz{Unesite broj elemenata niza b:}\ulaz{2}#
+#\izlaz{Unesite elemente niza b:}\ulaz{18 9}#
+#\izlaz{Unija: 11 4 4 18 9}#
+#\izlaz{Presek: }#
+#\izlaz{Razlika: 11 4 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza a:}\ulaz{6}#
+#\izlaz{Unesite elemente niza a:}\ulaz{12 7 9 12 5 1}#
+#\izlaz{Unesite broj elemenata niza b:}\ulaz{4}#
+#\izlaz{Unesite elemente niza b:}\ulaz{1 12 22 12}#
+#\izlaz{Unija: 12 7 9 12 5 1 1 12 22 12}#
+#\izlaz{Presek: 12 12 1}#
+#\izlaz{Razlika: 7 9 5}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji učitava dimenziju niza (broj manji od 100) i elemente niza, a zatim formira i ispisuje niz koji se dobija izbacivanjem svih neparnih elemenata niza. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{8 9 15 12}#
+#\izlaz{8 12}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{6}#
+#\izlaz{Unesite elemente niza:}\ulaz{21 5 3 22 19 188}#
+#\izlaz{22 188}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{133 129 121 101}#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+
+\begin{maxitest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}\ulaz{15 -22 -23 13 18 46 14 -31}#
+#\izlaz{-22 18 46 14}#
+\end{upotreba}
+\end{maxitest}
+
+
+\item Napisati program koji učitava dimenziju niza (broj manji od 100) i elemente niza, a zatim formira i ispisuje niz koji se dobija izbacivanjem svih elemenata koji su prosti brojevi. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza. Napomena: brojeve -1 i 1 smatrati prostim. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{11 5 6 48 8}#
+#\izlaz{6 48 8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{11 5 19 21}#
+#\izlaz{21}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{12 18 9 31 7}#
+#\izlaz{12 18 9}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
+#\izlaz{Unesite elemente niza:}\ulaz{-31 11 -19}#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{-2 15 -11 8 7}#
+#\izlaz{15 8}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Napisati funkciju $int\ prebrojavanje(int\ a[],\ int\ n)$ koja izračunava broj elemenata niza celih brojeva $a$ dužine $n$ koji su manji od poslednjeg elementa niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{11 2 4 9}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{7}#
+#\izlaz{Unesite elemente niza:}\ulaz{7 2 1 14 65 2 8}#
+#\izlaz{4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{25 18 29 30 14}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $int\ prebrojavanje(int\ a[],\ int\ n)$ koja izračunava broj parnih elemenata niza celih brojeva $a$ dužine $n$ koji prethode maksimalnom elementu niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{11 2 4 9}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{7}#
+#\izlaz{Unesite elemente niza:}\ulaz{7 2 1 14 65 2 8}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{25 18 29 30 14}#
+#\izlaz{1}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $int\ prebrojavanje\_cifre(char\ s[],\ int\ n)$ koja izračunava broj cifara u nizu karaktera $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{4}#
+#\ulaz{+}#
+#\ulaz{A}#
+#\ulaz{u}#
+#\ulaz{8}#
+#\izlaz{Broj cifara je: 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{7}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{J}#
+#\ulaz{M}#
+#\ulaz{a}#
+#\ulaz{5}#
+#\ulaz{5}#
+#\ulaz{-}#
+#\ulaz{2}#
+#\izlaz{Broj cifara je: 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{e}#
+#\ulaz{k}#
+#\ulaz{F}#
+#\izlaz{Broj cifara je: 0}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $int\ zbir(int\ a[],\ int\ n,\ int\ i,\ int\ j)$ koja računa zbir elemenata niza celih brojeva $a$ dužine $n$ od pozicije $i$ do pozicije $j$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}\ulaz{11 5 6 48 8}#
+#\izlaz{Unesite vrednosti za i i j:}\ulaz{0 2}#
+#\izlaz{Zbir je: 22}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
+#\izlaz{Unesite elemente niza:}\ulaz{-2 8 1}#
+#\izlaz{Unesite vrednosti za i i j:}\ulaz{8 12}#
+#\izlaz{Greska: nekorektne vrednosti granica!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{7}#
+#\izlaz{Unesite elemente niza:}\ulaz{-2 5 9 11 6 -3 -4}#
+#\izlaz{Unesite vrednosti za i i j:}\ulaz{2 5}#
+#\izlaz{Zbir: 23}#
+\end{upotreba}
+\end{miditest}
+  
+\item Napisati funkciju $float\ zbir\_pozitivnih(float\ a[],\ int\ n,\ int\ k)$ koja izračunava zbir prvih $k$ pozitivnih elemenata realnog niza $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{2.34 1 -12.7 5.2 -8 -6.2 7 14.2}#
+#\izlaz{Unesite vrednost za k:}\ulaz{3}#
+#\izlaz{Zbir je: 8.54}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-6.598 -8.14 -15}#
+#\izlaz{Unesite vrednost za k:}\ulaz{4}#
+#\izlaz{Zbir je: 0.00}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{7}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-35.11 5.29 -1.98 12.1 12.2 -3.33 -4.17}#
+#\izlaz{Unesite vrednost za k:}\ulaz{15}# 
+#\izlaz{Zbir: 29.59}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $void\ kvadriranje(float\ a[],\ int\ n)$ koja kvadrira elemente realnog niza $a$ dužine $n$ koji se nalaze na parnim pozicijama. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{2.34 1 -12.7 5.2 -8 -6.2 7 14.2}#
+#\izlaz{5.4756 1 161.29 5.2 64 -6.2 49 14.2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-6 -8.14 -15}#
+#\izlaz{36 -8.14 225}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{1}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-35.11}#
+#\izlaz{1232.71}#
+\end{upotreba}
+\end{miditest}
+
+\end{enumerate}
+

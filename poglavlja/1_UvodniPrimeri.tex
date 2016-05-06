@@ -1,0 +1,301 @@
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter\ #1}{#1}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+
+\chapter{Kontrola toka}
+
+\section{Uvodni zadaci}
+
+\input{podesavanja/stil_strane.tex}
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+
+
+\begin{Exercise}[label=v1.1_01] 
+Tekst
+\linkresenje{v1.1_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_01]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_02] 
+Tekst
+\linkresenje{v1.1_02}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_02]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_02.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_03] 
+Tekst
+\linkresenje{v1.1_03}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_03]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_03.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_04] 
+Tekst
+\linkresenje{v1.1_04}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_04]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_04.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_05] 
+Tekst
+\linkresenje{v1.1_05}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_05]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_05.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_06] 
+Tekst
+\linkresenje{v1.1_06}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_06]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_06.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_07] 
+Tekst
+\linkresenje{v1.1_07}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_07]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_07.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_08] 
+Tekst
+\linkresenje{v1.1_08}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_08]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_09] 
+Tekst
+\linkresenje{v1.1_09}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_09]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_09.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.1_10] 
+Tekst
+\linkresenje{v1.1_10}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_10]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_10.c}
+\end{Answer}
+
+
+
+
+\begin{Exercise}[label=p1_01] 
+Napisati program koji omogućava korisniku da unese ceo broj, a zatim ispisuje njegov kvadrat i kub. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{4}#
+#\izlaz{Kvadrat:16}#
+#\izlaz{Kub: 64}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_01}
+\end{Exercise}
+\begin{Answer}[ref=p1_01]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1_02] 
+Napisati program koji za unete stranice pravougaonika ispisuje njegov obim i površinu.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite duzine stranica pravougaonika:}\ulaz{2 8}#
+#\izlaz{Obim: 20}#
+#\izlaz{Povrsina: 16}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_02}
+\end{Exercise}
+\begin{Answer}[ref=p1_02]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1_03] 
+Napisati program koji za unete stranice trougla ispisuje njegov obim i površinu.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite duzine stranica trougla:}\ulaz{3 4 5}#
+#\izlaz{Obim: 12.00}#
+#\izlaz{Povrsina: 6.00}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_03}
+\end{Exercise}
+\begin{Answer}[ref=p1_03]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1_04] 
+Napisati program koji za unete dimenzije sobe u metrima (dužinu, širinu i visinu) ispisuje koju površinu treba da okreči moler. Uračunati da na vrata i prozore otpada oko 20\%. Omogućiti i unos cene usluge po kvadratnom metru i izračunati zaradu koju ostvaruje moler.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenzije sobe:}\ulaz{4 4 3}#
+#\izlaz{Unesite cenu po kvadratnom metru:}\ulaz{500}#
+#\izlaz{Moler treba da okreci 51.2 kvadratna metra}#
+#\izlaz{Cena krecenja je 25600}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_04}
+\end{Exercise}
+\begin{Answer}[ref=p1_04]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1_05] 
+Napisati program koji za unetu količinu jabuka u kilogramima i unetu cenu po kilogramu ispisuje ukupan iznos koji treba platiti.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite kolicinu jabuka (u kg):}\ulaz{6}#
+#\izlaz{Unesite cenu (u dinarima):}\ulaz{82}#
+#\izlaz{Molimo platite 492 dinara.}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_05}
+\end{Exercise}
+\begin{Answer}[ref=p1_05]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1_06] 
+Napisati program koji pomaže kasirki da obračuna kusur tako što od nje traži da unese cenu artikla, količinu artikla i iznos koji je dobila od kupca. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom cenu, kolicinu i iznos:}\ulaz{132 2 500}#
+#\izlaz{Kusur je 236 dinara.}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_06}
+\end{Exercise}
+\begin{Answer}[ref=p1_06]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1_07] 
+Napisati program koji prirodnom četvorocifrenom broju koji se unosi sa standardnog ulaza:
+\begin{itemize}
+\item izračunava proizvod cifara
+\item izračunava razliku sume krajnjih i srednjih cifara 
+\item izračunava sumu kvadrata cifara
+\item određuje broj koji se dobija ispisom cifara u obrnutom poretku
+\item određuje broj koji se dobija zamenom cifre jedinice i cifre stotine
+\end{itemize}
+
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{2371}#
+#\izlaz{Proizvod cifara: 42}#
+#\izlaz{Razlika sume krajnjih i srednjih: -7}#
+#\izlaz{Suma kvadrata cifara: 63}#
+#\izlaz{Broj u obrnutom poretku: 1732}#
+#\izlaz{Broj sa zamenjenom cifrom jedinica i stotina: 2173}#
+\end{upotreba}
+\end{maxitest}
+\linkresenje{p1_07}
+\end{Exercise}
+\begin{Answer}[ref=p1_07]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1_08] 
+Napisati program koji izbacuje cifru desetica datom prirodnom broju. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1349}#
+#\izlaz{Rezultat je: 139}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_08}
+\end{Exercise}
+\begin{Answer}[ref=p1_08]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1_09] 
+Napisati program koji u datom prirodnom broju x ubacuje cifru c
+na poziciju p i rezultat ispisuje na standardni izlaz. Brojevi x, c i p se unose sa standardnog ulaza. Podrazumeva se da je broj p manji od ukupnog broja cifara broja i da numeracija cifara počinje od 1. Uputstvo: koristiti funkciju $pow$ iz $math.h$ biblioteke.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom x, c i p:}\ulaz{140 2 2}#
+#\izlaz{Rezultat je: 1420}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_09}
+\end{Exercise}
+\begin{Answer}[ref=p1_09]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1_10] 
+Napisati program koji:
+\begin{itemize}
+\item unetu dužinu u miljama konvertuje u kilometre (1 mi = 1.609344 km)
+\item unetu težinu u funtama konvertuje u kilograme ( 1 lb = 0.45359237 kg)
+\item unetu temperaturu u celzijusima konvertuje u farenhajte ($F=\frac{9\cdot C}{5}+32$)
+\end{itemize}
+
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite duzinu u miljama:}\ulaz{1.8}#
+#\izlaz{Vrednost duzine u kilometrima je: 2.896819}#
+#\izlaz{Unesite tezinu u funtama:}\ulaz{10}#
+#\izlaz{Vrednost tezine u kilogramima je: 4.535923}#
+#\izlaz{Unesite temperaturu u celzjusima:}\ulaz{37.2}#
+#\izlaz{Vrednost temperature u farenhajtima je: 98.960007}#
+\end{upotreba}
+\end{maxitest}
+\linkresenje{p1_10}
+\end{Exercise}
+\begin{Answer}[ref=p1_10]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1_11] 
+Napisati program koji učitava sa standardnog ulaza vreme poletanja i vreme sletanja aviona, a potom ispisuje dužinu trajanja leta. Možemo pretpostaviti da su poletanje i sletanje u istom danu.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite vreme poletanja:}\ulaz{8 5 0}#
+#\izlaz{Unesite vreme sletanja:}\ulaz{12 41 30}#
+#\izlaz{Duzina trajanja leta: 4 h 36 min 30 sec}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1_11}
+\end{Exercise}
+\begin{Answer}[ref=p1_11]
+%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\end{Answer}
+

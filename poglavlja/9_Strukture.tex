@@ -1,0 +1,173 @@
+
+\section{Strukture}
+
+\begin{Exercise}[label=v2.5_01] 
+Tekst
+\linkresenje{v2.5_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.5_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/1/1.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.5_02] 
+Tekst
+\linkresenje{v2.5_02}
+\end{Exercise}
+\begin{Answer}[ref=v2.5_02]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/2/2.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.5_03] 
+Tekst
+\linkresenje{v2.5_03}
+\end{Exercise}
+\begin{Answer}[ref=v2.5_03]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/3/3.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.5_04] 
+Tekst
+\linkresenje{v2.5_04}
+\end{Exercise}
+\begin{Answer}[ref=v2.5_04]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/4/4.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.5_05] 
+Tekst
+\linkresenje{v2.5_05}
+\end{Exercise}
+\begin{Answer}[ref=v2.5_05]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
+\end{Answer}
+
+
+
+\begin{enumerate}
+\item Definisati strukturu kojom se predstavlja kompleksan broj. Napisati funkcije koje izračunavaju zbir, razliku, proizvod i količnik dva kompleksna broja, a zati i program koji učitava dva kompleksna broja i ispisuje vrednost zbira, razlike, proizvoda i količnika. \\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite realni i imaginarni deo prvog broja: }\ulaz{1 2}#
+#\izlaz{Unesite realni i imaginarni deo drugog broja: }\ulaz{-2 3}#
+#\izlaz{Zbir: -1.00+5.00*i}#
+#\izlaz{Razlika: 3.00-1.00*i}#
+#\izlaz{Proizvod: -8.00-1.00*i}#
+#\izlaz{Kolicnik: 0.31-0.54*i}#
+\end{upotreba}
+\end{maxitest}
+
+\item Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) i $boja$ (enumeracioni tip koji uključuje plavu, žutu, crvenu i zelenu boju). Zatim učitati informacije o $n$ lopti (0<$n$<50) i ispisati ukupnu zapreminu, kao i broj crvenih lopti. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj lopti: }\ulaz{4}#
+#\izlaz{Unesite dalje poluprecnike i boje lopti (1-plava, 2-zuta, 3-crvena, 4-zelena): }#
+#\izlaz{1.lopta: }\ulaz{4 1}#
+#\izlaz{2.lopta: }\ulaz{1 3}#
+#\izlaz{3.lopta: }\ulaz{2 3}#
+#\izlaz{4.lopta: }\ulaz{10 4}#
+#\izlaz{Ukupna zapremina: 4494.57}#
+#\izlaz{Broj crvenih lopti: 2}#
+\end{upotreba}
+\end{maxitest}
+
+\item Zimi su prehlade česte i treba unositi više vitamina C. Struktura $Vocka$ sadrži ime voćke (nisku maksimalne dužine 20 karaktera) i količinu vitamina C u miligramima (realan broj). Napisati program koji sa standardnog ulaza učitava podatke o voćkama sve do unosa reči KRAJ i ispisuje ime voćke sa najviše vitamina C. Pretpostaviti da broj voćki neće biti veći od 50. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{jabuka 4.6}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{limun 51}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{kivi 92.7}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{banana 8.7}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{pomorandza 53.2}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{KRAJ}#
+#\izlaz{Voce sa najvise C vitamina je: kivi}#
+\end{upotreba}
+\end{maxitest}
+
+\item Deda Mraz planira kupovinu poklona za studente koji su vredno učili C u toku godine. Na njegovoj listi se nalazi ime i prezime studenta (niske dužina do 50 karaktera) i njegova želja (niska maksimalne dužine 100 karaktera). Napisati program koji će služiti Deda Mrazu kao podsetnik: na osnovu liste koju je napravio, Deda Mraz može da unese ime i prezime studenta i da proveri njegovu želju. Ako ima više studenata sa istim imenom i prezimenom ispisati sve želje. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Ime i prezime studenta:}#
+#\ulaz{Pera Peric}#
+#\izlaz{Njegova zelja:}#
+#\ulaz{privezak za kljuceve}#
+#\izlaz{Jos vrednih studenata (da/ne)?}#
+#\ulaz{da}#
+#\izlaz{Ime i prezime studenta:}#
+#\ulaz{Zika Zikic}#
+#\izlaz{Njegova zelja:}#
+#\ulaz{stap za pecanje}#
+#\izlaz{Jos vrednih studenata (da/ne)?}#
+#\ulaz{da}#
+#\izlaz{Ime i prezime studenta:}#
+#\ulaz{Mara Maric}#
+#\izlaz{Njegova zelja:}#
+#\ulaz{komplet Knutovih knjiga}#
+#\izlaz{Jos vrednih studenata (da/ne)?}#
+#\ulaz{ne}#
+#\izlaz{Za podsecanje uneti ime i prezime:}#
+#\ulaz{Pera Peric}#
+#\izlaz{Novogodisnja zelja: privezak za kljuceve}#
+\end{upotreba}
+\end{maxitest}
+
+\item  Definisati strukturu $Grad$ u kojoj se nalazi ime grada (niska dužine 20 karaktera) i prosečna temperatura u toku decembra (realan broj). Napisati program koji učitava imena $n$ (0<$n$<50) gradova i njihove prosečne temperature, a zatim ispisuje one gradove koji imaju idealnu temperaturu za klizanje: od 3 do 8 stepeni. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Beograd 7}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Uzice 1.5}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Subotica 4}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Zrenjanin 9}#
+#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
+#\izlaz{Beograd}#
+#\izlaz{Subotica}#
+\end{upotreba}
+\end{maxitest}
+
+\begin{maxitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Varsava 11}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Prag 2}#
+#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
+\end{upotreba}
+\end{maxitest}
+ 
+
+\item Definisati strukturu $ParReci$ koja sadrži reč na srpskom jeziku i odgovarajući prevod na engleski jezik. Zatim sa standardnog ulaza sve do kraja ulaza učitavati parove reči i, posebno, za rečenicu koja se zadaje sa ulaza ispisati prevod - ako je reč u rečenici nepoznata umesto nje ispisati odgovarajući broj zvezdica. Reči neće biti duže od 50 karaktera, ukupan broj parova reči neće biti veći od 100, a ukupna dužina rečenice neće biti veća od 100 karaktera. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{zima winter}#
+#\ulaz{godina year}#
+#\ulaz{sreca happiness}#
+#\ulaz{programiranje programming}#
+#\ulaz{caj tea}#
+#\izlaz{Unesite recenicu za prevod: }#
+#\ulaz{piti caj zimi je sreca}#
+#\izlaz{**** tea **** ** happiness}#
+\end{upotreba}
+\end{miditest}
+
+\end{enumerate}
+ 
+
+
+
+
+
+
+
+
+
+
+\section{Rešenja}
+\shipoutAnswer
+
+

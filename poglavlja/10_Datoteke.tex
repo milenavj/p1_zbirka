@@ -1,0 +1,266 @@
+\chapter{Datoteke}
+
+\begin{Exercise}[label=v3_01] 
+Tekst
+\linkresenje{v3_01}
+\end{Exercise}
+\begin{Answer}[ref=v3_01]
+\includecode{resenja/3_Datoteke/1/1.c}
+\end{Answer}
+
+\begin{Exercise}[label=v3_02] 
+Tekst
+\linkresenje{v3_02}
+\end{Exercise}
+\begin{Answer}[ref=v3_02]
+\includecode{resenja/3_Datoteke/2/2.c}
+\end{Answer}
+
+\begin{Exercise}[label=v3_03] 
+Tekst
+\linkresenje{v3_03}
+\end{Exercise}
+\begin{Answer}[ref=v3_03]
+\includecode{resenja/3_Datoteke/3/3.c}
+\end{Answer}
+
+\begin{Exercise}[label=v3_04] 
+Tekst
+\linkresenje{v3_04}
+\end{Exercise}
+\begin{Answer}[ref=v3_04]
+\includecode{resenja/3_Datoteke/4/4.c}
+\end{Answer}
+
+\begin{Exercise}[label=v3_05] 
+Tekst
+\linkresenje{v3_05}
+\end{Exercise}
+\begin{Answer}[ref=v3_05]
+\includecode{resenja/3_Datoteke/5/5.c}
+\end{Answer}
+
+\begin{Exercise}[label=v3_06] 
+Tekst
+\linkresenje{v3_06}
+\end{Exercise}
+\begin{Answer}[ref=v3_06]
+\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+
+
+
+
+
+\begin{enumerate}
+\item Napisati program koji prebrojava mala slova u datoteci $test.txt$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{test.txt}#
+#\datoteka{Abcd EFGH+ijKLMN}#
+
+#\naslovIzlaz#
+#\izlaz{Broj malih slova je: 5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovDat{test.txt}#
+#\datoteka{PrograMiranje}#
+
+#\naslovIzlaz#
+#\izlaz{Broj malih slova je: 11}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji prepisuje svaki treći karakter datoteke $ulaz.txt$ u datoteku $izlaz.txt$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{ulaz.txt}#
+#\datoteka{Volim programiranje.}#
+#\naslovDat{izlaz.txt}#
+#\datoteka{Vipgmae}#
+\end{upotreba}
+\end{miditest}
+
+\item Kao argumenti komandne linije se zadaju ime datoteke i ceo broj $k$. Napisati program koji na  standardni izlaz ispisuje sve linije zadate datoteke čija je dužina veća od k. Može se pretpostaviti da dužina linije neće biti veća od 80 karaktera.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out test.txt 7}#
+#\naslovDat{test.txt}#
+#\datoteka{Teme koje su obradjivane:}#
+#\datoteka{Petlje}#
+#\datoteka{Funkcije}#
+#\datoteka{Nizovi}#
+#\datoteka{Strukture}#
+
+#\naslovIzlaz#
+#\izlaz{Teme koje su obradjivane:}#
+#\izlaz{Funkcije}#
+#\izlaz{Strukture}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out test.txt}#
+
+#\naslovIzlaz#
+#\izlaz{Greska: Pogresan broj argumenata!}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji prebrojava koliko se linija datoteke $ulaz.txt$ završava niskom $s$ koja se učitava sa standardnog ulaza. Može se pretpostaviti da dužina linije neće biti veća od 80 karaktera, kao i da dužina niske $s$ neće biti veća od 20 karaktera.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{ulaz.txt}#
+#\datoteka{abcde abcde}#
+#\datoteka{abcde aab}#
+#\datoteka{abcde abcde abcde}#
+#\datoteka{abcde abcde Aab}#
+#\datoteka{abcde abcde ab}#
+#\datoteka{abcde abcde abcde abcde}#
+
+#\naslovInt#
+#\izlaz{Unesite nisku s:}\ulaz{ab}#
+#\izlaz{Broj linija: 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovDat{ulaz.txt}#
+#\datoteka{abcde abcde}#
+#\datoteka{abcde}#
+#\datoteka{abcde abcde AB}#
+
+#\naslovInt#
+#\izlaz{Unesite nisku s:}\ulaz{ab}#
+#\izlaz{Broj linija: 0}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji pronalazi maksimum brojeva zapisanih u datoteci $brojevi.txt$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{brojevi.txt}#
+#\datoteka{2.36 -16.11 5.96 8.88}#
+#\datoteka{-265.31 54.96 38.4}#
+
+#\naslovIzlaz#
+#\izlaz{Najveci broj je: 54.96}#
+\end{upotreba}
+\end{miditest}
+
+\item U datoteci $studenti.txt$ se nalaze informacije o studentima: prvo broj studenata, a zatim u pojedinačnim linijama korisničko ime i pet poslednjih ocena koje je student dobio. Napisati program koji pronalazi studenta koji je ostvario najbolji uspeh i ispisuje njegove podatke. Pretpostaviti da broj studenata neće biti veći od 100.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{studenti.txt}#
+#\datoteka{mr15239 10 9 9 8 10}#
+#\datoteka{mi14005 8 8 9 8 10}#
+#\datoteka{ml15112 9 8 8 7 10}#
+#\datoteka{mr15007 10 10 10 10 10}#
+#\datoteka{mn13208 7 7 9 6 10}#
+
+#\naslovIzlaz#
+#\izlaz{korisnicko ime: mr15007, prosek ocena: 10.00}#
+\end{upotreba}
+\end{miditest}
+
+\item U datoteci $tacke.txt$ se nalazi prvo broj tačaka, a zatim u pojedinačnim linijama x i y koordinate tačke. Napisati program koji u datoteku $rastojanja.txt$ upisuje rastojanje svake od pročitanih tačaka od koordinatnog početka, a na standardni izlaz koordinate tačke koja je najudaljenija. Koristiti strukturu $Tacka$ sa poljima $x$ i $y$, kao i funkciju kojom se računa rastojanje. Pretpostaviti da broj tačaka u datoteci neće biti veći od 50. \\  
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{tacke.txt}#
+#\datoteka{4}#
+#\datoteka{11 -2}#
+#\datoteka{3 5}#
+#\datoteka{8 -8}#
+#\datoteka{0 4}#
+
+#\naslovDat{rastojanja.txt}#
+#\datoteka{11.18}#
+#\datoteka{5.29}#
+#\datoteka{11.31}#
+#\datoteka{4.00}#
+
+#\naslovIzlaz#
+#\izlaz{Najudaljenija je tačka: 8 -8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{tacke.txt}#
+#\datoteka{-2}#
+#\datoteka{0 0}#
+#\datoteka{9 -8}#
+
+#\naslovIzlaz#
+#\izlaz{Greska: Nedozvoljen broj tacaka!}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji za reč $s$ maksimalne dužine 20 karaktera koja se zadaje sa standardnog ulaza u datoteku $rotacije.txt$ upisuje sve rotacije reči $s$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite rec: }\ulaz{abcde}#
+
+#\naslovDat{rotacije.txt}#
+#\datoteka{abcde}#
+#\datoteka{bcdea}#
+#\datoteka{cdeab}#
+#\datoteka{deabc}#
+#\datoteka{eabcd}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Napisati program koji linije koji se učitavaju sa standardnog ulaza sve do kraja ulaza prepisuje u datoteku $izlaz.txt$ i to, ako je prilikom pokretanja zadata opcija \textit{-v} ili \textit{-V} samo one linije koje počinju velikim slovom, ako je zadata opcija \textit{-m} ili \textit{-M} samo one linije koje počinju malim slovom, a ako je opcija izostavljena sve linije. Pretpostaviti da linije neće biti duže od 80 karaktera. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out -m}#
+#\naslovInt#
+#\izlaz{Unesite recenice: }#
+#\ulaz{programiranje u C-u je zanimljivo}#
+#\ulaz{Volim programiranje!}#
+#\ulaz{Kada porastem bicu programer!}#
+#\ulaz{u slobodno vreme programiram}#
+
+#\naslovDat{izlaz.txt}#
+#\datoteka{programiranje u C-u je zanimljivo}#
+#\datoteka{u slobodno vreme programiram}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out -V}#
+#\naslovInt#
+#\izlaz{Unesite recenice: }#
+#\ulaz{programiranje u C-u je zanimljivo}#
+#\ulaz{Volim programiranje!}#
+#\ulaz{Kada porastem bicu programer!}#
+#\ulaz{u slobodno vreme programiram}#
+
+#\naslovDat{izlaz.txt}#
+#\datoteka{Volim programiranje!}#
+#\datoteka{Kada porastem bicu programer!}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out -k}#
+#\naslovInt#
+#\izlaz{Greska: Pogresno pokretanje programa!}#
+\end{upotreba}
+\end{miditest}
+
+
+
+\end{enumerate}
+
+
+
+
+\section{Rešenja}
+\shipoutAnswer

@@ -1,0 +1,332 @@
+
+\section{Pokazivači i argumenti komandne linije}
+
+
+\begin{Exercise}[label=v2.2_01] 
+Tekst
+\linkresenje{v2.2_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.2_02] 
+Tekst
+\linkresenje{v2.2_02}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_02]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_02.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.2_03] 
+Tekst
+\linkresenje{v2.2_03}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_03]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_03.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.2_04] 
+Tekst
+\linkresenje{v2.2_04}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_04]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_04.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.2_05] 
+Tekst
+\linkresenje{v2.2_05}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_05]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_05.c}
+\end{Answer}
+
+\begin{Exercise}[label=v2.2_06] 
+Tekst
+\linkresenje{v2.2_06}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_06]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+
+\begin{enumerate}
+\item Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. Napomena: može se koristi funkcija \textit{atoi}.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out 5 mkp 9 -2 11 a 4 2}#
+#\naslovInt#
+#\izlaz{Zbir numerickih argumenata: 29}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out ab u f hj}#
+#\naslovInt#
+#\izlaz{Zbir numerickih argumenata: 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out 33 1 p 44}#
+#\naslovInt#
+#\izlaz{Zbir numerickih argumenata: 78}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovInt#
+#\izlaz{Zbir numerickih argumenata: 0}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji ispisuje argumente komandne linije koji počinju slovom \textit{z}.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out zima jabuka zvezda Zrak}#
+#\naslovInt#
+#\izlaz{zima zvezda}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out bundeva pomorandza}#
+#\naslovInt#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out sanke zapad zujanje}#
+#\naslovInt#
+#\izlaz{zapad zujanje}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovInt#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slovo \textit{z}.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out zvezda grozd jesen kisa}#
+#\naslovInt#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out AZBUKA deda mraz }#
+#\naslovInt#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out japan caj}#
+#\naslovInt#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovInt#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+
+
+\item Napisati program koji na osnovu broja \textit{n} koji se zadaje kao argument komandne linije ispisuje cele brojeve iz intervala $[-n,\ n]$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out 2}#
+#\naslovInt#
+#\izlaz{-2 -1 0 1 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out 4}#
+#\naslovInt#
+#\izlaz{-4 -3 -2 -1 0 1 2 3 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out 0}#
+#\naslovInt#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+
+\begin{maxitest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovInt#
+#\izlaz{Greska: nedostaje argument komandne linije!}#
+\end{upotreba}
+\end{maxitest}
+
+\item Napisati program koji proverava da li se među zadatim argumentima komandne linije nalaze barem dva ista.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out pec zima deda mraz pec}#
+#\naslovInt#
+#\izlaz{Medju argumentima ima istih.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out xyz abc abc abc efgh}#
+#\naslovInt#
+#\izlaz{Medju argumentima ima istih.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out 11 15 abc 888}#
+#\naslovInt#
+#\izlaz{Medju argumentima nema istih.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovInt#
+#\izlaz{Medju argumentima nema istih.}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $void\ modifikacija(char*\ s,\ char*\ t, int*\ br\_modifikacija)$ koja na osnovu niske $s$ formira nisku $t$ tako što svako malo slovo zamanjuje velikim. Broj izvršenih modifikacija se čuva u okviru argumenta $br\_modifikacija$. Pretpostaviti da niska $s$ neće biti duža od 20 karaktera. Napisati i program koji testira rad napisane funkcije. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite nisku:}\ulaz{123abc789XY}#
+#\izlaz{Modifikovana niska je: 123ABC789XY}#
+#\izlaz{Broj modifikacija je: 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite nisku:}\ulaz{zimA}#
+#\izlaz{Modifikovana niska je: ZIMA}#
+#\izlaz{Broj modifikacija je: 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite nisku:}\ulaz{SNEG}#
+#\izlaz{Modifikovana niska je: SNEG}#
+#\izlaz{Broj modifikacija je: 0}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $void\ interpunkcija(int*\ br\_tacaka,\ int*\ br\_zareza)$ koja za tekst koji se unosi sa standardnog ulaza sve do kraja ulaza prebrojava broj tačaka i zareza. Napisati zatim program koji testira napisanu funkciju.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite tekst:}#
+#\ulaz{a.b.c.d}#
+#\ulaz{a,b,,c,d,e}#
+#\izlaz{Broj tacaka: 3}#
+#\izlaz{Broj zareza: 5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite tekst:}#
+#\ulaz{.....789.....}#
+#\izlaz{Broj tacaka: 10}#
+#\izlaz{Broj zareza: 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite tekst:}#
+#\ulaz{sunce}#
+#\izlaz{Broj tacaka: 0}#
+#\izlaz{Broj zareza: 0}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funkciju $void\ par\_nepar(int\ a[],\ int\ n,\ int\ parni[],\ int*\ pn,\ int\ neparni[],\ int*\ nn)$ koja razbija niz $a$ na niz parnih i niz neparnih brojeva. Pokazivači $pn$ i $nn$ redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata. Pretpostaviti da dužina niza $a$ neće biti veća od 50. Napisati program koji testira napisanu funkciju.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{8}#
+#\izlaz{Unesite elemente niza: }#
+#\ulaz{1 8 9 -7 -16 24 77 4}#
+#\izlaz{Niz parnih brojeva: 8 -16 24 4}#
+#\izlaz{Niz neparnih brojeva: 1 9 -7 77}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{5}#
+#\izlaz{Unesite elemente niza: }#
+#\ulaz{2 4 6 8 -11}#
+#\izlaz{Niz parnih brojeva: 2 4 6 8}#
+#\izlaz{Niz neparnih brojeva: -11}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{2}#
+#\izlaz{Unesite elemente niza: }#
+#\ulaz{-15 15}#
+#\izlaz{Niz parnih brojeva: }#
+#\izlaz{Niz neparnih brojeva: -15 15}#
+\end{upotreba}
+\end{miditest}
+
+\item Napisati funckiju $void\ min\_max(float\ a[],\ int\ n,\ float*\ min,\ float*\ max)$ koja izračunava minimalni i maksimalni element niza $a$ dužine $n$. Napisati zatim i program koji učitava niz realnih brojeva maksimalne dužine 50 i ispisuje vrednosti minimuma i maksimuma na tri decimale. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{5}#
+#\izlaz{Unesite elemente niza: }#
+#\ulaz{24.16 -32.11 999.25 14.25 11}#
+#\izlaz{Minimum: -32.110}#
+#\izlaz{Maksimum: 999.250}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{4}#
+#\izlaz{Unesite elemente niza: }#
+#\ulaz{-5.126 -18.29 44 29.268}#
+#\izlaz{Minimum: -18.290}#
+#\izlaz{Maksimum: 44.000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{1}#
+#\izlaz{Unesite elemente niza: }#
+#\ulaz{4.16}#
+#\izlaz{Minimum: 4.160}#
+#\izlaz{Maksimum: 4.160}#
+\end{upotreba}
+\end{miditest}
+\end{enumerate}
+
