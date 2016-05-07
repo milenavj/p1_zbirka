@@ -52,8 +52,8 @@ Tekst
 
 
 
-\begin{enumerate}
-\item Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. Napomena: može se koristi funkcija \textit{atoi}.\\
+\begin{Exercise}[label=p2.2_] 
+Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. Napomena: može se koristi funkcija \textit{atoi}.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out 5 mkp 9 -2 11 a 4 2}#
@@ -83,8 +83,15 @@ Tekst
 #\izlaz{Zbir numerickih argumenata: 0}#
 \end{upotreba}
 \end{miditest}
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
 
-\item Napisati program koji ispisuje argumente komandne linije koji počinju slovom \textit{z}.\\
+
+\begin{Exercise}[label=p2.2_] 
+Napisati program koji ispisuje argumente komandne linije koji počinju slovom \textit{z}.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out zima jabuka zvezda Zrak}#
@@ -114,8 +121,15 @@ Tekst
 #\izlaz{}#
 \end{upotreba}
 \end{miditest}
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
 
-\item Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slovo \textit{z}.\\
+
+\begin{Exercise}[label=p2.2_] 
+Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slovo \textit{z}.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out zvezda grozd jesen kisa}#
@@ -147,7 +161,15 @@ Tekst
 \end{miditest}
 
 
-\item Napisati program koji na osnovu broja \textit{n} koji se zadaje kao argument komandne linije ispisuje cele brojeve iz intervala $[-n,\ n]$. \\
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.2_] 
+ Napisati program koji na osnovu broja \textit{n} koji se zadaje kao argument komandne linije ispisuje cele brojeve iz intervala $[-n,\ n]$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out 2}#
@@ -178,7 +200,15 @@ Tekst
 \end{upotreba}
 \end{maxitest}
 
-\item Napisati program koji proverava da li se među zadatim argumentima komandne linije nalaze barem dva ista.  \\
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.2_] 
+ Napisati program koji proverava da li se među zadatim argumentima komandne linije nalaze barem dva ista.  \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out pec zima deda mraz pec}#
@@ -209,7 +239,15 @@ Tekst
 \end{upotreba}
 \end{miditest}
 
-\item Napisati funkciju $void\ modifikacija(char*\ s,\ char*\ t, int*\ br\_modifikacija)$ koja na osnovu niske $s$ formira nisku $t$ tako što svako malo slovo zamanjuje velikim. Broj izvršenih modifikacija se čuva u okviru argumenta $br\_modifikacija$. Pretpostaviti da niska $s$ neće biti duža od 20 karaktera. Napisati i program koji testira rad napisane funkcije. \\
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.2_] 
+ Napisati funkciju $void\ modifikacija(char*\ s,\ char*\ t, int*\ br\_modifikacija)$ koja na osnovu niske $s$ formira nisku $t$ tako što svako malo slovo zamanjuje velikim. Broj izvršenih modifikacija se čuva u okviru argumenta $br\_modifikacija$. Pretpostaviti da niska $s$ neće biti duža od 20 karaktera. Napisati i program koji testira rad napisane funkcije. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -235,7 +273,15 @@ Tekst
 \end{upotreba}
 \end{miditest}
 
-\item Napisati funkciju $void\ interpunkcija(int*\ br\_tacaka,\ int*\ br\_zareza)$ koja za tekst koji se unosi sa standardnog ulaza sve do kraja ulaza prebrojava broj tačaka i zareza. Napisati zatim program koji testira napisanu funkciju.\\
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.2_] 
+ Napisati funkciju $void\ interpunkcija(int*\ br\_tacaka,\ int*\ br\_zareza)$ koja za tekst koji se unosi sa standardnog ulaza sve do kraja ulaza prebrojava broj tačaka i zareza. Napisati zatim program koji testira napisanu funkciju.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -265,7 +311,15 @@ Tekst
 \end{upotreba}
 \end{miditest}
 
-\item Napisati funkciju $void\ par\_nepar(int\ a[],\ int\ n,\ int\ parni[],\ int*\ pn,\ int\ neparni[],\ int*\ nn)$ koja razbija niz $a$ na niz parnih i niz neparnih brojeva. Pokazivači $pn$ i $nn$ redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata. Pretpostaviti da dužina niza $a$ neće biti veća od 50. Napisati program koji testira napisanu funkciju.\\
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.2_] 
+ Napisati funkciju $void\ par\_nepar(int\ a[],\ int\ n,\ int\ parni[],\ int*\ pn,\ int\ neparni[],\ int*\ nn)$ koja razbija niz $a$ na niz parnih i niz neparnih brojeva. Pokazivači $pn$ i $nn$ redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata. Pretpostaviti da dužina niza $a$ neće biti veća od 50. Napisati program koji testira napisanu funkciju.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -297,7 +351,15 @@ Tekst
 \end{upotreba}
 \end{miditest}
 
-\item Napisati funckiju $void\ min\_max(float\ a[],\ int\ n,\ float*\ min,\ float*\ max)$ koja izračunava minimalni i maksimalni element niza $a$ dužine $n$. Napisati zatim i program koji učitava niz realnih brojeva maksimalne dužine 50 i ispisuje vrednosti minimuma i maksimuma na tri decimale. \\
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.2_] 
+ Napisati funckiju $void\ min\_max(float\ a[],\ int\ n,\ float*\ min,\ float*\ max)$ koja izračunava minimalni i maksimalni element niza $a$ dužine $n$. Napisati zatim i program koji učitava niz realnih brojeva maksimalne dužine 50 i ispisuje vrednosti minimuma i maksimuma na tri decimale. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -328,5 +390,12 @@ Tekst
 #\izlaz{Maksimum: 4.160}#
 \end{upotreba}
 \end{miditest}
-\end{enumerate}
+
+\linkresenje{p2.2_}
+\end{Exercise}
+\begin{Answer}[ref=p2.2_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
+\end{Answer}
+
+
 
