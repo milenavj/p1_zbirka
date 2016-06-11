@@ -1,11 +1,925 @@
 \appendix
 \chapter{Ispitni zadaci}
 
+\section{Testovi/Kolokvijumi}
+
+\subsection{Programiranje 1, i-smer, kolokvijum}
+\subsubsection{Grupa I}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati URM program koji izra\v cunava funkciju:
+    $$ f(x,y)= \begin{cases}
+                  2x - y & 2x \geq y \\
+                  3y & \text{ina\v ce} \\
+                  \end{cases}  $$
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Sa standardnog ulaza unose se jedan karakter (\textbf{p} ili \textbf{n}) i dva
+pozitivna trocifrena broja. Na osnovu vrednosti unetog
+karaktera izra\v cunati i ispisati na standardni izlaz:\\
+\textbf{p} -  zbir cifara na parnim pozicijama unetih brojeva\\
+\textbf{n} -  zbir cifara na neparnim pozicijama unetih brojeva\\
+Cifre se broje sa desne strane, tako da cifri jedinice odgovara
+pozicija 1.\\ U slu\v caju gre\v ske ( ukoliko karakter nije p ili n
+ili nisu uneti pozitivni trocifreni brojevi )ispisati -1.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{p 235 645}#
+#\izlaz{8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{n 567 101}#
+#\izlaz{14}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{A 432 543}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{p 102 1234}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=v1.3_01] 
+Sa standardnog ulaza u\v citava se pozitivan ceo broj i ceo broj {\tt
+i} ($1\le i$).  Na standardni izlaz ispisati broj koji se dobija kada
+se ukloni {\tt i}-ta cifra broja.  Cifre se broje sa desne strane,
+tako da cifri jedinice odgovara pozicija 1.  Neispravan ulaz je kada
+se unose negativan broj ili negativna vrednost ili nula za {\tt i} i u
+tom slu\v caju na standardni izlaz ispisati -1.  Ukoliko broj nema
+{\tt i}-tu cifru broj ostaje nepromenjen.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{35243 2}#
+#\izlaz{3523}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{-14423 1}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{1234 5}#
+#\izlaz{1234}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{523156 6}#
+#\izlaz{23156}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\subsubsection{Grupa II}
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati URM program koji izra\v cunava funkciju:
+    $$ f(x,y,z)=4x + 2y + 3z $$
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Korisnik unosi 7 karaktera koji predstavljaju indeks studenta koji je
+oblika OOGGBBB. OO je oznaka smera i moze biti mi, ma, mr, ms, mm,
+mv. GG je oznaka godine upisa. BBB je oznaka broja koji moze biti
+jednocifren, trocifren ili dvocifren sa vode\' cim nulama. Na osnovu
+ovih podataka na standarni izlaz ispisati ime smera kome student
+pripada i indeks u obliku broj/godina. U slu\v caju gre\v ske (
+ukoliko OO kao oznaka smera nije ispravna ili ostali karakteri nisu
+brojevi ) ispisati -1. Nazivi smerova su: mi - informatika, ma -
+astronomija, mr - racunarstvo i informatika, ms - statistika, mm -
+teorijska matematika, mp - primenjena matematika \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{mi11275}#
+#\izlaz{informatika 275/2011}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{mm98005}#
+#\izlaz{teorijska matematika 5/1998}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{mo23112}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{ms12001}#
+#\izlaz{statistika 1/2012}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=v1.3_01] 
+Dr\v zavna lutrija do\v sla je na ideju o novoj igri na sre\' cu.  Ova
+igra na sre\' cu igra se tako \v sto se izvu\v ce jedan broj od 1000
+do 9999, Nagrada koja se dobija ako ste pogodili izvu\v cen broj je
+proizvod njegovih parnih cifara i samog broja.  Va\v s zadatak je da
+na osnovu izu\v cenog broja izra\v cunate nagradu koja se dobija.  Kao
+ulaz sigurno \'cete dobiti ispravan broj. Ako broj nema parnih cifara,
+nagrada je sam taj broj. Na standardni izlaz ispi\v site nagradu. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{1321}#
+#\izlaz{2642}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{3284}#
+#\izlaz{210176}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{1111}#
+#\izlaz{1111}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{2222}#
+#\izlaz{35552}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\ulaz{6031}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{4321}#
+#\izlaz{34568}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\subsubsection{Grupa III}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati URM program koji izra\v cunava funkciju:
+    $$ f(x,y,z)= \begin{cases}
+                  2 \cdot x + 2 \cdot y & x \leq z \\
+                  z + 3 & \text{ina\v ce} \\
+                  \end{cases}  $$
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati C program koji sa standardnog ulaza u\v citava 4 velika slova
+abedece i nenegativan ceo broj k. Program na standardni izlaz ispisuje
+4 karaktera koji se dobijaju cikli\v ckim pomeranjem (u okviru
+karakterske tabele) unetih karaktera za k mesta unapred. Na primer,
+karakter A pomeren za 4 mesta unapred postaje E dok karakter Z pomeren
+za 3 mesta unapred postaje C. U slu\v caju neispravnog ulaza ispisati
+-1. Ulaz se smatra neispravnim ako neki od unetih karaktera ne
+predstavlja veliko slovo abecede ili ako je broj k negativan,
+pretpostaviti da se na ulazu uvek zadaje ta\v cno \v cetiri karaktera. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{BABA 3}#
+#\izlaz{EDED}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{DEDA 26}#
+#\izlaz{DEDA}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{ZABC 53}#
+#\izlaz{ABCD}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{PERA -2}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{abcd}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati C program koji sa standardnog ulaza u\v citava dva \v
+cetvorocifrena, pozitivna, cela broja i proverava da li je broj koji
+se dobija u\v ce\v sljavanjem unetih brojeva palindrom. Ako uneti
+brojevi imaju cifre a1 a2 a3 a4 i b1 b2 b3 b4 tada su cifre u\v ce\v
+sljanog broja a1 b1 a2 b2 a3 b3 a4 b4. Broj je palindrom ako se \v
+cita isto sa obe strane. Ukoliko je broj palindrom ispisati na
+standardni izlaz 1, ukoliko nije tada ispisati 0, a u slu\v caju
+neispravnog ulaza ispisati -1, neispravnim ulazom smatraju se
+negativni brojevi i brojevi sa brojem cifara manjim ili ve\' cim od 4.
+\begin{center}
+\begin{verbatim}
+Primer 1:        Primer 2:        Primer 3:        Primer 4:
+1234 5678        1342 2431        1234 4321        -1234 1234
+0                1                1                -1
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
 
 
 \section{Kvalifikacioni zadaci}
 
 \section{Ispitni rokovi}
+
+\subsection{Programiranje 1, i--smer, Zavr\v{s}ni ispit, januar, 23.01.2016.}
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (5 poena)}  Napisati URM program koji izra\v cunava funkciju:
+    $$ f(x)= \begin{cases}
+                  2(x - 1) & x \geq 1 \\
+                  0 & \text{ina\v ce} \\
+                  \end{cases}  $$
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\subsubsection{Grupa I}
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (4 poena)} Napisati C program koji sa standardnog ulaza učitava
+pozitivan ceo broj \textbf{n} i na standardni izlaz ispisuje n-ti član
+niza:
+
+ $$ a_n= \begin{cases}
+                  1 & n = 1 \\
+                  3 & n = 2 \\
+                  2a_{n-1} + 3a_{n-2} + 4 & n \geq 3 \\
+                  \end{cases}  $$
+
+Neispravnim ulazom se smatra broj manji ili jednak nuli i u tom
+slučaju na standardni izlaz ispisati -1.  Dozvoljeno je kori\v
+s\'cenje nizova. Maksimalna vrednost za {\bf n} je {\bf 2000}.
+\begin{center}
+\begin{verbatim}
+Primer 1:       Primer 2:     Primer 3:     Primer 4:  
+-123            1             4             10
+-1              1             39            29523
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (7 poena)} 
+Napisati funkciju
+\begin{center} 
+\begin{verbatim}void f3(char s[], char* c, int* br)
+\end{verbatim}
+\end{center}
+   koja proverava koji karakter se najviše puta pojavio u niski \textit{s}.
+   Taj karakter smešta u promenljivu \textbf{c}, a broj pojavljivanja karaktera u promenljivu \textbf{br}.
+   Sa standardnog ulaza unosi se linija teksta (može sadr\v zati beline).
+   Testirati rad funkcije \textit{f3} programom koji sa standardnog ulaza učitava nisku i na standarni izlaz ispisati koji karakter se najviše puta pojavio u okviru nje, kao i broj pojavljivanja datog karaktera. Ukoliko postoji više karaktera čiji broj pojavljivanja odgovara maksimalnom broju, ispisati onaj sa najmanjim kodom u ASCII tabeli.
+Pretpostaviti da se na sistemu koristi {\tt ASCII} tabela.
+\begin{center}
+\begin{verbatim}
+Primer 1:       Primer 2:     Primer 3:     Primer 4:  
+abrakadabra     cvrcak        jorgovan99    s@rm@ ponek@d v@zno
+a 5             c 2           9 2           @ 4        
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (7 poena)} Igra "Minesweeper" sastoji se od pravougaone table
+   izdeljene na polja koja mogu biti bezbedna ili su na njima
+   rasporedjene mine. Sa standardnog ulaza učitavaju se
+   brojevi \textbf{n} i \textbf{m} koji označavaju dimenzije
+   table. Nako toga unosi se broj \textbf{k} kojim se navodi koliko
+   mina se nalazi na tabli i k pozicija (\textbf{i}, \textbf{j}) koja
+   označavaju pozicije na tabli na kojima se nalaze mine (i-ti red,
+   j-ta kolona). Korisnik zatim unosi koordinate \textbf{l}
+   i \textbf{m} za koje se na standardni izlaz ispisuje broj koliko se
+   mina nalazi na poljima susednim tom polju. Proveravaju se susedna
+   polja u svih 8 pravaca.  Ukoliko je polje koje se proverava baš
+   mina ispisati na standardni izlaz \textbf{MINA}. Maksimalna
+   dimenzija table je 100x100. Ukoliko je neka od koordinata izvan
+   dimenzija table ili su dimenzije table izvan dozvoljenih granica na
+   standardni izlaz ispisati -1.
+
+
+\begin{center}
+\begin{verbatim}
+Primer 1:           Primer 2:           Primer 3:         Primer 4:
+Ulaz:    Izlaz:     Ulaz:    Izlaz:     Ulaz     Izlaz:   Ulaz:     Izlaz:
+4 4      2          4 4      MINA       2 3      -1       101 10    -1
+3                   2                   1                 1
+0 1                 0 1                 -1 0              45 67
+1 2                 1 2                 2 2               30 31
+2 3                 2 3
+2 2                 2 3
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (7 poena)} Služba gradskog prevoza želi da u svakom trenutku ima
+evidenciju o opterećenju svojih linija. Na linijama saobraćaju
+autobusi, trolejbusi i tramvaji. Maksimalni kapacitet autobusa je 25,
+trolejbusa 20 a tramvaja 30 putnika. Broj linije je pozitivan ceo broj
+manji od 1000.
+\begin{description}
+\item[a)] {\em (1 poen)}  Definisati strukturu kojim se opisuje vozilo. Svako vozilo zadato je svojim tipom (autobus, trolejbus, tramvaj), linijom na kojom saobraća i
+   brojem putnika koji se u vozilu nalaze.
+\item[b)] {\em (6 poena)}  Sa standardnog ulaza se učitava
+   broj \textbf{n ($0 \le n \le 1000$), n vozila i broj linije}. Za
+   zadati broj linije na standardni izlaz ispisati ukupan broj
+   slobodnih mesta na toj liniji. Koristiti strukturu definisanu pod
+   {\bf a)}. Neispravnim ulazom smatraju se negativan broj putnika,
+   broj putnika veći od dozvoljenog kapaciteta za navedeni tip vozila,
+   tip vozila sa nazivom različitim od navedena tri ili negativan broj
+   linije. U tim slučajevima na standardni izlaz ispisati -1.
+\end{description}
+\begin{small}
+\begin{center}
+\begin{verbatim}
+Primer 1:                      Primer 2:                       Primer 3:             
+Ulaz:               Izlaz:     Ulaz:             Izlaz:        Ulaz              Izlaz:
+4                   8          3                 -1            3                 0
+autobus   27 18                AutobuS 65 23                   tramvaj 7  29
+trolejbus 28 15                Kombi   1  10                   tramvaj 3  15
+tramvaj   7  29                minibus 6  21                   tramvaj 12 12
+autobus   27 24               6                                14
+27
+_________________________________________________________________________________________
+Primer 4:                           Primer 5:
+Ulaz:               Izlaz:          Ulaz:        Izlaz:
+2                   -1              500          -1
+autobus 26 20  
+tramvaj 9  32
+\end{verbatim}
+\end{center}
+\end{small}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+
+
+% -------------------------------------------
+%              GRUPA 2
+% -------------------------------------------
+
+\subsubsection{Grupa II}
+
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (4 poena)}
+Napisati C program koji za uneti niz  celobrojnog tipa i neparne 
+dužine $n$ ispisuje po $k$ elemenata levo i desno od sredine 
+niza (ne uključujući sredinu). Prvo se unosi $n$, zatim niz 
+od $n$ elemenata, a na kraju i $k$.
+
+Neispravnim ulazom se smatra niz parne ili negativne dužine, 
+kao i $k$ koje je negativno ili veće od polovine dužine niza. 
+U slučaju neispravnog ulaza ispisati -1 na standardni izlaz.
+
+Smatrati da je maksimalna veličina niza 100 elemenata.
+\begin{center}
+\begin{verbatim}
+Primer 1:       Primer 2:             Primer 3:     Primer 4:   Primer 5:
+Ulaz:           Ulaz:                 Ulaz:         Ulaz:       Ulaz:
+5               9                     6             3           5
+1 2 3 4 5       9 8 7 6 5 4 3 2 1     1 2 3 4 5 6   1 2 3       10 9 8 7 6
+2               1                     5             10          -6
+Izlaz:          Izlaz:                Izlaz:        Izlaz:      Izlaz:
+1 2 3 4         6 4                   -1            -1          -1
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (7 poena)}
+Barkod kodira broj proizvoda dodajući mu kontrolnu cifru. Kontrolna
+   cifra izračunava se kao poslednja cifra zbira jedinica u zapisu
+   svake cifre broja proizvoda. Npr. broj 86012 kodira se kao 1000
+   0110 0000 0001 0010 a kontrolna cifra je (1 + 1 + 1 + 1 + 1) mod 10
+   = 5.
+
+   Napisati funkciju 
+   \begin{center} 
+\begin{verbatim}
+void kontrolna(char broj_proizvoda[], int *kont)   
+\end{verbatim}
+   \end{center} koja izračunava kontrolnu cifru broja proizvoda, koji
+   se zadaje kao niska, i smešta ga u promenljivu kont. Niska može
+   sadržati beline i druge karaktere, ali ih pri izračunavanju
+   kontrolne cifre treba ignorisati, samo cifre uzeti u obzir.
+
+   Napisati program koji sa standardnog ulaza učitava liniju teksta kojom je predstavljen broj proizvoda i testira funkciju kontrolna.
+   Na standardni izlaz ispisati izračunatu kontrolnu cifru. Maksimalna dužina niske je 100 karaktera.
+
+   Na sistemu se koristi {\tt ASCII} tabela. Ukoliko ne postoji ni jedna cifra u barkodu, onda je kontrolna cifra {\tt 0}.
+
+\begin{center}
+\begin{verbatim}
+Primer 1:       Primer 2:     Primer 3:     Primer 4:  
+Ulaz:           Ulaz:         Ulaz:         Ulaz:
+86012           001-223-4     555 555-555   AB-- 123 --BA
+Izlaz:          Izlaz:        Izlaz:        Izlaz:
+5               6             8             4
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (7 poena)} Napisati program koji ispisuje prosek zbirova svih kolona
+matrice čiji su elementi tipa \verb|double|.
+
+Prvo se unosi broj redova matrice $n$, zatim broj kolona matrice
+$m$, i onda $n$ redova sa po $m$ elemenata.
+
+Maksimalna veli\v cina matrice je 100 $\times$ 100. Ukoliko je ulaz neispravan (za vrednosti $m$ i $n$) 
+prekinuti rad programa i ispisati {\tt -1}.
+
+
+\begin{center}
+\begin{verbatim}
+Primer 1:           Primer 2:           Primer 3:           Primer 4:
+Ulaz:               Ulaz:               Ulaz:               Ulaz:
+4 4                 3 2                 2 4                 3 3
+0.2 0.4 0.7 1.3     1.23 4.56           0.1 0.2 0.3 0.4     1 0 0
+1.5 1.7 2.2 2.5     0 1                 10.98 7.65 4.32 1   0 1 0
+6.3 -1.2 4.4 5.6    7.89 1              Izlaz:              0 0 1
+1.6 2.3 2.8 3.5     Izlaz:              6.2375              Izlaz:
+Izlaz:              7.8400                                  1.000
+8.9500                
+
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_01] 
+{\em (7 poena)}
+Profesor na jednom predmetu je uveo pravilo da njegov predmet
+polo\v zio svako ko na ispitu osvoji broj poena koji je veći ili
+jednak od proseka poena umanjenog za 10.
+
+\begin{description}
+\item[a)] {\em (1 poen)} Definisati strukturu kojom se opisuje svaki student sa indeksom ({\tt indeks-u-obliku-alas-naloga})
+          i brojem poena koji je osvojio (ceo broj od 0 do 100).
+
+\item[b)] {\em (6 poena)} Na ulazu ćete dobiti $n$ ($0 \le n \le 300$), broj studenata koji su polagali predmet,
+i onda $n$ redova oblika
+\begin{verbatim}
+indeks-u-obliku-alas-naloga broj-poena-na-ispitu
+\end{verbatim}
+ Ispisati na standardni izlaz
+indekse svih studenata koji su polozili ovaj predmet.  Koristiti strukturu definisanu pod {\bf a)}.
+
+\end{description}
+
+Smatrati da je indeks pravilno zapisan. U slu\v caju lo\v se vrednosti za $n$ ili lo\v se vrednosti za broj poena ispisati -1.
+\begin{center}
+\begin{verbatim}
+Primer 1:           Primer 2:         Primer 3:        Primer 4:        Primer 5:
+Ulaz:               Ulaz:             Ulaz:            Ulaz:            Ulaz:
+4                   4                 6                4                3
+mi12123 80          mr12345 91        mi00001 20       mi11110 100      mi05900 98
+mi15512 70          ml54321 80        mi00002 32       mi11111 99       mi13034 120
+mi15555 99          mv36925 29        mi00003 96       mi11112 98       mi11234 34
+mi13333 40          mi14725 55        mi00004 52       mi11113 87       Izlaz:
+Izlaz:              Izlaz:            mi00005 41       Izlaz:           -1
+mi12123             mr12345           mi00006 15       mi11110
+mi15512             ml54321           Izlaz:           mi11111
+mi15555             mi14725           mi00003          mi11112
+                                      mi00004          mi11113
+                                      mi00005
+
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\subsection{Programiranje 1, i--smer, Zavr\v{s}ni ispit, februar, 11.02.2016.}
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati URM program koji izra\v cunava funkciju:
+    $$ f(x)= \begin{cases}
+                  2(x - y) & x \geq y \\
+                  0 & \text{ina\v ce} \\
+                  \end{cases}  $$
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Sa standardnog ulaza se unose celi, nenegativni brojevi sve dok se ne
+unese nula. Na standardni izlaz ispisati kvadrat razlike najvećeg i
+najmanjeg od unetih brojeva. U slučaju neispravnog ulaza ispisati
+-1. Ulaz se smatra neispravnim ukoliko je unet negativan broj ili
+ukoliko nije unet ni jedan broj osim nule.
+
+
+\begin{center}
+\begin{verbatim}
+Primer 1:       Primer 2:       Primer 3:     Primer 4:  
+1 2 3 4 5 0     1 2 3 -4 5 0    1 1 1 1 0     0
+16              -1              0             -1
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+    \textbf{a)} Napisati funkciju
+    \begin{verbatim}
+    void mutacije(char s1[], char s2[], int *br)   
+    \end{verbatim}
+    koja za navedene niske \textbf{s1} i \textbf{s2} iste dužine proverava na koliko mesta se karakteri niski razlikuju i rezultat upisuje u promenljivu \textbf{br}.
+    Pri pore\dj enju ignorisati beline.
+    \\
+    \\
+    \textbf{b)} Napisati program koji sa standardnog ulaza učitava dve DNK sekvence (niske karaktera A, T, C ili G) iste dužine i testira funkciju \textbf{mutacije} ispisujući vrednost promenljive \textbf{br} na standardni izlaz. Maksimalna du\v zina niski je 100 karaktera. U slučaju neispravnog ulaza ispisati -1. Ulaz se smatra neispravnim ukoliko neka od niski sadrži karakter koji ne pripada skupu \{A, T, C, G\} i nije belina
+   ili je jedna niska duža od druge.
+     
+
+
+\begin{center}
+\begin{verbatim}
+Primer 1:       Primer 2:        Primer 3:        Primer 4:  
+
+Ulaz:           Ulaz:            Ulaz:            Ulaz:
+AGTC CGCT AGT   ATCG ATCG ATCG   AGTTGTTGT ATGX   AGGGATGGATGAG
+AGTCC GC TAGT   ACCG ATGC ATCA   TTGTATGGA GGAT   TTGATGACGT
+
+Izlaz:          Izlaz:           Izlaz:           Izlaz:
+0               3                -1               -1
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_01] 
+    Krtice su organizovano napale baštu šargarepa. Farmer je napravio
+  pravougaonu mapu bašte dimenzija n x m, gde je znakom \textbf{X}
+  označio polje na kome se nalazi krtičnjak, dok je netaknuta polja
+  označio znakom \textbf{-} . Kako je bašta velika, farmer želi da bez
+  mnogo muke izračuna broj krtičnjaka u proizvoljnom pravougaonom delu
+  svoje bašte. Sa standardnog ulaza unose se dimenzije mape \textbf{n}
+  i \textbf{m}, zatim mapa bašte sa oznakama krtičnjaka i netaknutih
+  polja. Nakon toga farmer zadaje koordinate
+  (\textbf{i1}, \textbf{j1}) i (\textbf{i2}, \textbf{j2}) koje
+  označavaju gornji levi i donji desni ugao pravouganika za koji
+  farmer pita koliko krtičnjaka je obuhvaćeno na mapi tim
+  pravouganikom. Na standardni izlaz ispisati broj krtičnjaka u
+  zadatom pravouganiku. Maksimalna dimenzija mape je 100 x 100. U
+  slučaju neispravnih koordinata uglova pravouganika, neispravnih
+  dimenzija mape ili oznaka na tabli van skupa \{ X, - \} na
+  standardni izlaz ispisati -1.
+     
+
+
+\begin{center}
+\begin{verbatim}
+Primer 1:        Primer 2:        Primer 3:        Primer 4:  
+
+Ulaz:            Ulaz:            Ulaz:            Ulaz:
+4 4              4 4              4 4              4 4
+- - X -          - - X K          - X - X          - X - X
+X - - -          - X - -          X - X -          X - X -
+- X - X          X - - -          - X - X          - X - X
+X - X -          X X - X          X - X -          X - X -
+0 1              1 2              3 4              0 0
+2 2              3 4              1 2              3 3
+
+Izlaz:           Izlaz:           Izlaz:           Izlaz:
+2                -1               -1               8
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_01] 
+    Vlasnik pekare želi da utvrdi koliko je isplativa prodaja njegovog
+    najskupljeg peciva.
+    
+    \textbf{a)} Definisati strukturu \textbf{Pecivo} koja sadrži
+    podatke o imenu peciva (najviše 50 karaktera) i ceni peciva
+    (realan broj tipa double).  \\ \\ \textbf{b)} Sa standardnog ulaza
+    se unosi broj \textbf{n} a zatim mesečni obračun sa n prodatih
+    komada peciva, pri \v cemu je naziv peciva u jednom redu a cena u
+    narednom. Na standardni izlaz ispisati ukupnu zaradu od prodaje
+    najskupljeg peciva zaokruženu na dva decimalna mesta. U slučaju
+    negativne cene peciva ili u slu\v caju da je n manje ili jednako
+    nuli ispisati -1. Pretpostaviti da će samo jedna vrsta peciva
+    imati maksimalnu cenu.
+     
+
+
+\begin{center}
+\begin{verbatim}
+Primer 1:              Primer 2:        Primer 3:        Primer 4:  
+
+Ulaz:                  Ulaz:            Ulaz:            Ulaz:
+5                      3                -1               5
+burek sa mesom         mafin                             kroasan sa dzemom
+100.50                 -50.03                            49.99
+buhtla sa cokoladom    krofna                            kroasan sa dzemom
+50.00                  56.00                             49.99
+burek sa mesom         krofna                            kroasan sa dzemom
+100.50                 56.00                             49.99
+rol virsla                                               kroasan sa dzemom
+75.00                                                    49.99
+kroasan sa kremom                                        kroasan sa dzemom
+60.00                                                    49.99
+
+Izlaz:                 Izlaz            Izlaz:           Izlaz:
+201.00                 -1               -1               249.95
+\end{verbatim}
+\end{center}
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+
+\subsection{1. Grupa, I smer, Programiranje 1 2015/2016, ispit, jun}
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati URM program koji izra\v cunava funkciju:
+    $$ f(x)= \begin{cases}
+                  x - y + 2  & x + 2 \geq y \\
+                  0 & \text{ina\v ce} \\
+                  \end{cases}  $$
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati program koji sa standardnog ulaza u\v citava prvo pozitivan
+  ceo broj $n$ ( $0 < n \le 99$), a zatim i $n$ celih brojeva i izra\v
+  cunava zbir parnih. Izra\v cunati zbir ispisati na standardni
+  izlaz. U slu\v caju gre\v ske (za $n \leq 0$ ili $n \ge 100 $ ) na
+  standardni izlaz ispisati -1.
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 5 1 2 3 4 5  & 5 -1 -2 -3 -4 -5 & 3 10 -10 10 & -3 1 2 3 \\ \hline 
+  Izlaz & 6 & -6 & 10 & -1 \\ \hline 
+\end{tabular}
+\normalsize
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_01] 
+Napisati funkciju \emph{void f(char s[], char c, int *prva, int*
+  poslednja)} koja u datoj nisci {\em s} pronalizi indekse prvog i
+  poslednjeg pojavljivanja datog karaktera {\em c} i dobijene
+  vrednosti redom sme\v sta u promenljive {\em prva} i {\em
+    poslednja}. Ukoliko se karakter ne pojavljuje u nisci, obe
+  vrednosti postaviti na {\em -1}. 
+
+  Potom napisati program koji sa standardnog ulaza u\v citava
+  karaktersku nisku (du\v zine ne ve\' ce od 150 karaktera) i jedan
+  karakter i nakon toga poziva funkciju {\em f}, a potom na standarni
+  izlaz ispisuje indekse prvog i poslednjeg pojavljivanja datog
+  karaktera u datoj nisci. Pretpostaviti da je ulaz u ispravnom
+  formatu.
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & ucionica i  & ucionica u & ucionica o & ucionica p \\ \hline 
+  Izlaz & 2 5 & 0 0 & 3 3 & -1 -1 \\ \hline 
+\end{tabular}
+\normalsize
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_01] 
+Sa standarnog ulaza se zadaje dimenzija kvadratne matrice $n$ (
+  $0 < n \le 99$), a zatim elementi matrice koji su celi brojevi. Na
+  standardni izlaz ispisati redni broj vrste koja ima najve\' ci zbir
+  elemenata. U slu\v caju gre\v ske (za $n \leq 0$ ili $n \ge 100 $ )
+  na standardni izlaz ispisati -1.
+
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 
+  \mlcell{3 \\ 1 2 3 \\ 4 5 6 \\ 7 8 9 }&
+  \mlcell{5 \\ 1 0 0 0 0 \\ 1 1 0 0 0 \\ 1 1 1 0 0 \\ 1 1 1 1 0 \\ 1 1 1 1 1} & 
+  \mlcell{5 \\ 1 0 -1 0 -1 \\ -1 0 -1 5 0 \\ 1 -1 -1 0 1 \\ 1 0 -3 0 -1 \\ 0 -1 0 -1 0} & 
+  \mlcell{-3 \\ 1 2 3 \\ 4 5 6 \\ 7 8 9 }\\ 
+  \hline 
+  Izlaz &
+  \mlcell{2} &  
+  \mlcell{4} &  
+  \mlcell{1}&  
+  -1\\ 
+  \hline 
+\end{tabular}
+\normalsize
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.3_01] 
+Definisati strukturu $Tacka$ za predstavljanje ta\v caka u ravni
+  sa koordinatama tipa $double$. Sa standardnog ulaza se ucitava broj
+  $n$ ( $1 < n \le 99$), zatim niz od $n$ ta\v caka tako sto se unosi prvo
+  $x$, pa $y$ koordinata za svaku ta\v cku. Za zadate ta\v cke
+  ispisati na standardni izlaz du\v zinu najdu\v ze du\v zi koja se
+  mo\v ze obrazovati od neke dve ta\v cke iz u\v citanog
+  niza. Rezultat ispisati na dve decimale. Du\v zina du\v zi izme\dj u
+  ta\v caka $a(x1; y1)$ i $b(x2; y2)$ se ra\v cuna po
+  formuli $$\sqrt{(x1-x2)^2+(y1-y2)^2}$$ U slu\v caju gre\v ske (za $n
+  \leq 1$ ili $n \ge 100 $ ) na standardni izlaz ispisati -1.
+
+
+
+\small
+\begin{tabular}{ |l|l|l|l|l| }
+\hline 
+  Ulaz & 
+  \mlcell{2 \\ 3 4 \\ 0 0 }&
+  \mlcell{3 \\ 0.5 0.3  \\ -5 3 \\ 3 4 } & 
+  \mlcell{4 \\ 1.2 1.2  \\ 1.2 1.2 \\ 1.2 1.2 \\ 1.2 1.2} & 
+  \mlcell{1 \\ 0 0 }\\ 
+  \hline 
+  Izlaz &
+  \mlcell{5.00} &  
+  \mlcell{8.06} &  
+  \mlcell{0.00}&  
+  -1\\ 
+  \hline 
+\end{tabular}
+\normalsize
+\linkresenje{v1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_01]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
+\end{Answer}
+
 
 \subsection{Praktični deo ispita, jun ...}
 

@@ -220,6 +220,126 @@ Potom ispisati imena onih vo\'cki \v cija je cena ve\' ca od prose\v cne.
 \end{Answer}
 
 
+\begin{Exercise}[label=p2.5_] 
+Sa standarnog ulaza u\v citava se $n$ ($0 < n \le 200$), a potom i 
+spisak (du\v zine $n$) engleskih re\v{c}i i njihov prevod
+na srpski jezik. Potom se u\v citava jedna re\v c sa standardnog ulaza. Na standardni izlaz ispisati
+odgovaraju\' ci prevod date re\v ci ili podatak o tome da se re\v c ne 
+nalazi na spisku.
+
+\begin{verbatim}
+apple jabuka
+pineapple ananas
+orange narandza
+pear kruska
+grape grozdje
+\end{verbatim}
+
+\noindent
+i re\v c \emph{orange} program treba da ispi\v se \emph{narandza} a za re\v c
+\emph{cherry} program treba da ispi\v se poruku \emph{Rec se ne nalazi u recniku}.
+U programu se mogu koristiti funkcije iz zaglavlja \emph{string.h}.
+\linkresenje{p2.5_}
+\end{Exercise}
+\begin{Answer}[ref=p2.5_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.5_] 
+Napisati program koji sa standardnog ulaza \v{c}itava najpre broj artikala
+(ceo broj manji od $20$) a zatim podatke o artiklima. Artikli su vo\' cke
+koje imaju po dva podatka: naziv vo\' cke i cenu (naziv vo\' cke je
+karakterska niska du\v zine do $20$ karaktera).
+Program potom tra\v zi od korisnika da unese neku cenu i \v stampa na
+standardni izlaz sve vo\' cke koje imaju zadatu cenu.\\
+
+Primer rada programa:
+
+\begin{verbatim}
+4
+jabuka 30
+kruska 40
+ananas 60
+limun 40
+
+Unesite cenu: 40
+Voce te cene je: kruska limun
+\end{verbatim}
+\linkresenje{p2.5_}
+\end{Exercise}
+\begin{Answer}[ref=p2.5_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.5_] 
+Definisati strukturu koja opisuje dete atributima 
+ime deteta (ne vece od 20 karaktera) , pol deteta (m ili z)
+i ocena. Ocenu je svako dete dalo radu obdani\v sta. Maksimalan broj dece je 100. Napisati program koji:
+
+   \begin{description}
+   \item{a)} Sa standarnog ulaza se unosi $n$, a potom podaci o $n$ dece. Koristiti strukturu:
+   \begin{verbatim}
+        typedef struct
+        {
+            char ime[20];
+            char pol;
+            int ocena;
+        } DETE;
+   \end{verbatim}
+
+   \item{b)} ispisati na standarni izlaz statistiku: koliko ima de\v caka,
+   a koliko devoj\v cica i prose\v cnu ocenu. Potom ispisuje imena dece
+   brojnijeg pola.
+   \end{description}
+\linkresenje{p2.5_}
+\end{Exercise}
+\begin{Answer}[ref=p2.5_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.5_] 
+\begin{itemize}
+\item Definisati tip podataka \verb|TACKA| pogodan za predstavljanje ta\v cke
+Dekartovske ravni (\v{c}ije su $x$ i $y$ koordinate podaci tipa \verb|double|).
+
+\item Definisati funkciju \verb|double rastojanje(TACKA a, TACKA b)| koja
+izra\v cunava rastojanje izmedju dve ta\v{c}ke.
+
+\item Definisati funkciju \verb|unsigned ucitaj_poligon(TACKA* tacke, unsigned n)|
+koja u\v citava \verb|n| puta po dve vrednosti tipa \verb|double|
+ (koje predstavljaju koordinate temena poligona) i upisuje ih u zadati niz
+ ta\v{c}aka. Funkcija vra\' ca broj uspe\v sno u\v citanih ta\v{c}aka.
+
+\item Definisati funkciju \verb|double obim(TACKA* poligon, unsigned n)|
+koja izra\v cunava obim poligona sa \verb|n| ta\v{c}aka u zadatom nizu
+(napomena: ne zaboraviti stranicu koja spaja poslednje i prvo teme).
+
+\item Definisati funkciju \verb|double maksimalna_stranica(TACKA* poligon, unsigned n)|
+koja izra\v cunava du\v{z}inu najdu\v{z}e stranice poligona sa \verb|n| ta\v{c}aka
+u zadatom nizu (napomena: ne zaboraviti stranicu koja spaja poslednje i prvo teme).
+
+\item Definisati funkciju \verb|main| u kojoj se sa standardnog ulaza
+u\v{c}itava celobrojna nenegativna vrednost \verb|N| ($0 < N \le 100$).
+
+Ina\v{c}e, poziva se funkcija \verb|ucitaj_poligon|. Ukoliko je
+uspe\v{s}no u\v{c}itano \verb|m| ta\v{c}ka (\verb|N| ne mora da
+bude jednako \verb|m|), onda se poziva funkcija \verb|obim|
+za \verb|m| u\v{c}itanih ta\v{c}aka i ispisuje njen rezultat
+na standardni izlaz (ukoliko ova funkcija nije implementirana
+--- ispisati na standardni izlaz simbol \verb|?|).
+Posle toga se poziva funkcija \verb|maksimalna_stranica|
+za \verb|m| u\v{c}itanih ta\v{c}aka i ispisuje njen rezultat
+na standardni izlaz (ukoliko ova funkcija nije implementirana
+--- ispisati na standardni izlaz simbol \verb|?|).
+\end{itemize}
+\linkresenje{p2.5_}
+\end{Exercise}
+\begin{Answer}[ref=p2.5_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
+\end{Answer}
 
 
 \section{Rešenja}

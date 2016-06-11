@@ -321,6 +321,795 @@ Napisati program koji prepisuje svaki treći karakter datoteke $ulaz.txt$ u dato
 \end{Answer}
 
 
+\begin{Exercise}[label=p3_] 
+Sa standarnog ulaza u\v citavaju se imena dve tekstualne datoteke i
+jedan karakter.  Napisati program koji prepisuje datoteku \v cije se
+ime navodi kao prvo u datoteku \v cije ime se navodi kao
+drugo. Ukoliko je ucitan karakter \verb|u| program prilikom
+prepisivanja treba da zamenjuje sva mala slova velikim, a ukoliko je
+u\v citan karakter \verb|l| sva velika slova se zamenjuju malim. U
+slu\v caju greske ispisati -1. Gre\v ska mo\v ze biti neuspe\v sno
+otvaranje datoteke ili pogre\v sno zadat karakter. Maksimalna du\v
+zina naziva datoteka je 20 karaktera. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{ulaz.txt izlaz.txt u}#
+#\naslovDat{ulaz.txt}#
+#\datoteka{danas je lep dan}#
+#\datoteka{i Ja zelim}#
+#\datoteka{da postanem programer}#
+#\naslovDat{izlaz.txt}#
+#\datoteka{DANAS JE LEP DAN}#
+#\datoteka{I JA ZELIM}#
+#\datoteka{DA POSTANEM PROGRAMER}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{prva.dat druga.dat l}#
+#\naslovDat{prva.dat}#
+#\datoteka{Cena soka je 30}#
+#\datoteka{Cena vina je 150}#
+#\datoteka{Cena limunade je 200}#
+#\datoteka{Cena sendvica je 120}#
+#\naslovDat{druga.dat}#
+#\datoteka{cena soka je 30}#
+#\datoteka{cena vina je 150}#
+#\datoteka{cena limunade je 200}#
+#\datoteka{cena sendvica je 120}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{primer.c prazna.txt V}#
+#\naslovDat{primer.c}#
+#\datoteka{\#include <stdio.h>}#
+#\datoteka{int main()}#
+#\datoteka{\{}#
+#\datoteka{\}}#
+#\naslovDat{prazna.txt}#
+#\datoteka{}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+           
+\begin{Exercise}[label=p3_]         
+Sastaviti program koji sa standardnog ulaza prima ime datoteke koju
+treba otvoriti. Ispisati (na standardnom izlazu) koja cifra (me\d u
+svim ciframa koje se pojavljuju u datoteci) ima najve\' ci broj
+pojavljivanja. U slu\v caju gre\v ske pri otvaranju datoteke ispisati
+{\tt -1}. Ukoliko nema cifara u datoteci ispisati {\tt -1}.
+Maksimalna du\v zina naziva datoteka je 20 karaktera. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{ulaz.txt}#
+#\naslovDat{ulaz.txt}#
+#\datoteka{danas je lep dan}#
+#\datoteka{i Ja zelim}#
+#\datoteka{da postanem programer}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{prva.dat druga.dat l}#
+#\naslovDat{prva.dat}#
+#\datoteka{Cena soka je 30}#
+#\datoteka{Cena vina je 150}#
+#\datoteka{Cena limunade je 200}#
+#\datoteka{Cena sendvica je 120}#
+#\naslovIzlaz#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{primer.c}#
+#\naslovDat{primer.c}#
+#\datoteka{\#include <stdio.h>}#
+#\datoteka{int main()}#
+#\datoteka{\{}#
+#\datoteka{\}}#
+#\naslovDat{prazna.txt}#
+#\datoteka{}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Prvi red datoteke \verb|matrice.txt| sadr\v zi 2 cela broja manja od
+50 koji predstavljaju redom broj vrsta i broj kolona realne matrice
+A. Svaki slede\'ci red sadr\v zi po jednu vrstu matrice. Napisati
+program koji pronalazi sve elemente matrice A koji su jednaki zbiru
+svih svojih susednih elemenata i \v stampa ih u obliku
+\begin{verbatim}
+(broj vrste, broj kolone, vrednost elementa).
+\end{verbatim}
+U slu\v caju gre\v ske prilikom otvaranja datoteke ispisati {\tt -1}.
+Pretpostaviti da je sadr\v zaj datoteke ispravan. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{matrice.txt}#
+#\datoteka{1  2  3  4}#
+#\datoteka{7  2 15 -3}#
+#\datoteka{-1  3  1  3}#
+#\naslovIzlaz#
+#\izlaz{(1, 0, 7)}#
+#\izlaz{(1, 2, 15)}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Napisati program koji za dve datoteke \v cija su imena data kao prvi i
+drugo na standarnom ulazu, radi slede\'ce: za cifru u prvoj datoteci,
+u drugu datoteku se upisuje 0, za slovo se upisuje 1, a za sve ostale
+karaktere se upisuje 2. Maksimalna du\v zina naziva datoteka je 20
+karaktera. \\
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{prva.dat druga.dat}#
+#\naslovDat{prva.dat}#
+#\datoteka{Cena soka je 30}#
+#\datoteka{Cena vina je 150}#
+#\datoteka{Cena limunade je 200}#
+#\datoteka{Cena sendvica je 120}#
+#\naslovDat{druga.dat}#
+#\datoteka{11112111121120021111211112112000211112111111112112000211112111111112112000}
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Ako je data tekstualna datoteka \verb|plain.txt| napraviti tekstualnu
+datoteku \verb|sifra.txt| tako \v sto se svako slovo zamenjuje svojim
+prethodnikom (cikli\v cno) suprotne velicine \verb|’b’| sa \verb|’A’|,
+\verb|’B’| sa \verb|’a’|, \verb|’a’| sa \verb|’Z’|, \verb|’A’| sa
+\verb|’z’|, itd. Podrazumevati da se na sistemu koristi tabela
+karaktera ASCII.
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Sa standarnog ulaza se u\v citava ime tekstualne datoteke i prirodan
+broj k. Podrazumeva se da zadata datoteka sadr\v zi samo slova i
+beline i da je svaka re\v c iz datoteke du\v zine najvi\v se
+100. Program treba da u\v citava re\v ci iz datoteke, da svaku re\v c
+rotira za k mesta i da tako dobijenu re\v c upi\v se u datoteku \v
+cije je ime \verb|rotirano.txt|. Maksimalna du\v zina naziva datoteka
+je 20 karaktera. \\
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Napisati program koji u datoteku \verb|izlaz.txt| prepisuje sve
+re\v{c}i iz datoteke \verb|ulaz.txt| \v{c}iji je zbir ascii kodova
+slova strogo ve\'{c}i od 1000. Re\v ci su odvojene prazninama i nisu
+du\v ze od 200 karaktera.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{ulaz.txt}#
+#\datoteka{Sa standardnog ulaza unosi se neoznacen}#
+#\datoteka{ceo broj. Formirati novi broj koji se dobija}#
+#\datoteka{izbacivanjem svake druge cifre iz polaznog broja.}#
+#\naslovDat{izlaz.txt}#
+#\datoteka{standardnog izbacivanjem}
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovDat{ulaz.txt}#
+#\datoteka{i sada jedan kratak primer}#
+#\datoteka{p1: 1234567890}#
+#\datoteka{p2: ABCDEFGHIJ}#
+#\datoteka{p3: abcdefghij}#
+#\naslovDat{izlaz.txt}#
+#\datoteka{abcdefghij}
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovDat{ulaz.txt}#
+#\datoteka{konstruisanje test-primera sa}#
+#\datoteka{i dugackim recima kao prestolonaslednik}#
+#\datoteka{brojevima1234567890}#
+#\naslovDat{izlaz.txt}#
+#\datoteka{konstruisanje test-primera}#
+#\datoteka{prestolonaslednik}#
+#\datoteka{brojevima1234567890}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovDat{ulaz.txt}#
+#\datoteka{ima jos dugackih reci: predskazanje,}#
+#\datoteka{potom}#
+#\datoteka{nelogicnosti, zanemarivati, odugovlaciti, a ima}#
+#\datoteka{i i malih reci koje su kratke}#
+#\datoteka{predosecaj}#
+#\naslovDat{izlaz.txt}#
+#\datoteka{predskazanje, nelogicnosti,}#
+#\datoteka{zanemarivati, odugovlaciti,}#
+#\datoteka{predosecaj}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+U datoteci \verb|razno.txt| nalazi se tekst. U datoteku
+\verb|palindromi.txt| prepisati sve re\v ci iz datoteke
+\verb|razno.txt| koje su palindromi. Re\v c je palindrom ako se \v
+cita isto sa leve i desne strane. Za re\v c smatramo niz karaktera
+koji se nalazi izme\d u belina i koji nije du\v zi od 200
+karaktera. Dozvoljeno je kori\v s\'cenje specifikatora za \v citanje
+re\v ci. Maksimalan broj re\v ci nije poznat. U slu\v caju gre\v ske
+ispisati -1 i prekinuti izvr\v savanje programa. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovDat{razno.txt}#
+#\datoteka{Ana i melem su primeri palindroma.}#
+#\naslovDat{palindromi.txt: }#
+#\datoteka{Ana i melem}
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovDat{razno.txt}#
+#\datoteka{jabuka neven pomorandza kuk}#
+#\datoteka{Oko kapAk pero radar caj}#
+#\naslovDat{palindromi.txt: }#
+#\datoteka{neven kuk}
+#\datoteka{Oko kapAk radar}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+U datoteci \v cije se ime navodi na standarnom ulazu programa nalazi
+se broj \verb|n|, a zatim i \verb|n| re\v ci (du\v zine najvi\v se 50
+karaktera). Napisati program koji u\v citava ovaj niz i
+  \begin{enumerate}
+  \item ispisuje ga \hfill[3],
+  \item iz njega uklanja sve duplikate i u datoteku \verb|rez.txt|
+    ispisuje transformisani niz \hfill[4]
+  \end{enumerate}
+U slu\v caju gre\v ske ispisati -1. Maksimalna du\v zina naziva
+datoteka je 20 karaktera. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{dat1.txt}#
+#\naslovDat{dat1.txt}#
+#\datoteka{12 jha14 hahaha deda mraz deda}#
+#\datoteka{mraz deda deda jase konj konj konj}#
+#\naslovIzlaz#
+#\izlaz{jha14 hahaha deda mraz deda mraz deda}#
+#\izlaz{deda jase konj konj konj}#
+#\naslovDat{rez.txt: }#
+#\datoteka{jha14 hahaha deda mraz jase konj}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{dat2.txt}#
+#\naslovDat{dat2.txt}#
+#\datoteka{14}#
+#\datoteka{so secer supa so ljuto secer kiselo slatko}#
+#\datoteka{ljuto}#
+#\datoteka{paprika, ljuta paprika, ljuto dete}#
+#\naslovIzlaz#
+#\izlaz{so secer supa so ljuto secer kiselo slatko}#
+#\izlaz{ljuto paprika, ljuta paprika, ljuto dete}#
+#\naslovDat{rez.txt: }#
+#\datoteka{so secer supa ljuto kiselo slatko}#
+#\datoteka{paprika, ljuta dete}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p3_]         
+U datoteci \v cije se ime navodi na standarnom ulazu programa nalazi
+se broj $n$, a zatim i $n$ re\v ci (du\v zine najvi\v se 50
+karaktera). Napisati program koji u\v citava ovaj niz i
+  \begin{enumerate}
+  \item ispisuje ga, \hfill[3]
+  \item u datoteku \verb|rez.txt| upisuje sve re\v ci koje sadr\v ze
+    prvu re\v c i podvlaku. \hfill[4]
+  \end{enumerate}
+U slu\v caju gre\v ske ispisati -1. Maksimalna du\v zina naziva
+datoteka je 20 karaktera. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{dat1.txt}#
+#\naslovDat{dat1.txt}#
+#\datoteka{7 rec Opet \_rec Reci rec\_enica}#
+#\datoteka{DVa recica\_}#
+#\naslovIzlaz#
+#\izlaz{rec Opet \_rec Reci rec\_enica }#
+#\izlaz{DVa recica\_}#
+#\naslovDat{rez.txt: }#
+#\datoteka{\_rec rec\_enica recica\_}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{dat2.txt}#
+#\naslovDat{dat2.txt}#
+#\datoteka{11 Sunce sija iznad grada}#
+#\datoteka{Sunce\_Moje Jedan Dva Su\_nce Sve Sunce123\_123 suncanica.}#
+#\naslovIzlaz#
+#\izlaz{Sunce sija iznad grada}#
+#\izlaz{Sunce\_Moje Jedan Dva Su\_nce Sve Sunce123\_123 suncanica.}#
+#\naslovDat{rez.txt: }#
+#\datoteka{Sunce\_Moje Sunce123\_123}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Imena dve datoteke se zadaje na standarnom ulazu.  U prvoj datoteci
+navedena je rec {\tt r} i niz linija. Napisati program koji u drugu
+datoteku upisuje sve linije u kojima se re\v c {\tt r} pojavljuje bar
+{\tt n} puta, gde je n prirodan broj koji se unosi sa standardnog
+ulaza. Ispis treba da bude u formatu {\tt broj\_pojavljivanja:
+  linija}. Linije brojati po\v cev\v si od {\tt 1}. Maksimalna du\v
+zina naziva datoteka je 20 karaktera.
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Napisati program koji poredi dva fajla i ispisuje redni broj linija u
+kojima se fajlovi razlikuju.  Imena fajlova se zadaju kao argumenti
+komandne linije. U slu\v caju neuspe\v snog otvaranja datoteka
+ispisati poruku o gre\v sci. Pretpostaviti da je maksimalna du\v zina
+reda u datoteci 200 karaktera. Ukoliko nisu zadati potrebni argumenti
+komadne linije ispisati poruku o gre\v sci. Linije brojati pov cev\v
+si od {\tt 1}. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out ulaz.txt izlaz.txt}#
+#\naslovDat{ulaz.txt}#
+#\datoteka{danas vezbamo}#
+#\datoteka{programiranje}#
+#\datoteka{ovo je primer kad su}#
+#\datoteka{datoteke iste}#
+#\naslovDat{izlaz.txt: }#
+#\datoteka{danas vezbamo}#
+#\datoteka{programiranje}#
+#\datoteka{ovo je primer kad su}#
+#\datoteka{datoteke iste}#
+#\naslovIzlaz#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out primer1.dat primer2.dat}#
+#\naslovDat{primer1.dat}#
+#\datoteka{danas vezbamo}#
+#\datoteka{analizu}#
+#\datoteka{ovo je primer kad}#
+#\datoteka{su datoteke razlicite}#
+#\naslovDat{priemr2.dat}#
+#\datoteka{danas vezbamo}#
+#\datoteka{programiranje}#
+#\datoteka{ovo je primer kad su}#
+#\datoteka{datoteke razlicite}#
+#\naslovIzlaz#
+#\izlaz{2 3 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out prva.dat}#
+#\naslovIzlaz#
+#\izlaz{greska}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out prva.dat druga.dat}#
+#\naslovDat{prva.dat}#
+#\datoteka{ovo je primer}#
+#\datoteka{kada su}#
+#\datoteka{datoteke}#
+#\datoteka{razlicite duzine}#
+#\naslovDat{druga.dat}#
+#\datoteka{kada su }#
+#\datoteka{programiranje}#
+#\datoteka{datoteke}#
+#\datoteka{razlicite}#
+#\datoteka{duzine}#
+#\datoteka{i kada treba ispisati broj}#
+#\datoteka{tih redova}#
+#\naslovIzlaz#
+#\izlaz{1 4 5 6 7}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p3_]         
+Definisati strukturu 
+\begin{verbatim}
+typedef struct{
+    unsigned int a, b;
+    char ime[5];
+}_pravougaonik;
+\end{verbatim}
+kojom se opisuje pravougaonik du\v zinama svojih stranica i
+imenom. Napisati program koji iz datoteke \v cije ime se zadaje kao
+argument komandne linije u\v citava pravougaonike (nepoznato koliko),
+a zatim ispisuje imena onih pravougaonika koji su kvadrati i vrednost
+najve\' ce povr\v sine medju pravougaonicima koji nisu kvadrati.  U
+slu\v caju unosa nekorektnih du\v zina stranica pravougaonika ili
+nekorektne vrednosti broja \verb|n|, ispisati -1 i odmah prekinuti
+izvr\v savanje programa.  Maksimalan broj pravougaonika je 200. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out pravougaonici.dat}#
+#\naslovDat{pravougaonici.dat}#
+#\datoteka{2 4 p1}#
+#\datoteka{3 3 p2}#
+#\datoteka{1 6 p3}#
+#\naslovIzlaz#
+#\izlaz{p2 8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out dva.dat}#
+#\naslovDat{dva.dat}#
+#\datoteka{5 2 pm}#
+#\datoteka{4 7 pv}#
+#\naslovIzlaz#
+#\izlaz{28}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out tri.dat}#
+#\naslovDat{tri.dat}#
+#\datoteka{5 5 m}#
+#\datoteka{3 3 s}#
+#\datoteka{8 8 xl}#
+#\naslovIzlaz#
+#\izlaz{m s xl}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out primerx.dat}#
+#\naslovDat{primerx.dat}#
+#\datoteka{9 7 p}#
+#\naslovIzlaz#
+#\izlaz{63}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{5}
+#\poziv{./a.out prazna.dat}#
+#\naslovDat{prazna.dat}#
+#\naslovIzlaz#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Ime datoteke dato je kao argument komandne linije. U datoteci se
+nalaze otvorene i zatvorene zagrade i jo\v s nekakav tekst. Proveriti
+da li su zagrade pravilno uparene. Npr. \verb|ab( cd) ..| odgovor je
+\verb|jesu|, a \verb|..)ba()| odgovor je \verb|nisu|. Ukoliko nisu
+zadati svi argumenti komadne linije ispisati poruku o gre\v sci. \\
+\begin{minitest}
+\begin{upotreba}{1}
+#\poziv{./a.out zagrade.txt}#
+#\naslovDat{zagrade.txt}#
+#\datoteka{ab( cd) ..}#
+#\datoteka{((3+4)*5+1)*9}#
+#\naslovIzlaz#
+#\izlaz{jesu}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\poziv{./a.out primer2.dat}#
+#\naslovDat{primer2.dat}#
+#\datoteka{(7+8 }#
+#\datoteka{nisu(}#
+#\datoteka{uparene}#
+#\naslovIzlaz#
+#\izlaz{nisu}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\poziv{./a.out primer3.dat}#
+#\naslovDat{primer3.dat}#
+#\datoteka{)) 7 + 6 ((}#
+#\naslovIzlaz#
+#\izlaz{nisu}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovIzlaz#
+#\izlaz{greska}#
+\end{upotreba}
+\end{minitest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Napraviti strukturu \verb|STUDENT| koja sadr\v zi:
+\begin{itemize}
+\item \verb|ime| (u polju se \v cuva ime i prezime studenta,
+  napr. "Marko Markovic", maksimalna du\v zina polja je 100
+  karaktera),
+\item \verb|oc| (sadr\v zi najvi\v se 10 ocena studenta)
+\item \verb|br_ocena| (ukupan broj ocena za studenata)
+\item \verb|pr_oc| (prose\v cna ocena)
+\end{itemize}
+U datoteci se nalaze podaci o studentima. Za svakog studenta unosi se
+ime i prezime razdvojeno razmakom (uputstvo: mo\v ze se korisiti
+\verb|strcat| da spoji ime i prezime koji se mogu pro\v citati sa
+specifikatorom \verb|%s|), a potom ocene koje se zavr\v savaju sa
+0. Prona\'ci studenta koji ima najve\'ci prosek i ispisati sve njegove
+podatke (prosek ispisati na 2 decimale).  Maksimalan broj studenta je
+100. Ime datoteke se zadaje kao argument komandne linije. \\
+\begin{minitest}
+\begin{upotreba}{1}
+#\poziv{./a.out studenti.txt}#
+#\naslovDat{studenti.txt}#
+#\datoteka{Marko Markovic 5 6 7 8 9 0}#
+#\datoteka{Jelena Jankovic 10 10 10 0}#
+#\datoteka{Filip Viskovic 10 9 8 7 6 0}#
+#\datoteka{Jana Peric 10 10 9 9 8 8 7 7 0}#
+#\naslovIzlaz#
+#\izlaz{Jelena Jankovic 10 10 10 0 10.00}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\poziv{./a.out}#
+#\naslovIzlaz#
+#\izlaz{greska}#
+\end{upotreba}
+\end{minitest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p3_]         
+\begin{description}
+\item{a)} Napisati C funkciju \verb|int unesiSkup(char *s, FILE* f)|
+  kojom se unosi skup elemenata iz datoteke F. Skup se predstavlja kao
+  niz karaktera, pri \v cemu su dozvoljeni elementi skupa mala i
+  velika slova abecede, kao i cifre.  Unos se prekida kada se nai\d e
+  na znak za novi red ili nedozvoljeni karakter za skup (maksimalan
+  broj elemenata skupa je 1000).  Funkcija vra\' ca broj elemenata
+  skupa koji su uspesno u\v citani.
+\item{b)} Napisati funkciju
+  \verb|void prebroj(char *s, int *br_slova,int *br_cifara)| kojom se
+  odre\d uje broj slovnih elemenata skupa (velikih ili malih slova)
+  kao i broj cifara u skupu.
+\item{c)} Napisati glavni program gde se unose podaci o skupu
+  elemenata. Ime datoteke se zadaje kao argument komandne linije.  Na
+  stadardni izlaz ispisati informacije o broju slova i cifara
+  (koristiti funkcije pod a) i b)).
+\end{description}
+\begin{minitest}
+\begin{upotreba}{1}
+#\poziv{./a.out skup.txt}#
+#\naslovDat{skup.txt}#
+#\datoteka{abc56ighj9012hjFGHH  }#
+#\naslovIzlaz#
+#\izlaz{broj slova: 13}#
+#\izlaz{broj cifara: 6}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\poziv{./a.out skup2.txt}#
+#\naslovDat{skup2.txt}#
+#\datoteka{ovdeimamo\$dolar}#
+#\naslovIzlaz#
+#\izlaz{broj slova: 9}#
+#\izlaz{broj cifara: 0}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\poziv{./a.out skup3.txt}#
+#\naslovDat{skup3.txt}#
+#\datoteka{broJ3}#
+#\datoteka{ broj5}#
+#\naslovIzlaz#
+#\izlaz{broj slova: 4}#
+#\izlaz{broj cifara: 1}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{4}
+#\poziv{./a.out}#
+#\naslovIzlaz#
+#\izlaz{greska}#
+\end{upotreba}
+\end{minitest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p3_]         
+Definisati strukturu 
+\begin{verbatim}
+typedef struct{
+    int x;
+    int y;
+    int z;
+} vektor;
+\end{verbatim}
+kojom se opisuje trodimenzioni vektor. U datoteci \verb|vektori.txt|
+nalazi se nepoznati broj vektora (maksimalno ih mo\v ze biti
+200). U\v citati ih u niz i ispisuje na standardnom izlazu koordinate
+vektora sa najve\' com du\v zinom. Du\v zina vektora se izra\v cunava
+po formuli:
+$$|v|= \sqrt{x^2+y^2+z^2}$$ U slu\v caju gre\v ske ispisati -1 i
+prekinuti izvr\v savanje programa. \\
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovDat{vektori.txt}#
+#\datoteka{2}#
+#\datoteka{4 -1 7}#
+#\datoteka{3 1 2}#
+#\naslovIzlaz#
+#\izlaz{4 -1 7}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\naslovDat{vektori.txt}#
+#\datoteka{67}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovDat{vektori.txt}#
+#\datoteka{3}#
+#\datoteka{0 0 0}#
+#\datoteka{0 1 0}#
+#\datoteka{1 0 0}#
+#\naslovIzlaz#
+#\izlaz{0 1 0}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{4}
+#\naslovDat{vektori.txt}#
+#\datoteka{4}#
+#\datoteka{3 0 1}#
+#\datoteka{4 5 2}#
+#\datoteka{1 0 0}#
+#\datoteka{2 -1 2}#
+#\naslovIzlaz#
+#\izlaz{4 5 2}#
+\end{upotreba}
+\end{minitest}
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p3_]         
+Prvi red datoteke \verb|ulaz.txt| sadr\v zi 2 cela broja manja od 50
+koji predstavljaju redom broj vrsta i broj kolona realne matrice
+A. Svaki slede\'ci red sadr\v zi po jednu vrstu matrice. Napisati
+program koji nalazi i \v stampa sve \v cetvorke oblika
+\verb|(A(i,j), A(i+1,j), A(i,j+1),A(i+1,j+1))| u kojima su svi
+elementi međusobno razli\v citi.
+\linkresenje{p3_}
+\end{Exercise}
+\begin{Answer}[ref=p3_]
+%\includecode{resenja/3_Datoteke/6/6.c}
+\end{Answer}
+
+
 
 
 \section{Rešenja}
