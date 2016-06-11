@@ -576,4 +576,228 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 %\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
 \end{Answer}
 
+\begin{Exercise}[label=p1.3_] 
+Napisati program kojim se sabiraju samo pozitivne vrednosti
+promenljivih a, b, c.  \linkresenje{p1.3_}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_15.c}
+\end{Answer}
 
+\begin{Exercise}[label=p1.4_] 
+Sa standarnog ulaza unosi se jedan karakter. Ako je karakter malo
+slovo zameniti ga velikim slovom, ako je veliko slovo zameniti malim
+slovom, ako je cifra ispisati \verb|u pitanju je cifra|. Ako je bilo
+koji drugi karakter onda ga ispisati na standarni izlaz.
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.5_] 
+Sa standardnog ulaza se unosi \v cetvorocifren ceo broj. Napisati
+program koji datom broju razmenjuje najmanju i najve\' cu
+cifru. Dobijeni broj ispisati na izlaz. Ako broj nije \v cetvorocifren
+ispisati -1. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{3842}#
+#\izlaz{3248}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-4239}#
+#\izlaz{-4932}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{123}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-45678}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.5_}
+\end{Exercise}
+\begin{Answer}[ref=p1.5_]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_16.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.6_] 
+Sa standardnog ulaza se unosi 5 karaktera. Ispisati na izlazu koliko
+se puta pojavilo veliko ili malo slovo \verb|a|. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{aBcAe}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{aa4A\_}#
+#\izlaz{3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{aAaAa}#
+#\izlaz{5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{B6(vV}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.6_}
+\end{Exercise}
+\begin{Answer}[ref=p1.6_]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_17.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.7_] 
+Sa standardnog ulaza se unose 5 karaktera. Ispisati na izlazu koliko
+puta su se pojavile cifre. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{A1cA3}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{2a45\_}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{43986}#
+#\izlaz{5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{B6(vV}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_18.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.8_]
+Sa standardnog ulaza se unose tri neozna\v cena trocifrena
+broja. Spojiti dva najve\'ca u \v sestocifren broj. Spajanje izvr\v
+siti tako da najve\' ci od trocifrenih brojeva bude na po\v cetku \v
+sestocifrenog broja. Dobijeni \v sestocifreni broj ispisati na
+izlazu. Ako neki od unetih brojeva nije trocifren, ispisati -1. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{384 123 245}#
+#\izlaz{384245}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{123 345 5}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{1242 234 324}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{374 23 898}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.8_}
+\end{Exercise}
+\begin{Answer}[ref=p1.8_]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_19.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.9_]
+Korisnik unosi 3 cela broja: \verb|(p), (q) i (r)|.
+Nakon toga unosi i dva karaktera, koji imaju
+sledeci smisao:
+\begin{description}
+\item['k']-logi\v cka konjukcija
+\item['d']-logi\v cka disjunkcija
+\item['m']-relacija manje
+\item['v']-relacija ve\' ce
+\end{description}
+Nakon toga se ra\v cuna vrednost izraza 
+\verb|(p) op1 (q) op2 (r)| i ispisuje rezultat.
+\linkresenje{p1.9_}
+\end{Exercise}
+\begin{Answer}[ref=p1.9_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.2_15] 
+Tekst \\
+\linkresenje{v1.2_15}
+\end{Exercise}
+\begin{Answer}[ref=v1.2_15]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_20.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.2_16] 
+Tekst \\
+\linkresenje{v1.2_16}
+\end{Exercise}
+\begin{Answer}[ref=v1.2_16]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_21.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.2_17] 
+Tekst \\
+\linkresenje{v1.2_17}
+\end{Exercise}
+\begin{Answer}[ref=v1.2_17]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_22.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.2_18] 
+Tekst \\
+\linkresenje{v1.2_18}
+\end{Exercise}
+\begin{Answer}[ref=v1.2_18]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_23.c}
+\end{Answer}
+
+\section{Rešenja}
+\shipoutAnswer

@@ -397,5 +397,109 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slov
 %\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
 \end{Answer}
 
+\begin{Exercise}[label=v2.2_01] 
+Tekst
+\linkresenje{v2.2_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
+\end{Answer}
 
 
+\begin{Exercise}[label=v2.2_01] 
+Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije
+napraviti niz \verb|A[0] = a, A[1] = a+1,|
+\verb|A[2] = a+2, ..., A[b-a] = b| i ispisati ga. Pretpostaviti da je
+maksimalna du\v zina niza 200 elemenata. Proveriti da li $a < b$ i
+$b-a < 200$ i ako ovi uslovi nisu ispunjeni ispisati poruku da je do\v
+slo do gre\v ske. U slu\v caju da je dato manje ili vi\v se argumenata
+komandne linije ispisati poruku o gre\v sci. \\ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out 34}#
+#\naslovInt#
+#\izlaz{greska}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out 12 20}#
+#\naslovInt#
+#\izlaz{12 13 14 15 16 17 18 19 20}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out 30 8}#
+#\naslovInt#
+#\izlaz{greska}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out -4 -1}#
+#\naslovInt#
+#\izlaz{-4 -3 -2 -1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v2.2_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v2.2_01] 
+Uobi\v cajena praksa na UNIX sistemima je da se argumenti komandne
+linije dele na opcije i argumente u u\v zem smislu. Opcije po\v cinju
+znakom ’-’ nakon \v cega obi\v cno sledi jedan ili vi\v se karaktera
+koji ozna\v cavaju koja je opcija u pitanju. Ovim se naj\v ce\v s\' ce
+upravlja funkcionisanjem programa i neke mogu\' cnosti se uklju\v cuju
+ili isklju\v cuju. Argumenti na\v c\v s\' ce predstavljaju opisne
+informacije poput na primer imena datoteka. Napisati program koji
+ispisuje sve opcije koje su navedene u komandnoj liniji. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out -abc input.txt -d -Fg output}#
+#\naslovInt#
+#\izlaz{a b c d F g}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out}#
+#\naslovInt#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out ulaz.txt  }#
+#\naslovInt#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v2.2_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v2.2_01] 
+Parametri komandne linije su {\tt n, a, b} ($a < b$). Treba popuniti
+prvih {\tt n} elemenata niza {\tt A} celim slu\v cajnim brojevima koji
+su izme\d u {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
+izlaz. Maksimalan broj elemenata niza {\tt A} je 200. Ukoliko nisu
+zadati svi argumenti komandne linije ili ne zadovoljavaju potrebna
+svojstva ispisati poruku o gre\v sci. \\
+\linkresenje{v2.2_01}
+\end{Exercise}
+\begin{Answer}[ref=v2.2_01]
+\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
+\end{Answer}
+
+
+
+\section{Rešenja}
+\shipoutAnswer

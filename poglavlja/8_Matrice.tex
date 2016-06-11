@@ -1,1 +1,564 @@
 \section{Višedimenzioni nizovi}
+
+\begin{Exercise}[label=p1.2_] 
+\begin{description}
+  \item[a)] Napisati funkciju
+    \\ \verb|int refleksivna(int a[][MAX], int n)|\\ kojom se za
+    relaciju zadatom matricom \verb|a| (matruca je kvadratna) ispitije
+    da li je refleksivna.
+  \item[b)] Napisati funkciju
+    \\ \verb|int simetricna(int a[][MAX], int n)|\\ kojom se za
+    relaciju zadatom matricom \verb|a| (matruca je kvadratna) ispitije
+    da li je simetricna.
+  \item[c)] Napisati funkciju
+    \\ \verb|int tranzitivna(int a[][MAX], int n)|\\ kojom se za
+    relaciju zadatom matricom \verb|a| (matruca je kvadratna) ispitije
+    da li je tranzitivna. \\
+ 
+    Dva elementa \verb|i| i \verb|j| (\verb|i@j|) su u relaciji akko
+    a[i][j] = 1\\ Relacija je refleksivana ako sa svako \verb|i| va\v
+    zi: \verb|i@i=1|\\ Relacija je simetricna ako za svako \verb|i| i
+    \verb|j| va\v zi: \verb|i@j=1| $=>$ \verb|j@i=1|\\ Relacija je
+    tranzitivna ako za svako \verb|i|, \verb|j| i \verb|k| va\v zi:
+    \verb|i@j=1| i \verb|j@k=1| $=>$ \verb|i@k=1|\\ Funkcija postavlja
+    na 1 odgovarajuci indikator.
+
+  \item[b)] Sa standardnog ulaza prvo se unose dimenzija kvadratne
+    matrice \verb|n|, a nakon toga elementi matrice.  U\v citati
+    matricu, i ispitati da li je relacija koju predstavlja relacija
+    ekvivalencije (refleksivna, simetri\v cna i tranzitivna).
+\end{description}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.2_] 
+Napisati funkciju \verb|float sumD(float a[][max], int n)| koja odre\d
+uje sumu elememenata iznad glavne dijagonale. Potom napisati funkciju
+\verb|float sumd(float a[][max], int n)| koja odre\d uje sumu
+elememenata ispod glavne dijagonale.  Funkciju testirati pozivom u
+main-u. Matrica je maksimalne dimenzije 50x50. Matrica je kvadratna.
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Napisati
+funkciju\\ \verb|void transponovana(float a[][max], int m, int n, float b[][max])|
+koja odre\d uje transponovanu matricu matricu.  Pozivom u main-u
+testirati funkciju. Matrica je maksimalne dimenzije 50x50.
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.2_] 
+Napisati funkciju\\
+\verb|void mnozenje(int a[][max], int n, int m, int b[][max], int k,|\\
+\verb|int t, int c[][max])|\\
+koja ra\v cuna 
+proizvod dve matrice. 
+Pozivom u main-u testirati funkciju. Matrica je maksimalne dimenzije 50x50. Testirati da li su
+podaci korektno uneti i testirati da li je mogu\'ce matrice mno\v ziti.
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Napisati funkciju u kojoj se razmenjuju elemeti k-te i t-te vrste
+matrice(k i t su argumenti funkcije). Funkciju testirati pozivom u
+main-u i ispisom novodobijene matrice na standarni izlaz. Sa
+standarnog ulaza u\v citavaju se dimenzije matrice, a potom i elementi
+matrice i brojevi k i t. Maksimalna dimenzija matrice je
+50x50. Funkciju testirati pozivom u main-u.
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Sa standarnog ulaza unose se celi pozitivni brojevi {\tt m} i {\tt n}
+koji ozna\v cavaju broj vrsta i broj kolona matrice.  Potom se unose
+elementi matrice. Nakon unosa elemenata matrice, unose se jo\v s dva
+broja {\tt p} i {\tt k} ($p \le m$, $k \le n$).  Na standari izlaz
+ispisati sume svih podmatrica (dimenzije $p \times k$) unete
+matrice. U slu\v caju gre\v ske ispisati {\tt -1}. \\ {\bf Napomena
+  1:} Ne razmatrati slu\v{c}aj negativnih brojeva. \\ {\bf Napomena
+  2:} Nije bitan redosled kojim se ispisuju sume. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{3 4}#
+#\ulaz{1 2 3 4}#
+#\ulaz{5 6 7 8}#
+#\ulaz{9 10 11 12}#
+#\ulaz{3 3}#
+#\izlaz{54 63}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{3 4}#
+#\ulaz{1 2 3 4}#
+#\ulaz{5 6 7 8}#
+#\ulaz{9 10 11 12}#
+#\ulaz{2 3}#
+#\izlaz{24 30 48 54}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{3 2}#
+#\ulaz{1 2}#
+#\ulaz{3 4}#
+#\ulaz{5 6}#
+#\ulaz{7 8}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{5 3}#
+#\ulaz{1 1 2}#
+#\ulaz{5 0 2}#
+#\ulaz{7 8 9}#
+#\ulaz{1 2 4}#
+#\ulaz{0 1 1}#
+#\ulaz{2 2}#
+#\izlaz{7 5 20 19 18 23 4 8}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Sa standarnog ulaza zadata je dimenzija kvadratne matrice $n$ ($0 < n
+\leq 50$), a zatim i vrednosti pojedina\v cnih elemenata. Ukoliko je
+$n$ izvan ovog opsega ispisati $-1$ i prekinuti izvr\v{s}avanje
+programa.  Napisati program koji:
+\begin{itemize}
+\item[(a)] U\v citava matricu i ispisuje je na izlaz. U slu\v{c}aju
+  gre\v{s}ke ispisati -1 i prekinuti izvr\v{s}avanje programa.
+\item[(b)] Ispituje da li su elementi matrice po kolonama, vrstama i
+  dijagonalama (glavnoj i sporednoj) sortirani strogo rastu\'ce. Za
+  svaki od ovih slu\v{c}ajeva redom ispisati $1$ ako jesu i $0$ ako
+  nisu sortirani - videti primere.
+\end{itemize}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{1 2 3}#
+#\ulaz{4 5 6}#
+#\ulaz{7 8 9}#
+#\izlaz{1 2 3}#
+#\izlaz{4 5 6}#
+#\izlaz{7 8 9}#
+#\izlaz{1 1 1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{2}#
+#\ulaz{6 9}#
+#\ulaz{4 10}#
+#\izlaz{6 9}#
+#\izlaz{4 10}#
+#\izlaz{0 1 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{4}#
+#\ulaz{5 5 7 9}#
+#\ulaz{6 10 11 13}#
+#\ulaz{8 12 14 15}#
+#\ulaz{13 15 16 20}#
+#\izlaz{5 5 7 9}#
+#\izlaz{6 10 11 13}#
+#\izlaz{8 12 14 15}#
+#\izlaz{13 15 16 20}#
+#\izlaz{1 0 1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{1}#
+#\ulaz{5}#
+#\izlaz{5}#
+#\izlaz{1 1 1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Sa standarnog ulaza se unosi broj $n$ ($0 < n \le 10$), a potom i
+elementi kvadratne matrice dimenzije $n\times n$.  Elementi matrice su
+celi brojevi. Proveriti da li va\v{z}i da su zbirovi elemenata kolona
+matrice uredjeni u strogo rastu\'{c}em poretku.  {\bf Napomena 1:}
+Ukoliko program uvek ispisuje \verb|da| ili uvek ispisuje \verb|ne|
+smatra\'ce se neta\v cnim i poeni se ne mogu osvojiti. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{4}#
+#\ulaz{1 0 0 0}#
+#\ulaz{0 0 1 0}#
+#\ulaz{0 0 0 1}#
+#\ulaz{0 1 0 0}#
+#\izlaz{ne}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{1 2 3}#
+#\ulaz{4 5 6}#
+#\ulaz{7 8 9}#
+#\izlaz{da}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{2 -2 1}#
+#\ulaz{1 2 2}#
+#\ulaz{2 1 -2}#
+#\izlaz{ne}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{5}#
+#\ulaz{-1 0 2 0 20}#
+#\ulaz{0 0 0 10 0}#
+#\ulaz{0 0 -1 0 0}#
+#\ulaz{0 1 0 0 0}#
+#\ulaz{0 0 0 0 -1}#
+#\izlaz{da}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Sa standarnog ulaza unosi se broj $n$ ($0 < n \le 200$), a potom i
+elementi kvadratne matrice dimenzije $n\times n$.  Elementi matrice su
+celi brojevi.  Proveriti da li je uneta matrica ortonormirana i na
+standarni izlaz ispisati \verb|da| ako jeste ili \verb|ne| ako nije
+ortonormirana. Matrica je ortonormirana ako je skalarni proizvod
+svakog para razli\v citih vrsta jednak 0, a skalarni proizvod vrste sa
+samom sobom 1.  U slu\v caju gre\v ske ispisati -1.\\ {\bf Napomena
+  1:} Skalarni proizvod vektora $a = (a_1, a_2, \ldots, a_n)$ i $b =
+(b_1, b_2, \ldots, b_n)$ je $a_1\cdot b_1 + a_2\cdot b_2 + \ldots +
+a_n\cdot b_n$.\\ {\bf Napomena 2:} Ukoliko program uvek ispisuje
+\verb|da| ili uvek ispisuje \verb|ne| smatra\'ce se neta\v cnim i
+poeni se ne mogu osvojiti. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{4}#
+#\ulaz{1 0 0 0}#
+#\ulaz{0 0 1 0}#
+#\ulaz{0 0 0 1}#
+#\ulaz{0 1 0 0}#
+#\izlaz{da}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{1 2 3}#
+#\ulaz{4 5 6}#
+#\ulaz{7 8 9}#
+#\izlaz{ne}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{2 -2 1}#
+#\ulaz{1 2 2}#
+#\ulaz{2 1 -2}#
+#\izlaz{ne}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{5}#
+#\ulaz{-1 0 2 0 20}#
+#\ulaz{0 0 0 10 0}#
+#\ulaz{0 0 -1 0 0}#
+#\ulaz{0 1 0 0 0}#
+#\ulaz{0 0 0 0 -1}#
+#\izlaz{da}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Napisati funkciju koja kao argumente prima kvadratnu matricu celih
+brojeva i njenu dimenziju, a vra\'ca 1 ako je matrica donja trougaona,
+odnosno 0 ako nije. Pretpostavka je da je maksimalna dimenzija matrice
+100. Matrica je donja trougaona ako se u gornjem trouglu (iznad glavne
+dijagonale, ne uklju\v cuju\' ci je) nalaze sve nule.
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Napisati program koji sa standardnog ulaza unosi prvo dimenziju
+matrice ($n<10$) pa zatim elemente matrice i izra\v cunava sumu
+elemenata iznad sporedne dijagonale matrice.
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Za datu kvadratnu matricu ka\v zemo da je \emph{magi\v cni
+kvadrat} ako je suma elemenata u svakoj koloni i svakoj vrsti
+jednaka. Napisati program koji sa standardnog ulaza u\v citava
+prirodni broj $n$ ($n<10$) i zatim elemente kvadratne matrice,
+proverava da li je ona \emph{magi\v cni kvadrat} i ispisuje
+odgovaraju\' cu poruku na standardni izlaz. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{4}#
+#\ulaz{1 5 3 1}#
+#\ulaz{2 1 2 5}#
+#\ulaz{3 2 2 3}#
+#\ulaz{4 2 3 1}#
+#\izlaz{da}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Napisati program koji sa standardnog ulaza u\v citava prvo dimenzije
+matrice ($n$ i $m$) a zatim redom i elemente matrice (ne postoje
+pretpostavke o dimenziji matrice). Nakon toga na standardni izlaz,
+zapisati indekse ($i$ i $j$) onih elemenata matrice koji su jednaki
+zbiru svih svojih susednih elemenata (pod susednim elementima
+podrazumevamo okolnih $8$ polja matrice ako postoje). \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{4 5}#
+#\ulaz{1 1 2 1 3}#
+#\ulaz{0 8 1 9 0}#
+#\ulaz{1 1 1 0 0}#
+#\ulaz{0 3 0 2 2}#
+#\izlaz{1 1}#
+#\izlaz{1 3}#
+#\izlaz{3 2}#
+#\izlaz{3 4}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Sa standarnog ulaza se zadaje prvo dimenziju kvadratne matrice $n$ ($n
+< 100$), a zatim elemente matrice.  Nakon toga, na standardni izlaz
+ispisati redni broj kolone koja ima najve\' ci zbir elemenata. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{1 2 3}#
+#\ulaz{7 3 4}#
+#\ulaz{5 3 1}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Napisati funkciju koja treba da ispi\v{s}e elemente matrice u grupama
+koje su paralelne sa sporednom dijagonalom matrice. Mo\v{z}e se
+pretpostaviti da matrica nije dimenzije ve\'ce od $100 \times 100$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{1 2 3}#
+#\ulaz{4 5 6}#
+#\ulaz{7 8 9}#
+#\izlaz{1}#
+#\izlaz{2 4}#
+#\izlaz{3 5 7}#
+#\izlaz{6 8}#
+#\izlaz{9}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.2_] 
+Sa standarnog ulaza u\v citava se broj $n$, a zatim i kvadratna
+matrica koja sadr\v zi brojeve tipa \verb|double| dimenzije $n\times
+n$. Napisati program koji izra\v cunava i ispisuje razliku (na dve
+decimale) izmedju zbira elemenata gornjeg trougla i zbira elemenata
+donjeg trougla matrice -- gornji trougao \v cine svi elementi iznad
+sporedne dijagonale (ne ra\v cunaju\' ci dijagonalu), a donji trougao
+\v cine svi elementi ispod sporedne dijagonale (ra\v cunaju\' ci
+dijagonalu). U slu\v caju gre\v ske u datoteku upisati \verb|GRESKA|.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{3}#
+#\ulaz{2 3.2 4}#
+#\ulaz{7 8.8 1}#
+#\ulaz{2.3 1 1}#
+#\izlaz{-2.10}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{4}#
+#\ulaz{2.3 1 12 8}#
+#\ulaz{4 -8.2 7 14.5}#
+#\ulaz{1 -2.5 9 11}#
+#\ulaz{3 4.3 -5.7 2}#
+#\izlaz{49.4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{-4}#
+#\izlaz{GRESKA}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1.2_] 
+Kao argumenti komandne linje zadate su dimenzije matrice \verb|A|
+(\verb|m| i \verb|n|).  Element matrice se naziva sedlo ako je
+istovremeno najmanji u svojoj vrsti, a najve\'ci u svojoj
+koloni. Ispisati indekse i vrednosti onih elemenata matrice koji su
+sedlo. Pretpostaviti da je maksimalna dimenzija matrice $50\times 50$.
+Ukoliko nisu zadati svi potrebni argumenti komadne linije ispisati
+poruku da je do\v slo do gre\v ske. Ukoliko su dimenzije van opsega
+ispisati poruku o gre\v sci. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out 2 3}#
+#\naslovInt#
+#\ulaz{1 2 3}#
+#\ulaz{0 5 6}#
+#\izlaz{0 0 1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\poziv{./a.out 3 3}#
+#\naslovInt#
+#\ulaz{10 3 20}#
+#\ulaz{15 5 100}#
+#\ulaz{30 -1 200}#
+#\izlaz{1 1 5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\poziv{./a.out 3}#
+#\naslovInt#
+#\izlaz{greska}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\poziv{./a.out 200 3}#
+#\naslovInt#
+#\izlaz{greska}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.2_}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\end{Answer}
+
+
+
+
+
+
+
+\section{Rešenja}
+\shipoutAnswer
+

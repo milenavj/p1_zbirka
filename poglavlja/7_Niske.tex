@@ -345,4 +345,438 @@ Napisati funkciju $void\ kopiraj\_n(char\ t[],\ char\ s[],\ int\ n)$ koja kopira
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
 
+\begin{Exercise}[label=p2.3_] 
+\begin{itemize}
+\item Napisati funkciju
+\begin{center}
+ \verb|int prepis(char a[][21], int na, char b[][21])|
+\end{center}
+\noindent koja iz niza re\v{c}i \verb|a| du\v zine \verb|na| prepisuje u niz \verb|b| re\v ci koje su zapisane
+samo malim ili samo velikim slovima. Informaciju o du\v zini niza \verb|b| (broj re\v{c}i koje zadovoljavaju prethodni uslov)
+vratiti kao povratnu vrednost funkcije.\\
+
+\item 
+Napisati program koji sa standardnog ulaza u\v citava prvo broj
+re\v{c}i (strogo ve\'ci od nule, manji od 50), a zatim i same
+re\v{c}i razdvojene blanko znakom (smatrati da re\v{c}i koje se
+unose sa ulaza ne\'ce biti du\v{z}e od 20 karaktera - ovaj uslov
+ne proveravati). Za slu\v{c}aj kada je broj re\v{c}i izvan
+tra\v{z}enog opsega ispisati -1 i prekinuti izvr\v{s}avanje
+programa. Kori\v{s}\'cenjem prethodno definisane funkcije
+\verb|prepis|, odrediti sve re\v{c}i koje su zapisane samo malim
+ili samo velikim slovima. Rezultat ispisati na standardni izlaz.
+Napomena: Ukoliko se pri re\v{s}avanju zadatka ne bude koristila
+funkcija \verb|prepis|, zadatak ne\'ce biti pregledan i nosi\'ce
+nula poena.
+\end{itemize}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{3 abc ABC aBc}#
+#\izlaz{abc ABC}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{2 mnB RGa}#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{-3}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{4 2abc AVF\$ abc AV4}#
+#\izlaz{abc}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju
+\verb|void min_razlika(char s[], char s1[], char s2[])| koja u datotoj
+nisci s pronalazi dve re\v ci koje imaju minimalnu razliku izme\d u
+svojih samoglasnika.  ( Re\v c je niz karaktera izme\d u dve praznine;
+razmak izme\d u samoglasnika re\v ci \verb|danas| i \verb|jutro| je 2,
+a razmak izmedju \verb|sutrk| i \verb|mnozenje| je 5).  Testirati
+pozivom u main-u.  Maksimalna du\v zina niske je 20 karaktera.
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|int pp(char s[], char t[])| koja odre\d uje
+poziciju poslednjeg karaktera niske \verb|s| sadr\v zanog u okviru
+niske \verb|t|, zanemaruju\' ci pri tom razliku izme\d u velikih i
+malih slova, ili -1 ako takvog karaktera nema.  Testirati pozivom u
+main-u.  Maksimalna du\v zina niske je 20 karaktera.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{a4BA3Bc A3b}#
+#\izlaz{5}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|int f1(char s[])| koja prihvata tu nisku i
+proverava da li niska sadr\v{z}i veliko slovo. Funkcija vra\'ca 1 ako
+sadr\v zi veliko slovo, ina\v ce 0.  Testirati pozivom u main-u.
+Maksimalna du\v zina niske je 20 karaktera.
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|void ukloniSlova(char s[])| koja iz niske
+\verb|s| uklanja sva mala i velika slova.  Testirati pozivom u main-u.
+Maksimalna du\v zina niske je 20 karaktera.  \linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|unsigned btoi(char* s, unsigned char b)| koja
+odre\d uje vrednost zapisa datog neozna\v cenog broja \verb|s| u datoj
+osnovi \verb|b|. Napisati funkciju
+\verb|void itob(unsigned n, unsigned char b, char* s)| koja datu
+vrednost \verb|n| zapisuje u datoj osnovi \verb|b| i sme\v sta
+rezultat u nisku \verb|s|. Napisati zatim program koji \v cita liniju
+po liniju sa standardnog ulaza i obra\d uje ih sve dok ne nai\d e na
+praznu liniju. Svaka linija sadr\v zi jedan dekadni, oktalni ili
+heksadekadni broj (zapisan kako se zapisuju konstante u programskom
+jeziku C). Program za svaki uneti broj ispisuje njegov binarni
+zapis. Pretpostaviti da \' ce svi uneti brojevi biti u opsegu tipa
+\verb|unsigned|. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{0x49 0x1ABC}#
+#\izlaz{1001001 1101010111100}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{012 435 0x64FE}#
+#\izlaz{1010 110110011 110010011111110}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{123 0777}#
+#\izlaz{1111011 111111111}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{981}#
+#\izlaz{1111010101}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Implementirati funkciju int \verb|str_str(char s[], char t[])| koja
+proverava da li niska \verb|s| sadrzi nisku \verb|t|. Zatim napisati
+program koji sa standardnog ulaza u\v{c}itava pet redova (svaki red
+ima najvise 100 karaktera) i koji ispisuje sve redne brojeve linija
+koje sadr\v ze nisku \verb|program| (linije se numeri\v{s}u od broja
+1). Ukoliko ne postoji red sa niskom \verb|program| ispisati -1. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{novi red*nprogram}#
+#\ulaz{c prog. jezik}#
+#\ulaz{c? programskih jezik}#
+#\ulaz{Programski odbor}#
+#\ulaz{<b>program</b>}#
+#\izlaz{1 3 5}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|void sifrat(char* rec, char* kljuc)| koja \v
+sifruje \verb|rec| na slede\' ci na\v cin: za svako slovo re\v ci
+\verb|rec| i odgovaraju\' ce slovo \verb|kljuca| određuje koliki je
+(alfabetski) razmak između njih i ozna\v cimo taj broj sa \verb|k|.
+Potom to slovo \verb|reci| zamenjuje \verb|k-tim| slovom alfabeta.
+Podrazumeva se da je \verb|kljuc| du\v zi od reci. \\ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{bac}#
+#\ulaz{dfge}#
+#\izlaz{bed}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|void obrni(char rec[], int k)| koja rotira
+re\v c za k mesta ulevo.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{sveska}#
+#\ulaz{2}#
+#\izlaz{eskasv}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+ Napisati sledece funkcije:
+
+\verb|int poredjenje(char* s1, char* s2);|
+
+\verb|// vraca 1 ako su s1 i s2 iste niske, 0 u suprotnom|
+\vspace*{2mm}
+
+\verb|void uVelikaSlova(char* s);|
+
+\verb|// pretvara sva slova niske s u velika, ostale znakove ne menja|
+
+Napisati program koji sa standardnog ulaza u\v{c}itava dve re\v{c}i (du\v{z}ine
+najvi\v{s}se 20 znakova) i, koriste\'ci ove dve funkcije, ispisuje da li su
+one jednake ako se sva slova pretvore u velika slova. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{isPit2010}#
+#\ulaz{IsPiT2010}#
+#\izlaz{jesu jednake}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+Napisati program kojim se sadr\v zaj unetog stirnga \v sifrira tako \v
+sto se svako slovo zamenjuje slede\'cim ASCII slovom, a znakovi ’z' i
+'Z' zamenjuju redom sa 'a' i ’A’.  Uneta re\v c nije du\v za od 20
+karaktera.
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+Napisati funkciju \verb|void sifruj(char rec[], char sifra[])|
+koja na osnovu date re\v ci formira \v sifru koja se dobija tako \v sto se
+svako slovo u re\v ci zameni sa naredna tri slova koja su mu susedna u abecedi. 
+Na primer, re\v c ”tamo” treba da bude zamenjena sa ”uvwbcdnoppqr” a re\v c ”zec”
+sa ”abcfghdef”. \\
+Napisati program koji \v sifruje unetu re\v c sa standardnog ulaza i \v stampa
+dobijeni rezultat na standardni izlaz. Za re\v c pretpostaviti da nije 
+du\v za od 20 karaktera. Unos re\v ci ostvariti koristeci specifikator ”%s”.
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+Sa ulaza se unosi re\v c koja nije du\v za od 20 znakova. Napisati program
+koji formira i \v stampa rezultuju\'cu re\v c koja se dobija tako \v sto se 
+uneta re\v c kopira 4 puta pri \v cemu se izme\d u svakog kopiranja ume\'ce 
+crtica. Na primer ako je uneta re\v c \verb|ana|,formirana re\v c treba da 
+bude \verb|ana-ana-ana-ana|.\\
+Zadatak uraditi:
+\begin{description}
+\item[(a)] pisanjem odgovaraju\'ce funkcije koja vr\v si nadovezivanje re\v ci,
+\item[(b)] koriste\'ci postoje\'cu funkciju iz biblioteke string.h (\verb|strcat|).
+\end{description}
+Napomena: voditi ra\v cuna da se za rezultuju\'cu re\v c odvoji odgovaraju\'ca 
+koli\v cina memorije.
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.3_] 
+Sa ulaza se unosi re\v c koja nije du\v za od 20 znakova. Napisati
+funkciju koja svako pojavljivanje znaka koji se zadaje kao prvi
+argument funkcije udvaja a svako po- javljivanje znaka koji se zadaje
+kao drugi argument funkcije izbacuje. Napisati program koji poziva ovu
+funkciju za re\v c unetu sa standardnog ulaza i za znakove koji se
+tako\d e zadaju sa standardnog ulaza. Na primer, ako se unese re\v c
+\verb|ana| i znakovi \verb|a| i \verb|n|, tada funkcija treba da
+izmeni re\v c tako da ona postane \verb|aaaa|, ako se unese re\v c
+\verb|abrakadabra| i znakovi \verb|a| i \verb|b|, tada funkcija treba
+re\v c da izmeni tako da ona postane
+\verb|aaraakaadkkraa|.\\ Napomena: voditi ra\v cuna da novonastala
+izmenjena re\v c mo\v ze imati ve\'ci broj karaktera i u skladu sa tim
+rezervisati odgovaraju\'cu koli\v cinu memorije. Dopu\v steno je
+koristiti pomo\' can niz. \\
+\linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+ Napisati funkciju \verb|void ukloni(char *s);| koja iz niske uklanja
+ sva slova iza kojih neposredno sledi slovo koje je u abecedi nakon
+ njih (veli\v cina slova se zanemaruje). Testirati funkciju u programu
+ koji u\v citava liniju teksta (najvi\v se 100 karaktera). \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{zdRaVo svIma}#
+#\izlaz{zRVo vma}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{12345AbcD}#
+#\izlaz{12345D}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{JeD1aN D52Va.}#
+#\izlaz{JeD1N D52Va.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{abcd efg}#
+#\izlaz{d g}#
+\end{upotreba}
+\end{miditest}
+ \linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+\begin{description}
+\item{a)} Napisati C funkciju
+  \verb|int procitaj_recenicu(char *s, int max_len)|, koja sa
+  standarnog ulaza \v{c}ita re\v{c}enicu i sme\v{s}ta je u nisku
+  \verb|s|. \v{C}itanje re\v{c}enice se zaustavlja ako se pro\v{c}ita
+  simbol \verb|.| ili je ve\' c u\v{c}itano \verb|max_len-1|
+  karaktera. Funkcija treba da vrati broj pro\v{c}itanih karaktera.
+
+\item{b)} Napisati C funkciju
+  \verb|void prebroj(char *s, int *broj_malih, int *broj_velikih)|,
+  koja za zadatu nisku \verb|s| ra\v{c}una broj malih i velikih slova
+  koji se u njoj pojavljuju.
+
+\item{c)} Napisati glavni program koji sa standardnog ulaza \v{c}ita
+  re\v{c}enice i na standardni izlaz ispisuje onu kod koje je razlika
+  broja malih i velikih slova najve\'ca.
+\end{description}
+ \linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+\begin{description}
+ \item {a)} Uvesti tip podataka \verb|Sifra| kojim se opisuje na\v cin
+   \v sifrovanja alfanumeri\v ckih karaktera.  Svaka \v sifra se
+   opisuje celobrojnom vrednoscu \verb|b| koja odre\d uje broj
+   pozicija pomeranja, kao i karakterom \verb|'L'| ili \verb|'D'| koji
+   odre\d uje smer pomeranja (levo ili desno).
+  \item{b)} Napisati funkciju \verb|void sifruj(char rec[],Sifra s)|
+    koja transformi\v se zadatu re\v c \verb|rec| po \v sifri
+    \verb|s|. Re\v c se \v sifruje tako \v sto se svako slovo
+    zamenjuje slovom za \verb|b| mesta levo ili desno od njega u
+    abecedi, i to cikli\v cno, a isto tako i za cifre.\\ Npr: za b=2,
+    i smer='D' : a se menja sa c, b sa d,..., x sa z,y sa a, z sa b, 1
+    sa 3, .. 8 sa 0, 9 sa 1
+ \item{c)} Sa standarnog ulaza se zadaje na\v cin \v sifrovanja i to u
+   obliku \verb|2 D 5 L|(\v sifra mo\v ze biti i du\v za). Potom se
+   u\v citava $n$ i $n$ re\v ci sa standarnog ulaza (maksimalna du\v
+   zina re\v ci je 20 karaktera).  Ispisati re\v ci na standarni izlaz
+   nakon primenjenih svih zadatih na\v cina \v sifrovanja.
+\end{description}
+ \linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.3_] 
+Implementirati funkciju \verb|int strspn(char* s, char* t)|
+koja izra\v cunava du\v zinu po\v cetnog dela niske \verb|s| sastavljenog
+isklju\v civo od karaktera sadr\v zanih u niski \verb|t|.
+
+Napisati i program koji sa standardnog ulaza u\v citava dve niske (du\v zine
+najvi\v se 100 karaktera, svaku u zasebnom redu) i ispisuje rezultat poziva
+funkcije \verb|strspn| na standardni izlaz.
+
+Na primer, za u\v{c}itane podatke \verb|"734a.bf62", "0123456789")| program
+ispisuje vrednost 3.
+ \linkresenje{p2.3_}
+\end{Exercise}
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+
+
+\section{Rešenja}
+\shipoutAnswer
 

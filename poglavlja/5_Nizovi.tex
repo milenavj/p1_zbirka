@@ -699,3 +699,251 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 %\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
 \end{Answer}
 
+\begin{Exercise}[label=p2.1_] 
+\textbf{Filip-Janicic?} Napisati funkciju (i program koji je testira)
+koja:
+\begin{enumerate}
+\item proverava da li dati niz sadrži dati broj;
+\item pronalazi indeks prve pozicije na kojoj se u nizu nalazi dati
+  broj (-1 ako niz ne sadrži broj).
+\item pronalazi indeks poslednje pozicije na kojoj se u nizu nalazi
+  dati broj (-1 ako niz ne sadrži broj).
+\item izračunava zbir svih elemenata datog niza brojeva;
+\item izračunava prosek (aritmetičku sredinu) svih elemenata datog
+  niza brojeva;
+\item izračunava najmanji element datog elemenata niza brojeva;
+\item određuje poziciju najvećeg elementa u nizu brojeva (u slučaju
+  više pojavljivanja najvećeg elementa, vratiti najmanju poziciju); 
+\item proverava da li je dati niz brojeva uređen neopadajuće
+\end{enumerate}
+  \linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+\textbf{Filip-Janicic?} Napisati funkciju (i program koji je testira)
+koja: 
+\begin{enumerate}
+\item  izbacuje poslednji element niza; 
+\item izbacuje prvi element niza (napisati varijantu u kojoj je bitno
+  očuvanje redosleda elemenata i varijantu u kojoj nije bitno očuvanje
+  redosleda); 
+\item izbacuje element sa date pozicije k ; 
+\item ubacuje element na kraj niza; 
+\item ubacuje element na početak niza; 
+\item ubacuje dati element x na datu poziciju k ; 
+\item izbacuje sva pojavljivanja datog elementa x iz niza. 
+\end{enumerate}
+ Napomena: funkcija kao argument prima niz i broj njegovih trenutno
+ popun- jenih elemenata, a vraća broj popunjenih elemenata nakon
+ izvođenja zahtevane operacije.  \\
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+\textbf{Filip-Janicic?} Napisati funkciju (i program koji je testira)
+koja: 
+\begin{enumerate}
+\item  određuje dužinu najduže serije jednakih uzastopnih elemenata
+u datom nizu brojeva; 
+\item određuje dužinu najvećeg neopadajućeg podniza datog niza celih
+  brojeva; 
+\item određuje da li se jedan niz javlja kao podniz uzastopnih
+  elemenata drugog; 
+\item određuje da li se jedan niza javlja kao podniz elemenata drugog
+  (elementi ne moraju da budu uzastopni, ali se redosled pojavljivanja
+  poštuje); 
+\item obrće dati niz brojeva; 
+\item rotira sve elemente datog niza brojeva za k pozicija ulevo; 
+\item rotira sve elemente datog niza brojeva za k pozicija udesno; 
+\item izbacuje višestruka pojavljivanja elemenata iz datog niza
+  brojeva (napisati varijantu u kojoj se zadržava prvo pojavljivanje i
+  varijantu u kojoj se zadržava poslednje pojavljivanje).  
+\item spaja dva niza brojeva koji su sortirani neopadajući u treći niz
+  brojeva koji je sortiran neopadajući.  
+\end{enumerate}
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+Napisati funkciju \verb|int f3(int a[], int n, int b[], int m)| i
+ispituje da li prvi sadr\v{z}i bar dva broja koji se pojavljuju u
+drugom nizu. Povratna vrednost je dakle, 0, ili 1.  Testirati pozivom
+u main-u. Maksimalna du\v zina niza je 100 elemenata.
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+Napisati C funkciju koja u prosle\d enom nizu elimini\v se sve brojeve
+koji nisu deljivi svojim indeksom (vrednost na indeksu 0 zadr\v zati,
+jer nije dozvoljeno deljenje sa 0). Niz reorganizovati, tako da nema
+\emph{rupa} koje su nastale eliminacijom elemenata. Kao rezultat
+funkcije vratiti novu dimenziju niza.
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{4 2 1 6 7 8 10 2 16 3}#
+#\izlaz{4 2 6 16}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+Implementirati funkciju \verb|int min_max(int a[], int n)| koja
+prihvata celobrojni niz, pronalazi indekse najmanjeg i najve\' ceg
+elementa tog niza koriste\' ci samo jedan prolaz (jednu petlju), a
+zatim kao povratnu vrednost vra\' ca manji od ta dva
+indeksa.\\ Program testirati pozivom funkcije iz main programa i
+ispisom rezultata na standardni izlaz, pri \v cemu korisnik sa
+standardnog ulaza unosi niz duzine 10 elemenata.
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+Napisati funkciju \verb|void brojanje(int a[], int brojac[], int N) |
+\v ciji su argumenti \verb|a| i \verb|brojac| celobrojni nizovi
+dimenzije N. Vrednosti elemenata niza \verb|a| su izmedu 0 i N -
+1. Funkcija izra\v cunava elemente niza \verb|brojac| tako da je
+\verb|brojac[i]| jednak broju pojavljivanja broja \verb|i| u nizu
+\verb|a|.  Program testirati pozivom funkcije iz main programa -
+korsnik u\v citava broj \verb|N| i potom niz \verb|a| du\v zine
+\verb|N|, potom poziva funkciju i potom na standardnom izlazu izpisuje
+dobijeni niz.
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p2.1_] 
+Napisati funkciju \verb|int ind(int a[],int n)| koja kao povratnu
+vrednost ima indeks onog elementa niza koji je po vrednosti najbli\v
+zi srednjoj vrednosti onih elemenata niza brojeva koji su deljivi sa
+3.\\ Program testirati pozivom funkcije iz main programa i ispisom
+rezulata na standarni izlaz, pri \v cemu korisnik sa standardnog ulaza
+unosi broj n, a zatim niz od n celih brojeva (maksimalna dimenzija
+niza je 100 elemenata). \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1 2 3 4 5}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{3 6 2 4 7}#
+#\izlaz{3}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+Sa standardnog ulaza se unosi jedna linija teksta. Napisati program
+koji prikazuje koliko puta se javilo svako od slova engleskog alfabeta
+(ne praviti razliku izmedju velikih i malih slova). \\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{haHJjkL}#
+#\izlaz{ a:1  b:0  c:0  d:0  e:0  f:0  g:0  h:2  i:0  j:2  k:1  l:1  m:0  n:0  o:0  p:0  q:0  r:0  s:0
+   t:0  u:0  v:0  w:0  x:0  y:0  z:0}#
+\end{upotreba}
+\end{maxitest}
+\begin{maxitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{DanaS j3 \_j\_utRo laBU78d}#
+#\izlaz{a:3  b:1  c:0  d:2  e:0  f:0  g:0  h:2  i:0  j:2  k:0  l:1  m:0  n:1  o:1  p:0  q:0  r:1  s:1
+  t:1  u:2  v:0  w:0  x:0  y:0  z:0}#
+\end{upotreba}
+\end{maxitest}
+\begin{maxitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{Sao PaoLo 1998 \_JuZna Amerika90}#
+#\izlaz{a:5  b:0  c:0  d:2  e:1  f:0  g:0  h:0  i:1  j:1  k:1  l:1  m:1  n:1  o:3  p:1  q:0  r:1  s:1
+  t:0  u:1  v:0  w:0  x:0  y:0  z:0}#
+\end{upotreba}
+\end{maxitest}
+\begin{maxitest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{Ixxx kk 3yyy 4qqqq}#
+#\izlaz{a:0  b:0  c:0  d:0  e:0  f:0  g:0  h:0  i:1  j:0  k:2  l:0  m:0  n:0  o:0  p:0  q:4  r:0  s:0
+  t:0  u:0  v:0  w:0  x:3  y:3  z:0}#
+\end{upotreba}
+\end{maxitest}
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+Napisati program koji sa standardnog ulaza u\v citava $50$ celih brojeva
+i razdvaja ih na parne i neparne tako \v sto parne brojeve upisuje na
+po\v cetak niza, a neparne na kraj niza. Ispisati niz dobijen na taj
+na\v cin. Nije dozvoljeno koristiti dodatne nizove.
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=p2.1_] 
+\begin{itemize}
+\item [(a)]
+Napisati funkciju \verb"void brojanje(int a[], int brojac[], int N)"
+\v ciji su argumenti \verb"a" i \verb"brojac" celobrojni nizovi dimenzije $N$.
+Vrednosti elemenata niza \verb"a" su izme\d u $0$ i $N-1$. Funkcija izra\v cunava
+elemente niza \verb"brojac" tako da je $i$-ti element \verb"brojac[i]" jednak
+broju pojavljivanja broja $i$ u nizu \verb"a".
+
+\item[(b)]
+Za celobrojni niz \verb"a" dimenzije $N$ 
+ka\v zemo da je \emph{permutacija} ako sadr\v zi sve brojeve
+$i$: $0 \leq i \le N$.
+Sastaviti funkciju \verb"int DaLiJePermutacija(int a[], int N)" koja vra\' ca
+$1$ ako je niz \verb"a" permutacija, a $0$ ina\v ce. (koristiti funkciju
+\verb"brojanje").
+\end{itemize}
+\linkresenje{p2.1_}
+\end{Exercise}
+\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\end{Answer}
+
+
+\section{Rešenja}
+\shipoutAnswer
