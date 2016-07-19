@@ -3,7 +3,9 @@
 
 
 \begin{Exercise}[label=v1.4_01] 
-Tekst
+Napisati funkcije
+\verb|int kvadrat(int x)| i \verb|int kub(int x)|
+koje računaju, redom,  kvadrat i kub datog broja. Napisati program koji testira rad ovih funkcija.\\ 
 \linkresenje{v1.4_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_01]
@@ -11,7 +13,9 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_02] 
-Tekst
+Napisati funkciju
+\verb|float stepen(float x, int n)|
+koja računa $x^n$. Napisati program koji testira rad ove funkcije.\\ 
 \linkresenje{v1.4_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_02]
@@ -19,7 +23,11 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_03] 
-Tekst
+Napisati funkciju 
+\verb|int euklid(int x, int y)|
+koja za dva data cela broja određuje
+  najveći zajednički delilac primenom Euklidovog algoritma. Napisati program
+  koji testira rad ove funkcije.\\ 
 \linkresenje{v1.4_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_03]
@@ -27,7 +35,11 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_04] 
-Tekst
+Napisati funkciju 
+\verb|float zbir_reciprocnih(int n)|
+koja za dato n vraca zbir recipročnih vrednosti brojeva od 1 do n.
+Napisati program koji testira rad ove funkcije. Rezultat zaokružiti
+na dve decimale.\\ 
 \linkresenje{v1.4_04}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_04]
@@ -35,7 +47,28 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_05] 
-Tekst
+ Napisati funkciju $float\ aritmeticka\_sredina(int\ n)$ koja računa aritmetičku sredinu cifara datog broja. Napisati i program koji testira rad napisane funkcije. Rezultat ispisivati na tri decimale.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{461}#
+#\izlaz{3.667}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1001}#
+#\izlaz{0.500}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-84723}#
+#\izlaz{4.800}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.4_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_05]
@@ -43,7 +76,11 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_06] 
-Tekst
+Napisati funkciju 
+\verb|void ispis(float x, float y, unsigned n)|
+koja za dva realna broja x i y i jedan neoznačeni ceo broj n
+ispisuje vrednosti funkcije $sin$ u $n$ ravnomerno raspoređenih tačaka intervala [x,y].
+Napisati program koji testira rad ove funkcije. \\ 
 \linkresenje{v1.4_06}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_06]
@@ -51,73 +88,21 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_07] 
-Tekst
+Napisati funkciju 
+\verb|int broj_ncifara(int x)|
+koja broji neparne cifre u zapisu datog celog broja. Testirati rad ove funkcije u programu koji učitava cele brojeve dok se ne unese nula i ispisuje
+broj neparnih cifara svakog unetog broja. \\ 
 \linkresenje{v1.4_07}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_07]
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_07.c}
 \end{Answer}
 
-\begin{Exercise}[label=v1.4_08] 
-Tekst
-\linkresenje{v1.4_08}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_08]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_08.c}
-\end{Answer}
 
-\begin{Exercise}[label=v1.4_09] 
-Tekst
-\linkresenje{v1.4_09}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_09]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_09.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_10] 
-Tekst
-\linkresenje{v1.4_10}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_10]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_11] 
-Tekst
-\linkresenje{v1.4_11}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_11]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_11.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_12] 
-Tekst
-\linkresenje{v1.4_12}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_12]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_12.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_13] 
-Tekst
-\linkresenje{v1.4_13}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_13]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_13.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_14] 
-Tekst
-\linkresenje{v1.4_14}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_14]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
-\end{Answer}
-
-
-
+% praktikum 1 + neki dodatni zadaci
+% praktikum 1.1
 \begin{Exercise}[label=p1.4_] 
-Napisati funkciju $int\ min(int\ x, int\ y, int\ z)$ koja izračunava minimun tri broja. Napisati program koji sa standardnog ulaza učitava tri cela broja i ispisuje rezultat poziva funkcije. \\
+Napisati funkciju $int\ min(int\ x, int\ y, int\ z)$ koja izračunava minimum tri broja. Napisati program koji sa standardnog ulaza učitava tri cela broja i ispisuje rezultat poziva funkcije. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -138,8 +123,9 @@ Napisati funkciju $int\ min(int\ x, int\ y, int\ z)$ koja izračunava minimun tr
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.2
 \begin{Exercise}[label=p1.4_] 
-Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava apsolutnu vrednost broja $x$. Napisati program koji sa standardnog ulaza učitava jedan ceo broj i ispisuje rezultat poziva funkcije.  \\
+Napisati funkciju $unsigned\ int\ apsolutna\_vrednost(int\ x)$ koja izračunava apsolutnu vrednost broja $x$. Napisati program koji sa standardnog ulaza učitava jedan ceo broj i ispisuje rezultat poziva funkcije.  \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -161,6 +147,7 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.3
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $float\ razlomljeni\_deo(float\ x)$ koja izračunava razlomljeni deo broja $x$. Napisati program koji sa standardnog ulaza učitava jedan realan broj i ispisuje rezultat poziva funkcije.  \\
 \begin{miditest}
@@ -180,7 +167,7 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 
 \iffalse
 %koristi se na vezbama u VIII nedelji
-\item Napisati funkciju $int\ jednake_cifre(int\ x)$ koja proverava da li su sve cifre iz zapisa broj $x$ jednake. Funkcija treba da vrati broj $1$ ako je uslov ispunjen ili $0$ ako nije. Zatim sa standardnog ulaza učitati jedan četvorocifren broj i ispisati rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
+\item Napisati funkciju $int\ jednake\_cifre(int\ x)$ koja proverava da li su sve cifre iz zapisa broj $x$ jednake. Funkcija treba da vrati  $1$ ako je uslov ispunjen ili $0$ ako nije. Napisati potom program koji sa standardnog ulaza učitava jedan četvorocifreni broj i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -270,6 +257,7 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.4
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $void\ romb(int\ n)$ koja iscrtava romb čija je stranica dužine $n$. Napisati program koji učitava ceo pozitivan broj i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci.\\
 \begin{miditest}
@@ -306,8 +294,9 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.5
 \begin{Exercise}[label=p1.4_] 
- Napisati funkciju $void\ grafikon\_h(int\ a,\ int\ b,\ int\ c,\ int\ d)$ koja vrši horizontalno prikazivanje zadatih vrednosti. Napisati program koji učitava četiri pozitivna cela broja i prikazuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
+ Napisati funkciju $void\ grafikon\_h(int\ a,\ int\ b,\ int\ c,\ int\ d)$ koja iscrtava horizontalni prikaz zadatih vrednosti. Napisati program koji učitava četiri pozitivna cela broja i prikazuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -343,8 +332,9 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.6
 \begin{Exercise}[label=p1.4_] 
- Napisati funkciju $void\ grafikon\_v(int\ a,\ int\ b,\ int\ c,\ int\ d)$ koja vrši vertikalno prikazivanje zadatih vrednosti. Napisati program koji učitava četiri pozitivna cela broja i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
+ Napisati funkciju $void\ grafikon\_v(int\ a,\ int\ b,\ int\ c,\ int\ d)$ koja iscrtava vertikalni prikaz zadatih vrednosti. Napisati program koji učitava četiri pozitivna cela broja i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -383,6 +373,7 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.7
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ prestupna(int\ godina)$ koja za zadatu godinu proverava da li je prestupna. Funkcija treba da vrati $1$ ako je godina prestupna ili $0$ ako nije. Napisati program koji učitava dva cela broja $g1$ i $g2$ i ispisuje sve godine iz intervala $[g1, g2]$ koje su prestupne.\\
 \begin{miditest}
@@ -424,7 +415,7 @@ Napisati funkciju $unsigned\ int\ apsolutna_vrednost(int\ x)$ koja izračunava a
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju \verb|int broj_dana(int mesec, int godina)| koja za
 dati mesec i godinu vra\'ca broj dana u datom
-mesecu.\\ \linkresenje{p1.4_}
+mesecu. Napisati program koji testira ovu funkciju. U slučaju nekorektnog unosa ispisati odgovarajuću poruku o grešci.\\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
@@ -432,7 +423,7 @@ mesecu.\\ \linkresenje{p1.4_}
 
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju \verb|int ispravan(int dan, int mesec, int godina)|
-koja za dati datum proverava da li je ispravan.\\ \linkresenje{p1.4_}
+koja za dati datum proverava da li je ispravan. Napisati program koji testira ovu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
@@ -440,9 +431,9 @@ koja za dati datum proverava da li je ispravan.\\ \linkresenje{p1.4_}
 
 
 \begin{Exercise}[label=p1.4_] 
-Napiati funkciju
+Napisati funkciju
 \verb|void sledeci_dan(int dan, int mesec, int godina)| koja za dati
-datum odre\d uje datum slede\'ceg dana. \\ \linkresenje{p1.4_}
+datum određuje datum slede\'ceg dana. Napisati program koji testira ovu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
@@ -450,8 +441,8 @@ datum odre\d uje datum slede\'ceg dana. \\ \linkresenje{p1.4_}
 
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju
-\verb|int broj_dana1(int dan, int mesec, int godina)| koja odre\d uje
-broj dana od po\v cetka godine do datog datuma.\\ \linkresenje{p1.4_}
+\verb|int broj_dana1(int dan, int mesec, int godina)| koja određuje koliko je dana proteklo od Nove godine do 
+do datog datuma. Napisati glavni program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
@@ -459,8 +450,7 @@ broj dana od po\v cetka godine do datog datuma.\\ \linkresenje{p1.4_}
 
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju
-\verb|int broj_dana2(int dan, int mesec, int godina)| koja odre\d uje
-broj dana od datog datuma do kraja godine.\\ \linkresenje{p1.4_}
+\verb|int broj_dana2(int dan, int mesec, int godina)| koja određuje broj dana od datog datuma do kraja godine. Napisati glavni program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
@@ -469,14 +459,14 @@ broj dana od datog datuma do kraja godine.\\ \linkresenje{p1.4_}
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju
 \verb|int broj_dana3(int dan1, int mesec1, int godina1,|
-\verb|int dan2, int mesec2, int godina2)| koja odre\d uje broj dana
-izme\d u dva datuma.\\ \linkresenje{p1.4_}
+\verb|int dan2, int mesec2, int godina2)| koja određuje broj dana
+između dva datuma. Napisati glavni program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
-
+% praktikum 1.8
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ zbir\_delilaca(int\ n)$ koja izračunava zbir delilaca broja $n$. Napisati program koji sa standardnog ulaza učitava ceo broj $k$ i ispisuje zbir delilaca svakog broja od 1 do $k$. \\ 
 \begin{miditest}
@@ -500,6 +490,7 @@ izme\d u dva datuma.\\ \linkresenje{p1.4_}
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.9
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ ukloni\_stotine(int\ n)$ koja modifikuje zadati broj tako što iz njegovog zapisa uklanja cifru stotina (ako postoji). Napisati program koji za brojeve koji se unose sa standardnog ulaza sve do pojave broja 0 ispisuje rezultat primene funkcije. \\
 \begin{miditest}
@@ -534,6 +525,7 @@ izme\d u dva datuma.\\ \linkresenje{p1.4_}
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 1.10
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ rotacija(int\ n)$ koja rotira cifre zadatog broja za jednu poziciju u levo. Napisati program koji za brojeve koji se unose sa standardnog ulaza sve do pojave broja 0 ispisuje rezultat primene funkcije. \\
 \begin{miditest}
@@ -570,6 +562,559 @@ izme\d u dva datuma.\\ \linkresenje{p1.4_}
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% kraj praktikuma1
+
+
+
+\begin{Exercise}[label=v1.4_08] 
+Napisati funkciju 
+\verb|int prost (int x)|
+koja ispituje da li je dati ceo broj prost. Funkcija treba
+da vrati 1 ako je broj prost i 0 u suprotnom. Testirati rad funkcije u programu koji za uneti ceo broj $n$ ispisuje prvih $n$ prostih brojeva.\\
+\linkresenje{v1.4_08}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_08]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_09] 
+Napisati funkciju 
+\verb|int sadrzi(int x, int c)|
+koja ispituje da li se cifra $c$ nalazi u zapisu celog broja $x$. Napisati program koji testira rad ove funkcije.\\ 
+\linkresenje{v1.4_09}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_09]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_09.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_10] 
+Napisati program za ispitivanje svojstava cifara datog celog broja.
+\begin{itemize}
+\item [a)] Napisati funkciju \verb|sve_parne_cifre| koja ispituje da li se dati ceo broj sastoji isključivo iz parnih cifara. Funkcija treba
+da vrati 1 ako su sve cifre broja parne i 0 u suprotnom. 
+\item [b)] Napisati funkciju \verb|sve_cifre_jednake| koja ispituje da li su sve cifre datog celog broja jednake. Funkcija treba
+da vrati 1 ako su sve cifre broja jednake i 0 u suprotnom. 
+\item [c)] Testirati napisane funkcije na unetom celom broju i ispisati odgovarajuću poruku.
+\end{itemize} \\ 
+\linkresenje{v1.4_10}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_10]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_10.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_11] 
+Napisati funkciju 
+\verb|int je_stepen(unsigned x, unsigned n)|
+koja za dva uneta neoznačena broja x i n utvrdjuje da li je x neki stepen
+broja n. Ukoliko jeste, funkcija vraca izložilac stepena, a u suprotnom vraća -1. Napisati program koji testira rad ove funkcije.\\ 
+\linkresenje{v1.4_11}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_11]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_11.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_12] 
+Napisati funkciju 
+\verb|double e_na_x(double x, double eps)|
+koja računa vrednost $e^x$ kao parcijalnu sumu reda
+ $\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje vrši dok
+ je razlika sabiraka u redu po apsolutnoj vrednosti
+ manja od $\varepsilon$. Napisati program koji testira rad ove funkcije.\\ 
+\linkresenje{v1.4_12}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_12]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_12.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_13] 
+Za dati broj moze se formirati niz tako da je svaki sledeći član niza dobijen
+kao suma cifara prethodnog člana niza. Broj je srećan ako se dati niz završava 
+jedinicom. Napisati funkciju 
+\verb|int srecan(int x)|
+ koja vraca 1 ako je broj srećan, a 0 u suprotnom. Napisati program koji za uneti prirodan broj $n$ ispisuje sve srećne brojeve od 1 do $n$.\\ 
+\linkresenje{v1.4_13}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_13]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_13.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_14] 
+Napisati funkciju 
+\verb|int konverzija (int c)|
+koja prebacuje veliko slovo u ekvivalentno malo i obrnuto. Napisati program koji testira ovu funkciju na karakterima koji se unose sa standardnog ulaza do pojave EOF.\\ 
+\linkresenje{v1.4_14}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_14]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+
+% praktikum 1.1
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju $int\ min(int\ x, int\ y, int\ z)$ koja izračunava minimum tri broja. Napisati program koji sa standardnog ulaza učitava tri cela broja i ispisuje rezultat poziva funkcije. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{19 8 14}#
+#\izlaz{Minimum je: 8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{-6 11 -12}#
+#\izlaz{Minimum je: -12}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.2
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju $unsigned\ int\ apsolutna\_vrednost(int\ x)$ koja izračunava apsolutnu vrednost broja $x$. Napisati program koji sa standardnog ulaza učitava jedan ceo broj i ispisuje rezultat poziva funkcije.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-34}#
+#\izlaz{Apsolutna vrednost: 34}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{5}#
+#\izlaz{Apsolutna vrednost: 5}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.3
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $float\ razlomljeni\_deo(float\ x)$ koja izračunava razlomljeni deo broja $x$. Napisati program koji sa standardnog ulaza učitava jedan realan broj i ispisuje rezultat poziva funkcije.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{8.235}#
+#\izlaz{Razlomljeni deo: 0.235000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-5.11}#
+#\izlaz{Razlomljeni deo: 0.110000}#
+\end{upotreba}
+\end{miditest}
+
+\iffalse
+%koristi se na vezbama u VIII nedelji
+\item Napisati funkciju $int\ jednake\_cifre(int\ x)$ koja proverava da li su sve cifre iz zapisa broj $x$ jednake. Funkcija treba da vrati  $1$ ako je uslov ispunjen ili $0$ ako nije. Napisati potom program koji sa standardnog ulaza učitava jedan četvorocifreni broj i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{2854}#
+#\izlaz{Cifre u zapisu nisu jednake!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{5555}#
+#\izlaz{Cifre u zapisu su jednake!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{214}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $int\ prost(int\ x)$ koja proverava da li je zadati broj prost. Funkcija treba da vrati $1$ ako je broj prost ili $0$ ako nije. Broj $x$ je prost ako je deljiv samo brojevima $1$ i $x$. Zatim sa standardnog ulaza učitati jedan ceo broj veći od 1 i ispisati rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{17}#
+#\izlaz{Broj je prost!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{24}#
+#\izlaz{Broj nije prost!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-11}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $void\ prosti_brojevi(int\ m)$ koja ispisuje sve proste brojeve manje od broja $m$.  Zatim sa standardnog ulaza učitati jedan ceo broj veći od 1 i ispisati rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \textit{Napomena: koristiti funkciju napisanu u prethodnom zadatku.} \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{15}#
+#\izlaz{2 3 5 7 11 13}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{9}#
+#\izlaz{2 3 5 7}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+\fi
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.4
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $void\ romb(int\ n)$ koja iscrtava romb čija je stranica dužine $n$. Napisati program koji učitava ceo pozitivan broj i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{\ \ \ \ *****}#
+#\izlaz{\ \ \ *****}#
+#\izlaz{\ \ *****}#
+#\izlaz{\ *****}#
+#\izlaz{*****}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{\ **}#
+#\izlaz{**}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-5}#
+#\izlaz{Greska: pogresna dimenzija!}#
+\end{upotreba}
+\end{miditest}
+
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.5
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $void\ grafikon\_h(int\ a,\ int\ b,\ int\ c,\ int\ d)$ koja iscrtava horizontalni prikaz zadatih vrednosti. Napisati program koji učitava četiri pozitivna cela broja i prikazuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite vrednosti:}\ulaz{4 1 7 5}#
+#\izlaz{****}#
+#\izlaz{*}#
+#\izlaz{*******}#
+#\izlaz{*****}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite vrednosti:}\ulaz{8 -2 5 4}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite vrednosti:}\ulaz{5 2 2 10}#
+#\izlaz{*****}#
+#\izlaz{**}#
+#\izlaz{**}#
+#\izlaz{**********}#
+\end{upotreba}
+\end{miditest}
+
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.6
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $void\ grafikon\_v(int\ a,\ int\ b,\ int\ c,\ int\ d)$ koja iscrtava vertikalni prikaz zadatih vrednosti. Napisati program koji učitava četiri pozitivna cela broja i ispisuje rezultat poziva funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite vrednosti:}\ulaz{4 1 7 5}#
+#\izlaz{\ \ *}#
+#\izlaz{\ \ *}#
+#\izlaz{\ \ **}#
+#\izlaz{*\ **}#
+#\izlaz{*\ **}#
+#\izlaz{*\ **}#
+#\izlaz{****}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite vrednosti:}\ulaz{8 -2 5 4}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite vrednosti:}\ulaz{5 2 2 4}#
+#\izlaz{*}#
+#\izlaz{*\ \ *}#
+#\izlaz{*\ \ *}#
+#\izlaz{****}#
+#\izlaz{****}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.7
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $int\ prestupna(int\ godina)$ koja za zadatu godinu proverava da li je prestupna. Funkcija treba da vrati $1$ ako je godina prestupna ili $0$ ako nije. Napisati program koji učitava dva cela broja $g1$ i $g2$ i ispisuje sve godine iz intervala $[g1, g2]$ koje su prestupne.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dve godine:}\ulaz{2001 2010}#
+#\izlaz{Prestupne godine su: 2004 2008}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dve godine:}\ulaz{2005 2015}#
+#\izlaz{Prestupne godine su: 2008 2012}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dve godine:}\ulaz{2010 2001}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dve godine:}\ulaz{2001 2002}#
+#\izlaz{Nema prestupnih godina u ovom intervalu!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju \verb|int broj_dana(int mesec, int godina)| koja za
+dati mesec i godinu vra\'ca broj dana u datom
+mesecu. Napisati program koji testira ovu funkciju. U slučaju nekorektnog unosa ispisati odgovarajuću poruku o grešci.\\ \linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju \verb|int ispravan(int dan, int mesec, int godina)|
+koja za dati datum proverava da li je ispravan. Napisati program koji testira ovu funkciju. \\ \linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju
+\verb|void sledeci_dan(int dan, int mesec, int godina)| koja za dati
+datum određuje datum slede\'ceg dana. Napisati program koji testira ovu funkciju. \\ \linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju
+\verb|int broj_dana1(int dan, int mesec, int godina)| koja određuje koliko je dana proteklo od Nove godine do 
+do datog datuma. Napisati glavni program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju
+\verb|int broj_dana2(int dan, int mesec, int godina)| koja određuje broj dana od datog datuma do kraja godine. Napisati glavni program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju
+\verb|int broj_dana3(int dan1, int mesec1, int godina1,|
+\verb|int dan2, int mesec2, int godina2)| koja određuje broj dana
+između dva datuma. Napisati glavni program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.8
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $int\ zbir\_delilaca(int\ n)$ koja izračunava zbir delilaca broja $n$. Napisati program koji sa standardnog ulaza učitava ceo broj $k$ i ispisuje zbir delilaca svakog broja od 1 do $k$. \\ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj k:}\ulaz{6}#
+#\izlaz{1 3 4 7 6 12}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj k:}\ulaz{-2}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.9
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $int\ ukloni\_stotine(int\ n)$ koja modifikuje zadati broj tako što iz njegovog zapisa uklanja cifru stotina (ako postoji). Napisati program koji za brojeve koji se unose sa standardnog ulaza sve do pojave broja 0 ispisuje rezultat primene funkcije. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1210}#
+#\izlaz{110}#
+#\izlaz{Unesite broj:}\ulaz{18}#
+#\izlaz{18}#
+#\izlaz{Unesite broj:}\ulaz{3856}#
+#\izlaz{356}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-9632}#
+#\izlaz{-932}#
+#\izlaz{Unesite broj:}\ulaz{246}#
+#\izlaz{46}#
+#\izlaz{Unesite broj:}\ulaz{-52}#
+#\izlaz{-52}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% praktikum 1.10
+\begin{Exercise}[label=p1.4_] 
+ Napisati funkciju $int\ rotacija(int\ n)$ koja rotira cifre zadatog broja za jednu poziciju u levo. Napisati program koji za brojeve koji se unose sa standardnog ulaza sve do pojave broja 0 ispisuje rezultat primene funkcije. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{146}#
+#\izlaz{461}#
+#\izlaz{Unesite broj:}\ulaz{18}#
+#\izlaz{81}#
+#\izlaz{Unesite broj:}\ulaz{3856}#
+#\izlaz{8563}#
+#\izlaz{Unesite broj:}\ulaz{7}#
+#\izlaz{7}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{89}#
+#\izlaz{98}#
+#\izlaz{Unesite broj:}\ulaz{-369}#
+#\izlaz{-693}#
+#\izlaz{Unesite broj:}\ulaz{-55281}#
+#\izlaz{-52815}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+
+
+\linkresenje{p1.4_}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\end{Answer}
+
+% -----------------------------pocetak 2. casa praktikuma -------------------------------------
+
+% praktikum 2.1 = zadatak sa 1. casa vezbi
+\begin{comment}
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $float\ aritmeticka\_sredina(int\ n)$ koja računa aritmetičku sredinu cifara datog broja. Napisati i program koji testira rad napisane funkcije. Rezultat ispisivati na tri decimale.\\
 \begin{miditest}
@@ -600,6 +1145,9 @@ izme\d u dva datuma.\\ \linkresenje{p1.4_}
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+\end{comment}
+
+% praktikum 2.2
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ zapis(int\ x, int\ y)$ koja proverava da li se brojevi $x$ i $y$ zapisuju pomoću istih cifara. Funkcija treba da vrati vrednost 1 ako je uslov ispunjen, odnosno 0 ako nije. Napisati i program koji učitava dva cela broja i ispisuje rezultat primene funkcije. \\
 \begin{miditest}
@@ -630,6 +1178,7 @@ izme\d u dva datuma.\\ \linkresenje{p1.4_}
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.3
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ faktorijel(int\ n)$ koja računa faktorijel broja $n$. Napisati i program koji učitava dva cela broja $x$ i $y$ ($0\leq x,y \leq12$) i ispisuje vrednost zbira $x!+y!$. \\
 \begin{miditest}
@@ -660,6 +1209,7 @@ izme\d u dva datuma.\\ \linkresenje{p1.4_}
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.4
 \begin{Exercise}[label=p1.4_] 
   Napisati funkciju $int\ rastuce(int\ n)$ koja ispituje da li su cifre datog celog broja u
 rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslov, odnosno 0 ako ne ispunjavaju uslov. Napisati i program koji učitava ceo broj i ispisuje rezultat primene funkcije. \\
@@ -691,6 +1241,7 @@ rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslo
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.5
 \begin{Exercise}[label=p1.4_] 
  Broj je Armstrongov ako je jednak sumi nekog stepena svojih cifara.
 \begin{itemize}
@@ -726,6 +1277,7 @@ rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslo
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.6
 \begin{Exercise}[label=p1.4_] 
   Napisati funkciju $int\ par\_nepar(int\ n)$ koja ispituje da li su cifre datog celog broja naizmenično parne i neparne. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslov, odnosno 0 ako ne ispunjavaju uslov. Napisati i program koji učitava ceo broj i testira rad funkcije. \\
 \begin{miditest}
@@ -756,6 +1308,7 @@ rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslo
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.7
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $int\ prebrojavanje(float\ x)$ koja prebrojava koliko puta se broj $x$ pojavljuje u nizu brojeva koji se unose sa standardnog ulaza sve do pojave nule. Napisati program koji učitava vrednost broja $x$ i testira rad napisane funkcije. \\
 \begin{miditest}
@@ -781,6 +1334,7 @@ rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslo
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.8
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $long\ int\ fibonaci(int\ n)$ koja računa n-ti element Fibonačijevog niza. Fibonačijev niz je niz za koji važi: $F_0=1$, $F_1=1$, $F_{n+2}=F_{n+1}+F_{n}$ za $n \geq 0$. Napisati i program koji učitava ceo broj $n\ (0\leq n\leq 50)$ i ispisuje traženi Fibonačijev broj. \\
 \begin{miditest}
@@ -804,6 +1358,7 @@ rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslo
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% praktikum 2.9
 \begin{Exercise}[label=p1.4_] 
  Napisati funkciju $char\ sifra(char\ c,\ int\ k)$ koja za dati karakter $c$ određuje šifru na sledeći način: ukoliko je $c$ slovo, šifra je karakter koji se nalazi $k$ pozicija iza njega u abecedi. U suprotnom karakter ostaje nepromenjen. Šifrovanje treba da bude kružno, što znači da je, na primer, šifra za c='b' i k=2 karakter 'z'. Napisati program koji učitava karakter po karakter do kraja ulaza (do pojave EOF koji se generiše kombinacijom CTRL+D) i ispisuje šifrovani tekst. \\
 \begin{miditest}
@@ -827,12 +1382,12 @@ rastućem poretku. Funkcija treba da vrati vrednost 1 ako cifre ispunjavaju uslo
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 \end{Answer}
 
+% ----------------------------- kraj 2. casa praktikuma -------------------------------------
 
 
-
-
-
-
+%\begin{Answer}[ref=p1.4_]
+%includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+%\end{Answer}
 
 
 \section{Rešenja}

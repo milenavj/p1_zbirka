@@ -11,7 +11,7 @@
 
 
 \begin{Exercise}[label=v1.1_01] 
-Tekst
+Napisati program koji na standardni izlaz ispisuje tekst \"Zdravo svete!\".
 \linkresenje{v1.1_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_01]
@@ -19,7 +19,16 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_02] 
-Tekst
+Napisati program koji poziva korisnika da unese dva cela broja sa standardnog ulaza,
+a zatim ispisuje:
+\begin{itemize}
+\item[1)] unete vrednosti
+\item[2)] njihov zbir
+\item[3)] njihovu razliku
+\item[4)] njihov proizvod
+\item[5)] ceo deo pri deljenju jednog broja drugim brojem
+\item[6)] ostatak pri deljenju jednog broja drugim brojem
+\end{itemize}
 \linkresenje{v1.1_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_02]
@@ -27,7 +36,9 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_03] 
-Tekst
+Napisati program koji sa standardnog ulaza učitava realnu vrednost izraženu
+   u inčima, konvertuje tu vrednost u centimetre i ispisuje je na standardni izlaz
+   zaokruženu na dve decimale.
 \linkresenje{v1.1_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_03]
@@ -35,7 +46,8 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_04] 
-Tekst
+Napisati program koji sa standardnog ulaza učitava dužinu poluprečnika kruga
+   i na standardni izlaz ispisuje njegov obim i površinu.
 \linkresenje{v1.1_04}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_04]
@@ -43,7 +55,8 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_05] 
-Tekst
+Napisati program koji učitava trocifreni broj sa standardnog ulaza i ispisuje njegove cifre na 
+standardni izlaz.
 \linkresenje{v1.1_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_05]
@@ -51,15 +64,17 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_06] 
-Tekst
+Napisati program koji učitava trocifreni broj sa standardnog ulaza i ispisuje broj dobijen obrtanjem
+njegovih cifara.
 \linkresenje{v1.1_06}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_06]
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_06.c}
 \end{Answer}
 
+
 \begin{Exercise}[label=v1.1_07] 
-Tekst
+Ovaj zadatak je radjen na praktikumu (jednakostranicni trougao), dole je naveden. Da li da ostane dole ili da se prebaci ovde?
 \linkresenje{v1.1_07}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_07]
@@ -67,7 +82,7 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_08] 
-Tekst
+Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 1000, 100, 50, 10 i 1 dinar. 
 \linkresenje{v1.1_08}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_08]
@@ -75,7 +90,7 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_09] 
-Tekst
+Napisati program koji za tri cela broja koja se unose sa standardnog ulaza ispisuje njihovu artimetičku sredinu na standardni izlaz.
 \linkresenje{v1.1_09}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_09]
@@ -83,7 +98,7 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_10] 
-Tekst
+Ovaj zadatak je radjen na praktikumu (razmena vrednosti), dole je naveden. Da li da ostane dole ili da se prebaci ovde?
 \linkresenje{v1.1_10}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_10]
@@ -94,7 +109,7 @@ Tekst
 
 
 \begin{Exercise}[label=p1_01] 
-Napisati program koji omogućava korisniku da unese ceo broj, a zatim ispisuje njegov kvadrat i kub. \\
+Napisati program za uneti ceo broj ispisuje njegov kvadrat i kub. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -110,7 +125,7 @@ Napisati program koji omogućava korisniku da unese ceo broj, a zatim ispisuje n
 \end{Answer}
 
 \begin{Exercise}[label=p1_02] 
-Napisati program koji za unete stranice pravougaonika ispisuje njegov obim i površinu.\\
+Napisati program koji za unete dužine stranica pravougaonika ispisuje njegov obim i površinu.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -126,9 +141,9 @@ Napisati program koji za unete stranice pravougaonika ispisuje njegov obim i pov
 \end{Answer}
 
 
-
+% ovo je zadatak sa vezbi, trebalo bi da ide na 1_7
 \begin{Exercise}[label=p1_03] 
-Napisati program koji za unete stranice trougla ispisuje njegov obim i površinu.\\
+Napisati program koji za unetu dužinu stranice jednakostraničnog trougla ispisuje njegov obim i površinu.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -145,11 +160,10 @@ Napisati program koji za unete stranice trougla ispisuje njegov obim i površinu
 
 
 \begin{Exercise}[label=p1_04] 
-Napisati program koji za unete dimenzije sobe u metrima (dužinu,
-širinu i visinu) ispisuje koju površinu treba da okreči
-moler. Uračunati da na vrata i prozore otpada oko 20\%. Omogućiti i
-unos cene usluge po kvadratnom metru i izračunati zaradu koju
-ostvaruje moler.\\
+Napisati program koji pomaže moleru da izračuna površinu zidova
+prostorije koju treba da okreči. Za unete dimenzije sobe u metrima (dužinu,
+širinu i visinu), program treba da  ispiše površinu zidova za krečenje pod pretpostavkom da na vrata i prozore otpada oko 20\%. Omogućiti i da na osnovu 
+unosene cene usluge po kvadratnom metru program izračuna ukupnu cenu krečenja.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -169,7 +183,7 @@ ostvaruje moler.\\
 
 \begin{Exercise}[label=p1_05] 
 Napisati program koji za unetu količinu jabuka u kilogramima i unetu
-cenu po kilogramu ispisuje ukupan iznos koji treba platiti.\\
+cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -186,7 +200,7 @@ cenu po kilogramu ispisuje ukupan iznos koji treba platiti.\\
 
 
 \begin{Exercise}[label=p1_06] 
-Napisati program koji pomaže kasirki da obračuna kusur tako što od nje traži da unese cenu artikla, količinu artikla i iznos koji je dobila od kupca. \\
+Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da ispiše vrednost kusura. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -202,7 +216,7 @@ Napisati program koji pomaže kasirki da obračuna kusur tako što od nje traži
 
 
 \begin{Exercise}[label=p1_07] 
-Napisati program koji prirodnom četvorocifrenom broju koji se unosi sa standardnog ulaza:
+Napisati program koji za uneti prirodni četvorocifreni broj:
 \begin{itemize}
 \item izračunava proizvod cifara
 \item izračunava razliku sume krajnjih i srednjih cifara 
@@ -230,7 +244,7 @@ Napisati program koji prirodnom četvorocifrenom broju koji se unosi sa standard
 
 
 \begin{Exercise}[label=p1_08] 
-Napisati program koji izbacuje cifru desetica datom prirodnom broju. \\
+Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica unetom prirodnom broju. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -246,8 +260,8 @@ Napisati program koji izbacuje cifru desetica datom prirodnom broju. \\
 
 
 \begin{Exercise}[label=p1_09] 
-Napisati program koji u datom prirodnom broju x ubacuje cifru c
-na poziciju p i rezultat ispisuje na standardni izlaz. Brojevi x, c i p se unose sa standardnog ulaza. Podrazumeva se da je broj p manji od ukupnog broja cifara broja i da numeracija cifara počinje od 1. Uputstvo: koristiti funkciju $pow$ iz $math.h$ biblioteke.\\
+Napisati program koji za uneti prirodan broj x i unete vrednosti c i p ispisuje broj koji se dobija ubacivanjem cifre c  u broj x 
+na poziciji p. Podrazumeva se da je broj p manji od ukupnog broja cifara broja i da numeracija cifara počinje od 1. Uputstvo: koristiti funkciju $pow$ iz $math.h$ biblioteke.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -288,7 +302,7 @@ Napisati program koji:
 \end{Answer}
 
 \begin{Exercise}[label=p1_11] 
-Napisati program koji učitava sa standardnog ulaza vreme poletanja i vreme sletanja aviona, a potom ispisuje dužinu trajanja leta. Možemo pretpostaviti da su poletanje i sletanje u istom danu.\\
+Napisati program koji za uneta vremena poletanja i sletanja aviona  ispisuje dužinu trajanja leta. Možemo pretpostaviti da su poletanje i sletanje u istom danu.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -303,9 +317,9 @@ Napisati program koji učitava sa standardnog ulaza vreme poletanja i vreme slet
 %\includecode{resenja/1_UvodniZadaci/1_01.c}
 \end{Answer}
 
+
 \begin{Exercise}[label=p1_12]
-Sa standarnog ulaza se učitavaju dve realne promenljive. Razmeniti vrednosti
-promenljivima i nove vrednosti ispisati na standarni izlaz. \\
+Sa standarnog ulaza se učitavaju vrednosti dve realne promenljive. Napisati program koji razmenjuje njihove vrednosti i ispisuje ih na standardni izlaz. \\
 \linkresenje{p1_12}
 \end{Exercise}
 \begin{Answer}[ref=p1_12]
@@ -314,10 +328,10 @@ promenljivima i nove vrednosti ispisati na standarni izlaz. \\
 
 
 \begin{Exercise}[label=p1_13] 
-Unose se koordinate suprotnih temena pravougaonika (gornje levo i
-donje desno teme).  Pretpostaviti da su stranice pravougaonika
-paralelene koordinatnim osama.  Odrediti obim i površinu
-pravougaonika.\\
+Napisati program koji za unete koordinate suprotnih temena pravougaonika
+ (gornje levo i donje desno teme) ispisuje njegov obim i površinu. Pretpostaviti da su stranice pravougaonika
+paralelene koordinatnim osama.
+\\
 \linkresenje{p1_13}
 \end{Exercise}
 \begin{Answer}[ref=p1_13]
@@ -326,7 +340,7 @@ pravougaonika.\\
 
 
 \begin{Exercise}[label=p1_14]
-Date su dve celobrojene promenljive a i b. Promenljivoj a dodeliti
+Date su dve celobrojene promenljive a i b. Napisati program koji promenljivoj a dodeljuje
 njihovu sumu, a promenljivoj b njihovu razliku bez korišćenja pomoćne
 promenljive. \\
 \linkresenje{p1_14}
@@ -351,8 +365,8 @@ Napisati program koji na standarni izlaz ispisuje sledeći tekst: \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_16]
-Napisati program koji na mesto stotina i hiljada umeće cifre c1 i c2. 
-Da li se može desiti da za neke ulazne podatke dodje do prekoračenja?
+Sa standardnog unosa se unosi prirodan broj $n$ i cifre $c_1$ i $c_2$. Napisati program ispisuje broj dobijen umetanjem cifara $c1$ i $c2$ na mesta stotina i hiljada broja $n$. 
+Da li se može desiti da za neke ulazne podatke dođe do prekoračenja?
 Obrazložiti. \\
 \linkresenje{p1_16}
 \end{Exercise}
@@ -361,8 +375,7 @@ Obrazložiti. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_17]
-Sa standarnog ulaza se unose dva cela broja. Na stadarni izlaz ispisati 
-maksimum ova dva broja. \\
+Napisati program koji za uneta dva cela broja ispisuje njihov maksimum. \\
 \linkresenje{p1_17}
 \end{Exercise}
 \begin{Answer}[ref=p1_17]
@@ -370,15 +383,14 @@ maksimum ova dva broja. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_18]
-Data su 3 cela broja a, b, c. Dodeliti promenljivoj rez vrednost 1
-ako:
+Data su tri cela broja $a, b, c$. Napisati program koji dodeljuje promenljivoj $rez$ vrednost 1
+ako važi jedan od sledećih uslova:
 \begin{description}
-\item{a)} a, b, c su različiti brojevi
-\item{b)} a, b, c su parni brojevi
-\item{c)} a, b, c su pozitivni brojevi, ne veći od 100
+\item{a)} $a, b, c$ su različiti brojevi
+\item{b)} $a, b, c$ su parni brojevi
+\item{c)} $a, b, c$ su pozitivni brojevi, ne veći od 100
 \end{description}
-U suprotnom promenljivoj dodeliti vrednost 0. Proveriti ispisom na
-standarni izlaz. \\
+U suprotnom, promenljivoj $rez$ dodeliti vrednost 0. Ispisati vrednost promenljive $rez$ na standardni izlaz. \\
 \linkresenje{p1_18}
 \end{Exercise}
 \begin{Answer}[ref=p1_18]
@@ -386,8 +398,8 @@ standarni izlaz. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_19]
-Program treba da proveri da li se ta\v cke $A(x_1, y_1)$ i $B(x_2,
-y_2)$ nalaze u istom kvadrantu. Na standarni izlaz ispisati odgovor
+Napisati program koji ispituje da li se ta\v cke $A(x_1, y_1)$ i $B(x_2,
+y_2)$ nalaze u istom kvadrantu i ispisuje odgovor
 \verb|DA| ili \verb|NE|. \\
 \linkresenje{p1_19}
 \end{Exercise}
@@ -396,9 +408,9 @@ y_2)$ nalaze u istom kvadrantu. Na standarni izlaz ispisati odgovor
 \end{Answer}
 
 \begin{Exercise}[label=p1_20]
-Program treba da proveri da li se ta\v cke $A(x_1, y_1)$, $B(x_2,
-y_2)$ i $C(x_3, y_3)$ nalaze na istoj pravi. Na standarni izlaz
-ispisati odgovor \verb|DA| ili \verb|NE|. \\
+Napisati program koji ispituje da li se ta\v cke $A(x_1, y_1)$, $B(x_2,
+y_2)$ i $C(x_3, y_3)$ nalaze na istoj pravoj i
+ispisujei odgovor \verb|DA| ili \verb|NE|. \\
 \linkresenje{p1_20}
 \end{Exercise}
 \begin{Answer}[ref=p1_20]
@@ -422,10 +434,9 @@ parovi, napisati program koji proverava: \\
 
 
 \begin{Exercise}[label=p1_22]
-Sa standarnog ulaza unose se dve promeljive \verb|x| i
-\verb|y|. Izra\v cunati vrednost izraza:
- $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$
-Rezultat ispisati na standardni izlaz. \\
+Napisati program koji za unete vrednosti promenljivih \verb|x| i
+\verb|y| ispisuje vrednost sledećeg izraza:
+ $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$. \\
 \linkresenje{p1_22}
 \end{Exercise}
 \begin{Answer}[ref=p1_22]
@@ -433,7 +444,7 @@ Rezultat ispisati na standardni izlaz. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_23]
-Tekst \\
+Ovo je ilustrativni zadatak kakav Milena ne voli da dolazi na vezbe tako da sumnjam da ce se odrzati ovde :) \\
 \linkresenje{p1_23}
 \end{Exercise}
 \begin{Answer}[ref=p1_23]
@@ -442,13 +453,13 @@ Tekst \\
 
 \begin{Exercise}[label=p1.10_]
 Napisati program koji za unete brojeve a11, a12, a21, a22 tipa
-\verb|float| izra\v cunava i ispisuje na standardni izlaz determinantu
+\verb|float|ispisuje determinantu
 matrice:
 \begin{verbatim}
   a11 a12 
   a21 a22
 \end{verbatim}
-Pri ispisu vrednosti se zaokru\v{z}uju na 4 decimale. \\
+Pri ispisu vrednosti zaokru\v{z}iti na 4 decimale. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
