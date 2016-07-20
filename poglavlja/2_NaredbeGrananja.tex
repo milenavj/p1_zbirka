@@ -3,9 +3,15 @@
 
 \section{Naredbe grananja}
 
+\komentar{TODO Iz svih resenja pobrisati formulaciju zadatka.}
+
+\komentar{TODO U resenjima gde imena promenljivih nisu deskriptivna treba dodati komentare prilikom deklaracija cemu sluze odgovarajuca imena promenljivih.}
+
+\komentar{TODO Da li pominjati stadndardni ulaz/izlaz? Negde se pominju, negde ne, deluje mi da to opterecuje zadatke, ali bi u svakom slucaju to rebalo da je konzistentno.}
+
 \begin{Exercise}[label=v1.2_01] 
-Napisati program koji za uneto vreme (broj sati i broj minuta) ispisuje koliko je sati i minuta ostalo
-   do ponoci.
+Napisati program koji za uneto vreme (broj sati iz intervala $[0,24)$ i broj minuta iz intervala $[0,60)$) ispisuje koliko je sati i minuta ostalo do ponoći. \komentar{TODO Dodati u rešenje
+proveru ispravnosti unetog vremena, tj ako neko unese neispravno vreme.}
 \linkresenje{v1.2_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_01]
@@ -14,7 +20,8 @@ Napisati program koji za uneto vreme (broj sati i broj minuta) ispisuje koliko j
 
 \begin{Exercise}[label=v1.2_02] 
 Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost.
-Ukoliko je uneti broj jednak nuli, ispisati poruku \"Nedozvoljeno deljenje nulom\".
+\napomena{Voditi računa da program radi ispravno za sve unete vrednosti.}
+\komentar{TODO U resenje dodati komentar na temu implicitne konverzije kod deljenja}
 \linkresenje{v1.2_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_02]
@@ -22,7 +29,7 @@ Ukoliko je uneti broj jednak nuli, ispisati poruku \"Nedozvoljeno deljenje nulom
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_03] 
-Napisati program koji za uneti ceo broj $x$ ispisuje da li je jednak nuli,
+Napisati program koji za uneti ceo broj $x$ ispisuje njegov znak, tj da li je broj jednak nuli,
 manji od nule ili veći od nule.
 \linkresenje{v1.2_03}
 \end{Exercise}
@@ -40,7 +47,7 @@ manji od nule ili veći od nule.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_05] 
-Napisati program koji za 2 cela broja uneta sa standardnog ulaza 
+Napisati program koji za dva cela broja uneta sa standardnog ulaza 
   ispisuje njihov minimum na standardni izlaz. 
 \linkresenje{v1.2_05}
 \end{Exercise}
@@ -51,7 +58,7 @@ Napisati program koji za 2 cela broja uneta sa standardnog ulaza
 \begin{Exercise}[label=v1.2_06] 
 Sa standardnog ulaza se unose cene tri artikla. Ukoliko se najjeftiniji
   artikal dobija za 1 dinar, napisati program koji izračunava ukupnu cenu, kao i koliko
-  dinara se ustedi zahvaljujući popustu.  
+  dinara se uštedi zahvaljujući popustu.  
 \linkresenje{v1.2_06}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_06]
@@ -59,8 +66,8 @@ Sa standardnog ulaza se unose cene tri artikla. Ukoliko se najjeftiniji
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_07] 
-Napisati program koji za koeficijente kvadratne jednačine
-koji se unose sa standardnog ulaza 
+Napisati program koji za koeficijente kvadratne jednačine,
+koji se unose sa standardnog ulaza, 
 ispisuje na standardni izlaz koliko realnih rešenja jednačina ima i ako ih ima, ispisuje rešenja jednačine
 zaokružena na dve decimale.
 \linkresenje{v1.2_07}
@@ -70,12 +77,12 @@ zaokružena na dve decimale.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_08] 
-Napisati program koji za karakter koji učitava jedan karakter i :
+Napisati program za štampanje \textsc{ascii} kodova i transformaciju karaktera. Program sa standardnog ulaza učitava jedan karakter i:
 \begin{itemize}
-\item{u slučaju da je uneta cifra, ispisuje nju i njen ascii kod} 
-\item{u slučaju da je uneto malo slovo, ispisuje njega, njegov ascii kod, odgovarajuće veliko slovo i njegov ascii kod}
-\item{u slučaju da je uneto veliko slovo, ispisuje njega, njegov ascii kod, odgovarajuće malo slovo i njegov ascii kod}
-\item{u ostalim slučajevima, ispisuje uneti karakter i njegov ascii kod} 
+\item{u slučaju da je uneta cifra, ispisuje nju i njen \textsc{ascii} kod} 
+\item{u slučaju da je uneto malo slovo, ispisuje njega, njegov \textsc{ascii} kod, odgovarajuće veliko slovo i njegov \textsc{ascii} kod}
+\item{u slučaju da je uneto veliko slovo, ispisuje njega, njegov \textsc{ascii} kod, odgovarajuće malo slovo i njegov \textsc{ascii} kod}
+\item{u ostalim slučajevima, ispisuje uneti karakter i njegov \textsc{ascii} kod.} 
 \end{itemize}
 \linkresenje{v1.2_08}
 \end{Exercise}
@@ -102,7 +109,7 @@ ispisuje njegovu apsolutnu vrednost.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_11] 
-Napisati program koji za uneti karakter ispisuje
+Napisati program koji za karakter unet sa standardnog ulaza ispisuje
 da li je samoglasnik.
 \linkresenje{v1.2_11}
 \end{Exercise}
@@ -111,8 +118,8 @@ da li je samoglasnik.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_12] 
-Napisati program koji za uneti dan i mesec ispisuje godišnje doba kom
-pripadaju. Možemo podrazumevati da je unos korektan. 
+Napisati program koji za uneti dan i mesec ispisuje godišnje doba kojem
+pripadaju. \napomena{Podrazumevati da je unos korektan.} 
 \linkresenje{v1.2_12}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_12]
