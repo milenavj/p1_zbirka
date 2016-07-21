@@ -1,4 +1,4 @@
-/* Data je funkcija f (x) = 2 · cos(x) − x*x*x . Sa standarnog ulaza se unosi
+/* Data je funkcija f (x) = 2 * cos(x) − x*x*x . Sa standarnog ulaza se unosi
 realan broj x i broj k koje moze biti 1, 2 ili 3. Napisati program koji
 izracunava F (k, x) = f (f (f (...f (x))) gde je funkcija f primenjena k-puta.
 */
