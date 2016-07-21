@@ -10,8 +10,7 @@
 \komentar{TODO Da li pominjati stadndardni ulaz/izlaz? Negde se pominju, negde ne, deluje mi da to opterecuje zadatke, ali bi u svakom slucaju to rebalo da je konzistentno.}
 
 \begin{Exercise}[label=v1.2_01] 
-Napisati program koji za uneto vreme (broj sati iz intervala $[0,24)$ i broj minuta iz intervala $[0,60)$) ispisuje koliko je sati i minuta ostalo do ponoći. \komentar{TODO Dodati u rešenje
-proveru ispravnosti unetog vremena, tj ako neko unese neispravno vreme.}
+Napisati program koji za uneto vreme (broj sati iz intervala $[0,24)$ i broj minuta iz intervala $[0,60)$) ispisuje koliko je sati i minuta ostalo do ponoći. \komentar{TODO Dodati u rešenje proveru ispravnosti unetog vremena, tj ako neko unese neispravno vreme.}
 \linkresenje{v1.2_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_01]
@@ -29,8 +28,7 @@ Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_03] 
-Napisati program koji za uneti ceo broj $x$ ispisuje njegov znak, tj da li je broj jednak nuli,
-manji od nule ili veći od nule.
+Napisati program koji za uneti ceo broj $x$ ispisuje njegov znak, tj da li je broj jednak nuli, manji od nule ili veći od nule.
 \linkresenje{v1.2_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_03]
@@ -47,8 +45,7 @@ manji od nule ili veći od nule.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_05] 
-Napisati program koji za dva cela broja uneta sa standardnog ulaza 
-  ispisuje njihov minimum na standardni izlaz. 
+Napisati program koji za dva cela broja uneta sa standardnog ulaza ispisuje njihov minimum na standardni izlaz.
 \linkresenje{v1.2_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_05]
@@ -77,12 +74,12 @@ zaokružena na dve decimale.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_08] 
-Napisati program za štampanje \textsc{ascii} kodova i transformaciju karaktera. Program sa standardnog ulaza učitava jedan karakter i:
+Napisati program koji za karakter koji učitava jedan karakter i :
 \begin{itemize}
 \item{u slučaju da je uneta cifra, ispisuje nju i njen \textsc{ascii} kod} 
 \item{u slučaju da je uneto malo slovo, ispisuje njega, njegov \textsc{ascii} kod, odgovarajuće veliko slovo i njegov \textsc{ascii} kod}
 \item{u slučaju da je uneto veliko slovo, ispisuje njega, njegov \textsc{ascii} kod, odgovarajuće malo slovo i njegov \textsc{ascii} kod}
-\item{u ostalim slučajevima, ispisuje uneti karakter i njegov \textsc{ascii} kod.} 
+\item{u ostalim slučajevima, ispisuje uneti karakter i njegov \textsc{ascii} kod} 
 \end{itemize}
 \linkresenje{v1.2_08}
 \end{Exercise}
@@ -118,8 +115,7 @@ da li je samoglasnik.
 \end{Answer}
 
 \begin{Exercise}[label=v1.2_12] 
-Napisati program koji za uneti dan i mesec ispisuje godišnje doba kojem
-pripadaju. \napomena{Podrazumevati da je unos korektan.} 
+Napisati program koji za uneti dan i mesec ispisuje godišnje doba kojem pripadaju. \napomena{Podrazumevati da je unos korektan.} 
 \linkresenje{v1.2_12}
 \end{Exercise}
 \begin{Answer}[ref=v1.2_12]
@@ -163,7 +159,7 @@ $x_1 * p + x_2 * q = x_4 - x_3,y_1 * p + y_2 * q = y_4 - y_3$
 \end{Answer}
 
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_01] 
 Napisati program koji za uneti četvorocifreni ceo broj
  ispisuje njegovu najveću cifru. \\
 \begin{miditest}
@@ -180,13 +176,13 @@ Napisati program koji za uneti četvorocifreni ceo broj
 #\izlaz{Greska: Niste uneli cetvorocifren broj!}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.2_}
+\linkresenje{p1.2_01}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_01]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_01.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_02] 
 Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program koji za dati trocifren broj proverava da li je Armstrongov.
 \\
 \begin{miditest}
@@ -211,13 +207,13 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_02}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_02]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_02.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_03] 
  U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti  ceo broj $k$ (1 \geq $k$ \geq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -234,13 +230,13 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_03}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_03]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_03.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_04] 
  Sa standardnog ulaza se unosi četvorocifreni pozitivan broj. Napisati program koji ispisuje proizvod parnih cifara datog broja. Ukoliko uneti broj nije pozitivna četvorocifrena vrednost ispisati poruku \textit{Greska!}.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -265,13 +261,13 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{miditest}
 
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_04}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_04]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_04.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_05] 
  Sa standarnog ulaza se unosi 5 karaktera. Napisati program koji u slučaju da je prvi karakter veliko ili malo slovo $a$  ispisuje unete karaktere obrnutim redosledom, a u suprotnom ništa ne ispisuje.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -288,13 +284,13 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_05}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_05]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_05.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_06] 
  Sa standarnog ulaza se unosi karakter $c$. Napisati program koji:
  \begin{description}
 \item{a)} ako je $c$ malo slovo, zamenjuje ga odgovarajućim velikim i ispisuje na standardni izlaz
@@ -302,7 +298,6 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \item{c)} ako je $c$ cifra, ispisuje poruku \textit{cifra}
 \item{d)} u ostalim slučajevima, ispisuje karakter $c$ između dve zvezdice.
 \end{description}
-
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -325,13 +320,13 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_06}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_06]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_06.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_07] 
 Napisati program koji za unetih 5 karaktera ispisuje koliko je među njima malih slova.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -348,13 +343,13 @@ Napisati program koji za unetih 5 karaktera ispisuje koliko je među njima malih
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_07}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_07]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_07.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_08] 
  Sa standardnog ulaza se unosi četvorocifren ceo broj. Napisati program koji ispisuje broj koji se dobija kada se unetom broju razmene najmanja i najveća cifra. Ako uneti broj nije četvorocifren ispisati poruku \textit{Greska!}. \\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -371,14 +366,14 @@ Napisati program koji za unetih 5 karaktera ispisuje koliko je među njima malih
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_08}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_08]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_08.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
- Sa standardnog ulaza se unose tri neoznačena trocifrena broja. Napisati program koji ispisuje broj dobijen spajanjem 
+\begin{Exercise}[label=p1.2_09] 
+Sa standardnog ulaza se unose tri neoznačena trocifrena broja. Napisati program koji ispisuje broj dobijen spajanjem 
 dva najveća od njih u šestocifren broj. Spajanje izvršiti tako da najveći od trocifrenih
 brojeva bude na početku šestocifrenog broja. Dobijeni šestocifreni broj ispisati
 na izlazu. Ako neki od unetih brojeva nije trocifren, ispisati poruku \textit{Greska!}.\\
@@ -397,13 +392,13 @@ na izlazu. Ako neki od unetih brojeva nije trocifren, ispisati poruku \textit{Gr
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_09}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_09]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_09.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_10] 
  Sa standardnog ulaza se učitavaju realni koeficijenti $A$ i $B$ linearne jednačine $Ax+B = 0$. Napisati program koji ispisuje rešenja ove jednačine. Ukoliko jednačina nema rešenja ili ukoliko ima više od jednog rešenja ispisati odgovarajuće poruke.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -419,17 +414,13 @@ na izlazu. Ako neki od unetih brojeva nije trocifren, ispisati poruku \textit{Gr
 #\izlaz{Jednacina nema resenja.}#
 \end{upotreba}
 \end{miditest}
-
-
-
-
-\linkresenje{p1.2_}
+\linkresenje{p1.2_10}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_10]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_10.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_11] 
  Napisati program koji za dva data intervala realne prave (a1, b1) i
 (a2, b2) određuje:
 \begin{itemize}
@@ -460,14 +451,14 @@ odgovarajuću poruku. (?! zar ovo nije isto sto i a?)
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_11}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_11]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_11.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
- Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Sa standarnog ulaza se
+\begin{Exercise}[label=p1.2_12] 
+Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Sa standarnog ulaza se
 unosi realan broj $x$ i broj $k$ koje može biti 1, 2 ili 3. Napisati program koji izračunava
 $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \begin{miditest}
@@ -485,13 +476,13 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_12}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_12]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_12.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_13] 
  Napisati program koji za uneti redni broj dana u nedelji ispisuje ime dana. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. \\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -515,13 +506,13 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_13}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_13]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_13.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_14] 
  Sa standardnog ulaza se učitavaju dva cela broja i jedan od karaktera +, -, *, / ili \% koji predstavlja računsku operaciju. Napisatiti program koji  ispisuje vrednost izraza dobijenog primenom ove operacije na date argumente. Koristiti naredbu \textit{switch}. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. \\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -544,6 +535,11 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 #\izlaz{Greska: nepoznat operator!}#
 \end{upotreba}
 \end{miditest}
+\linkresenje{p1.2_14}
+\end{Exercise}
+\begin{Answer}[ref=p1.2_14]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_14.c}
+\end{Answer}
 
 
 %\item Napisati program koji za uneti pozitivan petocifreni broj $n$ određuje i ispisuje broj njegovih parnih i broj njegovih neparnih cifara. Za analizu cifara koristiti \textit{switch} naredbu.\\
@@ -556,13 +552,8 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 %\end{upotreba}
 %\end{miditest}
 
-\linkresenje{p1.2_}
-\end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
-\end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_15] 
  Napisati program koji za uneti datum u formatu \textit{dan.mesec.godina.} proverava da li je korektan.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -579,13 +570,13 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_15}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_15]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_15.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_16] 
  Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum prethodnog dana. \\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -602,13 +593,13 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_}
+\linkresenje{p1.2_16}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_16]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_16.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.2_] 
+\begin{Exercise}[label=p1.2_17] 
  Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum narednog dana.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -624,18 +615,17 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 #\izlaz{Naredni datum: 2.12.2005.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.2_}
+\linkresenje{p1.2_17}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
+\begin{Answer}[ref=p1.2_17]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_17.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.3_] 
-Napisati program koji za uneta tri cela broja ispisuje zbir pozitivnih.  \linkresenje{p1.3_}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_]
-\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_15.c}
-\end{Answer}
+% Andjelka stavila komentar zbog problema sa prevodjenjem....
+%\begin{Exercise}[label=p1.3_]
+%\begin{Answer}[ref=p1.3_]
+%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_15.c}
+%\end{Answer}
 
 \begin{Exercise}[label=p1.4_] 
 Sa standarnog ulaza unosi se jedan karakter. Ako je karakter malo
