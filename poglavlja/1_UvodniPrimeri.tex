@@ -11,7 +11,8 @@
 
 
 \begin{Exercise}[label=v1.1_01] 
-Napisati program koji na standardni izlaz ispisuje tekst \"Zdravo svete!\".
+Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo svete!}.
+\komentar{Resenje se ne uklapa sa tekstom zadatka. Ono sto su altrenativni ispisi u resenju moze da ostane pod komentarima, ali da se postavi kao dva razlicita resenja, ali uvek resenje mora da se poklapa sa test primerom. U okviru prvog resenja potrebno je i kratko uputstvo kako da se prevede i pokrene program. Takodje, komentar uz include i uz int main i uz return - to posle naravno necemo komentarisati.}
 \linkresenje{v1.1_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_01]
@@ -21,14 +22,16 @@ Napisati program koji na standardni izlaz ispisuje tekst \"Zdravo svete!\".
 \begin{Exercise}[label=v1.1_02] 
 Napisati program koji poziva korisnika da unese dva cela broja sa standardnog ulaza,
 a zatim ispisuje:
-\begin{itemize}
-\item[1)] unete vrednosti
-\item[2)] njihov zbir
-\item[3)] njihovu razliku
-\item[4)] njihov proizvod
-\item[5)] ceo deo pri deljenju jednog broja drugim brojem
-\item[6)] ostatak pri deljenju jednog broja drugim brojem
-\end{itemize}
+\begin{enumerate}
+\item unete vrednosti
+\item njihov zbir \komentar{Ovo bi mogao da bude zadatak sa prodavnicom i kupovinom dva artikla, tako da bih takav neki zadatak dodala.}
+\item njihovu razliku \komentar{Ovo je u sustini isti zadatak kao zadatak sa prodavnicom i kusurom, samo je taj malko komplikovaniji. Ostavila bih oba, ali bih ovaj drugi priblizila po redosledu ovom zadatku.}
+\item njihov proizvod \komentar{Ovo je u sustini isti zadatak kao zadatak sa jabukama, ali bih ovaj drugi priblizila po redosledu ovom zadatku.}
+%\item ceo deo pri deljenju prvog broja drugim brojem
+%\item ostatak pri deljenju prvog broja drugim brojem
+\end{enumerate}
+\komentar{Ovde je problem sto oni jos nisu ucili if, a deljenje je zbog toga nezgodno. Ja bih izbacila poslednje dve stavke i uradila samo a,b,c i d}\\
+\komentar{U resenju prokomentarisati deklaracije int x i int y: Deklariše se promenljiva celobrojnog tipa u kojoj će biti čuvana vrednost prvog broja koji se unosi sa ulaza ili tako nekako, pa slično za y i rezultat. Na ovom mestu bih stavila punu recenicu koja pominje reci i deklaracija i celobrojni tip i slicno, a u ostalim resenjima samo komentare sta promenljiva predstavlja, ukoliko joj ime nije dovoljno deskriptivno. Na mestu gde je prvi put deklaracija float ili double promenljive, tu bih isto pomenula tip, da pomenemo jednostruku i dvostruku tacnost.}
 \linkresenje{v1.1_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_02]
@@ -38,7 +41,7 @@ a zatim ispisuje:
 \begin{Exercise}[label=v1.1_03] 
 Napisati program koji sa standardnog ulaza učitava realnu vrednost izraženu
    u inčima, konvertuje tu vrednost u centimetre i ispisuje je na standardni izlaz
-   zaokruženu na dve decimale.
+   zaokruženu na dve decimale. \uputstvo{Jedan inč ima $2.54$ centimetra.}
 \linkresenje{v1.1_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_03]
@@ -55,8 +58,10 @@ Napisati program koji sa standardnog ulaza učitava dužinu poluprečnika kruga
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_05] 
-Napisati program koji učitava trocifreni broj sa standardnog ulaza i ispisuje njegove cifre na 
-standardni izlaz.
+Napisati program koji za uneti pozitivan broj na standardni izlaz ispisuje njegove cifre jedinica, desetica i stotina.
+\komentar{Preformulisala sam da broj nije trocifren jer nemamo if da proverimo da li je ulaz ispravan. Sa ovakvom formualcijom program moze da radi ispravno i ako broj nije trocifren.}
+\komentar{Ispraviti u resenju tipove, tj da brojevi budu unsigned kako bi uvek radio ispravno tj kako ne bi dobijao negativne cifre.}
+\komentar{Ispraviti komentar u printf-u koji pominje cele brojeve.}
 \linkresenje{v1.1_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_05]
@@ -64,17 +69,22 @@ standardni izlaz.
 \end{Answer}
 
 \begin{Exercise}[label=v1.1_06] 
-Napisati program koji učitava trocifreni broj sa standardnog ulaza i ispisuje broj dobijen obrtanjem
-njegovih cifara.
+Napisati program koji učitava trocifreni broj sa standardnog ulaza i ispisuje broj dobijen obrtanjem njegovih cifara.
 \linkresenje{v1.1_06}
+\komentar{Ovaj zadatak mozda prebaciti u if? Kako proveriti da li je uneti broj stvarno trocifren? Ili nekako formulisati zadatak tako da nije neophodno da broj bude trocifren. Npr, ispisuje broj koji se dobije kada cifra jedinica i cifra stotina zamene mesta.}
+\komentar{Sve zadatke koji se bave radom sa ciframa broja grupisati na jedno mesto.}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_06]
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_06.c}
 \end{Answer}
 
 
+
 \begin{Exercise}[label=v1.1_07] 
 Ovaj zadatak je radjen na praktikumu (jednakostranicni trougao), dole je naveden. Da li da ostane dole ili da se prebaci ovde?
+\komentar{Mislim da redosled treba da bude po smislu, a ne po vezbe/praktikum podeli. Zato, ako mu je mesto ovde, onda ga tu treba i prebaciti.}
+\komentar{Zadatke poredjati na pocetku i po tipovima, a posle mogu i da se mesaju: dakle da prvo ide par zadataka koji rade sa celobrojnim vrednostima, a onda zadaci koji rade sa realnim vrednostima.}
+\komentar{Redosled zadataka je vrlo osetljiva stvar i to bih ostavila za kasniju fazu: za sada samo okvirno kako nam se ucini da treba, a onda posle ce biti jos tumbanja. Zato nije vazno da se brojevi zadataka i resenja poklapaju u ovom trenutku, kada napravimo finalno rasporedjivanje onda cemo da menjamo te brojeve. Za rasporedjivanje zadataka vazna su nam i resenja.}
 \linkresenje{v1.1_07}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_07]
@@ -141,6 +151,7 @@ Napisati program koji za unete dužine stranica pravougaonika ispisuje njegov ob
 
 % ovo je zadatak sa vezbi, trebalo bi da ide na 1_7
 \begin{Exercise}[label=p1.1_03] 
+\komentar{Sve geometrijske zadatke bih grupisala da budu susedni. Malo me zbunjuje sto su resenja za kvadrat i pravougaonik sa int, a za ove druge sa float, kao da stranica pravougaonika ne moze da bude realan broj? Mozda bi svi ti goemetrijski trebalo da rade sa realnim brojevima? Tako bi bili konzistentni...}
 Napisati program koji za unetu dužinu stranice jednakostraničnog trougla ispisuje njegov obim i površinu.\\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -215,13 +226,14 @@ Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kup
 
 \begin{Exercise}[label=p1.1_07] 
 Napisati program koji za uneti prirodni četvorocifreni broj:
-\begin{itemize}
+\begin{enumerate}
 \item izračunava proizvod cifara
 \item izračunava razliku sume krajnjih i srednjih cifara 
 \item izračunava sumu kvadrata cifara
-\item određuje broj koji se dobija ispisom cifara u obrnutom poretku
-\item određuje broj koji se dobija zamenom cifre jedinice i cifre stotine
-\end{itemize}
+\item izračunava broj koji se dobija ispisom cifara u obrnutom poretku
+\item izračunava broj koji se dobija zamenom cifre jedinice i cifre stotine
+\end{enumerate}
+\komentar{Ponovo imamo problem sa time sto je broj cetvorocifren a nemamo if proveru?}
 
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -242,7 +254,7 @@ Napisati program koji za uneti prirodni četvorocifreni broj:
 
 
 \begin{Exercise}[label=p1.1_08] 
-Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica unetom prirodnom broju. \\
+Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica u unetom prirodnom broju. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -258,8 +270,10 @@ Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica u
 
 
 \begin{Exercise}[label=p1.1_09] 
-Napisati program koji za uneti prirodan broj x i unete vrednosti c i p ispisuje broj koji se dobija ubacivanjem cifre c  u broj x 
-na poziciji p. Podrazumeva se da je broj p manji od ukupnog broja cifara broja i da numeracija cifara počinje od 1. Uputstvo: koristiti funkciju $pow$ iz $math.h$ biblioteke.\\
+Napisati program koji za uneti prirodan broj $x$ i unete vrednosti $c$ i $p$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ 
+na poziciji $p$. Podrazumeva se da je broj $p$ manji od ukupnog broja cifara broja i da numeracija cifara počinje od 1. \uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}\\
+\komentar{Izmenila bih da numeracija cifara pocinje od 0, jer se to uklapa sa tezinskim faktorom i nekako je logicnije.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -275,6 +289,7 @@ na poziciji p. Podrazumeva se da je broj p manji od ukupnog broja cifara broja i
 
 
 \begin{Exercise}[label=p1.1_10] 
+\komentar{Razbiti ovaj zadatak na tri zadatka i staviti da idu zajedno uz zadatak sa incima. }
 Napisati program koji:
 \begin{itemize}
 \item unetu dužinu u miljama konvertuje u kilometre (1 mi = 1.609344 km)
@@ -338,9 +353,10 @@ paralelene koordinatnim osama.
 
 
 \begin{Exercise}[label=p1_14]
-Date su dve celobrojene promenljive a i b. Napisati program koji promenljivoj a dodeljuje
-njihovu sumu, a promenljivoj b njihovu razliku bez korišćenja pomoćne
-promenljive. \\
+Date su dve celobrojene promenljive $a$ i $b$. Napisati program koji promenljivoj $a$ dodeljuje
+njihovu sumu, a promenljivoj $b$ njihovu razliku. \napomena{Ne koristiti pomoćne
+promenljive}. 
+
 \linkresenje{p1_14}
 \end{Exercise}
 \begin{Answer}[ref=p1_14]
@@ -348,6 +364,7 @@ promenljive. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_15]
+\komentar{Meni je ovaj zadatak potpuno nejasan, a kako nema resenje ne umem da ga formulisem kako treba ?!?}
 Napisati program koji na standarni izlaz ispisuje sledeći tekst: \\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -364,8 +381,9 @@ Napisati program koji na standarni izlaz ispisuje sledeći tekst: \\
 
 \begin{Exercise}[label=p1_16]
 Sa standardnog unosa se unosi prirodan broj $n$ i cifre $c_1$ i $c_2$. Napisati program ispisuje broj dobijen umetanjem cifara $c1$ i $c2$ na mesta stotina i hiljada broja $n$. 
-Da li se može desiti da za neke ulazne podatke dođe do prekoračenja?
-Obrazložiti. \\
+\napomena{Za neke ulazne podatke može se dobiti neočekivan rezultat zbog prekoračenja, što ilustruje test primer broj xx.}
+\komentar{Meni ovo deluje kao tekst zadatka cije je resenje dato kod 1.33, mozda gresim.}
+
 \linkresenje{p1_16}
 \end{Exercise}
 \begin{Answer}[ref=p1_16]
@@ -373,6 +391,7 @@ Obrazložiti. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_17]
+\komentar{Sve zadatke sa operatorom ? grupisati na kraju ovog poglavlja.}
 Napisati program koji za uneta dva cela broja ispisuje njihov maksimum. \\
 \linkresenje{p1_17}
 \end{Exercise}
@@ -383,12 +402,13 @@ Napisati program koji za uneta dva cela broja ispisuje njihov maksimum. \\
 \begin{Exercise}[label=p1_18]
 Data su tri cela broja $a, b, c$. Napisati program koji dodeljuje promenljivoj $rez$ vrednost 1
 ako važi jedan od sledećih uslova:
+\komentar{Deluje mi da ce resenje sa ? biti ruzno i da je ovo vise zadatak za if. Mozda od ovoga napraviti tri zadatka?}
 \begin{description}
 \item{a)} $a, b, c$ su različiti brojevi
 \item{b)} $a, b, c$ su parni brojevi
 \item{c)} $a, b, c$ su pozitivni brojevi, ne veći od 100
 \end{description}
-U suprotnom, promenljivoj $rez$ dodeliti vrednost 0. Ispisati vrednost promenljive $rez$ na standardni izlaz. \\
+U suprotnom, promenljivoj $rezultat$ dodeliti vrednost 0. Ispisati vrednost promenljive $rezultat$ na standardni izlaz. \\
 \linkresenje{p1_18}
 \end{Exercise}
 \begin{Answer}[ref=p1_18]
@@ -396,6 +416,7 @@ U suprotnom, promenljivoj $rez$ dodeliti vrednost 0. Ispisati vrednost promenlji
 \end{Answer}
 
 \begin{Exercise}[label=p1_19]
+\komentar{Ne bih stampala da ne jer to bez if-a ne moze lepo da se uradi, tj printf u okviru operatora ? je mnogo ruzan stil programiranja. Zato bih i ovo formulisala kao štampanje vrednosti odgovarajuće promenljive koja ima vrednost 0 ili 1. Isto i u sledećem zadatku. Ili prebaciti zadatke u if.}
 Napisati program koji ispituje da li se ta\v cke $A(x_1, y_1)$ i $B(x_2,
 y_2)$ nalaze u istom kvadrantu i ispisuje odgovor
 \verb|DA| ili \verb|NE|. \\
@@ -406,6 +427,7 @@ y_2)$ nalaze u istom kvadrantu i ispisuje odgovor
 \end{Answer}
 
 \begin{Exercise}[label=p1_20]
+\komentar{Ne bih stampala da ne jer to bez if-a ne moze lepo da se uradi, tj printf u okviru operatora ? je mnogo ruzan stil programiranja. Zato bih i ovo formulisala kao štampanje vrednosti odgovarajuće promenljive koja ima vrednost 0 ili 1. Ili prebaciti zadatke u if.}
 Napisati program koji ispituje da li se ta\v cke $A(x_1, y_1)$, $B(x_2,
 y_2)$ i $C(x_3, y_3)$ nalaze na istoj pravoj i
 ispisujei odgovor \verb|DA| ili \verb|NE|. \\
@@ -416,8 +438,8 @@ ispisujei odgovor \verb|DA| ili \verb|NE|. \\
 \end{Answer}
 
 \begin{Exercise}[label=p1_21]
-Polje \v sahovske table se defini\v se parom prirodnih brojeva ne ve\'
-cih od 8: prvi se odnosi na red, drugi na kolonu. Ako su dati takvi
+\komentar{Ovo bih mozda ostavila za if --- potrebno je da provere i da li su koordiante ispravno unesene}
+Polje šahovske table se definiše parom prirodnih brojeva ne većih od $8$: prvi se odnosi na red, drugi na kolonu. Ako su dati takvi
 parovi, napisati program koji proverava: \\
 \begin{description}
 \item[a)] da li su polja (k, m) i (l, n) iste boje
@@ -432,6 +454,7 @@ parovi, napisati program koji proverava: \\
 
 
 \begin{Exercise}[label=p1_22]
+\komentar{Ovo mi je ok da bude reseno sa ?.}
 Napisati program koji za unete vrednosti promenljivih \verb|x| i
 \verb|y| ispisuje vrednost sledećeg izraza:
  $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$. \\
@@ -442,6 +465,7 @@ Napisati program koji za unete vrednosti promenljivih \verb|x| i
 \end{Answer}
 
 \begin{Exercise}[label=p1_23]
+\komentar{Ovaj zadatak je uredu ukoliko mu se definise odgovarajuci tekst, a kao jedan test primer postavi ilustracija prekoracenja. )}
 Ovo je ilustrativni zadatak kakav Milena ne voli da dolazi na vezbe tako da sumnjam da ce se odrzati ovde :) \\
 \linkresenje{p1_23}
 \end{Exercise}
@@ -450,14 +474,13 @@ Ovo je ilustrativni zadatak kakav Milena ne voli da dolazi na vezbe tako da sumn
 \end{Answer}
 
 \begin{Exercise}[label=p1.10_]
-Napisati program koji za unete brojeve a11, a12, a21, a22 tipa
-\verb|float|ispisuje determinantu
-matrice:
+Napisati program koji za unete realne vrednsoti $a_{11}$, $a_{12}$, $a_{21}$, $a_{22}$  ispisuje vrednost determinante matrice:
 \begin{verbatim}
   a11 a12 
   a21 a22
 \end{verbatim}
-Pri ispisu vrednosti zaokru\v{z}iti na 4 decimale. \\
+\komentar{Umesto verbatim staviti odgovarajući format za prikaz matrice.}
+Pri ispisu vrednost zaokružiti na $4$ decimale. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
