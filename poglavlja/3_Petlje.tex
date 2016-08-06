@@ -1,17 +1,17 @@
 \section{Petlje}
 
 
-
 \begin{Exercise}[label=v1.3_01] 
-Tekst
-\linkresenje{v1.3_01}
+Napisati program koji $10$ puta ispisuje tekst \kckod{Mi volimo
+  da programiramo u programskom jeziku C}.  \linkresenje{v1.3_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_01]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_02] 
-Tekst
+Napisati program koji učitava pozitivan ceo broj $n$
+a potom ispisuje sve cele brojeve od $0$ do $n-1$.
 \linkresenje{v1.3_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_02]
@@ -19,15 +19,21 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_03] 
-Tekst
-\linkresenje{v1.3_03}
+ Napisati program koji učitava ceo pozitivan broj i izračunava njegov
+ faktorijel. Testirati program za različite vrednosti unetog broja. U
+ slučaju neispravnog unosa ispisati poruku
+ \kckod{Greska!}. \uputstvo{Obratiti pažnju da počev od broja $23$
+   dolazi do prekoračenja prilikom računanja faktorijela.}
+ \linkresenje{v1.3_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_03]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_03.c}
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_04] 
-Tekst
+Napisati program koji učitava pozitivan ceo broj $n$, a zatim učitava
+$n$ celih brojeva i na standarni izlaz ispisuje sumu pozitivnih i sumu
+negativnih unetih brojeva.  
 \linkresenje{v1.3_04}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_04]
@@ -35,7 +41,9 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_05] 
-Tekst
+Napisati program koji učitava cele cele brojeve sve dok se ne unese
+nula. Nakon toga ispisati proizvod onih unetih brojeva koji su
+pozitivni.  
 \linkresenje{v1.3_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_05]
@@ -43,7 +51,8 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_06] 
-Tekst
+Napisati program koji učitava ceo broj i ispisuje njegove cifre u
+obrnutom poretku.
 \linkresenje{v1.3_06}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_06]
@@ -51,7 +60,10 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_07] 
-Tekst
+Napisati program koji učitava karaktere dok se ne unese karakter tačka
+i ako je karakter malo slovo, ispisuje odgovarajuće veliko, ako je
+karakter veliko slovo ispisuje odgovarajuće malo, a u suprotnom
+ispisuje isti karakter kao i uneti.
 \linkresenje{v1.3_07}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_07]
@@ -59,7 +71,9 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_08] 
-Tekst
+Napisati program koji učitava karaktere dok se ne unese \kckod{EOF} a
+potom ispisuje broj velikih slova, broj malih slova, broj cifara, broj
+belina i zbir unetih cifara.  
 \linkresenje{v1.3_08}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_08]
@@ -67,7 +81,16 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_09] 
-Tekst
+Niz prirodnih brojeva formira se prema sledećem pravilu:
+\begin{equation*}
+a_{n+1} = \left\{
+\begin{array}{rl}
+\frac{a_n}{2} & \text{ako je } a_n \text{ parno}\\
+\frac{3\cdot a_n + 1}{2} & \text{ako je } a_n \text{ neparno}\\
+\end{array} \right.
+\end{equation*}
+Napisati program koji za uneti početni član niza $a_0$ štampa niz
+brojeva sve do onog člana niza koji je jednak $1$.
 \linkresenje{v1.3_09}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_09]
@@ -75,7 +98,10 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_10] 
-Tekst
+Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
+\kckod{Mi volimo da programiramo u programskom jeziku C} korišćenjem
+\kckod{while}, \kckod{for} i \kckod{do-while} petlje. Obratiti pažnju
+na rezultat kada je $n \le 0$. \\
 \linkresenje{v1.3_10}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_10]
@@ -83,7 +109,10 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_11] 
-Tekst
+Napisati program koji učitava dva cela broja $n$ i $m$ ispisuje sve
+cele brojeve iz intervala $[n,m]$ korišćenjem \kckod{while},
+\kckod{for} i \kckod{do-while} petlje. Obratiti pažnju na rezultat
+kada je $n>m$. \\ 
 \linkresenje{v1.3_11}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_11]
@@ -91,7 +120,10 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_12] 
-Tekst
+U prodavnici se nalazi $n$ artikala čije cene su realni
+brojevi. Napisati program koji učitava $n$, a potom i cenu svakog od
+$n$ artikala i određuje i na standarni izlaz ispisuje najmanju
+cenu.  
 \linkresenje{v1.3_12}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_12]
@@ -99,7 +131,15 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_13] 
-Tekst
+Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje
+vrednost tražene sume. U slučaju greške pri unosu podataka ispisati
+odgovarajuću poruku.
+\begin{description}
+\item{a)} Odrediti sumu kubova brojeva od $1$ do $n$, odnosno $s =
+  1+2^3+3^3+ \ldots +n^3$.
+\item{b)} Modifikovati program tako da ispisuje sumu kubova, $s =
+  1+2^3+3^3+ \ldots +k^3$, za svaku vrednost $k = 1, \ldots, n$.
+\end{description}
 \linkresenje{v1.3_13}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_13]
@@ -107,7 +147,10 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_14] 
-Tekst
+Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje sve
+\komentar{(danijela:prave delioce?? sta znaci ovo prave)} delioce
+unetog broja. U slučaju greške pri unosu podataka ispisati
+odgovarajuću poruku.
 \linkresenje{v1.3_14}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_14]
@@ -115,7 +158,9 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_01] 
-Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  brojeva. Izračunati i ispisati zbir onih brojeva koji su neparni i negativni. \\
+Sa standardnog ulaza unosi se ceo pozitivan broj $n$, a potom i $n$
+celih brojeva. Izračunati i ispisati zbir onih brojeva koji su neparni
+i negativni. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -148,7 +193,9 @@ Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  b
 
 
 \begin{Exercise}[label=p1.3_02] 
- Sa  standardnog  ulaza  unosi se realan broj $m$, ceo pozitivan broj $n$ i $n$ realnih brojeva. Izračunati i ispisati koliko je brojeva među unetima manje od zadatog broja $m$. \\
+Sa standardnog ulaza unosi se realan broj $m$, ceo pozitivan broj $n$
+i $n$ realnih brojeva. Izračunati i ispisati koliko je brojeva među
+unetima manje od zadatog broja $m$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -174,7 +221,11 @@ Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  b
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_03] 
- Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a potom i $n$ karaktera. Za svaki od samoglasnika ispisati koliko puta se pojavio među unetim karakterima. Prilikom implementacije koristiti \textit{switch} naredbu. Ne praviti razliku između malih i velikih slova. \\
+ Sa standardnog ulaza unosi se ceo pozitivan broj $n$, a potom i $n$
+ karaktera. Za svaki od samoglasnika ispisati koliko puta se pojavio
+ među unetim karakterima. Ne praviti razliku između malih i velikih
+ slova. \uputstvo{Prilikom implementacije koristiti \kckod{switch}
+   naredbu.}\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -206,7 +257,9 @@ Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  b
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_04] 
- Sa standardnog ulaza unosi se ceo neoznačen broj. Napisati program koji proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu ili ne.\\
+ Sa standardnog ulaza unosi se ceo neoznačen broj. Napisati program
+ koji proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu
+ ili ne.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -228,7 +281,9 @@ Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  b
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_05] 
- Napisati program koji unetom broju uklanja nule sa desne strane. Novodobijeni broj ispisati na standardni izlaz.
+ Napisati program koji učitava ceo neoznačen broj i uklanja sve nule
+ sa desne strane unetog broja. Novodobijeni broj ispisati na
+ standardni izlaz. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -258,8 +313,9 @@ Sa  standardnog  ulaza  unosi se ceo pozitivan broj $n$, a  potom i $n$ celih  b
 
 
 \begin{Exercise}[label=p1.3_06] 
-Napisati program koji uneti neoznačeni ceo  broj  transformiše  tako što svaku parnu cifru u
-zapisu broja uveća za 1.\\
+Napisati program koji učitava neoznačeni ceo broj i transformiše ga
+tako što svaku parnu cifru u zapisu broja uveća za 1. Novodobijeni
+broj ispisati na standarni izlaz.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -289,7 +345,9 @@ zapisu broja uveća za 1.\\
 
 
 \begin{Exercise}[label=p1.3_07]
- Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program koji formira i ispisuje broj koji se dobija izbacivanjem svake druge cifre polaznog broja. Cifre se posmatraju sa desna na levo.\\
+ Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
+ koji formira i ispisuje broj koji se dobija izbacivanjem svake druge
+ cifre polaznog broja. Cifre se posmatraju sa desna na levo.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -317,155 +375,11 @@ zapisu broja uveća za 1.\\
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_07.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.3_08] 
- Sa standradnog ulaza unose se realan broj $x$ i ceo neoznačen broj $n$. Napisati program koji izračunava $x^n$. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{4 3}#
-#\izlaz{64.00000}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{5.8 5}#
-#\izlaz{6563.56768}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{11.43 0}#
-#\izlaz{1.00000}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_08}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_08]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_08.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.3_09]
- Sa standradnog ulaza unose se realan broj $x$ i ceo broj $n$. Napisati program koji izračunava $x^n$. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 -3}#
-#\izlaz{0.125}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{-3 2}#
-#\izlaz{9.000}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_09]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_09.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.3_10]
- Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj $n$. Napisati program koji izračunava sumu  $S=x+2\cdot x^2+3\cdot x^3+\ldots+n\cdot x^n$.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 3}#
-#\izlaz{S=34.000000}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{1.5 5}#
-#\izlaz{S=74.343750}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_10}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_10]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_10.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.3_11]
- Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj $n$. Napisati program koji izračunava sumu  $S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 4}#
-#\izlaz{S=1.937500}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{1.8 6}#
-#\izlaz{S=2.213249}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_11}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_11]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_11.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.3_12] 
-Napisati program koji sa zadatom tačnošću izračunava sumu $S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite x:}\ulaz{2}#
-#\izlaz{Unesite tacnost eps:}\ulaz{0.001}#
-#\izlaz{S=7.388713}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite x:}\ulaz{3}#
-#\izlaz{Unesite tacnost eps:}\ulaz{0.01}#
-#\izlaz{S=20.079666}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_12}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_12]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_12.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.3_13]
- Napisati program koji sa zadatom tačnošću izračunava sumu $S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}\ldots$.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite x:}\ulaz{3}#
-#\izlaz{Unesite tacnost eps:}\ulaz{0.001}#
-#\izlaz{S=0.049997}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite x:}\ulaz{3.14}#
-#\izlaz{Unesite tacnost eps:}\ulaz{0.01}#
-#\izlaz{S=0.049072}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_13}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_13]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_13.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.3_14] 
-Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program koji formira i ispisuje broj koji se dobija izbacivanjem cifara koje su jednake zbiru svojih suseda. Cifre se posmatraju sa desna na levo.\\
+\begin{Exercise}[difficulty=1, label=p1.3_14] 
+Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
+koji formira i ispisuje broj koji se dobija izbacivanjem cifara koje
+su jednake zbiru svojih suseda. Cifre se posmatraju sa desna na
+levo.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -493,8 +407,10 @@ Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program koji formira
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_14.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.3_15] 
-Napisati program koji proverava da li je dati prirodan broj palindrom. Broj je palindrom ako se isto čita i sa leve i sa desne strane.\\
+\begin{Exercise}[difficulty=1, label=p1.3_15] 
+Broj je palindrom ako se isto čita i sa leve i sa desne
+strane. Napisati program koji učitava ceo neoznačen broj i proverava
+da li je učitani broj palindrom. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -523,7 +439,9 @@ Napisati program koji proverava da li je dati prirodan broj palindrom. Broj je p
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_16] 
-Sa  standardnog  ulaza  se unosi ceo pozitivan broj $n$, a  zatim i $n$ celih  brojeva. Napisati program koji ispisuje broj sa najvećom cifrom desetica. Ukoliko ima više takvih, ispisati prvi. \\
+Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$
+celih brojeva. Napisati program koji ispisuje broj sa najvećom cifrom
+desetica. Ukoliko ima više takvih, ispisati prvi. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -539,7 +457,9 @@ Sa  standardnog  ulaza  se unosi ceo pozitivan broj $n$, a  zatim i $n$ celih  b
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_17] 
-Sa  standardnog  ulaza  se unosi ceo pozitivan broj $n$, a  zatim i $n$ celih  brojeva. Napisati program koji ispisuje broj sa najvećim brojem cifara. Ukoliko ima više takvih, ispisati prvi. \\
+Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$
+celih brojeva. Napisati program koji ispisuje broj sa najvećim brojem
+cifara. Ukoliko ima više takvih, ispisati prvi. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -563,7 +483,10 @@ Sa  standardnog  ulaza  se unosi ceo pozitivan broj $n$, a  zatim i $n$ celih  b
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_18] 
-Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$ celih brojeva. Napisati program koji ispisuje broj sa najvećom vodećom cifrom. Vodeća cifra je prva cifra iz zapisa broja. Ukoliko ima više takvih, ispisati prvi. \\
+Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$
+celih brojeva. Napisati program koji ispisuje broj sa najvećom vodećom
+cifrom. Vodeća cifra je prva cifra iz zapisa broja. Ukoliko ima više
+takvih, ispisati prvi. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -585,6 +508,177 @@ Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$ celih brojev
 \begin{Answer}[ref=p1.3_18]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_18.c}
 \end{Answer}
+
+\begin{Exercise}[label=p1.3_08] 
+ Sa standradnog ulaza unose se realan broj $x$ i ceo neoznačen broj
+ $n$. Napisati program koji izračunava stepen broja, odnosno $x^n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{4 3}#
+#\izlaz{64.00000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{5.8 5}#
+#\izlaz{6563.56768}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{11.43 0}#
+#\izlaz{1.00000}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_08}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_08]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.3_09]
+ Sa standradnog ulaza unose se realan broj $x$ i ceo broj
+ $n$. Napisati program koji izračunava $x^n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 -3}#
+#\izlaz{0.125}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{-3 2}#
+#\izlaz{9.000}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_09]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_09.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.3_10]
+ Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj
+ $n$. Napisati program koji izračunava i na standarni izlaz ispisuje
+ sumu $S=x+2\cdot x^2+3\cdot x^3+\ldots+n\cdot x^n$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 3}#
+#\izlaz{S=34.000000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{1.5 5}#
+#\izlaz{S=74.343750}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_10}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_10]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_10.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.3_11]
+ Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj
+ $n$. Napisati program koji izračunava i na standarni izlaz ispisuje
+ sumu $S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{2 4}#
+#\izlaz{S=1.937500}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{1.8 6}#
+#\izlaz{S=2.213249}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_11}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_11]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_11.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.3_12] 
+Napisati program koji učitava realane brojeve $x$ i $eps$ i sa zadatom
+tačnošću $eps$ izračunava i na standarni izlaz ispisuje sumu
+$S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$. \uputstvo{Prilikom
+  računanja sume koristiti prethodni izračunati član sume u računanju
+  sledećeg člana sume. Naime, ako je izračunat član sume
+  $\frac{x^n}{n!}$ na osnovu njega se lako može dobiti član
+  $\frac{x^{n+1}}{(n+1)!}$. Nikako ne računati stepen i faktorijel
+  odvojeno zbog mogućnosti prekoračenja. \\ Izračunati sumu u odnosu
+  na tačnost $eps$ znači uporediti poslednji član sume sa $eps$ i
+  ukoliko je taj poslednji član manji od $eps$ prekinuti dalja
+  izračunavanja.}\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{2}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.001}#
+#\izlaz{S=7.388713}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{3}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.01}#
+#\izlaz{S=20.079666}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_12}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_12]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_12.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.3_13]
+Napisati program koji učitava realane brojeve $x$ i $eps$ i sa zadatom
+tačnošću $eps$ izračunava i na standarni izlaz ispisuje sumu
+$S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}\ldots$. Voditi
+računa o mogućem prekoračenju, pogledati uputstvo prethodnog
+zadatka.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{3}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.001}#
+#\izlaz{S=0.049997}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite x:}\ulaz{3.14}#
+#\izlaz{Unesite tacnost eps:}\ulaz{0.01}#
+#\izlaz{S=0.049072}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_13}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_13]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_13.c}
+\end{Answer}
+
+
+%!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! Danijela: dovde sam stigla
+
 
 \begin{Exercise}[label=p1.3_19] 
 Sa standardnog ulaza se unose celi pozitivni brojevi $n$ ($n>1$) i $d$, a zatim i $n$ celih brojeva. Napisati program koji izračunava koliko ima parova uzastopnih brojeva među unetim brojevima koji se nalaze na rastojanju $d$. Rastojanje između brojeva je definisano sa $d(x,y)=|y-x|$. Rezultat ispisati na standardni izlaz. \\
