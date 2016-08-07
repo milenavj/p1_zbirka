@@ -6,7 +6,13 @@
 
 
 \begin{Exercise}[label=v2.1_01] 
-Tekst
+Skalarni proizvod dva vektora $a = (a_1, \ldots, a_n)$ i $b = (b_1,
+\ldots, b_n)$ je suma $a_1\cdot b_1 + \ldots a_n\cdot b_n$. Napisati
+program koji računa skalarni proizvod dva vektora. Svaki vektor je
+zadat kao celobrojni niz sa najviše $100$ elemenata. Program treba da
+učita dimenziju nizova (oba niza su iste dimenzije), zatim jedan po
+jedan element niza i da ispise njihov skalarni proizvod na standardni
+izlaz. Ako nizovi nisu iste dužine ispisati poruku \kckod{Greska!}.
 \linkresenje{v2.1_01}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_01]
@@ -14,7 +20,14 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_02] 
-Tekst
+Napisati program koji učitava broj elemenata niza (ne veći od $100$),
+a zatim učitava elemente niza i ispisuje:
+\begin{description}
+   \item{a)} elemente niza koji se nalaze na parnim indeksima
+   \item{b)} parne elemente niza
+\end{description}
+Ukoliko je broj elemenata niza manji od 1 ili veči od 100 ispisati
+poruku \kckod{Greska!}.  
 \linkresenje{v2.1_02}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_02]
@@ -22,7 +35,10 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_03] 
-Tekst
+Napisati program koji učitava jedan ceo broj a zatim ispisuje koliko
+puta svaka cifra učestvuje u zapisu tog broja. Nije potrebno
+ispisivati da se neka cifra pojavila $0$ puta. \uputstvo{Za evidenciju
+  broja pojavljivanja svake cifre koristiti niz.}
 \linkresenje{v2.1_03}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_03]
@@ -30,7 +46,12 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_04] 
-Tekst
+Napisati program koji učitava karakter po karakter do znaka
+\kckod{EOF} i ispisuje koliko se puta u unetom tekstu pojavila svaka
+cifra, svako malo slovo i svako veliko slovo. Ispisati broj
+pojavljivanja samo za ona mala slova, velika slova i cifre koji su se
+u unetom tekstu pojavili više od $0$ puta. \uputstvo{Za evidenciju
+  broja pojavljivanja cifara, malih i velih slova korisiti tri niza.}
 \linkresenje{v2.1_04}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_04]
@@ -38,7 +59,14 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_05] 
-Tekst
+Napisati program koji učitava dimenziju $n$ dva celobrojna niza $a$ i
+$b$ (oba niza su iste dimenzije), zatim učitava elemente oba niza
+(prvo se unose elementi niza $a$, a potom elementi niza $b$) i formira
+treći niz $c$ tako što naizmenično raspoređuje elemente nizova $a$ i
+$b$ unutar njega: $a_0, b_0, a_1, b_1, \ldots, a_{n-1},
+b_{n-1}$. Program treba da ispiše elemente novog niza $c$ na
+standardni izlaz. Maksimalni broj elemenata u nizovima $a$ i $b$
+$100$. U slučaju neispravnog unosa ispisati \kckod{Greska!}.
 \linkresenje{v2.1_05}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_05]
@@ -46,7 +74,11 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_06] 
-Tekst
+Napisati program koji učitava dimenziju $n$ celobrojnog niza $a$ i
+njegove elemente, a zatim iz niza $a$ izbacuje sve elemente koji nisu
+deljivi svojom poslednjom cifrom, izuzev elemenata čija je poslednja
+cifra $0$ koje treba zadržati. Program treba da ispiše izmenjeni niz
+na standardni izlaz. Niz $a$ sadrzi najviše $100$ elemenata.
 \linkresenje{v2.1_06}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_06]
@@ -54,7 +86,18 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_07] 
-Tekst
+Napisati funkcije za rad sa nizovima celih brojeva. U programu učitati
+dimenziju niza (ne veću od $100$) i testirati rad napisanih
+funkcija. U slučaju greške pri unosu podataka ispisati odgovarajuću
+poruku.
+\begin{description}
+\item{a)} Napisati funkciju \kckod{void ucitaj(int niz[], int dimenzija)} koja učitava sadržaj niza. %ovde sam navela potpise funkcija jer su ove dve funkcije bitne za dalje, ali nije bas uniformno u ostatku zadatka
+\item{b)} Napisati funkciju \kckod{void stampaj(int niz[], int dimenzija)} koja štampa sadržaj niza.
+\item{c)} Napisati funkciju koja računa sumu elemenata niza.   
+\item{d)} Napisati funkciju koja računa prosečnu vrednost elemenata niza.
+\item{e)} Napisati funkciju koja izračunava minimum elemenata niza.
+\item{f)} Napisati funkciju koja izračunava poziciju maksimalnog elementa u nizu.
+\end{description}
 \linkresenje{v2.1_07}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_07]
@@ -62,7 +105,23 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.1_08] 
-Tekst
+Napisati funkcije za rad sa nizovima celih brojeva. U programu učitati
+dimenziju niza (ne veću od $100$) i korišćenjem funkcije
+\kckod{ucitaj} iz zadatka \ref{v2.1_07} učitati elemente niza. Potom
+učitati ceo broj $m$ i testirati rad napisanih funkcija. U slučaju
+greške pri unosu podataka ispisati odgovarajuću poruku.
+\begin{description}
+\item{a)} Napisati funkciju koja proverava da li niz sadrži neku vrednost $m$.
+\item{b)} Napisati funkciju koja vraća vrednost prve pozicije na kojoj se 
+nalazi element koji ima vrednost $m$, ili $-1$ ukoliko element nije u nizu.
+\item{c)} Napisati funkciju koja vraća vrednost poslednje pozicije na kojoj se 
+nalazi element koji ima vrednost $m$, ili $-1$ ukoliko element nije u nizu.
+\item{d)} Napisati funkciju koja proverava da li elementi niza čine palindrom.
+\item{e)} Napisati funkciju koja proverava da li su elementi niza uređeni 
+neopadajuće.
+\item{f)} Napisati funkciju koja izračunava najdužu uzastopnu seriju jednakih 
+elemenata u nizu.
+\end{description}
 \linkresenje{v2.1_08}
 \end{Exercise}
 \begin{Answer}[ref=v2.1_08]
