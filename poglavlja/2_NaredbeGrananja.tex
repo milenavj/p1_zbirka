@@ -37,7 +37,6 @@ Napisati program koji za dva cela broja uneta sa standardnog ulaza ispisuje njih
 
 \begin{Exercise}[label=v1.2_02] 
 Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost.
-\napomena{Voditi računa da program radi ispravno za sve unete vrednosti.}
 \komentar{TODO U resenje dodati komentar na temu implicitne konverzije kod deljenja}
 \linkresenje{v1.2_02}
 \end{Exercise}
@@ -76,7 +75,8 @@ Sa standardnog ulaza se unose cene tri artikla. Ukoliko se najjeftiniji
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_10] 
- Sa standardnog ulaza se učitavaju realni koeficijenti $A$ i $B$ linearne jednačine $Ax+B = 0$. Napisati program koji ispisuje rešenja ove jednačine. Ukoliko jednačina nema rešenja ili ukoliko ima više od jednog rešenja ispisati odgovarajuće poruke.\\
+ Sa standardnog ulaza se učitavaju realni koeficijenti $A$ i $B$ linearne jednačine $Ax+B = 0$. Napisati program koji ispisuje rešenja ove jednačine. Ukoliko jednačina nema rešenja ili ukoliko ima više od jednog rešenja ispisati odgovarajuće poruke.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -147,7 +147,7 @@ Napisati program koji za uneti dan i mesec ispisuje godišnje doba kojem pripada
 Napisati program koji za uneti četvorocifreni broj proverava
 da li su njegove cifre uređene rastuće, opadajuće ili nisu
 uređene i štampa odgovarajuću poruku na standardni
-izlaz. Voditi računa o nekorektnim unosima. \komentar{Mislim da bi uvek rebalo da vode
+izlaz. Voditi računa o nekorektnim unosima. \komentar{Mislim da bi uvek trebalo da vode
 racuna o nekorektnim unosima, osim kada se stavi napomena da se podrazumeva da je unos korektan?
 Zato bi ovde ovo izbrisala?}
 \linkresenje{v1.2_13}
@@ -183,8 +183,8 @@ $x_1 * p + x_2 * q = x_4 - x_3,y_1 * p + y_2 * q = y_4 - y_3$
 
 
 \begin{Exercise}[label=p1.2_01] 
-Napisati program koji za uneti četvorocifreni ceo broj
- ispisuje njegovu najveću cifru. \\
+Napisati program koji za uneti četvorocifreni ceo broj ispisuje njegovu najveću cifru. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -207,7 +207,7 @@ Napisati program koji za uneti četvorocifreni ceo broj
 
 \begin{Exercise}[label=p1.2_02] 
 Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program koji za dati trocifren broj proverava da li je Armstrongov.
-\\
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -222,6 +222,7 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 #\izlaz{Broj nije Amstrongov.}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -237,7 +238,8 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_03] 
- U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti  ceo broj $k$ (1 \geq $k$ \geq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.\\
+ U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti  ceo broj $k$ (1 \geq $k$ \geq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -262,6 +264,7 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \begin{Exercise}[label=p1.2_04] 
  Sa standardnog ulaza se unosi četvorocifreni pozitivan broj. Napisati program koji ispisuje proizvod parnih cifara datog broja. 
  \komentar{Izmeniti poruku u resenju!}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -276,6 +279,7 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 #\izlaz{Proizvod parnih cifara: 0}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -292,7 +296,7 @@ Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program k
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_05] 
- Sa standarnog ulaza se unosi 5 karaktera. Napisati program koji u slučaju da je prvi karakter veliko ili malo slovo $a$  ispisuje unete karaktere obrnutim redosledom, a u suprotnom ništa ne ispisuje. \komentar{Mozda umesto a da bude o, kao skracenica od obrni? Inace, ovaj zadatak je poprilicno besmislen :-)}
+ Sa standarnog ulaza se unosi pet karaktera. Napisati program koji u slučaju da je prvi karakter veliko ili malo slovo $a$  ispisuje unete karaktere obrnutim redosledom, a u suprotnom ništa ne ispisuje. \komentar{Mozda umesto a da bude o, kao skracenica od obrni? Inace, ovaj zadatak je poprilicno besmislen :-)}
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -339,6 +343,7 @@ Napisati program koji za karakter koji učitava:
 \item{c)} ako je $c$ cifra, ispisuje poruku \textit{cifra}
 \item{d)} u ostalim slučajevima, ispisuje karakter $c$ između dve zvezdice.
 \end{description}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -353,6 +358,7 @@ Napisati program koji za karakter koji učitava:
 #\izlaz{cifra}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -368,7 +374,8 @@ Napisati program koji za karakter koji učitava:
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_07] 
-Napisati program koji za unetih 5 karaktera ispisuje koliko je među njima malih slova.\\
+Napisati program koji za unetih pet karaktera ispisuje koliko je među njima malih slova.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -393,7 +400,7 @@ Napisati program koji za unetih 5 karaktera ispisuje koliko je među njima malih
 \begin{Exercise}[label=p1.2_08] 
  Sa standardnog ulaza se unosi četvorocifren ceo broj. Napisati program koji ispisuje broj koji se dobija kada se unetom broju razmene najmanja i najveća cifra. 
  %Ako uneti broj nije četvorocifren ispisati poruku \textit{Greska!}. \\
-\komentar{Izmeniti poruku u resenju.}
+\komentar{Izmeniti poruku o gresci u resenju. Izabrati najbolje test primere.}
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -410,15 +417,45 @@ Napisati program koji za unetih 5 karaktera ispisuje koliko je među njima malih
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_08}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{3842}#
+#\izlaz{3248}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-4239}#
+#\izlaz{-4932}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{123}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-45678}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.5_}
 \end{Exercise}
-\begin{Answer}[ref=p1.2_08]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_08.c}
+\begin{Answer}[ref=p1.5_]
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_16.c}
 \end{Answer}
 
+
 \begin{Exercise}[label=p1.2_09] 
-Spajanjem cifara dva trocifrena broja dobija se šestocifren broj. Na primer, spajanjem brojeva $321$ i $654$ dobija se broj $321654$. Sa standardnog ulaza se unose tri neoznačena trocifrena broja.  Napisati program koji spaja dva od ta tri trocifrena broja tako da se dobije naveći mogući šestocifren broj. Dobijeni šestocifreni broj ispisati na izlazu. Ako neki od unetih brojeva nije trocifren, smatrati da ulaz nije ispravn.
-\komentar{Izmeniti poruku o gresci u resenju}
+Spajanjem cifara dva trocifrena broja dobija se šestocifren broj. Na primer, spajanjem brojeva $321$ i $654$ dobija se broj $321654$. Sa standardnog ulaza se unose tri neoznačena trocifrena broja.  Napisati program koji spaja dva od ta tri trocifrena broja tako da se dobije naveći mogući šestocifren broj. Dobijeni šestocifreni broj ispisati na standardni izlaz. Ako neki od unetih brojeva nije trocifren, smatrati da ulaz nije ispravn.
+\komentar{Izmeniti poruku o gresci u resenju. Izabrati najbolje test primere.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -434,12 +471,42 @@ Spajanjem cifara dva trocifrena broja dobija se šestocifren broj. Na primer, sp
 #\izlaz{Greska, ulaz nije ispravan!}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
 
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{384 123 245}#
+#\izlaz{384245}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{123 345 5}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{1242 234 324}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{374 23 898}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{p1.2_09}
 \end{Exercise}
 \begin{Answer}[ref=p1.2_09]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_09.c}
+\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_19.c}
 \end{Answer}
+
 
 
 \begin{Exercise}[label=p1.2_11] 
@@ -452,6 +519,7 @@ odgovarajuću poruku. (?! zar ovo nije isto sto i a?) \komentar{pod a je duzina 
 \item [c)] dužinu realne prave koju pokrivaju ta dva intervala
 \item [d)] najmanji interval koji sadrži date intervale.
 \end{itemize}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -482,7 +550,10 @@ odgovarajuću poruku. (?! zar ovo nije isto sto i a?) \komentar{pod a je duzina 
 \begin{Exercise}[label=p1.2_12] 
 Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Sa standarnog ulaza se
 unosi realan broj $x$ i broj $k$ koje može biti 1, 2 ili 3. Napisati program koji izračunava
-$F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
+vrednost funkcije $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
+U slučaju neispravnog ulaza, odštampati odgovarajuću poruku o grešci.
+\komentar{dodati test primer za neispravan ulaz}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -505,7 +576,8 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_13] 
- Napisati program koji za uneti redni broj dana u nedelji ispisuje ime dana. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. \\
+ Napisati program koji za uneti redni broj dana u nedelji ispisuje ime odgovarajućeg dana. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -520,6 +592,7 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 #\izlaz{U pitanju je: nedelja}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -535,8 +608,10 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_14] 
- Sa standardnog ulaza se učitavaju dva cela broja i jedan od karaktera +, -, *, / ili \% koji predstavlja računsku operaciju. Napisatiti program koji  ispisuje vrednost izraza dobijenog primenom ove operacije na date argumente. Koristiti naredbu \textit{switch}. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. \\
-\begin{miditest}
+ Sa standardnog ulaza se učitavaju dva cela broja i jedan od karaktera +, -, *, / ili \% koji predstavlja računsku operaciju. Napisatiti program koji  ispisuje vrednost izraza dobijenog primenom ove operacije na date argumente. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. 
+\napomena{Koristiti naredbu \textit{switch}.} \komentar{Nisam sigurna da je potrebno ovde traziti da koriste switch, dovoljno je da resenje to koristi...}
+
+ \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite operator i dva cela broja:}\ulaz{- 8 11}#
@@ -550,6 +625,7 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 #\izlaz{Greska: deljenje nulom nije dozvoljeno!}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -599,7 +675,8 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_16] 
- Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum prethodnog dana. \\
+ Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum prethodnog dana. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -622,7 +699,8 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 \end{Answer}
 
 \begin{Exercise}[label=p1.2_17] 
- Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum narednog dana.\\
+ Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum narednog dana. \komentar{Mislim da bi bilo sasvim u redu da ovaj zadatak bude bez resenja. }
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -649,58 +727,10 @@ $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta.
 %\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_15.c}
 %\end{Answer}
 
-\begin{Exercise}[label=p1.4_] 
-Sa standarnog ulaza unosi se jedan karakter. Ako je karakter malo
-slovo zameniti ga velikim slovom, ako je veliko slovo zameniti malim
-slovom, ako je cifra ispisati \verb|u pitanju je cifra|. Ako je bilo
-koji drugi karakter onda ga ispisati na standarni izlaz.
-\linkresenje{p1.4_}
-\end{Exercise}
-\begin{Answer}[ref=p1.4_]
-%\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
-\end{Answer}
 
-\begin{Exercise}[label=p1.5_] 
-Ovaj zadatak je isti kao 2.22! Kako se brise?! Ima vise test primera nego 2.22.
-Sa standardnog ulaza se unosi \v cetvorocifren ceo broj. Napisati
-program koji datom broju razmenjuje najmanju i najve\' cu
-cifru. Dobijeni broj ispisati na izlaz. Ako broj nije \v cetvorocifren
-ispisati -1. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{3842}#
-#\izlaz{3248}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-4239}#
-#\izlaz{-4932}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{123}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-45678}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.5_}
-\end{Exercise}
-\begin{Answer}[ref=p1.5_]
-\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_16.c}
-\end{Answer}
 
 \begin{Exercise}[label=p1.6_] 
+\komentar{Grupisati zadatke koji rade sa karakterima.}
 Sa standardnog ulaza se unosi 5 karaktera. Napisati program koji ispisuje koliko
 se puta pojavilo veliko ili malo slovo \verb|a|. \\
 \begin{miditest}
@@ -717,6 +747,7 @@ se puta pojavilo veliko ili malo slovo \verb|a|. \\
 #\izlaz{3}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -754,6 +785,7 @@ puta su se pojavile cifre. \\
 #\izlaz{2}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -774,60 +806,19 @@ puta su se pojavile cifre. \\
 \includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_18.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.8_]
-Isti kao 2.23 ali ima bolje test primere!
-Sa standardnog ulaza se unose tri neozna\v cena trocifrena
-broja. Spojiti dva najve\'ca u \v sestocifren broj. Spajanje izvr\v
-siti tako da najve\' ci od trocifrenih brojeva bude na po\v cetku \v
-sestocifrenog broja. Dobijeni \v sestocifreni broj ispisati na
-izlazu. Ako neki od unetih brojeva nije trocifren, ispisati -1. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{384 123 245}#
-#\izlaz{384245}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{123 345 5}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{1242 234 324}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{374 23 898}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.8_}
-\end{Exercise}
-\begin{Answer}[ref=p1.8_]
-\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_19.c}
-\end{Answer}
 
 
 \begin{Exercise}[label=p1.9_]
-Korisnik unosi 3 cela broja: \verb|(p), (q) i (r)|.
-Nakon toga unosi i dva karaktera, koji imaju
-sledeci smisao:
-\begin{description}
-\item['k']-logi\v cka konjukcija
-\item['d']-logi\v cka disjunkcija
-\item['m']-relacija manje
-\item['v']-relacija ve\' ce
-\end{description}
-Nakon toga se ra\v cuna vrednost izraza 
-\verb|(p) op1 (q) op2 (r)| i ispisuje rezultat.
+Korisnik unosi tri cela broja: $P$, $Q$ i $R$.
+Nakon toga unosi i dva karaktera, $op1$ i $op2$. Ovi karakteri predstavljaju operacije nad unetim brojevima i imaju naredno značenje:
+\begin{itemize}
+\item karakter \textbf{k} predstavlja  logičku konjukciju
+\item karakter \textbf{d} predstavlja  logičku disjunkciju
+\item karakter \textbf{m} predstavlja  relaciju manje
+\item karakter \textbf{v} predstavlja  relaciju veće
+\end{itemize}
+Program treba da sračuna vrednost izraza 
+\kckod{P op1 Q op2 R} i da ga ispiše.
 \linkresenje{p1.9_}
 \end{Exercise}
 \begin{Answer}[ref=p1.9_]
