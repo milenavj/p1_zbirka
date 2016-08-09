@@ -1069,7 +1069,7 @@ $S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}-\frac{x^5}{5!}\ldots$.
 
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava realan broj $x$ i prirodan broj $n$
-izra\v cunava sumu $S = (1 + \cos(x))\cdot(1 + \cos(x^2))\cdot \ldots
+izračunava sumu $S = (1 + \cos(x))\cdot(1 + \cos(x^2))\cdot \ldots
 \cdot(1 + \cos(x^n))$. \napomena{Voditi računa o efikasnosti
   rešenja}.  \linkresenje{p1.7_}
 \end{Exercise}
@@ -1239,39 +1239,257 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
 
-\begin{Exercise}[difficulty=1, label=p1.7_] 
-Sa standardnog ulaza unosi se ceo pozitivan broj $n$. Napisati program
-koji ispisuje brojeve od $1$ do $n$, zatim od $2$ do $n-1$, $3$ do
-$n-2$, itd. Ispis se završava kada nije moguće ispisati ni jedan
-broj. Za neispravan unos, program ispisuje odgovarajuću  poruku.
+
+
+\komentar{Negdeje bilo "ispisuje", negde "iscrtava", svuda sam ispisuje menjala u iscrtava, mozda i je negde promaklo...}
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom iscrtava kvadrat
+stranice $n$ sastavljen od zvezdica.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{***}#
+#\izlaz{***}#
+#\izlaz{***}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.3_23]
+Napisati program koji za uneti ceo broj $n$ iscrtava zvezdicama rub kvadrata
+dimenzije $n$. 
+ 
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{1 2 3 4 5 2 3 4 3}#
+#\izlaz{*****}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{*****}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-4}#
-#\izlaz{-1}#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{**}#
+#\izlaz{**}#
 \end{upotreba}
 \end{miditest}
+\linkresenje{p1.3_23}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_23]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_23.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.7_] 
+Sa standardnog ulaza unosi se neoznačen broj $n$. Napisati program
+koji za uneto $n$ zvezdicama iscrtava rub kvadrata dimenzije $n$ koji 
+i na glavnoj dijagonali ima zvezdice.
 
 \begin{miditest}
-\begin{upotreba}{3}
+\begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{1 2 3 4 5 6 7 2 3 4 5 6 3 4 5 4}#
+#\izlaz{*****}#
+#\izlaz{**\ \ *}#
+#\izlaz{*\ *\ *}#
+#\izlaz{*\ \ **}#
+#\izlaz{*****}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[difficulty=1, label=p1.3_25]
+ Napisati program koji za uneti ceo broj $n$ zvezdicama iscrtava slovo \textit{X}
+ dimenzije $n$. 
+
+\komentar{Mogao bi da se doda i zadatak bas sa krsticima koji bi izgledali kao veliki plus + ?}
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{*\ \ \ *}#
+#\izlaz{\ *\ *\ }#
+#\izlaz{\ \ *\ \ }#
+#\izlaz{\ *\ *\ }#
+#\izlaz{*\ \ \ *}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{4}
+\begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{1 2 3 2}#
+#\izlaz{*\ *}#
+#\izlaz{\ *\ }#
+#\izlaz{*\ *}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_25}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_25]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_25.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom iscrtava
+pravougli trougao sastavljen od zvezdica. Kateta trougla je dužine $n$, a 
+prav ugao se nalazi u gornjem levom uglu slike.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{***}#
+#\izlaz{**}#
+#\izlaz{*}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom iscrtava
+pravougli trougao sastavljen od zvezdica. Kateta trougla je dužine $n$, a 
+prav ugao se nalazi u donjem levom uglu slike.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{*}#
+#\izlaz{**}#
+#\izlaz{***}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom iscrtava
+trougao sastavljen od zvezdica. Trougao se dobija
+spajanjem dva pravougla trougla čija kateta je dužine $n$, pri
+čemu je prav ugao prvog trougla u njegovom donjem levom uglu, dok je prav ugao
+drugog trougla u njegovom gornjem levom uglu, a spajanje se 
+vrši po horiznotalnoj kateti.
+
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{*}#
+#\izlaz{**}#
+#\izlaz{***}#
+#\izlaz{**}#
+#\izlaz{*}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.3_24] 
+ Napisati program koji za uneti ceo broj $n$ i karakter $c$ iscrtava
+ rub jednakokrakog pravouglog trougla čije su katete dužine $n$.
+ 
+\komentar{Možda spojiti ovaj i prethodna dva zadatka u jedan zadatak koji bi imao delove pod a, b i c? Možda slične zadatke iz ovog poglavlja malo grupisati, npr jedan zadatak za kvadrate, jedan  za pravougle trouglove, jedan za jednakostranicne trouglove? } 
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite karakter c:}\ulaz{*}#
+#\izlaz{*}#
+#\izlaz{**}#
+#\izlaz{*\ *}#
+#\izlaz{****}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite karakter c:}\ulaz{+}#
+#\izlaz{+}#
+#\izlaz{++}#
+#\izlaz{+\ +}#
+#\izlaz{+\ \ +}#
+#\izlaz{+++++}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_24}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_24]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_24.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom ispisuje pravougli
+trougao koji je sastavljen od zvezdica, čija kateta je dužine $n$ i čiji se prav ugao nalazi u  donjem desnom uglu. 
+
+\komentar{Tekst ne odgovara slici? U stvari, pdf ne odgovara slici?}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{\ \ *}#
+#\izlaz{\ ***}#
+#\izlaz{*****}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom iscrtava trougao
+koji se dobija spajanjem dva pravougla trougla čija kateta je dužine
+$n$. Trougao je desno poravnat.
+
+\komentar{Izgleda da ne razumem sta znaci desno poravnat??? Ili mozda slike nisu u redu?}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{\ \ *}#
+#\izlaz{\ ***}#
+#\izlaz{*****}#
+#\izlaz{\ ***}#
+#\izlaz{\ \ *}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p1.7_}
@@ -1282,11 +1500,217 @@ broj. Za neispravan unos, program ispisuje odgovarajuću  poruku.
 
 
 \begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, a potom iscrtava
+rub jednakostraničnog trougla čija stranica je dužine $n$.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{\ \ *}#
+#\izlaz{\ *\ *}#
+#\izlaz{*\ *\ *}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, i iscrtava sliku koja se
+dobija spajanjem dva jednakostranična trougla čija stranica je dužine
+$n$.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{\ \ *}#
+#\izlaz{\ *\ *}#
+#\izlaz{*\ *\ *}#
+#\izlaz{\ *\ *}#
+#\izlaz{\ \ *}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+
+\begin{Exercise}[difficulty=1, label=p1.3_26] 
+ Napisati program koji za uneti ceo broj $n$ iscrtava strelice
+ dimenzije $n$. 
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{*}#
+#\izlaz{\ *}#
+#\izlaz{***}#
+#\izlaz{\ *}#
+#\izlaz{*}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{*}#
+#\izlaz{\ *}#
+#\izlaz{\ \ *}#
+#\izlaz{\ \ \ *}#
+#\izlaz{*****}#
+#\izlaz{\ \ \ *}#
+#\izlaz{\ \ *}#
+#\izlaz{\ *}#
+#\izlaz{*}#
+\end{upotreba}
+\end{miditest} 
+\linkresenje{p1.3_26}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_26]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_26.c}
+\end{Answer}
+
+\begin{Exercise}[difficulty=1, label=p1.7_] 
+Napisati program koji učitava ceo broj $n$, i iscrtava sliku koja se
+dobija na sledeći način: u prvom redu je jedna zvezdica, u drugom redu
+su dve zvezdice razdvojene razmakom, treći red je sastavljen od
+zvezdica i iste je dužine kao i drugi red, četvrti red se sastoji od
+tri zvezdice razdvojene razmakom, a peti red je sastavljen od zvezdica
+i iste je dužine kao i četvrti red itd. Ukupna visina slike je $n$.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{7}#
+#\izlaz{*}#
+#\izlaz{*\ *}#
+#\izlaz{***}#
+#\izlaz{*\ *\ *}#
+#\izlaz{*****}#
+#\izlaz{*\ *\ *\ *}#
+#\izlaz{*******}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[difficulty=2, label=p1.7_] 
+Sa standarnog ulaza unose se neoznačeni celi brojevi $m$ i
+$n$. Napisati program koji za učitane brojeve $m$ i $n$ ispisuje jedan
+do drugog $n$ kvadrata čija je svaka strana sastavljena od $m$
+zvezdica. Zvezdice su međusobno razdvoje prazninom. 
+
+\komentar{Tekst nije u skladu sa slikom jer nije jasno da se crtaju samo rubovi a ne popunjeni kvadrati.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5 3}#
+#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#         
+#\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#           
+#\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#             
+#\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#
+#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4 4}#
+#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
+#\izlaz{*\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *}#
+#\izlaz{*\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *}#
+#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[difficulty=1, label=p1.7_] 
+Sa standarnog ulaza unosi se ceo neoznačen broj $n$. Napisati program
+koji štampa romb sastavljen od minusa u pravougaoniku sastavljenom od
+zvezdica. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{6}#
+#\izlaz{************}#
+#\izlaz{*****--*****}#
+#\izlaz{****----****}#
+#\izlaz{***------***}#
+#\izlaz{**--------**}#
+#\izlaz{*----------*}#
+#\izlaz{**--------**}#
+#\izlaz{***------***}#
+#\izlaz{****----****}#
+#\izlaz{*****--*****}#
+#\izlaz{************}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{****}#
+#\izlaz{*--*}#
+#\izlaz{****}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.7_] 
+Napisati program koji učitava ceo broj $n$ ($n \geq 2$) i 
+koji na standardni izlaz ispisuje sliku kuće sa krovom: kuća
+je kocka stranice $n$, a krov jednakostranični trougao stranice
+$n$.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{\ \ \ *}#
+#\izlaz{\ \ *\ *}#
+#\izlaz{\ *\ \ \ *}#
+#\izlaz{*\ *\ *\ *}#
+#\izlaz{*\ \ \ \ \ *}#
+#\izlaz{*\ \ \ \ \ *}#
+#\izlaz{*\ *\ *\ *}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1.7_] 
 Sa standarnog ulaza učitava se ceo neoznačen broj $n$. Napisati
 program koji za uneto $n$ ispisuje ,,trougao'' sačinjen od
 ,,koordinata'' svojih tačaka. 
 
 \komentar{Ovo treba preformulisati jer je bez test primera skroz nejasno. U test primerima negde ima blanko posle zareza, negde nema, i to treba ujednaciti.}
+
+\komentar{Mene ovaj zadatak zbunjuje i ne svidja mi se. Problem su mi koordinate koje se broje nekako cudno i to od broja 1 a ne od nule. Nije mi jasno zasto u temenu pravog ugla ne bi bila koordinata (0,0)?}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1328,6 +1752,51 @@ program koji za uneto $n$ ispisuje ,,trougao'' sačinjen od
 \begin{Answer}[ref=p1.7_]
 %\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
 \end{Answer}
+
+
+
+
+\begin{Exercise}[difficulty=1, label=p1.7_] 
+Sa standardnog ulaza unosi se ceo pozitivan broj $n$. Napisati program
+koji ispisuje brojeve od $1$ do $n$, zatim od $2$ do $n-1$, $3$ do
+$n-2$, itd. Ispis se završava kada nije moguće ispisati ni jedan
+broj. Za neispravan unos, program ispisuje odgovarajuću  poruku.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{1 2 3 4 5 2 3 4 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-4}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{1 2 3 4 5 6 7 2 3 4 5 6 3 4 5 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{1 2 3 2}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.7_}
+\end{Exercise}
+\begin{Answer}[ref=p1.7_]
+%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\end{Answer}
+
 
 
 \begin{Exercise}[difficulty=1, label=p1.7_] 
@@ -1380,450 +1849,7 @@ ogovarajuću poruku.
 \end{Answer}
 
 
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje kvadrat
-stranice $n$ sastavljen od zvezdica.
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{***}#
-#\izlaz{***}#
-#\izlaz{***}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.3_23]
- Napisati program koji za uneti ceo broj $n$ iscrtava rub kvadrata
- dimenzije $n$. 
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{*****}#
-#\izlaz{*\ \ \ *}#
-#\izlaz{*\ \ \ *}#
-#\izlaz{*\ \ \ *}#
-#\izlaz{*****}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{2}#
-#\izlaz{**}#
-#\izlaz{**}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_23}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_23]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_23.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.7_] 
-Sa standardnog ulaza unosi se neoznačen broj $n$. Napisati program
-koji za uneto $n$ iscrtava kvadrat dimenzije $n$ koji na glavnoj
-dijagonali ima zvezdice.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{*****}#
-#\izlaz{**\ \ *}#
-#\izlaz{*\ *\ *}#
-#\izlaz{*\ \ **}#
-#\izlaz{*****}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje obrnuti
-pravougli trougao sastavljen od zvezdica čija kateta je dužine $n$.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{***}#
-#\izlaz{**}#
-#\izlaz{*}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje pravougli
-trougao čija kateta je dužine $n$ sastavljen od zvezdica.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{*}#
-#\izlaz{**}#
-#\izlaz{***}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje trougao
-koji se dobija spajanjem dva pravougla trougla čija kateta je dužine
-$n$.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{*}#
-#\izlaz{**}#
-#\izlaz{***}#
-#\izlaz{**}#
-#\izlaz{*}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.3_24] 
- Napisati program koji za uneti ceo broj $n$ i karakter $c$ iscrtava
- rub jednakokrakog pravouglog trougla čije su katete dužine $n$.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite karakter c:}\ulaz{*}#
-#\izlaz{*}#
-#\izlaz{**}#
-#\izlaz{*\ *}#
-#\izlaz{****}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite karakter c:}\ulaz{+}#
-#\izlaz{+}#
-#\izlaz{++}#
-#\izlaz{+\ +}#
-#\izlaz{+\ \ +}#
-#\izlaz{+++++}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_24}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_24]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_24.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje pravougli
-trougao koji je sastavljen od zvezdica, čija kateta je dužine $n$ i koji je
-desno poravnat.
-
-\komentar{Tekst ne odgovara slici?}
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{\ \ *}#
-#\izlaz{\ ***}#
-#\izlaz{*****}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje trougao
-koji se dobija spajanjem dva pravougla trougla čija kateta je dužine
-$n$. Trougao je desno poravnat.
-
-\komentar{Izgleda da ne razumem sta znaci desno poravnat???}
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{\ \ *}#
-#\izlaz{\ ***}#
-#\izlaz{*****}#
-#\izlaz{\ ***}#
-#\izlaz{\ \ *}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, a potom ispisuje
-rub jednakostraničnog trougla čija stranica je dužine $n$.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{\ \ *}#
-#\izlaz{\ *\ *}#
-#\izlaz{*\ *\ *}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, i ispisuje sliku koja se
-dobija spajanjem dva jednakostranična trougla čija stranica je dužine
-$n$.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{\ \ *}#
-#\izlaz{\ *\ *}#
-#\izlaz{*\ *\ *}#
-#\izlaz{\ *\ *}#
-#\izlaz{\ \ *}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-
-\begin{Exercise}[difficulty=1, label=p1.3_25]
- Napisati program koji za uneti ceo broj $n$ iscrtava \textit{krstiće}
- dimenzije $n$. 
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{*\ \ \ *}#
-#\izlaz{\ *\ *\ }#
-#\izlaz{\ \ *\ \ }#
-#\izlaz{\ *\ *\ }#
-#\izlaz{*\ \ \ *}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{*\ *}#
-#\izlaz{\ *\ }#
-#\izlaz{*\ *}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_25}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_25]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_25.c}
-\end{Answer}
-
-\begin{Exercise}[difficulty=1, label=p1.3_26] 
- Napisati program koji za uneti ceo broj $n$ iscrtava strelice
- dimenzije $n$. 
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{*}#
-#\izlaz{\ *}#
-#\izlaz{***}#
-#\izlaz{\ *}#
-#\izlaz{*}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{*}#
-#\izlaz{\ *}#
-#\izlaz{\ \ *}#
-#\izlaz{\ \ \ *}#
-#\izlaz{*****}#
-#\izlaz{\ \ \ *}#
-#\izlaz{\ \ *}#
-#\izlaz{\ *}#
-#\izlaz{*}#
-\end{upotreba}
-\end{miditest} 
-\linkresenje{p1.3_26}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_26]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi7/3_26.c}
-\end{Answer}
-
-\begin{Exercise}[difficulty=1, label=p1.7_] 
-Napisati program koji učitava ceo broj $n$, i ispisuje sliku koja se
-dobija na sledeći način: u prvom redu je jedna zvezdica, u drugom redu
-su dve zvezdice razdvojene razmakom, treći red je sastavljen od
-zvezdica i iste je dužine kao i drugi red, četvrti red se sastoji od
-tri zvezdice razdvojene razmakom, a peti red je sastavljen od zvezdica
-i iste je dužine kao i četvrti red itd. Ukupna visina slike je $n$.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{7}#
-#\izlaz{*}#
-#\izlaz{*\ *}#
-#\izlaz{***}#
-#\izlaz{*\ *\ *}#
-#\izlaz{*****}#
-#\izlaz{*\ *\ *\ *}#
-#\izlaz{*******}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[difficulty=2, label=p1.7_] 
-Sa standarnog ulaza unose se neozna\v ceni celi brojevi $m$ i
-$n$. Napisati program koji za učitane brojeve $m$ i $n$ ispisuje jedan
-do drugog $n$ kvadrata čija je svaka strana sastavljena od $m$
-zvezdica. Zvezdice su međusobno razdvoje prazninom. 
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5 3}#
-#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#         
-#\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#           
-#\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#             
-#\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#
-#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4 4}#
-#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
-#\izlaz{*\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *}#
-#\izlaz{*\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *}#
-#\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[difficulty=1, label=p1.7_] 
-Sa standarnog ulaza unosi se ceo neoznačen broj $n$. Napisati program
-koji štampa romb sastavljen od minusa u pravougaoniku sastavljenim od
-zvezdica. Pogledati sliku u test primerima.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{6}#
-#\izlaz{************}#
-#\izlaz{*****--*****}#
-#\izlaz{****----****}#
-#\izlaz{***------***}#
-#\izlaz{**--------**}#
-#\izlaz{*----------*}#
-#\izlaz{**--------**}#
-#\izlaz{***------***}#
-#\izlaz{****----****}#
-#\izlaz{*****--*****}#
-#\izlaz{************}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{2}#
-#\izlaz{****}#
-#\izlaz{*--*}#
-#\izlaz{****}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava ceo broj $n$ ($n \geq 2$). Napisati
-program koji na standardni izlaz ispisuje sliku kuće sa krovom (kuća
-je kocka stranice $n$, a krov jednakostranični trougao stranice
-$n$):
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{\ \ \ *}#
-#\izlaz{\ \ *\ *}#
-#\izlaz{\ *\ \ \ *}#
-#\izlaz{*\ *\ *\ *}#
-#\izlaz{*\ \ \ \ \ *}#
-#\izlaz{*\ \ \ \ \ *}#
-#\izlaz{*\ *\ *\ *}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
-\end{Answer}
 
 \section{Rešenja}
 \shipoutAnswer
