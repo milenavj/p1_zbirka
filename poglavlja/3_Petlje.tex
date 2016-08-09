@@ -6,26 +6,28 @@
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
 
-\begin{Exercise}[label=v1.3_01] 
+\komentar{REDOSLED: Petlje se sustinski koriste za tri stvari: map, filter i reduce, kao i za kombinaciju te tri stvari.\\
+Map --- preslikavanje, dakle ceo niz necega se preslikava na neki nacin u neki novi niz (dupliranje vrednosti svih elemenata niza, dupliranje svake cifre broja, dodavanje prefiksa svim recima...)\\
+Filter --- iz niza necega biraju se neki koji zadovoljavaju neki kriterijum (svi parni brojevi, svi koji sadrze karakter "a", svi prosti brojevi, svi savrseni brojevi...)\\
+Reduce --- ceo niz se svodi na jednu vrednost (zbir svih vrednost, proizvod svih vrednosti, nadovezane sve vrednosti...)\\
+Kombinacija --- dve tehnike od prethodne tri (npr filter-reduce: zbir svih parnih brojeva) ili od svake po malo (zbir svih dupliranih brojeva koji su savrseni)\\
+Sustinski, studenti treba da usvoje najpre ove tri tehnike, pa onda da idu ne njihove kombinacije, i to najpre na kombinacije dve od tri, pa na kraju na zadatke koje kombinuju sve to. Ove tehnike nisu vezane za nizove, mogu se primeniti i na prirodne brojeve posmatrane kao niz brojeva ili na prirodni broj posmatran kao niz cifara...
+}
+
+\komentar{TODO Treba smisliti odgovarajuci redosled. Mislim da ce to biti lakse kada budu svi 
+test primeri i resenja.}
+
+\komentar{TODO Ima zadataka koji se posle ponavljaju u funkcijama. Resenja mozda ne bih duplirala svaki put vec bih negde dala resenje ovde, negde u funkcijama, a ukoliko nisu data oba, onda bih dala odgovarajuci link u resenju da se pogleda resenje tog drugog zadatka. Takodje, voditi racuna da su formulacije u takvim zadacima slicne, mozda cak i test primeri da se poklapaju?}
+
+\begin{Exercise}[label=v1.3_01] \komentar{Skratila bih poruku na Mi volimo da programiramo ili Mi volimo C jer mi je ovako predugacko i nece moci da stane u test primer. I umesto 10 puta, neka bude 5 puta, ne menja mnogo stvari.}
+
 Napisati program koji $10$ puta ispisuje tekst \kckod{Mi volimo
-  da programiramo u programskom jeziku C}.  \linkresenje{v1.3_01}
+  da programiramo u programskom jeziku C}.  
+  \linkresenje{v1.3_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_01]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
 \end{Answer}
-
-
-\begin{Exercise}[label=v1.3_10] 
-Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
-\kckod{Mi volimo da programiramo u programskom jeziku C} korišćenjem
-\kckod{while}, \kckod{for} i \kckod{do-while} petlje. Obratiti pažnju
-na rezultat kada je $n \le 0$. \\
-\linkresenje{v1.3_10}
-\end{Exercise}
-\begin{Answer}[ref=v1.3_10]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_10.c}
-\end{Answer}
-
 
 \begin{Exercise}[label=v1.3_02] 
 Napisati program koji učitava pozitivan ceo broj $n$
@@ -36,11 +38,41 @@ a potom ispisuje sve cele brojeve od $0$ do $n-1$.
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_02.c}
 \end{Answer}
 
+
+\begin{Exercise}[label=v1.3_10] 
+\komentar{Nisam sigurnada odmah treba da krenemo sa sve tri petlje. Mozda je dovoljno da prvih par zadataka koriste while?}
+Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
+\kckod{Mi volimo da programiramo u programskom jeziku C}.
+\begin{enumerate}
+\item Koristiti \kckod{while} petlju.
+\item Koristiti \kckod{for} petlju.
+\item Koristiti \kckod{fo-while} petlju.
+ \end{enumerate}
+\uputstvo{Obratiti pažnju na rezultat kada je $n \le 0$.} 
+\komentar{Uputstvo bih izbrisala, mislim da je suvišno. Dovoljno je staviti jedan test primer koji će na taj slučaj da skrene pažnju.}
+
+\komentar{Ne svidja mi se resenje jer je razlicitio za ove tri varijante za n 
+manje od nule a trebalo bi da 
+isti test primeri odgovaraju razlicitim resenjima. Zato je potrebno resenje podesiti 
+tako da je stampanje uvek isto, a u komentarima objasniti zasto su i gde i kakve izmene potrebne.
+Predlazem da to budu tri programa za svaki od delova a, b i c}
+
+\linkresenje{v1.3_10}
+\end{Exercise}
+\begin{Answer}[ref=v1.3_10]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_10.c}
+\end{Answer}
+
 \begin{Exercise}[label=v1.3_11] 
 Napisati program koji učitava dva cela broja $n$ i $m$ ispisuje sve
-cele brojeve iz intervala $[n,m]$ korišćenjem \kckod{while},
-\kckod{for} i \kckod{do-while} petlje. Obratiti pažnju na rezultat
-kada je $n>m$. \\ 
+cele brojeve iz intervala $[n,m]$.
+\begin{enumerate}
+\item Koristiti \kckod{while} petlju.
+\item Koristiti \kckod{for} petlju.
+\item Koristiti \kckod{fo-while} petlju.
+ \end{enumerate}
+\komentar{Isti komentar kao i malopre, moraju sva tri resenja da budu ispravna. Takođe, ovo uputstvo bih izbrisala.}
+\uputstvo{Obratiti pažnju na rezultat kada je $n>m$.} 
 \linkresenje{v1.3_11}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_11]
@@ -52,8 +84,12 @@ kada je $n>m$. \\
 Napisati program koji učitava dva realna broja dvostruke tačnosti, $a$
 i $b$, za koje važi $a<b$. Napisati program koji ispisuje vrednost
 funkcije $cos(x)$ u 10 ravnomerno razmaknutih tačaka intervala $[a,
-  b]$ Pri ispisu vrednosti se zaokružuju na 4 decimale. Za neispravan
-unos, program ispisuje \kckod{Greska!}.\\
+  b]$ Pri ispisu vrednosti se zaokružuju na četiri decimale. Za neispravan
+unos, program ispisuje odgovarajuću poruku.
+
+\komentar{Uskladiti test primer sa tekstom zadatka. Ovakav isti zadatak ali sa sinusom imamo u delu sa funkcijama, ne znam da li je to na neki nacin redudantno, tj da li je na oba mesta potrebno dati resenje. Ukoliko se odlucimo da jeste, onda treba voditi racunada resenja budu sustinski ista i da budu na slican nacin iskomentarisana tako da se jasno primeti da su isti 
+koncepti u pitanju.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -68,6 +104,7 @@ unos, program ispisuje \kckod{Greska!}.\\
 #\izlaz{1.0000  -1.0000  1.0000  -1.0000  1.0000  -1.0000  1.0000  -1.0000  1.0000  -1.0000}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -90,9 +127,10 @@ unos, program ispisuje \kckod{Greska!}.\\
 
 
 \begin{Exercise}[label=p1.4_] 
+\komentar{Uskladiti formulaciju zadatka sa odgovarajućom formulacijom kod nizova.}
 Fibonačijev niz počinje ciframa $1$ i $1$, a svaki član se dobija zbirom
 prethdona dva. Napisati program koji učitava ceo neoznačen broj $n$ i
-određuje i na standatni izlaz ispisuje $n$-ti član Fibonačijevog niza. \\
+određuje i na standardni izlaz ispisuje $n$-ti član Fibonačijevog niza. \\
 \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
@@ -119,11 +157,12 @@ Napisati program koji za uneti početni član niza $a_0$ (ceo broj)
 
 
 \begin{Exercise}[difficulty=1, label=p1.7_] 
-$A_0$ papir ima povr\v sinu 1$m^2$ i odnos stranica
-  $1:\sqrt{2}$. $A_1$ papir dobija se podelom papira $A_0$ po dužoj
-  ivici. $A_2$ papir dobija se podelom $A_1$ papira po dužoj ivici
+Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
+  $1:\sqrt{2}$. Papir $A_1$ dobija se podelom papira $A_0$ po dužoj
+  ivici. Papir $A_2$ dobija se podelom $A_1$ papira po dužoj ivici
   itd. Napisati program koji za uneti neoznačen broj $k$ ispisuje
-  dimenzije papira $A_k$ u milimetrima. \\
+  dimenzije papira $A_k$ u milimetrima. 
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -138,6 +177,7 @@ $A_0$ papir ima povr\v sinu 1$m^2$ i odnos stranica
 #\izlaz{297 420}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -176,6 +216,7 @@ obrnutom poretku.
 
 
 \begin{Exercise}[label=v1.3_14] 
+\komentar{Pravi delioci su svi delioci sem jedinice i samog broja.}
 Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje sve
 \komentar{(danijela:prave delioce?? sta znaci ovo prave)} delioce
 unetog broja. U slučaju greške pri unosu podataka ispisati
@@ -189,8 +230,8 @@ odgovarajuću poruku.
 
 \begin{Exercise}[label=p1.3_04] 
  Sa standardnog ulaza unosi se ceo neoznačen broj. Napisati program
- koji proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu
- ili ne.\\
+ koji proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -225,7 +266,8 @@ sumom svojih cifara.\\ \linkresenje{p1.7_}
 \begin{Exercise}[label=p1.3_05] 
  Napisati program koji učitava ceo neoznačen broj i uklanja sve nule
  sa desne strane unetog broja. Novodobijeni broj ispisati na
- standardni izlaz. \\
+ standardni izlaz. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -240,6 +282,7 @@ sumom svojih cifara.\\ \linkresenje{p1.7_}
 #\izlaz{856}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -257,7 +300,8 @@ sumom svojih cifara.\\ \linkresenje{p1.7_}
 \begin{Exercise}[label=p1.3_06] 
 Napisati program koji učitava neoznačeni ceo broj i transformiše ga
 tako što svaku parnu cifru u zapisu broja uveća za 1. Novodobijeni
-broj ispisati na standarni izlaz.\\
+broj ispisati na standarni izlaz.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -272,6 +316,7 @@ broj ispisati na standarni izlaz.\\
 #\izlaz{139}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -289,7 +334,8 @@ broj ispisati na standarni izlaz.\\
 \begin{Exercise}[label=p1.3_07]
  Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
  koji formira i ispisuje broj koji se dobija izbacivanjem svake druge
- cifre polaznog broja. Cifre se posmatraju sa desna na levo.\\
+ cifre polaznog broja, počevši od krajnje desne cifre.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -304,6 +350,7 @@ broj ispisati na standarni izlaz.\\
 #\izlaz{8}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -320,8 +367,8 @@ broj ispisati na standarni izlaz.\\
 \begin{Exercise}[difficulty=1, label=p1.3_14] 
 Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
 koji formira i ispisuje broj koji se dobija izbacivanjem cifara koje
-su jednake zbiru svojih suseda. Cifre se posmatraju sa desna na
-levo.\\
+su jednake zbiru svojih suseda. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -336,6 +383,7 @@ levo.\\
 #\izlaz{40}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -350,9 +398,10 @@ levo.\\
 \end{Answer}
 
 \begin{Exercise}[difficulty=1, label=p1.3_15] 
-Broj je palindrom ako se isto čita i sa leve i sa desne
+Broj je \textit{palindrom} ukoliko se isto čita i sa leve i sa desne
 strane. Napisati program koji učitava ceo neoznačen broj i proverava
-da li je učitani broj palindrom. \\
+da li je učitani broj palindrom. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -367,6 +416,7 @@ da li je učitani broj palindrom. \\
 #\izlaz{Broj nije palindrom!}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -397,6 +447,43 @@ negativnih unetih brojeva.
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_04.c}
 \end{Answer}
 
+\begin{Exercise}[label=p1.3_01] 
+Sa standardnog ulaza unosi se ceo pozitivan broj $n$, a potom i $n$
+celih brojeva. Izračunati i ispisati zbir onih brojeva koji su neparni
+i negativni. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{1 -5 -6 3 -11}#
+#\izlaz{-16}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}\ulaz{-1 1 0 3}#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}\ulaz{5 8 13 17}#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.3_01}
+\end{Exercise}
+\begin{Answer}[ref=p1.3_01]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_01.c}
+\end{Answer}
+
+
 \begin{Exercise}[label=v1.3_05] 
 Napisati program koji učitava cele cele brojeve sve dok se ne unese
 nula. Nakon toga ispisati proizvod onih unetih brojeva koji su
@@ -419,9 +506,12 @@ cenu.
 \end{Answer}
 
 \begin{Exercise}[label=p1.3_22] 
-Sa standardnog ulaza se unose realni brojevi sve do unosa broja
+Sa standardnog ulaza se unose realni brojevi sve do unosa broja nula
 $0$. Napisati program koji izračunava i ispisuje aritmetičku sredinu
-unetih brojeva. \\
+unetih brojeva. 
+
+\komentar{I ovo bi moglo da se preformulise u cene, tj da se sracuna prosecna vrednost cena u radnji. Cak mislim da bi mogli da stavimo dva zadatka, ovaj i jedan sa cenama, a u resenju da se pozovemo samo na resenje ovog zadatka, tako da se vidi da je to u sustini isti problem. }
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -436,45 +526,17 @@ unetih brojeva. \\
 \end{Answer}
 
 
-\begin{Exercise}[label=p1.3_01] 
-Sa standardnog ulaza unosi se ceo pozitivan broj $n$, a potom i $n$
-celih brojeva. Izračunati i ispisati zbir onih brojeva koji su neparni
-i negativni. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n brojeva:}\ulaz{1 -5 -6 3 -11}#
-#\izlaz{-16}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}\ulaz{-1 1 0 3}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}\ulaz{5 8 13 17}#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.3_01}
-\end{Exercise}
-\begin{Answer}[ref=p1.3_01]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/praktikumi6/3_01.c}
-\end{Answer}
 
 
 \begin{Exercise}[label=p1.3_02] 
+\komentar{U narednim zadacima se u tekstu kaze da se unosi ceo pozitivan broj a posle se u resenju nigde to ne proverava, niti se koristi tip unsigned. Nesto od toga mora, inae resenje nije dobro.}
+
 Sa standardnog ulaza unosi se realan broj $m$, ceo pozitivan broj $n$
 i $n$ realnih brojeva. Izračunati i ispisati koliko je brojeva među
-unetima manje od zadatog broja $m$. \\
+unetima manje od zadatog broja $m$. 
+
+\komentar{Ovo bi se moglo lepo preformulisati u zadatak sa motivacijom: m je cena, n su odgovarajuci artikli, i program treba da izdvoji samo one artikle koji su jeftiniji od zadate cene.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -503,8 +565,11 @@ unetima manje od zadatog broja $m$. \\
 \begin{Exercise}[label=p1.7_] 
 Sa standardnog ulaza unosi se ceo pozitivan broj $n$, a potom $n$
 celih brojeva.  Naći sumu brojeva koji su deljivi sa $5$, a nisu
-deljivi sa $7$. U slučaju greške pri unosu podataka ispisati
-\kckod{Greska!}. \\
+deljivi sa $7$. U slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
+
+\komentar{Ukoliko test primer ne moze da stane u midi onda treba da bude maxi, ali mozda bolje
+skratiti ga u midi.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -519,6 +584,7 @@ deljivi sa $7$. U slučaju greške pri unosu podataka ispisati
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -554,7 +620,8 @@ znaka. Ispisati dobijenu vrednost na standarni izlaz.\\
 \begin{Exercise}[label=p1.3_16] 
 Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$
 celih brojeva. Napisati program koji ispisuje broj sa najvećom cifrom
-desetica. Ukoliko ima više takvih, ispisati prvi. \\
+desetica. Ukoliko ima više takvih, ispisati prvi. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -572,7 +639,8 @@ desetica. Ukoliko ima više takvih, ispisati prvi. \\
 \begin{Exercise}[label=p1.3_17] 
 Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$
 celih brojeva. Napisati program koji ispisuje broj sa najvećim brojem
-cifara. Ukoliko ima više takvih, ispisati prvi. \\
+cifara. Ukoliko ima više takvih, ispisati prvi. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -598,8 +666,9 @@ cifara. Ukoliko ima više takvih, ispisati prvi. \\
 \begin{Exercise}[label=p1.3_18] 
 Sa standardnog ulaza se unosi ceo pozitivan broj $n$, a zatim i $n$
 celih brojeva. Napisati program koji ispisuje broj sa najvećom vodećom
-cifrom. Vodeća cifra je prva cifra iz zapisa broja. Ukoliko ima više
-takvih, ispisati prvi. \\
+cifrom. Vodeća cifra je cifra najveće težine u zapisu broja. Ukoliko ima više
+takvih, ispisati prvi. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -628,7 +697,8 @@ Sa standardnog ulaza se unose celi pozitivni brojevi $n$ ($n>1$) i
 $d$, a zatim i $n$ celih brojeva. Napisati program koji izračunava
 koliko ima parova uzastopnih brojeva među unetim brojevima koji se
 nalaze na rastojanju $d$. Rastojanje između brojeva je definisano sa
-$d(x,y)=|y-x|$. Rezultat ispisati na standardni izlaz. \\
+$d(x,y)=|y-x|$. Rezultat ispisati na standardni izlaz. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -655,7 +725,10 @@ $d(x,y)=|y-x|$. Rezultat ispisati na standardni izlaz. \\
 \begin{Exercise}[label=p1.3_21] 
 Sa standardnog ulaza se unose celi brojevi sve do unosa broja
 $0$. Napisati program koji izračunava i ispisuje razliku najvećeg i
-najmanjeg unetog broja. \\
+najmanjeg unetog broja. 
+
+\komentar{ili mozda ...najskupljeg i najjeftinijeg artikla?}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -695,7 +768,7 @@ ispisuje isti karakter kao i uneti.
 \end{Answer}
 
 \begin{Exercise}[label=v1.3_08] 
-Napisati program koji učitava karaktere dok se ne unese \kckod{EOF} a
+Napisati program koji učitava karaktere sve do kraja ulaza, a
 potom ispisuje broj velikih slova, broj malih slova, broj cifara, broj
 belina i zbir unetih cifara.  
 \linkresenje{v1.3_08}
@@ -709,8 +782,8 @@ belina i zbir unetih cifara.
  Sa standardnog ulaza unosi se ceo pozitivan broj $n$, a potom i $n$
  karaktera. Za svaki od samoglasnika ispisati koliko puta se pojavio
  među unetim karakterima. Ne praviti razliku između malih i velikih
- slova. \uputstvo{Prilikom implementacije koristiti \kckod{switch}
-   naredbu.}\\
+ slova. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -745,7 +818,8 @@ belina i zbir unetih cifara.
 \begin{Exercise}[label=p1.3_20] 
 Sa standardnog ulaza se unosi ceo broj $n$, a zatim i $n$
 karaktera. Napisati program koji proverava da li se od unetih
-karaktera može napisati reč \textit{Zima}.\\
+karaktera može napisati reč \textit{Zima}.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -788,11 +862,10 @@ karaktera može napisati reč \textit{Zima}.\\
 %--------------------------------------------------------------------
 
 \begin{Exercise}[label=v1.3_03] 
+\komentar{Prekoracenje se javlja mnooogo ranije. I ovo je jedan od zadataka koji imamo u funkcijama. }
  Napisati program koji učitava ceo pozitivan broj i izračunava njegov
- faktorijel. Testirati program za različite vrednosti unetog broja. U
- slučaju neispravnog unosa ispisati poruku
- \kckod{Greska!}. \uputstvo{Obratiti pažnju da počev od broja $23$
-   dolazi do prekoračenja prilikom računanja faktorijela.}
+ faktorijel. U slučaju neispravnog unosa ispisati odgovarajuću poruku. 
+ \uputstvo{Obratiti pažnju da počev od broja $23$ dolazi do prekoračenja prilikom računanja faktorijela.}
  \linkresenje{v1.3_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_03]
@@ -802,7 +875,8 @@ karaktera može napisati reč \textit{Zima}.\\
 
 \begin{Exercise}[label=p1.3_08] 
  Sa standradnog ulaza unose se realan broj $x$ i ceo neoznačen broj
- $n$. Napisati program koji izračunava stepen broja, odnosno $x^n$. \\
+ $n$. Napisati program koji izračunava $n$-ti stepen broja $x$, tj.~$x^n$. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -817,6 +891,7 @@ karaktera može napisati reč \textit{Zima}.\\
 #\izlaz{6563.56768}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -832,7 +907,8 @@ karaktera može napisati reč \textit{Zima}.\\
 
 \begin{Exercise}[label=p1.3_09]
  Sa standradnog ulaza unose se realan broj $x$ i ceo broj
- $n$. Napisati program koji izračunava $x^n$. \\
+ $n$. Napisati program koji izračunava $n$-ti stepen broja $x$. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -855,6 +931,7 @@ karaktera može napisati reč \textit{Zima}.\\
 
 
 \begin{Exercise}[label=v1.3_13] 
+\komentar{Razbila bih ovaj zadatak na dva zadatka. Ovako ne vidim kako dati test primere.}
 Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje
 vrednost tražene sume. U slučaju greške pri unosu podataka ispisati
 odgovarajuću poruku.
@@ -874,7 +951,8 @@ odgovarajuću poruku.
 \begin{Exercise}[label=p1.3_10]
  Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj
  $n$. Napisati program koji izračunava i na standarni izlaz ispisuje
- sumu $S=x+2\cdot x^2+3\cdot x^3+\ldots+n\cdot x^n$.\\
+ sumu $S=x+2\cdot x^2+3\cdot x^3+\ldots+n\cdot x^n$.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -899,7 +977,8 @@ odgovarajuću poruku.
 \begin{Exercise}[label=p1.3_11]
  Sa standardnog ulaza unose se realan broj $x$ i ceo neoznačen broj
  $n$. Napisati program koji izračunava i na standarni izlaz ispisuje
- sumu $S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.\\
+ sumu $S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -922,17 +1001,21 @@ odgovarajuću poruku.
 
 
 \begin{Exercise}[difficulty=1, label=p1.3_12] 
+\komentar{Mislila sam da se tacnost eps odnosi na to da je razlika dva uzastopna clana manja od eps a ne da je sam clan manji od eps? Nisam sigurna, ali mozda treba proveriti ili preformulisati zadatak tako da se ne definise ovaj pojam.}
 Napisati program koji učitava realane brojeve $x$ i $eps$ i sa zadatom
 tačnošću $eps$ izračunava i na standarni izlaz ispisuje sumu
-$S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$. \uputstvo{Prilikom
+$S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$.   Izračunati sumu u odnosu
+  na tačnost $eps$ znači uporediti poslednji član sume sa $eps$ i
+  ukoliko je taj poslednji član manji od $eps$ prekinuti dalja
+  izračunavanja.
+\uputstvo{Prilikom
   računanja sume koristiti prethodni izračunati član sume u računanju
   sledećeg člana sume. Naime, ako je izračunat član sume
   $\frac{x^n}{n!}$ na osnovu njega se lako može dobiti član
   $\frac{x^{n+1}}{(n+1)!}$. Nikako ne računati stepen i faktorijel
-  odvojeno zbog mogućnosti prekoračenja. \\ Izračunati sumu u odnosu
-  na tačnost $eps$ znači uporediti poslednji član sume sa $eps$ i
-  ukoliko je taj poslednji član manji od $eps$ prekinuti dalja
-  izračunavanja.}\\
+  odvojeno zbog neefikasnosti takvog rešenja i zbog 
+  mogućnosti prekoračenja.} 
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -959,9 +1042,9 @@ $S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$. \uputstvo{Prilikom
 \begin{Exercise}[difficulty=1, label=p1.3_13]
 Napisati program koji učitava realane brojeve $x$ i $eps$ i sa zadatom
 tačnošću $eps$ izračunava i na standarni izlaz ispisuje sumu
-$S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}-\frac{x^5}{5!}\ldots$. Voditi
-računa o mogućem prekoračenju, pogledati uputstvo prethodnog
-zadatka.\\
+$S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}-\frac{x^5}{5!}\ldots$. 
+\napomena{Voditi računa o efikasnosti rešenja i o mogućnosti prekoračenja.} 
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -988,7 +1071,7 @@ zadatka.\\
 Napisati program koji učitava realan broj $x$ i prirodan broj $n$
 izra\v cunava sumu $S = (1 + \cos(x))\cdot(1 + \cos(x^2))\cdot \ldots
 \cdot(1 + \cos(x^n))$. \napomena{Voditi računa o efikasnosti
-  problema}.  \linkresenje{p1.7_}
+  rešenja}.  \linkresenje{p1.7_}
 \end{Exercise}
 \begin{Answer}[ref=p1.7_]
 %\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
@@ -1009,10 +1092,10 @@ izlaz ispisuje vrednost razlomka\\
 \end{Answer}
 
 \begin{Exercise}[difficulty=1, label=p1.7_] 
-Program učitava cele brojeve $x$ i $n$. Napisati program koji računa sumu
+Napisati program koji računa sumu
 $$1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \ldots +
-(-1)^{n}\frac{x^{2n}}{(2n)!}.$$ \napomena{Voditi računa o prekoračenju
-  i efikasnosti rešenja.} \\ 
+(-1)^{n}\frac{x^{2n}}{(2n)!}.$$ za unete cele brojeve $x$ i $n$. 
+\napomena{Voditi računa o efikasnosti rešenja i o mogućnosti prekoračenja.} 
 \linkresenje{p1.7_}
 \end{Exercise}
 \begin{Answer}[ref=p1.7_]
@@ -1024,9 +1107,10 @@ $$1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \ldots +
 Sa standardnog ulaza unosi se ceo pozitivan broj $n$ veći od $0$. 
 Napisati program koji računa proizvod
 $$S = (1 + \frac{1}{2!})(1 + \frac{1}{3!})\ldots(1 +
-\frac{1}{n!}).$$ U slučaju greške pri unosu podataka ispisati
-\kckod{Greska!}. \napomena{Voditi računa o efikasnosti rešenja i o
-  mogućnosti prekoračenja.} \\
+\frac{1}{n!}).$$ U slučaju greške pri unosu podataka ispisati 
+odgovarajuću  poruku. \napomena{Voditi računa o efikasnosti rešenja i o
+  mogućnosti prekoračenja.} 
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1041,6 +1125,7 @@ $$S = (1 + \frac{1}{2!})(1 + \frac{1}{3!})\ldots(1 +
 #\izlaz{1.841026}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1067,8 +1152,10 @@ Napisati program koji za uneto $n$ izračunava:
 $$S = 1\cdot3\cdot5 - 1\cdot3\cdot5\cdot7 + 1\cdot3\cdot5\cdot7\cdot9
 - 1\cdot3\cdot5\cdot7\cdot9\cdot11 + \ldots
 (-1)^{\frac{n-1}{2}+1}\cdot1\cdot3\cdot \ldots \cdot n.$$ U slučaju
-greške pri unosu podataka ispisati \kckod{Greska!}. \napomena{Voditi
-  računa o efikasnosti rešenja.}\\
+greške pri unosu podataka ispisati odgovarajuću poruku. 
+\napomena{Voditi računa o efikasnosti rešenja i o
+  mogućnosti prekoračenja.} 
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1083,6 +1170,7 @@ greške pri unosu podataka ispisati \kckod{Greska!}. \napomena{Voditi
 #\izlaz{-9540}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1107,7 +1195,8 @@ greške pri unosu podataka ispisati \kckod{Greska!}. \napomena{Voditi
 Sa standardnog ulaza unose se realni brojevi $x$ i $a$ i ceo
 pozitivan broj $n$ veći od $0$.  Napisati program koji izračunava:
  $$((\ldots \underbrace{(((x+a)^2 + a)^2 + a)^2 + \ldots a)^2}_n.$$ U
-slučaju greške pri unosu podataka ispisati \kckod{Greska!}. \\
+slučaju greške pri unosu podataka ispisati odgovarajuću poruku. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1122,6 +1211,7 @@ slučaju greške pri unosu podataka ispisati \kckod{Greska!}. \\
 #\izlaz{101.000000}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1153,7 +1243,8 @@ slučaju greške pri unosu podataka ispisati \kckod{Greska!}. \\
 Sa standardnog ulaza unosi se ceo pozitivan broj $n$. Napisati program
 koji ispisuje brojeve od $1$ do $n$, zatim od $2$ do $n-1$, $3$ do
 $n-2$, itd. Ispis se završava kada nije moguće ispisati ni jedan
-broj. Za neispravan unos, program ispisuje \kckod{Greska!}.\\
+broj. Za neispravan unos, program ispisuje odgovarajuću  poruku.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1168,8 +1259,9 @@ broj. Za neispravan unos, program ispisuje \kckod{Greska!}.\\
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
-\begin{upotreba}{7}
+\begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
 #\izlaz{1 2 3 4 5 6 7 2 3 4 5 6 3 4 5 4}#
@@ -1192,7 +1284,10 @@ broj. Za neispravan unos, program ispisuje \kckod{Greska!}.\\
 \begin{Exercise}[label=p1.7_] 
 Sa standarnog ulaza učitava se ceo neoznačen broj $n$. Napisati
 program koji za uneto $n$ ispisuje ,,trougao'' sačinjen od
-,,koordinata'' svojih tačaka.\\
+,,koordinata'' svojih tačaka. 
+
+\komentar{Ovo treba preformulisati jer je bez test primera skroz nejasno. U test primerima negde ima blanko posle zareza, negde nema, i to treba ujednaciti.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1208,6 +1303,7 @@ program koji za uneto $n$ ispisuje ,,trougao'' sačinjen od
 #\izlaz{(1, 1)}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1238,8 +1334,9 @@ program koji za uneto $n$ ispisuje ,,trougao'' sačinjen od
 Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje sve
 brojeve od $1$ do $n$, zatim svaki drugi broj od $1$ do $n$, zatim
 svaki treći broj od $1$ do $n$ itd., završavajući sa svakim $n$-tim
-(tj. samo sa $1$). U slučaju greške pri unosu podataka ištampati
-\kckod{Greska!}.\\
+(tj. samo sa $1$). U slučaju greške pri unosu podataka odštampati
+ogovarajuću poruku.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1256,6 +1353,7 @@ svaki treći broj od $1$ do $n$ itd., završavajući sa svakim $n$-tim
 #\izlaz{1}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1284,7 +1382,8 @@ svaki treći broj od $1$ do $n$ itd., završavajući sa svakim $n$-tim
 
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje kvadrat
-stranice $n$ sastavljen od zvezdica:\\
+stranice $n$ sastavljen od zvezdica.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1303,7 +1402,8 @@ stranice $n$ sastavljen od zvezdica:\\
 
 \begin{Exercise}[label=p1.3_23]
  Napisati program koji za uneti ceo broj $n$ iscrtava rub kvadrata
- dimenzije $n$. \\
+ dimenzije $n$. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1331,9 +1431,10 @@ stranice $n$ sastavljen od zvezdica:\\
 
 
 \begin{Exercise}[label=p1.7_] 
-Sa standardnog ulaza unosi se neoznačcen broj $n$. Napisati program
+Sa standardnog ulaza unosi se neoznačen broj $n$. Napisati program
 koji za uneto $n$ iscrtava kvadrat dimenzije $n$ koji na glavnoj
-dijagonali ima zvezdice.\\
+dijagonali ima zvezdice.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1354,7 +1455,8 @@ dijagonali ima zvezdice.\\
 
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje obrnuti
-pravougli trougao čija kateta je dužine $n$ sastavljen od zvezdica.\\
+pravougli trougao sastavljen od zvezdica čija kateta je dužine $n$.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1372,7 +1474,8 @@ pravougli trougao čija kateta je dužine $n$ sastavljen od zvezdica.\\
 
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje pravougli
-trougao čija kateta je dužine $n$ sastavljen od zvezdica.\\
+trougao čija kateta je dužine $n$ sastavljen od zvezdica.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1391,7 +1494,8 @@ trougao čija kateta je dužine $n$ sastavljen od zvezdica.\\
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje trougao
 koji se dobija spajanjem dva pravougla trougla čija kateta je dužine
-$n$.\\
+$n$.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1412,7 +1516,8 @@ $n$.\\
 
 \begin{Exercise}[label=p1.3_24] 
  Napisati program koji za uneti ceo broj $n$ i karakter $c$ iscrtava
- rub jednakokrako pravouglog trougla čije su katete dužine $n$.\\
+ rub jednakokrakog pravouglog trougla čije su katete dužine $n$.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1445,8 +1550,11 @@ $n$.\\
 
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje pravougli
-trougao čija kateta je dužine $n$ sastavljen od zvezdica. Trougao je
-desno poravnat.\\
+trougao koji je sastavljen od zvezdica, čija kateta je dužine $n$ i koji je
+desno poravnat.
+
+\komentar{Tekst ne odgovara slici?}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1465,7 +1573,10 @@ desno poravnat.\\
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje trougao
 koji se dobija spajanjem dva pravougla trougla čija kateta je dužine
-$n$. Trougao je desno poravnat.\\
+$n$. Trougao je desno poravnat.
+
+\komentar{Izgleda da ne razumem sta znaci desno poravnat???}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1486,7 +1597,8 @@ $n$. Trougao je desno poravnat.\\
 
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, a potom ispisuje
-rub jednakostraničnog trougla čija stranica je dužine $n$.\\
+rub jednakostraničnog trougla čija stranica je dužine $n$.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1505,7 +1617,8 @@ rub jednakostraničnog trougla čija stranica je dužine $n$.\\
 \begin{Exercise}[label=p1.7_] 
 Napisati program koji učitava ceo broj $n$, i ispisuje sliku koja se
 dobija spajanjem dva jednakostranična trougla čija stranica je dužine
-$n$.\\
+$n$.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1526,7 +1639,8 @@ $n$.\\
 
 \begin{Exercise}[difficulty=1, label=p1.3_25]
  Napisati program koji za uneti ceo broj $n$ iscrtava \textit{krstiće}
- dimenzije $n$. \\
+ dimenzije $n$. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1555,7 +1669,8 @@ $n$.\\
 
 \begin{Exercise}[difficulty=1, label=p1.3_26] 
  Napisati program koji za uneti ceo broj $n$ iscrtava strelice
- dimenzije $n$. \\
+ dimenzije $n$. 
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1594,7 +1709,8 @@ dobija na sledeći način: u prvom redu je jedna zvezdica, u drugom redu
 su dve zvezdice razdvojene razmakom, treći red je sastavljen od
 zvezdica i iste je dužine kao i drugi red, četvrti red se sastoji od
 tri zvezdice razdvojene razmakom, a peti red je sastavljen od zvezdica
-i iste je dužine kao i četvrti red itd. Ukupna visina slike je $n$.\\
+i iste je dužine kao i četvrti red itd. Ukupna visina slike je $n$.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1618,7 +1734,8 @@ i iste je dužine kao i četvrti red itd. Ukupna visina slike je $n$.\\
 Sa standarnog ulaza unose se neozna\v ceni celi brojevi $m$ i
 $n$. Napisati program koji za učitane brojeve $m$ i $n$ ispisuje jedan
 do drugog $n$ kvadrata čija je svaka strana sastavljena od $m$
-zvezdica. Zvezdice su međusobno razdvoje prazninom. \\
+zvezdica. Zvezdice su međusobno razdvoje prazninom. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1649,7 +1766,8 @@ zvezdica. Zvezdice su međusobno razdvoje prazninom. \\
 \begin{Exercise}[difficulty=1, label=p1.7_] 
 Sa standarnog ulaza unosi se ceo neoznačen broj $n$. Napisati program
 koji štampa romb sastavljen od minusa u pravougaoniku sastavljenim od
-zvezdica. Pogledati sliku u test primerima.\\
+zvezdica. Pogledati sliku u test primerima.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1686,7 +1804,8 @@ zvezdica. Pogledati sliku u test primerima.\\
 Napisati program koji učitava ceo broj $n$ ($n \geq 2$). Napisati
 program koji na standardni izlaz ispisuje sliku kuće sa krovom (kuća
 je kocka stranice $n$, a krov jednakostranični trougao stranice
-$n$):\\
+$n$):
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
