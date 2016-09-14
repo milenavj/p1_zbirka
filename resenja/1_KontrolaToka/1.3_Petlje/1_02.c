@@ -1,21 +1,32 @@
-/*
-Napisati program koji poziva korisnika da unese pozitivan ceo broj n
-a potom ispisuje brojeve od 0 do n-1.
-*/
-
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 int main()
 {
-   int x;
+   /* Promenljivu x koristimo u dve svrhe. Prvo, ova promenljiva kontrolise koliko puta se petlja izvrsila.
+      Drugo, ovu promenljivu koristimo za ispis potrebnih vrednosti. */
+   int x; 
+   /* Promenljiva n se unosi i odredjuje koliko brojeva ispisujemo. */
    int n;
    
-   printf("Unesi pozitivan ceo broj:");
+   printf("Unesi pozitivan ceo broj: ");
    scanf("%d", &n);
-   x=0;
-   while (x<n)
+
+	 /* U slucaju neispravnih podataka ispisujemo odgovarajucu poruku
+      i izlazimo iz programa. */
+	 if (n < 0)
    {
+		 printf("Neispravan unos. Promenljiva mora biti pozitivna!\n");
+     exit(EXIT_FAILURE);
+	 }
+
+	 /* Ispis pocinjemo od 0, zato promenljivu x postavljamo na 0. */
+   x=0;
+   while (x<= n)
+   { 
+       /* Ispisujemo broj. */
        printf("%d\n", x);
+			 /* Uvecavamo promenljivu za jedan jer smo broj ispisali i sada zelimo da ispisemo sledeci broj. */
        x++; 
    }
    return 0;
