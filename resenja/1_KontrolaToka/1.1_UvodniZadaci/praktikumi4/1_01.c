@@ -1,19 +1,45 @@
-/* Napisati program koji omogucava korisniku da unese ceo broj, a zatim
-ispisuje njegov kvadrat i kub */
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
+  /* 
+     Svaka promenljiva u programu mora biti deklarisana na 
+     pocetku main funkcije. Deklaracija se sastoji iz naziva 
+     promenljive (u ovom slucaju n) ispred kog se navodi tip 
+     promenljive (u ovom slucaju celobrojni tip, int). Svaka 
+     deklaracija zavrsava se simbolom ";".   
+  */
+  
   int n; 
   
-  /* Ucitavamo broj */
+  /* 
+     Vrednost promenljive se ucitava pomocu funkcije scanf koja 
+     je, kao i funkcija printf, definisana u standardnoj biblioteci 
+     stdio.h. Argumenti funkcije scanf. koji se navode u zagradama 
+     ( i ) i razdvajaju zarezima, oznacavaju sledece:
+     "%d" - format za tip podatka koji ce biti ucitan 
+            (%d za int, svaki tip ima svoj format) 
+      &n  - adresa promenljive x (o adresama ce biti vise 
+            reci u narednim poglavljima).
+      
+     Ucitavanje se vrsi sa standardnog ulaza (obicno tastatura).
+   */
   printf("Unesite ceo broj: ");
-  scanf("%d", &n);
+  scanf("%d", &n);  
+                    
+                                             
   
-  /* Ispisujemo trazene vrednosti */
-  printf("Kvadrat: %d\n", n*n);
-  printf("Kub: %d\n", n*n*n);
+  /* 
+     Funkcija printf ispisuje tekst "Uneti broj: ", a nakon toga, 
+     umesto formata %d, ispisuje vrednost promenljive n. 
+  */
+  printf("Uneti broj: %d\n", n);
+  printf("Kvadrat: %d\n", n*n); /* Umesto formata %d ispisuje se 
+                                   vrednost izraza n*n. */
+  printf("Kub: %d\n", n*n*n);   /* Umesto formata %d ispisuje 
+                                   se vrednost izraza n*n*n. */
  
-  /* Zavrsavamo sa programom */
+  
   return 0;
 }

@@ -1,10 +1,3 @@
-/*
-   Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj
-   novcanica koje je potrebno izdvojiti da bi se proizvod platio. Na
-   raspolaganju su novcanice od 1000,100,50,10 i 1 dinar. Na primer,
-   za unetu cenu 5178, program na standardni izlaz treba da ispise:
-   5178=5*1000+ 1*100 +1*50 +2*10 +8*1   
-*/
 
 #include <stdio.h>
 
@@ -14,8 +7,27 @@ int main()
    printf("Unesi cenu:");
    scanf("%d", &x);
    
-   printf("%d=%d*1000+ ", x,x/1000);
+   /* 
+      Na primer, neka je uneta cena 8347 dinara. 
+      Vrednost x/1000 predstavlja broj novcanica 
+      od 1000 dinara pomocu kojih mozemo sakupiti
+      celokupnu sumu. 8347 celobrojno deljeno sa 
+      1000 (operacija / nad celim brojevima) iznosi 8.  
+   */
+   printf("%d=%d*1000+ ", x,x/1000); 
+   /*
+      Potrebno nam je 8 novcanica od
+      1000 dinara, a koliko nam je potrebno ostalih
+      novcanica? Za to moramo pristupiti preostaloj 
+      sumi. Jedan nacin je da nadjemo ostatak pri deljenju
+      unete vrednosti x (u primeru 8347) sa 1000 (operacija %). 
+      On iznosi 347. Ovu vrednost dodeljujemo promeljivoj x.
+   */
    x=x%1000;
+   /*
+      Nastavljamo postupak trazenjem broja novcanica 
+      od 100 dinara.  
+   */
    printf("%d*100 +", x/100);
    x=x%100;
    printf("%d*50 +",x/50);

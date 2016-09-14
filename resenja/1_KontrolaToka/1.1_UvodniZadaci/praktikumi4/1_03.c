@@ -1,10 +1,3 @@
-/* Napisati program koji za unete duzine stranica trougla, ispisuje njegov obim
-i povrsinu */
-
-/* Napomena: prilikom prevodjenja programa treba navesti opciju -lm 
- * na primer, gcc trougao.c -lm 
- */
-
 #include <stdio.h>
 #include <math.h>
 

@@ -1,22 +1,11 @@
-/*
-Napisati program koji poziva korisnika da unese dva cela broja sa standardnog ulaza,
-a zatim ispisuje:
-1) unete vrednosti
-2) njihov zbir
-3) njihovu razliku
-4) njihov proizvod
-5) ceo deo pri deljenju jednog broja drugim brojem
-6) ostatak pri deljenju jednog broja drugim brojem
-
-*/
 
 #include<stdio.h>
 
 int main()
 {
-   int x;
-   int y;
-   int rezultat;
+      
+   int x, y, rezultat; /* Promenljive istog tipa mogu se deklarisati jedna za drugom. */
+   
    
    printf("Unesi vrednost celobrojne promenljive x:");
    scanf("%d", &x); /* "%d" - specifikator tipa koji treba uneti (%d za int) 

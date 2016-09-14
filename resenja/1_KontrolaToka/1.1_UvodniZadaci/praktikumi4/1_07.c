@@ -1,27 +1,17 @@
-/* Napisati program koji prirodnom cetvorocifrenom broju koji se unosi sa
-standardnog ulaza: 
-
-a) izracunava proizvod cifara 
-b) izracunava razliku sume krajnjih i srednjih cifara
-c) izracunava sumu kvadrata cifara
-d) odredjuje broj koji se dobija ispisom cifara u obrnutom poretku
-e) odredjuje broj koji se dobija zamenom cifre jedinice i cifre stotine
-*/
-
 #include <stdio.h>
 
 int main(){
   
   int n;
   int j, d, s, h; 
-  int proizvod_cifara, razlika_cifara, suma_kvadrata, broj_obrnuto,broj_zamena; 
+  int proizvod_cifara, razlika_cifara, suma_kvadrata, broj_obrnuto, broj_zamena; 
   
   /* Ucitavamo vrednost sa ulaza */
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
   
-  /* Izdvajamo cifre broja i to redom: j -jedinice, d - desetice, s - stotine i
-h - hiljade */
+  /* Izdvajamo cifre broja i to redom: j -jedinice, 
+     d - desetice, s - stotine i h - hiljade */
   j=n%10;
   d=(n/10)%10;
   s=(n/100)%10;
@@ -44,8 +34,9 @@ h - hiljade */
   printf("Broj u obrnutom poretku: %d\n", broj_obrnuto);
   
   
-  /* Odredjujemo broj u kojem su cifra jedinica i cifra stotina zamenile mesta
-*/
+  /* Odredjujemo broj u kojem su cifra jedinica i 
+     cifra stotina zamenile mesta 
+  */
   broj_zamena=h*1000+j*100+d*10+s;
   printf("Broj sa zamenjenom cifrom jedinica i stotina: %d\n", broj_zamena);
   
