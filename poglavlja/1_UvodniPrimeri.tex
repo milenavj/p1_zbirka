@@ -12,7 +12,10 @@
 
 \begin{Exercise}[label=v1.1_01] 
 Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo svete!}.
-\komentar{Resenje se ne uklapa sa tekstom zadatka. Ono sto su altrenativni ispisi u resenju moze da ostane pod komentarima, ali da se postavi kao dva razlicita resenja, ali uvek resenje mora da se poklapa sa test primerom. U okviru prvog resenja potrebno je i kratko uputstvo kako da se prevede i pokrene program. Takodje, komentar uz include i uz int main i uz return - to posle naravno necemo komentarisati. *Jovana: Uradjeno*\\\\}
+\komentar{Milena: Dodati test primer. Voditi racuna da nakon teksta zadatka ide prazan red pa test primer, a ne oznaka za prazan red sa dve crte pa test primer! To je vazno zbog uvlacenja i poravnavanja test primera.}
+
+\komentar{Milena: TODO srediti resenje}
+
 \linkresenje{v1.1_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_01]
@@ -20,22 +23,8 @@ Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo svete!}.
 \end{Answer}
 
 \begin{Exercise}[label=p1_15]
-\komentar{Milena: Meni je ovaj zadatak potpuno nejasan, a kako nema resenje ne
-  umem da ga formulisem kako treba ?!?}  \komentar{Danijela: ideja u
-  zadatku je ispis specijalnih karaktera i brojeva. Naime, desava se
-  da kada radimo zvezdice, studenti pisu nesto ovako "char c = '*';
-  printf("\%c", c);" i slicno za znak + -, a nesto slicno pisu i kad
-  trazimo da ispisu 0. Iako se to prica na predavanjima i vezbama oni
-  pored brojnih informacija ne obrate paznju i 90\% njih pravi slicne
-  greske. Po meni, treba im na pocetku zadati zadatak tako da budu
-  prinudjeni da sami moraju da razmisle i urade ono sto se trazi (i
-  potom dati ispravno resenje). Cinjenica je da je ovo vise teorijski
-  zadatak, ali dok oni pocnu da uce teoriju (sto je prvi test) nama na
-  vezbama ova znanja uveliko trebaju.} 
-  
-\komentar{Milena: Ok, razumem za ove specijalne karaktere, ali mi nedostaje neki adekvatan tekst koji bi ovom zadatku dao smisao. Koji je smisao za ispis ovih konstatni? Ako nije problem, pokusaj da preformulises zadatak da nekako ima neki smisao, tj da bude potpun i bez test primera. Npr, napisati program koji na standardni izlaz ispisuje sve specijalne karaktere kao i brojeve od 0 do 9 (ili koje vec brojeve treba, mozda je dovoljan i samo jedan)... \\} 
 \komentar{*Jovana: Za ovaj zadatak nema resenja. To do: dodati (Jovana). *}
-
+\komentar{Milena: Andjelka je bila dala neki smislen predlog kako ovaj zadatak preformulisati da ima smisla.}
 Napisati program koji na standarni izlaz ispisuje sledeći tekst: \\
 \begin{miditest}
 \begin{upotreba}{1}
@@ -52,8 +41,12 @@ Napisati program koji na standarni izlaz ispisuje sledeći tekst: \\
 
 \section{Celi brojevi}
 
+\komentar{Milena: u resenjima komentare nikada ne pisati pored koda vec iznad koda. To je zbog poravnanja. Da bi nam ceo kod bio na isti nacin nazublje, pustacemo ga kroz indent sa odredenim parametrima. indent nekako cudno pravnava kod koji je tako sa strane i ne bude lepo. Zato je bolje da to u startu nemamo. Postojala je vec kartica na ovu temu na trell-u, a dodala sam jos jednu. Slobodno obrisi ovaj komentar kada ga procitas :-)}
+
 \begin{Exercise}[label=p1.1_01] 
-Napisati program za uneti ceo broj ispisuje taj broj, njegov kvadrat i njegov kub. \\
+Napisati program za uneti ceo broj ispisuje taj broj, njegov kvadrat i njegov kub. 
+\komentar{Nije dobro povezano sa resenjem, pojavljuju se znakovi pitanja. Dodati bar jos jedan test primer.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -70,18 +63,12 @@ Napisati program za uneti ceo broj ispisuje taj broj, njegov kvadrat i njegov ku
 
 
 \begin{Exercise}[label=v1.1_02] 
-Napisati program koji za uneta dva cela broja ispisuje:
-\begin{enumerate}
-\item unete vrednosti
-\item njihov zbir \komentar{Ovo bi mogao da bude zadatak sa prodavnicom i kupovinom dva artikla, tako da bih takav neki zadatak dodala.}
-\item njihovu razliku \komentar{Ovo je u sustini isti zadatak kao zadatak sa prodavnicom i kusurom, samo je taj malko komplikovaniji. Ostavila bih oba, ali bih ovaj drugi priblizila po redosledu ovom zadatku.}
-\item njihov proizvod \komentar{Ovo je u sustini isti zadatak kao zadatak sa jabukama, ali bih ovaj drugi priblizila po redosledu ovom zadatku.}
-%\item ceo deo pri deljenju prvog broja drugim brojem
-%\item ostatak pri deljenju prvog broja drugim brojem
-\end{enumerate}
-\komentar{Ovde je problem sto oni jos nisu ucili if, a deljenje je zbog toga nezgodno. Ja bih izbacila poslednje dve stavke i uradila samo a,b,c i d *ODGOVOR: Mislim da je korisno da vide sve operatore za rad nad celim brojevima uz pretpostavku da y nije 0. Na vezbama onda cak mogu i probati sta se desava ukoliko se ucita nula i tako nauciti kako da prepoznaju taj slucaj. Prilozeno resenje je bez deljenja.*}\\
-\komentar{U resenju prokomentarisati deklaracije int x i int y: Deklariše se promenljiva celobrojnog tipa u kojoj će biti čuvana vrednost prvog broja koji se unosi sa ulaza ili tako nekako, pa slično za y i rezultat. Na ovom mestu bih stavila punu recenicu koja pominje reci i deklaracija i celobrojni tip i slicno, a u ostalim resenjima samo komentare sta promenljiva predstavlja, ukoliko joj ime nije dovoljno deskriptivno. Na mestu gde je prvi put deklaracija float ili double promenljive, tu bih isto pomenula tip, da pomenemo jednostruku i dvostruku tacnost. *ODGOVOR:* Ovaj zadatak nije prvi zadatak koji koristi promenljive. Ovakvi komentari su dati u prvom zadatku gde se oni koriste.\\}
-\komentar{Jovana:Ovaj zadatak je sporan i zato resenja nisam popravljala. Preglomazan je a nije zanimljiv. Treba da ilustruje operacije nad celim brojevima od kojih su neke prikazane u prethodnom zadatku, neke ce biti u zanimljivijim zadacima sa prodavnicom a za one najosetljivije operacije celobrojno deljenje i moduo imamo problem zbog ispitivanja korektnosti. Zato bih ovaj zadatak ili izbacila ili bih uz pretpostavku da y nije nula ostavila upravo moduo i celobrojno deljenje. Oni prvi put vide ove operacije u zadatku sa najmanjim brojem novcanica sto je komplikovan zadatak za prvi susret.\\}
+Napisati program koji za uneta dva cela broja ispisuje napre unete vrednosti, a zatim i njihov zbir, razliku, proizvod, ceo deo pri deljenju prvog broja drugim brojem 
+i ostatak pri deljenju prvog broja drugim brojem. 
+\napomena{Pretpostaviti da je unos korektan, tj.~da druga uneta vrednost nije 0.}
+
+\komentar{Podesiti resenje. Izbaciti suvisne komentare iz resenja.}
+
 \linkresenje{v1.1_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_02]
@@ -89,9 +76,24 @@ Napisati program koji za uneta dva cela broja ispisuje:
 \end{Answer}
 
 \subsection{Prodavnica}
+
+\begin{Exercise}[label=p1_005]
+Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate cene dva kupljena artikla. 
+\napomena{Možemo pretpostaviti da su cene artikala pozitivni celi brojevi.}
+
+\komentar{Milena: dodati test primere.}
+
+\linkresenje{p1_005}
+\end{Exercise}
+\begin{Answer}[ref=p1_005]
+
+Rešenje ovog zadatka svodi se na rešenje zadatka \ref{v1.1_02}, na deo koji se odnosi na izračunavanje zbira dva broja. Zbog pretpostavke da su cene artikala pozitivni celi brojevi, tip promenljivih za artikle treba da bude \kckod{unsigned int}.
+\end{Answer}
+
 \begin{Exercise}[label=p1_05]
 Napisati program koji za unetu količinu jabuka u kilogramima i unetu
-cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. Možemo pretpostaviti da je cena jabuka pozitivan ceo broj. \\
+cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. Možemo pretpostaviti da je cena jabuka pozitivan ceo broj. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -103,11 +105,13 @@ cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. Možemo pretpo
 \linkresenje{p1_05}
 \end{Exercise}
 \begin{Answer}[ref=p1_05]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
+
+Rešenje ovog zadatka svodi se na rešenje zadatka \ref{v1.1_02}, na deo koji se odnosi na izračunavanje proizvoda dva broja. Zbog pretpostavke da su cene artikala pozitivni celi brojevi, tip promenljivih za artikle treba da bude \kckod{unsigned int}.
 \end{Answer}
 
 \begin{Exercise}[label=p1.1_06] 
-Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da ispiše vrednost kusura. Možemo pretpostaviti da su cene svih artikala pozitivni celi brojevi.\\
+Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da ispiše vrednost kusura. \napomena{Možemo pretpostaviti da su cene svih artikala pozitivni celi brojevi, kao i da su unete vrednosti ispravne, tj.~da se može vratiti kusur.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -115,6 +119,9 @@ Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kup
 #\izlaz{Kusur je 236 dinara.}#
 \end{upotreba}
 \end{miditest}
+
+\komentar{Milena: Dodati svuda gde moze da budu bar dva test primera. U resenju bi trebalo koristiti tip unsigned zbog pretpostavke da je u pitanju pozitivan broj.}
+
 \linkresenje{p1.1_06}
 \end{Exercise}
 \begin{Answer}[ref=p1.1_06]
@@ -123,7 +130,8 @@ Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kup
 
 
 \begin{Exercise}[label=v1.1_08] 
-Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 1000, 100, 50, 10 i 1 dinar. Možemo pretpostaviti da je cena proizvoda pozitivan ceo broj.\\
+Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 1000, 100, 50, 10 i 1 dinar. \napomena{Možemo pretpostaviti da je cena proizvoda pozitivan ceo broj.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -148,7 +156,8 @@ Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica 
 
 \subsection{Naredba dodele}
 \begin{Exercise}[label=v1.1_10] 
-Date su dve celobrojne promenljive. Napisati program koji razmenjuje njihove vrednosti.\\
+Date su dve celobrojne promenljive. Napisati program koji razmenjuje njihove vrednosti.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -158,8 +167,6 @@ Date su dve celobrojne promenljive. Napisati program koji razmenjuje njihove vre
 \end{upotreba}
 \end{miditest}
 
-\komentar{Jovana: postoje identicna dva zadatka sa razmenom vrednosti, jedan sa celobrojnim i jedan sa realnim promenljivim. Da li da ostanu oba?\\
-} 
 \linkresenje{v1.1_10}
 \end{Exercise}
 \begin{Answer}[ref=v1.1_10]
@@ -401,16 +408,6 @@ Napisati program koji:
 \end{comment}
 
 
-\begin{Exercise}[label=p1_12]
-Date su dve realne promenljive. Napisati program koji razmenjuje njihove vrednosti. \\
-\textcolor{purple}{Imamo isti zadatak sa razmenom celobrojnih vrednosti. Mislim da je bolje da nam ostane taj da bismo ovaj koncept ilustrovali sto ranije}
-\linkresenje{p1_12}
-\end{Exercise}
-\begin{Answer}[ref=p1_12]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
-\end{Answer}
-
-
 \begin{Exercise}[label=p1.10_]
 Napisati program koji za unete realne vrednosti $a_{11}$, $a_{12}$, $a_{21}$, $a_{22}$  ispisuje vrednost determinante matrice:
 \begin{verbatim}
@@ -418,9 +415,11 @@ Napisati program koji za unete realne vrednosti $a_{11}$, $a_{12}$, $a_{21}$, $a
   a21 a22
 \end{verbatim}
 Pri ispisu vrednost zaokružiti na $4$ decimale.
-\komentar{Umesto verbatim staviti odgovarajući format za prikaz matrice.}
-\komentar{A koji je to prikaz?}
- \\
+
+\komentar{Milena: Umesto verbatim staviti odgovarajući format za prikaz matrice.}
+\komentar{Jovana: A koji je to prikaz?}
+\komentar{Milena: Pokusaj google: how to write matrix in latex. Bilo koja varijanta koja ti odgovara a ima onaj standardni matematicki izgled je ok. }
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
