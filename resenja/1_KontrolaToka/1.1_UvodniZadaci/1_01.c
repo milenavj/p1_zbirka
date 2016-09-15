@@ -1,7 +1,7 @@
 /*
 
-   Navedeni program sastoji se iz definicije jedne funkcije 
-   i ona se zove main. Program moze da sadrzi vise funkcija, 
+   Navedeni program sastoji definise funkciju koja se zove main. 
+   Program moze da sadrzi vise funkcija, 
    ali obavezno mora da sadrzi funkciju koja se zove main i 
    izvrsavanje programa uvek pocinje od te funkcije. Pored naziva, 
    zapis svake funkcije cine i povratna vrednost funkcije (u ovom 
@@ -13,9 +13,9 @@
    Unutar tela funkcije navode se naredbe. Unutar navedenog programa 
    postoji jedna naredba koja predstavlja poziv funkcije printf. 
    Funkcija printf sluzi za ispis teksta na standardni izlaz (obicno 
-   ekran). Definicija ove funkcije data je u takozvanoj standardnoj 
-   biblioteci funkcija stdio.h. Da bismo mogli da koristimo funkcije 
-   ove biblioteke, pre main funkcije navodimo #include<stdio.h>.
+   ekran). Deklaracija ove funkcije data je u zaglavlju stdio.h
+   koje je potrebno ukljuciti direktivom #include na pocetku
+   samog programa.
    
    Da bismo pokrenuli program, prvo ga moramo prevesti u izvrsnu 
    datoteku. Na primer, ako je navedeni program sacuvan kao zdravo.c, 

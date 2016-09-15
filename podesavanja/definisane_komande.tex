@@ -13,12 +13,20 @@
   \hyphenchar\font=`\-% allowing hyphenation
 }
 
+\definecolor{andjelka}{rgb}{0.57, 0.36, 0.51}
+\definecolor{jovana}{rgb}{0.87, 0.36, 0.51}
+\definecolor{milena}{rgb}{0.0, 0.29, 0.29}
+\definecolor{danijela}{rgb}{0.6, 0.0, 0.0}
 
 \newcommand\estrana{\ifelektronskaverzija \newpage \fi}
 \newcommand\skrati[1]{\ifpdf \else \vspace*{-#1mm} \fi}
 \newcommand\kckod[1]{\texttt{\justify #1}}        % kratak c kod
 \newcommand\argf[1]{\texttt{#1}}         % argument funkcije
 \newcommand\komentar[1]{\textcolor{red}{#1}}         % komentar
+\newcommand\komentarM[1]{\textcolor{red}{Milena: } \textcolor{milena}{#1}\\}         % komentar
+\newcommand\komentarJ[1]{\textcolor{red}{Jovana: } \textcolor{jovana}{#1}\\}         % komentar
+\newcommand\komentarD[1]{\textcolor{red}{Danijela: } \textcolor{danijela}{#1}\\}         % komentar
+\newcommand\komentarA[1]{\textcolor{red}{Andjelka: } \textcolor{andjelka}{#1}\\}         % komentar
 
 \numberwithin{Answer}{chapter}
 \numberwithin{Exercise}{chapter}
