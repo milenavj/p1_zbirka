@@ -14,53 +14,76 @@ Kombinacija --- dve tehnike od prethodne tri (npr filter-reduce: zbir svih parni
 Sustinski, studenti treba da usvoje najpre ove tri tehnike, pa onda da idu ne njihove kombinacije, i to najpre na kombinacije dve od tri, pa na kraju na zadatke koje kombinuju sve to. Ove tehnike nisu vezane za nizove, mogu se primeniti i na prirodne brojeve posmatrane kao niz brojeva ili na prirodni broj posmatran kao niz cifara... \\
 Danijela:: ok neka bude redosled koji si predlo\v zila}
 
-\komentar{TODO Treba smisliti odgovarajuci redosled. Mislim da ce to biti lakse kada budu svi 
-test primeri i resenja. \\
-Danijela: Onda menjam redosled kad budem sredjivala re\v senja i test primere.}
-
-\komentar{TODO Ima zadataka koji se posle ponavljaju u funkcijama. Resenja mozda ne bih duplirala svaki put vec bih negde dala resenje ovde, negde u funkcijama, a ukoliko nisu data oba, onda bih dala odgovarajuci link u resenju da se pogleda resenje tog drugog zadatka. Takodje, voditi racuna da su formulacije u takvim zadacima slicne, mozda cak i test primeri da se poklapaju? \\
-Danijela: Ovo je osetljivo, dogovoriti se sa Jovanom kakko uskladiti takve zadatke...}
-
 \begin{Exercise}[label=v1.3_01] 
 Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo
-  da programiramo}.  
+  da programiramo}.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+\end{upotreba}
+\end{miditest}
   \linkresenje{v1.3_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_01]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_21.c}
+\end{Answer}
+
+\begin{Exercise}[label=ptr.3_02] 
+Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
+\kckod{Mi volimo da programiramo}. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{6}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+#\izlaz{Mi volimo da programiramo.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo pozitivan broj}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{ptr.3_02}
+\end{Exercise}
+\begin{Answer}[ref=ptr.3_02]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_01.c}
 \end{Answer}
 
+
 \begin{Exercise}[label=v1.3_02] 
 Napisati program koji učitava pozitivan ceo broj $n$
-a potom ispisuje sve cele brojeve od $0$ do $n-1$.
+a potom ispisuje sve cele brojeve od $0$ do $n$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo pozitivan broj:}\ulaz{4}#
+#\izlaz{0 1 2 3 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo pozitivan broj:}\ulaz{-10}#
+#\izlaz{Neispravan unos. Promenljiva mora biti pozitivna!}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.3_02}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_02]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_02.c}
 \end{Answer}
 
-
-\begin{Exercise}[label=v1.3_10] 
-\komentar{Nisam sigurnada odmah treba da krenemo sa sve tri petlje. Mozda je dovoljno da prvih par zadataka koriste while?}
-Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
-\kckod{Mi volimo da programiramo}.
-\begin{enumerate}
-\item Koristiti \kckod{while} petlju.
-\item Koristiti \kckod{for} petlju.
-\item Koristiti \kckod{fo-while} petlju.
- \end{enumerate}
-\komentar{Ne svidja mi se resenje jer je razlicitio za ove tri varijante za n 
-manje od nule a trebalo bi da 
-isti test primeri odgovaraju razlicitim resenjima. Zato je potrebno resenje podesiti 
-tako da je stampanje uvek isto, a u komentarima objasniti zasto su i gde i kakve izmene potrebne.
-Predlazem da to budu tri programa za svaki od delova a, b i c \\
-Danijela: ok, kada budem sredjivala resenje, usvojicu tvoj komentar}
-
-\linkresenje{v1.3_10}
-\end{Exercise}
-\begin{Answer}[ref=v1.3_10]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_10.c}
-\end{Answer}
 
 \begin{Exercise}[label=v1.3_11] 
 Napisati program koji učitava dva cela broja $n$ i $m$ ispisuje sve
@@ -70,62 +93,26 @@ cele brojeve iz intervala $[n,m]$.
 \item Koristiti \kckod{for} petlju.
 \item Koristiti \kckod{fo-while} petlju.
  \end{enumerate}
-\komentar{Isti komentar kao i malopre, moraju sva tri resenja da budu ispravna.}
-\linkresenje{v1.3_11}
-\end{Exercise}
-\begin{Answer}[ref=v1.3_11]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_11.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.7_] 
-Napisati program koji učitava dva realna broja dvostruke tačnosti, $a$
-i $b$, za koje važi $a<b$. Napisati program koji ispisuje vrednost
-funkcije $cos(x)$ u 10 ravnomerno razmaknutih tačaka intervala $[a,
-  b]$ Pri ispisu vrednosti se zaokružuju na četiri decimale. Za neispravan
-unos, program ispisuje odgovarajuću poruku.
-
-\komentar{Uskladiti test primer sa tekstom zadatka. Ovakav isti
-  zadatak ali sa sinusom imamo u delu sa funkcijama, ne znam da li je
-  to na neki nacin redudantno, tj da li je na oba mesta potrebno dati
-  resenje. Ukoliko se odlucimo da jeste, onda treba voditi racunada
-  resenja budu sustinski ista i da budu na slican nacin
-  iskomentarisana tako da se jasno primeti da su isti koncepti u
-  pitanju.}
-
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite brojeve a i b:}\ulaz{ 1 10}#
-#\izlaz{0.5403   -0.4161   -0.9900   -0.6536    0.2837    0.9602    0.7539   -0.1455   -0.9111   -0.8391}#
+#\izlaz{Unesite dva cela broja:}\ulaz{-2 4}#
+#\izlaz{-2 -1 0 1 2 3 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite brojeve a i b:}\ulaz{0 28.274}#
-#\izlaz{1.0000  -1.0000  1.0000  -1.0000  1.0000  -1.0000  1.0000  -1.0000  1.0000  -1.0000}#
+#\izlaz{Unesite dva cela broja:}\ulaz{10 6}#
+#\izlaz{Neispravan unos. Nisu dobro zadate granice intervala!}#
 \end{upotreba}
 \end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite brojeve a i b:}\ulaz{ 1 -3}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite brojeve a i b:}\ulaz{0 1}#
-#\izlaz{1.0000    0.9938    0.9754    0.9450    0.9028    0.8496    0.7859    0.7125    0.6303    0.5403}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
+\linkresenje{v1.3_11}
 \end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\begin{Answer}[ref=v1.3_11]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_11a.c}
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_11b.c}
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_11c.c}
 \end{Answer}
 
 
@@ -134,10 +121,25 @@ unos, program ispisuje odgovarajuću poruku.
 Fibonačijev niz počinje ciframa $1$ i $1$, a svaki član se dobija zbirom
 prethodna dva. Napisati program koji učitava ceo neoznačen broj $n$ i
 određuje i na standardni izlaz ispisuje $n$-ti član Fibonačijevog niza. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{10}#
+#\izlaz{Trazeni broj je: 55}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{-100}#
+#\izlaz{Neispravan unos. Pozicija u Fibonacijevom}#
+#\izlaz{nizu mora biti pozitivan broj koji nije 0!}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_fib.c}
 \end{Answer}
 
 
@@ -150,8 +152,23 @@ a_{n+1} = \left\{
 \frac{3\cdot a_n + 1}{2} & \text{ako je } a_n \text{ neparno}\\
 \end{array} \right.
 \end{equation*}
-Napisati program koji za uneti početni član niza $a_0$ (ceo broj)
-štampa niz brojeva sve do onog člana niza koji je jednak $1$.
+Napisati program koji za uneti početni član niza $a_0$ (ceo pozitivan
+broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{56}#
+#\izlaz{56 28 14 7 11 17 26 13 20 10}#
+#\izlaz{5 8 4 2 1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{-48}#
+#\izlaz{Nekorektan unos. Broj mora biti pozitivan.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.3_09}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_09]

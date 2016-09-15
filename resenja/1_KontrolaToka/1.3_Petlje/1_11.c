@@ -1,9 +1,3 @@
-/*
-   Napisati program koji za uneta dva cela broja n i m ispisuje sve cele brojeve
-   iz intervala [n,m] koriscenjem while, for i do while petlje. Obratiti paznju
-   na rezultat kada je n>m. 
-*/
-
 #include <stdio.h>
 
 int main()
