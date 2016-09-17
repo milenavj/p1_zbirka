@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -17,7 +16,7 @@ int main()
 	 if (n < 0)
    {
 		 printf("Neispravan unos. Promenljiva mora biti pozitivna!\n");
-     exit(EXIT_FAILURE);
+     return -1;
 	 }
 
 	 /* Ispis pocinjemo od 0, zato promenljivu x postavljamo na 0. */

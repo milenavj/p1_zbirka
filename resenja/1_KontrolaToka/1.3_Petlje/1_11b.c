@@ -1,7 +1,6 @@
 /* Resenje pod b). */
 
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -17,7 +16,7 @@ int main()
 	 if (m < n)
    {
 		 printf("Neispravan unos. Nisu dobro zadate granice intervala!\n");
-     exit(EXIT_FAILURE);
+     return -1;
    }
    
   

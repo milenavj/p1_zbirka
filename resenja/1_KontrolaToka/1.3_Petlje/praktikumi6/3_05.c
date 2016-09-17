@@ -1,6 +1,3 @@
-/* Napisati program koji unetom broju uklanja nule sa desne strane. Novodobijeni
-broj ispisati na standardni izlaz. */
-
 #include <stdio.h>
 
 int main(){

@@ -1,31 +1,31 @@
-/* Sa standardnog ulaza unosi se ceo neoznacen broj. Napisati program koji
-proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu ili ne. */
-
 #include <stdio.h>
 
 int main(){
     int n, cifra;
     int indikator=0;
 
-    /* Ucitavamo broj */
+    /* Ucitavamo broj. */
     printf("Unesite broj: ");
     scanf("%d", &n);
     
-    /* Sve dok imamo cifara u zapisu broja */
+    /* Sve dok imamo cifara u zapisu broja. */
     while(n>0){
  
-      /* Izdvajamo posledjnju cifru broja */
+      /* Izdvajamo posledjnju cifru broja. */
       cifra=n%10;
       
       /* Proveravamo da li je bas ona jednaka broju 5 */
       if(cifra==5){
-        /* Ako jeste postavljamo indikator na vrednost 1 tako da znamo da smo 
-         * pronasli peticu i prekidamo sa izvrsavanjem petlje */
+        /* Ako jeste postavljamo indikator na vrednost 1 tako da znamo
+         * da smo pronasli peticu i prekidamo sa izvrsavanjem petlje. 
+         */
         indikator=1;
         break;
       }
-      /* Ako izvdvojena cifra nije jednaka broju 5, broj delimo sa 10 kako bi
-         mogli da izdvojimo i preostale cifre broja na isti nacin */
+      /* Ako izvdvojena cifra nije jednaka broju 5, broj delimo sa 10 
+       * kako bi mogli da izdvojimo i preostale cifre broja na isti 
+       * nacin. 
+       */
       n=n/10;
     }
     

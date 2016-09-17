@@ -14,7 +14,7 @@ Kombinacija --- dve tehnike od prethodne tri (npr filter-reduce: zbir svih parni
 Sustinski, studenti treba da usvoje najpre ove tri tehnike, pa onda da idu ne njihove kombinacije, i to najpre na kombinacije dve od tri, pa na kraju na zadatke koje kombinuju sve to. Ove tehnike nisu vezane za nizove, mogu se primeniti i na prirodne brojeve posmatrane kao niz brojeva ili na prirodni broj posmatran kao niz cifara... \\
 Danijela:: ok neka bude redosled koji si predlo\v zila}
 
-\begin{Exercise}[label=v1.3_01] 
+\begin{Exercise}[label=ptr.3_01] 
 Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo
   da programiramo}.  \\
 \begin{miditest}
@@ -27,9 +27,9 @@ Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo
 #\izlaz{Mi volimo da programiramo.}#
 \end{upotreba}
 \end{miditest}
-  \linkresenje{v1.3_01}
+  \linkresenje{ptr.3_01}
 \end{Exercise}
-\begin{Answer}[ref=v1.3_01]
+\begin{Answer}[ref=ptr.3_01]
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1_21.c}
 \end{Answer}
 
@@ -176,18 +176,19 @@ broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. \\
 \end{Answer}
 
 
-\begin{Exercise}[difficulty=1, label=p1.7_] 
+\begin{Exercise}[difficulty=1, label=p1.papir] 
 Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
-  $1:\sqrt{2}$. Papir $A_1$ dobija se podelom papira $A_0$ po dužoj
-  ivici. Papir $A_2$ dobija se podelom $A_1$ papira po dužoj ivici
-  itd. Napisati program koji za uneti neoznačen broj $k$ ispisuje
-  dimenzije papira $A_k$ u milimetrima. 
+$1:\sqrt{2}$. Papir $A_1$ dobija se podelom papira $A_0$ po dužoj
+ivici. Papir $A_2$ dobija se podelom $A_1$ papira po dužoj ivici
+itd. Dužine papira su celi brojevi izraženi u milimetrima. Napisati
+program koji za uneti neoznačen broj $k$ ispisuje dimenzije papira
+$A_k$ u milimetrima. \\
   
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{297 210}#
+#\izlaz{210 297}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -197,7 +198,6 @@ Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
 #\izlaz{297 420}#
 \end{upotreba}
 \end{miditest}
-
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -212,10 +212,10 @@ Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
 #\izlaz{37 52}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.7_}
+\linkresenje{p1.papir}
 \end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\begin{Answer}[ref=p1.papir]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/papir.c}
 \end{Answer}
 
 
@@ -227,7 +227,21 @@ Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
 
 \begin{Exercise}[label=v1.3_06] 
 Napisati program koji učitava ceo broj i ispisuje njegove cifre u
-obrnutom poretku.
+obrnutom poretku. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{6789}#
+#\izlaz{9 8 7 6}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{-892345}#
+#\izlaz{5 4 3 2 9 8}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.3_06}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_06]
@@ -237,9 +251,24 @@ obrnutom poretku.
 
 \begin{Exercise}[label=v1.3_14] 
 Pravi delioci celog broja su svi delioci sem jedinice i samog tog
-broja.  Napisati program koji učitava ceo pozitivan broj $n$ i
+broja.  Napisati program koji učitava ceo pozitivan broj $x$ i
 ispisuje sve prave delioce unetog broja. U slučaju greške pri unosu
-podataka ispisati odgovarajuću poruku.  \\
+podataka ispisati odgovarajuću poruku.  Nije bitan redosled po kom se
+ispisuju delioci.\\ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj veci od 0:}\ulaz{100}#
+#\izlaz{2 4 5 10 20 25 50}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}\ulaz{-6}#
+#\izlaz{neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.3_14}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_14]
@@ -249,8 +278,8 @@ podataka ispisati odgovarajuću poruku.  \\
 
 \begin{Exercise}[label=p1.3_04] 
  Sa standardnog ulaza unosi se ceo neoznačen broj. Napisati program
- koji proverava i ispisuje da li se cifra 5 nalazi u njegovom zapisu.
- 
+ koji proverava i ispisuje da li se cifra 5 nalazi u njegovom
+ zapisu. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -272,13 +301,35 @@ podataka ispisati odgovarajuću poruku.  \\
 \end{Answer}
 
 
-\begin{Exercise}[label=p1.7_] 
+\begin{Exercise}[label=p1.7_deljivsum] 
 Sa standarnog ulaza unosi se ceo broj. Napisati program koji na
 standardni izlaz ispisuje odgovor da li je uneti prirodan broj deljiv
-sumom svojih cifara.\\ \linkresenje{p1.7_}
+sumom svojih cifara.\\ 
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{12}#
+#\izlaz{Deljiv je sumom svojih cifara.}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{2564}#
+#\izlaz{Nije deljiv sumom svojih cifara.}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-4}#
+#\izlaz{Neispravan ulaz.}#
+\end{upotreba}
+\end{minitest}
+\linkresenje{p1.7_deljivsum}
 \end{Exercise}
-\begin{Answer}[ref=p1.7_]
-%\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
+\begin{Answer}[ref=p1.7_deljivsum]
+\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_03_deljivsumom.c}
 \end{Answer}
 
 
@@ -287,28 +338,27 @@ sumom svojih cifara.\\ \linkresenje{p1.7_}
  sa desne strane unetog broja. Novodobijeni broj ispisati na
  standardni izlaz. 
  
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{12000}#
 #\izlaz{12}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{856}#
 #\izlaz{856}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{140}#
 #\izlaz{14}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p1.3_05}
 \end{Exercise}
 \begin{Answer}[ref=p1.3_05]
@@ -321,28 +371,27 @@ Napisati program koji učitava neoznačeni ceo broj i transformiše ga
 tako što svaku parnu cifru u zapisu broja uveća za 1. Novodobijeni
 broj ispisati na standarni izlaz.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{2417}#
 #\izlaz{3517}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{138}#
 #\izlaz{139}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{59}#
 #\izlaz{59}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p1.3_06}
 \end{Exercise}
 \begin{Answer}[ref=p1.3_06]
@@ -355,28 +404,27 @@ broj ispisati na standarni izlaz.
  koji formira i ispisuje broj koji se dobija izbacivanjem svake druge
  cifre polaznog broja, počevši od krajnje desne cifre.
  
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{21854}#
 #\izlaz{284}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{18}#
 #\izlaz{8}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{1}#
 #\izlaz{1}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p1.3_07}
 \end{Exercise}
 \begin{Answer}[ref=p1.3_07]
@@ -388,28 +436,27 @@ Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
 koji formira i ispisuje broj koji se dobija izbacivanjem cifara koje
 su jednake zbiru svojih suseda. 
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{28631}#
 #\izlaz{2631}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{440}#
 #\izlaz{40}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{242}#
 #\izlaz{22}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p1.3_14}
 \end{Exercise}
 \begin{Answer}[ref=p1.3_14]
@@ -421,28 +468,27 @@ Broj je \textit{palindrom} ukoliko se isto čita i sa leve i sa desne
 strane. Napisati program koji učitava ceo neoznačen broj i proverava
 da li je učitani broj palindrom. 
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{25452}#
 #\izlaz{Broj je palindrom!}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{895}#
 #\izlaz{Broj nije palindrom!}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{5}#
 #\izlaz{Broj je palindrom!}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p1.3_15}
 \end{Exercise}
 \begin{Answer}[ref=p1.3_15]
@@ -459,7 +505,24 @@ da li je učitani broj palindrom.
 \begin{Exercise}[label=v1.3_04] 
 Napisati program koji učitava pozitivan ceo broj $n$, a zatim učitava
 $n$ celih brojeva i na standarni izlaz ispisuje sumu pozitivnih i sumu
-negativnih unetih brojeva.  
+negativnih unetih brojeva. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{7}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{8 -50 45 2007 -67 -123 14}#
+#\izlaz{Suma pozitivnih: 2074}#
+#\izlaz{Suma negativnih: -240}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-6}#
+#\izlaz{Neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.3_04}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_04]
@@ -483,15 +546,6 @@ i negativni.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}\ulaz{-1 1 0 3}#
-#\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
 #\izlaz{Unesite n brojeva:}\ulaz{5 8 13 17}#
 #\izlaz{0}#
 \end{upotreba}
@@ -506,7 +560,22 @@ i negativni.
 \begin{Exercise}[label=v1.3_05] 
 Napisati program koji učitava cele cele brojeve sve dok se ne unese
 nula. Nakon toga ispisati proizvod onih unetih brojeva koji su
-pozitivni.  
+pozitivni.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{-87 12 -108 -13 56 0}#
+#\izlaz{Proizvod pozitivnih unetih brojeva je 3360.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{0}#
+#\izlaz{Nisu uneseni brojevi.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.3_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.3_05]

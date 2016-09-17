@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
 
 int main()
 {
@@ -23,7 +22,7 @@ int main()
 	if (pozicija < 1)
   {
 		printf("Neispravan unos. Pozicija u Fibonacijevom nizu mora biti pozitivan broj koji nije 0!\n");
-	  exit(EXIT_FAILURE);
+	  return -1;
   }
 
 	while(i < pozicija)

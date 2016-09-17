@@ -1,6 +1,3 @@
-/* Sa standardnog ulaza unosi se neoznacen ceo broj. Napisati program koji formira i ispisuje broj koji se dobija
-izbacivanjem cifara koje su jednake zbiru svojih suseda. Cifre se posmatraju sa desna na levo. */
-
 #include <stdio.h>
 
 int main(){
@@ -8,48 +5,58 @@ int main(){
 	int stepen;
 	int cifra_levo, cifra_sredina, cifra_desno;
 	
-	/* Ucitavamo broj sa ulaza */
+	/* Ucitavanje broja. */
 	printf("Unesite broj: ");
 	scanf("%u", &n);
 	
 	
-	/* Stepen broja 10 sa kojim cemo mnoziti cifre izdvojenog broja */	
+	/* Stepen broja 10 sa kojim se mnoze cifre izdvojenog broja. */	
 	stepen=1;
 	
-	/* Nova vrednost broja */
+	/* Nova vrednost broja. */
 	novo_n=0;
 
-	/* Sve dok u zapisu broja imamo barem tri cifre  */
+	/* Provera da li u zapisu broja postoje barem tri cifre.  */
 	while(n>99){
-		/* Izdvajamo srednju cifru, cifru desno od nje i cifru levo od nje: 
-		npr. za trojku 583 8 je srednja cifra, 3 je cifra desno, a 5 cifra levo */
+		/* Izdvaja se srednja cifra, cifra desno od nje i cifra 
+		 * levo od nje: npr. za trojku 583 8 je srednja cifra, 
+		 * 3 je cifra desno, a 5 cifra levo. 
+		 */
 		cifra_desno=n%10;
 		cifra_sredina=(n/10)%10;
 		cifra_levo=(n/100)%10;
 		
-		/* U novi broj smestamo desnu cifru */
+		/* U novi broj se smesta desna cifra. */
 		novo_n+=cifra_desno*stepen;
 		
-		/* Azuriramo vrednost stepena */
+		/* Azurira se vrednost stepena. */
 		stepen=stepen*10;
 		
-		/* Ako je srednja cifra jednaka zbiru leve i desne cifre */
+		/* Provera da li je srednja cifra jednaka zbiru leve i 
+		 * desne cifre.
+		 */
 		if(cifra_levo+cifra_desno==cifra_sredina){
 		
-			/* Treba izbaciti srednju cifru, pa broj n azuriramo tako sto ga podelimo sa 100 */
+			/* Treba izbaciti srednju cifru, pa broj n se azurira 
+			 * tako sto se podeli sa 100. 
+			 */
 			n=n/100;	
 		}
 		else{
 		
-			/* Inace, zadrzavamo srednju cifru i odbacujemo samo poslednju */
+			/* Inace, zadrzava se srednja cifra i odbacuje 
+			 * se samo poslednja. 
+			 */
 			n=n/10;			
 		}
 	}
 	
-	/* Na novi broj dodajemo preostali dvocifreni ili jednocifreni broj */
+	/* Na novi broj se dodaje preostali dvocifreni 
+	 * ili jednocifreni broj. 
+	 */
 	novo_n=n*stepen+novo_n;
 	
-	/* I ispisujemo rezultat */
+	/* Ispisivanje rezultata. */
 	printf("%d\n", novo_n);
 	
 	

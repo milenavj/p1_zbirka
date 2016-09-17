@@ -1,6 +1,3 @@
-/* Sa standardnog ulaza unosi se ceo pozitivan broj n, a potom i n celih
-brojeva. Izracunati i ispisati zbir onih brojeva koji su neparni i negativni. */
-
 #include <stdio.h>
 
 int main(){
@@ -12,25 +9,25 @@ int main(){
 	
     printf("Unesite n brojeva: ");
     
-    /* Inicijalizujemo brojac kojim kontrolisemo broj ucitavanja - 
-     * treba da ih bude tacno n 
+    /* Inicijalizuje se brojac sa kojim se kontrolise broj 
+     * ucitavanja - treba da ih bude tacno n.
      */
 	i=0;
 	while(i<n){
-        /* Ucitavamo broj */
+        /* Ucitava se broj. */
 		scanf("%d", &x); 
 		
-		/* Proveravamo da li broj negativan i neparan */
+		/* Proverava se da li broj negativan i neparan. */
 		if(x<0 && x%2!=0){
-            /* Ako jeste, dodajemo ga na zbir */
+            /* Ako jeste, dodajemo ga na zbir. */
 			zbir=zbir+x;
 		}
 		
-		/* Uvecavamo brojac iteracija */
+		/* Uvecava se brojac iteracija. */
 		i++;	
 	}
 	
-	/* Ispisujemo rezultat */
+	/* Ispisuje se rezultat. */
 	printf("%d\n", zbir);
 	
 	return 0;

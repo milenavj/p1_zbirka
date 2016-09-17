@@ -1,52 +1,63 @@
 #include <stdio.h>
 
-int main() {
-  
+int main() 
+{  
   unsigned int x;
-  int pozicija;     // da li se radi o cifri jedinici, desetici, stotini itd...
-  int cifra;        // trenutna izdvojena cifra iz broja x
-  unsigned int y;   // broj dobijen nakon transformacije
+  /* Tezina trenutne pozicije u broju. Moze biti 1, 10, 100, 
+   * 1000 itd. 
+   */
+  int pozicija;     
+  /* Trenutna izdvojena cifra iz broja x. */
+  int cifra;   
+  /* Broj dobijen nakon transformacije. */
+  unsigned int y;   
   
   printf("Unesite broj: ");
   scanf("%d", &x);
   
   
-  if(x > 0) {
-    
-    /* Posto pocinjemo sa izdvajanjem cifara od cifre jedinica, 
-      postavljamo tezinu (stepen) pozicije na 1 */
-    pozicija = 1;
-    y = 0;
-    
-    /* Sve dok imamo cifara u zapisu broja */
-    while(x > 0) {
-    
-      /* Izdvajamo poslednju cifru iz zapisa */
-      cifra = x % 10; 
-      
-      /* Proveravamo da li je cifra parna */
-      if(cifra % 2 == 0){
-        /* I ako jeste, uvecavamo je */
-        cifra++;
-        
-      }
-      
-      /* Novi broj formiramo tako sto izdvojenu cifru pomnozimo odgovarajucom
-          tezinom (stepenom) pozicije */
-      y += cifra*pozicija; 
-      
-      /* Pripremamo broj za izdvajanje naredne cifre */
-      x /= 10;
-      
-      /* I uvecavamo tezinu (stepen) pozicije */
-      pozicija *= 10;
-    }
-
-    /* Ispisujemo izracunatu vrednost */
-    printf("%d\n", y);
+  if(x <= 0) 
+  {
+	  printf("Nekorektan unos.\n");
+	  return -1;
   }
-  else	
-    printf("Nekorektan unos.\n");
+    
+	/* Posto pocinjemo sa izdvajanjem cifara od cifre jedinica,
+	 * postavlja se tezinu (stepen) pozicije na 1. 
+	 */
+	pozicija = 1;
+	y = 0;
+
+	/* Provera da li ima cifara u zapisu broja. */
+	while(x > 0) {
+
+	  /* Izdvaja se poslednja cifra iz zapisa. */
+	  cifra = x % 10; 
+	  
+	  /* Provera da li je cifra parna. */
+	  if(cifra % 2 == 0){
+		/* I ako jeste, uvecava se. */
+		cifra++;
+		
+	  }
+	  
+	  /* Novi broj se formira tako sto se izdvojena cifra pomnozi 
+	   * odgovarajucom tezinom (stepenom) pozicije. 
+	   */
+	  y += cifra*pozicija; 
+	  
+	  /* Priprema se broj za izdvajanje naredne cifre, uklanja se 
+	   * poslednja cifra broja. 
+	   */
+	  x /= 10;
+	  
+	  /* Uvecava se tezinu (stepen) pozicije. */
+	  pozicija *= 10;
+	}
+
+	/* Ispisuje se izracunatu vrednost. */
+	printf("%d\n", y);
+  
 
   return 0;
 }

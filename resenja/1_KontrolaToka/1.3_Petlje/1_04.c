@@ -1,10 +1,3 @@
-/*
-   Napisati program koji poziva korisnika da unese pozitivan ceo broj n,
-   a zatim za unetih n celih brojeva ispisuje sumu pozitivnih i sumu
-   negativnih brojeva.
-
-*/
-
 #include<stdio.h>
 
 int main()
@@ -17,14 +10,23 @@ int main()
       
    printf("Unesi pozitivan ceo broj:");
    scanf("%d",&n);
+   
+   if (n < 0)
+   {
+	   printf("Neispravan unos.\n");
+	   return -1;
+   }
 
-   suma_poz=0;  /* promenljivim koje ce sadrzati sumu se pre ulaska u petlju */
-   suma_neg=0;  /* dodeljuje  se 0 (neutral za sabiranje) */
+   /* Promenljivama koje ce sadrzati sume se pre ulaska u petlju 
+    * dodeljuje 0 (neutral za sabiranje).
+    */
+   suma_poz=0;  
+   suma_neg=0;  
    i=0;
    
+   printf("Unesite brojeve: ");
    while(i<n)
    {
-       printf("Unesi ceo broj:");
        scanf("%d", &x);
        
        if (x<0)
