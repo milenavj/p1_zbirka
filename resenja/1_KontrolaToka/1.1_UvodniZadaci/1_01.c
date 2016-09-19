@@ -19,7 +19,8 @@
    
    Da bismo pokrenuli program, prvo ga moramo prevesti u izvrsnu 
    datoteku. Na primer, ako je navedeni program sacuvan kao zdravo.c, 
-   prevodjenje se vrsi naredbom:
+   ako koristimo gcc kompajler koji je sastavni deo standardnih Linux
+   distribucija, prevodjenje iz komandne linije se vrsi narednom naredbom:
 
       gcc zdravo.c
 
@@ -38,8 +39,12 @@
 int main()
 {
   /* printf: funkcija pomocu koje se vrsi ispis */
-  /* oznaka \n : prelazak u novi red */
+  /* Specijalni karakter \n : prelazak u novi red */
+  /* Svaka naredba zavrsava se karakterom ; */
   printf("Zdravo svete!\n");
 
-  return 0;
+  /* Povratna vrednost 0 se obicno koristi da oznaci
+     da je prilikom izvrsavanja programa sve proslo 
+     u redu. */
+  return 0; 
 }
