@@ -116,6 +116,8 @@ Rešenje ovog zadatka svodi se na rešenje zadatka \ref{v1.1_02}, na deo koji se
 \begin{Exercise}[label=p1.1_06] 
 Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da ispiše vrednost kusura. \napomena{Pretpostaviti da su cene svih artikala pozitivni celi brojevi, kao i da su unete vrednosti ispravne, tj.~da se može vratiti kusur.}
 
+\komentarM{Blanko u okviru scanf-a je opasna stvar jer podrazumeva format unosa, tj da izmedju dva broja treba da bude blanko, a ne npr novi red. Ja bih to izbegavala maksimalno jer posle na prakticnom to moze da pravi problem. Ako ostane ovako kako jeste (mada sam ja protiv toga) onda treba obvezno napisati komentar na tu temu!}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -208,11 +210,13 @@ promenljive}.
 \komentarM{ako ne zelimo da damo resenje, onda iskomentarisemo naredni red, da se ne bi stavljao link na resenje koje ne postoji.}
 %\linkresenje{p1_14}
 \end{Exercise}
-\begin{Answer}[ref=p1_14]
+%\begin{Answer}[ref=p1_14]
 %\includecode{resenja/1_UvodniZadaci/1_01.c}
-\end{Answer}
+%\end{Answer}
 
 \subsection{Cifre}
+\komentarM{Izdvajanje nonvcanica je zapravo isti zadatak kao izdvajanje cifara - ti zadaci bi trebalo da su bliski po redosledu i da su slicno reseni - a nisu. Mozda bi u novcanice trebalo ubaciti i ne od 5000 i one od 2000? Cini mi se da je to malo tezi zadatak od izdvajanja cifara trocifrenog broja i mozda bi to trebalo da ide iza zadataka sa ciframa?}
+
 \komentar{Kod svih zadataka dodato je da podrazumevamo ispravan unos\\}
 
 \komentar{Broj - pozitivan ili prirodan? Cini mi se da je u R zadacima pozitivan a u I zadacima prirodan :)\\}
@@ -320,11 +324,11 @@ Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica u
 #\izlaz{Rezultat je: 139}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.1_08}
+%\linkresenje{p1.1_08}
 \end{Exercise}
-\begin{Answer}[ref=p1.1_08]
+%\begin{Answer}[ref=p1.1_08]
 %\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/praktikumi4/1_08.c}
-\end{Answer}
+%\end{Answer}
 
 
 \begin{Exercise}[label=p1.1_09] 
@@ -488,11 +492,11 @@ Pri ispisu vrednost zaokružiti na $4$ decimale.
 #\izlaz{0.0650}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.10_}
+%\linkresenje{p1.10_}
 \end{Exercise}
-\begin{Answer}[ref=p1.10_]
+%\begin{Answer}[ref=p1.10_]
 %\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
-\end{Answer}
+%\end{Answer}
 
 \subsection{Geometrijski zadaci}
 
@@ -581,11 +585,11 @@ Napisati program koji za unetu dužinu stranice jednakostraničnog trougla ispis
 \begin{Exercise}[label=p1_13] 
 Pravougaonik čije su stranice paralelne koordinatnim osama zadat je svojim realnim koordinatama suprotnih temena (gornje levo i donje desno teme). Napisati program koji ispisuje njegov obim i površinu zaokružene na dve decimale. 
 
-\linkresenje{p1_13}
+%\linkresenje{p1_13}
 \end{Exercise}
-\begin{Answer}[ref=p1_13]
+%\begin{Answer}[ref=p1_13]
 %\includecode{resenja/1_UvodniZadaci/1_13.c}
-\end{Answer}
+%\end{Answer}
 
 \section{Mesano celi i realni (kastovanje)}
 

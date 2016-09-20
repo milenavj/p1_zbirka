@@ -26,7 +26,7 @@ int main()
    x=x%1000;
    /*
       Nastavljamo postupak trazenjem broja novcanica 
-      od 100 dinara.  
+      od 100, 50 i 10 dinara, kao i novcica od po 1 dinar.  
    */
    printf("%d*100 +", x/100);
    x=x%100;
