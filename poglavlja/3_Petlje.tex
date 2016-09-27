@@ -15,8 +15,8 @@ Sustinski, studenti treba da usvoje najpre ove tri tehnike, pa onda da idu ne nj
 Danijela:: ok neka bude redosled koji si predlo\v zila}
 
 \begin{Exercise}[label=ptr.3_01] 
-Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo
-  da programiramo}.  \\
+Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo da programiramo}.  
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -35,7 +35,8 @@ Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo
 
 \begin{Exercise}[label=ptr.3_02] 
 Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
-\kckod{Mi volimo da programiramo}. \\
+\kckod{Mi volimo da programiramo}. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -63,7 +64,8 @@ Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
 
 \begin{Exercise}[label=v1.3_02] 
 Napisati program koji učitava pozitivan ceo broj $n$
-a potom ispisuje sve cele brojeve od $0$ do $n$. \\
+a potom ispisuje sve cele brojeve od $0$ do $n$. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -91,8 +93,9 @@ cele brojeve iz intervala $[n,m]$.
 \begin{enumerate}
 \item Koristiti \kckod{while} petlju.
 \item Koristiti \kckod{for} petlju.
-\item Koristiti \kckod{fo-while} petlju.
+\item Koristiti \kckod{do-while} petlju.
  \end{enumerate}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -120,7 +123,9 @@ cele brojeve iz intervala $[n,m]$.
 \komentar{Uskladiti formulaciju zadatka sa odgovarajućom formulacijom kod nizova.}
 Fibonačijev niz počinje ciframa $1$ i $1$, a svaki član se dobija zbirom
 prethodna dva. Napisati program koji učitava ceo neoznačen broj $n$ i
-određuje i na standardni izlaz ispisuje $n$-ti član Fibonačijevog niza. \\
+određuje i na standardni izlaz ispisuje $n$-ti član Fibonačijevog niza. 
+\komentarM{Ovde bih dodala jos dva normalna test primera.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -153,7 +158,10 @@ a_{n+1} = \left\{
 \end{array} \right.
 \end{equation*}
 Napisati program koji za uneti početni član niza $a_0$ (ceo pozitivan
-broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. \\
+broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. 
+
+\komentarM{Ovde bih dodala jos dva normalna test primera.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -180,9 +188,9 @@ broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. \\
 Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
 $1:\sqrt{2}$. Papir $A_1$ dobija se podelom papira $A_0$ po dužoj
 ivici. Papir $A_2$ dobija se podelom $A_1$ papira po dužoj ivici
-itd. Dužine papira su celi brojevi izraženi u milimetrima. Napisati
-program koji za uneti neoznačen broj $k$ ispisuje dimenzije papira
-$A_k$ u milimetrima. \\
+itd. Napisati program koji za uneti neoznačen broj $k$ ispisuje 
+dimenzije papira $A_k$ u milimetrima. Rezultat ispisati kao celobrojne
+vrednosti.  
   
 \begin{miditest}
 \begin{upotreba}{1}
@@ -198,6 +206,7 @@ $A_k$ u milimetrima. \\
 #\izlaz{297 420}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -218,6 +227,7 @@ $A_k$ u milimetrima. \\
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/papir.c}
 \end{Answer}
 
+\komentarM{Komentari u resenjima su uglavnom ok. Jedino smo rekli da stil treba da bude bezlican, tj da umesto "ucitavamo broj" ili "transformisemo vrednost" kazemo "ucitava se broj" ili "vrednost se transformise". Ima i jedne i druge vrste komentara, cak i u istom resenju, i to treba ujednaciti.}
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
@@ -227,7 +237,8 @@ $A_k$ u milimetrima. \\
 
 \begin{Exercise}[label=v1.3_06] 
 Napisati program koji učitava ceo broj i ispisuje njegove cifre u
-obrnutom poretku. \\
+obrnutom poretku. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -251,10 +262,12 @@ obrnutom poretku. \\
 
 \begin{Exercise}[label=v1.3_14] 
 Pravi delioci celog broja su svi delioci sem jedinice i samog tog
-broja.  Napisati program koji učitava ceo pozitivan broj $x$ i
-ispisuje sve prave delioce unetog broja. U slučaju greške pri unosu
-podataka ispisati odgovarajuću poruku.  Nije bitan redosled po kom se
-ispisuju delioci.\\ 
+broja.  Napisati program za uneti ceo pozitivan broj $x$
+ispisuje sve njegove prave delioce. U slučaju greške pri unosu
+podataka ispisati odgovarajuću poruku.  
+
+\komentarM{Svuda gde postoji ispravan i neispravan unos, staviti da bude 3 ili 4 test primera, tako da se veci znacaj daje ispravnom unosu. Ovako kada je 1-1 deluje kao da su podjednako vazni, a ipak vecu tezinu treba dati ispravnim unosima.}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -277,9 +290,11 @@ ispisuju delioci.\\
 
 
 \begin{Exercise}[label=p1.3_04] 
- Sa standardnog ulaza unosi se ceo neoznačen broj. Napisati program
- koji proverava i ispisuje da li se cifra 5 nalazi u njegovom
- zapisu. \\
+ Napisati program koji za pozitivan ceo broj proverava i ispisuje da li se cifra 5 nalazi u njegovom
+ zapisu. 
+ 
+ \komentarM{Da li cemo koristiti tip unsigned u resenju u svim zadacima u kojima se trazi pozitivan ceo broj ili cemo stavljati test primere za negativan broj? Ja bih ovde dozvolila da je i pozitivan i negativan broj, samo treba prilagoditi resenje.}
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -302,9 +317,11 @@ ispisuju delioci.\\
 
 
 \begin{Exercise}[label=p1.7_deljivsum] 
-Sa standarnog ulaza unosi se ceo broj. Napisati program koji na
-standardni izlaz ispisuje odgovor da li je uneti prirodan broj deljiv
-sumom svojih cifara.\\ 
+Napisati program koji za uneti prirodan broj ispisuje da li je on deljiv
+sumom svojih cifara.
+
+\komentarM{Sta ako se unese broj 0? --- Mozda staviti test primer na tu temu.}
+
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -334,8 +351,8 @@ sumom svojih cifara.\\
 
 
 \begin{Exercise}[label=p1.3_05] 
- Napisati program koji učitava ceo neoznačen broj i uklanja sve nule
- sa desne strane unetog broja. Novodobijeni broj ispisati na
+ Napisati program koji za uneti prirodan broj uklanja sve nule
+ sa njegove desne strane. Novodobijeni broj ispisati na
  standardni izlaz. 
  
 \begin{minitest}
@@ -367,7 +384,7 @@ sumom svojih cifara.\\
 
 
 \begin{Exercise}[label=p1.3_06] 
-Napisati program koji učitava neoznačeni ceo broj i transformiše ga
+Napisati program koji uneti prirodan broj transformiše 
 tako što svaku parnu cifru u zapisu broja uveća za 1. Novodobijeni
 broj ispisati na standarni izlaz.
 
@@ -400,9 +417,11 @@ broj ispisati na standarni izlaz.
 
 
 \begin{Exercise}[label=p1.3_07]
- Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
+\komentarM{Neoznacen ceo broj je termin iz programiranja. U zadacima treba da budu prisutni celi i prirodni brojevi. Zato sam svuda to menjala. Takodje, treba izbegavati formualcije koje sugerisu redosled programiranja i naredbi u programu. Dakle vise idemo na formulacije sta treba da se uradi, nego kako to treba da se uradi. }
+
+ Napisati program 
  koji formira i ispisuje broj koji se dobija izbacivanjem svake druge
- cifre polaznog broja, počevši od krajnje desne cifre.
+ cifre polaznog prirodnog broja, počevši od krajnje desne cifre.
  
 \begin{minitest}
 \begin{upotreba}{1}
@@ -432,8 +451,8 @@ broj ispisati na standarni izlaz.
 \end{Answer}
 
 \begin{Exercise}[difficulty=1, label=p1.3_14] 
-Sa standardnog ulaza unosi se neoznačen ceo broj. Napisati program
-koji formira i ispisuje broj koji se dobija izbacivanjem cifara koje
+ Napisati program
+koji na osnovu unetog prirodnog broja formira i ispisuje broj koji se dobija izbacivanjem cifara koje
 su jednake zbiru svojih suseda. 
 
 \begin{minitest}
@@ -465,7 +484,7 @@ su jednake zbiru svojih suseda.
 
 \begin{Exercise}[difficulty=1, label=p1.3_15] 
 Broj je \textit{palindrom} ukoliko se isto čita i sa leve i sa desne
-strane. Napisati program koji učitava ceo neoznačen broj i proverava
+strane. Napisati program koji učitava prirodan broj i proverava
 da li je učitani broj palindrom. 
 
 \begin{minitest}

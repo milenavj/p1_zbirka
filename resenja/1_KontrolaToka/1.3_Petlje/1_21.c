@@ -2,24 +2,25 @@
 
 int main()
 {
-  /* Promenljiva i kontrolise koliko puta ce se petlja izvrsiti. 
+  /* Promenljiva i kontrolise koliko puta ce se petlja izvrsiti i naziva se brojac petlje. 
      Njenu pocetnu vrednost postavljamo na 0 jer se u pocetku petlja nije ni jednom izvrsila. */
 	int i = 0;
 
   /* Pre ulaska u telo petlje proverava se da li je 
-		 ispunjen uslov petlje.
+		 ispunjen uslov ulaska u petlju.
   */
 	while(i < 5)
   {
-		/* Ukoliko uslov petlje jeste ispunjen ulazimo u telo petlje. */
+		/* Ukoliko uslov ulaska u petlju jeste ispunjen, izvrsava se telo petlje. */
     /* Ispisujemo trazeni tekst. */
 		printf("Mi volimo da programiramo.\n");
 
-		/* Uvecavamo promenljivu za jedan jer smo jednom prosli kroz petlju. */
+    /* Uvecava se brojac za jedan jer je jednom izvrseno telo petlje. 
+       Ako bi ova vrednost ostala nepromenjena, petlja bi se izvrsavala beskonacno. */
     i++;
 
-		/* Nakon poslednje naredbe tela petlje ponovo se vracamo na ispitivanje uslova petlje. 
-       Ako ovu vrednost ne menjamo dobicemo petlju koja se izvrsava beskonacno. */
+		/* Nakon poslednje naredbe tela petlje ponovo se ispituje uslov petlje.*/
+
   }
 
 	return 0;
