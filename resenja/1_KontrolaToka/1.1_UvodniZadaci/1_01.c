@@ -36,7 +36,7 @@ int main()
   /* printf: funkcija pomocu koje se vrsi ispis */
   /* Specijalni karakter \n : prelazak u novi red */
   /* Svaka naredba zavrsava se karakterom ; */
-  printf("Zdravo svete!\n");
+  printf("Zdravo svima!\n");
 
   /* Povratna vrednost 0 se obicno koristi da oznaci
      da je prilikom izvrsavanja programa sve proslo 

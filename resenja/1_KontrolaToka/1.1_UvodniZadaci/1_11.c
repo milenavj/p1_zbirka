@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #include <limits.h>
 
 /* u zaglavlju limits.h 
@@ -55,10 +54,7 @@ scanf("%d", &c1);
 printf("unesi c2: ");
 scanf("%d", &c2);
 
-/* najbolje odmah da se kastuje z1 jer se kasnije cesto 
-koristi u racunu pa da ne ponavljamo (int) */
-// za stotine pozicija je 3 ---> z1 = (int)pow(10,3-1);
-z1 = (int)pow(10,2);
+z1 = 100;
 
 dostatak1 = broj % z1;
 
@@ -68,9 +64,9 @@ dostatak1 = broj % z1;
 */
 novibroj = broj / z1 * z1 * 10 + z1 * c1 + dostatak1 ;
 
-//sada u novibroj insertujemo cifru c2 na poziciju 4 - za hiljade
+/* sada u novibroj insertujemo cifru c2 na poziciju 4 - za hiljade */
 
-z2 = (int)pow(10,3);
+z2 = 1000;
 
 dostatak2 = novibroj % z2;
 
@@ -79,7 +75,6 @@ dostatak2 = novibroj % z2;
  inace taj deo moze da se racuna i kao --> (broj - broj % z2) * 10 
 */
 novibroj = novibroj / z2 * z2 * 10 + z2 * c2 + dostatak2 ;
-
 
 printf("Novi broj je: %d\n", novibroj);
 printf("Maksimalna vrednost za int je: %d\n", INT_MAX);

@@ -9,15 +9,15 @@
 \setcounter{page}{1}
 
 
-\section{Samo ispis}
+%\section{Samo ispis}
 
 \begin{Exercise}[label=v1.1_01] 
-Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo, svete!}.
+Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo svima!}.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Zdravo, svete!}#
+#\izlaz{Zdravo svima!}#
 \end{upotreba}
 \end{miditest}
 
@@ -27,39 +27,19 @@ Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo, svete!}.
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_01.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1_15]
-\komentarJ{Za ovaj zadatak nema resenja. To do: dodati (Jovana). *}
-\komentarM{Andjelka je bila dala neki smislen predlog kako ovaj zadatak preformulisati da ima smisla.}
-\komentarJ{Andjelkin predlog je bio da se ovaj zadatak spoji sa zadatkom sa aritmetickim operacijama, odnosno da se umesto zbir je: ... vrsi ispis 5+3=8 i tako za sve operacije. Uradjeno. Predlozila bih da ovaj zadatak obrisemo.}
-Napisati program koji na standarni izlaz ispisuje sledeći tekst: 
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Karakteri : \" \% \{ * + = a}#
-#\izlaz{Brojevi: 43, -56, 455}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1_15}
-\end{Exercise}
-\begin{Answer}[ref=p1_15]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
-\end{Answer}
+%\section{Celi brojevi}
 
-\section{Celi brojevi}
-
-\komentarM{Tamo gde je pretpostavka da je pitanju pozitivan ceo broj, treba staviti da je tip unsigned.}
+%\komentarM{Tamo gde je pretpostavka da je pitanju pozitivan ceo broj, treba staviti da je tip unsigned.}
 
 \begin{Exercise}[label=p1.1_01] 
 Napisati program za uneti ceo broj ispisuje taj broj, njegov kvadrat i njegov kub. 
-\komentarM{Nije dobro povezano sa resenjem, pojavljuju se znakovi pitanja. Dodati bar jos jedan test primer.}
-\komentarJ{Test primer dodat. Ispravljen link ka resenju.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite ceo broj:}\ulaz{4}#
-#\izlaz{Kvadrat:16}#
+#\izlaz{Kvadrat: 16}#
 #\izlaz{Kub: 64}#
 \end{upotreba}
 \end{miditest}
@@ -67,7 +47,7 @@ Napisati program za uneti ceo broj ispisuje taj broj, njegov kvadrat i njegov ku
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite ceo broj:}\ulaz{-14}#
-#\izlaz{Kvadrat:196}#
+#\izlaz{Kvadrat: 196}#
 #\izlaz{Kub: -2744}#
 \end{upotreba}
 \end{miditest}
@@ -83,9 +63,6 @@ Napisati program za uneti ceo broj ispisuje taj broj, njegov kvadrat i njegov ku
 Napisati program koji za uneta dva cela broja ispisuje najpre unete vrednosti, a zatim i njihov zbir, razliku, proizvod, ceo deo pri deljenju prvog broja drugim brojem 
 i ostatak pri deljenju prvog broja drugim brojem. 
 \napomena{Pretpostaviti da je unos korektan, tj.~da druga uneta vrednost nije 0.}
-
-\komentarM{Podesiti resenje. Izbaciti suvisne komentare iz resenja, tj one stvari koje su ranije vec komentarisane. Dodati test primere.}
-\komentarJ{Uradjeno.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -118,47 +95,17 @@ i ostatak pri deljenju prvog broja drugim brojem.
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_02.c}
 \end{Answer}
 
-\subsection{Prodavnica}
+%\subsection{Prodavnica}
 
 \komentarJ{Ovde sam malo izmenila redosled: prvo sam navela zadatak sa kusurom jer za njega imamo resenje, a posle navela zadatke sa ukupnom cenom dva artikla i ukupnom cenom za datu cenu jednog artikla i kolicinu. Druga dva zadatka su laksa, svode se samo na sabiranje i oduzimanje i za njih mislim da nije neophodno da imaju resenje. Ovaj prvi zadatak je resen i iskomentarisan i nakon toga mogu sami.}
 
-\begin{Exercise}[label=p1.1_06] 
-Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da ispiše vrednost kusura. \napomena{Pretpostaviti da su cene svih artikala pozitivni celi brojevi, kao i da su unete vrednosti ispravne, tj.~da se može vratiti kusur.}
-
-\komentarM{Blanko u okviru scanf-a je opasna stvar jer podrazumeva format unosa, tj da izmedju dva broja treba da bude blanko, a ne npr novi red. Ja bih to izbegavala maksimalno jer posle na prakticnom to moze da pravi problem. Ako ostane ovako kako jeste (mada sam ja protiv toga) onda treba obvezno napisati komentar na tu temu!}
-\komentarJ{Uklonila blanko znake iz scanf-a. Umesto "unesite redom" prepravila na "unesite" jer u suprotnom ne mogu da stanu dva test primera jedan do drugog.}
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite cenu, kolicinu i iznos:}\ulaz{132 2 500}#
-#\izlaz{Kusur je 236 dinara.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite cenu, kolicinu i iznos:}\ulaz{59 6 2000}#
-#\izlaz{Kusur je 1646 dinara.}#
-\end{upotreba}
-\end{miditest}
-
-\komentarM{Dodati svuda gde moze da budu bar dva test primera. U resenju bi trebalo koristiti tip unsigned zbog pretpostavke da je u pitanju pozitivan broj.}
-\komentarJ{Izmenjeno.}
-
-\linkresenje{p1.1_06}
-\end{Exercise}
-\begin{Answer}[ref=p1.1_06]
-\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/praktikumi4/1_06.c}
-\end{Answer}
+\komentarM{Ipak sam vratila na staro, jer je dato resenje koje povezuje apstraktan zadatak (sabiranje) sa konkretnim zadatkom (dva artikla). Obrisi ova dva komentara ako ti je to ok. Obrati paznju da su data dva resenja u obliku uputstva, a ne u obliku koda, niti treba da budu u obliku koda.}
 
 
 \begin{Exercise}[label=p1_005]
 Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate cene dva kupljena artikla. 
-\napomena{Pretpostaviti da su cene artikala pozitivni celi brojevi.}
+\napomena{Pretpostaviti da su cene artikala pozitivni celi brojevi i da je unos korektan.}
 
-\komentarM{ dodati test primere.}
-\komentarJ{Dodati. S obzirom da se resenje svodi na sabiranje dva broja, ima li potrebe da navodimo resenje? }
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -185,8 +132,7 @@ Rešenje ovog zadatka svodi se na rešenje zadatka \ref{v1.1_02}, na deo koji se
 
 \begin{Exercise}[label=p1_05]
 Napisati program koji za unetu količinu jabuka u kilogramima i unetu
-cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. \napomena{Pretpostaviti da je cena jabuka pozitivan ceo broj.} 
-\komentarJ{Dodati. S obzirom da se resenje svodi na mnozenje dva broja, ima li potrebe da navodimo resenje? }
+cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. \napomena{Pretpostaviti da je cena jabuka pozitivan ceo broj i da je unos korektan.} 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -212,36 +158,38 @@ Rešenje ovog zadatka svodi se na rešenje zadatka \ref{v1.1_02}, na deo koji se
 \end{Answer}
 
 
-\begin{Exercise}[label=v1.1_08] 
-Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 1000, 100, 50, 10 i 1 dinar. \napomena{Pretpostaviti da je cena proizvoda pozitivan ceo broj.}
+\begin{Exercise}[label=p1.1_06] 
+Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da ispiše vrednost kusura. \napomena{Pretpostaviti da su cene svih artikala pozitivni celi brojevi, kao i da su unete vrednosti ispravne, tj.~da se može vratiti kusur.}
 
-\komentarM{unsigned int u resenju}
-\komentarJ{Izmenjeno}
-\komentarJ{Bio je jos neki komentar ispod koji se odnosi na ovaj zadatak: da se dodaju novcanice od 5000 i 2000. Dodato. U skladu sa tim izmenjeni test primeri.}
 
-\begin{maxitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite cenu proizvoda:}\ulaz{8367}#
-#\izlaz{8347=1*5000+ 1*2000 +1*1000 +0*500 +1*200 +1*100 +0*50 +4*10 +7*1}#
+#\izlaz{Unesite cenu, kolicinu i iznos:}\ulaz{132 2 500}#
+#\izlaz{Kusur je 236 dinara.}#
 \end{upotreba}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite cenu proizvoda:}\ulaz{934}#
-#\izlaz{934=0*5000+ 0*2000 +0*1000 +1*500 +2*200 +0*100 +0*50 +3*10 +4*1}#
+#\izlaz{Unesite cenu, kolicinu i iznos:}\ulaz{59 6 2000}#
+#\izlaz{Kusur je 1646 dinara.}#
 \end{upotreba}
-\end{maxitest}
-\linkresenje{v1.1_08}
+\end{miditest}
+
+\linkresenje{p1.1_06}
 \end{Exercise}
-\begin{Answer}[ref=v1.1_08]
-\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_08.c}
+\begin{Answer}[ref=p1.1_06]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/praktikumi4/1_06.c}
 \end{Answer}
+
+
+
 
 \begin{Exercise}[label=p1.1_11] 
 Napisati program koji za uneta vremena poletanja i sletanja aviona  ispisuje dužinu trajanja leta. \napomena{Pretpostaviti da su poletanje i sletanje u istom danu kao i da su sve vrednosti ispravno unete.}
 
-\komentar{U okviru grananja imamo slican zadatak. Mozda bi mogli da stavimo da imamo dva ista zadatka, jedan sa pretpostavkom da su vremena ispravna, a drugi sa odgovarajucim ifovima koji to i proveravaju? Mozda dati samo jedno od ta dva resenja (npr onaj kod if) i razlicite test primere (u ovom slucaju samo sa ispravnim vrednostima, u drugom gde se prijavljuje greska prilikom unosa). U resenju za ovaj zadatak bi moglo samo a se kaze da se pogleda resenje tog zadatka sa if. Trenutno, u jednom se zadaju sekunde, u drugom ne, mislim da bi format unosa trebao da bude isti.\\}
-\komentarJ{Resenje je prilagodjeno tako da se zadaju samo sati i minuti. Dodat je jos jedan test primer. Resenje je sada tu, mozemo ga ostaviti ili uputiti na resenje u narednom poglavlju.}
+%TODO U nekom trenutku povezati sa odgovarajucim IF-om i videti sta i kako
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -267,8 +215,7 @@ Napisati program koji za uneta vremena poletanja i sletanja aviona  ispisuje du�
 \end{Answer}
 
 
-
-\subsection{Naredba dodele}
+%\subsection{Naredba dodele}
 \begin{Exercise}[label=v1.1_10] 
 Date su dve celobrojne promenljive. Napisati program koji razmenjuje njihove vrednosti.
 
@@ -300,34 +247,24 @@ Date su dve celobrojene promenljive $a$ i $b$. Napisati program koji promenljivo
 njihovu sumu, a promenljivoj $b$ njihovu razliku. \napomena{Ne koristiti pomoćne
 promenljive}. 
 
-\komentarM{ako ne zelimo da damo resenje, onda iskomentarisemo naredni red, da se ne bi stavljao link na resenje koje ne postoji.}
+%\komentarM{ako ne zelimo da damo resenje, onda iskomentarisemo naredni red, da se ne bi stavljao link na resenje koje ne postoji.}
 %\linkresenje{p1_14}
 \end{Exercise}
 %\begin{Answer}[ref=p1_14]
 %\includecode{resenja/1_UvodniZadaci/1_01.c}
 %\end{Answer}
 
-\subsection{Cifre}
-\komentarM{Izdvajanje nonvcanica je zapravo isti zadatak kao izdvajanje cifara - ti zadaci bi trebalo da su bliski po redosledu i da su slicno reseni - a nisu. Mozda bi u novcanice trebalo ubaciti i ne od 5000 i one od 2000? Cini mi se da je to malo tezi zadatak od izdvajanja cifara trocifrenog broja i mozda bi to trebalo da ide iza zadataka sa ciframa?}
+%\subsection{Cifre}
+
 \komentarJ{To je konceptualno pitanje: da li zelimo zadatke koji su podeljeni po oblastima i unutar oblasti po tezini ili zelimo mesane zadatke koji su klasifikovani po tezini. Ja sam za drugu opciju i mislim da je zadatak sa ciframa na pravom mestu. Necu insistirati, ako istrajavas slobodno ga premesti.}
 
-\komentar{Kod svih zadataka dodato je da podrazumevamo ispravan unos\\}
+\komentarM{Obrisi ovo, ako se slozis. Dakle, bas i ja mislim da je konceptualno pitanje: na oba mesta se rade iste stvari, samo je na prvom mestu deljenje sa 10, 100 itd, a na drugom sa 5000, 2000 itd. Konceptualno radimo istu stvar, samo u razlicitim kontekstima. Zato mislim da to treba da bude jedno za drugim, dakle nije bitan kontekst vec koncept. Prvo izdvajamo cifre trocifrenog broja, onda izdvajamo novcanice. Zatim radimo izmene na brojevima - one obuhvataju izdvajanje + kombinovanje dobijenih brojeva pa je to konceptualno teze i ide kasnije.}
 
-\komentar{Broj - pozitivan ili prirodan? Cini mi se da je u R zadacima pozitivan a u I zadacima prirodan :)\\}
+%\komentarM{Da, imalo bi smisla to ujednaciti. Mozda prirodan broj ako se podrazumeva da moze da bude i nula? Pozitivan broj moze da bude realan, i zato je bolje reci pozitivan prirodan broj, ukoliko nam je za ulaz bitno da nije nula. Dakle, rekla bih prirodan ili pozitivan prirodan, nikako samo pozitivan!}
 
-\komentarM{Da, imalo bi smisla to ujednaciti. Mozda prirodan broj ako se podrazumeva da moze da bude i nula? Pozitivan broj moze da bude realan, i zato je bolje reci pozitivan prirodan broj, ukoliko nam je za ulaz bitno da nije nula. Dakle, rekla bih prirodan ili pozitivan prirodan, nikako samo pozitivan!}
-
-\komentar{Kog tipa da budu broj koji se unosi i cifre?
-Prosle godine: u uvodnim zadacima je sve bilo  int da ih ne zbunjujemo previse. Od naredbe grananja smo poceli da cifre definisemo kao char a broj kao int pa uzmemo apsolutnu vrednost. Kako sada? Trenutno je u resenjima sve int.\\
-}
-
-\komentarM{Mislim da ima smisla uvesti tipove i u uvodne zadatke, tj da su cifre ipak tipa char. Jer mi to pricamo na predavanjima odmah, i lepo je da to onda odmah i vide. }
 
 \begin{Exercise}[label=v1.1_05] 
 Napisati program koji za uneti pozitivan trocifreni broj na standardni izlaz ispisuje njegove cifre jedinica, desetica i stotina. \napomena{Pretpostaviti da je unos ispravan.}
-
-\komentarM{Ako je pretpostavka da je broj pozitivan da onda tip u resenju treba da bude unsigned}
-\komentarJ{Ispravljeno: trocifreni broj je unsigned a cifre char. Dodati i odgovarajuci komentari.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -349,6 +286,31 @@ Napisati program koji za uneti pozitivan trocifreni broj na standardni izlaz isp
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_05.c}
 \end{Answer}
 
+
+\begin{Exercise}[label=v1.1_08] 
+Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 5000, 2000, 1000, 200, 100, 50, 10 i 1 dinar. \napomena{Pretpostaviti da je cena proizvoda pozitivan ceo broj.}
+
+\komentarM{Zaboravljena novcanica od 20 dinara! Dodati i u tekst zadatka (ja sam dodala sve ostale koje su dodate u resenje i u test primere).}
+
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite cenu proizvoda:}\ulaz{8367}#
+#\izlaz{8347=1*5000+ 1*2000 +1*1000 +0*500 +1*200 +1*100 +0*50 +4*10 +7*1}#
+\end{upotreba}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite cenu proizvoda:}\ulaz{934}#
+#\izlaz{934=0*5000+ 0*2000 +0*1000 +1*500 +2*200 +0*100 +0*50 +3*10 +4*1}#
+\end{upotreba}
+\end{maxitest}
+\linkresenje{v1.1_08}
+\end{Exercise}
+\begin{Answer}[ref=v1.1_08]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_08.c}
+\end{Answer}
+
+
 \begin{Exercise}[label=v1.1_06] 
 Napisati program koji učitava pozitivan trocifreni broj sa standardnog ulaza i ispisuje broj dobijen obrtanjem njegovih cifara. \napomena{Pretpostaviti da je unos ispravan.}
 
@@ -366,11 +328,6 @@ Napisati program koji učitava pozitivan trocifreni broj sa standardnog ulaza i 
 #\izlaz{Obrnuto: 32}#
 \end{upotreba}
 \end{miditest}
-
-\komentarM{broj tipa unsigned? cifre tipa char?}
-\komentarJ{Ispravljeno: trocifreni broj je unsigned a cifre char.}
-
-
 
 \linkresenje{v1.1_06}
 
@@ -390,8 +347,6 @@ Napisati program koji za uneti pozitivan četvorocifreni broj:
 \item izračunava broj koji se dobija zamenom cifre jedinice i cifre stotine
 \end{enumerate}
 \napomena{Pretpostaviti da je unos ispravan.}
-\komentarM{unsigned/char?}
-\komentarJ{Ispravljeno: cetvorocifreni broj je unsigned a cifre char.}
 
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -445,54 +400,27 @@ Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica u
 %\end{Answer}
 
 
-\begin{Exercise}[label=p1.1_09] 
-\komentar{Da li je ovaj zadatak za uvodno potpoglavlje sa celim brojevima? Ima pow i kastovanje. Mozda pre da ide u zadatke gde su mesano celi i realni\\}
-\komentarM{Slazem se da ovaj zadatak ide u mesovite zadatke.}
-\komentarJ{Prebaciti u mesovite.}
-
-Napisati program koji za unete pozitivne prirodne brojeve $x$, $c$ i $p$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ 
-na poziciji $p$. \napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$ manji od ukupnog broja cifara broja $x$. Numeracija cifara počinje od nule, odnosno cifra namanje težine nalazi se na nultoj poziciji.} \uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}\\
-
-\komentarM{Izmenila bih da numeracija cifara pocinje od 0, jer se to uklapa sa tezinskim faktorom i nekako je logicnije. Izmenjeno. Izmeniti i resenja. }
-
-\komentarM{U prvi zadatak sa math.h dadati i uputstvo za prevodjenje -lm}
-
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite redom x, c i p:}\ulaz{140 2 2}#
-#\izlaz{Rezultat je: 1420}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.1_09}
-\end{Exercise}
-\begin{Answer}[ref=p1.1_09]
-\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/praktikumi4/1_09.c}
-\end{Answer}
 
 \begin{Exercise}[label=p1_16]
-\komentar{Isto i za ovaj zadatak: da li je ovaj zadatak za uvodno potpoglavlje sa celim brojevima? Ima pow i kastovanje. Mozda pre da ide u zadatke gde su mesano celi i realni. Ili bez pow. \\}
-\komentarM{Mislim da odavde moze bez problema da se izbaci pow jer je suvisan, i da onda zadtak lepo ostane ovde gde mu je i mesto.}
-\komentarJ{Ne vidim kako mozemo da izbacimo pow kada nemamo petlje.}
-Sa standardnog unosa se unosi pozitivan prirodan broj $n$ i cifre $c_1$ i $c_2$. Napisati program ispisuje broj dobijen umetanjem cifara $c1$ i $c2$ na mesta stotina i hiljada broja $n$. 
+Sa standardnog unosa se unosi pozitivan prirodan broj $n$ i cifre $c_1$ i $c_2$. Napisati program ispisuje broj dobijen umetanjem cifara $c_1$ i $c_2$ na mesta stotina i hiljada broja $n$. 
 \napomena{Za neke ulazne podatke može se dobiti neočekivan rezultat zbog prekoračenja, što ilustruje test primer broj xx.}
 
+\komentarM{Ispravljano resenje, proveriti da nesto nisam zabrljala. Dodati test primere kao i test priemr za prekoracenje.}
 
 \linkresenje{p1_16}
 \end{Exercise}
 \begin{Answer}[ref=p1_16]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_11.c}
 \end{Answer}
 
 
 
-\section{Realni brojevi}
+%\section{Realni brojevi}
 
 \begin{Exercise}[label=v1.1_03] 
 Napisati program koji učitava realnu vrednost izraženu
-   u inčima, konvertuje tu vrednost u centimetre i ispisuje je zaokruženu na dve decimale. \uputstvo{Jedan inč ima $2.54$ centimetra.\\}
+   u inčima, konvertuje tu vrednost u centimetre i ispisuje je zaokruženu na dve decimale. \uputstvo{Jedan inč ima $2.54$ centimetra.}
+   
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -514,14 +442,6 @@ Napisati program koji učitava realnu vrednost izraženu
 \includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_03.c}
 \end{Answer}
 
-\komentarJ{Zadaci sa konverzijama - funte->kilogrami i slicno su razdvojeni. Uz njih nema resenje a mislim da tako treba i da ostane jer se svi resavaju isto kao in->cm. Da li bismo mogli da zadatak sa C->F da preformulisemo tako da je temperatura ceo broj? To bi bila lepa ilustracija za kastovanje.
-}
-
-\komentarM{Slazem se da budu bez resenja. Imamo vec zadatak koji uvodi kastovanje, tako da nisam sigurna da nam trebaju dva takva zadatka? Onda bi bilo pitanje i gde ubaciti ovaj zadatak, a ovde sasvim prirodno pripada. Ne insistiram, ali mi se cini da je mozda lakse ostaviti to ovako kako jeste sada.}
-\komentarJ{U redu.}
-
-\komentarM{I zadaci za koje ne dajemo resenje treba da imaju svoje test primere.}
-\komentarJ{Izmenjeno.}
 
 \begin{Exercise}[label=p1.1_10a] 
 Napisati program koji učitava dužinu izraženu
@@ -626,11 +546,6 @@ Napisati program koji za unete realne vrednosti $a_{11}$, $a_{12}$, $a_{21}$, $a
 \]
 Pri ispisu vrednost zaokružiti na $4$ decimale.
 
-\komentarM{Umesto verbatim staviti odgovarajući format za prikaz matrice.}
-\komentarJ{A koji je to prikaz?}
-\komentarM{Milena: Pokusaj google: how to write matrix in latex. Bilo koja varijanta koja ti odgovara a ima onaj standardni matematicki izgled je ok. }
-\komentarJ{Izmenjeno.}
-
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -666,11 +581,7 @@ Pri ispisu vrednost zaokružiti na $4$ decimale.
 %\includecode{resenja/1_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
 %\end{Answer}
 
-\subsection{Geometrijski zadaci}
-
-\komentarJ{U svim zadacima dodata je pretpostavka da su duzine pozitivni realni brojevi.\\}
-\komentarM{U zadacima sa prirodnim brojevima se to kaze u tekstu zadatka da je on prirodan, a ne naknadno u napomeni. Mozda bi i u ovim zadacima to trebalo da ide u formulaciju a da je napomena samo da je unos ispravan? Ja sam izmenila tako u prvom narednom zadatku, ako se slazes, izmeni sve.}
-\komentarJ{Izmenjeno.}
+%\subsection{Geometrijski zadaci}
 
 \begin{Exercise}[label=p1.1_02] 
 Napisati program koji za unete realne vrednosti dužina stranica pravougaonika ispisuje njegov obim i površinu. Ispisati tražene vrednosti zaokružene na dve decimale.
@@ -759,10 +670,11 @@ Pravougaonik čije su stranice paralelne koordinatnim osama zadat je svojim real
 %\includecode{resenja/1_UvodniZadaci/1_13.c}
 %\end{Answer}
 
-\section{Mesano celi i realni (kastovanje)}
+%\section{Mesano celi i realni (kastovanje)}
 
 \begin{Exercise}[label=v1.1_09] 
-Napisati program koji za tri uneta cela broja ispisuje njihovu artimetičku sredinu zaokruženu na dve decimale.\\
+Napisati program koji za tri uneta cela broja ispisuje njihovu artimetičku sredinu zaokruženu na dve decimale.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -793,8 +705,6 @@ Napisati program koji za tri uneta cela broja ispisuje njihovu artimetičku sred
 \begin{Exercise}[label=p1.1_04] 
 Napisati program koji pomaže moleru da izračuna površinu zidova prostorije koju treba da okreči. Za unete dimenzije sobe u metrima (dužinu, širinu i visinu), program treba da  ispiše površinu zidova za krečenje pod pretpostavkom da na vrata i prozore otpada oko 20\%. Omogućiti i da na osnovu unete cene usluge po kvadratnom metru program izračuna ukupnu cenu krečenja. Sve realne vrednosti ispisati zaokružene na dve decimale.
 
-\komentarJ{Nije mi jasno zasto mi se ovde ispisuju test primeri jedan ispod drugog kada ima mesta da budu jedan do drugog!}
-
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -803,6 +713,8 @@ Napisati program koji pomaže moleru da izračuna površinu zidova prostorije ko
 #\izlaz{Moler treba da okreci 51.20 m2}#
 #\izlaz{Cena krecenja je 25600.00}#
 \end{upotreba}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dimenzije sobe:}\ulaz{13 17 3}#
@@ -820,12 +732,32 @@ Napisati program koji pomaže moleru da izračuna površinu zidova prostorije ko
 
 
 
+\begin{Exercise}[label=p1.1_09] 
+Napisati program koji za unete pozitivne prirodne brojeve $x$, $c$ i $p$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ 
+na poziciji $p$. \napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$ manji od ukupnog broja cifara broja $x$. Numeracija cifara počinje od nule, odnosno cifra namanje težine nalazi se na nultoj poziciji.} \uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}\\
+
+\komentarM{Izmenila bih da numeracija cifara pocinje od 0, jer se to uklapa sa tezinskim faktorom i nekako je logicnije. Izmenjeno. Izmeniti i resenja. }
+
+\komentarM{U prvi zadatak sa math.h dadati i uputstvo za prevodjenje -lm}
+
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom x, c i p:}\ulaz{140 2 2}#
+#\izlaz{Rezultat je: 1420}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p1.1_09}
+\end{Exercise}
+\begin{Answer}[ref=p1.1_09]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/praktikumi4/1_09.c}
+\end{Answer}
 
 
 
 \section{Zadaci sa operatorom ?:}
 
-\komentarJ{Nema resenja ni za jedan od ovih zadataka. Oni su sa i smera. Danijela, da li ih mozda ti imas?}
 \komentarJ{Danijela mi je rekla gde se nalaze resenja. Dodati.}
 
 \begin{Exercise}[label=p1_17]
