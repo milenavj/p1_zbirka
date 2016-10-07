@@ -10,7 +10,7 @@ int main()
 
   /* Ucitavamo potrebne vrednosti */
   printf("Unesite redom x, c i p: ");
-  scanf("%d %d %d", &x, &c, &p);
+  scanf("%d%d%d", &x, &c, &p);
   
   /* Odredjujemo deo broja koji se nalazi desno od pozicije p */
   desno=x%(int)pow(10, p-1);

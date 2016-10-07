@@ -1,11 +1,13 @@
 #include <stdio.h>
 #include <math.h> 
 
-/* Biblioteka math.h sadrzi veliki broj matematickih 
-   funkcija i konstanti. U ovom zadatku je koristimo 
-   zbog konstante pi (M_PI)
+/* Zaglavlje math.h sadrzi deklaracije velikog broja  
+   matematickih funkcija i konstanti. U ovom zadatku se
+   koristi zbog konstante pi (M_PI)
    
-   Za prevodjenje je neophodno ukljuciti opciju -lm
+   Ukoliko se koristi i neka funkcija matematicke 
+   biblioteke, za prevodjenje je neophodno ukljuciti 
+   opciju -lm
    npr. gcc primer.c -lm 
 */
 int main()
