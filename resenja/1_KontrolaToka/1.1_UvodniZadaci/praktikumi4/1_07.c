@@ -2,13 +2,13 @@
 
 int main(){
   
-  int n;
-  int j, d, s, h; 
-  int proizvod_cifara, razlika_cifara, suma_kvadrata, broj_obrnuto, broj_zamena; 
+  unsigned n, broj_obrnuto, broj_zamena;
+  char j, d, s, h; 
+  int proizvod_cifara, razlika_cifara, suma_kvadrata; 
   
   /* Ucitavamo vrednost sa ulaza */
   printf("Unesite cetvorocifreni broj: ");
-  scanf("%d", &n);
+  scanf("%u", &n);
   
   /* Izdvajamo cifre broja i to redom: j -jedinice, 
      d - desetice, s - stotine i h - hiljade */
@@ -31,14 +31,14 @@ int main(){
   
   /* Odredjujemo broj zapisan istim ciframa ali u obrnutom redosledu */
   broj_obrnuto= j*1000+d*100+s*10+h;
-  printf("Broj u obrnutom poretku: %d\n", broj_obrnuto);
+  printf("Broj u obrnutom poretku: %u\n", broj_obrnuto);
   
   
   /* Odredjujemo broj u kojem su cifra jedinica i 
      cifra stotina zamenile mesta 
   */
   broj_zamena=h*1000+j*100+d*10+s;
-  printf("Broj sa zamenjenom cifrom jedinica i stotina: %d\n", broj_zamena);
+  printf("Broj sa zamenjenom cifrom jedinica i stotina: %u\n", broj_zamena);
   
   
   return 0;  
