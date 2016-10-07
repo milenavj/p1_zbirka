@@ -2,10 +2,21 @@
 #include <stdio.h>
 int main()
 {
-   int x;
-   int cifra_jedinice;
-   int cifra_desetice;
-   int cifra_stotine;
+   /* S obzirom da broj treba da bude pozitivan, 
+      koristimo tip unsigned. 
+   */
+   unsigned x;
+   
+   /*
+      Promenljive koje cuvaju cifre treba da budu
+      najmanjeg celobrojnog tipa jer nece sadrzati
+      druge vrednosti osim jednocifrenih celih 
+      brojeva. Zbog toga za njih biramo tip char.
+      
+   */
+   char cifra_jedinice;
+   char cifra_desetice;
+   char cifra_stotine;
    
    printf("Unesi trocifreni broj:");
    scanf("%u", &x);
@@ -42,6 +53,15 @@ int main()
    cifra_desetice = (x/10)%10;
    cifra_stotine = x/100;
    
+   /*
+      Ako zelimo da odstampamo numericku vrednost promenljive
+      tipa char, koristimo format %d. Ako zelimo da odstampamo
+      karakter ciji je ASCII kod jednak vrenosti te promenljive,
+      koristimo %c (na primer, ako bismo promenljivu cija je
+      vrednost 65 stampali pomocu formata %d, ispis bi bio 65, ali
+      ako bismo je stampali pomocu formata %c, ispis bi bio A). U
+      ovom slucaju nam je neophodna numericka vrednost. 
+   */
    printf("jedinica %d, desetica %d, stotina %d\n", cifra_jedinice, 
                                                     cifra_desetice, 
                                                     cifra_stotine);

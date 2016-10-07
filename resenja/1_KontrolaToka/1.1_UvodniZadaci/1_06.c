@@ -2,15 +2,15 @@
 #include <stdio.h>
 int main()
 {
-   int x;
-   int obrnuto_x;
+   unsigned x;
+   unsigned obrnuto_x;
    
-   int cifra_jedinice;
-   int cifra_desetice;
-   int cifra_stotine;
+   char cifra_jedinice;
+   char cifra_desetice;
+   char cifra_stotine;
    
    printf("Unesi trocifreni broj:");
-   scanf("%d", &x);
+   scanf("%u", &x);
    
    cifra_jedinice = x%10;
    cifra_desetice = (x/10)%10;
@@ -20,7 +20,7 @@ int main()
                cifra_desetice*10 + 
                cifra_stotine;
    
-   printf("Obrnuto: %d\n", obrnuto_x);
+   printf("Obrnuto: %u\n", obrnuto_x);
    
    return 0;
 }

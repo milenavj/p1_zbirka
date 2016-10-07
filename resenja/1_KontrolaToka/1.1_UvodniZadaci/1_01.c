@@ -1,7 +1,7 @@
 /*
 
-   Navedeni program sastoji definise funkciju koja se zove main. 
-   Program moze da sadrzi vise funkcija, 
+   Navedeni program sastoji se iz definicije jedne funkcije 
+   i ona se zove main. Program moze da sadrzi vise funkcija, 
    ali obavezno mora da sadrzi funkciju koja se zove main i 
    izvrsavanje programa uvek pocinje od te funkcije. Pored naziva, 
    zapis svake funkcije cine i povratna vrednost funkcije (u ovom 
@@ -13,14 +13,13 @@
    Unutar tela funkcije navode se naredbe. Unutar navedenog programa 
    postoji jedna naredba koja predstavlja poziv funkcije printf. 
    Funkcija printf sluzi za ispis teksta na standardni izlaz (obicno 
-   ekran). Deklaracija ove funkcije data je u zaglavlju stdio.h
-   koje je potrebno ukljuciti direktivom #include na pocetku
-   samog programa.
+   ekran). Definicija ove funkcije data je u takozvanoj standardnoj 
+   biblioteci funkcija stdio.h. Da bismo mogli da koristimo funkcije 
+   ove biblioteke, pre main funkcije navodimo #include<stdio.h>.
    
    Da bismo pokrenuli program, prvo ga moramo prevesti u izvrsnu 
    datoteku. Na primer, ako je navedeni program sacuvan kao zdravo.c, 
-   ako koristimo gcc kompajler koji je sastavni deo standardnih Linux
-   distribucija, prevodjenje iz komandne linije se vrsi narednom naredbom:
+   prevodjenje se vrsi naredbom:
 
       gcc zdravo.c
 
@@ -39,12 +38,8 @@
 int main()
 {
   /* printf: funkcija pomocu koje se vrsi ispis */
-  /* Specijalni karakter \n : prelazak u novi red */
-  /* Svaka naredba zavrsava se karakterom ; */
+  /* oznaka \n : prelazak u novi red */
   printf("Zdravo svete!\n");
 
-  /* Povratna vrednost 0 se obicno koristi da oznaci
-     da je prilikom izvrsavanja programa sve proslo 
-     u redu. */
-  return 0; 
+  return 0;
 }

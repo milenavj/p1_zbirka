@@ -3,45 +3,46 @@
 
 int main()
 {
-      
-   int x, y, rezultat; /* Promenljive istog tipa mogu se deklarisati jedna za drugom. */
+   /* Promenljive istog tipa mogu se deklarisati jedna za drugom. */   
+   int x, y, rezultat; 
    
    
-   printf("Unesi vrednost celobrojne promenljive x:");
-   scanf("%d", &x); /* "%d" - specifikator tipa koji treba uneti (%d za int) 
-                       &x   - adresa promenljive x
-                    */
-   
-   printf("Unesi vrednost celobrojne promenljive y:");
+   printf("Unesi vrednost celobrojne promenljive x: ");
+   scanf("%d", &x); 
+                                              
+   printf("Unesi vrednost celobrojne promenljive y: ");
    scanf("%d", &y);
    
-   /* 1) ispis unetih vrednosti */
-   printf("x=%d, y=%d\n", x,y); /* umesto prvog %d bice ispisana vrednost promenljive x */
-                                /* umesto drugog %d bice ispisana vrednost promenljive y */
+   /* Dodeljujemo vrednost promenljivoj rezultat. */
+   rezultat = x+y; 
+   printf("%d + %d = %d\n", x,y,rezultat);
    
-   /* 2) ispis zbira */
-   rezultat = x+y; /* dodelimo vrednost promenljivoj rezultat */
-   printf("Zbir je %d\n", rezultat);
+   /* 
+      Mozemo ispisivati direktno vrednost izraza x-y i bez 
+      njegovog dodeljivanja posebnoj promenljivoj 
+   */
+   printf("%d - %d = %d\n",x,y,x-y);                                     
+   printf("%d * %d = %d\n",x,y,x*y);
    
-   /* 3) ispis razlike */ 
-   printf("Razlika je %d\n",x-y); /* mozemo ispisivati direktno vrednost izraza x-y i bez */
-                                 /* njegovog dodeljivanja posebnoj promenljivoj */
-                                 
-   
-   /* 4) ispis proizvoda */
-   printf("%d*%d=%d\n",x,y,x*y);
-   
-   /* 5) ispis kolicnika */
-   rezultat = x/y; 
-   printf("celobrojno deljenje: %d/%d=%d\n",x,y,rezultat); /* promenljiva rezultat je celobrojna (int) */
-                                                           /* ona ne moze sadrzati realan broj */
-                                                           /* ukoliko je x=7, a y=2, tada ce nakon naredbe */
-                                                           /* rezultat=x/y; promenljiva rezultat imati vrednost 2 */
-                                                           /* a ne 2.5 */
+   /*
+      Kada bilo koju artimeticku operaciju primenimo na dve 
+      promenljive istog tipa (u ovom slucaju dva celobrojne 
+      promenljive), rezultat ce biti tog istog tipa. Specijalno, 
+      za operaciju deljenja: kada operator / primenimo na dva 
+      celobrojna argumenta x i y, kao rezultat dobijemo ceo deo 
+      pri deljenju broja x brojem y, a ne kolicnik. 
+      Na primer, rezultat primene operatora / na  7 i 2 
+      je 3, a ne 3.5.      
+   */
+   printf("%d / %d = %d\n",x,y,x/y);                          
+                                                          
+  /* 
+     Operator % izracunava ostatak pri celobrojnom deljenju 
+     dve celobrojne promenljive. Na primer, 7%2 ima vrednost 1 
+     (jer je 7=3*2+1).
+     Da bismo odstampali karakter %, u naredbi printf pisemo %% 
+   */                                                                                                                                                                                                                                           
+   printf("%d %% %d = %d\n",x,y,x%y);
                                                            
-   printf("ostatak pri celobrojnom deljenju: %d %% %d=%d\n",x,y,x%y);
-                                                           /* operator % izracunava ostatak pri celobrojnom deljenju */
-                                                           /* 7%2 ima vrednost 1 (jer je 7=3*2+1) */
-                                                           /* oznaku % u naredbi printf pisemo %% */
    return 0;
 }
