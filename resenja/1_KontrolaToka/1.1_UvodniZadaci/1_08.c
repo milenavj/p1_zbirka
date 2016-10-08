@@ -41,6 +41,8 @@ int main()
    x=x%100;
    printf("%u*50 +",x/50);
    x=x%50;
+   printf("%u*20 +", x/20);
+   x=x%20;
    printf("%u*10 +", x/10);
    x=x%10;
    printf("%u*1\n", x);
