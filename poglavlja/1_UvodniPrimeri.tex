@@ -97,10 +97,6 @@ i ostatak pri deljenju prvog broja drugim brojem.
 
 %\subsection{Prodavnica}
 
-\komentarJ{Ovde sam malo izmenila redosled: prvo sam navela zadatak sa kusurom jer za njega imamo resenje, a posle navela zadatke sa ukupnom cenom dva artikla i ukupnom cenom za datu cenu jednog artikla i kolicinu. Druga dva zadatka su laksa, svode se samo na sabiranje i oduzimanje i za njih mislim da nije neophodno da imaju resenje. Ovaj prvi zadatak je resen i iskomentarisan i nakon toga mogu sami.}
-
-\komentarM{Ipak sam vratila na staro, jer je dato resenje koje povezuje apstraktan zadatak (sabiranje) sa konkretnim zadatkom (dva artikla). Obrisi ova dva komentara ako ti je to ok. Obrati paznju da su data dva resenja u obliku uputstva, a ne u obliku koda, niti treba da budu u obliku koda.}
-
 
 \begin{Exercise}[label=p1_005]
 Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate cene dva kupljena artikla. 
@@ -256,9 +252,6 @@ promenljive}.
 
 %\subsection{Cifre}
 
-\komentarJ{To je konceptualno pitanje: da li zelimo zadatke koji su podeljeni po oblastima i unutar oblasti po tezini ili zelimo mesane zadatke koji su klasifikovani po tezini. Ja sam za drugu opciju i mislim da je zadatak sa ciframa na pravom mestu. Necu insistirati, ako istrajavas slobodno ga premesti.}
-
-\komentarM{Obrisi ovo, ako se slozis. Dakle, bas i ja mislim da je konceptualno pitanje: na oba mesta se rade iste stvari, samo je na prvom mestu deljenje sa 10, 100 itd, a na drugom sa 5000, 2000 itd. Konceptualno radimo istu stvar, samo u razlicitim kontekstima. Zato mislim da to treba da bude jedno za drugim, dakle nije bitan kontekst vec koncept. Prvo izdvajamo cifre trocifrenog broja, onda izdvajamo novcanice. Zatim radimo izmene na brojevima - one obuhvataju izdvajanje + kombinovanje dobijenih brojeva pa je to konceptualno teze i ide kasnije.}
 
 %\komentarM{Da, imalo bi smisla to ujednaciti. Mozda prirodan broj ako se podrazumeva da moze da bude i nula? Pozitivan broj moze da bude realan, i zato je bolje reci pozitivan prirodan broj, ukoliko nam je za ulaz bitno da nije nula. Dakle, rekla bih prirodan ili pozitivan prirodan, nikako samo pozitivan!}
 
@@ -288,20 +281,18 @@ Napisati program koji za uneti pozitivan trocifreni broj na standardni izlaz isp
 
 
 \begin{Exercise}[label=v1.1_08] 
-Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 5000, 2000, 1000, 200, 100, 50, 10 i 1 dinar. \napomena{Pretpostaviti da je cena proizvoda pozitivan ceo broj.}
-
-\komentarM{Zaboravljena novcanica od 20 dinara! Dodati i u tekst zadatka (ja sam dodala sve ostale koje su dodate u resenje i u test primere).}
+Napisati program koji za unetu cenu proizvoda ispisuje najmanji broj novčanica koje je potrebno izdvojiti prilikom plaćanja proizvoda. Na raspolaganju su novčanice od 5000, 2000, 1000, 200, 100, 50, 20, 10 i 1 dinar. \napomena{Pretpostaviti da je cena proizvoda pozitivan ceo broj.}
 
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite cenu proizvoda:}\ulaz{8367}#
-#\izlaz{8347=1*5000+ 1*2000 +1*1000 +0*500 +1*200 +1*100 +0*50 +4*10 +7*1}#
+#\izlaz{8367=1*5000+ 1*2000 +1*1000 +0*500 +1*200 +1*100 +1*50 +0*20 +1*10 +7*1}#
 \end{upotreba}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite cenu proizvoda:}\ulaz{934}#
-#\izlaz{934=0*5000+ 0*2000 +0*1000 +1*500 +2*200 +0*100 +0*50 +3*10 +4*1}#
+#\izlaz{934=0*5000+ 0*2000 +0*1000 +1*500 +2*200 +0*100 +0*50 +1*20 +1*10 +4*1}#
 \end{upotreba}
 \end{maxitest}
 \linkresenje{v1.1_08}
@@ -402,10 +393,25 @@ Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica u
 
 
 \begin{Exercise}[label=p1_16]
-Sa standardnog unosa se unosi pozitivan prirodan broj $n$ i cifre $c_1$ i $c_2$. Napisati program ispisuje broj dobijen umetanjem cifara $c_1$ i $c_2$ na mesta stotina i hiljada broja $n$. 
-\napomena{Za neke ulazne podatke može se dobiti neočekivan rezultat zbog prekoračenja, što ilustruje test primer broj xx.}
+Sa standardnog unosa se unosi pozitivan prirodan broj $n$ i pozitivan dvocifreni broj $m$. Napisati program ispisuje broj dobijen umetanjem broja $m$ između cifre stotina i cifre hiljada broja $n$. 
+\napomena{Za neke ulazne podatke može se dobiti neočekivan rezultat zbog prekoračenja, što ilustruje test primer broj 2.}
 
-\komentarM{Ispravljano resenje, proveriti da nesto nisam zabrljala. Dodati test primere kao i test priemr za prekoracenje.}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite pozitivan prirodan broj:}\ulaz{12345}#
+#\izlaz{Unesite pozitivan dvocifreni broj:}\ulaz{67}#
+#\izlaz{Novi broj je 1267345}#
+\end{upotreba}
+\end{miditest}  
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite pozitivan prirodan broj:}\ulaz{50000000}#
+#\izlaz{Unesite pozitivan dvocifreni broj:}\ulaz{12}#
+#\izlaz{Novi broj je 705044704}#
+\end{upotreba}
+\end{miditest}   
 
 \linkresenje{p1_16}
 \end{Exercise}
@@ -647,7 +653,7 @@ Napisati program koji za unetu realnu vrednost dužine stranice jednakostraničn
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{1}
+\begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite duzine stranica trougla:}\ulaz{4.3 9.7 8.8}#
 #\izlaz{Obim:  22.80}#
@@ -663,7 +669,25 @@ Napisati program koji za unetu realnu vrednost dužine stranice jednakostraničn
 
 \begin{Exercise}[label=p1_13] 
 Pravougaonik čije su stranice paralelne koordinatnim osama zadat je svojim realnim koordinatama suprotnih temena (gornje levo i donje desno teme). Napisati program koji ispisuje njegov obim i površinu zaokružene na dve decimale. 
-\komentarJ{Dodati test primere.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite koordinate gornjeg levog temena:\\}\ulaz{4.3 5.8}#
+#\izlaz{Unesite koordinate donjeg desnog temena:\\}\ulaz{6.7 2.3}#
+#\izlaz{Obim: 5.90}#
+#\izlaz{Povrsina: 8.40}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite koordinate gornjeg levog temena:\\}\ulaz{-3.7 8.23}#
+#\izlaz{Unesite koordinate donjeg desnog temena:\\}\ulaz{-0.56 2}#
+#\izlaz{Obim: 9.37}#
+#\izlaz{Povrsina: 19.56}#
+\end{upotreba}
+\end{miditest}
 %\linkresenje{p1_13}
 \end{Exercise}
 %\begin{Answer}[ref=p1_13]
@@ -734,18 +758,23 @@ Napisati program koji pomaže moleru da izračuna površinu zidova prostorije ko
 
 \begin{Exercise}[label=p1.1_09] 
 Napisati program koji za unete pozitivne prirodne brojeve $x$, $c$ i $p$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ 
-na poziciji $p$. \napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$ manji od ukupnog broja cifara broja $x$. Numeracija cifara počinje od nule, odnosno cifra namanje težine nalazi se na nultoj poziciji.} \uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}\\
-
-\komentarM{Izmenila bih da numeracija cifara pocinje od 0, jer se to uklapa sa tezinskim faktorom i nekako je logicnije. Izmenjeno. Izmeniti i resenja. }
-
+na poziciju $p$. \napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$ manji od ukupnog broja cifara broja $x$. Numeracija cifara počinje od nule, odnosno cifra najmanje težine nalazi se na nultoj poziciji.} \uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite redom x, c i p:}\ulaz{140 2 2}#
+#\izlaz{Unesite redom x, c i p:}\ulaz{140 2 1}#
 #\izlaz{Rezultat je: 1420}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite redom x, c i p:}\ulaz{12345 9 2}#
+#\izlaz{Rezultat je: 129345}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{p1.1_09}
 \end{Exercise}
 \begin{Answer}[ref=p1.1_09]
