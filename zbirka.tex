@@ -52,7 +52,13 @@
 \input{podesavanja/hyphenation.tex}
 
 \newif\ifpdf
-\pdftrue       %postaviti na false za izbacivanje linkova na resenja
+\pdffalse       %postaviti na false za izbacivanje linkova na resenja
+%\pdftrue
+
+%za ukljucivanje resenja u materijal
+\newif\ifresenja
+\resenjafalse    %postaviti na false za izbacivanje resenja
+%\resenjatrue    
 
 \usepackage{fancyhdr}
 \usepackage{amsmath}
@@ -69,11 +75,13 @@
 
 \pagenumbering{roman}
 
+\ifresenja
 \input{poglavlja/P1_naslovna.tex}
+\fi
 
 \tableofcontents
 
-\input{poglavlja/P2_predgovor.tex}
+%\input{poglavlja/P2_predgovor.tex}
 
 \def\chaptername{}
 

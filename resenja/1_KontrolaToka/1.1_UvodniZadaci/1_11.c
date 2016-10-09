@@ -1,37 +1,50 @@
+
 #include <stdio.h>
 
 int main()
 {
-
-   unsigned broj, novibroj;
-   unsigned levi, desni, m;
+   unsigned x;
+   printf("Unesi cenu:");
+   scanf("%u", &x);
    
-   printf("Unesite pozitivan prirodan broj: ");
-   scanf("%u", &broj);
-   printf("Unesite pozitivan dvocifreni broj:");
-   scanf("%u", &m);
-   
-   /*
-      Na primer, za unete broj 12345 i 67, potrebno je ubaciti 
-      67 izmedju cifre hiljade (2) i cifre stotine (3). Rezultat 
-      je 12|67|345. Potrebno je da razdvojimo uneti broj na levi 
-      i desni deo: 12 i 345 i izmedju njih umetnemo broj m
+   /* 
+      Na primer, neka je uneta cena 8347 dinara. 
+      Vrednost x/5000 predstavlja broj novcanica 
+      od 5000 dinara pomocu kojih mozemo sakupiti
+      celokupnu sumu. 8347 celobrojno deljeno sa 
+      5000 (operacija / nad celim brojevima) iznosi 1.  
    */
-   
-   levi = broj/1000;
-   desni = broj%1000;
+   printf("%u=%u*5000+ ", x,x/5000); 
+   /*
+      Potrebna nam je 1 novcanica od
+      5000 dinara, a koliko nam je potrebno ostalih
+      novcanica? Za to moramo pristupiti preostaloj 
+      sumi. Jedan nacin je da nadjemo ostatak pri deljenju
+      unete vrednosti x (u primeru 8347) sa 5000 (operacija %). 
+      On iznosi 3347. Ovu vrednost dodeljujemo promeljivoj x.
+   */
+   x=x%5000;
    
    /*
-      Kada levi deo pomnozimo sa 100 000, dobijamo 1 200 000
-      Kada m pomnozimo sa 1000, dobijamo              67 000
-      Dobijene vrednosti saberemo sa desnim delom        345
-                                                   ---------
-      Konacan rezultat:                            1 267 345
-      
-   */      
-   novibroj = levi*100000+m*1000+desni;
-   
-   printf("Novi broj je %u\n", novibroj);   
-
-   return 0; 
+      Nastavljamo postupak trazenjem broja novcanica 
+      od 2000 dinara i redom za ostale monete.  
+   */
+   printf("%u*2000 +", x/2000);
+   x=x%2000;
+   printf("%u*1000 +", x/1000);
+   x=x%1000;
+   printf("%u*500 +", x/500);
+   x=x%500;
+   printf("%u*200 +", x/200);
+   x=x%200;
+   printf("%u*100 +", x/100);
+   x=x%100;
+   printf("%u*50 +",x/50);
+   x=x%50;
+   printf("%u*20 +", x/20);
+   x=x%20;
+   printf("%u*10 +", x/10);
+   x=x%10;
+   printf("%u*1\n", x);
+   return 0;
 }

@@ -1,48 +1,40 @@
-
-#include<stdio.h>
+#include <stdio.h>
 
 int main()
 {
-   /* Promenljive istog tipa mogu se deklarisati jedna za drugom. */   
-   int x, y, rezultat; 
-   
-   
-   printf("Unesi vrednost celobrojne promenljive x: ");
-   scanf("%d", &x); 
-                                              
-   printf("Unesi vrednost celobrojne promenljive y: ");
-   scanf("%d", &y);
-   
-   /* Dodeljujemo vrednost promenljivoj rezultat. */
-   rezultat = x+y; 
-   printf("%d + %d = %d\n", x,y,rezultat);
-   
-   /* 
-      Mozemo ispisivati direktno vrednost izraza x-y i bez 
-      njegovog dodeljivanja posebnoj promenljivoj 
-   */
-   printf("%d - %d = %d\n",x,y,x-y);                                     
-   printf("%d * %d = %d\n",x,y,x*y);
-   
-   /*
-      Kada bilo koju artimeticku operaciju primenimo na dve 
-      promenljive istog tipa (u ovom slucaju dva celobrojne 
-      promenljive), rezultat ce biti tog istog tipa. Specijalno, 
-      za operaciju deljenja: kada operator / primenimo na dva 
-      celobrojna argumenta x i y, kao rezultat dobijemo ceo deo 
-      pri deljenju broja x brojem y, a ne kolicnik. 
-      Na primer, rezultat primene operatora / na  7 i 2 
-      je 3, a ne 3.5.      
-   */
-   printf("%d / %d = %d\n",x,y,x/y);                          
-                                                          
   /* 
-     Operator % izracunava ostatak pri celobrojnom deljenju 
-     dve celobrojne promenljive. Na primer, 7%2 ima vrednost 1 
-     (jer je 7=3*2+1).
-     Da bismo odstampali karakter %, u naredbi printf pisemo %% 
-   */                                                                                                                                                                                                                                           
-   printf("%d %% %d = %d\n",x,y,x%y);
-                                                           
-   return 0;
+     Svaka promenljiva u programu mora biti deklarisana na 
+     pocetku main funkcije. Deklaracija se sastoji iz naziva 
+     promenljive (u ovom slucaju n) ispred kog se navodi tip 
+     promenljive (u ovom slucaju celobrojni tip, int). 
+  */
+  
+  int n; 
+  
+  /* 
+     Vrednost promenljive se ucitava pomocu funkcije scanf koja 
+     je, kao i funkcija printf, sastavni deo standardne biblioteke. 
+     Argumenti funkcije scanf koji se navode u zagradama 
+     ( i ) i razdvajaju zarezima, oznacavaju sledece:
+     "%d" - format za tip podatka koji ce biti ucitan 
+            (%d za int, svaki tip ima svoj format) 
+      &n  - adresa promenljive x (o adresama ce biti vise 
+            reci u narednim zadacima).
+      
+     Ucitavanje se vrsi sa standardnog ulaza (obicno tastatura).
+   */
+  printf("Unesite ceo broj: ");
+  scanf("%d", &n);                                            
+  
+  /* 
+     Funkcija printf ispisuje tekst "Uneti broj: ", a nakon toga, 
+     umesto formata %d, ispisuje vrednost promenljive n. 
+  */
+  printf("Uneti broj: %d\n", n);
+  /* Umesto formata %d, ispisuje vrednost izraza n*n. */
+  printf("Kvadrat: %d\n", n*n); 
+  /* Umesto formata %d, ispisuje vrednost izraza n*n*n. */                                   
+  printf("Kub: %d\n", n*n*n);                                         
+  
+return 0;
 }

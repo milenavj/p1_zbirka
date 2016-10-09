@@ -8,7 +8,7 @@ int main()
 
   /* Ucitavamo potrebne podatke */
   printf("Unesite duzine stranica pravougaonika: ");
-  scanf("%f %f", &a, &b);
+  scanf("%f%f", &a, &b);
   
   /* Obim */
   obim=2*(a+b);

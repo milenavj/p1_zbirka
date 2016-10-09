@@ -1,26 +1,31 @@
 
 #include <stdio.h>
+
 int main()
 {
-   unsigned x;
-   unsigned obrnuto_x;
-   
-   char cifra_jedinice;
-   char cifra_desetice;
-   char cifra_stotine;
-   
-   printf("Unesi trocifreni broj:");
-   scanf("%u", &x);
-   
-   cifra_jedinice = x%10;
-   cifra_desetice = (x/10)%10;
-   cifra_stotine = x/100;
-   
-   obrnuto_x = cifra_jedinice*100 + 
-               cifra_desetice*10 + 
-               cifra_stotine;
-   
-   printf("Obrnuto: %u\n", obrnuto_x);
-   
-   return 0;
+  /*
+     S obzirom da su sve promenljive pozitivini celi brojevi,
+     koristimo tip unsigned int (skraceno unsigned)
+  */
+  unsigned cena;
+  unsigned kolicina; 
+  unsigned iznos; 
+  unsigned kusur;
+  
+  /* 
+     Ucitavamo potrebne podatke. Unutar jednog scanf-a mozemo 
+     ucitati vise podataka odjednom. Za svaki treba navesti 
+     odgovarajuci format za tip podataka koji se unosi
+     (%u za unsigned). 
+  */
+  printf("Unesite cenu, kolicinu i iznos: ");
+  scanf("%u%u%u", &cena, &kolicina, &iznos);
+  
+  /* Izracunavamo kusur: */
+  kusur=iznos - kolicina*cena;
+  
+  /* I ispisujemo trazenu vrednost: */
+  printf("Kusur je %u dinara.\n", kusur);
+ 
+  return 0;
 }

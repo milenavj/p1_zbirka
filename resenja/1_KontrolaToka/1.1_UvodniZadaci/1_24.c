@@ -7,13 +7,13 @@ int main(){
   
   /* Ucitavamo potrebne podatke */
   printf("Unesite duzine stranica trougla: ");
-  scanf("%f %f %f", &a, &b, &c);
+  scanf("%f%f%f", &a, &b, &c);
   
   /* Obim */
   obim=a+b+c;
   
   /* Povrsina - koristicemo Heronov obrazac*/
-  s=obim/2;
+  s=obim/2; 
   povrsina=sqrt(s*(s-a)*(s-b)*(s-c));
   
   /* Ispisujemo trazene vrednosti */
