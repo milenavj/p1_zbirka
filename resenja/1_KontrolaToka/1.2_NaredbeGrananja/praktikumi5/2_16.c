@@ -1,5 +1,3 @@
-/* Napisati program koji za korektno unet datum u formatu dan.mesec.godina.
-ispisuje datum prethodnog dana. */
 
 #include <stdio.h>
 
@@ -29,7 +27,8 @@ int main(){
             prethodni_godina=godina-1;
         }
         
-        /* Analiziramo redni broj meseca kako bi odredili tacan dan*/
+        /* Analiziramo redni broj meseca kako bi odredili 
+           tacan dan*/
         switch(prethodni_mesec){
           case 1: 
           case 3: 
@@ -41,8 +40,8 @@ int main(){
             prethodni_dan=31;
             break;
           case 2:
-            if((prethodni_godina%4==0 && prethodni_godina%100!=0) ||
-                    prethodni_godina%400==0)
+            if((prethodni_godina%4==0 && prethodni_godina%100!=0) 
+                || prethodni_godina%400==0)
                 prethodni_dan=29;
             else
                 prethodni_dan=28;

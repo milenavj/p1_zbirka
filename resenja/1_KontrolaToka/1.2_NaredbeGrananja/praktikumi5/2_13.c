@@ -1,6 +1,3 @@
-/* Napisati program koji za uneti broj n (1 ≤ n ≤ 7) koji predstavlja redni broj
-dana u nedelji ispisuje ime dana. U slucaju pogresnog unosa ispisati odgovaraju
-poruku. */
 
 #include <stdio.h>
 
@@ -11,7 +8,8 @@ int main(){
   printf("Unesite broj: ");
   scanf("%d", &dan);
   
-  switch(dan){
+  switch(dan)
+  {
     case 1:
       printf("ponedeljak\n");
       break;

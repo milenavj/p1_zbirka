@@ -1,5 +1,3 @@
-/* Napisati program koji za uneti datum u formatu dan.mesec.godina. proverava da
-li je korektan. */
 
 #include <stdio.h>
 
@@ -48,7 +46,8 @@ int main(){
       case 6:
       case 9:
       case 11:
-        /* Dozvoljeni broj dana za april, jun, septembar i novembar je 30 */
+        /* Dozvoljeni broj dana za april, jun, septembar i 
+           novembar je 30 */
         dozvoljen_broj_dana=30;
         break;
     }
@@ -58,7 +57,8 @@ int main(){
       return 0;
     }
    
-    /* Sve provere su ispunjene pa zakljucujemo da je datum korektan */
+    /* Sve provere su ispunjene pa zakljucujemo 
+       da je datum korektan */
     printf("Ispravan datum!\n");
     
     

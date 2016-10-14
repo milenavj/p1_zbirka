@@ -1,25 +1,22 @@
-/* Sa standardnog ulaza se unosi cetvorocifreni pozitivan broj. Napisati program
-koji racuna i ispisuje proizvod parnih cifara datog broja. Ukoliko uneti broj
-nije pozitivna cetvorocifrena vrednost ispisati poruku Greska!. */
 
 #include <stdio.h>
 
-int main(){
-  int n, j, d, s, h;
-  int broj_parnih, proizvod_parnih;
+int main()
+{
+    int n, j, d, s, h;
+    int broj_parnih, proizvod_parnih;
   
-  /* Ucitavamo broj */
-  printf("Unesite broj: ");
-  scanf("%d", &n);
-  
-  /* Proveravamo da li je unet cetvorocifreni broj */
-  if(n<1000 || n>9999){
-    /* Ako nije, prijavljujemo gresku */
-    printf("Greska!\n");
-  }
-  else{
+    printf("Unesite cetvorocifreni broj: ");
+    scanf("%d", &n);
+
+    n = abs(n);  
     
-    /* Ako jeste: */
+    if(n<1000 || n>9999)
+    {
+      printf("Broj nije cetvorocifren.\n");
+      return -1;    
+    }
+  
     
     /* Izdvajamo cifre broja:
       j -jedinice, d - desetice, s - stotine i h - hiljade 
@@ -61,13 +58,13 @@ int main(){
     /* Proveravamo da li u zapisu broja ima parnih cifara i ispisujemo
       rezultat */
     if(broj_parnih==0){
-      printf("Proizvod parnih cifara: 0\n");
+      printf("Nema parnih cifara.\n");
     }
     else{
       printf("Proizvod parnih cifara: %d\n", proizvod_parnih);
     }
     
-  }
+  
   
   return 0;
   

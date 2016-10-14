@@ -1,23 +1,34 @@
-/* Sa standardnog ulaza se unosi ceo cetvorocifren broj. Napisati program koji
-ispisuje njegovu najvecu cifru na standardni izlaz. */
 
 #include <stdio.h>
 
-int main(){
-  int n, j, d, s, h, max;
+int main()
+{
+    int n, j, d, s, h, max;
   
-  /* Ucitavamo broj */
-  printf("Unesite broj: ");
-  scanf("%d", &n);
+    /* Ucitavamo broj */
+    printf("Unesite cetvorocifreni broj: ");
+    scanf("%d", &n);
   
-  /* Proveravamo da li se radi o cetvorocifrenom broju */
-  if(n<1000 || n>9999){
-    /* Ako broj nije cetvorocifren, prijavljujemo gresku */
-    printf("Greska: Niste uneli cetvorocifren broj!\n");
-  }
-  else{
     
-    /* Ako je broj cetvorocifren, izdvajamo cifre broja:
+    /*
+       Za slucaj da je broj negativan, uzimamo apsolutnu
+       vrednost unetog broja   
+    */
+    n = abs(n);
+    /* 
+       Ako uneti broj nije cetvorocifren, ispisujemo poruku
+       o gresci i prekidamo izvrsavanje programa.    
+    */    
+    if(n<1000 || n>9999)
+    {
+      printf("Greska: Niste uneli cetvorocifren broj!\n");
+      return -1;
+    }
+    
+    
+  
+    /* 
+      Ako je broj cetvorocifren, izdvajamo cifre broja:
       j -jedinice, d - desetice, s - stotine i h - hiljade 
     */
     j=n%10;
@@ -27,10 +38,13 @@ int main(){
     
     /* Odredjujemo maksimalnu cifru */
     max=j;
+    
     if(d>max)
       max=d;
+    
     if(s>max)
       max=s;
+    
     if(h>max)
       max=h;
     
@@ -48,7 +62,5 @@ int main(){
     /* Ispisujemo rezultat */
     printf("Najveca cifra je: %d\n", max);
   
-  }
-  
-  return 0;
+    return 0;
 }

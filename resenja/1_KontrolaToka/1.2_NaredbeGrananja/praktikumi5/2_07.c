@@ -1,5 +1,3 @@
-/* Sa standardnog ulaza se unosi 5 karaktera. Ispisati na izlazu broj unetih
-malih slova. */
 
 #include <stdio.h>
 

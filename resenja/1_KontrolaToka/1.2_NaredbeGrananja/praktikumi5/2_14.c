@@ -1,12 +1,8 @@
-/* Sa standardnog ulaza se ucitavaju dva cela broja i jedan od karaktera +, -,
-*, / ili % koji predstavlja operaciju koju treba izvrsiti nad unetim brojevima.
-Napisatiti program koji koriscenjem switch naredbe analizira o kom karakteru je
-rec i na standardni izlaz ispisuje rezultat. U slucaju pogresnog unosa ispisati
-odgovaraju ́u poruku. */
 
 #include <stdio.h>
 
-int main(){
+int main()
+{
  
   char op;
   int x, y;
