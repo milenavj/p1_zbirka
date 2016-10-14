@@ -1,16 +1,19 @@
 
-/*
-Napisati program koji poziva korisnika da unese jedan karakter i ispisuje
-da li je uneti karakter samoglasnik.
-*/
-
 #include <stdio.h>
 
 int main()
 {
 	char c;
-	printf("Unesi jedan karakter:");
+	printf("Unesite jedan karakter:");
 	scanf("%c", &c);
+	
+	/*
+	   Da bismo utvrditi da li je karakter samoglasnik,
+	   neophodno je proveriti da li odgovara nekom od
+	   sledecih karaktera: A,E,I,O,U,a,e,i,o,u
+	   
+	*/
+	
 	switch(c)
 	{
 		case 'A' : 
@@ -22,9 +25,9 @@ int main()
 		case 'e' : 
 		case 'i' : 
 		case 'o' : 
-		case 'u' : printf("Uneli ste samoglasnik\n");
+		case 'u' : printf("Uneti karakter je samoglasnik\n");
 				   break;
-		default : printf("Niste uneli samoglasnik\n");
+		default : printf("Uneti karakter nije samoglasnik\n");
 				  break;  
 	}
 

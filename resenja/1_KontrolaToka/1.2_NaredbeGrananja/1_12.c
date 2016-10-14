@@ -1,20 +1,22 @@
-/*
-Napisati program koji za uneti dan i mesec ispisuje godisnje doba kom
-pripadaju. Mozemo podrazumevati da je unos korektan. 
-*/
 
 #include <stdio.h>
 
 int main()
 {
   int d,m;
-  printf("Unesi dan i mesec");
+  printf("Unesite dan i mesec");
   scanf("%d%d",&d,&m);
   
-  switch(m) /* argument u naredbi switch mora biti celobrojna promenljiva */
+  /* 
+    Argument u naredbi switch mora biti celobrojna promenljiva,
+    dok argument u naredbi case mora biti celobrojna 
+    konstanta.   
+  */
+  switch(m) 
   {
-     case 1: /* argument u naredbi case mora biti celobrojna konstanta */
-     case 2: /* ispitujemo da li je m==2 */
+     /* Ispitujemo da li vazi m==1 ili m==2*/
+     case 1: 
+     case 2: 
         printf("zima\n");
         break;
      case 3:
@@ -29,13 +31,13 @@ int main()
         break;
      case 6:
         if (d<21)
-          printf("prolece");
+          printf("prolece\n");
         else
-          printf("leto");
+          printf("leto\n");
         break;
      case 7:
      case 8:
-        printf("leto");
+        printf("leto\n");
         break;
      case 9:
         if (d<23)

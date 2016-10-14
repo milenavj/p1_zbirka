@@ -8,7 +8,7 @@ int main()
     if (br1 > 999 || br1 < 100 || br2 > 999 || br2 < 100 
             || br3 > 999 || br3 < 100) 
     {
-        printf("-1");
+        printf("Nekorektan unos\n");
         return -1;
     }
 

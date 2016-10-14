@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h> // Potrebno za exit funkciju
 
-// Za unetu godinu i mesec ispisuje se naziv meseca i koliko dana ima u tom mesecu te godine
 
 int main()
 {
@@ -17,11 +16,13 @@ int main()
     if(godina < 0)
     {
         printf("Lose uneta godina!\n");
-        exit(EXIT_FAILURE);
+        return -1;
     }
     
-    if((godina % 4 == 0 && godina % 100 != 0) || godina % 400 == 0) // Provera da li je godina prestupna,
-        prestupna = 1;                                              // bitno za mesec februar
+    /* Provera da li je godina prestupna, zbog februara */
+    if((godina % 4 == 0 && godina % 100 != 0) 
+                        || godina % 400 == 0) 
+        prestupna = 1;                                              
     else
         prestupna = 0;
 

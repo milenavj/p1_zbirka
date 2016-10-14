@@ -9,7 +9,7 @@ int main()
     int absBroj = broj < 0 ? -broj : broj;
     if ( absBroj <= 999 || absBroj >= 10000)
     {
-        printf("-1");
+        printf("Broj nije cetvorocifren.");
         return -1;
     }
 

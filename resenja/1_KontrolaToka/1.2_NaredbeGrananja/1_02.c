@@ -1,7 +1,3 @@
-/*
-Napisati program koji za uneti ceo broj ispisuje njegovu reciprocnu vrednost.
-Ukoliko je uneti broj jednak nuli, ispisati poruku "Nedozvoljeno deljenje nulom".
-*/
 
 #include <stdio.h>
 
@@ -10,22 +6,41 @@ int main()
    int x;
    float rx;
    
-   printf("Unesi jedan ceo broj:");
+   printf("Unesite jedan ceo broj:");
    scanf("%d",&x);
    
-  /*
-     obratiti paznju:
-     x==0 - relacija jednakosti (da li je vrednost promenljive x jednaka nuli)
-     x=0 - naredba dodele (promenljiva x dobija vrednost nula)
-  */
+   /*
+      Obratiti paznju:
+      x==0 - relacija jednakosti 
+             (da li je promenljiva x jednaka nuli)
+      x=0  - naredba dodele 
+             (promenljiva x dobija vrednost nula)
+   */
 
+   /*
+      Proveravamo da li je uneti broj jednak nuli. Ako
+      jeste, prekidamo sa daljim izvrsavanjem programa
+      navodjenjem naredbe return. Argument -1 u naredbi
+      return oznacava da program nije uspesno zavrsen            
+   */
    if (x==0)
-      printf("Nedozvoljeno deljenje nulom\n");
-   else
    {
-      rx = 1.0/x;
-      printf("Reciprocna vrednost unetog broja:%f\n",rx);
+      printf("Nedozvoljeno deljenje nulom\n");
+      return -1;
    }
+      
+   /*
+      Primenom operatora / na argumente 1 i x dobijamo
+      rezultat celobrojnog deljenja ovih argumenata. Da
+      bismo dobili kolicnik, koji je realna vrednost, 
+      neophodno je da jedan od argumenata zapisemo kao
+      ceo broj, npr celobrojnu vrednost 1 zapisemo kao
+      realnu vrednost 1.0. Ovakav postupak se naziva 
+      eksplicitna konverzija.         
+   */
+   
+   rx = 1.0/x;
+   printf("Reciprocna vrednost unetog broja:%.4f\n",rx);
    
    return 0;
 }
