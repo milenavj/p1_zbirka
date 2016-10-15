@@ -34,9 +34,9 @@ int main()
       rezultat celobrojnog deljenja ovih argumenata. Da
       bismo dobili kolicnik, koji je realna vrednost, 
       neophodno je da jedan od argumenata zapisemo kao
-      ceo broj, npr celobrojnu vrednost 1 zapisemo kao
+      realnu vrednost, npr celobrojnu vrednost 1 zapisemo kao
       realnu vrednost 1.0. Ovakav postupak se naziva 
-      eksplicitna konverzija.         
+      implicitna konverzija.         
    */
    
    rx = 1.0/x;

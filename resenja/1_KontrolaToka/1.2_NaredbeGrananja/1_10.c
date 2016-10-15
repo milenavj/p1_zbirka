@@ -4,21 +4,22 @@
 int main()
 {
    float x;
-   float y;
+   float apsolutno_x;
 
    printf("Unesite jedan realan broj:");
    scanf("%f",&x);
 
-   y=x;
-   if (y<0)
-     y=-y;
+   apsolutno_x=x;
+   if (x<0)
+     apsolutno_x=-x;
 
-   printf("Njegova apsolutna vrednost je %.2f\n",y);
+   printf("Njegova apsolutna vrednost je %.2f\n",apsolutno_x);
    
    
    /* 
-      2. nacin, pomocu funkcije fabs se nalazi u zaglavlju math.h: 
-      y=fabs(x);
+      2. nacin, pomocu funkcije fabs za koju je neophodno 
+      ukljuciti zaglavlje math.h: 
+      apsolutno_x=fabs(x);
    */
    return 0;
 }

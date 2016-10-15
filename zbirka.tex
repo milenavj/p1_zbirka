@@ -53,7 +53,7 @@
 
 \newif\ifpdf
 \pdffalse       %postaviti na false za izbacivanje linkova na resenja
-%\pdftrue
+%\pdftrue %postaviti na true da bi bili prisutni linkovi na resenja
 
 %za ukljucivanje resenja u materijal
 \newif\ifresenja
@@ -75,9 +75,9 @@
 
 \pagenumbering{roman}
 
-\ifresenja
+%\ifresenja
 \input{poglavlja/P1_naslovna.tex}
-\fi
+%\fi
 
 \tableofcontents
 
@@ -86,7 +86,7 @@
 \def\chaptername{}
 
 \input{poglavlja/1_UvodniPrimeri.tex}
-%\input{poglavlja/2_NaredbeGrananja.tex}
+\input{poglavlja/2_NaredbeGrananja.tex}
 %\input{poglavlja/3_Petlje.tex}
 %\input{poglavlja/4_Funkcije.tex}
 %\input{poglavlja/5_Nizovi.tex}
