@@ -4,6 +4,12 @@
 int main()
 {
     int br_cif = 0;
+    
+    /*
+       Funkcija isdigit vraca 1 ako je
+       dati karakter cifra i 0 u suprotnom.
+       Nalazi se u biblioteci ctype.h.       
+    */
     if (isdigit(getchar()))
         br_cif++;
     if (isdigit(getchar()))

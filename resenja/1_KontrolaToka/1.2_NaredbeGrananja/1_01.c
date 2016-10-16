@@ -23,6 +23,18 @@ int main()
       U slucaju da je unos neispravan, ispisujemo
       poruku o gresci i prekidamo dalje izvrsavanje
       programa.   
+      
+      Uslov u if naredbi je disjunkcija (operator ||)
+      sastavljena od 4 disjunkata. Svaki od njih je
+      izraz sa relacionim operatorom i ima vrednost
+      1 ako je izraz tacan i 0 u suprotnom. Da bi 
+      disjunkcija bila tacna, bar jedan od disjunkata
+      mora da bude tacan. Zbog lenjog izracunavanja,
+      vrednost disjunkata ce biti racunata do vrednosti
+      prvog disjunkta koji je tacan. To je znak da
+      je uslov u if naredbi ispunjen i nema potrebe
+      racunati vrednosti drugih disjunkata.           
+            
    */
    
    if (sati>24 || sati<0 || minuti>59 || minuti<0)
