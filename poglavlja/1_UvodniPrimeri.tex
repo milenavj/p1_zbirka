@@ -804,22 +804,91 @@ na poziciju $p$. \napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$
 \end{Answer}
 
 
-\iffalse
-\section{Zadaci sa operatorom ?:}
+%\iffalse
+%\section{Zadaci sa operatorom ?:}
 
 \komentarJ{Danijela mi je rekla gde se nalaze resenja. Dodati.}
+\komentarJ{Resenja nisam uspela da pronadjem te sam zadatke resila.}
+
+\begin{Exercise}[label=p1_18]
+Napisati program koji za uneta dva cela broja $a$ i $b$ dodeljuje promenljivoj $rezultat$ vrednost 1
+ako važi uslov:
+\begin{description}
+\item{a)} $a$ i $b$ su različiti brojevi
+\item{b)} $a$ i $b$ su parni brojevi
+\item{c)} $a$ i $b$ su pozitivni brojevi, ne veći od 100
+\end{description} 
+U suprotnom, promenljivoj $rezultat$ dodeliti vrednost 0. Ispisati vrednost promenljive $rezultat$. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{4 8}#
+#\izlaz{a) rezultat=1}#
+#\izlaz{b) rezultat=1}#
+#\izlaz{c) rezultat=1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{3 -11}#
+#\izlaz{a) rezultat=1}#
+#\izlaz{b) rezultat=0}#
+#\izlaz{c) rezultat=0}#
+\end{upotreba}
+\end{miditest}
+
+\komentarJ{Po dogovoru na sastanku, umesto a,b,c zadatak je preformulisan na dve vrednosti - samo a i b. Prilagoditi resenja.}
+\komentarJ{Uradjeno}
+
+\linkresenje{p1_18}
+\end{Exercise}
+\begin{Answer}[ref=p1_18]
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_30.c}
+\end{Answer}
 
 \begin{Exercise}[label=p1_17]
 Napisati program koji za uneta dva cela broja ispisuje njihov maksimum. 
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{19 256}#
+#\izlaz{Maksimum je 256}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{-39 57}#
+#\izlaz{Maksimum je 57}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{p1_17}
 \end{Exercise}
 \begin{Answer}[ref=p1_17]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_29.c}
 \end{Answer}
 
 \begin{Exercise}[label=p1_17]
 Napisati program koji za uneta dva cela broja ispisuje njihov minimum. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{4 8}#
+#\izlaz{Minimum je 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{-3 -110}#
+#\izlaz{Minimum je -110}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{p1_17}
 \end{Exercise}
@@ -828,41 +897,34 @@ Napisati program koji za uneta dva cela broja ispisuje njihov minimum.
 %\includecode{resenja/1_UvodniZadaci/1_01.c}
 \end{Answer}
 
-
-\begin{Exercise}[label=p1_18]
-Data su dva cela broja $a$ i $b$. Napisati program koji dodeljuje promenljivoj $rezultat$ vrednost 1
-ako važi uslov:
-\begin{description}
-\item{a)} $a$ i $b$ su različiti brojevi
-\item{b)} $a$ i $b$ su parni brojevi
-\item{c)} $a$ i $b$ su pozitivni brojevi, ne veći od 100
-\end{description} 
-U suprotnom, promenljivoj $rezultat$ dodeliti vrednost 0. Ispisati vrednost promenljive $rezultat$ na standardni izlaz. \\
-
-\komentarJ{Po dogovoru na sastanku, umesto a,b,c zadatak je preformulisan na dve vrednosti - samo a i b. Prilagoditi resenja.}
-
-\linkresenje{p1_18}
-\end{Exercise}
-\begin{Answer}[ref=p1_18]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
-\end{Answer}
-
-
-
-
-
 \begin{Exercise}[label=p1_22]
-Napisati program koji za unete vrednosti promenljivih \verb|x| i
-\verb|y| ispisuje vrednost sledećeg izraza:
-$$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$. \\
+Napisati program koji za unete realne vrednosti promenljivih $x$ i
+$y$ ispisuje vrednost sledećeg izraza:
+$$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$ zaokruženu na dve decimale. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{5.7 11.2}#
+#\izlaz{Rezultat je: 0.05}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{-9.34 8.99}#
+#\izlaz{Rezultat je: -0.11}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{p1_22}
 \end{Exercise}
 \begin{Answer}[ref=p1_22]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
+\includecode{resenja/1_KontrolaToka/1.1_UvodniZadaci/1_31.c}
 \end{Answer}
-\fi
+%\fi
 
-\ifresenja
+%\ifresenja
 \section{Rešenja}
 \shipoutAnswer
-\fi
+%\fi
