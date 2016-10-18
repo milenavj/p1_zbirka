@@ -1,41 +1,53 @@
-/* Sa standardnog ulaza unosi se realan broj m, ceo pozitivan broj n i n realnih
-brojeva. Izracunati i ispisati koliko je brojeva medju unetima manje od zadatog
-broja m. */
-
 #include <stdio.h>
 
-int main(){
-  
-    float m, x;
+int main()
+{
+    /* Promenljiva cena oznacava trenutno unesenu cenu. */
+    float cena;
+    float m;
     int n, i;
     int broj_brojeva=0;
 
-    printf("Unesite broj m: ");
+    printf("Unesite koliko novaca ima Nikola: ");
     scanf("%f", &m);
+    
+    if (m < 0)
+    {
+      printf("Nikola ne moze imati negativno novaca.\n");
+      return -1;
+    }
 
-    printf("Unesite broj n: ");
+    printf("Unesite broj artikala: ");
     scanf("%d", &n);
     
-    printf("Unesite n brojeva: ");
-    /* Inicijalizujemo brojac kojim kontrolisemo broj ucitavanja - 
-     * treba da ih bude tacno n
-     */
+    if (n < 0)
+    {
+      printf("Broj artikala ne moze biti negativan.\n");
+      return -1;
+    }
+    
+    printf("Unesite cene artikala: ");
+    
     i=0;
     while(i<n){
-        /* Ucitavamo broj */
-        scanf("%f", &x); 
+        /* Ucitava se cena artikla. */
+        scanf("%f", &cena); 
         
-        /* Proveravamo da li je broj manji od zadatog broja m */
-        if(x<m){
-            /* Ako jeste, uvecavamo brojac brojeva za 1 */
+	if (cena <= 0)
+	{
+	  printf("Cena ne moze biti negativna.\n");
+	  return -1;
+	}
+	
+        /* Provera da li je cena manji od zadatog broja m. */
+        if(cena < m){
+            /* Ako jeste, uvecava se brojac brojeva za 1. */
             broj_brojeva++;
         }
         
-        /* Uvecavamo brojac iteracija */
         i++;    
     }
     
-    /* Ispisujemo rezultat */
     printf("%d\n", broj_brojeva);
     
     return 0;

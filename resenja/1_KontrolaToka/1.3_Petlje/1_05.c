@@ -2,13 +2,19 @@
 int main()
 {
   int x;
-  /* U promenljivoj p pamtimo prozivod. */
+  /* U promenljivoj p se cuva prozivod. */
   int p;
-  /* U promenljivoj u proveravamo da li
-   * su brojevi uopste uneseni. Na pocetku
-   * pretpostavljamo da nisu i postavljamo je na 0.
+  /* Promenljiva u  sluzi za proveru da li
+   * su brojevi uopste uneseni. Na pocetku se
+   * pretpostavlja da nisu i postavlja se na 0.
    */
   int u = 0;
+  
+   /* Promenljiva unesen_pozitivan  sluzi za proveru da li
+   * su pozitivni brojevi uopste uneseni. Na pocetku se
+   * pretpostavlja da nisu i postavlja se na 0.
+   */
+  int unesen_pozitivan = 0;
   
   p=1;
   /* Izraz 1 je konstantan, razlicit je od nule 
@@ -19,14 +25,14 @@ int main()
   while (1) 
   {         
      scanf("%d", &x);
-     /* Proveravamo da li je uneta nula. */
+     /* Proveravanje da li je uneta nula. */
      if (x==0)  
         /* Naredba break prekida petlju. Izvrsavanje 
          * se nastavlja od prve naredbe nakon petlje.
          */
         break;  
      
-     /* Ako je makar 1 broj razlicit od 0 unesen promenljiva
+     /* Ako je makar 1 broj razlicit od 0 promenljiva u
       * ce biti postavljena na 1.
       */
      u = 1; 
@@ -38,14 +44,20 @@ int main()
         * tako sto preskace sve naredbe koje nakon njega slede. 
         * Izvrsavanje se nastavlja od provere uslova petlje.
         */
-        continue;  
+        continue; 
+	
+     /* Ako je makar jedan broj pozitivan, promenljiva
+      * unesen_pozitivan se postavja na 1. */
+     unesen_pozitivan = 1;
      p=p*x;
   }
   
-  if (u == 1)
-	printf("Proizvod pozitivnih unetih brojeva je %d.\n",p);  
+  if (u == 0)
+    printf("Nisu uneseni brojevi.\n");
+  else if (unesen_pozitivan == 0)
+    printf("Nisu uneseni pozitivni brojevi. \n");
   else
-	printf("Nisu uneseni brojevi.\n");
+    printf("Proizvod pozitivnih unetih brojevi je %d.\n",p);  
   
   return 0;   
 }

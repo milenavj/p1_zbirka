@@ -1,36 +1,60 @@
-/*
-Program izracunava minimum n unetih brojeva. 
-Npr. za n=4 i brojeve 3 8 2 9 program ispisuje 2
-*/
 #include <stdio.h>
 int main()
 {
-    int n, i;
-    float x, min;
+    /* Broj artikala. */
+    int n;
+    /* Brojac. */
+    int i;
+    /* Cena trenutno unetnog artikla. */
+    float cena;
+    /* Minimalna cena. */
+    float min_cena;
 
-
-    printf("Unesi n>0:");
+    printf("Unesite broj artikala:");
     scanf("%d", &n);
-    if (n<=0)                        /* ako je unos neispravan */
+    
+    if (n<=0)                        
     {
         printf("Neispravan unos\n");
-        return -1;                   /* prekidamo izvrsavanje programa pomocu naredbe return */
-    }                                /* u slucaju greske kao sto je neispravan unos vracamo vrednost -1 */
-    printf("Unesi realan broj:");
-    scanf("%f", &x);           /* prvi broj je unet izvan petlje */
-    min=x;                     /* kako bi bio njegova vrednost bila dodeljena promenljivoj min */
-                               /* neophodno je da promenljiva min bude inicijalizovana pre ulaska u petlju */
-                               /* da bi uslov x<min mogao da bude ispitan u prvoj iteraciji */
-    i=0;
-    while(i<(n-1))
+        return -1;                   
+    }                                
+    
+    
+    /* Prva cena se unosi iznad petlje
+     * kako bi bio njegova vrednost bila dodeljena promenljivoj min_cena.
+     * Neophodno je da promenljiva min bude inicijalizovana pre ulaska u petlju
+     * da bi uslov x<min mogao da bude ispitan u prvoj iteraciji.
+     */
+    printf("Unesite cenu artikala:");
+    scanf("%f", &cena);  
+    /* Proveravamo da li je cena isprano uneta vrednost. */
+    if (cena <= 0)
     {
-      printf("Unesi realan broj:");
-      scanf("%f", &x);
-      if(x<min)
-         min=x;
+	printf("Cena ne moze biti negativna.\n");
+	return -1;
+    }
+    
+    min_cena = cena;                     
+                               
+                               
+    i=0;
+    while(i< n-1)
+    {
+      scanf("%f", &cena);
+      
+      if (cena <= 0)
+      {
+	  printf("Cena ne moze biti negativna.\n");
+	  return -1;
+      }
+      
+      /* Provera da li je uneta cena manja od tekuce minimalne cene. */
+      if(cena<min_cena)
+         min_cena = cena;
       i++;
     }
-    printf("Minimum je: %f\n", min);
+    
+    printf("Minimalna cena je: %f\n", min_cena);
     return 0;
 }
 

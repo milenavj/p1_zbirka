@@ -4,16 +4,19 @@ int main(){
         /* Promenljiva i je brojac, promenljiva S cuva izracunatu sumu,
          * promenljiva znak moze bito 1 ili -1 i odredjuje znak
          * trenutnog clana sume, a promenljiva clan je tekuci clan niza. */
-	int i, znak;
+	int i, znak, n;
 	float S;
-	float x, eps, clan;
+	float x, clan;
 	
-	printf("Unesite x: ");
-	scanf("%f", &x);
+	printf("Unesite x i n: ");
+	scanf("%f%d", &x, &n);
+        
+        if (n <= 0)
+        {
+            printf("Neispravan unos.\n");
+            return -1;
+        }
 	
-	printf("Unesite tacnost eps: ");
-	scanf("%f", &eps);
-    
 
         S=0;
 	clan = 1;
@@ -22,16 +25,17 @@ int main(){
         
         /* Kako clanovi sume mogu biti negativni, potrebno je posmatrati
          * apsolutnu vrednost clana. */
-	while(fabs(clan)>eps)
+	while(i <= 2*n)
         {
             S = S + clan;
             
             /* Promena znaka. */
             znak = - znak;
-            clan = clan*x / i;
+            /* Svaki clan suma se od prethodnog clana razlikuje za x^2/(i*(i+1)). */
+            clan = clan*x*x / (i*(i+1));
             clan *= znak;
             
-            i++;
+            i+=2;
 	}
 	
 	printf("S=%f\n", S);

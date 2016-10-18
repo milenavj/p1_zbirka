@@ -17,17 +17,15 @@ int main(){
 	broj_a=0;
 	
 	
-	/* Ucitavamo broj karaktera */
 	printf("Unesite broj: ");
 	scanf("%d", &n);
 
-	/* Ucitavamo karakter po karakter */	
+	/* Ucitavanje karakter po karakter. */	
 	for(i=0; i<n; i++){
 		printf("Unestite %d. karakter: ", i+1);		
-		/* 
-			Prvo citamo znak za novi red koji je ostao neprocitan nakon pritiska Enter tastera 
-			posle prethodnog unosa, pa tek onda citamo karakter koji treba obradjivati 
-		*/
+		/* Prvo se cita belina koja se nalazi nakon prethodnog 
+                 * unosa, pa tek posle procitane beline se cita uneseni
+                 * karakter. */
 		scanf("%c%c", &novi_red, &c);
 		
 		/* Analiziramo karakter */
@@ -47,13 +45,13 @@ int main(){
 		}
 	}
 	
-	/* Ako imamo barem jedno veliko slovo z i barem po jedno malo slovo i, m i a */	
+	/* Ako u unosu ima barem jedno veliko slovo z i 
+         * barem po jedno malo slovo i, m i a, rec se moze
+         * napisati. A u suprotnom ne moze. */	
 	if(broj_Z && broj_i && broj_m && broj_a){
-		/* Zakljucujemo da se rec moze napisati */
 		printf("Moze se napisati rec Zima.\n");
 	}		
 	else{
-		/* Inace, obavestavamo korisnika da je to nemoguce */
 		printf("Ne moze se napisati rec Zima.\n");			
 	}
 		

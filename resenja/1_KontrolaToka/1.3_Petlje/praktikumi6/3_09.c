@@ -1,6 +1,3 @@
-/* Sa standradnog ulaza unose se realan broj x i ceo broj n. Napisati
-program koji izracunava x^n */
-
 #include <stdio.h>
 
 int main(void){
@@ -10,19 +7,19 @@ int main(void){
     float vrednost;
     unsigned exp;
     
-    /* Ucitavaju se brojevi x i n */
     printf("Unesite redom brojeve x i n: ");
     scanf("%f %d", &x, &n );
 
-    /* Pocetna vrednost stepena koji se racuna */
+    /* Pocetna vrednost stepena koji se racuna. */
     vrednost=1;
 
-    /* Stepenovanje */
+    /* Stepenovanje. */
     n_abs=abs(n);
     for(exp=1; exp<=n_abs; exp++)
         vrednost=vrednost*x;
    
-    /* Stampamo rezultat */
+    /* Ukoliko je stepen bio negativan treba
+     * odrediti 1/x^n, sto je zapravo 1/vrednost. */
     if(n<0){
       printf("%.3f\n",1/vrednost);
     }

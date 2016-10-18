@@ -3,9 +3,11 @@
 int main()
 {
    int n;
+   /* Oznaka broja koji unosimo u jednoj iteraciji petlje. */
    int x;
    int suma_poz;
    int suma_neg;
+   /* Brojac. */
    int i;
       
    printf("Unesi pozitivan ceo broj:");
