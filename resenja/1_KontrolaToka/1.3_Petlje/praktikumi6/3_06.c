@@ -2,7 +2,7 @@
 
 int main() 
 {  
-  unsigned int x;
+  int x;
   /* Tezina trenutne pozicije u broju. Moze biti 1, 10, 100, 
    * 1000 itd. 
    */

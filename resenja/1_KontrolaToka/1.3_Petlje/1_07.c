@@ -19,8 +19,8 @@ int main()
     else if (c>='a' && c<='z')
       putchar(c-'a'+'A'); 
     else
-      putchar(c);
-      
+      putchar(c);      
   }
+
   return 0;
 }

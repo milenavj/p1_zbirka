@@ -13,9 +13,9 @@ int main()
    printf("Unesi dva cela broja: ");
    scanf("%d%d",&n,&m);
 
-	 if (m < n)
+   if (m < n)
    {
-		 printf("Neispravan unos. Nisu dobro zadate granice intervala!\n");
+     printf("Neispravan unos. Nisu dobro zadate granice intervala!\n");
      return -1;
    }
 
