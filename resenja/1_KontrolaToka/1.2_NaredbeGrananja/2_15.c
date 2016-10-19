@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main()
@@ -16,7 +15,6 @@ int main()
       printf("Broj nije cetvorocifren.\n");
       return -1;    
     }
-  
     
     /* Izdvajamo cifre broja:
       j -jedinice, d - desetice, s - stotine i h - hiljade 
@@ -63,9 +61,6 @@ int main()
     else{
       printf("Proizvod parnih cifara: %d\n", proizvod_parnih);
     }
-    
   
-  
-  return 0;
-  
+  return 0;  
 }

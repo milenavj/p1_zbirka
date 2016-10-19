@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main()
@@ -11,9 +10,7 @@ int main()
 	   Da bismo utvrditi da li je karakter samoglasnik,
 	   neophodno je proveriti da li odgovara nekom od
 	   sledecih karaktera: A,E,I,O,U,a,e,i,o,u
-	   
-	*/
-	
+	*/	
 	switch(c)
 	{
 		case 'A' : 

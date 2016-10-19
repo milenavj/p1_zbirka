@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main(){
@@ -60,7 +59,6 @@ int main(){
     /* Sve provere su ispunjene pa zakljucujemo 
        da je datum korektan */
     printf("Ispravan datum!\n");
-    
     
     return 0;
 }

@@ -1,6 +1,6 @@
-
 #include<stdio.h>
 #include<math.h>
+
 int main()
 {
    char c;
@@ -78,5 +78,6 @@ int main()
        default:
           printf("Nekorektan unos\n");
    }
+
    return 0;
 }

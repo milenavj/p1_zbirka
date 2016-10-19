@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main()
@@ -55,5 +54,6 @@ int main()
         else
           printf("zima\n");
   }
+
   return 0;
 }

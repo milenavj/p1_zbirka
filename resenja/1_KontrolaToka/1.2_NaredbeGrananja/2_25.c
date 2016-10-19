@@ -1,6 +1,6 @@
-
 #include <stdio.h>
 #include <math.h>
+
 int main(){
 	float x; 
 	int k;
@@ -29,8 +29,7 @@ int main(){
 				x=2*cos(x)-x*x*x;
 				x=2*cos(x)-x*x*x;
 				F=2*cos(x)-x*x*x;
-			}
-		
+			}		
 	}
 	
 	/* Ispisujemo rezultat */

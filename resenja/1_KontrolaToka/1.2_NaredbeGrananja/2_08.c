@@ -1,4 +1,3 @@
-
 #include<stdio.h>
 
 int main()
@@ -33,8 +32,7 @@ int main()
       vrednost disjunkata ce biti racunata do vrednosti
       prvog disjunkta koji je tacan. To je znak da
       je uslov u if naredbi ispunjen i nema potrebe
-      racunati vrednosti drugih disjunkata.           
-            
+      racunati vrednosti drugih disjunkata.                       
    */
    
    if (sati>24 || sati<0 || minuti>59 || minuti<0)
@@ -59,5 +57,6 @@ int main()
    */
    printf("Do ponoci je ostalo %d sati i %d minuta\n",
            preostali_sati, preostali_minuti);
+
    return 0;
 }

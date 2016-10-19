@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h> // Potrebno za exit funkciju
 
-
 int main()
 {
     int godina;
     int mesec;
 
     int prestupna;
-    
 
     printf("Unesite godinu: ");
     scanf("%d",&godina);

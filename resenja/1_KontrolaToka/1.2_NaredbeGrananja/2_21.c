@@ -1,6 +1,6 @@
-
 #include <stdio.h>
 #include <math.h>
+
 int main()
 {
    float a,b,c;
@@ -31,7 +31,6 @@ int main()
    /* slucaj a!=0 */   
    else 
    {
-
       D=b*b-4*a*c; 
       if (D<0)
         printf("Jednacina nema realnih resenja\n");

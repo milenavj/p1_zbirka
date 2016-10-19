@@ -1,5 +1,5 @@
-
 #include <stdio.h>
+
 int main()
 {
    unsigned a,b,c;
@@ -34,7 +34,7 @@ int main()
    cena_bez_popusta=a+b+c;
    cena_sa_popustom = cena_bez_popusta - min + 1;
    
-    printf("Cena sa popustom: %u\nUsteda: %u\n", 
+   printf("Cena sa popustom: %u\nUsteda: %u\n", 
          cena_sa_popustom, cena_bez_popusta-cena_sa_popustom);
     
     return 0;

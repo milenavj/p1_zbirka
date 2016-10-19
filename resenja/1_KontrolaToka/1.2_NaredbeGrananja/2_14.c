@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h> /*abs*/
 
@@ -41,5 +40,4 @@ int main()
     printf("Broj nije Amstrongov.\n");
        
   return 0;
-
 }

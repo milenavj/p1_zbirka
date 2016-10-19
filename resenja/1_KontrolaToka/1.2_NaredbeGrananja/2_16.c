@@ -72,6 +72,6 @@ int main()
                    + min*stepenMin - max*stepenMin;
 
     printf("%d\n",rez);
-    return 0;
 
+    return 0;
 }

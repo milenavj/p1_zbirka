@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main(){
@@ -43,7 +42,6 @@ int main(){
   
   /* Ispisujemo rezultat */
   printf("Broj malih slova: %d\n", broj_malih_slova);
-  
-  
+   
   return 0;
 }

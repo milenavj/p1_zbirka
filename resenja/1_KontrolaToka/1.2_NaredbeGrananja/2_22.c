@@ -38,6 +38,7 @@ int main()
   else
      printf("Cifre nisu uredjene\n");
      
+  return 0;
 }
 
 

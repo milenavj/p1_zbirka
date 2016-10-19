@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 
 int main()
@@ -24,8 +23,6 @@ int main()
       printf("Greska: Niste uneli cetvorocifren broj!\n");
       return -1;
     }
-    
-    
   
     /* 
       Ako je broj cetvorocifren, izdvajamo cifre broja:
