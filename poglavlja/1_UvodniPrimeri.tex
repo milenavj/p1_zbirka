@@ -779,21 +779,21 @@ Napisati program koji pomaže moleru da izračuna površinu zidova prostorije ko
 
 
 \begin{Exercise}[label=p1.1_09] 
-Napisati program koji za unete pozitivne prirodne brojeve $x$, $c$ i $p$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ 
+Napisati program koji za unete pozitivne prirodne brojeve $x$, $p$ i $c$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ 
 na poziciju $p$. \napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$ manji od ukupnog broja cifara broja $x$. Numeracija cifara počinje od nule, odnosno cifra najmanje težine nalazi se na nultoj poziciji.} \uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite redom x, c i p:}\ulaz{140 2 1}#
+#\izlaz{Unesite redom x, p i c:}\ulaz{140 1 2}#
 #\izlaz{Rezultat je: 1420}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite redom x, c i p:}\ulaz{12345 9 2}#
-#\izlaz{Rezultat je: 129345}#
+#\izlaz{Unesite redom x, p i c:}\ulaz{12345 2 9}#
+#\izlaz{Rezultat je: 123945}#
 \end{upotreba}
 \end{miditest}
 
