@@ -1,17 +1,14 @@
 \section{Funkcije}
 
-\komentar{TODO Potpisi funkcija ne treba da budu ni verb ni \$ vec u okviru taga kckod, kao sto to pise u uputstvima u okviru kartice za formatiranje teksta}
 
 \komentar{TODO U nekim zadacima pise samo Napisati program koji testira rad ove funkcije, dok u nekim zadacima je detaljnije opisan sam program, npr "Napisati program koji sa standardnog ulaza učitava tri cela broja i ispisuje rezultat poziva funkcije." Nekako bi trebalo to ujednaciti. Meni je lepsi ovaj drugi stil, jer je precizniji.}
-
-\komentar{Ne postoji glavni i sporedni program, vec samo jedan program, izbaciti rec glavni, ja sam izbacila sa puno mesta, mozda mi je negde promaklo.}
 
 \komentar{TODO Smisliti odgovarajući redosled za ove zadatke}
 
 \begin{Exercise}[label=v1.4_01] 
 \komentar{Ovaj zadatak bih razbila na dva zadatka jer u resenju ima dve poenteod kojih je prvi resen, a drugi neresen. Poentu o vidljivosti promenljivih bih ostavila za kasnije, za neki drugi zadatak, jer mi je ovde to mnogo rano --- prvih par zadataka ne bi trebalo dodatno time opterecivati.}
 Napisati funkcije
-\verb|int kvadrat(int x)| i \verb|int kub(int x)|
+\kckod{int kvadrat(int x)} i \kckod{int kub(int x)}
 koje računaju, redom,  kvadrat i kub datog broja. Napisati program koji testira rad ovih funkcija.\\ 
 \linkresenje{v1.4_01}
 \end{Exercise}
@@ -21,7 +18,7 @@ koje računaju, redom,  kvadrat i kub datog broja. Napisati program koji testira
 
 \begin{Exercise}[label=v1.4_02] 
 Napisati funkciju
-\verb|float stepen(float x, int n)|
+\kckod{float stepen(float x, int n)}
 koja računa vrednost $n$-tog stepena realnog broja $x$. Napisati program koji testira rad ove funkcije.\\ 
 \linkresenje{v1.4_02}
 \end{Exercise}
@@ -31,7 +28,7 @@ koja računa vrednost $n$-tog stepena realnog broja $x$. Napisati program koji t
 
 \begin{Exercise}[label=v1.4_03] 
 Napisati funkciju 
-\verb|int euklid(int x, int y)|
+\kckod{int euklid(int x, int y)}
 koja za dva data cela broja određuje
   najveći zajednički delilac primenom Euklidovog algoritma. Napisati program
   koji testira rad ove funkcije.\\ 
@@ -43,7 +40,7 @@ koja za dva data cela broja određuje
 
 \begin{Exercise}[label=v1.4_04] 
 Napisati funkciju 
-\verb|float zbir_reciprocnih(int n)|
+\kckod{float zbir\_reciprocnih(int n)}
 koja za dato $n$ vraća zbir recipročnih vrednosti brojeva od $1$ do $n$.
 Napisati program koji testira rad ove funkcije. Rezultat zaokružiti
 na dve decimale.\\ 
@@ -86,7 +83,7 @@ na dve decimale.\\
 
 \begin{Exercise}[label=v1.4_06] 
 Napisati funkciju 
-\verb|void ispis(float x, float y, unsigned n)|
+\kckod{void ispis(float x, float y, unsigned n)}
 koja za dva realna broja $x$ i $y$ i jedan neoznačeni ceo broj $n$
 ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih tačaka intervala $[x,y]$.
 Napisati program koji testira rad ove funkcije. \\ 
@@ -98,7 +95,7 @@ Napisati program koji testira rad ove funkcije. \\
 
 \begin{Exercise}[label=v1.4_07] 
 Napisati funkciju 
-\verb|int broj_ncifara(int x)|
+\kckod{int broj\_ncifara(int x)}
 koja broji neparne cifre u zapisu datog celog broja. Testirati rad ove funkcije u programu koji učitava cele brojeve dok se ne unese nula i ispisuje
 broj neparnih cifara svakog unetog broja. \\ 
 \linkresenje{v1.4_07}
@@ -339,7 +336,7 @@ Napisati funkciju $unsigned\ int\ apsolutna\_vrednost(int\ x)$ koja izračunava 
 
 
 \begin{Exercise}[label=p1.4_] 
-Napisati funkciju \verb|int broj_dana(int mesec, int godina)| koja za
+Napisati funkciju \kckod{int broj\_dana(int mesec, int godina)} koja za
 dati mesec i godinu vra\'ca broj dana u datom
 mesecu. Napisati program koji testira ovu funkciju. U slučaju nekorektnog unosa ispisati odgovarajuću poruku o grešci.\\ 
 \linkresenje{p1.4_}
@@ -349,7 +346,7 @@ mesecu. Napisati program koji testira ovu funkciju. U slučaju nekorektnog unosa
 \end{Answer}
 
 \begin{Exercise}[label=p1.4_] 
-Napisati funkciju \verb|int ispravan(int dan, int mesec, int godina)|
+Napisati funkciju \kckod{int ispravan(int dan, int mesec, int godina)}
 koja za dati datum proverava da li je ispravan. Napisati program koji testira ovu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
@@ -359,7 +356,7 @@ koja za dati datum proverava da li je ispravan. Napisati program koji testira ov
 
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju
-\verb|void sledeci_dan(int dan, int mesec, int godina)| koja za dati
+\kckod{void sledeci\_dan(int dan, int mesec, int godina)} koja za dati
 datum određuje datum sledećeg dana. Napisati program koji testira ovu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
@@ -369,7 +366,7 @@ datum određuje datum sledećeg dana. Napisati program koji testira ovu funkciju
 \begin{Exercise}[label=p1.4_] 
 \komentar{preimenovala sam funkciju, preimenovati i u resenju}
 Napisati funkciju
-\verb|int od_nove_godine(int dan, int mesec, int godina)| koja određuje koliko je dana proteklo od Nove godine do datog datuma. Napisati program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
+\kckod{int od\_nove\_godine(int dan, int mesec, int godina)} koja određuje koliko je dana proteklo od Nove godine do datog datuma. Napisati program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
@@ -379,7 +376,7 @@ Napisati funkciju
 \komentar{Grupisati sve zadatke sa datumima}
 \komentar{preimenovala sam funkciju, preimenovati i u resenju}
 Napisati funkciju
-\verb|int do_kraja_godine(int dan, int mesec, int godina)| koja određuje broj dana od datog datuma do kraja godine. Napisati program koji testira napisanu funkciju. \\ 
+\kckod{int do\_kraja\_godine(int dan, int mesec, int godina)} koja određuje broj dana od datog datuma do kraja godine. Napisati program koji testira napisanu funkciju. \\ 
 \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
@@ -389,8 +386,8 @@ Napisati funkciju
 \begin{Exercise}[label=p1.4_] 
 \komentar{preimenovala sam funkciju, preimenovati i u resenju}
 Napisati funkciju
-\verb|int broj_dana_između(int dan1, int mesec1, int godina1,|
-\verb|int dan2, int mesec2, int godina2)| koja određuje broj dana
+\kckod{int broj\_dana\_između(int dan1, int mesec1, int godina1,}
+\kckod{int dan2, int mesec2, int godina2)} koja određuje broj dana
 između dva datuma. Napisati program koji testira napisanu funkciju. \\ \linkresenje{p1.4_}
 \end{Exercise}
 \begin{Answer}[ref=p1.4_]
@@ -499,7 +496,7 @@ između dva datuma. Napisati program koji testira napisanu funkciju. \\ \linkres
 
 \begin{Exercise}[label=v1.4_08] 
 Napisati funkciju 
-\verb|int prost (int x)|
+\kckod{int prost (int x)}
 koja ispituje da li je dati ceo broj prost. Funkcija treba
 da vrati 1 ako je broj prost i 0 u suprotnom. Testirati rad funkcije u programu koji za uneti ceo broj $n$ ispisuje prvih $n$ prostih brojeva.\\
 \linkresenje{v1.4_08}
@@ -510,7 +507,7 @@ da vrati 1 ako je broj prost i 0 u suprotnom. Testirati rad funkcije u programu 
 
 \begin{Exercise}[label=v1.4_09] 
 Napisati funkciju 
-\verb|int sadrzi(int x, int c)|
+\kckod{int sadrzi(int x, int c)}
 koja ispituje da li se cifra $c$ nalazi u zapisu celog broja $x$. Napisati program koji testira rad ove funkcije.\\ 
 \linkresenje{v1.4_09}
 \end{Exercise}
@@ -522,9 +519,9 @@ koja ispituje da li se cifra $c$ nalazi u zapisu celog broja $x$. Napisati progr
 \komentar{Ovo je jedini zadatak gde nije dat potpis funkcije. Ili i ovde dodati potpis, ili razmotriti da se jos negde ukloni potpis funkcije!}
 Napisati program za ispitivanje svojstava cifara datog celog broja.
 \begin{enumerate}
-\item Napisati funkciju \verb|sve_parne_cifre| koja ispituje da li se dati ceo broj sastoji isključivo iz parnih cifara. Funkcija treba
+\item Napisati funkciju \kckod{sve\_parne\_cifre} koja ispituje da li se dati ceo broj sastoji isključivo iz parnih cifara. Funkcija treba
 da vrati 1 ako su sve cifre broja parne i 0 u suprotnom. 
-\item Napisati funkciju \verb|sve_cifre_jednake| koja ispituje da li su sve cifre datog celog broja jednake. Funkcija treba
+\item Napisati funkciju \kckod{sve\_cifre\_jednake} koja ispituje da li su sve cifre datog celog broja jednake. Funkcija treba
 da vrati 1 ako su sve cifre broja jednake i 0 u suprotnom. 
 \end{enumerate}
 Testirati napisane funkcije na unetom celom broju i ispisati odgovarajuće poruke.
@@ -536,7 +533,7 @@ Testirati napisane funkcije na unetom celom broju i ispisati odgovarajuće poruk
 
 \begin{Exercise}[label=v1.4_11] 
 Napisati funkciju 
-\verb|int je_stepen(unsigned x, unsigned n)|
+\kckod{int je\_stepen(unsigned x, unsigned n)}
 koja za dva uneta neoznačena broja $x$ i $n$ utvrđuje da li je $x$ neki stepen
 broja $n$. Ukoliko jeste, funkcija vraća izložilac stepena, a u suprotnom vraća -1. Napisati program koji testira rad ove funkcije.\\ 
 \linkresenje{v1.4_11}
@@ -547,7 +544,7 @@ broja $n$. Ukoliko jeste, funkcija vraća izložilac stepena, a u suprotnom vra�
 
 \begin{Exercise}[label=v1.4_12] 
 Napisati funkciju 
-\verb|double e_na_x(double x, double eps)|
+\kckod{double e\_na\_x(double x, double eps)}
 koja računa vrednost $e^x$ kao parcijalnu sumu reda
  $\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje vrši dok
  je razlika sabiraka u redu po apsolutnoj vrednosti
@@ -562,7 +559,7 @@ koja računa vrednost $e^x$ kao parcijalnu sumu reda
 Za dati broj može se formirati niz tako da je svaki sledeći član niza dobijen
 kao suma cifara prethodnog člana niza. Broj je srećan ako se dati niz završava 
 jedinicom. Napisati funkciju 
-\verb|int srecan(int x)|
+\kckod{int srecan(int x)}
  koja vraća 1 ako je broj srećan, a 0 u suprotnom. Napisati program koji za uneti prirodan broj $n$ ispisuje sve srećne brojeve od 1 do $n$.\\ 
 \linkresenje{v1.4_13}
 \end{Exercise}
@@ -572,7 +569,7 @@ jedinicom. Napisati funkciju
 
 \begin{Exercise}[label=v1.4_14] 
 Napisati funkciju 
-\verb|int konverzija (int c)|
+\kckod{int konverzija (int c)}
 koja prebacuje veliko slovo u ekvivalentno malo i obrnuto. Napisati program koji testira ovu funkciju na karakterima koji se unose sa standardnog ulaza do pojave EOF.\\ 
 \linkresenje{v1.4_14}
 \end{Exercise}
