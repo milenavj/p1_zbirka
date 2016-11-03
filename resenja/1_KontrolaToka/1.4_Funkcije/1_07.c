@@ -1,9 +1,3 @@
-/*
-Napisati funkciju koja broji neparne cifre u zapisu datog celog broja. Napisati
-potom glavni program koji unosi cele brojeve dok se ne unese nula, i ispisuje
-broj neparnih cifara svakog unetog broja koriscenjem napisane funkcije. 
-*/
-
 #include<stdio.h>
 #include<stdlib.h>
 
@@ -30,7 +24,7 @@ int main()
   do
   {
      scanf("%d",&x);
-     printf("Broj neparnih cifara u zapisu broja %d: %d\n", x, broj_ncifara(x));
+     printf("%d\n", broj_ncifara(x));
   } while(x!=0);
   
   return 0;

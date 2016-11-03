@@ -1,10 +1,3 @@
-/*
-Napisati funkciju koja racuna aritmeticku sredinu cifara datog celog broja.
-Napisati potom glavni program koji omogucava korisniku da unese ceo broj
-i racuna aritmeticku sredinu njegovih cifara primenom napisane funkcije. Ispisati
-izracunatu vrednost zaokruzenu na dve decimale.
-*/
-
 #include<stdio.h>
 #include<stdlib.h>
 

@@ -8,6 +8,21 @@ Napisati funkciju \kckod{int kvadrat(int x)} koja računa kvadrat datog
 broja. Napisati program koji učitava ceo broj i ispuje rezultat poziva
 funkcije.
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{15}#
+#\izlaz{Kvadrat broja 15 je 225}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-89}#
+#\izlaz{kvadrat broja -89 je 7921}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{v1.4_01}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_01]
@@ -15,22 +30,55 @@ funkcije.
 \end{Answer}
 
 
-\begin{Exercise}[label=v1.4_01] 
+\begin{Exercise}[label=v1.4_01b] 
 Napisati funkciju \kckod{int kub(int x)} koja računa kub datog
 broja. Napisati program koji učitava ceo broj i ispuje reyultat poziva
 funkcije.
 
-\linkresenje{v1.4_01}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{15}#
+#\izlaz{Kub broja 15 je 3375}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-89}#
+#\izlaz{Kub broja -89 je -704969}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{v1.4_01b}
 \end{Exercise}
-\begin{Answer}[ref=v1.4_01]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_01.c}
+\begin{Answer}[ref=v1.4_01b]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_01b.c}
 \end{Answer}
 
 \begin{Exercise}[label=v1.4_02] 
 Napisati funkciju \kckod{float stepen(float x, int n)} koja računa
 vrednost $n$-tog stepena realnog broja $x$. Napisati program koji
-učitava relan broj $x$ i ceo broj $n$ i ispiuje rezultat rada
+učitava relan broj $x$ i ceo broj $n$ i ispisuje rezultat rada
 funkcije.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite jedan realan i jedan ceo broj:}#
+#\ulaz{4.5 3}#
+#\izlaz{4.500000\^3=91.125000}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite jedan realan i jedan ceo broj:}#
+#\ulaz{-33.2 5}#
+#\izlaz{-33.200001\^5=-40335776.000000}#
+\end{upotreba}
+\end{miditest}
+
 
 \linkresenje{v1.4_02}
 \end{Exercise}
@@ -44,6 +92,22 @@ cela broja određuje najveći zajednički delilac primenom Euklidovog
 algoritma. Napisati program koji učitava dva cela broja i ispisuje
 rezultat poziva funkcije.
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{1024 832}#
+#\izlaz{Najveci zajednicki delilac je 64}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva cela broja:}\ulaz{-900 112}#
+#\izlaz{Najveci zajednicki delilac je -4}#
+\end{upotreba}
+\end{miditest}
+
+
 \linkresenje{v1.4_03}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_03]
@@ -55,6 +119,21 @@ Napisati funkciju \kckod{float zbir\_reciprocnih(int n)} koja za dato
 $n$ vraća zbir recipročnih vrednosti brojeva od $1$ do $n$. Napisati
 program koji učitava ceo broj i ispisuje rezultat rada funkcje
 zaokružen na dve decimale.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesi jedan pozitivan ceo broj:}\ulaz{10}#
+#\izlaz{Zbir reciprocnih je 2.93}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesi jedan pozitivan ceo broj:}\ulaz{100}#
+#\izlaz{Zbir reciprocnih je 5.19}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{v1.4_04}
 \end{Exercise}
@@ -89,6 +168,13 @@ zaokružen na dve decimale.
 #\izlaz{4.800}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{0}#
+#\izlaz{0.000}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.4_05}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_05]
@@ -102,6 +188,24 @@ ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih
 tačaka intervala $[x,y]$.  Napisati program koji učitava dva realna
 broja i jedan ceo pozitivan broj i ispisuje rezultat rada funkcije.
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
+#\izlaz{Unesite jedan prirodan broj:}\ulaz{10}#
+#\izlaz{0.6570 -0.3457 -0.0108 0.3659 -0.6731}#
+#\izlaz{0.8922 -0.9945 0.9666 -0.8122}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{20.5 -8.32}#
+#\izlaz{Unesite jedan prirodan broj:}\ulaz{5}#
+#\izlaz{-0.8934 -0.8979 -0.1920 0.6658 0.9968}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{v1.4_06}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_06]
@@ -114,12 +218,35 @@ neparnih cifre u zapisu datog celog broja. Testirati rad ove funkcije
 u programu koji učitava cele brojeve dok se ne unese nula i ispisuje
 broj neparnih cifara svakog unetog broja.
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite cele broja:}#
+#\ulaz{2341 78 800 -99761 0}#
+#\izlaz{Broj neparnih cifara je 2}#
+#\izlaz{Broj neparnih cifara je 1}#
+#\izlaz{Broj neparnih cifara je 0}#
+#\izlaz{Broj neparnih cifara je 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite cele broja:}#
+#\ulaz{987611 135 -701 602 -884 79901 0}#
+#\izlaz{Broj neparnih cifara je 4}#
+#\izlaz{Broj neparnih cifara je 3}#
+#\izlaz{Broj neparnih cifara je 2}#
+#\izlaz{Broj neparnih cifara je 0}#
+#\izlaz{Broj neparnih cifara je 0}#
+#\izlaz{Broj neparnih cifara je 4}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.4_07}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_07]
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_07.c}
 \end{Answer}
-
 
 
 \begin{Exercise}[label=p1.4_01] 

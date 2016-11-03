@@ -1,9 +1,3 @@
-/*
-  Napisati funkciju koja za dva data cela broja odredjuje
-  najveci zajednicki delilac. Napisati potom glavni program
-  koji testira ovu funkciju.
-*/
-
 #include <stdio.h>
 
 int euklid(int x, int y)
@@ -25,12 +19,12 @@ int main()
   int a,b;
   int nzd;
   
-  printf("unesi dva cela broja:");
+  printf("Unesite dva cela broja:");
   scanf("%d%d", &a,&b);
   
   nzd = euklid(a,b);  /* promenljivoj nzd dodeljujemo povratnu vrednost funkcije euklid */
   
-  printf("najveci zajednicki delilac za %d i %d je %d\n", a,b,nzd);
+  printf("Najveci zajednicki delilac je %d\n", nzd);
   
   return 0;
 }
