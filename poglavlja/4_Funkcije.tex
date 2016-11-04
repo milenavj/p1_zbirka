@@ -504,11 +504,33 @@ program koji učitava dva cela broja (mesec i godinu) i ispisuje broj
 dana u datom mesecu. U slučaju nekorektnog unosa ispisati odgovarajuću
 poruku o grešci.
 
-\linkresenje{p1.4_}
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite mesec i godinu:}\ulaz{8 1998}#
+#\izlaz{Broj dana je: 31}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite mesec i godinu:}\ulaz{2 2004}#
+#\izlaz{Broj dana je: 29}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite mesec i godinu:}\ulaz{24 2004}#
+#\izlaz{Neispravan unos.}#
+\end{upotreba}
+\end{minitest}
+
+%\linkresenje{p1.4_}
 \end{Exercise}
-\begin{Answer}[ref=p1.4_]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_08.c}
-\end{Answer}
+%\begin{Answer}[ref=p1.4_]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_08.c}
+%\end{Answer}
 
 \begin{Exercise}[label=p1.4_] 
 Napisati funkciju \kckod{int ispravan(int dan, int mesec, int godina)}
@@ -516,11 +538,41 @@ koja za dati datum proverava da li je ispravan. Napisati program koji
 učitava tri cela broja (dan, mesec, godinu) i ispisuje da li je datum
 ispravan ili ne.
 
-\linkresenje{p1.4_}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{24.8.1998.}#
+#\izlaz{Datum je ispravan.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.4.1789.}#
+#\izlaz{Datum nije ispravan.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{29.2.2004.}#
+#\izlaz{Datum je ispravan.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{29.14.2004.}#
+#\izlaz{Datum nije ispravan.}#
+\end{upotreba}
+\end{miditest}
+
+%\linkresenje{p1.4_}
 \end{Exercise}
-\begin{Answer}[ref=p1.4_]
+%\begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_.c}
-\end{Answer}
+%\end{Answer}
 
 
 \begin{Exercise}[label=p1.4_] 
@@ -528,24 +580,83 @@ Napisati funkciju \kckod{void sledeci\_dan(int dan, int mesec, int
   godina)} koja za dati datum određuje datum sledećeg dana. Napisati
 program koji učitava tri cela broja i ispisuje datum sledećeg dana. 
 
-\linkresenje{p1.4_}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{24.8.1998.}#
+#\izlaz{Datum sledeceg dana je: 25.8.1998.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.12.1789.}#
+#\izlaz{Datum sledeceg dana je: 1.1.1790.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{28.2.2003.}#
+#\izlaz{Datum sledeceg dana je: 1.3.2004.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
+#\izlaz{Datum nije ispravan.}#
+\end{upotreba}
+\end{miditest}
+
+%\linkresenje{p1.4_}
 \end{Exercise}
-\begin{Answer}[ref=p1.4_]
+%\begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
-\end{Answer}
+%\end{Answer}
 
 \begin{Exercise}[label=p1.4_] 
-%\komentar{preimenovala sam funkciju, preimenovati i u resenju}
 Napisati funkciju \kckod{int od\_nove\_godine(int dan, int mesec, int
   godina)} koja određuje koliko je dana proteklo od Nove godine do
 datog datuma. Napisati program koji učitava tri cela broja i ispisuje
 koliko dana je proteklo od Nove godine.
 
-\linkresenje{p1.4_}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{24.8.1998.}#
+#\izlaz{Broj dana od Nove godine je: 235}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.12.1680.}#
+#\izlaz{Broj dana od Nove godine je: 366}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{28.2.2003.}#
+#\izlaz{Broj dana od Nove godine je: 58}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
+#\izlaz{Datum nije ispravan.}#
+\end{upotreba}
+\end{miditest}
+
+%\linkresenje{p1.4_}
 \end{Exercise}
-\begin{Answer}[ref=p1.4_]
+%\begin{Answer}[ref=p1.4_]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
-\end{Answer}
+%\end{Answer}
 
 \begin{Exercise}[label=p1.4_] 
 %\komentar{preimenovala sam funkciju, preimenovati i u resenju}
@@ -553,6 +664,37 @@ Napisati funkciju \kckod{int do\_kraja\_godine(int dan, int mesec, int
   godina)} koja određuje broj dana od datog datuma do kraja
 godine. Napisati program koji učitava tri cela broja i ispisuje broj
 dana do krja godine.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{24.8.1998.}#
+#\izlaz{Broj dana do Nove godine je: 129}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.12.1680.}#
+#\izlaz{Broj dana od Nove godine je: 0}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{28.2.2004.}#
+#\izlaz{Broj dana od Nove godine je: 307}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
+#\izlaz{Datum nije ispravan.}#
+\end{upotreba}
+\end{miditest}
+
  
 \linkresenje{p1.4_}
 \end{Exercise}
@@ -568,6 +710,40 @@ dana između dva datuma. Napisati program koji učitava šest celih
 brojeva, koji označavaju dva datuma, i na standarni izlaz ispisuje
 broj dana između ta dva datuma. U slučaju pogrešnog unosa ispisati
 poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite prvi datum:}\ulaz{12.3.2008.}#
+#\izlaz{Unesite drugi datum:}\ulaz{5.12.2008.}#
+#\izlaz{Broj dana izmedju dva datuma je: 268}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite prvi datum:}\ulaz{26.9.1986.}#
+#\izlaz{Unesite drugi datum:}\ulaz{2.2.1701.}#
+#\izlaz{Broj dana izmedju dva datuma je: 104319}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite prvi datum:}\ulaz{24.8.1998.}#
+#\izlaz{Unesite drugi datum:}\ulaz{12.10.2010.}#
+#\izlaz{Broj dana izmedju dva datuma je: 4432}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite prvi datum:}\ulaz{24.8.1998.}#
+#\izlaz{Unesite drugi datum:}\ulaz{31.4.2004.}#
+#\izlaz{Ulaz nije ispravan.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{p1.4_}
 \end{Exercise}
