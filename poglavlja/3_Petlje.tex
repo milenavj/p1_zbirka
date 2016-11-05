@@ -459,11 +459,11 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 \includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_14.c}
 \end{Answer}
 
-
+\iffalse
 \begin{Exercise}[label=1.3_14_5] 
 Broj je prost ako je deljiv samo sa $1$ i sa samim sobom.
 Program učitava ceo broj $n$, a potom proverava da li je broj 
-prost i ispisuje odgovaraju'u poruku.
+prost i ispisuje odgovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -499,7 +499,7 @@ prost i ispisuje odgovaraju'u poruku.
 %\begin{Answer}[ref=1.3_14_5]
 %\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_14_5.c}
 %\end{Answer}
-
+\fi
 
 \begin{Exercise}[label=1.3_15] 
 Nikola želi da obraduje baku i da joj kupi jedan poklon u radnji. On
@@ -1772,10 +1772,98 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 % \subsection{Dvostruka petlja i ispisivanje slike}
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
-
-
 \begin{Exercise}[label=1.3_50] 
-Program učitava ceo pozitivan broj $n$. Napisati program koji za uneto
+Za unetu pozitivnu celobrojnu vrednost $n$ napisati programe koji ispisuju odgovarajuće brojeve.
+
+\begin{enumerate}
+
+\item Napisati program koji za unetu pozitivnu celobrojnu vrednost 
+$n$ ispisuje tablicu množenja. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{1}#
+#\izlaz{1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{1 \ \ 2}#
+#\izlaz{2 \ \ 4}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{1 \ \ 2 \ \ 3 }#
+#\izlaz{2 \ \ 4 \ \ 6 }#
+#\izlaz{3 \ \ 6 \ \ 9}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{1 \ \ 2 \ \ 3 \ \ 4 }#
+#\izlaz{2 \ \ 4 \ \ 6 \ \ 8 }#
+#\izlaz{3 \ \ 6 \ \ 9 \ \ 12}#
+#\izlaz{4 \ \ 8 \ \ 12 \ 16}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{1.3_50}
+
+\item Napisati program koji za uneto $n$ ispisuje sve brojeve od 1 do $n^2$ pri čemu se ispisuje po $n$ brojeva u jednoj vrsti.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{1 \ \ 2 \ \ 3 }#
+#\izlaz{4 \ \ 5 \ \ 6 }#
+#\izlaz{7 \ \ 8 \ \ 9}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{1 \ \ 2 \ \ 3 \ \ 4 }#
+#\izlaz{5 \ \ 6 \ \ 7 \ \ 8}#
+#\izlaz{9 \ \ 10 \ 11 \ 12}#
+#\izlaz{13 \ 14 \ 15 \ 16}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{1.3_50}
+
+\item Napisati program koji za uneto $n$ ispisuje tablicu brojeva tako da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{1 2 3 }#
+#\izlaz{2 3 1 }#
+#\izlaz{3 1 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{1 2 3 4 }#
+#\izlaz{2 3 4 1}#
+#\izlaz{3 4 1 2}#
+#\izlaz{4 1 2 3 }#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{1.3_50}
+
+\item Napisati program koji za uneto
 $n$ iscrtava pravougli ,,trougao'' sačinjen od ,,koordinata'' svojih
 tačaka. ,,Koordinata'' tačke je oblika $(i,j)$ pri čemu $i,\ j = 0,
 \ldots, n$. Prav ugao se nalazi u gornjem levom uglu slike i njegova
@@ -1820,6 +1908,8 @@ tačke $(0,0)$ jednaka $(0,1)$.
 \end{upotreba}
 \end{miditest}
 %\linkresenje{1.3_50}
+
+\end{enumerate}
 \end{Exercise}
 %\begin{Answer}[ref=1.3_50]
 %\includecode{resenja/1_KontrolaToka/1.3_Petlje/1_14.c}
@@ -1827,7 +1917,7 @@ tačke $(0,0)$ jednaka $(0,1)$.
 
 
 \begin{Exercise}[label=1.3_51] 
-Program učitava prirodan broj $n$. Napisati program koji za uneto $n$
+Napisati program koji za unet prirodan broj $n$
 zvezdicama iscrtava odgovarajuću sliku.
 \begin{description}
 \item{a)} Slika sadrži kvadrat stranice $n$ sastavljen od zvezdica. 
@@ -1969,8 +2059,8 @@ zvezdicama iscrtava odgovarajuću sliku.
 
 \begin{Exercise}[label=1.3_54] 
 Napisati program koji učitava prirodan broj $n$, a potom iscrtava odgovarajuću sliku.
-\begin{description}
-\item{a)} Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
+\begin{enumerate}
+\item Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
   dužine $n$, a prav ugao se nalazi u gornjem levom uglu slike.  
 
 \begin{miditest}
@@ -1993,7 +2083,7 @@ Napisati program koji učitava prirodan broj $n$, a potom iscrtava odgovarajuću
 \end{upotreba}
 \end{miditest}
 
-\item{b)} Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
+\item  Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
   dužine $n$, a prav ugao se nalazi u donjem levom uglu slike. 
 
 \begin{miditest}
@@ -2015,7 +2105,56 @@ Napisati program koji učitava prirodan broj $n$, a potom iscrtava odgovarajuću
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\item{c)} Slika sadrži trougao sastavljen od zvezdica. Trougao se dobija spajanjem
+
+\item  Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
+  dužine $n$, a prav ugao se nalazi u gornjem desnom uglu slike. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{***}#
+#\izlaz{\ **}#
+#\izlaz{\ \ *}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{****}#
+#\izlaz{\ ***}#
+#\izlaz{\ \ **}#
+#\izlaz{\ \ \ *}#
+\end{upotreba}
+\end{miditest}
+
+\item  Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
+  dužine $n$, a prav ugao se nalazi u donjem desnom uglu slike. 
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{\ \ *}#
+#\izlaz{\ **}#
+#\izlaz{***}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{\ \ \ *}#
+#\izlaz{\ \ **}#
+#\izlaz{\ ***}#
+#\izlaz{****}#
+\end{upotreba}
+\end{miditest}
+
+
+\item
+ Slika sadrži trougao sastavljen od zvezdica. Trougao se dobija spajanjem
   dva pravougla trougla čija kateta je dužine $n$, pri čemu je prav
   ugao prvog trougla u njegovom donjem levom uglu, dok je prav ugao
   drugog trougla u njegovom gornjem levom uglu, a spajanje se vrši po
@@ -2045,7 +2184,7 @@ Napisati program koji učitava prirodan broj $n$, a potom iscrtava odgovarajuću
 #\izlaz{*}#
 \end{upotreba}
 \end{miditest}
-\item{d)} Slika sadrži rub jednakokrakog pravouglog trougla čije su katete dužine
+\item Slika sadrži rub jednakokrakog pravouglog trougla čije su katete dužine
   $n$. Program učitava karakter $c$ i taj karakter koristi za
   iscrtavanje ruba trougla. 
   
@@ -2072,7 +2211,7 @@ Napisati program koji učitava prirodan broj $n$, a potom iscrtava odgovarajuću
 #\izlaz{+++++}#
 \end{upotreba}
 \end{miditest}
-\end{description}
+\end{enumerate}
 %\linkresenje{%}
 \end{Exercise}
 %\begin{Answer}[ref=1.3_54]
@@ -2082,8 +2221,8 @@ Napisati program koji učitava prirodan broj $n$, a potom iscrtava odgovarajuću
 
 \begin{Exercise}[label=1.3_55] 
 Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću sliku.
-\begin{description}
-\item{a)} Slika sadrži jednakostranični trougao stranice $n$ koji je sastavljen od
+\begin{enumerate}
+\item  Slika sadrži jednakostranični trougao stranice $n$ koji je sastavljen od
   zvezdica.  
   
 \begin{miditest}
@@ -2105,7 +2244,31 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{*******}#
 \end{upotreba}
 \end{miditest}
-\item{b)} Slika sadrži trougao koji se dobija spajanjem dva jednakostranični
+
+\item  Slika sadrži jednakostranični trougao stranice $n$ koji je sastavljen od
+  zvezdica pri čemu je vrh trougla na dnu slike.  
+  
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{*****}#
+#\izlaz{\ ***}#
+#\izlaz{\ \ *}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{*******}#
+#\izlaz{\ *****}#
+#\izlaz{\ \ ***}#
+#\izlaz{\ \ \ *}#
+\end{upotreba}
+\end{miditest}
+
+\item Slika sadrži trougao koji se dobija spajanjem dva jednakostranični
   trougla stranice $n$ koji su sastavljeni od zvezdica. 
   
 \begin{miditest}
@@ -2120,7 +2283,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 \end{upotreba}
 \end{miditest}
 
-\item{c)} Slika sadrži rub jednakostraničnog trougla čija stranica je dužine $n$. 
+\item Slika sadrži rub jednakostraničnog trougla čija stranica je dužine $n$. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -2131,7 +2294,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{*\ *\ *}#
 \end{upotreba}
 \end{miditest}
-\item{d)} Slika se dobija spajanjem dva jednakostranična trougla
+\item  Slika se dobija spajanjem dva jednakostranična trougla
   čija stranica je dužine $n$. Iscrtavati samo rub trouglova.
   
 \begin{miditest}
@@ -2145,7 +2308,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{\ \ *}#
 \end{upotreba}
 \end{miditest}
-\end{description}
+\end{enumerate}
 %\linkresenje{1.3_55}
 \end{Exercise}
 %\begin{Answer}[ref=1.3_55]
