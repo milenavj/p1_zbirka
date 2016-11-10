@@ -18,7 +18,7 @@ int main(){
         S=0;
 	clan = 1;
 	i=1;
-	znak=1;
+	znak=-1;
         
         /* Kako clanovi sume mogu biti negativni, potrebno je posmatrati
          * apsolutnu vrednost clana. */
@@ -27,7 +27,6 @@ int main(){
             S = S + clan;
             
             /* Promena znaka. */
-            znak = - znak;
             clan = clan*x / i;
             clan *= znak;
             
