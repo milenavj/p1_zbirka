@@ -1776,7 +1776,6 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 Za unetu pozitivnu celobrojnu vrednost $n$ napisati programe koji ispisuju odgovarajuće brojeve. Pretpostaviti da je unos korektan.
 
 \begin{enumerate}
-
 \item Napisati program koji za unetu pozitivnu celobrojnu vrednost 
 $n$ ispisuje tablicu množenja. 
 
@@ -1815,7 +1814,8 @@ $n$ ispisuje tablicu množenja.
 #\izlaz{4 \ \ 8 \ \ 12 \ 16}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_50a}
+
+%\linkresenje{1.3_50a}
 
 
 \item Napisati program koji za uneto $n$ ispisuje sve brojeve od 1 do $n^2$ pri čemu se ispisuje po $n$ brojeva u jednoj vrsti.
@@ -1839,7 +1839,8 @@ $n$ ispisuje tablicu množenja.
 #\izlaz{13 \ 14 \ 15 \ 16}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_50b}
+
+%\linkresenje{1.3_50b}
 
 
 \item Napisati program koji za uneto $n$ ispisuje tablicu brojeva tako da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
@@ -1863,7 +1864,8 @@ $n$ ispisuje tablicu množenja.
 #\izlaz{4 1 2 3 }#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_50c}
+
+%\linkresenje{1.3_50c}
 
 
 \item Napisati program koji za uneto
@@ -1910,22 +1912,24 @@ tačke $(0,0)$ jednaka $(0,1)$.
 #\izlaz{(3,0)}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_50d}
+%\linkresenje{1.3_50d}
 \end{enumerate}
 \end{Exercise}
-\begin{Answer}[ref=1.3_50]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_50a.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_50b.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_50c.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_50d.c}
-\end{Answer}
 
+\linkresenje{1.3_50}
+
+\begin{Answer}[ref=1.3_50]
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_50a.c}{Rešenje (a)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_50b.c}{Rešenje (b)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_50c.c}{Rešenje (c)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_50d.c}{Rešenje (d)}
+\end{Answer}
 
 \begin{Exercise}[label=1.3_51] 
 Napisati program koji za unet prirodan broj $n$ zvezdicama iscrtava
 odgovarajuću sliku. Pretpostaviti da je unos korektan.
-\begin{description}
-\item{a)} Slika sadrži kvadrat stranice $n$ sastavljen od zvezdica. 
+\begin{enumerate}
+\item Slika sadrži kvadrat stranice $n$ sastavljen od zvezdica. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1946,10 +1950,10 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_51a}
+%\linkresenje{1.3_51a}
 
 
-\item{b)} Slika sadrži rub kvadrata dimenzije $n$. 
+\item Slika sadrži rub kvadrata dimenzije $n$. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1970,10 +1974,10 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{**}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_51b}
+%\linkresenje{1.3_51b}
 
 
-\item{c)} Slika sadrži rub kvadrata dimenzije $n$ koji i na glavnoj dijagonali ima
+\item Slika sadrži rub kvadrata dimenzije $n$ koji i na glavnoj dijagonali ima
   zvezdice.
   
 \begin{miditest}
@@ -1997,13 +2001,13 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\end{description}
-\linkresenje{1.3_51c}
+\end{enumerate}
+\linkresenje{1.3_51}
 \end{Exercise}
 \begin{Answer}[ref=1.3_51]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_51a.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_51b.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_51c.c}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_51a.c}{Rešenje (a)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_51b.c}{Rešenje (b)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_51c.c}{Rešenje (c)}
 \end{Answer}
 
 \begin{Exercise}[difficulty=1, label=1.3_52]
@@ -2106,7 +2110,7 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{*}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_54a}
+%\linkresenje{1.3_54a}
 
 \item  Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
   dužine $n$, a prav ugao se nalazi u donjem levom uglu slike. 
@@ -2130,7 +2134,7 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_54b}
+%\linkresenje{1.3_54b}
 
 \item  Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
   dužine $n$, a prav ugao se nalazi u gornjem desnom uglu slike. 
@@ -2154,7 +2158,7 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{\ \ \ *}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_54c}
+%\linkresenje{1.3_54c}
 
 \item  Slika sadrži pravougli trougao sastavljen od zvezdica. Kateta trougla je
   dužine $n$, a prav ugao se nalazi u donjem desnom uglu slike. 
@@ -2178,7 +2182,7 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_54d}
+%\linkresenje{1.3_54d}
 
 \item
  Slika sadrži trougao sastavljen od zvezdica. Trougao se dobija spajanjem
@@ -2211,7 +2215,7 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{*}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_54e}
+%\linkresenje{1.3_54e}
 
 \item Slika sadrži rub jednakokrakog pravouglog trougla čije su katete dužine
   $n$. Program učitava karakter $c$ i taj karakter koristi za
@@ -2241,15 +2245,15 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \end{upotreba}
 \end{miditest}
 \end{enumerate}
-\linkresenje{1.3_54f}
+\linkresenje{1.3_54}
 \end{Exercise}
 \begin{Answer}[ref=1.3_54]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_54a.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_54b.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_54c.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_54d.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_54e.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_54f.c}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_54a.c}{Rešenje (a)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_54b.c}{Rešenje (b)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_54c.c}{Rešenje (c)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_54d.c}{Rešenje (d)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_54e.c}{Rešenje (e)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_54f.c}{Rešenje (f)}
 \end{Answer}
 
 
@@ -2278,7 +2282,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{*******}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_55a}
+%\linkresenje{1.3_55a}
 
 \item  Slika sadrži jednakostranični trougao stranice $n$ koji je sastavljen od
   zvezdica pri čemu je vrh trougla na dnu slike.  
@@ -2302,9 +2306,9 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{\ \ \ *}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_55b}
+%\linkresenje{1.3_55b}
 
-\item Slika sadrži trougao koji se dobija spajanjem dva jednakostranični
+\item Slika sadrži trougao koji se dobija spajanjem dva jednakostranična
   trougla stranice $n$ koji su sastavljeni od zvezdica. 
   
 \begin{miditest}
@@ -2318,7 +2322,6 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{\ \ *}#
 \end{upotreba}
 \end{miditest}
-
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
@@ -2334,7 +2337,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{\ \ \ \ *}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_55c}
+%\linkresenje{1.3_55c}
 
 \item Slika sadrži rub jednakostraničnog trougla čija stranica je dužine $n$. 
 
@@ -2358,7 +2361,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{*\ *\ *\ *\ *}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_55d}
+%\linkresenje{1.3_55d}
 
 \item  Slika se dobija spajanjem dva jednakostranična trougla
   čija stranica je dužine $n$. Iscrtavati samo rub trouglova.
@@ -2389,16 +2392,16 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{\ \ \ \ *}#
 \end{upotreba}
 \end{miditest}
-
 \end{enumerate}
-\linkresenje{1.3_55e}
+%\linkresenje{1.3_55e}
 \end{Exercise}
+
 \begin{Answer}[ref=1.3_55]
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_55a.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_55b.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_55c.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_55d.c}
-\includecode{resenja/1_KontrolaToka/1.3_Petlje/1.3_55e.c}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_55a.c}{Rešenje (a)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_55b.c}{Rešenje (b)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_55c.c}{Rešenje (c)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_55d.c}{Rešenje (d)}
+\includecodeLib{resenja/1_KontrolaToka/1.3_Petlje/1.3_55e.c}{Rešenje (c)}
 \end{Answer}
 
 

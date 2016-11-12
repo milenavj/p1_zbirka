@@ -8,16 +8,15 @@ int main()
   scanf("%u", &n);
 
   /* Brojac i odredjuje koji red slike se trenutno ispisuje. */
-  for (i=0; i<n; i++)
-  { 
+  for (i = 0; i < n; i++) {
     /* Prvo se ispisuju beline koje prethode karakterima *. */
-    for (j=0;j<n-i-1;j++)
+    for (j = 0; j < n - i - 1; j++)
       printf(" ");
     /* Posle belina se ispisuje potreban broj karaktera *. */
-    for (j=0;j<2*i+1;j++)
+    for (j = 0; j < 2 * i + 1; j++)
       printf("*");
-    printf("\n");        
+    printf("\n");
   }
- 
- return 0;
+
+  return 0;
 }

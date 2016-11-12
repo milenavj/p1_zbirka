@@ -7,12 +7,11 @@ int main()
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
-  for (i=0; i<n; i++)
-  {   
-    for (j=0;j<=i;j++)
+  for (i = 0; i < n; i++) {
+    for (j = 0; j <= i; j++)
       printf("*");
-    printf("\n");        
+    printf("\n");
   }
- 
- return 0;
+
+  return 0;
 }
