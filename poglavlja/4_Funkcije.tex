@@ -873,7 +873,6 @@ $n$ ispisuje prvih $n$ prostih brojeva.
 #\izlaz{Broj je prost!}#
 \end{upotreba}
 \end{miditest}
-
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
@@ -898,8 +897,39 @@ $n$ ispisuje prvih $n$ prostih brojeva.
 
 \begin{Exercise}[label=v1.4_09] 
 Napisati funkciju \kckod{int sadrzi(int x, int c)} koja ispituje da li
-se cifra $c$ nalazi u zapisu celog broja $x$. Napisati program koji
+se cifra $c$ nalazi u zapisu celog broja $x$. Funkcija treba da vrati
+$1$ ako se cifra nalazi u broju, a $0$ inače. Napisati program koji
 učitava dva cela broja i ispisuje rezultat poziva funkcije.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{17890 7}#
+#\izlaz{Cifra se nalazi u broju.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{1982 6}#
+#\izlaz{Cifra se ne nalazi u broju.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{17890 26}#
+#\izlaz{Neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{-1982 9}#
+#\izlaz{Cifra se nalazi u broju.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{v1.4_09}
 \end{Exercise}
@@ -920,6 +950,40 @@ Napisati program za ispitivanje svojstava cifara datog celog broja.
 Napisati program koji učitava ceo broj i ispisuje da li su sve cifre
 parne i da li su sve cifre jednake.
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{86422}#
+#\izlaz{Sve cifre broja su parne.}#
+#\izlaz{Cifre broja nisu jednake.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{55555}#
+#\izlaz{Sve cifre broja nisu parne.}#
+#\izlaz{Cifre broja su jednake.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-88}#
+#\izlaz{Sve cifre broja su parne.}#
+#\izlaz{Cifre broja su jednake.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{-342}#
+#\izlaz{Sve cifre broja nisu parne.}#
+#\izlaz{Cifre broja nisu jednake.}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{v1.4_10}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_10]
@@ -931,7 +995,22 @@ Napisati funkciju \kckod{int je\_stepen(unsigned x, unsigned n)} koja
 za dva broja $x$ i $n$ utvrđuje da li je $x$ neki stepen broja
 $n$. Ukoliko jeste, funkcija vraća izložilac stepena, a u suprotnom
 vraća $-1$. Napisati program koji učitava dva cela pozitivna broja i
-ispisuje rezultat poziva funkcije.
+ispisuje rezultat poziva funkcije. Pretpostaviti da je unos korektan.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{81 3}#
+#\izlaz{Jeste: 81 = 3\^4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{162 11}#
+#\izlaz{Broj 162 nije stepen broja 11.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{v1.4_11}
 \end{Exercise}
@@ -947,6 +1026,22 @@ razlika sabiraka u redu po apsolutnoj vrednosti manja od
 $\varepsilon$. Napisati program koji učitava dva realna broja $x$ i
 $eps$ i ispisuje izračunatu vrednost $e^x$.
 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{5}#
+#\izlaz{Unesite eps:}\ulaz{0.001}#
+#\izlaz{Rezultat: 148.412951}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{-3}#
+#\izlaz{Unesite eps:}\ulaz{0.0001}#
+#\izlaz{Rezultat: 0.049796}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{v1.4_12}
 \end{Exercise}
 \begin{Answer}[ref=v1.4_12]
@@ -959,7 +1054,23 @@ dobijen kao suma cifara prethodnog člana niza. Broj je \emph{srećan}
 ako se dati niz završava jedinicom. Napisati funkciju \kckod{int
   srecan(int x)} koja vraća $1$ ako je broj srećan, a $0$ u
 suprotnom. Napisati program koji za uneti prirodan broj $n$ ispisuje
-sve srećne brojeve od 1 do $n$.
+sve srećne brojeve od 1 do $n$. Pretpostaviti da je unos korektan.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{100}#
+#\izlaz{Srecni brojevi:}#
+#\izlaz{1 10 19 28 37 46 55 64 73 82 91 100}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{0}#
+#\izlaz{Nema srecnih brojeva.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{v1.4_13}
 \end{Exercise}
@@ -971,6 +1082,21 @@ sve srećne brojeve od 1 do $n$.
 Napisati funkciju \kckod{int konverzija (int c)} koja prebacuje veliko
 slovo u ekvivalentno malo i obrnuto. Napisati program koji testira ovu
 funkciju na karakterima koji se unose do pojave znaka \kckod{EOF}.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{abcdeF}#
+#\izlaz{ABCDEf}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{78abCD* Jutro!}#
+#\izlaz{78ABcd* jUTRO!}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{v1.4_14}
 \end{Exercise}
