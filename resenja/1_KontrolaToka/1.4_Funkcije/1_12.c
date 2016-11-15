@@ -1,22 +1,11 @@
-/*
-
- Napisati funkciju 
-
- double e_na_x(double x, double eps)	
-	
- koja racuna vrednost e^x kao parcijalnu sumu reda
- suma(x^n/n!), gde indeks n ide od  
- od 0 do beskonacno, pri cemu se sumiranje vrsi dok
- je razlika sabiraka u redu po apsolutnoj vrednosti
- manja od eps. Napisati potom program koji omogucuje 
- korisniku da unese jedan realan broj x i ispisuje
- vrednost e^x.
- 
-*/
-
 #include<stdio.h>
 #include<math.h>
 
+/* Funkcija racuna vrednost e^x kao parcijalnu sumu reda
+ suma(x^n/n!), gde indeks n ide od  
+ od 0 do beskonacno, pri cemu se sumiranje vrsi dok
+ je razlika sabiraka u redu po apsolutnoj vrednosti
+ manja od eps. */
 double e_na_x(double x, double eps)
 {
   double s=1;

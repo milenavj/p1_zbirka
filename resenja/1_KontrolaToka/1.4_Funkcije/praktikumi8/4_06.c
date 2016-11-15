@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-int maksimum(int a, int b, int c, int d){
+int maksimum(int a, int b, int c, int d) {
 	int max;
 	
 	max=a;
@@ -12,6 +12,13 @@ int maksimum(int a, int b, int c, int d){
 		max=d;
 		
 	return max;
+}
+
+void stampaj_znak(int polje, int granica) {
+	if(polje<granica)
+	  printf(" ");
+	else
+	  printf("*");
 }
 
 /* Funkcija koja iscrtava vertikalni grafikon */
@@ -27,32 +34,20 @@ void grafikon_v(int a, int b, int c, int d){
     /* U svakoj od horizontalnih linija se nalazi po 4 polja:
 	 	polje za a,b,c i d uspravnu liniju.
 	 	U svako od polja treba da se upise ili * ili belina,
-	 	u zavisnosti od vrednosti a i toga u kojoj liniji se trenutno nalazimo
+	 	u zavisnosti od vrednosti i toga u kojoj liniji se trenutno nalazimo
 	 */
 	
-	/* Proveravamo uslov za polje a */
-	if(i<max-a)
-	  printf(" ");
-	else
-	  printf("*");
+	/* Stampamo znak za polje a */
+    stampaj_znak(i, max-a);
 	
 	/* Proveravamo uslov za polje b */
-	if(i<max-b)
-	  printf(" ");
-	else
-	  printf("*");
+    stampaj_znak(i, max-b);
 
 	/* Proveravamo uslov za polje c */
-	if(i<max-c)
-	  printf(" ");
-	else
-	  printf("*");
+    stampaj_znak(i, max-c);
 
 	/* Proveravamo uslov za polje d */
-	if(i<max-d)
-	  printf(" ");
-	else
-	  printf("*");
+    stampaj_znak(i, max-d);
 	
 	/* Na kraju svake horizontalne linije stampamo novi red */
 	printf("\n");

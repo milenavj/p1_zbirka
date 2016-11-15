@@ -1,12 +1,7 @@
-/*
-Napisati funkciju koja ispituje da li je dati ceo broj prost. Funkcija treba
-da vrati 1 ako je broj prost i 0 u suprotnom. Napisati potom glavni program
-koji za uneti ceo broj n ispisuje prvih n prostih brojeva.
-*/
-
 #include <stdio.h>
 #include <math.h>
 
+/* Funkcija vraca 1 ako je broj prost i 0 u suprotnom.  */
 int prost (int x) /* 1-broj je prost, 0-broj nije prost */
 {
   int i;

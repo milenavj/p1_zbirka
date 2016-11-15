@@ -1,12 +1,7 @@
-/*
- Napisati funkciju koja ispituje da li se cifra c nalazi u zapisu celog broja x.
- Napisati potom glavni program koji za uneti ceo broj i unetu cifru poziva
- napisanu funkciju i ispisuje odgovarajucu poruku.
-*/
-
 #include<stdio.h>
 #include<stdlib.h>
 
+/* Funkcija ispituje da li se cifra c nalazi u zapisu celog broja x. */
 int sadrzi(int x, int c)
 {
    char cifra;
