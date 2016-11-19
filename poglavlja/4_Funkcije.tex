@@ -165,6 +165,34 @@ funkcije.
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_02.c}
 \end{Answer}
 
+\begin{Exercise}[label=v1.4_11] 
+Napisati funkciju \kckod{int je\_stepen(unsigned x, unsigned n)} koja
+za dva broja $x$ i $n$ utvrđuje da li je $x$ neki stepen broja
+$n$. Ukoliko jeste, funkcija vraća izložilac stepena, a u suprotnom
+vraća $-1$. Napisati program koji učitava dva cela pozitivna broja i
+ispisuje rezultat poziva funkcije. \napomena{Pretpostaviti da je unos korektan.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{81 3}#
+#\izlaz{Jeste: 81 = 3\^4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{162 11}#
+#\izlaz{Broj 162 nije stepen broja 11.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{v1.4_11}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_11]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_11.c}
+\end{Answer}
+
 
 \begin{Exercise}[label=p1.4_13] 
 Napisati funkciju \kckod{int faktorijel(int n)} koja računa faktorijel
@@ -256,6 +284,78 @@ zaokružen na dve decimale.
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_04.c}
 \end{Answer}
 
+
+\begin{Exercise}[label=v1.4_06] 
+Napisati funkciju \kckod{void ispis(float x, float y, unsigned n)}
+koja za dva realna broja $x$ i $y$ i jedan pozitivan ceo broj $n$
+ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih
+tačaka intervala $[x,y]$.  Napisati program koji učitava odgovarajuće 
+vrednosti i testira rad ove funkcije.
+
+%TODO test primer sa neispravnim unosom?
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
+#\izlaz{Unesite jedan prirodan broj:}\ulaz{10}#
+#\izlaz{0.6570 -0.3457 -0.0108 0.3659 -0.6731}#
+#\izlaz{0.8922 -0.9945 0.9666 -0.8122}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{20.5 -8.32}#
+#\izlaz{Unesite jedan prirodan broj:}\ulaz{5}#
+#\izlaz{-0.8934 -0.8979 -0.1920 0.6658 0.9968}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{v1.4_06}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_06]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_06.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.4_11] 
+Napisati funkciju \kckod{float aritmeticka\_sredina(int n)} koja
+računa aritmetičku sredinu cifara datog broja. Napisati i program koji
+učitava ceo broj i ispisuje rezultat na tri decimale.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{461}#
+#\izlaz{3.667}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1001}#
+#\izlaz{0.500}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-84723}#
+#\izlaz{4.800}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_11}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_11]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi9/4_11.c}
+\end{Answer}
+
+%TODO ovaj zadatak je bio ponovljen - treba izabrati bolje resenje i boje test primere.
+
+\iffalse
 \begin{Exercise}[label=v1.4_05] 
  Napisati funkciju \kckod{aritmeticka\_sredina(int n)} koja računa
  aritmetičku sredinu cifara datog broja. Napisati program koji učitava
@@ -295,39 +395,50 @@ zaokružen na dve decimale.
 \begin{Answer}[ref=v1.4_05]
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_05.c}
 \end{Answer}
+\fi
 
-\begin{Exercise}[label=v1.4_06] 
-Napisati funkciju \kckod{void ispis(float x, float y, unsigned n)}
-koja za dva realna broja $x$ i $y$ i jedan pozitivan ceo broj $n$
-ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih
-tačaka intervala $[x,y]$.  Napisati program koji učitava odgovarajuće 
-vrednosti i testira rad ove funkcije.
-
-%TODO test primer sa neispravnim unosom?
+\begin{Exercise}[label=v1.4_09] 
+Napisati funkciju \kckod{int sadrzi(int x, int c)} koja ispituje da li
+se cifra $c$ nalazi u zapisu celog broja $x$. Funkcija treba da vrati
+$1$ ako se cifra nalazi u broju, a $0$ inače. Napisati program koji
+učitava dva cela broja i ispisuje rezultat poziva funkcije.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
-#\izlaz{Unesite jedan prirodan broj:}\ulaz{10}#
-#\izlaz{0.6570 -0.3457 -0.0108 0.3659 -0.6731}#
-#\izlaz{0.8922 -0.9945 0.9666 -0.8122}#
+#\izlaz{Unesite broj i cifru:}\ulaz{17890 7}#
+#\izlaz{Cifra se nalazi u broju.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dva realna broja:}\ulaz{20.5 -8.32}#
-#\izlaz{Unesite jedan prirodan broj:}\ulaz{5}#
-#\izlaz{-0.8934 -0.8979 -0.1920 0.6658 0.9968}#
+#\izlaz{Unesite broj i cifru:}\ulaz{1982 6}#
+#\izlaz{Cifra se ne nalazi u broju.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.4_06}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{17890 26}#
+#\izlaz{Neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj i cifru:}\ulaz{-1982 9}#
+#\izlaz{Cifra se nalazi u broju.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{v1.4_09}
 \end{Exercise}
-\begin{Answer}[ref=v1.4_06]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_06.c}
+\begin{Answer}[ref=v1.4_09]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_09.c}
 \end{Answer}
+
 
 \begin{Exercise}[label=v1.4_07] 
 Napisati funkciju \kckod{int broj\_neparnih\_cifara(int x)} koja određuje broj
@@ -377,223 +488,7 @@ broj neparnih cifara svakog unetog broja.
 \end{Answer}
 
 
-\begin{Exercise}[label=p1.4_08] 
- Napisati funkciju \kckod{int zbir\_delilaca(int n)} koja izračunava
- zbir delilaca broja $n$. Napisati program koji učitava ceo broj $k$ i
- ispisuje zbir delilaca svakog broja od 1 do $k$.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj k:}\ulaz{6}#
-#\izlaz{1 3 4 7 6 12}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj k:}\ulaz{-2}#
-#\izlaz{Greska: pogresan unos!}#
-\end{upotreba}
-\end{miditest}
 
-\linkresenje{p1.4_08}
-\end{Exercise}
-\begin{Answer}[ref=p1.4_08]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_08.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.4_09] 
-Napisati funkciju \kckod{int ukloni\_stotine(int\ n)} koja modifikuje
-zadati broj tako što iz njegovog zapisa uklanja cifru stotina (ako
-postoji). Napisati program koji za brojeve koji se unose sve do pojave
-broja $0$ ispisuje rezultat poziva funkcije.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1210}#
-#\izlaz{110}#
-#\izlaz{Unesite broj:}\ulaz{18}#
-#\izlaz{18}#
-#\izlaz{Unesite broj:}\ulaz{3856}#
-#\izlaz{356}#
-#\izlaz{Unesite broj:}\ulaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-9632}#
-#\izlaz{-932}#
-#\izlaz{Unesite broj:}\ulaz{246}#
-#\izlaz{46}#
-#\izlaz{Unesite broj:}\ulaz{-52}#
-#\izlaz{-52}#
-#\izlaz{Unesite broj:}\ulaz{0}#
-\end{upotreba}
-\end{miditest}
-
-
-\linkresenje{p1.4_09}
-\end{Exercise}
-\begin{Answer}[ref=p1.4_09]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_09.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p1.4_10] 
-Napisati funkciju \kckod{int rotacija(int n)} koja rotira cifre
-zadatog broja za jednu poziciju u levo. Napisati program koji za
-brojeve koji se unose sve do pojave broja $0$ ispisuje rezultat poziva
-funkcije.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{146}#
-#\izlaz{461}#
-#\izlaz{Unesite broj:}\ulaz{18}#
-#\izlaz{81}#
-#\izlaz{Unesite broj:}\ulaz{3856}#
-#\izlaz{8563}#
-#\izlaz{Unesite broj:}\ulaz{7}#
-#\izlaz{7}#
-#\izlaz{Unesite broj:}\ulaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{89}#
-#\izlaz{98}#
-#\izlaz{Unesite broj:}\ulaz{-369}#
-#\izlaz{-693}#
-#\izlaz{Unesite broj:}\ulaz{-55281}#
-#\izlaz{-52815}#
-#\izlaz{Unesite broj:}\ulaz{0}#
-\end{upotreba}
-\end{miditest}
-
-
-\linkresenje{p1.4_10}
-\end{Exercise}
-\begin{Answer}[ref=p1.4_10]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_10.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=v1.4_08] 
-Broj je prost ako je deljiv samo sa $1$ i sa samim sobom. Napisati
-funkciju \kckod{int prost (int x)} koja ispituje da li je dati ceo
-broj prost. Funkcija treba da vrati $1$ ako je broj prost i $0$ u
-suprotnom. Testirati rad funkcije u programu koji za uneti ceo broj
-$n$ ispisuje prvih $n$ prostih brojeva.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{17}#
-#\izlaz{Broj je prost!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{24}#
-#\izlaz{Broj nije prost!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-11}#
-#\izlaz{Broj nije prost!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_08}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_08]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_08.c}
-\end{Answer}
-
-\begin{Exercise}[label=p1.4_] 
-Napisati funkciju \kckod{void prosti\_brojevi(int m)} koja ispisuje
-sve proste brojeve manje od broja $m$.  Napisati program koji učitava
-ceo broj veći od $1$ i ispisati rezultat poziva funkcije. U slučaju
-pogrešnog unosa, ispisati poruku o grešci. \napomena{Koristiti funkciju \kckod{int prost(int x)}}.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{15}#
-#\izlaz{2 3 5 7 11 13}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{9}#
-#\izlaz{2 3 5 7}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1}#
-#\izlaz{Greska: pogresan unos!}#
-\end{upotreba}
-\end{miditest}
-
-\end{Exercise}
-
-
-
-\begin{Exercise}[label=v1.4_09] 
-Napisati funkciju \kckod{int sadrzi(int x, int c)} koja ispituje da li
-se cifra $c$ nalazi u zapisu celog broja $x$. Funkcija treba da vrati
-$1$ ako se cifra nalazi u broju, a $0$ inače. Napisati program koji
-učitava dva cela broja i ispisuje rezultat poziva funkcije.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj i cifru:}\ulaz{17890 7}#
-#\izlaz{Cifra se nalazi u broju.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj i cifru:}\ulaz{1982 6}#
-#\izlaz{Cifra se ne nalazi u broju.}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj i cifru:}\ulaz{17890 26}#
-#\izlaz{Neispravan unos.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj i cifru:}\ulaz{-1982 9}#
-#\izlaz{Cifra se nalazi u broju.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_09}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_09]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_09.c}
-\end{Answer}
 
 \begin{Exercise}[label=v1.4_10] 
 Napisati program za ispitivanje svojstava cifara datog celog broja.
@@ -648,129 +543,8 @@ parne i da li su sve cifre jednake.
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_10.c}
 \end{Answer}
 
-\begin{Exercise}[label=v1.4_11] 
-Napisati funkciju \kckod{int je\_stepen(unsigned x, unsigned n)} koja
-za dva broja $x$ i $n$ utvrđuje da li je $x$ neki stepen broja
-$n$. Ukoliko jeste, funkcija vraća izložilac stepena, a u suprotnom
-vraća $-1$. Napisati program koji učitava dva cela pozitivna broja i
-ispisuje rezultat poziva funkcije. Pretpostaviti da je unos korektan.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{81 3}#
-#\izlaz{Jeste: 81 = 3\^4}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{162 11}#
-#\izlaz{Broj 162 nije stepen broja 11.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_11}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_11]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_11.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_12] 
-Napisati funkciju \kckod{double e\_na\_x(double x, double eps)} koja
-računa vrednost $e^x$ kao parcijalnu sumu reda
-$\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje vrši dok je
-razlika sabiraka u redu po apsolutnoj vrednosti manja od
-$\varepsilon$. Napisati program koji učitava dva realna broja $x$ i
-$eps$ i ispisuje izračunatu vrednost $e^x$.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{5}#
-#\izlaz{Unesite eps:}\ulaz{0.001}#
-#\izlaz{Rezultat: 148.412951}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{-3}#
-#\izlaz{Unesite eps:}\ulaz{0.0001}#
-#\izlaz{Rezultat: 0.049796}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{v1.4_12}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_12]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_12.c}
-\end{Answer}
-
-\begin{Exercise}[label=v1.4_13] 
-Za dati broj može se formirati niz tako da je svaki sledeći član niza
-dobijen kao suma cifara prethodnog člana niza. Broj je \emph{srećan}
-ako se dati niz završava jedinicom. Napisati funkciju \kckod{int
-  srecan(int x)} koja vraća $1$ ako je broj srećan, a $0$ u
-suprotnom. Napisati program koji za uneti prirodan broj $n$ ispisuje
-sve srećne brojeve od 1 do $n$. Pretpostaviti da je unos korektan.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{100}#
-#\izlaz{Srecni brojevi:}#
-#\izlaz{1 10 19 28 37 46 55 64 73 82 91 100}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{0}#
-#\izlaz{Nema srecnih brojeva.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_13}
-\end{Exercise}
-\begin{Answer}[ref=v1.4_13]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_13.c}
-\end{Answer}
 
 
-
-\begin{Exercise}[label=p1.4_11] 
-Napisati funkciju \kckod{float aritmeticka\_sredina(int n)} koja
-računa aritmetičku sredinu cifara datog broja. Napisati i program koji
-učitava ceo broj i ispisuje rezultat na tri decimale.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{461}#
-#\izlaz{3.667}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1001}#
-#\izlaz{0.500}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-84723}#
-#\izlaz{4.800}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_11}
-\end{Exercise}
-\begin{Answer}[ref=p1.4_11]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi9/4_11.c}
-\end{Answer}
 
 
 \begin{Exercise}[label=p1.4_12] 
@@ -846,48 +620,6 @@ poruku da li su cifre unetog broja u rastućem poretku.
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi9/4_14.c}
 \end{Answer}
 
-\begin{Exercise}[label=p1.4_15]
-%\komentarD{izbrisati Amstrongov broj u petljama} 
-%TODO definicija Armstrongovog broja je nesto drugacija, i to treba podesiti i u zadatku i u resenju: An Armstrong number is an n-digit number that is equal to the sum of the nth powers of its digits. https://en.wikipedia.org/wiki/Narcissistic_number
- 
- Broj je Armstrongov ako je jednak sumi nekog stepena svojih cifara.
-\begin{enumerate}
-\item Napisati funkciju \kckod{int stepen(int x, int n)} koja
-  izračunava $n$-ti stepen broja $x$.
-\item Napisati funkciju \kckod{int armstrong(int x)} koja vraća $1$
-  ako je broj Armstrongov, odnosno $0$ ako nije.
-\end{enumerate}
-Napisati program koji učitava ceo broj i proverava da li je
-Armstrongov.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{153}#
-#\izlaz{Broj je Armstrongov!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1634}#
-#\izlaz{Broj je Armstrongov!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{118}#
-#\izlaz{Broj nije Armstrongov!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_15}
-\end{Exercise}
-\begin{Answer}[ref=p1.4_15]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi9/4_15.c}
-\end{Answer}
 
 \begin{Exercise}[label=p1.4_16] 
 Napisati funkciju \kckod{int par\_nepar(int n)} koja ispituje da li su
@@ -926,10 +658,290 @@ rad funkcije.
 \end{Answer}
 
 
+
+\begin{Exercise}[label=p1.4_09] 
+Napisati funkciju \kckod{int ukloni\_stotine(int\ n)} koja modifikuje
+zadati broj tako što iz njegovog zapisa uklanja cifru stotina (ako
+postoji). Napisati program koji za brojeve koji se unose sve do pojave
+broja $0$ ispisuje odgovarajuće brojeve kojima je uklonjena cifra stotine.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1210}#
+#\izlaz{110}#
+#\izlaz{Unesite broj:}\ulaz{18}#
+#\izlaz{18}#
+#\izlaz{Unesite broj:}\ulaz{3856}#
+#\izlaz{356}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-9632}#
+#\izlaz{-932}#
+#\izlaz{Unesite broj:}\ulaz{246}#
+#\izlaz{46}#
+#\izlaz{Unesite broj:}\ulaz{-52}#
+#\izlaz{-52}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+
+
+\linkresenje{p1.4_09}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_09]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_09.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=p1.4_10] 
+Napisati funkciju \kckod{int rotacija(int n)} koja rotira cifre
+zadatog broja za jednu poziciju u levo. Napisati program koji za
+brojeve koji se unose sve do pojave broja $0$ ispisuje odgovarajuće rotirane brojeve.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{146}#
+#\izlaz{461}#
+#\izlaz{Unesite broj:}\ulaz{18}#
+#\izlaz{81}#
+#\izlaz{Unesite broj:}\ulaz{3856}#
+#\izlaz{8563}#
+#\izlaz{Unesite broj:}\ulaz{7}#
+#\izlaz{7}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{89}#
+#\izlaz{98}#
+#\izlaz{Unesite broj:}\ulaz{-369}#
+#\izlaz{-693}#
+#\izlaz{Unesite broj:}\ulaz{-55281}#
+#\izlaz{-52815}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+\end{upotreba}
+\end{miditest}
+
+
+\linkresenje{p1.4_10}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_10]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_10.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1.4_08] 
+ Napisati funkciju \kckod{int zbir\_delilaca(int n)} koja izračunava
+ zbir delilaca broja $n$. Napisati program koji učitava ceo broj $k$ i
+ ispisuje zbir delilaca svakog broja od 1 do $k$.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj k:}\ulaz{6}#
+#\izlaz{1 3 4 7 6 12}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj k:}\ulaz{-2}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_08}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_08]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_08.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v1.4_08] 
+Broj je prost ako je deljiv samo sa $1$ i sa samim sobom. Napisati
+funkciju \kckod{int prost (int x)} koja ispituje da li je dati ceo
+broj prost. Funkcija treba da vrati $1$ ako je broj prost i $0$ u
+suprotnom. Napisati program koji za uneti ceo broj
+$n$ ispisuje prvih $n$ prostih brojeva.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{17}#
+#\izlaz{Broj je prost!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{24}#
+#\izlaz{Broj nije prost!}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-11}#
+#\izlaz{Broj nije prost!}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{v1.4_08}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_08]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_08.c}
+\end{Answer}
+
+\begin{Exercise}[label=p1.4_] 
+Napisati funkciju \kckod{void prosti\_brojevi(int m)} koja ispisuje
+sve proste brojeve manje od broja $m$.  Napisati program koji učitava
+ceo broj veći od $1$ i ispisati rezultat poziva funkcije. U slučaju
+pogrešnog unosa, ispisati poruku o grešci. %\napomena{Koristiti funkciju \kckod{int prost(int x)}}.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{15}#
+#\izlaz{2 3 5 7 11 13}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{9}#
+#\izlaz{2 3 5 7}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1}#
+#\izlaz{Greska: pogresan unos!}#
+\end{upotreba}
+\end{miditest}
+
+\end{Exercise}
+
+
+
+\begin{Exercise}[label=v1.4_12] 
+Napisati funkciju \kckod{double e\_na\_x(double x, double eps)} koja
+računa vrednost $e^x$ kao parcijalnu sumu reda
+$\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje vrši dok je
+razlika sabiraka u redu po apsolutnoj vrednosti manja od
+$\varepsilon$. Napisati program koji učitava dva realna broja $x$ i
+$eps$ i ispisuje izračunatu vrednost $e^x$.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{5}#
+#\izlaz{Unesite eps:}\ulaz{0.001}#
+#\izlaz{Rezultat: 148.412951}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{-3}#
+#\izlaz{Unesite eps:}\ulaz{0.0001}#
+#\izlaz{Rezultat: 0.049796}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v1.4_12}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_12]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_12.c}
+\end{Answer}
+
+\begin{Exercise}[label=v1.4_13] 
+Za dati broj može se formirati niz tako da je svaki sledeći član niza
+dobijen kao suma cifara prethodnog člana niza. Broj je \emph{srećan}
+ako se dati niz završava jedinicom. Napisati funkciju \kckod{int
+  srecan(int x)} koja vraća $1$ ako je broj srećan, a $0$ u
+suprotnom. Napisati program koji za uneti prirodan broj $n$ ispisuje
+sve srećne brojeve od 1 do $n$. \napomena{Pretpostaviti da je unos korektan.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{100}#
+#\izlaz{Srecni brojevi:}#
+#\izlaz{1 10 19 28 37 46 55 64 73 82 91 100}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{0}#
+#\izlaz{Nema srecnih brojeva.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{v1.4_13}
+\end{Exercise}
+\begin{Answer}[ref=v1.4_13]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_13.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=p1.4_15]
+%\komentarD{izbrisati Amstrongov broj u petljama} 
+%TODO definicija Armstrongovog broja je nesto drugacija, i to treba podesiti i u zadatku i u resenju: An Armstrong number is an n-digit number that is equal to the sum of the nth powers of its digits. https://en.wikipedia.org/wiki/Narcissistic_number
+Broj $a$ je Armstrongov ako je jednak sumi $n$-tih stepena svojih cifara, pri čemu je $n$ broj cifara broja $a$.
+%\begin{enumerate}
+%\item Napisati funkciju \kckod{int stepen(int x, int n)} koja izračunava $n$-ti stepen broja $x$.
+%\item 
+Napisati funkciju \kckod{int armstrong(int x)} koja vraća $1$ ako je broj Armstrongov, odnosno $0$ ako nije.
+%\end{enumerate}
+Napisati program koji za učitani ceo broj proverava da li je Armstrongov.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{153}#
+#\izlaz{Broj je Armstrongov!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{1634}#
+#\izlaz{Broj je Armstrongov!}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{118}#
+#\izlaz{Broj nije Armstrongov!}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{p1.4_15}
+\end{Exercise}
+\begin{Answer}[ref=p1.4_15]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi9/4_15.c}
+\end{Answer}
+
+
 \begin{Exercise}[label=p1.4_17] 
 Napisati funkciju \kckod{int prebrojavanje(float x)} koja prebrojava
 koliko puta se broj $x$ pojavljuje u nizu brojeva koji se unose sve do
-pojave nule. Napisati program koji učitava vrednost broja $x$ i
+pojave broja $0$. Napisati program koji učitava vrednost broja $x$ i
 testira rad napisane funkcije.
 
 \begin{miditest}
@@ -1466,6 +1478,7 @@ slučaju pogrešnog unosa, ispisati poruku o grešci.
 \end{Answer}
 
 
-
+\ifresenja
 \section{Rešenja}
 \shipoutAnswer
+\fi
