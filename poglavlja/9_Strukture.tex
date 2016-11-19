@@ -2,7 +2,27 @@
 \section{Strukture}
 
 \begin{Exercise}[label=v2.5_01] 
-Tekst
+Data je struktura koja opisuje koordinate
+tacke u ravni:
+
+\begin{ckod}
+typedef struct point
+{
+float x;
+float y;
+} POINT;
+\end{ckod}
+
+U glavnom programu date su dve tacke: tacka
+A sa fiksiranim koordinatama (1,2) i tacka B
+cije koordinate zadaje korisnik. Napisati
+funkcije:\\
+a) za racunanje rastojanja izmedju dve date tacke\\
+b) za odredjivanje tacke koja se nalazi na
+sredini duzi odredjene dvema datim tackama.
+
+Testirati napisane funkcije u glavnom programu.
+
 \linkresenje{v2.5_01}
 \end{Exercise}
 \begin{Answer}[ref=v2.5_01]
@@ -10,7 +30,33 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.5_02] 
-Tekst
+  Data je struktura
+\begin{ckod}
+    typedef struct Student
+    {
+      char ime[MAX];
+      char prezime[MAX];
+      char smer;
+      float prosek;
+    } STUDENT;
+  \end{ckod}
+  \begin{enumerate}
+  
+\item  Napisati funkciju koja ucitava sa standardnog ulaza podatke o studentu. Mozemo pretpostaviti da 
+    ime i prezime studenta ne sadrze vise od 30 karaktera.
+\item Napisati funkciju koja ispisuje podatke o studentu na standardni izlaz.
+\item Ucitati niz od n studenata i :
+\begin{enumerate}
+\item ispisati imena i prezimena onih koji su na smeru R
+      \item ispisati podatke za studenta sa najvecim prosekom; ako ima vise takvih studenata, ispisati 
+\begin{enumerate}
+         \item sve njih 
+	 \item prvog 
+	 \item poslednjeg 
+\end{enumerate}
+\end{enumerate}
+  \end{enumerate}
+
 \linkresenje{v2.5_02}
 \end{Exercise}
 \begin{Answer}[ref=v2.5_02]
@@ -18,7 +64,48 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.5_03] 
-Tekst
+
+Napisati program koji ucitava reci sa standardnog ulaza dok korisnik ne zada EOF i ispisuje
+ih na standardni izlaz svaku u posebnom redu, poravnatu udesno u odnosu 
+na poslednji karakter najduze reci. Koristiti
+\begin{ckod}
+strukturu typedef struct rec
+	  {
+	     char s[21];
+	     int duzina;
+          }REC;
+\end{ckod}
+Na primer, ako su unesene sledece reci:
+\begin{ckod}
+Danas imamo ispit iz programiranja1.
+Nadam se da nece biti tesko!
+\end{ckod}
+onda ispis izgleda ovako:
+\begin{ckod}
+          Danas 
+          imamo 
+          ispit 
+             iz 
+programiranja1.
+          Nadam 
+             se 
+             da 
+           nece 
+           biti 
+         tesko!
+\end{ckod}
+
+Program realizovati kroz sledece funkcije:
+\begin{enumerate}
+\item Funkciju za ucitavanje jedne reci u strukturu REC.
+\item Funkciju za ucitavanje niza struktura koja vraca dimenziju niza
+\item Funkciju koja odredjuje maksimalnu duzinu reci u datom nizu
+\item Funkciju koja ispisuje reci u trazenom formatu
+\end{enumerate}
+
+Mozemo pretpostaviti da nijedna rec ne sadrzi vise od 30 karaktera i da nece biti
+uneto vise od 1000 reci.
+
 \linkresenje{v2.5_03}
 \end{Exercise}
 \begin{Answer}[ref=v2.5_03]
@@ -26,7 +113,16 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.5_04] 
-Tekst
+   Napisati program koji izracunava prosecnu cenu jedne potrosacke
+   korpe. Potrosacka korpa se sastoji od broja kupljenih artikala i 
+   niza kupljenih artikala. Svaki artikal odredjen je svojim nazivom, 
+   kolicinom i cenom. Program treba da ucita broj potrosaca n (najvise 100), 
+   zatim podatke za n potrosackih korpi i da na osnovu ucitanih podataka 
+   izracuna prosecnu cenu potrosacke korpe. Ucitavanje se vrsi sa standarnog
+   ulaza pri cemu se prvo zada broj artikala, a zatim za svaki artikal naziv, 
+   kolicina i cena.  Mozemo pretpostaviti da nijedan 
+   potrosac nece kupiti vise od 20 artikala, kao i da naziv svakog artikla
+   sadrzi maksimalno 30 karaktera.
 \linkresenje{v2.5_04}
 \end{Exercise}
 \begin{Answer}[ref=v2.5_04]
@@ -34,7 +130,45 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v2.5_05] 
-Tekst
+   Struktura IZRAZ opisuje numericki izraz nad celim brojevima koji se sastoji
+   od dva celobrojna operanda, numericke operacije nad celim brojevima i
+   vrednosti izraza:
+   
+   typedef struct izraz
+   {
+	char o;
+	int x;
+	int y;
+   } IZRAZ;
+
+\begin{enumerate}
+
+   \item Napisati funkciju koja ispituje da li je dati izraz korektno 
+   zadat i vraca 1 ako jeste a 0 u suprotnom. Podrazumevamo da je 
+   izraz korektno zadat ako operacija odgovara +,-,* ili / i u slucaju
+   deljenja drugi operand je razlicit od 0.
+   
+   \item Napisati funkciju koja za dati izraz odredjuje vrednost izraza. 
+   
+   \item Napisati funkciju koja ucitava dati izraz. Funkcija
+   treba da ucita sa standardnog ulaza operaciju i dva
+   operanda u polja o, x i y strukture IZRAZ. Funkcija vraca
+   1 ako je ucitavanje bilo uspesno, tj. ako je izraz bio
+   korektno zadat ili 0 u suprotnom. 
+   
+   \item Napisati funkciju koja stampa dati izraz infiksno, u obliku
+   x o y = vr. Na primer, za izraz + 4 17 ispis treba 
+   da bude 4+17=21
+   
+  
+\end{enumerate}
+Napisati glavni program koji ucitava prirodan broj $n<1000$ a zatim n izraza
+   u notaciji \\
+   + 4 17 \\
+   - 8 -16 \\
+   Program treba da ispise maksimalnu vrednost medju unetim izrazima i da ispise one
+   izraze cija je vrednost manja od polovine maksimalne vrednosti.
+   	
 \linkresenje{v2.5_05}
 \end{Exercise}
 \begin{Answer}[ref=v2.5_05]
@@ -63,7 +197,7 @@ Definisati strukturu kojom se predstavlja kompleksan broj. Napisati funkcije koj
 \end{Answer}
 
 \begin{Exercise}[label=p2.5_02] 
-Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) i $boja$ (enumeracioni tip koji uključuje plavu, žutu, crvenu i zelenu boju). Zatim učitati informacije o $n$ lopti (0<$n$<50) i ispisati ukupnu zapreminu, kao i broj crvenih lopti. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) i $boja$ (enumeracioni tip koji uključuje plavu, žutu, crvenu i zelenu boju). Zatim učitati informacije o $n$ lopti ($0<n<50$) i ispisati ukupnu zapreminu, kao i broj crvenih lopti. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -141,7 +275,7 @@ Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) 
 \end{Answer}
 
 \begin{Exercise}[label=p2.5_05] 
-  Definisati strukturu $Grad$ u kojoj se nalazi ime grada (niska dužine 20 karaktera) i prosečna temperatura u toku decembra (realan broj). Napisati program koji učitava imena $n$ (0<$n$<50) gradova i njihove prosečne temperature, a zatim ispisuje one gradove koji imaju idealnu temperaturu za klizanje: od 3 do 8 stepeni. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
+  Definisati strukturu $Grad$ u kojoj se nalazi ime grada (niska dužine 20 karaktera) i prosečna temperatura u toku decembra (realan broj). Napisati program koji učitava imena $n$ ($0<n<50$) gradova i njihove prosečne temperature, a zatim ispisuje one gradove koji imaju idealnu temperaturu za klizanje: od 3 do 8 stepeni. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#

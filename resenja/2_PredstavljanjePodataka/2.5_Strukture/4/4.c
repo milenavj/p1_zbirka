@@ -8,8 +8,7 @@
    ulaza pri cemu se prvo zada broj artikala, a zatim za svaki artikal naziv, 
    kolicina i cena.  Mozemo pretpostaviti da nijedan 
    potrosac nece kupiti vise od 20 artikala, kao i da naziv svakog artikla
-   sadrzi maksimalno 30 karaktera.
-   
+   sadrzi maksimalno 30 karaktera.   
 */
 
 #include <stdio.h>

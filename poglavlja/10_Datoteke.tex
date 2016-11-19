@@ -1,14 +1,15 @@
 
 \chapter{Ulaz i izlaz programa}
 
-\section{Standardni tokovi}
+%\section{Standardni tokovi}
 
-\section{Argumenti komandne linije}
+%\section{Argumenti komandne linije}
 
 \section{Datoteke}
 
 \begin{Exercise}[label=v3_01] 
-Tekst
+Napisati program koji prepisuje sadrzaj datoteke ulaz.txt u
+datoteku izlaz.txt karakter po karakter.
 \linkresenje{v3_01}
 \end{Exercise}
 \begin{Answer}[ref=v3_01]
@@ -16,7 +17,11 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v3_02] 
-Tekst
+Napisati program koji u datoteci cije se ime navodi kao prvi
+argument komandne linije odredjuje liniju maksimalne duzine i
+ispisuje je na standarni izlaz. Ukoliko ima vise takvih linija ,
+ispisati onu koja je leksikografski prva. Mozemo pretpostaviti
+da datoteka ne sadrzi linije duze od 80 karaktera.
 \linkresenje{v3_02}
 \end{Exercise}
 \begin{Answer}[ref=v3_02]
@@ -24,7 +29,14 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v3_03] 
-Tekst
+U datoteci cije se ime zadaje kao prvi argument komandne linije
+nalazi se
+prirodan broj n a zatim i n celih brojeva. Napisati program koji
+prebrojava
+koliko k-tocifrenih brojeva postoji u datoteci , pri cemu se
+prirodan broj k
+zadaje kao drugi argument komandne linije.
+
 \linkresenje{v3_03}
 \end{Exercise}
 \begin{Answer}[ref=v3_03]
@@ -32,7 +44,13 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v3_04] 
-Tekst
+U datoteci cije se ime navodi kao prvi argument komandne
+linije navedena je rec r i niz linija. Napisati
+program koji u datoteku cije se ime navodi kao
+drugi argument komandne linije upisuje sve linije
+u kojima se rec r pojavljuje bar n puta , gde je
+n prirodan broj koji se unosi sa standardnog ulaza. Ispis
+treba da bude u formatu broj\_pojavljivanja : linija.
 \linkresenje{v3_04}
 \end{Exercise}
 \begin{Answer}[ref=v3_04]
@@ -40,7 +58,26 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v3_05] 
-Tekst
+Program se pokrece tako sto se navedu nazivi dve datoteke(ulazna i
+izlazna) i opcije.
+U datoteci cije se ime navodi kao prvi argument komandne linije
+nalaze se podaci o razlomcima:
+u prvom redu se nalazi broj razlomaka , a u svakom sledecem redu
+brojilac i imenilac jednog razlomka.
+Potrebno je kreirati strukturu koja opisuje razlomak i ucitati niz
+razlomaka
+iz datoteke , a potom:\\
+a) ukoliko je navedena opcija x, upisati u datoteku cije je ime
+drugi argument komandne linije
+reciprocni razlomak za svaki razlomak iz niza (npr. za 2/3
+treba upisati 3/2) \\
+b) ukoliko je navedena opcija y, upisati u datoteku cije je ime
+drugi argument komandne linije
+realnu vrednost reciprocnog razlomka svakog razlomka iz niza
+(npr. za 2/3 treba upisati 1.5)
+
+Mozemo pretpostaviti da se u datoteci sa podacima o razlomcima
+nalazi najvise 100 razlomaka.
 \linkresenje{v3_05}
 \end{Exercise}
 \begin{Answer}[ref=v3_05]
@@ -48,7 +85,18 @@ Tekst
 \end{Answer}
 
 \begin{Exercise}[label=v3_06] 
-Tekst
+Za svaki automobil poznati su marka , model i cena. Iz datoteke cije
+se ime zadaje sa standardnog ulaza ucitava se broj automobila a
+potom
+i podaci za svaki automobil. Program treba da: \\
+a) izracuna prosecnu cenu po marki kola \\
+b) za maksimalnu cenu koju je kupac spreman da plati , a koja se
+zadaje kao argument komandne linije, da ispise automobile u tom cenovnom
+rangu zajednu sa prosecnom cenom odgovarajuce marke
+
+Mozemo pretpostaviti da se model i marka sastoje od jedne reci i
+da svaka od njih sadrzi najvise 30 karaktera kao i da se u datoteci
+nalaze podaci za najvise 100 automobila.
 \linkresenje{v3_06}
 \end{Exercise}
 \begin{Answer}[ref=v3_06]
@@ -62,7 +110,8 @@ Tekst
 
 
 \begin{Exercise}[label=p3_01] 
-Napisati program koji prebrojava mala slova u datoteci $test.txt$. \\
+Napisati program koji prebrojava mala slova u datoteci $test.txt$. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{test.txt}#

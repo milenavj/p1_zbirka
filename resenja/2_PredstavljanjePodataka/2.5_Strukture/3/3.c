@@ -32,7 +32,6 @@ d) Funkciju koja ispisuje reci u trazenom formatu
 
 Mozemo pretpostaviti da nijedna rec ne sadrzi vise od 30 karaktera i da nece biti
 uneto vise od 1000 reci.
-
 */
 
 #include<stdio.h>

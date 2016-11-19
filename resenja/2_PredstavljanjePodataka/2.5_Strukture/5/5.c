@@ -35,8 +35,6 @@
    Program treba da ispise maksimalnu vrednost medju unetim izrazima i da ispise one
    izraze cija je vrednost manja od polovine maksimalne vrednosti.
    	
-
-
 */
 
 #include <stdio.h>
