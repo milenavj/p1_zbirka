@@ -1,151 +1,518 @@
-
 \chapter{Predstavljanje podataka}
 
 \section{Nizovi}
 
-
-
-\begin{Exercise}[label=v2.1_01] 
-Skalarni proizvod dva vektora $a = (a_1, \ldots, a_n)$ i $b = (b_1,
-\ldots, b_n)$ je suma $a_1\cdot b_1 + \ldots a_n\cdot b_n$. Napisati
-program koji računa skalarni proizvod dva vektora. Svaki vektor je
-zadat kao celobrojni niz sa najviše $100$ elemenata. Program treba da
-učita dimenziju nizova (oba niza su iste dimenzije), zatim jedan po
-jedan element niza i da ispise njihov skalarni proizvod na standardni
-izlaz. Ako nizovi nisu iste dužine ispisati poruku \kckod{Greska!}.
-\linkresenje{v2.1_01}
+\begin{Exercise}[label=v.skalarni_proizvod] 
+Ako su $a = (a_1, \ldots, a_n)$ i $b = (b_1,\ldots, b_n)$ vektori dimenzije $n$, njihov skalarni proizvod je suma $a_1\cdot b_1 + \ldots + a_n\cdot b_n$. Napisati program koji računa skalarni proizvod dva vektora. Vektori se zadaju kao celobrojni nizovi sa najviše $100$ elemenata. Program prvo učitava dimenziju nizova, zatim elemente nizova i na izlaz ispisuje vrednost skalarnog proizvoda ili odgovarajuću poruku u slučaju greške. \\ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju vektora: }#
+#\ulaz{5}#
+#\izlaz{Unesite koordinate vektora a:}#
+#\ulaz{8 -2 0 2 4}#
+#\izlaz{Unesite koordinate vektora b:}#
+#\ulaz{35 12 5 -6 -1}#
+#\izlaz{Skalarni proizvod vektora a i b:}# 
+#\izlaz{240}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju vektora: }#
+#\ulaz{3}#
+#\izlaz{Unesite koordinate vektora a:}#
+#\ulaz{-1 0 1}#
+#\izlaz{Unesite koordinate vektora b:}#
+#\ulaz{5 5 5}#
+#\izlaz{Skalarni proizvod vektora a i b:}# 
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju vektora: }#
+#\ulaz{120}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.skalarni_proizvod}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_01]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_01.c}
+\begin{Answer}[ref=v.skalarni_proizvod]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/skalarni_proizvod.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_02] 
-Napisati program koji učitava broj elemenata niza (ne veći od $100$),
-a zatim učitava elemente niza i ispisuje:
+\begin{Exercise}[label=v.parni_elementi] 
+Napisati program koji učitava broj elemenata niza (ne veći od $100$), zatim elemente niza, i ispisuje:
 \begin{description}
-   \item{a)} elemente niza koji se nalaze na parnim indeksima
-   \item{b)} parne elemente niza
+\item{a)} elemente niza koji se nalaze na parnim pozicijama
+\item{b)} parne elemente niza
 \end{description}
-Ukoliko je broj elemenata niza manji od 1 ili veči od 100 ispisati
-poruku \kckod{Greska!}.  
-\linkresenje{v2.1_02}
+U slučaju greške ispisati odgovarajuću poruku.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{6}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1 8 2 -5 -13 75}#
+#\izlaz{Elementi niza na parnim pozicijama:}#
+#\izlaz{1 2 -13}#
+#\izlaz{Parni elementi niza:}#
+#\izlaz{8 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{3}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{11 81 -63}#
+#\izlaz{Elementi niza na parnim pozicijama:}#
+#\izlaz{11 -63}#
+#\izlaz{Parni elementi niza:}#
+#\izlaz{}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza: }#
+#\ulaz{-4}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.parni_elementi}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_02]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_02.c}
+\begin{Answer}[ref=v.parni_elementi]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/parni_elementi.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_03] 
-Napisati program koji učitava jedan ceo broj a zatim ispisuje koliko
-puta svaka cifra učestvuje u zapisu tog broja. Nije potrebno
-ispisivati da se neka cifra pojavila $0$ puta. \uputstvo{Za evidenciju
-  broja pojavljivanja svake cifre koristiti niz.}
-\linkresenje{v2.1_03}
+\begin{Exercise}[label=v.prebrojavanje_cifara] 
+Napisati program koji učitava jedan ceo broj, a zatim ispisuje broj pojavljivanja svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja pojavljivanja svake cifre pojedinačno, koristiti niz.} \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}#
+#\ulaz{2355623}#
+#\izlaz{U zapisu broja 2355623, cifra 2 se pojaviljuje 2 puta}#
+#\izlaz{U zapisu broja 2355623, cifra 3 se pojaviljuje 2 puta}#
+#\izlaz{U zapisu broja 2355623, cifra 5 se pojaviljuje 2 puta}#
+#\izlaz{U zapisu broja 2355623, cifra 6 se pojaviljuje 1 puta}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite ceo broj:}#
+#\ulaz{-39902}#
+#\izlaz{U zapisu broja -39902, cifra 0 se pojaviljuje 1 puta}#
+#\izlaz{U zapisu broja -39902, cifra 2 se pojaviljuje 1 puta}#
+#\izlaz{U zapisu broja -39902, cifra 3 se pojaviljuje 1 puta}#
+#\izlaz{U zapisu broja -39902, cifra 9 se pojaviljuje 2 puta}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.prebrojavanje_cifara}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_03]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_03.c}
+\begin{Answer}[ref=v.prebrojavanje_cifara]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/prebrojavanje_cifara.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_04] 
-Napisati program koji učitava karakter po karakter do znaka
-\kckod{EOF} i ispisuje koliko se puta u unetom tekstu pojavila svaka
-cifra, svako malo slovo i svako veliko slovo. Ispisati broj
-pojavljivanja samo za ona mala slova, velika slova i cifre koji su se
-u unetom tekstu pojavili više od $0$ puta. \uputstvo{Za evidenciju
-  broja pojavljivanja cifara, malih i velih slova korisiti tri niza.}
-\linkresenje{v2.1_04}
+\begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
+ Napisati program koji za dva cela broja $x$ i $y$ koja se učitavaju sa standardnog ulaza proverava da li se zapisuju pomoću istih cifara. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{251 125}#
+#\izlaz{Brojevi se zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
+#\izlaz{Brojevi se ne zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
+#\izlaz{Brojevi se zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest} 
+\linkresenje{p.brojevi_sa_istim_zapisima}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_04]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_04.c}
+\begin{Answer}[ref=p.brojevi_sa_istim_zapisima]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/brojevi_sa_istim_zapisima.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_05] 
-Napisati program koji učitava dimenziju $n$ dva celobrojna niza $a$ i
-$b$ (oba niza su iste dimenzije), zatim učitava elemente oba niza
-(prvo se unose elementi niza $a$, a potom elementi niza $b$) i formira
-treći niz $c$ tako što naizmenično raspoređuje elemente nizova $a$ i
-$b$ unutar njega: $a_0, b_0, a_1, b_1, \ldots, a_{n-1},
-b_{n-1}$. Program treba da ispiše elemente novog niza $c$ na
-standardni izlaz. Maksimalni broj elemenata u nizovima $a$ i $b$
-$100$. U slučaju neispravnog unosa ispisati \kckod{Greska!}.
-\linkresenje{v2.1_05}
+\begin{Exercise}[label=v.prebrojavanje] 
+Napisati program koji učitava karakter po karakter sa standardnog ulaza sve do kraja ulaza, a zatim izračunava i ispisuje koliko se puta u unetom tekstu pojavila svaka od cifara, svako malo slovo i svako veliko slovo. Ispisati broj pojavljivanja samo za karaktere koji su se u unetom tekstu pojavili barem jednom. \uputstvo{Za evidenciju broja pojavljivanja cifara, malih i velih slova korisiti pojedinačne nizove.} \\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{123 abcabcabc 123}#
+#\izlaz{U zapisu broja 2355623, cifra 2 se pojaviljuje 2 puta}#
+#\izlaz{Karakter 1 se pojavljuje 2 puta}#
+#\izlaz{Karakter 2 se pojavljuje 2 puta}#
+#\izlaz{Karakter 3 se pojavljuje 2 puta}#
+#\izlaz{Karakter a se pojavljuje 3 puta}#
+#\izlaz{Karakter b se pojavljuje 3 puta}#
+#\izlaz{Karakter c se pojavljuje 3 puta}#
+\end{upotreba}
+\end{maxitest}
+\linkresenje{v.prebrojavanje}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_05]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_05.c}
+\begin{Answer}[ref=v.prebrojavanje]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/prebrojavanje.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_06] 
+%TODO resiti
+\begin{Exercise}[label=vp.bez_resenja_3] 
+Sa standardnog ulaza se unosi jedna linija teksta. Napisati program koji izračunava i ispisuje koliko puta se pojavilo svako od slova engleskog alfabeta u unetom tekstu. Ne praviti razliku između malih i velikih slova. \\
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{haHJjkL}#
+#\izlaz{ a:1  b:0  c:0  d:0  e:0  f:0  g:0  h:2  i:0  j:2  k:1  l:1  m:0  n:0  o:0  p:0  q:0  r:0  s:0
+   t:0  u:0  v:0  w:0  x:0  y:0  z:0}#
+\end{upotreba}
+\end{maxitest}
+\begin{maxitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{DanaS j3 \_j\_utRo laBU78d}#
+#\izlaz{a:3  b:1  c:0  d:2  e:0  f:0  g:0  h:2  i:0  j:2  k:0  l:1  m:0  n:1  o:1  p:0  q:0  r:1  s:1
+  t:1  u:2  v:0  w:0  x:0  y:0  z:0}#
+\end{upotreba}
+\end{maxitest}
+\begin{maxitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{Sao PaoLo 1998 \_JuZna Amerika90}#
+#\izlaz{a:5  b:0  c:0  d:2  e:1  f:0  g:0  h:0  i:1  j:1  k:1  l:1  m:1  n:1  o:3  p:1  q:0  r:1  s:1
+  t:0  u:1  v:0  w:0  x:0  y:0  z:0}#
+\end{upotreba}
+\end{maxitest}
+%\linkresenje{vp.bez_resenja_3}
+\end{Exercise}
+\begin{Answer}[ref=vp.bez_resenja_3]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/....c}
+\end{Answer}
+
+\begin{Exercise}[label=v.ukrstanje_nizova] 
+Napisati program koji formira i na izlaz ispisuje niz $a_0, b_0, a_1, b_1, \ldots, a_{n-1},
+b_{n-1}$ koji se dobija naizmeničnim raspoređivanjem elemenata nizova $a$ i $b$ dužine $n$. Sa standardnog ulaza se prvo učitava dimenzija nizova $n$ (broj ne veći od $100$), potom elementi niza $a$ i na kraju, elementi niza $b$. U slučaju neispravnog unosa ispisati odgovarajuću poruku o grešci. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju nizova:}#
+#\ulaz{5}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{2 -5 11 4 8}#
+#\izlaz{Unesite elemente niza b:}#
+#\ulaz{3 3 9 -1 17}#
+#\izlaz{Rezultujuci niz:}#
+#\izlaz{2 3 -5 3 11 9 4 -1 8 17}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju nizova:}#
+#\ulaz{105}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.ukrstanje_nizova}
+\end{Exercise}
+\begin{Answer}[ref=v.ukrstanje_nizova]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/ukrstanje_nizova.c}
+\end{Answer}
+
+\begin{Exercise}[label=p.nizovi_spajanje] 
+ Sa standardnog ulaza se učitava ceo broj $n$ manji od $100$, zatim i elementi dvaju nizova $a$ i $b$ dimenzije $n$. Napisati program koji formira i ispisuje niz $c$ čiju prvu polovinu čine elementi niza $b$, a drugu polovinu elementi niza $a$. U slučaju greške ispisati odgovarajuću poruku.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{Unesite elemente niza a:}\ulaz{4 -8 32}#
+#\izlaz{Unesite elemente niza b:}\ulaz{5 2 11}#
+#\izlaz{5 2 11 4 -8 32}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite elemente niza a:}\ulaz{1 0 -1 0}#
+#\izlaz{Unesite elemente niza b:}\ulaz{5 5 5 3}#
+#\izlaz{5 5 5 3 1 0 -1 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{145}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p.nizovi_spajanje}
+\end{Exercise}
+\begin{Answer}[ref=p.nizovi_spajanje]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_spajanje.c}
+\end{Answer}
+
+%TODO: rešiti, izdvojeno iz jednog većeg zadatka... obavezno
+\begin{Exercise}[label=p.nizovi_spajanje_sortiranih] 
+ Sa standardnog ulaza se učitava ceo broj $n$ manji od $100$, zatim i elementi dvaju sortiranih neopadajuće nizova $a$ i $b$ dimenzije $n$. Napisati program koji formira i ispisuje niz $c$ koji se dobija spajanjem nizova $a$ i $b$ u treći, takođe sortiran neopadajuće, niz. U slučaju greške ispisati odgovarajuću poruku.\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{2 11 28 40 63}#
+#\izlaz{Unesite elemente niza b:}#
+#\ulaz{-19 -5 5 11 52}#
+#\izlaz{Niz c:}#
+#\izlaz{-19 -5 2 5 11 11 28 40 52 63}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{-2 4 8}#
+#\izlaz{Unesite elemente niza b:}#
+#\ulaz{6 15 19}#
+#\izlaz{Niz c:}#
+#\izlaz{-2 4 6 8 15 19}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{145}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p.nizovi_spajanje_sortiranih}
+\end{Exercise}
+\begin{Answer}[ref=p.nizovi_spajanje_sortiranih]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_spajanje_sortiranih.c}
+\end{Answer}
+
+%TODO: resiti
+\begin{Exercise}[label=vp.bez_resenja_7] 
+Napisati program koji sa standardnog ulaza učitava $10$ celih brojeva i razdvaja ih na parne i neparne tako što parne brojeve upisuje na početak niza, a neparne brojeve na kraj niza. Ispisati niz dobijen na ovaj način. \napomena{Nije dozvoljeno koristiti pomoćne nizove.}\\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite 10 brojeva:}#
+#\ulaz{-2 8 11 53 59 20 17 -8 3 14}#
+#\izlaz{Rezultujuci niz:}#
+#\izlaz{-2 8 20 -8 14 3 17 59 53 11}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite 10 brojeva:}#
+#\ulaz{9 142 -9 -278 -69 33 34 28 -6 14}#
+#\izlaz{Rezultujuci niz:}#
+#\izlaz{142 -278 34 28 -6 14 33 -69 -9 9}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{vp.bez_resenja_7}
+\end{Exercise}
+\begin{Answer}[ref=vp.bez_resenja_7]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/vp.bez_resenja_7.c}
+\end{Answer}
+
+\begin{Exercise}[label=v.brisanje_elemenata] 
 Napisati program koji učitava dimenziju $n$ celobrojnog niza $a$ i
 njegove elemente, a zatim iz niza $a$ izbacuje sve elemente koji nisu
-deljivi svojom poslednjom cifrom, izuzev elemenata čija je poslednja
+deljivi svojom poslednjom cifrom. Izuzetak su elementi čija je poslednja
 cifra $0$ koje treba zadržati. Program treba da ispiše izmenjeni niz
-na standardni izlaz. Niz $a$ sadrzi najviše $100$ elemenata.
-\linkresenje{v2.1_06}
+na standardni izlaz. Niz $a$ sadrži najviše $100$ elemenata. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{9}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{173 -25 23 7 17 25 34 61 -4612}#
+#\izlaz{Niz a nakon izmene:}#
+#\izlaz{-25 7 25 61 -4612}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{0}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.brisanje_elemenata}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_06]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_06.c}
+\begin{Answer}[ref=v.brisanje_elemenata]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/brisanje_elemenata.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_07] 
-Napisati funkcije za rad sa nizovima celih brojeva. U programu učitati
-dimenziju niza (ne veću od $100$) i testirati rad napisanih
-funkcija. U slučaju greške pri unosu podataka ispisati odgovarajuću
-poruku.
+%TODO ubaciti zadatak sa brisanjem 
+\begin{Exercise}[label=vp.zadatak_bez_resenja_12] 
+Napisati program koji u nizu dužine $n$ (broj manji od $100$) čiji se elementi učitavaju sa ulaza eliminiše sve brojeve koji nisu deljivi svojim indeksom. Niz reorganizovati tako da nema
+\emph{rupa} koje su nastale eliminacijom elemenata i ispisati na standardni izlaz. U slučaju greške, ispisati odgovarajuću poruku. \napomena{Nulti element niza treba zadržati jer nije dozvoljeno deljenje nulom.}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{4 2 1 6 7 8 10 2 16 3}#
+#\izlaz{4 2 6 16}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{vp.zadatak_bez_resenja_12}
+\end{Exercise}
+\begin{Answer}[ref=vp.zadatak_bez_resenja_12]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/zadatak_bez_resenja_12.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v.nizovi_funkcije_intro] 
+Napisati funkcije za rad sa nizovima celih brojeva. 
 \begin{description}
-\item{a)} Napisati funkciju \kckod{void ucitaj(int niz[], int dimenzija)} koja učitava sadržaj niza. %ovde sam navela potpise funkcija jer su ove dve funkcije bitne za dalje, ali nije bas uniformno u ostatku zadatka
-\item{b)} Napisati funkciju \kckod{void stampaj(int niz[], int dimenzija)} koja štampa sadržaj niza.
-\item{c)} Napisati funkciju koja računa sumu elemenata niza.   
-\item{d)} Napisati funkciju koja računa prosečnu vrednost elemenata niza.
-\item{e)} Napisati funkciju koja izračunava minimum elemenata niza.
-\item{f)} Napisati funkciju koja izračunava poziciju maksimalnog elementa u nizu.
+\item{a)} Napisati funkciju \kckod{void ucitaj(int a[], int n)} koja učitava elemente niza $a$ dimenzije $n$. 
+\item{b)} Napisati funkciju \kckod{void stampaj(int a[], int n)} koja štampa elemente niza $a$ dimenzije $n$.
+\item{c)} Napisati funkciju \kckod{int suma(int a[], int n)} koja računa i vraća sumu elemenata niza $a$ dimenzije $n$.   
+\item{d)} Napisati funkciju \kckod{int prosek(int a[], int n)} koja računa i vraća prosečnu vrednost (aritmetičku sredinu) elemenata niza $a$ dimenzije $n$.
+\item{e)} Napisati funkciju \kckod{int minimum(int a[], int n)} koja izračunava i vraća minimum elemenata niza $a$ dimenzije $n$.
+\item{f)} Napisati funkciju \kckod{int pozicija\_maksimuma(int a[], int n)} koja izračunava i vraća poziciju maksimalnog elementa u nizu $a$ dimenzije $n$. U slučaju više pojavljivanja maksimalnog elementa, vratiti najmanju poziciju.  
 \end{description}
-\linkresenje{v2.1_07}
+Napisati program koji testira rad zadatih funkcija. Sa standardnog ulaza učitati dimenziju niza (broj ne veći od $100$). U slučaju greške ispisati odgovarajuću poruku. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{5}#
+#\ulaz{2 5 -2 8 11}#
+#\izlaz{Ucitani niz: 2 5 -2 8 11}#
+#\izlaz{Suma elemenata niza: 24}#
+#\izlaz{Prosecna vrednost elemenata niza: 4.80}#
+#\izlaz{Minimumalni element niza: -2}#
+#\izlaz{Indeks maksimalnog elementa niza: 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{-5}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.nizovi_funkcije_intro}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_07]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_07.c}
+\begin{Answer}[ref=v.nizovi_funkcije_intro]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_funkcije_intro.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_08] 
-Napisati funkcije za rad sa nizovima celih brojeva. U programu učitati
-dimenziju niza (ne veću od $100$) i korišćenjem funkcije
-\kckod{ucitaj} iz zadatka \ref{v2.1_07} učitati elemente niza. Potom
-učitati ceo broj $m$ i testirati rad napisanih funkcija. U slučaju
-greške pri unosu podataka ispisati odgovarajuću poruku.
+\begin{Exercise}[label=v.nizovi_funkcije_razno] 
+Napisati funkcije za rad sa nizovima celih brojeva. 
 \begin{description}
-\item{a)} Napisati funkciju koja proverava da li niz sadrži neku vrednost $m$.
-\item{b)} Napisati funkciju koja vraća vrednost prve pozicije na kojoj se 
-nalazi element koji ima vrednost $m$, ili $-1$ ukoliko element nije u nizu.
+\item{a)} Napisati funkciju koja proverava da li niz sadrži zadatu vrednost $m$. Povratna vrednost funkcije je $1$ ako je vrednost sadržana u nizu ili $0$ ako nije.
+\item{b)} Napisati funkciju koja vraća vrednost prve pozicije na kojoj se nalazi element koji ima vrednost $m$ ili $-1$ ukoliko element nije u nizu.
 \item{c)} Napisati funkciju koja vraća vrednost poslednje pozicije na kojoj se 
-nalazi element koji ima vrednost $m$, ili $-1$ ukoliko element nije u nizu.
+nalazi element koji ima vrednost $m$ ili $-1$ ukoliko element nije u nizu.
 \item{d)} Napisati funkciju koja proverava da li elementi niza čine palindrom.
-\item{e)} Napisati funkciju koja proverava da li su elementi niza uređeni 
-neopadajuće.
-\item{f)} Napisati funkciju koja izračunava najdužu uzastopnu seriju jednakih 
-elemenata u nizu.
+\item{e)} Napisati funkciju koja proverava da li su elementi niza uređeni neopadajuće.
+%ovaj zadatak se nalazi negde pri kraju u okviru slicnog zadatka... bez_resenja_6
+%\item{f)} Napisati funkciju koja pronalazi najdužu seriju jednakih elemenata u nizu.
 \end{description}
-\linkresenje{v2.1_08}
+Napisati i program koji testira rad napisanih funkcija. Na standardnom ulazu se zadaju dimenzija niza (broj ne veći od $100$), elementi niza i ceo broj $m$. U slučaju greške ispisati odgovarajuću poruku. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{7}#
+#\ulaz{8 11 -2 14 -2 11 8}#
+#\izlaz{Ucitani niz: 8 11 -2 14 -2 11 8}#
+#\izlaz{Unesite jedan ceo broj: }#
+#\ulaz{11}#
+#\izlaz{Niz sadrzi element cija je vrednost 11.}#
+#\izlaz{Niz sadrzi element cija je vrednost 11.}#
+#\izlaz{Indeks njegovog prvog pojavljivanja u nizu je 1.}#
+#\izlaz{Niz sadrzi element cija je vrednost 11.}#
+#\izlaz{Indeks njegovog poslednjeg pojavljivanja u nizu je 5.}#
+#\izlaz{Elementi niza cine palindrom.}#
+#\izlaz{Niz nije sortiran neopadajuce.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{-5}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v2.nizovi_funkcije_razno}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_08]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_08.c}
+\begin{Answer}[ref=v2.nizovi_funkcije_razno]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_funkcije_razno.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_09] 
-Tekst
-\linkresenje{v2.1_09}
+\begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
+Napisati funkcije za rad sa nizovima celih brojeva. 
+\begin{description}
+\item{a)} Napisati funkciju koja sve vrednosti niza uvećava za zadatu vrednost $m$.
+\item{b)} Napisati funkciju koja obrće elemente niza.     
+\item{c)} Napisati funkciju koja rotira niz ciklično za jedno mesto u levo.
+\item{d)} Napisati funkciju koja rotira niz ciklično za $k$ mesta u levo.
+\end{description}
+Napisati i program koji testira rad napisanih funkcija. Na standardnom ulazu se zadaju dimenzija niza (broj ne veći od $100$), elementi niza i celi brojevi $m$ i $k$. U slučaju greške ispisati odgovarajuću poruku. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{6}#
+#\ulaz{7 -3 11 783 26 -19}#
+#\izlaz{Unesite jedan ceo broj:}#
+#\ulaz{2}#
+#\izlaz{Elementi niza nakon uvecanja za 2:}#
+#\izlaz{9 -1 13	785	28 -17}#
+#\izlaz{Elementi niza nakon obrtanja:}#
+#\izlaz{-17	28 785	13	-1	9}#
+#\izlaz{Elementi niza nakon rotiranja za 1 mesto ulevo:}#
+#\izlaz{28 785 13 -1 9 -17}#
+#\izlaz{Unesite jedan pozitivan ceo broj:}#
+#\ulaz{3}#
+#\izlaz{Elementi niza nakon rotiranja za 3 mesto ulevo:}#
+#\izlaz{-1 9 -17 28	785	13}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{252}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{v.nizovi_funkcije_pomeranja}
 \end{Exercise}
-\begin{Answer}[ref=v2.1_09]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_09.c}
+\begin{Answer}[ref=v.nizovi_funkcije_pomeranja]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_funkcije_pomeranja.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.1_10] 
-Tekst
-\linkresenje{v2.1_10}
-\end{Exercise}
-\begin{Answer}[ref=v2.1_10]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.5_01] 
-Sa standardnog ulaza se unosi dimenzija niza (broj manji od 100), a zatim i njegovi elementi. Napisati program koji kvadrira sve negativne elemente niza i ispisuje rezultujući niz. \\
+\begin{Exercise}[label=p.kvadriranje_elemenata] 
+Sa standardnog ulaza se učitava broj elemenata niza (broj manji od $100$), a zatim i njegovi elementi. Napisati program koji kvadrira sve negativne elemente niza i ispisuje rezultujući niz. U slučaju greške ispisati odgovarajuću poruku.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -173,14 +540,14 @@ Sa standardnog ulaza se unosi dimenzija niza (broj manji od 100), a zatim i njeg
 #\izlaz{9.53 5 1 4.89}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p2.5_01}
+\linkresenje{p.kvadriranje_elemenata}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_01]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_01.c}
+\begin{Answer}[ref=p.kvadriranje_elemenata]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/kvadriranje_elemenata.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_02] 
-Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente niza i jedan ceo broj $k$. Napisati program koji štampa indekse elemenata koji su deljivi sa $k$. \\
+\begin{Exercise}[label=p.pretraga_deljivih_sa_k] 
+Sa standardnog ulaza se učitava dimenzija niza (broj manji od $100$), elementi niza i jedan ceo broj $k$. Napisati program koji štampa indekse elemenata koji su deljivi sa $k$. U slučaju greške ispisati odgovarajuću poruku. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -209,14 +576,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_02}
+\linkresenje{p.pretraga_deljivih_sa_k}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_02]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_02.c}
+\begin{Answer}[ref=p.pretraga_deljivih_sa_k]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/pretraga_deljivih_sa_k.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_03] 
- Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji od 100) i elemente niza, a zatim štampa niz u kojem su najveći i najmanji element niza razmenili mesta. \\
+\begin{Exercise}[label=p.razmena_min_max] 
+ Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji od $100$) i elemente niza, a zatim štampa niz u kojem su najveći i najmanji element niza razmenili mesta. Ukoliko se najmanji ili najveći element više puta pojavljuju u nizu, uzeti u obzir njihova prva pojavljivanja. U slučaju greške ispisati odgovarajuću poruku.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -238,18 +605,56 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{145}#
-#\izlaz{Greska: pogresan unos!}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
 \end{upotreba}
 \end{miditest}
-
-\linkresenje{p2.5_03}
+\linkresenje{p.razmena_min_max}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_03]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_03.c}
+\begin{Answer}[ref=p.razmena_min_max]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/razmena_min_max.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_04] 
- Napisati program koji učitava karaktere sa ulaza (najviše njih 100) sve do pojave karaktera \textit{*}, a zatim ih ispisuje u redosledu suprotnom od redosleda čitanja. \\
+%TODO resiti
+\begin{Exercise}[label=vp.bez_resenja_11] 
+Napisati funkciju \kckod{int min\_max(int a[], int n)} koja pronalazi indekse najmanjeg i najvećeg
+elementa u nizu $a$ dimenzije $n$ koristeći samo jedan prolaz kroz niz, a zatim kao povratnu vrednost vraća
+manji od ta dva indeksa. Napisati i program koji testira ovu funkciju učitavanjem niza celih brojeva maksimalne dužine $100$ elemenata. U slučaju greške ispisati odgovarajuću poruku. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}#
+#\ulaz{7}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{5 8 -4 11 17 89 1}#
+#\izlaz{2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}#
+#\ulaz{3}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{9 11 6}#
+#\izlaz{1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}#
+#\ulaz{-45}#
+#\izlaz{Greska: Nedozvoljena vrednost!}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{vp.bez_resenja_11}
+\end{Exercise}
+\begin{Answer}[ref=vp.bez_resenja_11]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/bez_resenja_11.c}
+\end{Answer}
+
+\begin{Exercise}[label=p.niz_karaktera_obrnuto] 
+ Napisati program koji učitava karaktere sa standardnog ulaza (najviše njih $100$) sve do pojave karaktera \textit{*}, a zatim ih ispisuje u redosledu suprotnom od redosleda čitanja. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -289,78 +694,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_04}
+\linkresenje{p.niz_karaktera_obrnuto}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_04]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_04.c}
+\begin{Answer}[ref=p.niz_karaktera_obrnuto]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/niz_karaktera_obrnuto.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_05] 
- Napisati program koji za dva cela broja $x$ i $y$ koja se učitavaju sa standardnog ulaza proverava da li se zapisuju pomoću istih cifara. Napomena: iskoristiti nizove za čuvanje broja pojavljivanja svake od cifara. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{251 125}#
-#\izlaz{Brojevi se zapisuju istim ciframa!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
-#\izlaz{Brojevi se ne zapisuju istim ciframa!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
-#\izlaz{Brojevi se zapisuju istim ciframa!}#
-\end{upotreba}
-\end{miditest} 
-
-\linkresenje{p2.5_05}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_05]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_05.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.5_06] 
- Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), zatim i elementi dvaju nizova $a$ i $b$. Napisati program koji formira i ispisuje niz $c$ čiju prvu polovinu čine elementi niza $b$, a drugu polovinu elementi niza $a$. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{Unesite elemente niza a:}\ulaz{4 -8 32}#
-#\izlaz{Unesite elemente niza b:}\ulaz{5 2 11}#
-#\izlaz{5 2 11 4 -8 32}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite elemente niza a:}\ulaz{1 0 -1 0}#
-#\izlaz{Unesite elemente niza b:}\ulaz{5 5 5 3}#
-#\izlaz{5 5 5 3 1 0 -1 0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dimenziju niza:}\ulaz{145}#
-#\izlaz{Greska: pogresan unos!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p2.5_06}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_06]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_06.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.5_07] 
- Sa standardnog ulaza se unosi dimenzija niza $a$ (broj manji od 100), a zatim i njegovi elementi. Napisati program koji od datog niza formira niz $b$ u koji ulaze elementi niza $a$ koji se pojavljuju tačno 3 puta. \\
+\begin{Exercise}[label=p.elementi_3_pojavljivanja] 
+ Sa standardnog ulaza se unosi broj elemenata niza $a$ (broj manji od $100$), a zatim i njegovi elementi. Napisati program koji od datog niza formira niz $b$ u koji ulaze elementi niza $a$ koji se pojavljuju tačno $3$ puta. U slučaju greške, ispisati odgovarajuću poruku. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -389,14 +730,38 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_07}
+\linkresenje{p.elementi_3_pojavljivanja}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_07]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_07.c}
+\begin{Answer}[ref=p.elementi_3_pojavljivanja]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/elementi_3_pojavljivanja.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_08] 
- Sa standardnog ulaza se, redom, učitavaju dimenzija i elementi dvaju nizova $a$ i $b$. Napisati program koji određuje njihovu uniju, presek i razliku (redosled prikaza elemenata nije bitan). Pretpostaviti da će nizovi imati manje od 100 elemenata. \\
+%TODO: resiti
+\begin{Exercise}[label=vp.bez_resenja_1] 
+Napisati funkciju \kckod{int svojstvo(int a[], int na, int b[], int nb)} koja proverava da li niz $a$ dužine $na$ sadrži barem dva broja koja se pojavljuju u nizu $b$ dužine $nb$. Funkcija vraća vrednost $1$ ako je svojstvo ispunjeno ili $0$ ako nije.  Napisati i program koji sa standardnog ulaza, redom, učitava dimenzije i elemente nizova $a$ i $b$ i ispisuje rezultat rada funkcije. Pretpostaviti da su dimenzije nizova manje od $100$. U slučaju greške ispisati odgovarajuću poruku. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza a:}#
+#\ulaz{5}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{5 8 7 -2 6}#
+#\izlaz{Unesite broj elemenata niza b:}#
+#\ulaz{6}#
+#\izlaz{Unesite elemente niza b:}#
+#\ulaz{11 -11 7 -7 6}#
+#\izlaz{Svojstvo je ispunjeno.}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{vp.bez_resenja_1}
+\end{Exercise}
+\begin{Answer}[ref=vp.bez_resenja_1]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/...c}
+\end{Answer}
+
+%TODO: doterati resenje
+\begin{Exercise}[label=p.unija_presek_razlika] 
+ Sa standardnog ulaza se, redom, učitavaju dimenzije i elementi dvaju nizova $a$ i $b$. Napisati program koji određuje i ispisuje njihovu uniju, presek i razliku (redosled prikaza elemenata nije bitan). Pretpostaviti da će nizovi imati manje od $100$ elemenata. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -434,14 +799,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_08}
+\linkresenje{p.unija_presek_razlika}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_08]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_08.c}
+\begin{Answer}[ref=p.unija_presek_razlika]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/unija_presek_razlika.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_09] 
- Napisati program koji učitava dimenziju niza (broj manji od 100) i elemente niza, a zatim formira i ispisuje niz koji se dobija izbacivanjem svih neparnih elemenata niza. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza.\\
+\begin{Exercise}[label=p.izbacivanje_elemenata] 
+ Napisati program koji učitava broj elemenata niza (broj manji od $100$) i elemente niza, a zatim formira i ispisuje niz koji se dobija izbacivanjem svih neparnih elemenata niza. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza. U slučaju greške, ispisati odgovarajuću poruku.\\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -475,16 +840,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 #\izlaz{-22 18 46 14}#
 \end{upotreba}
 \end{maxitest}
-
-
-\linkresenje{p2.5_09}
+\linkresenje{p.izbacivanje_elemenata}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_09]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_09.c}
+\begin{Answer}[ref=p.izbacivanje_elemenata]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/izbacivanje_elemenata.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_10] 
- Napisati program koji učitava dimenziju niza (broj manji od 100) i elemente niza, a zatim formira i ispisuje niz koji se dobija izbacivanjem svih elemenata koji su prosti brojevi. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza. Napomena: brojeve -1 i 1 smatrati prostim. \\
+\begin{Exercise}[label=p.izbacivanje_prostih_elemenata] 
+ Napisati program koji učitava broj elemenata niza (broj manji od $100$) i elemente niza, a zatim formira i ispisuje niz koji se dobija izbacivanjem svih elemenata koji su prosti brojevi. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza. U slučaju greške, ispisati odgovarajuću poruku. \napomena{Brojeve $-1$ i $1$ smatrati prostim}. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -526,16 +889,15 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 #\izlaz{15 8}#
 \end{upotreba}
 \end{miditest}
-
-
-\linkresenje{p2.5_10}
+\linkresenje{p.izbacivanje_prostih_elemenata}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_10]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi10/5_10.c}
+\begin{Answer}[ref=p.izbacivanje_prostih_elemenata]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/izbacivanje_prostih_elemenata.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_11] 
- Napisati funkciju $int\ prebrojavanje(int\ a[],\ int\ n)$ koja izračunava broj elemenata niza celih brojeva $a$ dužine $n$ koji su manji od poslednjeg elementa niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+
+\begin{Exercise}[label=p.broj_manjih_od_poslednjeg] 
+ Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja izračunava broj elemenata celobrojnog niza $a$ dužine $n$ koji su manji od poslednjeg elementa niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -561,14 +923,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_11}
+\linkresenje{p.broj_manjih_od_poslednjeg}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_11]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi11/5_11.c}
+\begin{Answer}[ref=p.broj_manjih_od_poslednjeg]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/broj_manjih_od_poslednjeg.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_12] 
- Napisati funkciju $int\ prebrojavanje(int\ a[],\ int\ n)$ koja izračunava broj parnih elemenata niza celih brojeva $a$ dužine $n$ koji prethode maksimalnom elementu niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{Exercise}[label=p.broj_manjih_od_maksimuma] 
+ Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja izračunava broj parnih elemenata niza celih brojeva $a$ dužine $n$ koji prethode maksimalnom elementu niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -594,14 +956,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_12}
+\linkresenje{p.broj_manjih_od_maksimuma}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_12]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi11/5_12.c}
+\begin{Answer}[ref=p.broj_manjih_od_maksimuma]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/broj_manjih_od_maksimuma.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_13] 
- Napisati funkciju $int\ prebrojavanje\_cifre(char\ s[],\ int\ n)$ koja izračunava broj cifara u nizu karaktera $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{Exercise}[label=p.broj_cifara] 
+ Napisati funkciju \kckod{int cifre(char s[], int n)} koja izračunava broj cifara u nizu karaktera $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -642,14 +1004,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_13}
+\linkresenje{p.broj_cifara}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_13]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi11/5_13.c}
+\begin{Answer}[ref=p.broj_cifara]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/broj_cifara.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_14] 
- Napisati funkciju $int\ zbir(int\ a[],\ int\ n,\ int\ i,\ int\ j)$ koja računa zbir elemenata niza celih brojeva $a$ dužine $n$ od pozicije $i$ do pozicije $j$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{Exercise}[label=p.zbir_opsega_niza] 
+ Napisati funkciju \kckod{int zbir(int a[], int n, int i, int j)} koja računa zbir elemenata niza celih brojeva $a$ dužine $n$ od pozicije $i$ do pozicije $j$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -665,7 +1027,7 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 #\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
 #\izlaz{Unesite elemente niza:}\ulaz{-2 8 1}#
 #\izlaz{Unesite vrednosti za i i j:}\ulaz{8 12}#
-#\izlaz{Greska: nekorektne vrednosti granica!}#
+#\izlaz{Greska: Nekorektne vrednosti granica!}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -678,14 +1040,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
   
-\linkresenje{p2.5_14}
+\linkresenje{p.zbir_opsega_niza}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_14]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi11/5_14.c}
+\begin{Answer}[ref=p.zbir_opsega_niza]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/zbir_opsega_niza.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_15] 
- Napisati funkciju $float\ zbir\_pozitivnih(float\ a[],\ int\ n,\ int\ k)$ koja izračunava zbir prvih $k$ pozitivnih elemenata realnog niza $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{Exercise}[label=p.zbir_k_pozitivnih] 
+ Napisati funkciju \kckod{float zbir\_pozitivnih(float a[], int n, int k)} koja izračunava zbir prvih $k$ pozitivnih elemenata realnog niza $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -717,14 +1079,14 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.5_15}
+\linkresenje{p.zbir_k_pozitivnih}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_15]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi11/5_15.c}
+\begin{Answer}[ref=p.zbir_k_pozitivnih]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/zbir_k_pozitivnih.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_16] 
- Napisati funkciju $void\ kvadriranje(float\ a[],\ int\ n)$ koja kvadrira elemente realnog niza $a$ dužine $n$ koji se nalaze na parnim pozicijama. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od 100. \\
+\begin{Exercise}[label=p.kvadriranje_parnih] 
+ Napisati funkciju \kckod{void kvadriranje(float a[], int n)} koja kvadrira elemente realnog niza $a$ dužine $n$ koji se nalaze na parnim pozicijama. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -752,157 +1114,15 @@ Sa standardnog ulaza se učitava dimenzija niza (broj manji od 100), elemente ni
 #\izlaz{1232.71}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p2.5_16}
+\linkresenje{p.kvadriranje_parnih}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_16]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/praktikumi11/5_16.c}
+\begin{Answer}[ref=p.kvadriranje_parnih]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/kvadriranje_parnih.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.1_] 
-\textbf{Filip-Janicic?} Napisati funkciju (i program koji je testira)
-koja:
-\begin{enumerate}
-\item proverava da li dati niz sadrži dati broj;
-\item pronalazi indeks prve pozicije na kojoj se u nizu nalazi dati
-  broj (-1 ako niz ne sadrži broj).
-\item pronalazi indeks poslednje pozicije na kojoj se u nizu nalazi
-  dati broj (-1 ako niz ne sadrži broj).
-\item izračunava zbir svih elemenata datog niza brojeva;
-\item izračunava prosek (aritmetičku sredinu) svih elemenata datog
-  niza brojeva;
-\item izračunava najmanji element datog elemenata niza brojeva;
-\item određuje poziciju najvećeg elementa u nizu brojeva (u slučaju
-  više pojavljivanja najvećeg elementa, vratiti najmanju poziciju); 
-\item proverava da li je dati niz brojeva uređen neopadajuće
-\end{enumerate}
-  %\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/.....c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-\textbf{Filip-Janicic?} Napisati funkciju (i program koji je testira)
-koja: 
-\begin{enumerate}
-\item  izbacuje poslednji element niza; 
-\item izbacuje prvi element niza (napisati varijantu u kojoj je bitno
-  očuvanje redosleda elemenata i varijantu u kojoj nije bitno očuvanje
-  redosleda); 
-\item izbacuje element sa date pozicije k ; 
-\item ubacuje element na kraj niza; 
-\item ubacuje element na početak niza; 
-\item ubacuje dati element x na datu poziciju k ; 
-\item izbacuje sva pojavljivanja datog elementa x iz niza. 
-\end{enumerate}
- Napomena: funkcija kao argument prima niz i broj njegovih trenutno
- popun- jenih elemenata, a vraća broj popunjenih elemenata nakon
- izvođenja zahtevane operacije.  \\
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-\textbf{Filip-Janicic?} Napisati funkciju (i program koji je testira)
-koja: 
-\begin{enumerate}
-\item  određuje dužinu najduže serije jednakih uzastopnih elemenata
-u datom nizu brojeva; 
-\item određuje dužinu najvećeg neopadajućeg podniza datog niza celih
-  brojeva; 
-\item određuje da li se jedan niz javlja kao podniz uzastopnih
-  elemenata drugog; 
-\item određuje da li se jedan niza javlja kao podniz elemenata drugog
-  (elementi ne moraju da budu uzastopni, ali se redosled pojavljivanja
-  poštuje); 
-\item obrće dati niz brojeva; 
-\item rotira sve elemente datog niza brojeva za k pozicija ulevo; 
-\item rotira sve elemente datog niza brojeva za k pozicija udesno; 
-\item izbacuje višestruka pojavljivanja elemenata iz datog niza
-  brojeva (napisati varijantu u kojoj se zadržava prvo pojavljivanje i
-  varijantu u kojoj se zadržava poslednje pojavljivanje).  
-\item spaja dva niza brojeva koji su sortirani neopadajući u treći niz
-  brojeva koji je sortiran neopadajući.  
-\end{enumerate}
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-Napisati funkciju \verb|int f3(int a[], int n, int b[], int m)| i
-ispituje da li prvi sadr\v{z}i bar dva broja koji se pojavljuju u
-drugom nizu. Povratna vrednost je dakle, 0, ili 1.  Testirati pozivom
-u main-u. Maksimalna du\v zina niza je 100 elemenata.
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-Napisati C funkciju koja u prosle\d enom nizu elimini\v se sve brojeve
-koji nisu deljivi svojim indeksom (vrednost na indeksu 0 zadr\v zati,
-jer nije dozvoljeno deljenje sa 0). Niz reorganizovati, tako da nema
-\emph{rupa} koje su nastale eliminacijom elemenata. Kao rezultat
-funkcije vratiti novu dimenziju niza.
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
-#\izlaz{Unesite elemente niza:}#
-#\ulaz{4 2 1 6 7 8 10 2 16 3}#
-#\izlaz{4 2 6 16}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-Implementirati funkciju \verb|int min_max(int a[], int n)| koja
-prihvata celobrojni niz, pronalazi indekse najmanjeg i najve\' ceg
-elementa tog niza koriste\' ci samo jedan prolaz (jednu petlju), a
-zatim kao povratnu vrednost vra\' ca manji od ta dva
-indeksa.\\ Program testirati pozivom funkcije iz main programa i
-ispisom rezultata na standardni izlaz, pri \v cemu korisnik sa
-standardnog ulaza unosi niz duzine 10 elemenata.
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-Napisati funkciju \verb|void brojanje(int a[], int brojac[], int N) |
-\v ciji su argumenti \verb|a| i \verb|brojac| celobrojni nizovi
-dimenzije N. Vrednosti elemenata niza \verb|a| su izmedu 0 i N -
-1. Funkcija izra\v cunava elemente niza \verb|brojac| tako da je
-\verb|brojac[i]| jednak broju pojavljivanja broja \verb|i| u nizu
-\verb|a|.  Program testirati pozivom funkcije iz main programa -
-korsnik u\v citava broj \verb|N| i potom niz \verb|a| du\v zine
-\verb|N|, potom poziva funkciju i potom na standardnom izlazu izpisuje
-dobijeni niz.
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-
-\begin{Exercise}[label=p2.1_] 
-Napisati funkciju \verb|int ind(int a[],int n)| koja kao povratnu
-vrednost ima indeks onog elementa niza koji je po vrednosti najbli\v
-zi srednjoj vrednosti onih elemenata niza brojeva koji su deljivi sa
-3.\\ Program testirati pozivom funkcije iz main programa i ispisom
-rezulata na standarni izlaz, pri \v cemu korisnik sa standardnog ulaza
-unosi broj n, a zatim niz od n celih brojeva (maksimalna dimenzija
-niza je 100 elemenata). \\
+%TODO: resiti
+\begin{Exercise}[label=vp.bez_resenja_9] 
+Napisati funkciju \kckod{int blizu\_3(int a[],int n)} koja pronalazi i vraća indeks elementa niza koji je po vrednosti najbliži aritmetičkoj sredini onih elemenata niza koji su deljivi brojem $3$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. \\
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -921,88 +1141,143 @@ niza je 100 elemenata). \\
 #\izlaz{3}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p2.1_}
+%\linkresenje{vp.bez_resenja_9}
 \end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\begin{Answer}[ref=vp.bez_resenja_9]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/bez_resenja_9.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.1_] 
-Sa standardnog ulaza se unosi jedna linija teksta. Napisati program
-koji prikazuje koliko puta se javilo svako od slova engleskog alfabeta
-(ne praviti razliku izmedju velikih i malih slova). \\
+%TODO: proveriti da li je u redu zadržati ovaj zadatak - preuzet je iz knjige Janicic&Maric
+%TODO: resiti
+\begin{Exercise}[label=pv.bez_resenja_5] 
+Napisati funkcije za rad sa nizovima celih brojeva. 
+\begin{description}
+\item{a)} Napisati funkciju koja izbacuje poslednji element niza.
+\item{b)} Napisati funkciju koja izbacuje prvi element niza. Zadatak rešiti na dva načina: čuvanjem redosleda elemenata i premeštanjem poslednjeg elementa niza na upražnjenu poziciju.
+\item{c)} Napisati funkciju koja izbacuje element sa date pozicije $k$. 
+\item{d)} Napisati funkciju koja izbacuje sva pojavljivanja datog elementa $x$ iz niza.
+\item{e)} Napisati funkciju koja ubacuje dati element $x$ na kraj niza.
+\item{f)} Napisati funkciju koja ubacuje dati element $x$ na početak niza.
+\item{g)} Napisati funkciju koja ubacuje dati element $x$ na datu poziciju $k$. 
+\end{description}
+Napisati program koji testira rad zadatih funkcija. Sa standardnog ulaza učitati dimenziju niza (broj ne veći od $100$). U slučaju greške ispisati odgovarajuću poruku. \\
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{haHJjkL}#
-#\izlaz{ a:1  b:0  c:0  d:0  e:0  f:0  g:0  h:2  i:0  j:2  k:1  l:1  m:0  n:0  o:0  p:0  q:0  r:0  s:0
-   t:0  u:0  v:0  w:0  x:0  y:0  z:0}#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{8}#
+#\ulaz{2 5 -2 16 33 19 8 11}#
+#\izlaz{Niz posle izbacivanja poslednjeg elementa: 2 5 -2 16 33 5 8}#
+#\izlaz{Niz nakon izbacivanja prvog elementa: 5 -2 16 33 5 8}#
+#\izlaz{Unesite poziciju elementa za izbacivanje: }#
+#\ulaz{3}#
+#\izlaz{Niz nakon izbacivanja 3. elementa: 5 -2 16 5 8}#
+#\izlaz{Unesite element cije pojavljivanje treba izbaciti: }#
+#\ulaz{5}#
+#\izlaz{Niz nakon izbacivanja elementa 5: -2 16 8}#
+#\izlaz{Unesite element koji treba ubaciti u niz: }#
+#\ulaz{19}#
+#\izlaz{Niz nakon ubacivanja elementa 19 na kraj: -2 16 8 19}#
+#\izlaz{Niz nakon ubacivanja elementa 19 na pocetak: 19 -2 16 8 19}#
+#\izlaz{Unesite poziciju na koju treba ubaciti element: }#
+#\ulaz{2}#
+#\izlaz{Niz nakon ubacivanja elementa 19 na poziciju 2: 19 -2 19 16 8 19}#
 \end{upotreba}
 \end{maxitest}
-\begin{maxitest}
+%\linkresenje{pv.bez_resenja_5}
+\end{Exercise}
+\begin{Answer}[ref=pv.bez_resenja_5]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/bez_resenja_5.c}
+\end{Answer}
+
+
+%TODO: proveriti da li je u redu zadržati ovaj zadatak - preuzet je iz knjige Janicic&Maric
+%TODO: resiti i dodati test primere
+\begin{Exercise}[label=pv.bez_resenja_6] 
+Napisati funkcije za rad sa nizovima celih brojeva. 
+\begin{description}
+\item{a)} Napisati funkciju koja određuje dužinu najduže serije jednakih uzastopnih elemenata
+u datom nizu brojeva.
+\item{b)} Napisati funkciju koja određuje dužinu najvećeg neopadajućeg podniza datog niza celih
+  brojeva. 
+\item{c)} Napisati funkciju koja određuje da li se jedan niz javlja kao podniz uzastopnih elemenata drugog niza.
+\item{d)} Napisati funkciju koja određuje da li se jedan niz javlja kao podniz elemenata drugog niza (elementi ne moraju da budu uzastopni, ali je redosled pojavljivanja isti).  
+\item{e)} Napisati funkciju koja izbacuje višestruka pojavljivanja elemenata iz datog niza
+  brojeva. Zadatak rešiti na dva načina: zadržavnjem prvog pojavljivanje elementa i zadržavanjem poslednjeg pojavljivanje elementa.  
+\end{description}
+%\linkresenje{pv.bez_resenja_6}
+\end{Exercise}
+\begin{Answer}[ref=pv.bez_resenja_6]
+%\includecode{resenja/2_PredstavljanjePodataka/pv.bez_resenja_6.c}
+\end{Answer}
+
+
+%TODO resiti
+\begin{Exercise}[label=vp.bez_resenja_2] 
+Napisati funkciju koja iz zadatog niza izbacuje sve elemente koji su deljivi svojim indeksom. Niz reorganizovati tako da nema \emph{rupa} koje su nastale izbacivanjem elemenata. Povratna vrednost funkcije je nova dimenzija niza. Napisati i program koji učitava dimenziju niza (broj manji od $100$) i njegove elemente, a zatim ispisuje niz dobijen nakon poziva funkcije. U slučaju greške ispisati odgovarajuću poruku. \napomena{Element na nultoj poziciji niza zadržati jer nije dozvoljeno deljenje nulom.}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{4 2 1 6 7 10 8 2 16 27}#
+#\izlaz{4 1 7 8 2 16}#
+\end{upotreba}
+\end{miditest}
+%\linkresenje{vp.bez_resenja_2}
+\end{Exercise}
+\begin{Answer}[ref=vp.bez_resenja_2]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/.....c}
+\end{Answer}
+
+
+% Mislim da ovaj zadatak mozemo izbaciti - ista funkcija se ocekuje u zadatku sa permutacijama
+
+%\begin{Exercise}[label=p2.1_] 
+%Napisati funkciju \kckod{void brojanje(int a[], int brojac[], int n)}
+%čiji su argumenti $a$ i $brojac$ celobrojni nizovi
+%dimenzije $n$. Vrednosti elemenata niza $a$ su između $0$ i $n-1$.
+%Funkcija izračunava elemente niza $brojac$ tako da je
+%$brojac[i]$ jednak broju pojavljivanja broja $i$ u nizu
+%$a$. Program testirati učitavanjem dimenzije (broj ne veći od $100$) i elemenata niza $a$ i ispisom rezultujućeg niza $brojac$. 
+%\linkresenje{p2.1_}
+%\end{Exercise}
+%\begin{Answer}[ref=p2.1_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+%\end{Answer}
+
+
+%TODO: resiti
+\begin{Exercise}[label=vp.bez_resenja_4] 
+Za celobrojni niz $a$ dimenzije $n$ kažemo da je \textit{permutacija} ako sadrži sve brojeve od $1$ do $n$.
+\begin{description}
+\item {a)} Napisati funkciju \kckod{void brojanje(int a[], int b[], int n)} koja na osnovu celobrojnog niza $a$ dimenzije $n$ formira niz $b$ tako što $i$-ti element niza $b$ odgovara broju pojavljivanja vrednosti $i$ u nizu $a$. \\
+\item{b)} Napisati funkciju \kckod{int permutacija(int a[], int n)} koja proverava da li je zadati niz permutacija. Funkcija vraća vrednost $1$ ako je svojstvo ispunjeno, odnosno $0$ ako nije. \uputstvo{Koristiti funkciju $brojanje$ iz tačke a).} \\
+\end{description}
+Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji od $100$) i elemente niza i ispisuje da li je uneti niz permutacija ili ne.  \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1 5 4 3 2}#
+#\izlaz{Uneti niz je permutacija.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{DanaS j3 \_j\_utRo laBU78d}#
-#\izlaz{a:3  b:1  c:0  d:2  e:0  f:0  g:0  h:2  i:0  j:2  k:0  l:1  m:0  n:1  o:1  p:0  q:0  r:1  s:1
-  t:1  u:2  v:0  w:0  x:0  y:0  z:0}#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{6}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{2 3 3 1 1 5}#
+#\izlaz{Uneti niz nije permutacija.}#
 \end{upotreba}
-\end{maxitest}
-\begin{maxitest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\ulaz{Sao PaoLo 1998 \_JuZna Amerika90}#
-#\izlaz{a:5  b:0  c:0  d:2  e:1  f:0  g:0  h:0  i:1  j:1  k:1  l:1  m:1  n:1  o:3  p:1  q:0  r:1  s:1
-  t:0  u:1  v:0  w:0  x:0  y:0  z:0}#
-\end{upotreba}
-\end{maxitest}
-\begin{maxitest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\ulaz{Ixxx kk 3yyy 4qqqq}#
-#\izlaz{a:0  b:0  c:0  d:0  e:0  f:0  g:0  h:0  i:1  j:0  k:2  l:0  m:0  n:0  o:0  p:0  q:4  r:0  s:0
-  t:0  u:0  v:0  w:0  x:3  y:3  z:0}#
-\end{upotreba}
-\end{maxitest}
-\linkresenje{p2.1_}
+\end{miditest}
+\linkresenje{vp.bez_resenja_4}
 \end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
+\begin{Answer}[ref=vp.bez_resenja_4]
+%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/....c}
 \end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-Napisati program koji sa standardnog ulaza u\v citava $50$ celih brojeva
-i razdvaja ih na parne i neparne tako \v sto parne brojeve upisuje na
-po\v cetak niza, a neparne na kraj niza. Ispisati niz dobijen na taj
-na\v cin. Nije dozvoljeno koristiti dodatne nizove.
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.1_] 
-\begin{itemize}
-\item [(a)]
-Napisati funkciju \verb"void brojanje(int a[], int brojac[], int N)"
-\v ciji su argumenti \verb"a" i \verb"brojac" celobrojni nizovi dimenzije $N$.
-Vrednosti elemenata niza \verb"a" su izme\d u $0$ i $N-1$. Funkcija izra\v cunava
-elemente niza \verb"brojac" tako da je $i$-ti element \verb"brojac[i]" jednak
-broju pojavljivanja broja $i$ u nizu \verb"a".
-
-\item[(b)]
-Za celobrojni niz \verb"a" dimenzije $N$ 
-ka\v zemo da je \emph{permutacija} ako sadr\v zi sve brojeve
-$i$: $0 \leq i \le N$.
-Sastaviti funkciju \verb"int DaLiJePermutacija(int a[], int N)" koja vra\' ca
-$1$ ako je niz \verb"a" permutacija, a $0$ ina\v ce. (koristiti funkciju
-\verb"brojanje").
-\end{itemize}
-\linkresenje{p2.1_}
-\end{Exercise}
-\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-\end{Answer}
-
 
 \section{Rešenja}
 \shipoutAnswer
