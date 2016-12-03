@@ -3,7 +3,8 @@
 
 
 \begin{Exercise}[label=v2.2_01] 
-Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvom nalazi manji a u drugom veći. Napisati koji učitava dva cela broja i ispisuje rezultat poziva funkcije. \\
+Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvom nalazi manji, a u drugom veći. Napisati program koji učitava dva cela broja i ispisuje rezultat poziva funkcije. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -21,9 +22,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{v2.2_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_01.c}
 \end{Answer}
+ \fi
 
 \begin{Exercise}[label=v2.2_02] 
   Napisati funkciju koja za boju datu u \textit{rgb} formatu računa \textit{cmy} format po formulama:\\
@@ -62,9 +65,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{v2.2_02}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_02]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_02.c}
 \end{Answer}
+ \fi
 
 \begin{Exercise}[label=v2.2_03] 
    Napisati funkciju koja za dve prave date svojim koeficijentima
@@ -72,7 +77,8 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
    Funkcija treba da vrati 1 ako se prave seku i 0 ako nemaju
    tačku preseka (ako su paralelne). Napisati program
    koji učitava podatke o pravama, poziva napisanu funkciju i 
-   ispisuje odgovarajuću poruku.\\
+   ispisuje odgovarajuću poruku.
+   
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -92,12 +98,32 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{v2.2_03}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_03]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_03.c}
 \end{Answer}
+ \fi
+
+\begin{Exercise}[label=v2.xy] 
+Napisati funkciju koja za dva cela broja izračunava njihov količnik i ostatak pri deljenju. Funkcija treba da vrati vrednost 1 ukoliko je uspešno izračunala vrednosti i 0 ukoliko deljenje nije moguće. Napisati program koji testira rad ove funkcije. 
+\end{Exercise}
+
+\begin{Exercise}[label=v2.xyz] 
+Napisati funkciju koja za dinarsku vrednost cene artikla izračunava odgovarajuću cenu u evrima i u dolarima. Napisati program koji testira rad ove funkcije. 
+%TODO dodati kurs evra i dolara, ovo bi trebalo da budu dve funkcije, treba nekako opravdati stavljanje u istu funkciju
+\end{Exercise}
+
+\begin{Exercise}[label=v2.xyz] 
+Napisati funkciju koja za dužinu trajanja filma kaja je data u sekundama, određuje ukupno trajanje filma u satima, minutama i sekundama. Napisati program koji testira rad ove funkcije. 
+\end{Exercise}
+
+
 
 \begin{Exercise}[label=p2.6_06] 
- Napisati funkciju \kckod{void\ modifikacija(char*\ s,\ char*\ t, int*\ br\_modifikacija)} koja na osnovu niske $s$ formira nisku $t$ tako što svako malo slovo zamanjuje velikim. Broj izvršenih modifikacija se čuva u okviru argumenta $br\_modifikacija$. Pretpostaviti da niska $s$ neće biti duža od 20 karaktera. Napisati program koji testira rad napisane funkcije. \\
+ Napisati funkciju \kckod{void\ modifikacija(char*\ s,\ char*\ t, int*\ br\_modifikacija)} koja na osnovu niske $s$ formira nisku $t$ tako što svako malo slovo zamanjuje velikim. Broj izvršenih modifikacija se čuva u okviru argumenta $br\_modifikacija$. Pretpostaviti da niska $s$ neće biti duža od 20 karaktera. Napisati program koji testira rad napisane funkcije. 
+%TODO ovaj zadatak je potpuno neprirodan jer se broj modifikacija moze vratiti kao povratna vrednost funkcije 
+%ovo bi trebalo modifikovati tako da se malo zamenjuje velikim, veliko malim, a da onda imamo dva argumenta koja prate modifikacije
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -114,6 +140,7 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 #\izlaz{Broj modifikacija je: 3}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -133,9 +160,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{p2.6_06}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_06]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/9.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_07] 
@@ -171,9 +200,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{p2.6_07}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_07]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/10.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_08] 
@@ -221,9 +252,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{p2.6_08}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_08]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/11.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_09] 
@@ -271,9 +304,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{p2.6_09}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_09]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/12.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=v2.2_04] 
@@ -302,9 +337,11 @@ Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvo
 
 \linkresenje{v2.2_04}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_04]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_04.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_01] 
@@ -339,9 +376,11 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. \upu
 \end{miditest}
 \linkresenje{p2.6_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/4.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_02] 
@@ -376,9 +415,11 @@ Napisati program koji ispisuje argumente komandne linije koji počinju slovom \t
 \end{miditest}
 \linkresenje{p2.6_02}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_02]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/5.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_03] 
@@ -415,9 +456,11 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slov
 
 \linkresenje{p2.6_03}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_03]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/6.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_04] 
@@ -453,9 +496,11 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slov
 
 \linkresenje{p2.6_04}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_04]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/7.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=p2.6_05] 
@@ -491,9 +536,11 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slov
 
 \linkresenje{p2.6_05}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.6_05]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/8.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=v2.2_05] 
@@ -532,9 +579,11 @@ Napisati funkciju koja za dva data stringa određuje koliko se uzastopnih karakt
 
 \linkresenje{v2.2_05}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_05]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_05.c}
 \end{Answer}
+ \fi
 
 
 
@@ -572,9 +621,11 @@ ispisuje sve opcije koje su navedene u komandnoj liniji. \\
 
 \linkresenje{v2.2_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
 \end{Answer}
+ \fi
 
 
 \begin{Exercise}[label=v2.2_06] 
@@ -632,21 +683,26 @@ Napisati funkciju \kckod{void sifruj(char s[], char c, int k)} koja šifruje
 
 \linkresenje{v2.2_06}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_06]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
 \end{Answer}
+ \fi
 
-
+\iffalse
 \begin{Exercise}[label=v2.2_01] 
 Tekst
 \komentarJ{Ovaj zadatak nema mnogo smisla, predlazem da ga izbacimo.}
 \linkresenje{v2.2_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
 \end{Answer}
+ \fi
+\fi
 
-
+\iffalse
 \begin{Exercise}[label=v2.2_01] 
 \komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
 Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije
@@ -686,26 +742,34 @@ komandne linije ispisati poruku o gre\v sci. \\
 \end{miditest}
 \linkresenje{v2.2_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.2_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
 \end{Answer}
+ \fi
 
+\fi
 
 \begin{Exercise}[label=v2.2_01] 
-\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
+%\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
 Parametri komandne linije su $n, a$ i $b$ ($a < b$). Treba popuniti
 prvih {\tt n} elemenata niza {\tt A} celim slu\v cajnim brojevima koji
-su izme\d u {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
+su između {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
 izlaz. Maksimalan broj elemenata niza {\tt A} je 200. Ukoliko nisu
 zadati svi argumenti komandne linije ili ne zadovoljavaju potrebna
-svojstva ispisati poruku o gre\v sci. \\
-\linkresenje{v2.2_01}
+svojstva ispisati poruku o gre\v sci. 
+
+%\linkresenje{v2.2_01}
 \end{Exercise}
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-\end{Answer}
+%\ifresenja
+%\begin{Answer}[ref=v2.2_01]
+%\includecode{resenja/2_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
+%\end{Answer}
+% \fi
 
 
 
+\ifresenja
 \section{Rešenja}
 \shipoutAnswer
+\fi
