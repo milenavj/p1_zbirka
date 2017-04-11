@@ -4,17 +4,31 @@
 % ---------------------------------------------------------------jednostavni zadaci sa ne-kvadratnim matricama
 
 \begin{Exercise}[label=mat.1] 
-Napisati funkcije za rad sa celobrojnom matricom $mat$ dimenzije $n
-\times m$:
+Napisati funkcije za rad sa celobrojnim matricama:
 \begin{enumerate}
-  \item Napisati funkciju \kckod{void ucitaj(int mat[][MAX], int* n,
-    int* m)} kojom se prvo učitavaju dimezije matrice $m$ i $n$, a
-    potom i matrica celih brojeva $mat$. Maksimalna dimenzija matrice
-    je $50 \times 50$.
-  \item Napisati funkciju \kckod{void ispis(int mat[][MAX], int n, int
+  \item \kckod{void ucitaj(int mat[][MAX], int* n,
+    int* m)} kojom se prvo učitava dimezija matrice (brojevi $m$ i $n$), a
+    potom i vrednosti matrice celih brojeva $mat$,  
+  \item \kckod{void ispis(int mat[][MAX], int n, int
     m)} kojom se ispisuje matrica $mat$ dimenzije $m \times n$.
 \end{enumerate}
-Napisati program koji poziva ove dve napisane funkcije.
+Napisati program koji najpre učitava, a zatim i ispisuje vrednosti učitane matrice.
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
+
+\komentarM{1) Ako je ucitaj onda je ispisi, ili ako je ispis onda je ucitavanje --- ovako se ne slaze}
+
+\komentarM{2) Meni nema logike da vec prvi zadatak sa matricom obuhvata funkcije. Delujem mi metodoloski bolje najpre ucitati i ispisati matricu iz main funkcije, i nesto sa njom uraditi, pa onda uraditi isto to sa funkcijama. Ovako je od jednom pretesko. }
+
+\komentarM{3) Deluje mi malo dosadno da svaki put u tekstu zadatka navodimo kako se ucitava matrica, napre dimenzije pa njeni elementi. Krenula sam to da ispravljam ali nisam sigurna da sam u pravu. Deluje mi da je dovoljno na jednom mestu objasniti kako se ucitava matrica, a onda posle samo koristiti termin "ucitati matricu". Mozda negde, npr nakon prvog takvog zadatka u fus notu moze da se stavi ta napomena: tipa ''Pod pojmom ucitavanja matrice uvek se podrazumeva da se najpre unosi dimenzija pa zatim elementi matrice''}
+
+\komentarM{4) Pretpostavku o dimenziji matrice i ispisu greske sam svuda stavila na kraj, da budemo dosledni sa formulacijama. }
+
+\komentarM{5) Generalno sam protiv formulacija u kojima se navodi KAKO se nesto radi tj u kojima se daju vremenske odrednice tipa, program prvo ucita ta i ta dva broja, pa zatim uradi to i to... To je kao da im diktiramo resenje zadatka. Mislim da formulacija ne treba da sadrzi vremenske odrednice niti sugestije na tu temu, vec opis sta program treba da uradi. Preformulisala sam neke stvari na taj nacin, a ti vidi kako ti se to svidja i razmisli za ostale. Generalno je to povezano sa ucitavanjem matrice kada kazemo prvo ucitaj dimenzije pa zatim vrednosti pa zatim dva broja pa onda izracunaj nesto pa onda ispisi to... Formulacija bi pre trebala da bude "Napisati program koji za ucitanu matricu izracunava nesto i ispisuje odgovarajuću poruku"...}
+
+\komentarM{6) Mozda suma\_sporedna i suma\_ispod i suma\_iznad ili tako nekako, tek da ta imena budu smislena, sumd i sumD mi nisu dovoljno lepa imena.}
+
+\komentarM{7) Zadatak 12, umesto 0 i 1 ispisivati odgovarajuce poruke - to ce pojednostaviti i skratiti i formulaciju zadatka.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -67,11 +81,10 @@ Napisati program koji poziva ove dve napisane funkcije.
 \begin{Exercise}[label=mat.2] 
 Napisati funkciju \kckod{void transponovana(int a[][max], int m, int
   n, int b[][max])} koja određuje matricu $b$ koja je dobijena
-transponovanjem matrice $a$. Program učitava dimenzije $n$ i $m$
-matrice celih brojeva, a potom učitava i elemente matrice. Ispisati
-transponovanu matricu učitane matrice. U slučaju greške prilikom unosa
-podataka ispisati odgovarajuću poruku. Maksimalna dimenyija matrice
-je $50\times 50$.
+transponovanjem matrice $a$. Napisati program koji učitava matricu i ispisuje odgvarajuću transponovanu matricu. 
+%Program učitava dimenzije $n$ i $m$ matrice celih brojeva, a potom učitava i elemente matrice. Ispisati transponovanu matricu učitane matrice. 
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -124,9 +137,10 @@ Napisati funkciju \kckod{void razmeni(int mat[][max], int m, int n,
   int k, int t)} u kojoj se razmenjuju elemeti $k$--te i $t$--te vrste
 matrice $mat$ dimezije $m \times n$. Program učitava dimenzije
 matrice, a potom i elemente matrice celih brojeva, a potom i dva cela
-broja $k$ i $t$. Maksimalna dimenzija matrice je $50\times
-50$. Ispisati matricu dobijenu razmenjivanjem $k$--te i $t$--te
-vrste. U slučaju greške ispisati odovarajuću poruku.
+broja $k$ i $t$. Ispisati matricu dobijenu razmenjivanjem $k$--te i $t$--te
+vrste. 
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -187,8 +201,8 @@ Napisati program koji učitava dimenzije matrice, dva prirodna broja
 $n$ i $m$, a zatim redom i elemente matrice celih brojeva.  Ispisati
 indekse onih elemenata matrice koji su jednaki zbiru svih svojih
 susednih elemenata (pod susednim elementima podrazumevamo okolnih $8$
-polja matrice ako postoje). Maksimalna dimenzija matrice je $50 \times
-50$. U slučaju greške ispisati odgovarajuću poruku.
+polja matrice ako postoje). Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -232,9 +246,9 @@ Napisati funkciju koja formira niz $b_0, b_1, \ldots, b_n$ od matrice
 tako što je svaki element niza jednak srednjoj vrednosti elemenata
 vrste matrice. Napisati program koji učitava dimenzije matrice, dva
 prirodna broja $n$ i $m$, a zatim redom i elemente matrice celih
-brojeva. Pozvati funkciju i ispisati dobijeni niz. Maksimalna
-dimenzija matrice je $50 \times 50$. U slučaju greške ispisati
-odgovarajuću poruku.
+brojeva. Pozvati funkciju i ispisati dobijeni niz. 
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -291,9 +305,11 @@ relaciji ukoliko se tu nalazi broj $0$.
     napisane funkcije.
 \end{enumerate}
 Program učitava ceo broj $n$ i kvadratnu matricu dimenzije $n\times
-n$. Ispisati rezultat poziva funkcija. Maksimalna dimenzija matrice je
-$50 \times 50$. Matrica može imati samo brojeve $0$ i $1$. U slučaju
-greške prilikom unosa ispisati odgovarajuću poruku.
+n$. Matrica može imati samo brojeve $0$ i $1$. 
+Ispisati rezultat poziva funkcija. 
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
+
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -348,11 +364,11 @@ Data je kvadratna matrica dimenzije $n  \times n$.
 \end{enumerate}
 Napisati program koji testira napisane funkcije. Program učitava
 dimenziju $n$ kvadratne matrice, a potom učitava i elemente matrice
-realnih brojeva. Maksimalna dimenzija matrice je $50 \times
-50$. Ispisati na tri decimale trag matrice, sumu na sporednoj
+realnih brojeva. Ispisati na tri decimale trag matrice, sumu na sporednoj
 dijagonali, sumu iznad glavne dijagonale i sumu elemenata ispod
-sporedne dijagonale. U slučaju greške prilikom unosa podataka ispisati
-odgovarajuću poruku.
+sporedne dijagonale. Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
+
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -395,10 +411,10 @@ odgovarajuću poruku.
 \begin{Exercise}[label=mat.7] 
 Kvadratna matrica je donje trougaona ako se u gornjem trouglu (iznad
 glavne dijagonale, ne uključujući dijagonalu) nalaze sve nule.
-Program učitava ceo broj $n$, a potom i elemente kvadratne matrice
-celih brojeva dimenzije $n\times n$. Proveriti da li je matrica donje
-trougaona i ispisati odgovaraju'u poruku.  Maksimalna dimenzija
-matrice je $100 \times 100$.  
+Napisati program koji za učitanu kvadratnu matricu proverava da li je ona donje trougaona i ispisuje odgovarajuću poruku.
+%Program učitava ceo broj $n$, a potom i elemente kvadratne matrice celih brojeva dimenzije $n\times n$. Proveriti da li je matrica donje trougaona i ispisati odgovaraju'u poruku.  
+Pretpostaviti da je maksimalna dimenzija matrice $100 \times 100$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -453,10 +469,10 @@ matrice je $100 \times 100$.
 \end{Answer}
 
 \begin{Exercise}[label=mat.8] 
-Program učitava dimenziju kvadratne matrice $n$, a zatim elemente
-matrice celih brojeva. Ispisati redni broj kolone koja ima najveći
-zbir elemenata. Maksimalna dimenzija matrice je $50 \times 50$. U
-slučaju greške ispisati odgovarajuću poruku.
+%Program učitava dimenziju kvadratne matrice $n$, a zatim elemente matrice celih brojeva. Ispisati redni broj kolone koja ima najveći zbir elemenata. 
+Napisati program koji za učitanu kvadratnu matricu ispisuje redni broj kolone koja ima najveći zbir elemenata. 
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -496,7 +512,8 @@ gornjeg trougla i zbira elemenata donjeg trougla matrice. Gornji
 trougao čine svi elementi matrice koji su iznad glavne i sporedne
 dijagonale (ne računajući dijagonale), a donji trougao čine svi
 elementi ispod glavne i sporedne dijagonale (ne računajući
-dijagonale). U slučaju greške ispisati odgovarajuću poruku.
+dijagonale). Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -533,12 +550,12 @@ dijagonale). U slučaju greške ispisati odgovarajuću poruku.
 % ---------------------------------------------------------------tezi zadaci (kvadrtne + nekvadratne mattrice)
 
 \begin{Exercise}[label=mat.10] 
-Program učitava cele pozitivne brojeve $m$ i $n$ koji označavaju broj
-vrsta i broj kolona matrice.  Potom se unose elementi matrice celih
-brojeva. Nakon unosa elemenata matrice, unose se još dva broja $p$ i
-$k$ ($p \le m$, $k \le n$).  Ispisati sume svih podmatrica (dimenzije
-$p \times k$) unete matrice. Maksimalna dimenzija matrice je $50\times
-50$. U slučaju greške ispisati odgovarajuću poruku. \napomena{Nije
+%Program učitava cele pozitivne brojeve $m$ i $n$ koji označavaju broj vrsta i broj kolona matrice.  Potom se unose elementi matrice celih brojeva. Nakon unosa elemenata matrice, unose se još dva broja $p$ i $k$ ($p \le m$, $k \le n$).  Ispisati sume svih podmatrica (dimenzije $p \times k$) unete matrice. 
+Napisati program koji za učitanu matricu dimenzije $m \times n$ i uneta dva broja $p$ i $k$ ($p \le m$, $k \le n$) ispiisuje   sume svih podmatrica dimenzije $p \times k$ unete matrice.
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
+
+ \napomena{Nije
   bitan redosled kojim se ispisuju sume.}
 
 \begin{miditest}
@@ -595,15 +612,17 @@ $p \times k$) unete matrice. Maksimalna dimenzija matrice je $50\times
 \end{Answer}
 
 \begin{Exercise}[label=mat.11] 
-Program učitava dimenziju kvadratne matrice $n$ ($0 < n \leq 50$), a
-zatim i elemenate marice celih brojeva. Napisati program koji:
+Napisati program koji učitava vrednosti matrice i 
 ispituje da li su elementi matrice po kolonama, vrstama i dijagonalama
 (glavnoj i sporednoj) sortirani strogo rastuće. Ukoliko su svi
 elementi po kolonama sortirani rastuće ispisati $1$, a ukoliko nisu
 $0$. Ukoliko su svi elementi po vrstama sortirani rastuće ispisati
 $1$, u suprotnom $0$. Ukoliko su elementi na obe dijagonale sortirani
-rastuće ispisati $1$, a u suprotnom $0$.  U slučaju greške prilikom
-unosa podataka ispisati odgovarajuću poruku.
+rastuće ispisati $1$, a u suprotnom $0$.  
+Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
+U slučaju greške ispisati odovarajuću poruku.
+
+%BILO BI LEPSE DA SE PISU ODGOVARAJCE PORUKE A NE 0 I 1 --- NISMO NA ISPITU!
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -661,11 +680,12 @@ unosa podataka ispisati odgovarajuću poruku.
 
 
 \begin{Exercise}[label=mat.12] 
-Program učitava broj $n$ ($0 < n \le 10$), a potom i elemente
-kvadratne matrice celih brojeva dimenzije $n\times n$.  Proveriti da
-li su zbirovi elemenata kolona matrice uredjeni u strogo rastućem
-poretku i ispisati odgovarajuću poruku. U slučaju greške ispisati
-odgovarajuću poruku.
+Napisati program koji učitava vrednosti matrice i ispituje da li su 
+zbirovi elemenata kolona matrice uredjeni u strogo rastućem
+poretku i ispisuje odgovarajuću poruku. 
+Pretpostaviti da je maksimalna dimenzija matrice koja se unosi $10 \times 10$.
+U slučaju greške ispisati odovarajuću poruku.
+
 
 \begin{miditest}
 \begin{upotreba}{1}
