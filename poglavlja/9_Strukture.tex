@@ -1,34 +1,318 @@
 
 \section{Strukture}
 
-\begin{Exercise}[label=v2.5_01] 
-Data je struktura koja opisuje koordinate
-tacke u ravni:
+\begin{Exercise}[label=struc.1] 
+Definisati strukturu kojom se predstavlja kompleksan broj. Napisati
+funkcije koje izračunavaju zbir, razliku, proizvod i količnik dva
+kompleksna broja, a zati i program koji učitava dva kompleksna broja i
+ispisuje vrednost zbira, razlike, proizvoda i količnika. 
 
-\begin{ckod}
-typedef struct point
-{
-float x;
-float y;
-} POINT;
-\end{ckod}
-
-U glavnom programu date su dve tacke: tacka
-A sa fiksiranim koordinatama (1,2) i tacka B
-cije koordinate zadaje korisnik. Napisati
-funkcije:\\
-a) za racunanje rastojanja izmedju dve date tacke\\
-b) za odredjivanje tacke koja se nalazi na
-sredini duzi odredjene dvema datim tackama.
-
-Testirati napisane funkcije u glavnom programu.
-
-\linkresenje{v2.5_01}
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite realni i imaginarni deo prvog broja: }\ulaz{1 2}#
+#\izlaz{Unesite realni i imaginarni deo drugog broja: }\ulaz{-2 3}#
+#\izlaz{Zbir: -1.00+5.00*i}#
+#\izlaz{Razlika: 3.00-1.00*i}#
+#\izlaz{Proizvod: -8.00-1.00*i}#
+#\izlaz{Kolicnik: 0.31-0.54*i}#
+\end{upotreba}
+\end{maxitest}
+\linkresenje{struc.1}
 \end{Exercise}
-\begin{Answer}[ref=v2.5_01]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/1/1.c}
+\begin{Answer}[ref=struc.1]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/1.c}
 \end{Answer}
 
+\begin{Exercise}[label=struc.5] 
+Definisati strukturu kojom se predstavlja razlomak. Napisati funkcije
+koje izračunavaju zbir i proizvod dva razlomka. Unosi se broj $n$ a
+potom i $n$ razlomaka sa standarnog ulaza. Ispisati njihov zbir i
+proizvod na standardni izlaz.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesi broj razlomaka: }\ulaz{5}#
+#\izlaz{Uneti razlomke:}#
+#\ulaz{1 2}#
+#\ulaz{7 8}#
+#\ulaz{3 4}#
+#\ulaz{5 6}#
+#\ulaz{2 9}#
+#\izlaz{Suma svih razlomaka je 229/72.}#
+#\izlaz{Proizvod svih razlomaka je 35/576.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesi broj razlomaka: }\ulaz{10}#
+#\izlaz{Uneti razlomke:}#
+#\ulaz{4 3}#
+#\ulaz{12 25}#
+#\ulaz{3 8}#
+#\ulaz{1 3}#
+#\ulaz{8 9}#
+#\ulaz{2 3}#
+#\ulaz{5 6}#
+#\ulaz{-24 50}#
+#\ulaz{7 18}#
+#\ulaz{-7 19}#
+#\izlaz{Suma svih razlomaka je 6089/1368.}#
+#\izlaz{Proizvod svih razlomaka je 1568/577125.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.5}
+\end{Exercise}
+\begin{Answer}[ref=struc.5]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=struc.2] 
+ Zimi su prehlade česte i treba unositi više vitamina C. Struktura
+ $Vocka$ sadrži ime voćke (nisku maksimalne dužine $20$ karaktera) i
+ količinu vitamina C u miligramima (realan broj). Napisati program
+ koji učitava podatke o voćkama sve do unosa reči \kckod{KRAJ} i
+ ispisuje ime voćke sa najviše vitamina C. Pretpostaviti da broj voćki
+ neće biti veći od $50$. \napomena{Probati sa testiranjem zadataka
+   pomoću preusmeravanja.}
+
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{jabuka 4.6}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{limun 51}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{kivi 92.7}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{banana 8.7}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{pomorandza 53.2}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{KRAJ}#
+#\izlaz{Voce sa najvise C vitamina je: kivi}#
+\end{upotreba}
+\end{maxitest}
+
+\linkresenje{struc.2}
+\end{Exercise}
+\begin{Answer}[ref=struc.2]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/2.c}
+\end{Answer}
+
+
+
+\begin{Exercise}[label=struc.3] 
+Definisati strukturu $Grad$ u kojoj se nalazi ime grada (niska dužine
+$20$ karaktera) i prosečna temperatura u toku decembra (realan
+broj). Napisati program koji učitava imena $n$ ($0<n<50$) gradova i
+njihove prosečne temperature, a zatim ispisuje one gradove koji imaju
+idealnu temperaturu za klizanje: od $3$ do $8$
+stepeni. \textit{Napomena: probati sa testiranjem zadataka pomoću
+  preusmeravanja.}
+
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Beograd 7}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Uzice 1.5}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Subotica 4}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Zrenjanin 9}#
+#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
+#\izlaz{Beograd}#
+#\izlaz{Subotica}#
+\end{upotreba}
+\end{maxitest}
+
+\begin{maxitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Varsava 11}#
+#\izlaz{Unesite grad i temperaturu: }\ulaz{Prag 2}#
+#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
+\end{upotreba}
+\end{maxitest}
+ 
+
+\linkresenje{struc.3}
+\end{Exercise}
+\begin{Answer}[ref=struc.3]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/3.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=struc.4] 
+ Definisati strukturu \kckod{ParReci} koja sadrži reč na srpskom
+ jeziku i odgovarajući prevod na engleski jezik. Napisati program koji
+ do kraja ulaza učitava sve parove reči, a potom za rečenicu koja se
+ zadaje u jednoj liniji ispisati prevod. Ako je reč u rečenici
+ nepoznata umesto nje ispisati odgovarajući broj zvezdica. Maksimalna
+ dužina reči je 50 karaktera, ukupan broj parova reči je maksimalno
+ $100$, a maksimalna dužina rečenice je $100$
+ karaktera. \napomena{Probati sa testiranjem zadataka pomoću
+   preusmeravanja.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{zima winter}#
+#\ulaz{godina year}#
+#\ulaz{sreca happiness}#
+#\ulaz{programiranje programming}#
+#\ulaz{caj tea}#
+#\izlaz{Unesite recenicu za prevod: }#
+#\ulaz{piti caj zimi je sreca}#
+#\izlaz{**** tea **** ** happiness}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{zima winter}#
+#\ulaz{pas dog}#
+#\ulaz{sreca happiness}#
+#\ulaz{prijatelj friend}#
+#\ulaz{solja cup}#
+#\ulaz{covek man}#
+#\izlaz{Unesite recenicu za prevod: }#
+#\ulaz{pas je covekov najbolji prijatelj}#
+#\izlaz{dog is ******* best friend}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.4}
+\end{Exercise}
+\begin{Answer}[ref=struc.4]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/4.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=struc.6] 
+Cenoteka pomaže kupcima da pronađu najpovoljniju cenu za proizvod koji
+žele da kupe. Napisati program koji učitava najpre broj različitih
+prodavnica (ceo broj manji od $50$) a zatim i podatke o ceni traženog
+artikla -- zadaje se naziv prodavnice (niske maksimalne dužine $20$
+karaktera) i cena u toj prodavnici (realan broj). Korisnik zadaje
+željenu cenu proizvoda, a program ispisuje imena svih onih prodavnica
+u kojima je cena proizvoda jednaka ili manja od željene. U slučaju
+greške ispisati odgovarajuću poruku.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti broj prodavnica: }\ulaz{5}#
+#\ulaz{idea 58.9}#
+#\ulaz{maxi 58.2}#
+#\ulaz{roda 55.1}#
+#\ulaz{tempo 54.5}#
+#\ulaz{interex 57.99}#
+#\izlaz{Uneti zeljenu cenu: }\ulaz{57.0}#
+#\izlaz{Povoljne prodavnice su:}#
+#\izlaz{roda}#
+#\izlaz{tempo}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti broj prodavnica: }\ulaz{4}#
+#\ulaz{dm 43.2}#
+#\ulaz{lily 45.99}#
+#\ulaz{benu\_apoteke 43.99}#
+#\ulaz{sephora 50.99}#
+#\izlaz{Uneti zeljenu cenu: }\ulaz{47.00}#
+#\izlaz{Povoljne prodavnice su:}#
+#\izlaz{dm}#
+#\izlaz{lily}#
+#\izlaz{benu\_apoteke}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.6}
+\end{Exercise}
+\begin{Answer}[ref=struc.6]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/6.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=struc.7] 
+Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. Za
+dato obdanište dobija spisak $n$ dece sa kolonama: pol (\kckod{m} ili
+\kckod{z}), broj godina (od $3$ do $6$) i ocena koju je dete dalo radu
+obdaništa (od $1$ do $5$). Maksimalan broj dece u obdaništu je
+$200$. Napisati program koji za decu datog pola i broja godina
+ispisuje na tri decimale prosečnu ocenu obdaništa. U slučaju
+neispravnog unosa ispisati odgovarajuću poruku.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti broj dece: }\ulaz{5}#
+#\izlaz{Uneti podatke za svako dete, pol,}#
+#\izlaz{broj godina i ocenu:}#
+#\ulaz{m 3 5}#
+#\ulaz{z 3 4}#
+#\ulaz{m 4 2}#
+#\ulaz{m 5 4}#
+#\ulaz{m 3 4}#
+#\izlaz{Uneti pol i broj godina: }\ulaz{m 3}#
+#\izlaz{Prosecna ocena je: 4.500.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti broj dece: }\ulaz{10}#
+#\izlaz{Uneti podatke za svako dete, pol,}#
+#\izlaz{broj godina i ocenu:}#
+#\ulaz{m 3 5}#
+#\ulaz{z 4 4}#
+#\ulaz{m 5 4}#
+#\ulaz{z 4 3}#
+#\ulaz{z 3 2}#
+#\ulaz{z 4 5}#
+#\ulaz{m 6 5}#
+#\ulaz{z 4 4}#
+#\ulaz{z 4 5}#
+#\ulaz{m 6 3}#
+#\izlaz{Uneti pol i broj godina: }\ulaz{z 4}#
+#\izlaz{Prosecna ocena je: 4.200.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Uneti broj dece: }\ulaz{15}#
+#\izlaz{Uneti podatke za svako dete, pol,}# 
+#\izlaz{broj godina i ocenu:}#
+#\ulaz{m 3 2}#
+#\ulaz{z 7 5}#
+#\izlaz{Neispravan broj godina.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Uneti broj dece: }\ulaz{2}#
+#\izlaz{Uneti podatke za svako dete, pol,}# 
+#\izlaz{broj godina i ocenu:}#
+#\ulaz{m 3 2}#
+#\ulaz{z 3 5}#
+#\izlaz{Uneti pol i broj godina: }\ulaz{h 5}#
+#\izlaz{Neispravan pol.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.7}
+\end{Exercise}
+\begin{Answer}[ref=struc.7]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/7.c}
+\end{Answer}
+
+%---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+\begin{comment}
 \begin{Exercise}[label=v2.5_02] 
   Data je struktura
 \begin{ckod}
@@ -61,72 +345,6 @@ Testirati napisane funkcije u glavnom programu.
 \end{Exercise}
 \begin{Answer}[ref=v2.5_02]
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/2/2.c}
-\end{Answer}
-
-\begin{Exercise}[label=v2.5_03] 
-
-Napisati program koji ucitava reci sa standardnog ulaza dok korisnik ne zada EOF i ispisuje
-ih na standardni izlaz svaku u posebnom redu, poravnatu udesno u odnosu 
-na poslednji karakter najduze reci. Koristiti
-\begin{ckod}
-strukturu typedef struct rec
-	  {
-	     char s[21];
-	     int duzina;
-          }REC;
-\end{ckod}
-Na primer, ako su unesene sledece reci:
-\begin{ckod}
-Danas imamo ispit iz programiranja1.
-Nadam se da nece biti tesko!
-\end{ckod}
-onda ispis izgleda ovako:
-\begin{ckod}
-          Danas 
-          imamo 
-          ispit 
-             iz 
-programiranja1.
-          Nadam 
-             se 
-             da 
-           nece 
-           biti 
-         tesko!
-\end{ckod}
-
-Program realizovati kroz sledece funkcije:
-\begin{enumerate}
-\item Funkciju za ucitavanje jedne reci u strukturu REC.
-\item Funkciju za ucitavanje niza struktura koja vraca dimenziju niza
-\item Funkciju koja odredjuje maksimalnu duzinu reci u datom nizu
-\item Funkciju koja ispisuje reci u trazenom formatu
-\end{enumerate}
-
-Mozemo pretpostaviti da nijedna rec ne sadrzi vise od 30 karaktera i da nece biti
-uneto vise od 1000 reci.
-
-\linkresenje{v2.5_03}
-\end{Exercise}
-\begin{Answer}[ref=v2.5_03]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/3/3.c}
-\end{Answer}
-
-\begin{Exercise}[label=v2.5_04] 
-   Napisati program koji izracunava prosecnu cenu jedne potrosacke
-   korpe. Potrosacka korpa se sastoji od broja kupljenih artikala i 
-   niza kupljenih artikala. Svaki artikal odredjen je svojim nazivom, 
-   kolicinom i cenom. Program treba da ucita broj potrosaca n (najvise 100), 
-   zatim podatke za n potrosackih korpi i da na osnovu ucitanih podataka 
-   izracuna prosecnu cenu potrosacke korpe. Ucitavanje se vrsi sa standarnog
-   ulaza pri cemu se prvo zada broj artikala, a zatim za svaki artikal naziv, 
-   kolicina i cena.  Mozemo pretpostaviti da nijedan 
-   potrosac nece kupiti vise od 20 artikala, kao i da naziv svakog artikla
-   sadrzi maksimalno 30 karaktera.
-\linkresenje{v2.5_04}
-\end{Exercise}
-\begin{Answer}[ref=v2.5_04]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/4/4.c}
 \end{Answer}
 
 \begin{Exercise}[label=v2.5_05] 
@@ -176,25 +394,26 @@ Napisati glavni program koji ucitava prirodan broj $n<1000$ a zatim n izraza
 \end{Answer}
 
 
-
-\begin{Exercise}[label=p2.5_01] 
-Definisati strukturu kojom se predstavlja kompleksan broj. Napisati funkcije koje izračunavaju zbir, razliku, proizvod i količnik dva kompleksna broja, a zati i program koji učitava dva kompleksna broja i ispisuje vrednost zbira, razlike, proizvoda i količnika. \\
-\begin{maxitest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite realni i imaginarni deo prvog broja: }\ulaz{1 2}#
-#\izlaz{Unesite realni i imaginarni deo drugog broja: }\ulaz{-2 3}#
-#\izlaz{Zbir: -1.00+5.00*i}#
-#\izlaz{Razlika: 3.00-1.00*i}#
-#\izlaz{Proizvod: -8.00-1.00*i}#
-#\izlaz{Kolicnik: 0.31-0.54*i}#
-\end{upotreba}
-\end{maxitest}
-\linkresenje{p2.5_01}
+\begin{Exercise}[label=v2.5_04] 
+   Napisati program koji izracunava prosecnu cenu jedne potrosacke
+   korpe. Potrosacka korpa se sastoji od broja kupljenih artikala i 
+   niza kupljenih artikala. Svaki artikal odredjen je svojim nazivom, 
+   kolicinom i cenom. Program treba da ucita broj potrosaca n (najvise 100), 
+   zatim podatke za n potrosackih korpi i da na osnovu ucitanih podataka 
+   izracuna prosecnu cenu potrosacke korpe. Ucitavanje se vrsi sa standarnog
+   ulaza pri cemu se prvo zada broj artikala, a zatim za svaki artikal naziv, 
+   kolicina i cena.  Mozemo pretpostaviti da nijedan 
+   potrosac nece kupiti vise od 20 artikala, kao i da naziv svakog artikla
+   sadrzi maksimalno 30 karaktera.
+\linkresenje{v2.5_04}
 \end{Exercise}
-\begin{Answer}[ref=p2.5_01]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/1.c}
+\begin{Answer}[ref=v2.5_04]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/4/4.c}
 \end{Answer}
+
+
+
+
 
 \begin{Exercise}[label=p2.5_02] 
 Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) i $boja$ (enumeracioni tip koji uključuje plavu, žutu, crvenu i zelenu boju). Zatim učitati informacije o $n$ lopti ($0<n<50$) i ispisati ukupnu zapreminu, kao i broj crvenih lopti. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
@@ -218,26 +437,6 @@ Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) 
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/2.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_03] 
- Zimi su prehlade česte i treba unositi više vitamina C. Struktura $Vocka$ sadrži ime voćke (nisku maksimalne dužine 20 karaktera) i količinu vitamina C u miligramima (realan broj). Napisati program koji sa standardnog ulaza učitava podatke o voćkama sve do unosa reči KRAJ i ispisuje ime voćke sa najviše vitamina C. Pretpostaviti da broj voćki neće biti veći od 50. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
-\begin{maxitest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{jabuka 4.6}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{limun 51}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{kivi 92.7}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{banana 8.7}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{pomorandza 53.2}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{KRAJ}#
-#\izlaz{Voce sa najvise C vitamina je: kivi}#
-\end{upotreba}
-\end{maxitest}
-
-\linkresenje{p2.5_03}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_03]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/3.c}
-\end{Answer}
 
 \begin{Exercise}[label=p2.5_04] 
  Deda Mraz planira kupovinu poklona za studente koji su vredno učili C u toku godine. Na njegovoj listi se nalazi ime i prezime studenta (niske dužina do 50 karaktera) i njegova želja (niska maksimalne dužine 100 karaktera). Napisati program koji će služiti Deda Mrazu kao podsetnik: na osnovu liste koju je napravio, Deda Mraz može da unese ime i prezime studenta i da proveri njegovu želju. Ako ima više studenata sa istim imenom i prezimenom ispisati sve želje. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
@@ -274,164 +473,21 @@ Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) 
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/4.c}
 \end{Answer}
 
-\begin{Exercise}[label=p2.5_05] 
-  Definisati strukturu $Grad$ u kojoj se nalazi ime grada (niska dužine 20 karaktera) i prosečna temperatura u toku decembra (realan broj). Napisati program koji učitava imena $n$ ($0<n<50$) gradova i njihove prosečne temperature, a zatim ispisuje one gradove koji imaju idealnu temperaturu za klizanje: od 3 do 8 stepeni. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
-\begin{maxitest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Beograd 7}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Uzice 1.5}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Subotica 4}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Zrenjanin 9}#
-#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
-#\izlaz{Beograd}#
-#\izlaz{Subotica}#
-\end{upotreba}
-\end{maxitest}
 
-\begin{maxitest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{2}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Varsava 11}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Prag 2}#
-#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
-\end{upotreba}
-\end{maxitest}
- 
 
-\linkresenje{p2.5_05}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_05]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/5.c}
-\end{Answer}
-
-\begin{Exercise}[label=p2.5_06] 
- Definisati strukturu $ParReci$ koja sadrži reč na srpskom jeziku i odgovarajući prevod na engleski jezik. Zatim sa standardnog ulaza sve do kraja ulaza učitavati parove reči i, posebno, za rečenicu koja se zadaje sa ulaza ispisati prevod - ako je reč u rečenici nepoznata umesto nje ispisati odgovarajući broj zvezdica. Reči neće biti duže od 50 karaktera, ukupan broj parova reči neće biti veći od 100, a ukupna dužina rečenice neće biti veća od 100 karaktera. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\ulaz{zima winter}#
-#\ulaz{godina year}#
-#\ulaz{sreca happiness}#
-#\ulaz{programiranje programming}#
-#\ulaz{caj tea}#
-#\izlaz{Unesite recenicu za prevod: }#
-#\ulaz{piti caj zimi je sreca}#
-#\izlaz{**** tea **** ** happiness}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p2.5_06}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_06]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/6.c}
-\end{Answer}
 
  
-\begin{Exercise}[label=p2.5_] 
-Napisati funkcije koje izra\v cunavaju zbir, razliku i proizvod dva
-razlomka, \verb|razlomak zbir(razlomak a, razlomak b)| itd. Unosi se
-broj n a potom i n razlomaka sa standarnog ulaza (najvi\v se
-100). Ispisati njihov zbir, raliku i proizvod na standardni izlaz.
-\linkresenje{p2.5_}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
 
 
-\begin{Exercise}[label=p2.5_] 
-Napraviti strukturu \verb|VOCE|
-koja sadr\v zi ime (ne du\v ze od 20 karaktera)
-i cenu (tipa \verb|float|). Sa standardnog ulaza unosi se broj vo\' cki (ne vi\' ci od 200), a
-potom uneti niz vo\' ca i pozvati funkciju koja izra\v cunava prose\v cnu cenu vo\'ca.
-Potom ispisati imena onih vo\'cki \v cija je cena ve\' ca od prose\v cne.
-\linkresenje{p2.5_}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
 
 
-\begin{Exercise}[label=p2.5_] 
-Sa standarnog ulaza u\v citava se $n$ ($0 < n \le 200$), a potom i 
-spisak (du\v zine $n$) engleskih re\v{c}i i njihov prevod
-na srpski jezik. Potom se u\v citava jedna re\v c sa standardnog ulaza. Na standardni izlaz ispisati
-odgovaraju\' ci prevod date re\v ci ili podatak o tome da se re\v c ne 
-nalazi na spisku.
-
-\begin{verbatim}
-apple jabuka
-pineapple ananas
-orange narandza
-pear kruska
-grape grozdje
-\end{verbatim}
-
-\noindent
-i re\v c \emph{orange} program treba da ispi\v se \emph{narandza} a za re\v c
-\emph{cherry} program treba da ispi\v se poruku \emph{Rec se ne nalazi u recniku}.
-U programu se mogu koristiti funkcije iz zaglavlja \emph{string.h}.
-\linkresenje{p2.5_}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
 
 
-\begin{Exercise}[label=p2.5_] 
-Napisati program koji sa standardnog ulaza \v{c}itava najpre broj artikala
-(ceo broj manji od $20$) a zatim podatke o artiklima. Artikli su vo\' cke
-koje imaju po dva podatka: naziv vo\' cke i cenu (naziv vo\' cke je
-karakterska niska du\v zine do $20$ karaktera).
-Program potom tra\v zi od korisnika da unese neku cenu i \v stampa na
-standardni izlaz sve vo\' cke koje imaju zadatu cenu.\\
-
-Primer rada programa:
-
-\begin{verbatim}
-4
-jabuka 30
-kruska 40
-ananas 60
-limun 40
-
-Unesite cenu: 40
-Voce te cene je: kruska limun
-\end{verbatim}
-\linkresenje{p2.5_}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
 
 
-\begin{Exercise}[label=p2.5_] 
-Definisati strukturu koja opisuje dete atributima 
-ime deteta (ne vece od 20 karaktera) , pol deteta (m ili z)
-i ocena. Ocenu je svako dete dalo radu obdani\v sta. Maksimalan broj dece je 100. Napisati program koji:
 
-   \begin{description}
-   \item{a)} Sa standarnog ulaza se unosi $n$, a potom podaci o $n$ dece. Koristiti strukturu:
-   \begin{verbatim}
-        typedef struct
-        {
-            char ime[20];
-            char pol;
-            int ocena;
-        } DETE;
-   \end{verbatim}
 
-   \item{b)} ispisati na standarni izlaz statistiku: koliko ima de\v caka,
-   a koliko devoj\v cica i prose\v cnu ocenu. Potom ispisuje imena dece
-   brojnijeg pola.
-   \end{description}
-\linkresenje{p2.5_}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
+
 
 
 \begin{Exercise}[label=p2.5_] 
@@ -475,8 +531,9 @@ na standardni izlaz (ukoliko ova funkcija nije implementirana
 %\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
 \end{Answer}
 
-\iffalse
+\end{comment}
+
 \section{Rešenja}
 \shipoutAnswer
-\fi
+
 
