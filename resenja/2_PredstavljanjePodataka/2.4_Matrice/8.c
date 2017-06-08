@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* n)
+void ucitavanje(int mat[][MAX], int* n)
 {
 	int i, j;
 
@@ -29,7 +29,7 @@ int main()
 	int n, i, j;
 	int max_zbir, trenutni_zbir = 0, indeks_kolone = 0;
 
-	ucitaj(a, &n);
+	ucitavanje(a, &n);
 
 	for(i=0; i<n; i++)
 		trenutni_zbir += a[i][0];

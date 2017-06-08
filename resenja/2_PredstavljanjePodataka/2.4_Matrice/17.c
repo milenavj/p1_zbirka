@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(double mat[][MAX], int* m, int* n)
+void ucitavanje(double mat[][MAX], int* m, int* n)
 {
   int i, j;
 
@@ -31,7 +31,7 @@ int main()
   int indeks_kolone;
   double max_kolone, min_vrste;
   
-  ucitaj(mat, &m, &n);
+  ucitavanje(mat, &m, &n);
     
   for(i=0; i<m; i++)
   {

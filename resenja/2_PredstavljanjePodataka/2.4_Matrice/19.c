@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* m, int* n)
+void ucitavanje(int mat[][MAX], int* m, int* n)
 {
   int i, j;
 
@@ -50,8 +50,8 @@ int main()
   int m, n;
   int k, t;
   
-  ucitaj(a, &m, &n);
-  ucitaj(b, &k, &t);
+  ucitavanje(a, &m, &n);
+  ucitavanje(b, &k, &t);
   
   if (podmatrica(a, m, n, b, k, t))
     printf("Druga matrica je sadrzana u prvoj matrici.\n");

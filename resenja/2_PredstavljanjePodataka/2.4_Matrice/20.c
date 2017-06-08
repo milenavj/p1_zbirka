@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* m, int* n)
+void ucitavanje(int mat[][MAX], int* m, int* n)
 {
   int i, j;
 
@@ -43,7 +43,7 @@ int main()
   double  b[MAX];
   int m, n, i;
 
-  ucitaj(mat, &m, &n);
+  ucitavanje(mat, &m, &n);
   
   kreiraj_niz(mat, m, n, b);
   

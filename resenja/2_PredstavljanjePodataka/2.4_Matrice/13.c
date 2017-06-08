@@ -3,7 +3,7 @@
 
 #define MAX 200
 
-void ucitaj(int mat[][MAX], int* n)
+void ucitavanje(int mat[][MAX], int* n)
 {
   int i, j;
 
@@ -52,7 +52,7 @@ int main()
   int mat[MAX][MAX];
   int n;
     
-  ucitaj(mat, &n);
+  ucitavanje(mat, &n);
   
   if (ortonormirana(mat, n))
     printf("Matrica jeste ortonormirana.\n");

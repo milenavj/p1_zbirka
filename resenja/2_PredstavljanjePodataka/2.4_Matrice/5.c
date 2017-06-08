@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* n)
+void ucitavanje(int mat[][MAX], int* n)
 {
 	int i, j;
 
@@ -72,7 +72,7 @@ int main()
 	int a[MAX][MAX];
 	int n;
 
-	ucitaj(a, &n);
+	ucitavanje(a, &n);
 
 	if (refleksivna(a, n))
 		printf("Relacija jeste refleksivna.\n");

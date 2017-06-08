@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* n)
+void ucitavanje(int mat[][MAX], int* n)
 {
   int i, j;
 
@@ -105,12 +105,22 @@ int main()
   int mat[MAX][MAX];
   int n;
     
-  ucitaj(mat, &n);
+  ucitavanje(mat, &n);
   
-  printf("Sortiranost po vrstama, kolonama i dijagonalama je: ");
-  printf("%d ", sortirani_po_vrstama(mat, n));
-  printf("%d ", sortirani_po_kolonama(mat, n));
-  printf("%d\n", sortirani_po_dijagonalama(mat, n));
-  
+  if (sortirani_po_kolonama(mat, n))
+	  printf("Elementi su sortirani po kolonama.\n");
+	else
+		printf("Elementi nisu sortirani po kolonama.\n");
+
+	if (sortirani_po_vrstama(mat, n))
+	  printf("Elementi su sortirani po vrstama.\n");
+	else
+		printf("Elementi nisu sortirani po vrstama.\n");
+
+	if (sortirani_po_dijagonalama(mat, n))
+	  printf("Elementi su sortirani po dijagonalama.\n");
+	else
+		printf("Elementi nisu sortirani po dijagonalama.\n");
+
   return 0;
 }

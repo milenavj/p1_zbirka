@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* n)
+void ucitavanje(int mat[][MAX], int* n)
 {
   int i, j;
 
@@ -64,7 +64,7 @@ int main()
   int mat[MAX][MAX];
   int n;
     
-  ucitaj(mat, &n);
+  ucitavanje(mat, &n);
   
   if (magicni_kvadrat(mat, n))
     printf("Matrica jeste magicni kvadrat.\n");

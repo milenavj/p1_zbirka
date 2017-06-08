@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* m, int* n)
+void ucitavanje(int mat[][MAX], int* m, int* n)
 {
 	int i, j;
 
@@ -30,7 +30,7 @@ int main()
 	int m, n, i, j, suma;
 	int k, t;
 
-	ucitaj(mat, &m, &n);
+	ucitavanje(mat, &m, &n);
 
 	printf("Indeksi elemenata koji su jednaki zbiru suseda su:\n");
 	for(i=0; i<m; i++)

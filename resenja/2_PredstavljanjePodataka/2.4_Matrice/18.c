@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* m, int* n)
+void ucitavanje(int mat[][MAX], int* m, int* n)
 {
   int i, j;
 
@@ -31,7 +31,7 @@ int main()
   int pravac = 1;
   int gore_i, dole_i, levo_j, desno_j;
 
-  ucitaj(mat, &m, &n);
+  ucitavanje(mat, &m, &n);
   
   gore_i = 1;
   dole_i = m-1;

@@ -3,7 +3,7 @@
 
 #define MAX 10
 
-void ucitaj(int mat[][MAX], int* n)
+void ucitavanje(int mat[][MAX], int* n)
 {
   int i, j;
 
@@ -58,7 +58,7 @@ int main()
   int mat[MAX][MAX];
   int n;
     
-  ucitaj(mat, &n);
+  ucitavanje(mat, &n);
   
   if (uredjene_sume(mat, n))
     printf("Sume jesu uredjenje strogo rastuce.\n");

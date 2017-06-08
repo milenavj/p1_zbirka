@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* m, int* n)
+void ucitavanje(int mat[][MAX], int* m, int* n)
 {
 	int i, j;
 
@@ -29,7 +29,7 @@ int main()
 	int n, i, j, m, x, y, p, k;
 	int suma;
 
-	ucitaj(a, &m, &n);
+	ucitavanje(a, &m, &n);
 
 	printf("Uneti dva cela broja: ");
     scanf("%d%d", &p, &k);

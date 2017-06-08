@@ -3,7 +3,7 @@
 
 #define MAX 50
 
-void ucitaj(int mat[][MAX], int* m, int* n)
+void ucitavanje(int mat[][MAX], int* m, int* n)
 {
 	int i, j;
 
@@ -53,7 +53,7 @@ int main()
 	int m, n;
 	int k, t;
 
-	ucitaj(mat, &m, &n);
+	ucitavanje(mat, &m, &n);
 	
 	printf("Uneti indekse vrsta: ");
 	scanf("%d%d", &k, &t);
