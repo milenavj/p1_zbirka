@@ -311,6 +311,196 @@ neispravnog unosa ispisati odgovarajuću poruku.
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/7.c}
 \end{Answer}
 
+
+
+%------------------matematicko-geometrijski zadaci
+
+
+\begin{Exercise}[label=struc.9] 
+Definisati strukturu \kckod{Lopta} sa poljima \kckod{poluprecnik} (ceo
+broj u centimetrima) i \kckod{boja} (enumeracioni tip koji uključuje
+plavu, žutu, crvenu i zelenu boju). Zatim učitati informacije o $n$
+lopti ($0<n<50$) i ispisati ukupnu zapreminu, kao i broj crvenih
+lopti. U slučaju greške ispisati odgovarajuću poruku.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj lopti: }\ulaz{4}#
+#\izlaz{Unesite dalje poluprecnike i boje lopti}# 
+#\izlaz{(1-plava, 2-zuta, 3-crvena, 4-zelena):}#
+#\izlaz{1.lopta: }\ulaz{4 1}#
+#\izlaz{2.lopta: }\ulaz{1 3}#
+#\izlaz{3.lopta: }\ulaz{2 3}#
+#\izlaz{4.lopta: }\ulaz{10 4}#
+#\izlaz{Ukupna zapremina: 4494.57}#
+#\izlaz{Broj crvenih lopti: 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj lopti: }\ulaz{8}#
+#\izlaz{Unesite dalje poluprecnike i boje lopti}# 
+#\izlaz{(1-plava, 2-zuta, 3-crvena, 4-zelena):}#
+#\izlaz{1. lopta: }\izlaz{2 1}#
+#\izlaz{2. lopta: }\izlaz{30 3}#
+#\izlaz{3. lopta: }\izlaz{7 3}#
+#\izlaz{4. lopta: }\izlaz{4 1}#  
+#\izlaz{5. lopta: }\izlaz{5 2}#
+#\izlaz{6. lopta: }\izlaz{6 2}#
+#\izlaz{7. lopta: }\izlaz{12 3}#
+#\izlaz{8. lopta: }\izlaz{14 2}#
+#\izlaz{Ukupna zapremina: 134996.34}#
+#\izlaz{Ukupno crvenih lopti: 3}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj lopti: }\ulaz{8}#
+#\izlaz{Unesite dalje poluprecnike i boje lopti}# 
+#\izlaz{(1-plava, 2-zuta, 3-crvena, 4-zelena):}#
+#\izlaz{1. lopta: }\izlaz{1 2}#
+#\izlaz{2. lopta: }\izlaz{2 10}#
+#\izlaz{Nekorektan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.9}
+\end{Exercise}
+\begin{Answer}[ref=struc.9]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/9.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=struc.10] 
+Napisati program za predstavljanje poligona i izračunavanje njegovog
+obima i dužine stranica.
+\begin{itemize}
+\item Definisati tip podataka \kckod{TACKA} pogodan za predstavljanje
+  tačke Dekartovske ravni (čije su $x$ i $y$ koordinate podaci tipa
+  \kckod{double}).
+
+\item Definisati funkciju \kckod{double rastojanje(TACKA a, TACKA b)}
+  koja izračunava rastojanje između dve tačke.
+
+\item Definisati funkciju \kckod{unsigned ucitaj\_poligon(TACKA*
+  tacke, unsigned n)} koja učitava maksimalno $n$ puta po dve
+  vrednosti tipa \kckod{double} (koje predstavljaju koordinate temena
+  poligona) i upisuje ih u zadati niz tačaka. Funkcija vraća broj
+  uspešno učitanih tačaka.
+
+\item Definisati funkciju \kckod{double obim(TACKA* poligon, unsigned
+  n)} koja izračunava obim poligona sa $n$ tačaka u zadatom nizu
+  \napomena{Prilikom računanja obima ne zaboraviti stranicu koja spaja
+    poslednje i prvo teme).
+
+\item Definisati funkciju \kckod{double maksimalna\_stranica(TACKA*
+  poligon, unsigned n)} koja izračunava dužinu najduže stranice
+  poligona sa $n$ tačaka u zadatom nizu.
+
+\item Napisati program koji učitava poligon sa maksimalno $N$ temena
+  ($0 < N \le 1000$) i za učitani poligon ispisuje na tri decimale
+  obim i dužinu maksimalnu stranice.
+\end{itemize}
+\linkresenje{struc.10}
+\end{Exercise}
+\begin{Answer}[ref=struc.10]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/10.c}
+\end{Answer}
+
+
+\begin{Exercise}[difficulty=1, label=struc.8] 
+Sefinisati strukturu \kckod{IZRAZ} kojom se opisuje numerički izraz
+nad celim brojevima koji se sastoji od dva celobrojna operanda,
+numeričke operacije (sabiranje, oduzimanje, množenje ili celobrojno
+deljenje) nad celim brojevima.
+\begin{enumerate}
+\item Napisati funkciju koja ispituje da li je dati izraz korektno
+  zadat i vraća $1$ ako jeste a $0$ u suprotnom. Podrazumevamo da je izraz
+  korektno zadat ako operacija odgovara $+$, $-$, $*$ ili $/$ i u slučaju
+  deljenja drugi operand je različit od $0$.   
+\item Napisati funkciju koja za dati izraz odredjuje vrednost izraza.   
+\item Napisati funkciju koja učitava dati izraz. Funkcija treba da
+  učita sa standardnog ulaza izlaz koji je zadat prefiksno --- prvo
+  operacija, a potom dva operanda. Funkcija vraća $1$ ako je
+  učitavanje bilo uspešno, tj. ako je izraz bio korektno zadat ili $0$
+  u suprotnom. 
+\item Napisati funkciju koja štampa dati izraz infiksno, u obliku
+  "$operand_1$ $operacija$ $operand_2 = vrednost$".
+\end{enumerate}
+
+Napisati glavni program koji učitava prirodan broj $n$, ($n<1000$) a
+zatim $n$ izraza u prefiksnoj notaciji. Program treba da ispiše
+maksimalnu vrednost unetih izraza i sve izraze čija vrednost je manja
+od polovine maksimalne vrednosti.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti broj izraza: }\ulaz{4}#
+#\izlaz{Uneti izraze u prefiksnoj notaciji:}#
+#\ulaz{+ 10 4}#
+#\ulaz{- 9 2}#
+#\ulaz{* 11 2}#
+#\ulaz{/ 7 3}#
+#\izlaz{Maksimalna vrednost izraza: 22}#
+#\izlaz{Izrazi cija je vrednost manja}# 
+#\izlaz{od polovine maksimalne vrednosti:}#
+#\izlaz{9 - 2 = 7}#
+#\izlaz{7 / 3 = 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti broj izraza: }\ulaz{10}#
+#\izlaz{Uneti izraze u prefiksnoj notaciji:}#
+#\ulaz{+ 10 2}#
+#\ulaz{- -678 34}#
+#\ulaz{* 77 2}#
+#\ulaz{+ 1000 -23}#
+#\ulaz{+ 102 4}#
+#\ulaz{- 200 23}#
+#\ulaz{/ 67 12}#
+#\ulaz{/ 1000 2}#
+#\ulaz{* 44 6}#
+#\ulaz{/ 13 1}#
+#\izlaz{Maksimalna vrednost izraza: 977}#
+#\izlaz{Izrazi cija je vrednost manja}#
+#\izlaz{od polovine maksimalne vrednosti:}#
+#\izlaz{10 + 2 = 12}#
+#\izlaz{-678 - 34 = -712}#
+#\izlaz{77 * 2 = 154}#
+#\izlaz{102 + 4 = 106}#
+#\izlaz{200 - 23 = 177}#
+#\izlaz{67 / 12 = 5}#
+#\izlaz{44 * 6 = 264}#
+#\izlaz{13 / 1 = 13}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Uneti broj izraza: }\ulaz{3}#
+#\izlaz{Uneti izraze u prefiksnoj notaciji:}#
+#\ulaz{* 1 2}#
+#\ulaz{/ 3 0}#
+#\izlaz{Deljenje nulom!}#
+#\izlaz{Nekorektan unos}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.8}
+\end{Exercise}
+\begin{Answer}[ref=struc.8]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/8.c}
+\end{Answer}
+
+
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{comment}
 \begin{Exercise}[label=v2.5_02] 
@@ -347,51 +537,6 @@ neispravnog unosa ispisati odgovarajuću poruku.
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/2/2.c}
 \end{Answer}
 
-\begin{Exercise}[label=v2.5_05] 
-   Struktura IZRAZ opisuje numericki izraz nad celim brojevima koji se sastoji
-   od dva celobrojna operanda, numericke operacije nad celim brojevima i
-   vrednosti izraza:
-   
-   typedef struct izraz
-   {
-	char o;
-	int x;
-	int y;
-   } IZRAZ;
-
-\begin{enumerate}
-
-   \item Napisati funkciju koja ispituje da li je dati izraz korektno 
-   zadat i vraca 1 ako jeste a 0 u suprotnom. Podrazumevamo da je 
-   izraz korektno zadat ako operacija odgovara +,-,* ili / i u slucaju
-   deljenja drugi operand je razlicit od 0.
-   
-   \item Napisati funkciju koja za dati izraz odredjuje vrednost izraza. 
-   
-   \item Napisati funkciju koja ucitava dati izraz. Funkcija
-   treba da ucita sa standardnog ulaza operaciju i dva
-   operanda u polja o, x i y strukture IZRAZ. Funkcija vraca
-   1 ako je ucitavanje bilo uspesno, tj. ako je izraz bio
-   korektno zadat ili 0 u suprotnom. 
-   
-   \item Napisati funkciju koja stampa dati izraz infiksno, u obliku
-   x o y = vr. Na primer, za izraz + 4 17 ispis treba 
-   da bude 4+17=21
-   
-  
-\end{enumerate}
-Napisati glavni program koji ucitava prirodan broj $n<1000$ a zatim n izraza
-   u notaciji \\
-   + 4 17 \\
-   - 8 -16 \\
-   Program treba da ispise maksimalnu vrednost medju unetim izrazima i da ispise one
-   izraze cija je vrednost manja od polovine maksimalne vrednosti.
-   	
-\linkresenje{v2.5_05}
-\end{Exercise}
-\begin{Answer}[ref=v2.5_05]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
 
 
 \begin{Exercise}[label=v2.5_04] 
@@ -415,27 +560,7 @@ Napisati glavni program koji ucitava prirodan broj $n<1000$ a zatim n izraza
 
 
 
-\begin{Exercise}[label=p2.5_02] 
-Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) i $boja$ (enumeracioni tip koji uključuje plavu, žutu, crvenu i zelenu boju). Zatim učitati informacije o $n$ lopti ($0<n<50$) i ispisati ukupnu zapreminu, kao i broj crvenih lopti. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
-\begin{maxitest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj lopti: }\ulaz{4}#
-#\izlaz{Unesite dalje poluprecnike i boje lopti (1-plava, 2-zuta, 3-crvena, 4-zelena): }#
-#\izlaz{1.lopta: }\ulaz{4 1}#
-#\izlaz{2.lopta: }\ulaz{1 3}#
-#\izlaz{3.lopta: }\ulaz{2 3}#
-#\izlaz{4.lopta: }\ulaz{10 4}#
-#\izlaz{Ukupna zapremina: 4494.57}#
-#\izlaz{Broj crvenih lopti: 2}#
-\end{upotreba}
-\end{maxitest}
 
-\linkresenje{p2.5_02}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_02]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/praktikumi13/2.c}
-\end{Answer}
 
 
 \begin{Exercise}[label=p2.5_04] 
@@ -474,62 +599,6 @@ Definisati strukturu $Lopta$ sa poljima $poluprecnik$ (ceo broj u centimetrima) 
 \end{Answer}
 
 
-
-
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-\begin{Exercise}[label=p2.5_] 
-\begin{itemize}
-\item Definisati tip podataka \verb|TACKA| pogodan za predstavljanje ta\v cke
-Dekartovske ravni (\v{c}ije su $x$ i $y$ koordinate podaci tipa \verb|double|).
-
-\item Definisati funkciju \verb|double rastojanje(TACKA a, TACKA b)| koja
-izra\v cunava rastojanje izmedju dve ta\v{c}ke.
-
-\item Definisati funkciju \verb|unsigned ucitaj_poligon(TACKA* tacke, unsigned n)|
-koja u\v citava \verb|n| puta po dve vrednosti tipa \verb|double|
- (koje predstavljaju koordinate temena poligona) i upisuje ih u zadati niz
- ta\v{c}aka. Funkcija vra\' ca broj uspe\v sno u\v citanih ta\v{c}aka.
-
-\item Definisati funkciju \verb|double obim(TACKA* poligon, unsigned n)|
-koja izra\v cunava obim poligona sa \verb|n| ta\v{c}aka u zadatom nizu
-(napomena: ne zaboraviti stranicu koja spaja poslednje i prvo teme).
-
-\item Definisati funkciju \verb|double maksimalna_stranica(TACKA* poligon, unsigned n)|
-koja izra\v cunava du\v{z}inu najdu\v{z}e stranice poligona sa \verb|n| ta\v{c}aka
-u zadatom nizu (napomena: ne zaboraviti stranicu koja spaja poslednje i prvo teme).
-
-\item Definisati funkciju \verb|main| u kojoj se sa standardnog ulaza
-u\v{c}itava celobrojna nenegativna vrednost \verb|N| ($0 < N \le 100$).
-
-Ina\v{c}e, poziva se funkcija \verb|ucitaj_poligon|. Ukoliko je
-uspe\v{s}no u\v{c}itano \verb|m| ta\v{c}ka (\verb|N| ne mora da
-bude jednako \verb|m|), onda se poziva funkcija \verb|obim|
-za \verb|m| u\v{c}itanih ta\v{c}aka i ispisuje njen rezultat
-na standardni izlaz (ukoliko ova funkcija nije implementirana
---- ispisati na standardni izlaz simbol \verb|?|).
-Posle toga se poziva funkcija \verb|maksimalna_stranica|
-za \verb|m| u\v{c}itanih ta\v{c}aka i ispisuje njen rezultat
-na standardni izlaz (ukoliko ova funkcija nije implementirana
---- ispisati na standardni izlaz simbol \verb|?|).
-\end{itemize}
-\linkresenje{p2.5_}
-\end{Exercise}
-\begin{Answer}[ref=p2.5_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5/5.c}
-\end{Answer}
 
 \end{comment}
 
