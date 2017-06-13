@@ -10,14 +10,14 @@ typedef struct
 
 double rastojanje(TACKA a, TACKA b)
 {
-	return sqrt(pow(a.x - b.x, 2), pow(a.y - b.y, 2));
+	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
 }
 
 unsigned ucitaj_poligon(TACKA* tacke, unsigned n)
 {
 	int i = 0;
 
-	while(scanf("%d%d", &tacke[i].x, &tacke[i].y) != EOF)
+	while(i < n && scanf("%d%d", &tacke[i].x, &tacke[i].y) != EOF)
 		i++;
 
 	return i;
@@ -50,6 +50,28 @@ double maksimalna_stranica(TACKA* poligon, unsigned n)
 	return max;
 }
 
+double povrsina_trougla(TACKA A, TACKA B, TACKA C)
+{
+	double a = rastojanje(B, C);
+	double b = rastojanje(A, C);
+	double c = rastojanje(A, B);
+
+	double s = (a + b + c)/2;
+
+	return sqrt(s*(s -a)*(s - b)*(s - c));
+}
+
+double povrsina(TACKA* poligon, unsigned n)
+{
+	double P = 0;
+	int i;
+
+	for(i=1; i<n-1; i++)
+		P += povrsina_trougla(poligon[0], poligon[i], poligon[i+1]);
+
+	return P;
+}
+
 int main()
 {
 	int N;
@@ -75,6 +97,7 @@ int main()
 
 	printf("Obim poligona je %.3lf.\n", obim(poligon, m));
 	printf("Duzina maksimalne stranice je %.3lf.\n", maksimalna_stranica(poligon, m));
+	printf("Povrsina poligona je %.3lf.\n", povrsina(poligon, m));
 
 	return 0;
 }

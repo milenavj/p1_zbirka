@@ -1,6 +1,8 @@
 
 \section{Strukture}
 
+%---------------------------------------------------------dva lagana zadatka za pocetak
+
 \begin{Exercise}[label=struc.1] 
 Definisati strukturu kojom se predstavlja kompleksan broj. Napisati
 funkcije koje izračunavaju zbir, razliku, proizvod i količnik dva
@@ -70,6 +72,7 @@ proizvod na standardni izlaz.
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/5.c}
 \end{Answer}
 
+%-------------------------------------------------------------------razni tekstualni zadaci poredjani po tezini
 
 \begin{Exercise}[label=struc.2] 
  Zimi su prehlade česte i treba unositi više vitamina C. Struktura
@@ -102,8 +105,8 @@ proizvod na standardni izlaz.
 
 
 \begin{Exercise}[label=struc.3] 
-Definisati strukturu $Grad$ u kojoj se nalazi ime grada (niska dužine
-$20$ karaktera) i prosečna temperatura u toku decembra (realan
+Definisati strukturu \kckod{Grad} u kojoj se nalazi ime grada (niska
+dužine $20$ karaktera) i prosečna temperatura u toku decembra (realan
 broj). Napisati program koji učitava imena $n$ ($0<n<50$) gradova i
 njihove prosečne temperature, a zatim ispisuje one gradove koji imaju
 idealnu temperaturu za klizanje: od $3$ do $8$
@@ -134,7 +137,6 @@ stepeni. \textit{Napomena: probati sa testiranjem zadataka pomoću
 \end{upotreba}
 \end{maxitest}
  
-
 \linkresenje{struc.3}
 \end{Exercise}
 \begin{Answer}[ref=struc.3]
@@ -312,8 +314,74 @@ neispravnog unosa ispisati odgovarajuću poruku.
 \end{Answer}
 
 
+\begin{Exercise}[label=struc.11] 
+Definisati strukturu kojom se opisuje student. Student je zadat svojim
+imenom i prezimenom (oba su maksimalne dužine $30$ karaktera), smerom
+(R, I, V, N, T, O) i prosečnom ocenom. Napisati program koji učitava
+podatke o $n$ studenata, zatim učitava smer i ispisuje imena i
+prezimena onih studenta koji su sa datog smera. Potom ispisati podatke
+za studenta koji ima najveći prosek. Ako ima više takvih studenata
+ispisati sve njih. Maksimalan broj studenata je $2000$. U slučaju
+greške ispisati odgovarajuću poruku.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti broj studenata: }\ulaz{5}#
+#\izlaz{Uneti podatke o studentima:}#
+#\izlaz{0. student: }\ulaz{Kocic Marija R 9.14}#
+#\izlaz{1. student: }\ulaz{Tanja Mratinkovic R 7.88}#
+#\izlaz{2. student: }\ulaz{Mihailo Simic N 8.44}#
+#\izlaz{3. student: }\ulaz{Milena Medar I 9.14}#
+#\izlaz{4. student: }\ulaz{Ljubica Mihic N 9.00}#
+#\izlaz{Uneti smer: }\ulaz{R}#
+#\izlaz{Studenti sa R smera:}#
+#\izlaz{Kocic Marija}#
+#\izlaz{Tanja Mratinkovic}#
+#\izlaz{---------------------}#
+#\izlaz{Svi studenti koji imaju maksimalni prosek:}#
+#\izlaz{Kocic Marija, R, 9.14}#
+#\izlaz{Milena Medar, I, 9.14}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti broj studenata: }\ulaz{4}#
+#\izlaz{Uneti podatke o studentima:}#
+#\izlaz{0. student: }\ulaz{Djordje Lazarevic N 9.05}#
+#\izlaz{1. student: }\ulaz{Minja Peric W 7.70}#
+#\izlaz{Nekorektan smer.}#
+\end{upotreba}
+\end{miditest}
 
-%------------------matematicko-geometrijski zadaci
+\linkresenje{struc.11}
+\end{Exercise}
+\begin{Answer}[ref=struc.11]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/11.c}
+\end{Answer}
+
+
+\begin{Exercise}[difficulty=1, label=struc.12] 
+Napisati program koji izračunava prosečnu cenu jedne potrošačke
+korpe. Potrošačka korpa se sastoji od broja kupljenih artikala i niza
+kupljenih artikala. Svaki artikal određen je svojim nazivom, količinom
+i cenom. Program treba da učita broj potrošača $n$ (najviše $100$),
+zatim podatke za $n$ potrošačkih korpi i da na osnovu učitanih
+podataka izračuna prosečnu cenu potrošačke korpe. Program ispisuje
+račune svake potrošačke korpe i na kraju ispisuje prosečnu cenu
+potrošačke korpe. Možemo pretpostaviti da nijedan potrošač neće kupiti
+više od $20$ artikala, kao i da naziv svakog artikla sadrži maksimalno
+$30$ karaktera.
+
+\linkresenje{struc.12}
+\end{Exercise}
+\begin{Answer}[ref=struc.12]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/12.c}
+\end{Answer}
+
+
+%------------------matematicki zadaci
 
 
 \begin{Exercise}[label=struc.9] 
@@ -378,7 +446,7 @@ lopti. U slučaju greške ispisati odgovarajuću poruku.
 \begin{Exercise}[label=struc.10] 
 Napisati program za predstavljanje poligona i izračunavanje njegovog
 obima i dužine stranica.
-\begin{itemize}
+\begin{enumerate}
 \item Definisati tip podataka \kckod{TACKA} pogodan za predstavljanje
   tačke Dekartovske ravni (čije su $x$ i $y$ koordinate podaci tipa
   \kckod{double}).
@@ -395,16 +463,68 @@ obima i dužine stranica.
 \item Definisati funkciju \kckod{double obim(TACKA* poligon, unsigned
   n)} koja izračunava obim poligona sa $n$ tačaka u zadatom nizu
   \napomena{Prilikom računanja obima ne zaboraviti stranicu koja spaja
-    poslednje i prvo teme).
+    poslednje i prvo teme}.
 
 \item Definisati funkciju \kckod{double maksimalna\_stranica(TACKA*
   poligon, unsigned n)} koja izračunava dužinu najduže stranice
   poligona sa $n$ tačaka u zadatom nizu.
 
+\item Napisati funkciju \kckod{double povrsina\_trougla(TACKA A, TACKA
+  B, TACKA C)} za računanje površine trougla.
+
+\item Napisati funkciju \kckod{double povrsina(TACKA* poligon,
+  unsigned n)} za računanje površine konveksnog
+  poligona. \napomena{Zadatak se može rešiti korišćenjem funkcije
+    \kckod{povrsina\_trougla}}.
+
 \item Napisati program koji učitava poligon sa maksimalno $N$ temena
   ($0 < N \le 1000$) i za učitani poligon ispisuje na tri decimale
-  obim i dužinu maksimalnu stranice.
-\end{itemize}
+  obim, dužinu maksimalnu stranice i površinu. Pretpostaviti da je
+  uneseni poligon konveksan. Poligon mora imati barem $3$ temena. U
+  slučaju greške ispisati odgovarajuću poruku.
+\end{enumerate}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti maksimalan broj tacaka poligona: }\ulaz{10}#
+#\ulaz{0 0}#
+#\ulaz{0 6}#
+#\ulaz{3 3}#
+#\izlaz{Obim poligona je 14.485.}#
+#\izlaz{Duzina maksimalne stranice je 6.000.}#
+#\izlaz{Povrsina poligona je 9.000.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti maksimalan broj tacaka poligona: }\ulaz{10}#
+#\ulaz{0 0}#
+#\ulaz{12 0}#
+#\ulaz{13 2}#
+#\ulaz{16 5}#
+#\ulaz{20 10}#
+#\ulaz{18 15}#
+#\ulaz{15 20}#
+#\ulaz{10 20}#
+#\ulaz{8 15}#
+#\ulaz{3 4}#
+#\izlaz{Obim poligona je 63.566.}#
+#\izlaz{Duzina maksimalne stranice je 12.083.}#
+#\izlaz{Povrsina poligona je 247.500.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Uneti maksimalan broj tacaka poligona: }\ulaz{4}#
+#\ulaz{0 0}#
+#\izlaz{Neispravan broj tacaka poligona.}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{struc.10}
 \end{Exercise}
 \begin{Answer}[ref=struc.10]
@@ -419,15 +539,15 @@ numeričke operacije (sabiranje, oduzimanje, množenje ili celobrojno
 deljenje) nad celim brojevima.
 \begin{enumerate}
 \item Napisati funkciju koja ispituje da li je dati izraz korektno
-  zadat i vraća $1$ ako jeste a $0$ u suprotnom. Podrazumevamo da je izraz
-  korektno zadat ako operacija odgovara $+$, $-$, $*$ ili $/$ i u slučaju
-  deljenja drugi operand je različit od $0$.   
-\item Napisati funkciju koja za dati izraz odredjuje vrednost izraza.   
+  zadat i vraća $1$ ako jeste a $0$ u suprotnom. Podrazumevamo da je
+  izraz korektno zadat ako operacija odgovara $+$, $-$, $*$ ili $/$ i
+  u slučaju deljenja drugi operand je različit od $0$.
+\item Napisati funkciju koja za dati izraz odredjuje vrednost izraza.
 \item Napisati funkciju koja učitava dati izraz. Funkcija treba da
   učita sa standardnog ulaza izlaz koji je zadat prefiksno --- prvo
   operacija, a potom dva operanda. Funkcija vraća $1$ ako je
   učitavanje bilo uspešno, tj. ako je izraz bio korektno zadat ili $0$
-  u suprotnom. 
+  u suprotnom.
 \item Napisati funkciju koja štampa dati izraz infiksno, u obliku
   "$operand_1$ $operacija$ $operand_2 = vrednost$".
 \end{enumerate}
@@ -503,63 +623,6 @@ od polovine maksimalne vrednosti.
 
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{comment}
-\begin{Exercise}[label=v2.5_02] 
-  Data je struktura
-\begin{ckod}
-    typedef struct Student
-    {
-      char ime[MAX];
-      char prezime[MAX];
-      char smer;
-      float prosek;
-    } STUDENT;
-  \end{ckod}
-  \begin{enumerate}
-  
-\item  Napisati funkciju koja ucitava sa standardnog ulaza podatke o studentu. Mozemo pretpostaviti da 
-    ime i prezime studenta ne sadrze vise od 30 karaktera.
-\item Napisati funkciju koja ispisuje podatke o studentu na standardni izlaz.
-\item Ucitati niz od n studenata i :
-\begin{enumerate}
-\item ispisati imena i prezimena onih koji su na smeru R
-      \item ispisati podatke za studenta sa najvecim prosekom; ako ima vise takvih studenata, ispisati 
-\begin{enumerate}
-         \item sve njih 
-	 \item prvog 
-	 \item poslednjeg 
-\end{enumerate}
-\end{enumerate}
-  \end{enumerate}
-
-\linkresenje{v2.5_02}
-\end{Exercise}
-\begin{Answer}[ref=v2.5_02]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/2/2.c}
-\end{Answer}
-
-
-
-\begin{Exercise}[label=v2.5_04] 
-   Napisati program koji izracunava prosecnu cenu jedne potrosacke
-   korpe. Potrosacka korpa se sastoji od broja kupljenih artikala i 
-   niza kupljenih artikala. Svaki artikal odredjen je svojim nazivom, 
-   kolicinom i cenom. Program treba da ucita broj potrosaca n (najvise 100), 
-   zatim podatke za n potrosackih korpi i da na osnovu ucitanih podataka 
-   izracuna prosecnu cenu potrosacke korpe. Ucitavanje se vrsi sa standarnog
-   ulaza pri cemu se prvo zada broj artikala, a zatim za svaki artikal naziv, 
-   kolicina i cena.  Mozemo pretpostaviti da nijedan 
-   potrosac nece kupiti vise od 20 artikala, kao i da naziv svakog artikla
-   sadrzi maksimalno 30 karaktera.
-\linkresenje{v2.5_04}
-\end{Exercise}
-\begin{Answer}[ref=v2.5_04]
-\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/4/4.c}
-\end{Answer}
-
-
-
-
-
 
 
 
