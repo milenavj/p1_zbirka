@@ -1,5 +1,0 @@
-4
--3 hleb 1 55 mleko 2 200 caj 1 50
-4 banane 2 300 cokolada 1 100 brasno 2 90 voda 1 40
-2 dzem 1 150 puter 1 200
-1 kafa 1 200

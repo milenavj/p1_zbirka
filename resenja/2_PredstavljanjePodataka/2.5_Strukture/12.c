@@ -33,7 +33,7 @@ typedef struct korpa
 
 int ucitaj_artikal(ARTIKAL* a)
 {
-   
+   printf("Unesi artikal, naziv, kolicinu i cenu: ");
    scanf("%s", a->naziv);
    scanf("%d", &a->kolicina);
    
@@ -81,6 +81,8 @@ float izracunaj_racun(const KORPA* k)
 int ucitaj_korpu(KORPA* k)
 {
    int i;
+	 printf("Uneti podatke o korpi: \n");
+	 printf("Broj artikala: ");
    scanf("%d", &k->br_art);
    if (k->br_art<=0)
    {
@@ -169,7 +171,7 @@ int main()
    int n;
    KORPA korpe[MAXPOT];
    
-   printf("Unesi broj potrosackih korpi:");
+   printf("Uneti broj potrosackih korpi:");
    scanf("%d", &n);
    
    if(n<0 || n>MAXPOT)

@@ -361,6 +361,48 @@ greške ispisati odgovarajuću poruku.
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/11.c}
 \end{Answer}
 
+\begin{Exercise}[label=struc.13] 
+Defnisati strukturu \kckod{Osoba} kojom se opisuje jedan unos u
+imenik. Za svaku osobu su dati podaci: ime (maksimalne dužine $20$
+karaktera), prezime (maksimalne dužine $30$ karaktera) i email adresa
+(maksimalne dužine $50$ karaktera).  Napisati program koji učitava ceo
+broj $n$ ($0 < n \le 50$) a zatim podatke o $n$ osoba. Ispisati imena
+i prezimena svih osoba koje imaju gmail adresu (čija se email adresa
+završava sa \kckod{@gmail.com}).  U slučaju greške ispisati
+odgovarajuću poruku. Može se smatrati da je svaka email adresa dobro
+zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti broj osoba: }\ulaz{3}#
+#\izlaz{Uneti podatke o osobama:}#
+#\izlaz{ime, prezime i email.}#
+#\ulaz{Dusko Dugousko dusko@yahoo.com}#
+#\ulaz{Pink Panter panter@gmail.com}#
+#\ulaz{Pera Detlic pd@gmail.com}#
+#\izlaz{Vlasnici gmail naloga su:}#
+#\izlaz{Pink Panter}#
+#\izlaz{Pera Detlic}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti broj osoba: }\ulaz{3}#
+#\izlaz{Uneti podatke o osobama:}#
+#\izlaz{ime, prezime i email.}#
+#\ulaz{Homer Simpson homer@yahoo.com}#
+#\ulaz{Mardz Simpson mardz@matf.bg.ac.rs}#
+#\izlaz{Vlasnici gmail naloga su:}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.13}
+\end{Exercise}
+\begin{Answer}[ref=struc.13]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/13.c}
+\end{Answer}
 
 \begin{Exercise}[difficulty=1, label=struc.12] 
 Napisati program koji izračunava prosečnu cenu jedne potrošačke
@@ -368,11 +410,58 @@ korpe. Potrošačka korpa se sastoji od broja kupljenih artikala i niza
 kupljenih artikala. Svaki artikal određen je svojim nazivom, količinom
 i cenom. Program treba da učita broj potrošača $n$ (najviše $100$),
 zatim podatke za $n$ potrošačkih korpi i da na osnovu učitanih
-podataka izračuna prosečnu cenu potrošačke korpe. Program ispisuje
-račune svake potrošačke korpe i na kraju ispisuje prosečnu cenu
-potrošačke korpe. Možemo pretpostaviti da nijedan potrošač neće kupiti
-više od $20$ artikala, kao i da naziv svakog artikla sadrži maksimalno
-$30$ karaktera.
+podataka izračuna prosečnu cenu potrošačke korpe. Program ispisuje na
+dve decimale račune svake potrošačke korpe i na kraju ispisuje
+prosečnu cenu potrošačke korpe. Možemo pretpostaviti da nijedan
+potrošač neće kupiti više od $20$ artikala, kao i da naziv svakog
+artikla sadrži maksimalno $30$ karaktera. U slučaju greške ispisati
+odgovarajuću poruku.
+
+\begin{maxitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti broj potrosackih korpi: }\ulaz{3}#
+#\izlaz{Uneti podatke o korpi: }#
+#\izlaz{Broj artikala: }\ulaz{4}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{jabuke 10 22.4}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{dezodorans 1 120.99}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{C\_supa 3 36.56}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{sunka 1 230.99}#
+#\izlaz{Uneti podatke o korpi: }#
+#\izlaz{Broj artikala: }\ulaz{2}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{Jafa\_keks 55.78}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{Najlepse\_zelje 62.99}#
+#\izlaz{Uneti podatke o korpi: }#
+#\izlaz{Broj artikala: }\ulaz{3}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{prasak\_za\_ves 1 1199.99}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{omeksivac 1 279.99}#
+#\izlaz{Unesi artikal, naziv, kolicinu i cenu: }\ulaz{protiv\_kamenca 1 699.99}#
+#\izlaz{\ }#
+#\izlaz{Korpa 0:}#
+#\izlaz{\ \ \ \ \ \ \ \ jabuke 10 22.40}#
+#\izlaz{\ \ \ \ \ \ \ \ dezodorans 1 120.99}#
+#\izlaz{\ \ \ \ \ \ \ \ C\_supa 3 36.56}#
+#\izlaz{\ \ \ \ \ \ \ \ sunka 1 230.99}#
+#\izlaz{------------------------}#
+#\izlaz{\ \ \ \ \ \ \ \ ukupno: 685.66}#
+#\izlaz{\ }#
+#\izlaz{Korpa 1:}#
+#\izlaz{\ \ \ \ \ \ \ \ Jafa\_keks 55 0.78}#
+#\izlaz{\ \ \ \ \ \ \ \ Najlepse\_zelje 62 0.99}#
+#\izlaz{------------------------}#
+#\izlaz{\ \ \ \ \ \ \ \ ukupno: 104.28}#
+#\izlaz{\ }#
+#\izlaz{Korpa 2:}#
+#\izlaz{\ \ \ \ \ \ \ \ prasak\_za\_ves 1 1199.99}#
+#\izlaz{\ \ \ \ \ \ \ \ omeksivac 1 279.99}#
+#\izlaz{\ \ \ \ \ \ \ \ protiv\_kamenca 1 699.99}#
+#\izlaz{------------------------}#
+#\izlaz{\ \ \ \ \ \ \ \ ukupno: 2179.97}#
+#\izlaz{\ }#
+#\izlaz{Prosecna cena potrosacke korpe: 989.97}#
+
+\end{upotreba}
+\end{maxitest}
 
 \linkresenje{struc.12}
 \end{Exercise}
