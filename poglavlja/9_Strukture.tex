@@ -527,6 +527,67 @@ odgovarajuću poruku.
 \includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/12.c}
 \end{Answer}
 
+\begin{Exercise}[label=struc.16] 
+ Uvesti tip podataka \kckod{Sifra} kojim se opisuje način šifrovanja
+ alfanumeričkih karaktera.  Svaka šifra se opisuje pozitivnom celobrojnom
+ vrednošću $b$ koja određuje broj pozicija pomeranja, kao i karakterom
+ \kckod{'L'} ili \kckod{'D'} koji određuje smer pomeranja (levo ili
+ desno).
+\begin{enumerate}
+\item Napisati funkciju \kckod{char sifruj(char c, Sifra s)} koja
+  transformiše zadati karakter \kckod{c} po šifri \kckod{s}.  Karakter
+  se šifruje tako što se svako slovo zamenjuje slovom za $b$ mesta
+  levo ili desno od njega u abecedi, i to ciklično, a isto tako i za
+  cifre.  Na primer: za $b=2$, i smer=\kckod{'D'} : \kckod{a} se menja
+  sa \kckod{c}, \kckod{b} sa \kckod{d}, $\ldots$, \kckod{x} sa
+  \kckod{z}, \kckod{y} sa \kckod{a}, \kckod{z} sa \kckod{b}, $1$ sa
+  $3$, $\ldots$, $8$ sa $0$, $9$ sa $1$. Funkcija vraća novodobijeni
+  karakter.
+
+\item Načini šifrovanja se zadaju do kraja unosa i to u obliku \kckod{2
+  D 5 L}. Potom se zadaju karajteri do kraja unosa. Izmeniti
+  alfanumeričke karaktere prema svim zadatim šiframa i ispisati
+  dobijeni rezultat. Maksimalan broj karaktera može biti
+  $5000$. Maksimalan broj šifri može biti $100$. U slučaju greške
+  ispisati odgovarajuću poruku.
+\end{enumerate}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Uneti sifre u obliku: broj, smer:}#
+#\ulaz{23 D}#
+#\izlaz{Uneti tekst za sifrovanje:}#
+#\ulaz{Temperatura danas je 23 stepena Celzijusova.}#
+#\izlaz{Rckncpxrspx bxlxq hc 56 qrcnclx Zcjxghsqmtx.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Uneti sifre u obliku: broj, smer:}#
+#\ulaz{3 l 7 a}#
+#\izlaz{Neispravan smer.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Uneti sifre u obliku: broj, smer:}#
+#\ulaz{23 D 3 L 14 D 20 L 1 L 2 L 5 D}#
+#\izlaz{Uneti tekst za sifrovanje:}#
+#\ulaz{Temperatura danas je 23 stepena Celzijusova.}#
+#\izlaz{Kudguiqkliq tqeqj zu 89 jkugueq Sucqyzljfmq.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{struc.16}
+\end{Exercise}
+\begin{Answer}[ref=struc.16]
+\includecode{resenja/2_PredstavljanjePodataka/2.5_Strukture/16.c}
+\end{Answer}
+
 
 %------------------matematicki zadaci
 
@@ -832,11 +893,8 @@ U slučaju greške ispisati odgovarajuću poruku.
 
 
 
-
 %---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{comment}
-
-
 
 \begin{Exercise}[label=p2.5_04] 
  Deda Mraz planira kupovinu poklona za studente koji su vredno učili C u toku godine. Na njegovoj listi se nalazi ime i prezime studenta (niske dužina do 50 karaktera) i njegova želja (niska maksimalne dužine 100 karaktera). Napisati program koji će služiti Deda Mrazu kao podsetnik: na osnovu liste koju je napravio, Deda Mraz može da unese ime i prezime studenta i da proveri njegovu želju. Ako ima više studenata sa istim imenom i prezimenom ispisati sve želje. \textit{Napomena: probati sa testiranjem zadataka pomoću preusmeravanja.}\\
