@@ -8,7 +8,7 @@
    u njoj mala slova zamenjuje odgovarajućim velikim slovima, a velika slova zamenjuje odgovarajućim malim slovima. Napisati 
    program koji testira ovu funkciju za učitanu nisku maksimalne dužine 10 karaktera.
 
-\komentarJ{Proveriti naziv funkcije u resenju}
+%\komentarJ{Proveriti naziv funkcije u resenju}
    
 \begin{minitest}
 \begin{upotreba}{1}
@@ -34,9 +34,11 @@
 
 \linkresenje{v2.3_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_01.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_07] 
@@ -75,9 +77,11 @@ Napisati program koji testira rad napisane funkcije za učitanu nisku maksimalne
 
 \linkresenje{p2.3_07}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_07]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 \begin{Exercise}[label=p2.3_] 
 Napisati program koji vrši poređenje niski. Napisati funkcije:
@@ -117,9 +121,11 @@ Napisati program koji za učitane dve reči dužine najviše 20 znakova ispituje
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 %\subsection{Karakteristike (da/ne)}
 
@@ -132,7 +138,7 @@ Napisati program koji proverava da li se uneta niska završava samoglasnikom. Na
 Pretpostaviti da je uneta niska maksimalne dužine 20 karaktera. 
 
 
-\komentarM{Smisliti neke lepse test primere sa smislenijim recima, npr u Andjelkinom stilu :-) }
+%\komentarM{Smisliti neke lepse test primere sa smislenijim recima, npr u Andjelkinom stilu :-) }
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -165,9 +171,11 @@ Pretpostaviti da je uneta niska maksimalne dužine 20 karaktera.
 \end{miditest}
 \linkresenje{p2.3_01}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_01]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/praktikumi11/7.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=v2.3_08] 
@@ -206,9 +214,11 @@ Pretpostaviti da je uneta niska maksimalne dužine 20 karaktera.
 
 \linkresenje{v2.3_08}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_08]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_] 
@@ -240,12 +250,14 @@ Napisati funkciju \kckod{int sadrzi\_veliko(char s[])} koja proverava da li nisk
 \end{minitest}
 
 
-\komentarJ{Proveriti naziv funkcije u resenju}
+%\komentarJ{Proveriti naziv funkcije u resenju}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 \begin{Exercise}[label=p2.3_06] 
  Napisati funkciju \kckod{int podniska(char s[], char t[])} koja proverava da li je niska $t$ podniska niske $s$. Napisati  program koji učitava dve niske maksimalne dužine 10 karaktera i testira rad napisane funkcije.\\
@@ -276,9 +288,11 @@ Napisati funkciju \kckod{int sadrzi\_veliko(char s[])} koja proverava da li nisk
 
 \linkresenje{p2.3_06}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_06]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/praktikumi11/12.c}
 \end{Answer}
+\fi
 
 %\subsection{Izbacivanje karaktera}
 
@@ -306,9 +320,11 @@ Napisati funkciju \kckod{int sadrzi\_veliko(char s[])} koja proverava da li nisk
 \end{maxitest}
 \linkresenje{v2.3_02}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_02]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_02.c}
 \end{Answer}
+\fi
 
 
 
@@ -341,12 +357,14 @@ Napisati funkciju \kckod{void ukloni\_slova(char s[])} koja iz niske $s$ uklanja
 \end{minitest}
 
 
-\komentarJ{Proveriti naziv funkcije u resenju}
+%\komentarJ{Proveriti naziv funkcije u resenju}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_] 
@@ -355,7 +373,7 @@ Napisati funkciju \kckod{void ukloni\_slova(char s[])} koja iz niske $s$ uklanja
  njih, pri čemu se veličina slova zanemaruje. Testirati funkciju u programu
  za učitanu liniju od najviše 100 karaktera. 
  
-\komentarM{Ovi su test primeri stvarno ruzni - naci neke koji znace nesto} 
+%\komentarM{Ovi su test primeri stvarno ruzni - naci neke koji znace nesto} 
  
 \begin{minitest}
 \begin{upotreba}{1}
@@ -387,9 +405,11 @@ Napisati funkciju \kckod{void ukloni\_slova(char s[])} koja iz niske $s$ uklanja
 %\end{minitest}
  \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 %\subsection{Kopiranje jedne niske u drugu}
 
@@ -422,9 +442,11 @@ Napisati funkciju \kckod{void ukloni\_slova(char s[])} koja iz niske $s$ uklanja
 
 \linkresenje{v2.3_03}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_03]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_03.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_]  Napisati program
@@ -460,9 +482,11 @@ Zadatak uraditi:
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_02] 
@@ -496,9 +520,11 @@ Napisati funkciju \kckod{void kopiraj\_n(char t[], char s[], int n)} koja kopira
 
 \linkresenje{p2.3_02}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_02]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/praktikumi11/8.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_03] 
@@ -529,9 +555,11 @@ Napisati funkciju \kckod{void kopiraj\_n(char t[], char s[], int n)} koja kopira
 
 \linkresenje{p2.3_03}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_03]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/praktikumi11/9.c}
 \end{Answer}
+\fi
 
 %\subsection{Numericki}
 
@@ -565,9 +593,11 @@ Napisati program koji učitava nisku cifara sa eventualnim vodećim znakom i pre
 
 \linkresenje{v2.3_05}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_05]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_05.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=v2.3_06] 
@@ -600,16 +630,18 @@ Napisati program koji učitava ceo broj i pretvara ga u nisku.
 
 \linkresenje{v2.3_06}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_06]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_06.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_04] 
 Napisati funkciju \kckod{int heksadekadni\_broj(char s[])} koja proverava da li je niskom $s$ zadat korektan heksadekadni broj. Funkcija treba da vrati vrednost 1 ukoliko je uslov ispunjen, odnosno 0 ako nije. Napisati program koji za učitanu nisku maksimalne dužine 7 karaktera ispisuje da li je korektan heksadekadni broj. 
 \uputstvo{Heksadekadni broj je korektno zadat ako počinje prefiksom $0x$ ili $0X$ i ako sadrži samo cifre i mala ili velika slova $A$, $B$, $C$, $D$, $E$ i $F$.} 
  
-\komentarJ{Proveriti naziv funkcije u resenju} 
+%\komentarJ{Proveriti naziv funkcije u resenju} 
  
 \begin{minitest}
 \begin{upotreba}{1}
@@ -635,15 +667,17 @@ Napisati funkciju \kckod{int heksadekadni\_broj(char s[])} koja proverava da li 
 
 \linkresenje{p2.3_04}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_04]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/praktikumi11/10.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_05] 
  Napisati funkciju \kckod{int dekadna\_vrednost(char s[])} koja izračunava dekadnu vrednost heksadekadnog broja zadatog niskom $s$. Napisati program koji za učitanu nisku maksimalne dužine 7 karaktera ispisuje odgovarajuću dekadnu vrednost. Pretpostaviti da je uneta niska korektan heksadekadni broj.
 
-\komentarJ{Proveriti naziv funkcije u resenju} 
+%\komentarJ{Proveriti naziv funkcije u resenju} 
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -669,9 +703,11 @@ Napisati funkciju \kckod{int heksadekadni\_broj(char s[])} koja proverava da li 
 
 \linkresenje{p2.3_05}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_05]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/praktikumi11/11.c}
 \end{Answer}
+\fi
 
 
 
@@ -723,9 +759,11 @@ blanko znakove, ali ne sadrži znak za novi red ili \kckod{EOF}.}
 
 \linkresenje{v2.3_04}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_04]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_04.c}
 \end{Answer}
+\fi
 
 \begin{Exercise}[label=p2.3_] 
 Napisati funkcije za rad sa rečenicama:
@@ -735,13 +773,15 @@ Napisati funkcije za rad sa rečenicama:
 \end{enumerate}
  Napisati program koji učitava rečenice do kraja ulaza i ispisuje onu rečenicu kod koje je razlika broja malih i velikih slova najveća.
 
-  \komentarJ{Ovo nema resenje? Nedostaju test primeri}
+%  \komentarJ{Ovo nema resenje? Nedostaju test primeri}
 
  \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 %\subsection{Klonovi}
 
@@ -776,14 +816,16 @@ Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokaz
 \end{minitest}
 \linkresenje{p2.3_09}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_09]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 \begin{Exercise}[label=p2.3_08] 
  Napisati funkciju \kckod{int strspn\_klon(char t[], char s[])} koja izračunava dužinu prefiksa niske $t$ sastavljenog od karaktera niske $s$. Napisati program koji za učitane dve niske maksimalne dužine 20 karaktera ispisuje rezultat poziva napisane funkcije. 
  
-\komentarM{Smisliti neke smislenije test primere, ovi su mnogo ruzni} 
+%\komentarM{Smisliti neke smislenije test primere, ovi su mnogo ruzni} 
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -812,9 +854,11 @@ Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokaz
 
 \linkresenje{p2.3_08}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_08]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 % Ovaj zadatak treba da ide iza prethodnog da bi se videla razlika
 \begin{Exercise}[label=p2.3_] 
@@ -822,7 +866,7 @@ Napisati funkciju \kckod{int duzina(char s[], char t[])}
 koja izračunava dužinu početnog dela niske $s$ sastavljenog
 isključivo od karaktera sadržanih u niski $t$. Napisati  program koji testira ovu funkciju za dve unete niske maksimalne dužine 100 karaktera. 
 
-\komentarM{Da li je ovo neciji klon? Cini mi se da nije, ako jeste, dodajte odgovarajuce ime, ako nije, izmenila sam ime jer je ono f bilo bezveze.}
+%\komentarM{Da li je ovo neciji klon? Cini mi se da nije, ako jeste, dodajte odgovarajuce ime, ako nije, izmenila sam ime jer je ono f bilo bezveze.}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -856,16 +900,18 @@ isključivo od karaktera sadržanih u niski $t$. Napisati  program koji testira 
 \end{minitest}
  \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 
 \begin{Exercise}[label=p2.3_] 
 Napisati funkciju \kckod{char* strstr\_klon(char s[], char t[])} koja vraća pokazivač na prvo pojavljivanje niske $t$ u niski $s$ ili $NULL$ ukoliko se niska $t$ ne pojavljuje u niski $s$. Napisati program koji testira napisanu funkciju tako što učitava pet linija i ispisuje sve redne brojeve linija koje sadr\v ze nisku $program$. Ukoliko ne postoji linija sa niskom $program$, ispisati odgovarajuću poruku. Pretpostaviti da je svaka linija maksimalne dužine 100 karaktera kao i da se linije numerišu od broja 1. 
 
-\komentarJ{Tekst je malo izmenjen, prilagoditi resenje}
+%\komentarJ{Tekst je malo izmenjen, prilagoditi resenje}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -907,9 +953,11 @@ Napisati funkciju \kckod{char* strstr\_klon(char s[], char t[])} koja vraća pok
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 %\subsection{Rotacije}
@@ -918,7 +966,7 @@ Napisati funkciju \kckod{char* strstr\_klon(char s[], char t[])} koja vraća pok
 Napisati funkciju \kckod{void rotiraj(char s[], int k)} koja rotira
 nisku $s$ za $k$ mesta ulevo. Napisati program koji rotira učitanu nisku maksimalne dužine 20 karaktera i ispisuje rotiranu nisku.
 
-\komentarM{Ovde je bio zadatak "napsiati funkciju obrni koja rotira nisku". Mozda treba dodati zadatak koji obce nisku?}
+%\komentarM{Ovde je bio zadatak "napsiati funkciju obrni koja rotira nisku". Mozda treba dodati zadatak koji obce nisku?}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -947,16 +995,18 @@ nisku $s$ za $k$ mesta ulevo. Napisati program koji rotira učitanu nisku maksim
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 %\subsection{Sifriranja}
 
 \begin{Exercise}[label=p2.3_] 
 Napisati program koji šifrira unetu nisku tako sto svako slovo zamenjuje sledećim slovom abecede, slova ’z' i 'Z' zamenjuje redom sa 'a' i ’A’, a ostale karaktere ostavlja nepromenjene.  pretpostaviti da uneta niska nije duža od 20 karaktera.
 
-\komentarM{Izmeniti test primere tako da budu smisleni}
+%\komentarM{Izmeniti test primere tako da budu smisleni}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -985,9 +1035,11 @@ Napisati program koji šifrira unetu nisku tako sto svako slovo zamenjuje slede�
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_] 
@@ -1020,9 +1072,11 @@ Napisati funkciju \kckod{void sifruj(char rec[], char sifra[])} koja na osnovu d
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 
@@ -1071,9 +1125,11 @@ Napisati funkciju \kckod{void indel(char s1[], char s2[], char c1, char c2)} koj
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 
@@ -1121,9 +1177,11 @@ Napisati program koji za učitani broj $n$
 
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_] 
@@ -1144,7 +1202,7 @@ Linije se unose sve do kraja ulaza.
 Pretpostaviti da će sve linije sadržati ispravne brojeve i da će ti brojevi biti u opsegu tipa
 \kckod{unsigned}. 
 
-\komentarJ{Pogledati resenje i prilagoditi tekst.}
+%\komentarJ{Pogledati resenje i prilagoditi tekst.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1177,12 +1235,14 @@ Pretpostaviti da će sve linije sadržati ispravne brojeve i da će ti brojevi b
 \end{miditest}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
-
+\iffalse
 
 \subsection{Treba u drugu sekciju}
 
@@ -1201,16 +1261,18 @@ Pretpostaviti da će sve linije sadržati ispravne brojeve i da će ti brojevi b
  \item Napisati program koji učitava način šifrovanja u
    obliku $b_1 c_1 \ldots b_m c_m$ ($1\leq m \leq 20$), broj $n$ i $n$ re\v ci maksimalne dužine 20 karaktera i ispisuje šifrovane reči.
 
-\komentarJ{Pogledati da li je duzina sifre ogranicena na 20 i da li se unosi nova sifra za svaku rec (bilo je neprecizno napisano). Dodati naredni primer u test primere. Zar ovo ne ide u strukture?}
+%\komentarJ{Pogledati da li je duzina sifre ogranicena na 20 i da li se unosi nova sifra za svaku rec (bilo je neprecizno napisano). Dodati naredni primer u test primere. Zar ovo ne ide u strukture?}
 Npr: za b=2,
 i smer='D' : a se menja sa c, b sa d,..., x sa z,y sa a, z sa b, 1
 sa 3, .. 8 sa 0, 9 sa 1
 \end{enumerate}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 
@@ -1221,12 +1283,14 @@ sa 3, .. 8 sa 0, 9 sa 1
    Napisati program koji učitava dve niske $s$ i $t$ i ako su jednake, izdaje odgovarajuću poruku a u suprotnom ispituje da li je niska $t$ podniska niske $t$ i ukoliko jeste, ispisuje počev od kog indeksa niske $s$ počinje prvo pojavljivanje niske $t$. Ako niska $t$ nije podniska niske $s$, ispisati odgovarajuću poruku. Možemo
    pretpostaviti da niske ne sadrže više od 20 karaktera.
 
-   \komentarJ{konfuzija. Predlazem da izbacimo.}
+%   \komentarJ{konfuzija. Predlazem da izbacimo.}
 \linkresenje{v2.3_07}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=v2.3_07]
 \includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_07.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_] 
@@ -1236,19 +1300,21 @@ svojih samoglasnika.  ( Reč je niz karaktera između dve praznine;
 razmak između samoglasnika reči \kckod{danas} i \kckod{jutro} je 2,
 a razmak izmedju \kckod{sutrk} i \kckod{mnozenje} je 5). Napisati program koji testira napisanu funkciju za unete niske maksimalne dužine 20 karaktera.
 
-\komentarJ{Konfuzno. Sta je razlika/razmak? Predlazem da izbacimo.}
+%\komentarJ{Konfuzno. Sta je razlika/razmak? Predlazem da izbacimo.}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 \begin{Exercise}[label=p2.3_] 
 Napisati funkciju \kckod{int pp(char s[], char t[])} koja vraća poziciju pojavljivanja poslednjeg karaktera niske $s$ u niski $t$, zanemarujući pritom razliku između velikih i
 malih slova, ili -1 ako takvog karaktera nema. Napisati program koji učitava dve niske maksimalne dužine 20 karaktera i testira napisanu funkciju.
 
-\komentarJ{Konfuzno. Predlazem da izbacimo.}
+%\komentarJ{Konfuzno. Predlazem da izbacimo.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1259,9 +1325,11 @@ malih slova, ili -1 ako takvog karaktera nema. Napisati program koji učitava dv
 \end{miditest}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 
 
@@ -1272,7 +1340,7 @@ Napisati funkciju \kckod{void sifrat(char rec[], char kljuc[])} koja šifruje $r
 $rec$ i odgovarajuće slovo reči $kljuc$ određuje koliki je
 (alfabetski) razmak između njih ($k$) i potom  $k$-to slovo reči $rec$ zamenjuje $k$-tim slovom alfabeta. Podrazumeva se da je $kljuc$ duži od reci. 
 
-\komentarJ{konfuzija. Predlazem da izbacimo}
+%\komentarJ{konfuzija. Predlazem da izbacimo}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1284,14 +1352,19 @@ $rec$ i odgovarajuće slovo reči $kljuc$ određuje koliki je
 \end{miditest}
 \linkresenje{p2.3_}
 \end{Exercise}
+\ifresenja
 \begin{Answer}[ref=p2.3_]
 %\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
 \end{Answer}
+\fi
 
 \begin{comment}
 
 \end{comment}
+\fi
 
-%\section{Rešenja}
-%\shipoutAnswer
+\ifresenja
+\section{Rešenja}
+\shipoutAnswer
+\fi
 
