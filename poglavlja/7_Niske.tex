@@ -139,18 +139,19 @@ Pretpostaviti da je uneta niska maksimalne dužine 20 karaktera.
 
 
 %\komentarM{Smisliti neke lepse test primere sa smislenijim recima, npr u Andjelkinom stilu :-) }
+%\komentarJ{reseno}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{abcde}#
+#\izlaz{Unesite nisku:}\ulaz{kestenje}#
 #\izlaz{Niska se zavrsava samoglasnikom!}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{AaBb+cCdD}#
+#\izlaz{Unesite nisku:}\ulaz{vetar}#
 #\izlaz{Niska se ne zavrsava samoglasnikom!}#
 \end{upotreba}
 \end{miditest}
@@ -158,14 +159,14 @@ Pretpostaviti da je uneta niska maksimalne dužine 20 karaktera.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{PrograMiranjE}#
+#\izlaz{Unesite nisku:}\ulaz{OLUJA}#
 #\izlaz{Niska se zavrsava samoglasnikom!}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{pRograMiranjE1}#
+#\izlaz{Unesite nisku:}\ulaz{Programiranje1}#
 #\izlaz{Niska se ne zavrsava samoglasnikom!}#
 \end{upotreba}
 \end{miditest}
@@ -374,26 +375,27 @@ Napisati funkciju \kckod{void ukloni\_slova(char s[])} koja iz niske $s$ uklanja
  za učitanu liniju od najviše 100 karaktera. 
  
 %\komentarM{Ovi su test primeri stvarno ruzni - naci neke koji znace nesto} 
+%\komentarJ{Ucinila sam ulazne niske smislenim, izlazne ne mogu :)} 
  
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{zdRaVo svIma}#
-#\izlaz{zRVo vma}#
+#\ulaz{Zdravo svima!}#
+#\izlaz{Zrvo vma!}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{12345AbcD}#
-#\izlaz{12345D}#
+#\ulaz{Danas je 10 stepeni.}#
+#\izlaz{Dns j 10 stpn.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\ulaz{JeD1aN D52Va.}#
-#\izlaz{JeD1N D52Va.}#
+#\ulaz{Ima vetra, kise i hladnoce.}#
+#\izlaz{Im vt, ks i hdnoe.}#
 \end{upotreba}
 \end{minitest}
 %\begin{minitest}
@@ -721,7 +723,7 @@ i vraća dužinu učitane linije.
 Napisati program koji učitava linije
 do \kckod{EOF} i ispisuje najdužu liniju i njenu dužinu. Ukoliko
 ima više linija maksimalne dužine, ispisati prvu. 
-Pretpostviti da svaka linija sadrži najviše 80 karaktera.
+Pretpostaviti da svaka linija sadrži najviše 80 karaktera.
 \napomena{Linija može da sadrži
 blanko znakove, ali ne sadrži znak za novi red ili \kckod{EOF}.}
 
@@ -787,8 +789,8 @@ Napisati funkcije za rad sa rečenicama:
 
 
 \begin{Exercise}[label=p2.3_09] 
-Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokazivač na prvo pojavljivanje karaktera $c$ u niski $s$ ili $NULL$ ukoliko se karakter $c$ ne pojavljuje u niski $s$. Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera i dodatni karakter testira rad napisane funkcije. 
- 
+Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokazivač na prvo pojavljivanje karaktera $c$ u niski $s$ ili $NULL$ ukoliko se karakter $c$ ne pojavljuje u niski $s$. Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera i dodatni karakter testira rad napisane funkcije.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -797,23 +799,32 @@ Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokaz
 #\izlaz{Karakter se nalazi u niski!}#
 \end{upotreba}
 \end{miditest}
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite nisku s:}\ulaz{123456789}#
 #\izlaz{Unesite karakter c:}\ulaz{y}#
 #\izlaz{Karakter se ne nalazi u niski!}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite nisku s:}\ulaz{leto2017}#
 #\izlaz{Unesite karakter c:}\ulaz{0}#
 #\izlaz{Karakter se nalazi u niski!}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite nisku s:}\ulaz{jedrilica}#
+#\izlaz{Unesite karakter c:}\ulaz{I}#
+#\izlaz{Karakter se ne nalazi u niski!}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{p2.3_09}
 \end{Exercise}
 \ifresenja
@@ -826,29 +837,30 @@ Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokaz
  Napisati funkciju \kckod{int strspn\_klon(char t[], char s[])} koja izračunava dužinu prefiksa niske $t$ sastavljenog od karaktera niske $s$. Napisati program koji za učitane dve niske maksimalne dužine 20 karaktera ispisuje rezultat poziva napisane funkcije. 
  
 %\komentarM{Smisliti neke smislenije test primere, ovi su mnogo ruzni} 
+%\komentarJ{Ispravljeno} 
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite nisku t:}\ulaz{program}#
-#\izlaz{Unesite nisku s:}\ulaz{opqr}#
+#\izlaz{Unesite nisku s:}\ulaz{pero}#
 #\izlaz{3}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite nisku t:}\ulaz{aaiioo124}#
-#\izlaz{Unesite nisku s:}\ulaz{aeiou}#
-#\izlaz{6}#
+#\izlaz{Unesite nisku t:}\ulaz{Barselona}#
+#\izlaz{Unesite nisku s:}\ulaz{Brazil}#
+#\izlaz{3}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite nisku t:}\ulaz{5296abc}#
+#\izlaz{Unesite nisku t:}\ulaz{24.10.2017.}#
 #\izlaz{Unesite nisku s:}\ulaz{0123456789}#
-#\izlaz{4}#
+#\izlaz{2}#
 \end{upotreba}
 \end{minitest}
 
@@ -862,11 +874,13 @@ Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokaz
 
 % Ovaj zadatak treba da ide iza prethodnog da bi se videla razlika
 \begin{Exercise}[label=p2.3_] 
-Napisati funkciju \kckod{int duzina(char s[], char t[])}
+Napisati funkciju \kckod{int strcspn\_klon(char s[], char t[])}
 koja izračunava dužinu početnog dela niske $s$ sastavljenog
 isključivo od karaktera sadržanih u niski $t$. Napisati  program koji testira ovu funkciju za dve unete niske maksimalne dužine 100 karaktera. 
 
 %\komentarM{Da li je ovo neciji klon? Cini mi se da nije, ako jeste, dodajte odgovarajuce ime, ako nije, izmenila sam ime jer je ono f bilo bezveze.}
+%\komentarJ{Jeste klon strcspn. Ispravljen naziv.}
+%\komentarJ{Ispraviti i u resenjima!}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -963,10 +977,47 @@ Napisati funkciju \kckod{char* strstr\_klon(char s[], char t[])} koja vraća pok
 %\subsection{Rotacije}
 
 \begin{Exercise}[label=p2.3_] 
+Napisati funkciju \kckod{void obrni(char s[])} koja obrće
+nisku $s$. Napisati program koji obrće učitanu nisku maksimalne dužine 20 karaktera i ispisuje obrnutu nisku.
+
+
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\ulaz{kisobran}#
+#\izlaz{narbosik}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{Aleksandar}#
+#\izlaz{radnaskelA}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{kajak}#
+#\izlaz{kajak}#
+\end{upotreba}
+\end{minitest}
+
+\linkresenje{p2.3_}
+\end{Exercise}
+\ifresenja
+\begin{Answer}[ref=p2.3_]
+%\includecode{resenja/2_PredstavljanjePodataka/2.3_Niske/1_08.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=p2.3_] 
 Napisati funkciju \kckod{void rotiraj(char s[], int k)} koja rotira
 nisku $s$ za $k$ mesta ulevo. Napisati program koji rotira učitanu nisku maksimalne dužine 20 karaktera i ispisuje rotiranu nisku.
 
 %\komentarM{Ovde je bio zadatak "napsiati funkciju obrni koja rotira nisku". Mozda treba dodati zadatak koji obce nisku?}
+%\komentarJ{Dodat je zadatak sa obrtanjem pre ovog zadatka.}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -1004,32 +1055,33 @@ nisku $s$ za $k$ mesta ulevo. Napisati program koji rotira učitanu nisku maksim
 %\subsection{Sifriranja}
 
 \begin{Exercise}[label=p2.3_] 
-Napisati program koji šifrira unetu nisku tako sto svako slovo zamenjuje sledećim slovom abecede, slova ’z' i 'Z' zamenjuje redom sa 'a' i ’A’, a ostale karaktere ostavlja nepromenjene.  pretpostaviti da uneta niska nije duža od 20 karaktera.
+Napisati program koji šifrira unetu nisku tako što svako slovo zamenjuje sledećim slovom abecede, slova ’z' i 'Z' zamenjuje redom sa 'a' i ’A’, a ostale karaktere ostavlja nepromenjene. Pretpostaviti da uneta niska nije duža od 20 karaktera.
 
 %\komentarM{Izmeniti test primere tako da budu smisleni}
+%\komentarJ{Izmenjeno}
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite nisku:}#
-#\ulaz{AbcXyz}#
-#\izlaz{BcdYza}#
+#\ulaz{bundeva}#
+#\izlaz{cvoefwb}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite nisku:}#
-#\ulaz{lmnopqr123}#
-#\izlaz{mnopqrs123}#
+#\ulaz{zimzelen}#
+#\izlaz{ajnafmfo}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite nisku:}#
-#\ulaz{1,2,3,4,5}#
-#\izlaz{1,2,3,4,5}#
+#\ulaz{Oktobar17}#
+#\izlaz{Plupcbs17}#
 \end{upotreba}
 \end{minitest}
 
