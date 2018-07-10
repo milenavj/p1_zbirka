@@ -1,5 +1,16 @@
 #include <stdio.h>
 
+/* Funkcija za ispis elemenata niza. */
+void ispis(int niz[], int n, char c)
+{
+	int i;
+
+	for(i = 0; i < n; i++){
+   	 if (niz[i]!=0)
+      printf("Karakter %c se pojavljuje %d puta\n", c + i, niz[i]);  
+ 	}
+}
+
 int main()
 {
   /* Niz u kojem ce se cuvati informacije o broju pojavljivanja cifara */
@@ -46,21 +57,9 @@ int main()
   }
 
   /* Ispisuju se trazene informacije */
-  for(i = 0; i < 10; i++){
-    if (cifre[i]!=0)
-      printf("Karakter %c se pojavljuje %d puta\n", '0' + i, cifre[i]);  
-  }
-	   
-   for(i = 0; i < 26; i++){
-    if (mala_slova[i]!=0)
-      printf("Karakter %c se pojavljuje %d puta\n", 'a' + i, mala_slova[i]);  
-   }
+  ispis(cifre, 10, '0');
+  ispis(mala_slova, 26, 'a');
+  ispis(velika_slova, 26, 'A');	   
 
-    for(i = 0; i < 26; i++){
-      if (velika_slova[i]!=0)
-        printf("Karakter %c se pojavljuje %d puta\n", 'A' + i, velika_slova[i]);  
-    }
-
-    
   return 0;
 }

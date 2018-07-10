@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAX 100
+#define MAX 1000
 
 /* a) Napisati funkciju koja ucitava elemente niza. */
 void ucitaj(int a[], int n)
@@ -41,20 +41,20 @@ float prosek(int a[], int n)
 }
 
 
-/* e) Napisati funkciju koja izracunava minimum elemenata niza.*/
-int minimum (int a[],int n)
+/* e) Napisati funkciju koja izracunava maksimum elemenata niza.*/
+int maksimum (int a[],int n)
 {
    int m;
    int i;
    
-   /* Minimum inicijalizujemo prvim elementom niza (a[0]), a zatim prolazimo kroz ostatak niza.
-      U svakom koraku poredimo vrednost minimuma sa tekucim elementom niza. */
+   /* Maksimum se inicijalizuje prvim elementom niza (a[0]), a zatim se prolazi kroz ostatak niza.
+      U svakom koraku se poredi vrednost maksimuma sa tekucim elementom niza. */
    m = a[0];
    for(i=1;i<n;i++)
-      if (a[i] < m)
+      if (a[i] > m)
          m = a[i];
 
-   /* Vraca se izracunata vrednost minimuma */
+   /* Vraca se izracunata vrednost maksimuma */
    return m;
 }
 
@@ -66,13 +66,14 @@ int pozicija_maksimuma (int a[],int n)
    int m_pozicija;
    int i;
 
-   /* Maksimum inicijalizujemo prvim elementom niza (a[0]), a zatim prolazimo kroz ostatak niza.
-      U svakom koraku poredimo vrednost maksimuma sa tekucim elementom niza. */
+   /* Minimum se inicijalizuje prvim elementom niza (a[0]) i pamti se njegova pozicija (0), 
+      a zatim se prolazi kroz ostatak niza.
+      U svakom koraku se poredi vrednost minimuma sa tekucim elementom niza i ukoliko je potrebno menjaju se vrednosti minimuma i njegove pozicije. */
 
    m = a[0];
    m_pozicija=0;
    for(i=1;i<n;i++)
-      if (a[i] > m)
+      if (a[i] < m)
       {
          m = a[i];
          m_pozicija=i;
@@ -103,20 +104,20 @@ int main()
    ucitaj(a,n);
    
    /* Testira se funkcija kojom se ispisuju elementi niza */
-   printf("Ucitani niz: ");
+   printf("Vreme trcanja takmicara: ");
    stampaj(a,n);
 
    /* Testira se funkcija kojom se izracunava suma elemenata niza */
-   printf("Suma elemenata niza: %d\n", suma(a,n));
+   printf("Ukupno vreme: %d\n", suma(a,n));
    
    /* Testira se funkcija kojom se racuna prosek elemenata niza */
-   printf("Prosecna vrednost elemenata niza: %.2f\n", prosek(a,n));
+   printf("Prosecno vreme trcanja: %.2f\n", prosek(a,n));
    
    /* Testira se funkcija kojom se izracunava minimum niza */
-   printf("Minimumalni element niza: %d\n", minimum(a,n));
+   printf("Maksimalno vreme trcanja: %d\n", minimum(a,n));
    
    /* Testira se funkcija kojom se izracunava pozicija maksimalnog elementa */
-   printf("Indeks maksimalnog elementa niza: %d\n", pozicija_maksimuma(a,n));
+   printf("Indeks pobednika: %d\n", pozicija_maksimuma(a,n));
    
    return 0;
 }

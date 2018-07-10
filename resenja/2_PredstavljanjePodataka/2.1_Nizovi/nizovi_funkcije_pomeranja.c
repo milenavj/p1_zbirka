@@ -21,13 +21,7 @@ void stampaj(int a[], int n)
    printf("\n");
 }
 
-/* a) Funkcija koja sve vrednosti niza uvecava za zadatu vrednost m */
-void uvecaj(int a[], int n, int m)
-{  
-   int i;
-   for(i=0;i<n;i++)
-        a[i]+=m;
-}
+
 
 /* b) Funkcija koja obrce elemente niza */     
 void obrni(int a[], int n)   
@@ -107,23 +101,16 @@ int main()
   /* Testira se rad napisanih funkcija */
   
   /* a) */
-  printf("Unesite jedan ceo broj:");
-  scanf("%d", &m);
-  printf("Elementi niza nakon uvecanja za %d:\n",m);
-  uvecaj(a,n,m);
-  stampaj(a,n);
-  
-  /* b) */
   printf("Elementi niza nakon obrtanja:\n");
   obrni(a,n);
   stampaj(a,n);
   
-  /* c) */
+  /* b) */
   printf("Elementi niza nakon rotiranja za 1 mesto ulevo:\n");
   rotiraj1(a,n);
   stampaj(a,n);
   
-  /* d) */
+  /* c) */
   printf("Unesite jedan pozitivan ceo broj:"); 
   scanf("%d",&k);
   if (k<=0)

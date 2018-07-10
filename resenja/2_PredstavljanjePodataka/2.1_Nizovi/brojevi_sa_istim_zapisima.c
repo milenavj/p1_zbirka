@@ -2,9 +2,32 @@
 
 #define BROJ_CIFARA 10
 
+/* Analiziraju se cifre broja i smestaju u odgovarajuci niz. */
+void analiza_cifara(int broj, int niz[])
+{
+  int c;
+
+  /* Niz predstavlja brojace za cifre broja.
+     Na pocetku se ovi nizovi inicijalizuju nulama. 
+  */
+  for(i=0;i<BROJ_CIFARA;i++)
+      niz[i] = 0;
+  
+  do
+  {
+    c = broj%10;
+    niz[c]++;
+    broj /= 10;
+  }
+  while(broj);
+}
+
 int main()
 {
   char c;
+  /* Niz cifrex predstavlja brojace za cifre broja x. 
+     Niz cifrey predstavlja brojace za cifre broja y.
+  */
   int cifrex[BROJ_CIFARA], cifrey[BROJ_CIFARA];
   int x, y, i, indikator;
 
@@ -17,30 +40,9 @@ int main()
   x=abs(x);
   y=abs(y);
 
-  /* Niz cifrex predstavlja brojace za cifre broja x. 
-     Niz cifrey predstavlja brojace za cifre broja y. 
-     Na pocetku se ovi nizovi inicijalizuju nulama. */
-  for(i=0;i<BROJ_CIFARA;i++)
-  {
-      cifrex[i] = 0;
-      cifrey[i] = 0;
-  }
+  analiza_cifara(x, cifrex);
+  analiza_cifara(y, cifrey);
  
-  /* Analiziraju se cifre broja x */
-  while(x)
-  {
-    c = x%10;
-    cifrex[c]++;
-    x /= 10;
-  }
-
-  /* Analiziraju se cifre broja y */
-  while(y)
-  {
-    c = y%10;
-    cifrey[c]++;
-    y /= 10;
-  }
 
   /* Promenljiva indikator sluzi za pracenje da li su oba broja sastavljena od istih cifara. */
   indikator = 1;

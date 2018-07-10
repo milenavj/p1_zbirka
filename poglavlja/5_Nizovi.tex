@@ -3,8 +3,12 @@
 \section{Nizovi}
 
 \begin{Exercise}[label=v.skalarni_proizvod] 
-Ako su $a = (a_1, \ldots, a_n)$ i $b = (b_1,\ldots, b_n)$ vektori dimenzije $n$, njihov skalarni proizvod je $a \cdot b = a_1\cdot b_1 + \ldots + a_n\cdot b_n$. Napisati program koji računa skalarni proizvod dva vektora. Vektori se zadaju kao celobrojni nizovi sa najviše $100$ elemenata. 
-Program učitava dimenziju i elemente nizova, a na izlaz ispisuje vrednost skalarnog proizvoda.
+Ako su $a = (a_1, \ldots, a_n)$ i $b = (b_1,\ldots, b_n)$ vektori
+dimenzije $n$, njihov skalarni proizvod je $a \cdot b = a_1\cdot b_1 +
+\ldots + a_n\cdot b_n$. Napisati program koji računa skalarni proizvod
+dva vektora. Vektori se zadaju kao celobrojni nizovi sa najviše $100$
+elemenata.  Program učitava dimenziju i elemente nizova, a na izlaz
+ispisuje vrednost skalarnog proizvoda.
 % ili odgovarajuću poruku u slučaju greške. 
 
 \begin{miditest}
@@ -57,7 +61,7 @@ Napisati program koji za učitani niz ispisuje:
 \item elemente niza koji se nalaze na parnim pozicijama.
 \item parne elemente niza.
 \end{enumerate}
-Pretpostaviti da je dimenzija niza broj koji nije veći od 100. 
+Pretpostaviti da je dimenzija niza broj koji nije veći od 100.
 %U slučaju greške ispisati odgovarajuću poruku.  
 
 \begin{miditest}
@@ -104,7 +108,9 @@ Pretpostaviti da je dimenzija niza broj koji nije veći od 100.
 \fi
 
 \begin{Exercise}[label=v.prebrojavanje_cifara] 
-Napisati program koji za učitani ceo broj, ispisuje broj pojavljivanja svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja pojavljivanja svake cifre pojedinačno, koristiti niz.} 
+Napisati program koji za učitani ceo broj, ispisuje broj pojavljivanja
+svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja
+  pojavljivanja svake cifre pojedinačno, koristiti niz.}
 
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -138,63 +144,15 @@ Napisati program koji za učitani ceo broj, ispisuje broj pojavljivanja svake od
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
- Napisati program koji za dva cela broja $x$ i $y$ koja se učitavaju sa standardnog ulaza proverava da li se zapisuju pomoću istih cifara. 
- 
-%Ovaj zadatak je isti kao zadatak kod funkcija sa labelom p1.4_12 i to nekako treba povezati 
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{251 125}#
-#\izlaz{Brojevi se zapisuju istim ciframa!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
-#\izlaz{Brojevi se ne zapisuju istim ciframa!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
-#\izlaz{Brojevi se zapisuju istim ciframa!}#
-\end{upotreba}
-\end{miditest} 
-\linkresenje{p.brojevi_sa_istim_zapisima}
-\end{Exercise}
-
-%TODO koristi se while, a trebalo bi do-while kao u prethodnom zadatku, jer inace nece raditi dobro za nulu
-
-%TODO trebalo bi to izdvojiti u funkcije: inicijalizacija brojaca, prebrojavanje, i provera jednakosti nizova
-
-%TODO resenje kakvo je sada nije dobro jer su oni vec ucili funkcije sto znaci da treba da ih upotrebljavaju uvek kada to ima smisla, a ovde ima dupliranog koda i u skladu sa time uvodjenje funkcija je vazno
-
-%TODO kada se ovo sve izdvoji u funkcije, treba ovaj zadatak pomeriti tamo gde pocinju zadaci koji kombinuju nizove i funkcije
-
-
-\ifresenja
-\begin{Answer}[ref=p.brojevi_sa_istim_zapisima]
-\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/brojevi_sa_istim_zapisima.c}
-\end{Answer}
-\fi
-
 \begin{Exercise}[label=v.prebrojavanje] 
-Napisati program koji učitava karaktere sa standardnog ulaza sve do kraja ulaza i izračunava koliko se puta u unetom tekstu pojavila svaka od cifara, svako malo slovo i svako veliko slovo. Ispisati broj pojavljivanja samo za karaktere koji su se u unetom tekstu pojavili barem jednom. \uputstvo{Za evidenciju broja pojavljivanja cifara, malih i velih slova korisiti pojedinačne nizove.} 
+Napisati program koji učitava karaktere sa standardnog ulaza sve do
+kraja ulaza i izračunava koliko se puta u unetom tekstu pojavila svaka
+od cifara, svako malo slovo i svako veliko slovo. Ispisati broj
+pojavljivanja samo za karaktere koji su se u unetom tekstu pojavili
+barem jednom. \uputstvo{Za evidenciju broja pojavljivanja cifara,
+  malih i velih slova korisiti pojedinačne nizove.}
 
-%TODO smisliti neki lep test primer u Andjelkinom stilu, dakle da je nezan i da ima smisla
-
-%TODO u resenju bi bilo dobro izdvojiti ispis u jednu funkciju umesto trostrukog ponavljanja istog koda
-
-%TODO u svim resenjima gde imamo dvostruko isisivanje ili unosenje elemenata niza, bilo bi dobro da se ne radi copy-paste, vec da se to izdvoji u funkciju, toga ima na dosta mesta u resenjima. Trebalo bi da ono ucitaj i stampaj se izdvoji vec u neki od zadataka pri pocetku i da se onda posle svuda koristi, a ne da se ceka zadatak 12 za to, mnogo je kasno, onda imamo previse losih resenja. 
-
-%TODO recimo da je ovo pravilo: ako imamo vise od jednog unosa ili ispisa, onda koristimo funkciju, inace ucitavamo i ispisujemo nizove u main-u
-
-\begin{maxitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\ulaz{123 abcabcabc 123}#
@@ -205,7 +163,28 @@ Napisati program koji učitava karaktere sa standardnog ulaza sve do kraja ulaza
 #\izlaz{Karakter b se pojavljuje 3 puta}#
 #\izlaz{Karakter c se pojavljuje 3 puta}#
 \end{upotreba}
-\end{maxitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{Programiranje 1 je zanimljivo!!}#
+#\izlaz{Karakter 1 se pojavljuje 1 puta}#
+#\izlaz{Karakter a se pojavljuje 3 puta}#
+#\izlaz{Karakter e se pojavljuje 2 puta}#
+#\izlaz{Karakter g se pojavljuje 1 puta}#
+#\izlaz{Karakter i se pojavljuje 3 puta}#
+#\izlaz{Karakter j se pojavljuje 3 puta}#
+#\izlaz{Karakter l se pojavljuje 1 puta}#
+#\izlaz{Karakter m se pojavljuje 2 puta}#
+#\izlaz{Karakter n se pojavljuje 2 puta}#
+#\izlaz{Karakter o se pojavljuje 2 puta}#
+#\izlaz{Karakter r se pojavljuje 3 puta}#
+#\izlaz{Karakter v se pojavljuje 1 puta}#
+#\izlaz{Karakter z se pojavljuje 1 puta}#
+#\izlaz{Karakter P se pojavljuje 1 puta}#
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{v.prebrojavanje}
 \end{Exercise}
 
@@ -215,49 +194,53 @@ Napisati program koji učitava karaktere sa standardnog ulaza sve do kraja ulaza
 \end{Answer}
 \fi
 
-%TODO resiti --- ne mora bas sve da bude reseno!!!
 \begin{Exercise}[label=vp.bez_resenja_3] 
-Sa standardnog ulaza se unosi jedna linija teksta. Napisati program koji izračunava i ispisuje koliko puta se pojavilo svako od slova engleskog alfabeta u unetom tekstu. Ne praviti razliku između malih i velikih slova. 
-
-%smisliti neke lepe test primer u Andjelkinom stilu, dakle da su nezani i da imaju smisla
+Sa standardnog ulaza se unosi jedna linija teksta. Napisati program
+koji izračunava i ispisuje koliko puta se pojavilo svako od slova
+engleskog alfabeta u unetom tekstu. Ne praviti razliku između malih i
+velikih slova.
 
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{haHJjkL}#
-#\izlaz{ a:1  b:0  c:0  d:0  e:0  f:0  g:0  h:2  i:0  j:2  k:1  l:1  m:0}#
-#\izlaz{ n:0  o:0  p:0  q:0  r:0  s:0  t:0  u:0  v:0  w:0  x:0  y:0  z:0}#
+#\ulaz{Tasi, tasi, TaNaNa i SVILENA marama.....}#
+#\izlaz{ a:9  b:0  c:0  d:0  e:1  f:0  g:0  h:0  i:4  j:0  k:0  l:1  m:2}#
+#\izlaz{ n:3  o:0  p:0  q:0  r:1  s:3  t:3  u:0  v:1  w:0  x:0  y:0  z:0}#
 \end{upotreba}
 \end{maxitest}
 
 \begin{maxitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{DanaS j3 \_j\_utRo laBU78d}#
-#\izlaz{ a:1  b:0  c:0  d:0  e:0  f:0  g:0  h:2  i:0  j:2  k:1  l:1  m:0}#
-#\izlaz{ n:0  o:0  p:0  q:0  r:0  s:0  t:0  u:0  v:0  w:0  x:0  y:0  z:0}#
+#\ulaz{Mihailo Petrovic Alas (6 Maj 1868 - 8 Jun 1943)}#
+#\izlaz{ a:4  b:0  c:1  d:0  e:1  f:0  g:0  h:1  i:3  j:2  k:0  l:2  m:2}#
+#\izlaz{ n:1  o:2  p:1  q:0  r:1  s:1  t:1  u:1  v:1  w:0  x:0  y:0  z:0}#
 \end{upotreba}
 \end{maxitest}
 
 \begin{maxitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\ulaz{Sao PaoLo 1998 \_JuZna Amerika90}#
-#\izlaz{a:5  b:0  c:0  d:2  e:1  f:0  g:0  h:0  i:1  j:1  k:1  l:1  m:1}#
-#\izlaz{n:1  o:3  p:1  q:0  r:1  s:1  t:0  u:1  v:0  w:0  x:0  y:0  z:0}#
+#\ulaz{Alan Matison Tjuring (London, 23. jun 1912 - Cesir, 7. jun 1954) }#
+#\izlaz{ a:3  b:0  c:1  d:1  e:1  f:0  g:1  h:0  i:3  j:3  k:0  l:2  m:1}#
+#\izlaz{ n:7  o:3  p:0  q:0  r:2  s:2  t:2  u:3  v:0  w:0  x:0  y:0  z:0}#
 \end{upotreba}
 \end{maxitest}
-%\linkresenje{vp.bez_resenja_3}
+\linkresenje{vp.bez_resenja_3}
 \end{Exercise}
 
 \ifresenja
 \begin{Answer}[ref=vp.bez_resenja_3]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/....c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/brojanje_slova.c}
 \end{Answer}
 \fi
 
 \begin{Exercise}[label=v.ukrstanje_nizova] 
-Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$ formira i na izlaz ispisuje niz $c$ koji se dobija naizmeničnim raspoređivanjem elemenata nizova $a$ i $b$, tj.~$c = [a_0, b_0, a_1, b_1, \ldots, a_{n-1}, b_{n-1}]$. Pretpostaviti da dimenzija učitanih nizova nije veća od 100.  
+Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$
+formira i na izlaz ispisuje niz $c$ koji se dobija naizmeničnim
+raspoređivanjem elemenata nizova $a$ i $b$, tj.~$c = [a_0, b_0, a_1,
+  b_1, \ldots, a_{n-1}, b_{n-1}]$. Pretpostaviti da dimenzija učitanih
+nizova nije veća od 100.
 %U slučaju neispravnog unosa ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -291,8 +274,11 @@ Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$ formira i na 
 \fi
 
 \begin{Exercise}[label=p.nizovi_spajanje] 
-%TODO preformulisati zadatak tako da bude kao prethodni
- Sa standardnog ulaza se učitava ceo broj $n$ (manji od $100$) i elementi dvaju nizova $a$ i $b$ dimenzije $n$. Napisati program koji formira i ispisuje niz $c$ čiju prvu polovinu čine elementi niza $b$, a drugu polovinu elementi niza $a$. %U slučaju greške ispisati odgovarajuću poruku.
+Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$
+formira i na izlaz ispisuje niz $c$ čija prva polovina odgovara
+elemetima niza $b$, a druga polovina elementima niza $a$, tj.~$c =
+[b_0, b_1, \ldots, b_{n-1}, a_0, a_1, \ldots, a_{n-1}]$. Pretpostaviti
+da dimenzija učitanih nizova nije veća od 100.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -329,20 +315,23 @@ Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$ formira i na 
 \end{Answer}
 \fi
 
-\iffalse
-%TODO: rešiti, izdvojeno iz jednog većeg zadatka... obavezno
-\begin{Exercise}[label=p.nizovi_spajanje_sortiranih] 
- Sa standardnog ulaza se učitava ceo broj $n$ manji od $100$ i elementi dvaju sortiranih neopadajuće nizova $a$ i $b$ dimenzije $n$. Napisati program koji formira i ispisuje niz $c$ koji se dobija spajanjem nizova $a$ i $b$ u treći, takođe sortiran neopadajuće, niz. %U slučaju greške ispisati odgovarajuću poruku.
-
-%Ovo je deo merge sort algoritma a to je p2 --- cini mi se da to ipak ne treba raditi ovde
+% mislim da treba zadrzati zadatak. jeste ovo p2, ali sta fali, malo
+% vezbaju napredne koncepte, ovo je zadatak za bolje studente, ne mora
+% da se da na ispitu. moze da se stavi zvezdica.
+\begin{Exercise}[difficulty=1, label=p.nizovi_spajanje_sortiranih] 
+ Sa standardnog ulaza se učitava ceo broj $n$ manji od $100$ i
+ elementi dvaju celobrojnih, sortiranih neopadajuće nizova $a$ i $b$
+ dimenzije $n$. Napisati program koji formira i ispisuje niz $c$ koji
+ se dobija spajanjem nizova $a$ i $b$ u treći, takođe sortiran
+ neopadajuće, niz.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite elemente niza a:}#
+#\izlaz{Uneti broj elemenata niza:}\ulaz{5}#
+#\izlaz{Uneti elemente sortiranog niza:}#
 #\ulaz{2 11 28 40 63}#
-#\izlaz{Unesite elemente niza b:}#
+#\izlaz{Uneti elemente sortiranog niza:}#
 #\ulaz{-19 -5 5 11 52}#
 #\izlaz{Niz c:}#
 #\izlaz{-19 -5 2 5 11 11 28 40 52 63}#
@@ -351,10 +340,10 @@ Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$ formira i na 
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{Unesite elemente niza a:}#
+#\izlaz{Uneti broj elemenata niza:}\ulaz{3}#
+#\izlaz{Uneti elemente sortiranog niza:}#
 #\ulaz{-2 4 8}#
-#\izlaz{Unesite elemente niza b:}#
+#\izlaz{Uneti elemente sortiranog niza:}#
 #\ulaz{6 15 19}#
 #\izlaz{Niz c:}#
 #\izlaz{-2 4 6 8 15 19}#
@@ -364,7 +353,7 @@ Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$ formira i na 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza:}\ulaz{145}#
+#\izlaz{Uneti broj elemenata niza:}\ulaz{145}#
 #\izlaz{Greska: Nedozvoljena vrednost!}#
 \end{upotreba}
 \end{miditest}
@@ -373,14 +362,17 @@ Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$ formira i na 
 
 \ifresenja
 \begin{Answer}[ref=p.nizovi_spajanje_sortiranih]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_spajanje_sortiranih.c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/nizovi_spajanje_sortiranih.c}
 \end{Answer}
 \fi
-\fi
 
-%TODO: resiti
+
+
 \begin{Exercise}[label=vp.bez_resenja_7] 
-Napisati program koji sa standardnog ulaza učitava $10$ celih brojeva i razdvaja ih na parne i neparne tako što parne brojeve upisuje na početak niza, a neparne brojeve na kraj niza. Ispisati niz dobijen na ovaj način. \napomena{Nije dozvoljeno koristiti pomoćne nizove.}
+Napisati program koji sa standardnog ulaza učitava $10$ celih brojeva
+i razdvaja ih na parne i neparne tako što parne brojeve upisuje na
+početak niza, a neparne brojeve na kraj niza. Ispisati niz dobijen na
+ovaj način. \napomena{Nije dozvoljeno koristiti pomoćne nizove.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -388,7 +380,7 @@ Napisati program koji sa standardnog ulaza učitava $10$ celih brojeva i razdvaj
 #\izlaz{Unesite 10 brojeva:}#
 #\ulaz{-2 8 11 53 59 20 17 -8 3 14}#
 #\izlaz{Rezultujuci niz:}#
-#\izlaz{-2 8 20 -8 14 3 17 59 53 11}#
+#\izlaz{14 142 -6 -278 28 34 33 -69 -9 9}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -397,15 +389,15 @@ Napisati program koji sa standardnog ulaza učitava $10$ celih brojeva i razdvaj
 #\izlaz{Unesite 10 brojeva:}#
 #\ulaz{9 142 -9 -278 -69 33 34 28 -6 14}#
 #\izlaz{Rezultujuci niz:}#
-#\izlaz{142 -278 34 28 -6 14 33 -69 -9 9}#
+#\izlaz{-2 8 14 -8 20 59 17 53 3 11}#
 \end{upotreba}
 \end{miditest}
-%\linkresenje{vp.bez_resenja_7}
+\linkresenje{vp.bez_resenja_7}
 \end{Exercise}
 
 \ifresenja
 \begin{Answer}[ref=vp.bez_resenja_7]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/vp.bez_resenja_7.c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/vp.bez_resenja_7.c}
 \end{Answer}
 \fi
 
@@ -444,12 +436,15 @@ na standardni izlaz. Niz $a$ sadrži najviše $100$ elemenata.
 \end{Answer}
 \fi
 
-%TODO ubaciti zadatak sa brisanjem 
+%TODO ubaciti zadatak sa brisanjem -- ne razumem, sta da se ubaci, ima vec zadatak sa brisanjem? 
 \begin{Exercise}[label=vp.zadatak_bez_resenja_12] 
-Napisati program koji u nizu dužine $n$ (broj manji od $100$) čiji se elementi učitavaju sa ulaza eliminiše sve brojeve koji nisu deljivi svojim indeksom. Niz reorganizovati tako da nema
-\emph{rupa} koje su nastale eliminacijom elemenata i ispisati na standardni izlaz. 
+Napisati program koji u nizu dužine $n$ (broj manji od $100$) čiji se
+elementi učitavaju sa ulaza eliminiše sve brojeve koji nisu deljivi
+svojim indeksom. Niz reorganizovati tako da nema \emph{rupa} koje su
+nastale eliminacijom elemenata i ispisati na standardni izlaz.
 %U slučaju greške, ispisati odgovarajuću poruku. 
-\napomena{Nulti element niza treba zadržati jer nije dozvoljeno deljenje nulom.}
+\napomena{Nulti element niza treba zadržati jer nije dozvoljeno
+  deljenje nulom.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -471,30 +466,42 @@ Napisati program koji u nizu dužine $n$ (broj manji od $100$) čiji se elementi
 
 
 \begin{Exercise}[label=v.nizovi_funkcije_intro] 
-%Svi zadaci u ovom poglavlju su prilicno bez neke atraktivnosti i bez semantike. Ovom bi jednostavno mogla da se doda semantika. suma da bude npr ukupan broj artikala prodat u jednoj prodavnici, prosek da bude prosecna vrednost prodatih artikala, usput tu bi povratna vrednost trebala da bude float, minimum da bude najjeftiniji a maksimum najskuplji proizvod
-
-Napisati funkcije za rad sa nizovima celih brojeva. 
+Takmičari na Beogradskom maratonu su označeni rednim brojevima počevši
+od $0$, a vreme za koje su istrčali maraton je dato minutima. Ovi
+podaci zadati su nizom celih brojeva, pri čemu indeks niza označava
+redni broj takmičara, a vrednosti u nizu označavaju vreme
+trčanja. Napisati funkcije za rad sa ovim nizom.
 \begin{enumerate}
-\item Napisati funkciju \kckod{void ucitaj(int a[], int n)} koja učitava elemente niza $a$ dimenzije $n$. 
-\item Napisati funkciju \kckod{void stampaj(int a[], int n)} koja štampa elemente niza $a$ dimenzije $n$.
-\item Napisati funkciju \kckod{int suma(int a[], int n)} koja računa i vraća sumu elemenata niza $a$ dimenzije $n$.   
-\item Napisati funkciju \kckod{int prosek(int a[], int n)} koja računa i vraća prosečnu vrednost (aritmetičku sredinu) elemenata niza $a$ dimenzije $n$.
-\item Napisati funkciju \kckod{int minimum(int a[], int n)} koja izračunava i vraća minimum elemenata niza $a$ dimenzije $n$.
-\item Napisati funkciju \kckod{int pozicija\_maksimuma(int a[], int n)} koja izračunava i vraća poziciju maksimalnog elementa u nizu $a$ dimenzije $n$. U slučaju više pojavljivanja maksimalnog elementa, vratiti najmanju poziciju.  
+\item Napisati funkciju \kckod{void ucitaj(int a[], int n)} koja
+  učitava elemente niza $a$ dimenzije $n$.
+\item Napisati funkciju \kckod{void stampaj(int a[], int n)} koja
+  štampa elemente niza $a$ dimenzije $n$.
+\item Napisati funkciju \kckod{int suma(int a[], int n)} koja računa i
+  vraća ukupno vreme trčanja svih takmičara.
+\item Napisati funkciju \kckod{float prosek(int a[], int n)} koja
+  računa i vraća prosečno vreme (aritmetičku sredinu) trčanja
+  takmičara.
+\item Napisati funkciju \kckod{int maksimum(int a[], int n)} koja
+  izračunava i vraća najduže vreme trčanja takmičara.
+\item Napisati funkciju \kckod{int pozicija\_minimum(int a[], int n)}
+  koja vraća redni broj pobednika Beogradskog maratona, tj. onog
+  takmičara koji je najkraće trčao. U slučaju da ima više takvih
+  takmičara, vratiti onog sa najmanjim indeksom.
 \end{enumerate}
-Napisati program koji testira rad zadatih funkcija. Sa standardnog ulaza učitati dimenziju niza (broj ne veći od $100$). %U slučaju greške ispisati odgovarajuću poruku. 
+Napisati program koji testira rad zadatih funkcija. Maksimalan broj
+takmičara je $1000$.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{5}#
-#\ulaz{2 5 -2 8 11}#
-#\izlaz{Ucitani niz: 2 5 -2 8 11}#
-#\izlaz{Suma elemenata niza: 24}#
-#\izlaz{Prosecna vrednost elemenata niza: 4.80}#
-#\izlaz{Minimumalni element niza: -2}#
-#\izlaz{Indeks maksimalnog elementa niza: 4}#
+#\ulaz{19 47 27 34 16}#
+#\izlaz{Vreme trcanja takmicara: 19 47 27 34 16}#
+#\izlaz{Ukupno vreme: 143}#
+#\izlaz{Prosecno vreme trcanja: 28.6}#
+#\izlaz{Maksimalno vreme trcanja: 47}#
+#\izlaz{Indeks pobednika: 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -515,39 +522,36 @@ Napisati program koji testira rad zadatih funkcija. Sa standardnog ulaza učitat
 \fi
 
 \begin{Exercise}[label=v.nizovi_funkcije_razno] 
-
-%TODO delove pod d i e izdvojiti u poseban zadatak.
-%TODO delovima pod a,b,c i d  dodati neku semantiku, artikli u prodavnici ili nesto mastovitije
-
-Napisati funkcije za rad sa nizovima celih brojeva. 
+Elementi niza celih brojeva su podaci o nadmorskim visinama u nekom
+području sveta.  Na kartografskoj mapi su indeksima označene različite
+tačke, a u nizu je svakom indeksu pridružen neki ceo broj (odnosno
+nadmorska visina). Napisati funkcije za rad sa ovim nizom.
 \begin{enumerate}
-\item Napisati funkciju koja proverava da li niz sadrži zadatu vrednost $m$. Povratna vrednost funkcije je $1$ ako je vrednost sadržana u nizu ili $0$ ako nije.
-\item Napisati funkciju koja vraća vrednost prve pozicije na kojoj se nalazi element koji ima vrednost $m$ ili $-1$ ukoliko element nije u nizu.
-\item Napisati funkciju koja vraća vrednost poslednje pozicije na kojoj se 
-nalazi element koji ima vrednost $m$ ili $-1$ ukoliko element nije u nizu.
-\item Napisati funkciju koja proverava da li elementi niza čine palindrom.
-\item Napisati funkciju koja proverava da li su elementi niza uređeni neopadajuće.
-%ovaj zadatak se nalazi negde pri kraju u okviru slicnog zadatka... bez_resenja_6
-%\item Napisati funkciju koja pronalazi najdužu seriju jednakih elemenata u nizu.
+\item Napisati funkciju koja proverava da li niz sadrži zadatu
+  nardmorsku visinu $m$. Povratna vrednost funkcije je $1$ ako je
+  vrednost sadržana u nizu ili $0$ ako nije.
+\item Napisati funkciju koja vraća vrednost prve pozicije na kojoj se
+  nalazi element koji ima nadmorsku visinu $m$ ili $-1$ ukoliko
+  element nije u nizu.
+\item Napisati funkciju koja vraća vrednost poslednje pozicije na
+  kojoj se nalazi element koji ima nadmorsku visinu $m$ ili $-1$
+  ukoliko element nije u nizu.
 \end{enumerate}
-Napisati i program koji testira rad napisanih funkcija za uneti broj $m$ i niz čija dimenzija nije veća od 100. %U slučaju greške ispisati odgovarajuću poruku. 
+Napisati i program koji testira rad napisanih funkcija za uneti broj
+$m$ i niz čija dimenzija nije veća od 100.
 
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{7}#
-#\ulaz{8 11 -2 14 -2 11 8}#
-#\izlaz{Ucitani niz: 8 11 -2 14 -2 11 8}#
+#\ulaz{800 1100 -200 1400 -200 1100 800}#
+#\izlaz{Ucitani niz: 800 1100 -200 1400 -200 1100 800}#
 #\izlaz{Unesite jedan ceo broj: }#
-#\ulaz{11}#
-#\izlaz{Niz sadrzi element cija je vrednost 11.}#
-#\izlaz{Niz sadrzi element cija je vrednost 11.}#
+#\ulaz{1100}#
+#\izlaz{Niz sadrzi element cija je vrednost 1100.}#
 #\izlaz{Indeks njegovog prvog pojavljivanja u nizu je 1.}#
-#\izlaz{Niz sadrzi element cija je vrednost 11.}#
 #\izlaz{Indeks njegovog poslednjeg pojavljivanja u nizu je 5.}#
-#\izlaz{Elementi niza cine palindrom.}#
-#\izlaz{Niz nije sortiran neopadajuce.}#
 \end{upotreba}
 \end{maxitest}
 
@@ -568,16 +572,24 @@ Napisati i program koji testira rad napisanih funkcija za uneti broj $m$ i niz �
 \end{Answer}
 \fi
 
+%\item Napisati funkciju koja sve vrednosti niza uvećava za zadatu vrednost $m$.
+%TODO ovo pod a nije ista vrsta zadatka kao ovo ostalo tako da bi ovo mozda trebalo razdvojiti. Takodje, ako se razdvoji, ima smisla dati neku semantiku ovom zadatku. Na primer, u nizu su brojevi necega sto poseduju studenti, i onda je svako od njih dobio jos m toga, pa da vidimo koliko sada voni toga imaju... ili tako nesto
+
+%\item Napisati funkciju koja proverava da li elementi niza čine
+%  palindrom.
+%\item Napisati funkciju koja proverava da li su elementi niza uređeni neopadajuće.
+%\end{enumerate}
+
+
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
 Napisati funkcije za rad sa nizovima celih brojeva. 
 \begin{enumerate}
-\item Napisati funkciju koja sve vrednosti niza uvećava za zadatu vrednost $m$.
-%TODO ovo pod a nije ista vrsta zadatka kao ovo ostalo tako da bi ovo mozda trebalo razdvojiti. Takodje, ako se razdvoji, ima smisla dati neku semantiku ovom zadatku. Na primer, u nizu su brojevi necega sto poseduju studenti, i onda je svako od njih dobio jos m toga, pa da vidimo koliko sada voni toga imaju... ili tako nesto
 \item Napisati funkciju koja obrće elemente niza.     
 \item Napisati funkciju koja rotira niz ciklično za jedno mesto u levo.
 \item Napisati funkciju koja rotira niz ciklično za $k$ mesta u levo.
 \end{enumerate}
-Napisati i program koji testira rad napisanih funkcija za uneti broj $m$ i niz čija dimenzija nije veća od 100. %U slučaju greške ispisati odgovarajuću poruku. 
+Napisati i program koji testira rad napisanih funkcija za uneti broj
+$m$ i niz čija dimenzija nije veća od 100.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -585,10 +597,6 @@ Napisati i program koji testira rad napisanih funkcija za uneti broj $m$ i niz �
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{6}#
 #\ulaz{7 -3 11 783 26 -19}#
-#\izlaz{Unesite jedan ceo broj:}#
-#\ulaz{2}#
-#\izlaz{Elementi niza nakon uvecanja za 2:}#
-#\izlaz{9 -1 13	785	28 -17}#
 #\izlaz{Elementi niza nakon obrtanja:}#
 #\izlaz{-17	28 785	13	-1	9}#
 #\izlaz{Elementi niza nakon rotiranja za 1 mesto ulevo:}#
@@ -617,7 +625,9 @@ Napisati i program koji testira rad napisanih funkcija za uneti broj $m$ i niz �
 \fi
 
 \begin{Exercise}[label=p.kvadriranje_elemenata] 
-Napisati program koji transformiše uneti niz tako što kvadrira sve negativne elemente niza. Pretpostaviti da je dimenzija niza broj koji nije veći od 100. %U slučaju greške ispisati odgovarajuću poruku.
+Napisati program koji transformiše uneti niz tako što kvadrira sve
+negativne elemente niza. Pretpostaviti da je dimenzija niza broj koji
+nije veći od $100$.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -657,8 +667,11 @@ Napisati program koji transformiše uneti niz tako što kvadrira sve negativne e
 \fi
 
 \begin{Exercise}[label=p.pretraga_deljivih_sa_k] 
-%TODO ovo bi znacilo resenje sabrojem 99, a to nije ono sto zelimo
-Sa standardnog ulaza se učitava dimenzija niza, elementi niza i jedan ceo broj $k$. Napisati program koji štampa indekse elemenata koji su deljivi sa $k$. Pretpostaviti da je dimenzija niza broj koji nije veći od 100.  %U slučaju greške ispisati odgovarajuću poruku. 
+%TODO ovo bi znacilo resenje sabrojem 99, a to nije ono sto zelimo -- ne razumem?
+Sa standardnog ulaza se učitava dimenzija niza, elementi niza i jedan
+ceo broj $k$. Napisati program koji štampa indekse elemenata koji su
+deljivi sa $k$. Pretpostaviti da je dimenzija niza broj koji nije veći
+od $100$.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -699,8 +712,12 @@ Sa standardnog ulaza se učitava dimenzija niza, elementi niza i jedan ceo broj 
 \fi
 
 \begin{Exercise}[label=p.razmena_min_max] 
-Napisati program koji učitava dimenziju i elemente niza i štampa niz u kojem su najveći i najmanji element niza razmenili mesta. Ukoliko se najmanji ili najveći element više puta pojavljuju u nizu, uzeti u obzir njihova prva pojavljivanja. Pretpostaviti da je dimenzija niza broj koji nije veći od 100.  %U slučaju greške ispisati odgovarajuću poruku.
-
+  Napisati program koji učitava dimenziju i elemente niza i štampa niz
+  u kojem su najveći i najmanji element niza razmenili mesta. Ukoliko
+  se najmanji ili najveći element više puta pojavljuju u nizu, uzeti u
+  obzir njihova prva pojavljivanja. Pretpostaviti da je dimenzija niza
+  broj koji nije veći od $100$.
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -735,11 +752,13 @@ Napisati program koji učitava dimenziju i elemente niza i štampa niz u kojem s
 \end{Answer}
 \fi
 
-%TODO resiti - ne mora sve da bude resenjo!
 \begin{Exercise}[label=vp.bez_resenja_11] 
-Napisati funkciju \kckod{int min\_max(int a[], int n)} koja pronalazi indekse najmanjeg i najvećeg
-elementa u nizu $a$ dimenzije $n$ koristeći samo jedan prolaz kroz niz. Funkcija kao povratnu vrednost vraća
-manji od ta dva indeksa. Napisati program koji testira ovu funkciju za učitane nizove celih brojeva maksimalne dužine $100$ elemenata. %U slučaju greške ispisati odgovarajuću poruku. 
+Napisati funkciju \kckod{int min\_max(int a[], int n)} koja pronalazi
+indekse najmanjeg i najvećeg elementa u nizu $a$ dimenzije $n$
+koristeći samo jedan prolaz kroz niz. Funkcija kao povratnu vrednost
+vraća manji od ta dva indeksa. Napisati program koji testira ovu
+funkciju za učitane nizove celih brojeva maksimalne dužine $100$
+elemenata.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -780,7 +799,9 @@ manji od ta dva indeksa. Napisati program koji testira ovu funkciju za učitane 
 \fi
 
 \begin{Exercise}[label=p.niz_karaktera_obrnuto] 
- Napisati program koji učitane karaktere (najviše njih $100$, učitavaju se sve do pojave karaktera \textit{*}) ispisuje u redosledu suprotnom od redosleda čitanja. 
+ Napisati program koji učitane karaktere (najviše njih $100$,
+ učitavaju se sve do pojave karaktera \textit{*}) ispisuje u redosledu
+ suprotnom od redosleda čitanja.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -830,13 +851,13 @@ manji od ta dva indeksa. Napisati program koji testira ovu funkciju za učitane 
 \includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/niz_karaktera_obrnuto.c}
 \end{Answer}
 \fi
-
+%-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 \begin{Exercise}[label=p.elementi_3_pojavljivanja] 
 %TODO dodati semantiku ovom zadatku
 %mozda umesto 3 puta, da bude n puta gde se n isto ucitava
 
 %TODO ovaj zadatak treba da ide nakon zadatka sa linearnom pretragom, jer je u pitanju ista tehnika resavanja problema
- Sa standardnog ulaza se unosi broj elemenata niza $a$ i njegovi elementi. Napisati program koji od datog niza formira niz $b$ u koji ulaze elementi niza $a$ koji se pojavljuju tačno tri puta. %U slučaju greške, ispisati odgovarajuću poruku.  
+  Sa standardnog ulaza se unosi broj elemenata niza $a$ i njegovi elementi. Napisati program koji od datog niza formira niz $b$ u koji ulaze elementi niza $a$ koji se pojavljuju tačno tri puta. %U slučaju greške, ispisati odgovarajuću poruku.  
 Pretpostaviti da će uneti niz imati najviše $100$ elemenata. 
  Pretpostaviti da je dimenzija niza broj koji nije veći od 100. 
  
@@ -880,9 +901,13 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 
 %TODO: resiti - ne mora sve da bude reseno!!!
 \begin{Exercise}[label=vp.bez_resenja_1] 
-Napisati funkciju \kckod{int sadrzi\_bar\_dva(int a[], int na, int b[], int nb)} koja proverava da li niz $a$ dužine $na$ sadrži barem dva broja koja se pojavljuju u nizu $b$ dužine $nb$. 
-%Funkcija vraća vrednost $1$ ako je svojstvo ispunjeno ili $0$ ako nije.  
-Napisati i program koji učitava redom dimenzije i elemente nizova $a$ i $b$ i ispisuje da li uneti nizovi ispunjavaju traženo svojstvo. Pretpostaviti da će uneti nizovi imati najviše $100$ elemenata. 
+Napisati funkciju \kckod{int sadrzi\_bar\_dva(int a[], int na, int
+  b[], int nb)} koja proverava da li niz $a$ dužine $na$ sadrži barem
+dva broja koja se pojavljuju u nizu $b$ dužine $nb$.  Napisati i
+program koji učitava redom dimenzije i elemente nizova $a$ i $b$ i
+ispisuje da li uneti nizovi ispunjavaju traženo
+svojstvo. Pretpostaviti da će uneti nizovi imati najviše $100$
+elemenata.
 
 
 \begin{miditest}
@@ -1516,4 +1541,42 @@ Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji o
 \ifresenja
 \section{Rešenja}
 \shipoutAnswer
+\fi
+
+
+\begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
+ Napisati program koji za dva cela broja $x$ i $y$ koja se učitavaju
+ sa standardnog ulaza proverava da li se zapisuju pomoću istih
+ cifara. \uputstvo{Rešiti korišćenjem nizova. Pogledati zadatak
+   \ref{p1.4_12}}.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{251 125}#
+#\izlaz{Brojevi se zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
+#\izlaz{Brojevi se ne zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
+#\izlaz{Brojevi se zapisuju istim ciframa!}#
+\end{upotreba}
+\end{miditest} 
+\linkresenje{p.brojevi_sa_istim_zapisima}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=p.brojevi_sa_istim_zapisima]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/brojevi_sa_istim_zapisima.c}
+\end{Answer}
 \fi
