@@ -53,9 +53,9 @@ int main()
   /* Obilazi se element po element niza a */
   for(i=0;i<n;i++)
   {
-    /* Ukoliko se tekuci element pojavljuje tacno tri puta u nizu a i nije upisan u niz b 
+    /* Ukoliko se tekuci element pojavljuje vise od dva puta u nizu a i nije upisan u niz b 
      koji trenutno ima j elemenata, dodaje se u niz b na poziciju j i uvecava se broj elemenata niza b */
-    if(broj_pojavljivanja(a, n, a[i])==3 && broj_pojavljivanja(b, j, a[i])==0)
+    if(broj_pojavljivanja(a, n, a[i])>=3 && broj_pojavljivanja(b, j, a[i])==0)
     {
       b[j] = a[i];
       j++;

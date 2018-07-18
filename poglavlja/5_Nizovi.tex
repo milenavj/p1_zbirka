@@ -9,7 +9,6 @@ dimenzije $n$, njihov skalarni proizvod je $a \cdot b = a_1\cdot b_1 +
 dva vektora. Vektori se zadaju kao celobrojni nizovi sa najviše $100$
 elemenata.  Program učitava dimenziju i elemente nizova, a na izlaz
 ispisuje vrednost skalarnog proizvoda.
-% ili odgovarajuću poruku u slučaju greške. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -62,7 +61,6 @@ Napisati program koji za učitani niz ispisuje:
 \item parne elemente niza.
 \end{enumerate}
 Pretpostaviti da je dimenzija niza broj koji nije veći od 100.
-%U slučaju greške ispisati odgovarajuću poruku.  
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -437,11 +435,13 @@ na standardni izlaz. Niz $a$ sadrži najviše $100$ elemenata.
 \fi
 
 %TODO ubaciti zadatak sa brisanjem -- ne razumem, sta da se ubaci, ima vec zadatak sa brisanjem? 
-\begin{Exercise}[label=vp.zadatak_bez_resenja_12] 
-Napisati program koji u nizu dužine $n$ (broj manji od $100$) čiji se
-elementi učitavaju sa ulaza eliminiše sve brojeve koji nisu deljivi
-svojim indeksom. Niz reorganizovati tako da nema \emph{rupa} koje su
-nastale eliminacijom elemenata i ispisati na standardni izlaz.
+\begin{Exercise}[label=deljivi_indeksom] 
+Napisati program koji u nizu dužine $n$ čiji se elementi učitavaju sa
+ulaza eliminiše sve brojeve koji nisu deljivi svojim indeksom. Niz
+reorganizovati tako da nema \emph{rupa} koje su nastale eliminacijom
+elemenata i ispisati na standardni izlaz. Maksimalna du\v zina niza je
+$700$ elemenata. Ne razmatrati da li je u novom nizu element deljiv
+svojim indeksom.
 %U slučaju greške, ispisati odgovarajuću poruku. 
 \napomena{Nulti element niza treba zadržati jer nije dozvoljeno
   deljenje nulom.}
@@ -452,15 +452,26 @@ nastale eliminacijom elemenata i ispisati na standardni izlaz.
 #\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{4 2 1 6 7 8 10 2 16 3}#
+#\izlaz{Novi niz:}#  
 #\izlaz{4 2 6 16}#
 \end{upotreba}
 \end{miditest}
-%\linkresenje{vp.zadatak_bez_resenja_12}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-8 5 10 6 7 10 8 2 16 27}#
+#\izlaz{Novi niz:}#  
+#\izlaz{-8 5 10 6 10 16 27}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{deljivi_indeksom}
 \end{Exercise}
 
 \ifresenja
 \begin{Answer}[ref=vp.zadatak_bez_resenja_12]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/zadatak_bez_resenja_12.c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/deljivi_indeksom.c}
 \end{Answer}
 \fi
 
@@ -575,10 +586,44 @@ $m$ i niz čija dimenzija nije veća od 100.
 %\item Napisati funkciju koja sve vrednosti niza uvećava za zadatu vrednost $m$.
 %TODO ovo pod a nije ista vrsta zadatka kao ovo ostalo tako da bi ovo mozda trebalo razdvojiti. Takodje, ako se razdvoji, ima smisla dati neku semantiku ovom zadatku. Na primer, u nizu su brojevi necega sto poseduju studenti, i onda je svako od njih dobio jos m toga, pa da vidimo koliko sada voni toga imaju... ili tako nesto
 
-%\item Napisati funkciju koja proverava da li elementi niza čine
-%  palindrom.
+
 %\item Napisati funkciju koja proverava da li su elementi niza uređeni neopadajuće.
-%\end{enumerate}
+
+\begin{Exercise}[label=palindrom]
+Palindrom je tekst koji se isto čita i sa leve i sa desne
+strane. Napisati funkciju koja proverava da li elementi niza karaktera
+čine palindrom (zanemariti velika/mala slova). Maksimalna dimenzija
+niza je $200$ elemenata.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{15}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{AnaVoliMilovana}#
+#\izlaz{Jeste palindrom!}#  
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{26}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{Zanimljivo je programirati!}#
+#\izlaz{Nije palindrom.}#  
+\end{upotreba}
+\end{miditest}
+\linkresenje{palindrom}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=palindrom]
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/palindrom.c}
+\end{Answer}
+\fi
+
 
 
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
@@ -589,7 +634,7 @@ Napisati funkcije za rad sa nizovima celih brojeva.
 \item Napisati funkciju koja rotira niz ciklično za $k$ mesta u levo.
 \end{enumerate}
 Napisati i program koji testira rad napisanih funkcija za uneti broj
-$m$ i niz čija dimenzija nije veća od 100.
+$m$. Maksimalna dužina niza je $100$ elemenata.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -667,11 +712,10 @@ nije veći od $100$.
 \fi
 
 \begin{Exercise}[label=p.pretraga_deljivih_sa_k] 
-%TODO ovo bi znacilo resenje sabrojem 99, a to nije ono sto zelimo -- ne razumem?
 Sa standardnog ulaza se učitava dimenzija niza, elementi niza i jedan
 ceo broj $k$. Napisati program koji štampa indekse elemenata koji su
-deljivi sa $k$. Pretpostaviti da je dimenzija niza broj koji nije veći
-od $100$.
+deljivi sa $k$. Pretpostaviti da je maksimalna dimenzije niza $100$
+elemenata.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -715,8 +759,8 @@ od $100$.
   Napisati program koji učitava dimenziju i elemente niza i štampa niz
   u kojem su najveći i najmanji element niza razmenili mesta. Ukoliko
   se najmanji ili najveći element više puta pojavljuju u nizu, uzeti u
-  obzir njihova prva pojavljivanja. Pretpostaviti da je dimenzija niza
-  broj koji nije veći od $100$.
+  obzir njihova prva pojavljivanja. Maksimalna dužina niza je $100$
+  elemenata.
   
 \begin{miditest}
 \begin{upotreba}{1}
@@ -752,6 +796,7 @@ od $100$.
 \end{Answer}
 \fi
 
+%ovaj ne treba resavati, isti ko gore
 \begin{Exercise}[label=vp.bez_resenja_11] 
 Napisati funkciju \kckod{int min\_max(int a[], int n)} koja pronalazi
 indekse najmanjeg i najvećeg elementa u nizu $a$ dimenzije $n$
@@ -851,15 +896,16 @@ elemenata.
 \includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/niz_karaktera_obrnuto.c}
 \end{Answer}
 \fi
-%-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-\begin{Exercise}[label=p.elementi_3_pojavljivanja] 
-%TODO dodati semantiku ovom zadatku
-%mozda umesto 3 puta, da bude n puta gde se n isto ucitava
 
+
+\begin{Exercise}[label=p.elementi_3_pojavljivanja] 
 %TODO ovaj zadatak treba da ide nakon zadatka sa linearnom pretragom, jer je u pitanju ista tehnika resavanja problema
-  Sa standardnog ulaza se unosi broj elemenata niza $a$ i njegovi elementi. Napisati program koji od datog niza formira niz $b$ u koji ulaze elementi niza $a$ koji se pojavljuju tačno tri puta. %U slučaju greške, ispisati odgovarajuću poruku.  
-Pretpostaviti da će uneti niz imati najviše $100$ elemenata. 
- Pretpostaviti da je dimenzija niza broj koji nije veći od 100. 
+Marko skuplja sličice za Svetsko prvenstvo u fudbalu. U celobrojnom
+nizu $a$ se nalaze brojevi onih sličica koje je već sakupio. Marko je
+primetio da mu se neke sličice ponavljaju i rešio je da ih razmeni sa
+drugarima. Napisati program koji od datog niza $a$ formira niz $b$
+sličica koje se u nizu $a$ pojavljuju više od dva puta. Pretpostaviti
+da će uneti niz imati najviše $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -875,8 +921,8 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza:}\ulaz{13}#
 #\izlaz{Unesite elemente niza a:}#
-#\ulaz{-8 26 7 2 1 1 7 2 2 2 7 5 1}#
-#\izlaz{Elementi niza b: 7 1}#
+#\ulaz{8 26 7 2 1 1 7 2 2 2 7 5 1}#
+#\izlaz{Elementi niza b: 7 2 1}#
 \end{upotreba}
 \end{miditest}
 
@@ -899,46 +945,13 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \end{Answer}
 \fi
 
-%TODO: resiti - ne mora sve da bude reseno!!!
-\begin{Exercise}[label=vp.bez_resenja_1] 
-Napisati funkciju \kckod{int sadrzi\_bar\_dva(int a[], int na, int
-  b[], int nb)} koja proverava da li niz $a$ dužine $na$ sadrži barem
-dva broja koja se pojavljuju u nizu $b$ dužine $nb$.  Napisati i
-program koji učitava redom dimenzije i elemente nizova $a$ i $b$ i
-ispisuje da li uneti nizovi ispunjavaju traženo
-svojstvo. Pretpostaviti da će uneti nizovi imati najviše $100$
-elemenata.
 
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj elemenata niza a:}#
-#\ulaz{5}#
-#\izlaz{Unesite elemente niza a:}#
-#\ulaz{5 8 7 -2 6}#
-#\izlaz{Unesite broj elemenata niza b:}#
-#\ulaz{6}#
-#\izlaz{Unesite elemente niza b:}#
-#\ulaz{11 -11 7 -7 6}#
-#\izlaz{Svojstvo je ispunjeno.}#
-\end{upotreba}
-\end{miditest}
-%\linkresenje{vp.bez_resenja_1}
-\end{Exercise}
-
-\ifresenja
-\begin{Answer}[ref=vp.bez_resenja_1]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/...c}
-\end{Answer}
-\fi
-
-%TODO: doterati resenje
 \begin{Exercise}[label=p.unija_presek_razlika] 
- Sa standardnog ulaza se, redom, učitavaju dimenzije i elementi dva niza, $a$ i $b$. Napisati program koji određuje i ispisuje njihovu uniju, presek i razliku (redosled prikaza elemenata nije bitan). Pretpostaviti da će uneti nizovi imati najviše $100$ elemenata. 
- 
-%TODO ako je manje od 100, to je onda 99. A mi u resenju pisemo 100. To onda znaci da bi trebalo da bude "nece imati vise od 100 elemenata" ili "manje ili jednako 100" To bi trebalo na neki nacin svuda ujednaciti i promeniti. Takodje, mozda bi trebalo praviti i nizove od 50 elemenata, cisto da ne bude svaki dimenzije 100, jer ce misliti da je to jedina postojeca dimenzija i zabravice da to citaju vec ce samo svuda pisati 100... 
- 
+Korišćenjem nizova moguće je predstaviti skupove podataka. Napisati
+program koji demonstrira osnovne operacije nad skupovima --- unija,
+presek i razlika. Pomoću dva niza predstaviti dva skupa celih
+brojeva. Maksimalna dimenzija skupa je $500$ elemenata.
+  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -987,7 +1000,10 @@ elemenata.
 \fi
 
 \begin{Exercise}[label=p.izbacivanje_elemenata] 
-Napisati program koji za učitani niz formira i ispisuje niz koji se dobija izbacivanjem svih neparnih elemenata niza. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza. Pretpostaviti da će uneti niz imati najviše $100$ elemenata.  %U slučaju greške, ispisati odgovarajuću poruku.
+Napisati program koji za učitani niz formira i ispisuje niz koji se
+dobija izbacivanjem svih neparnih elemenata niza. Zadatak rešiti na
+dva načina: korišćenjem pomoćnog niza i transformacijom polaznog
+niza. Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1033,12 +1049,12 @@ Napisati program koji za učitani niz formira i ispisuje niz koji se dobija izba
 \fi
 
 \begin{Exercise}[label=p.izbacivanje_prostih_elemenata] 
-Napisati program koji za učitani niz ispisuje niz koji se dobija izbacivanjem svih elemenata koji su prosti brojevi. Zadatak rešiti na dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza. %U slučaju greške, ispisati odgovarajuću poruku. 
-Pretpostaviti da će uneti niz imati najviše $100$ elemenata. 
-\napomena{Broj $1$ nije prost}. 
+Napisati program koji za učitani niz ispisuje niz koji se dobija
+izbacivanjem svih elemenata koji su prosti brojevi. Zadatak rešiti na
+dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza.
+Pretpostaviti da je maksimalna dimenzija niza $100$ elemenata.
+\napomena{Broj $1$ nije prost}.
 
-%TODO podesiti resenje sa time da su prosti brojevi defnisani samo za prirodne brojeve, i da 1 po definiciji nije prost broj. 
- 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1092,7 +1108,10 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 
 
 \begin{Exercise}[label=p.broj_manjih_od_poslednjeg] 
- Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja izračunava broj elemenata celobrojnog niza $a$ dužine $n$ koji su manji od poslednjeg elementa niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. 
+ Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja
+ izračunava broj elemenata celobrojnog niza $a$ dužine $n$ koji su
+ manji od poslednjeg elementa niza. Napisati i program koji testira
+ rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1130,7 +1149,10 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \fi
 
 \begin{Exercise}[label=p.broj_manjih_od_maksimuma] 
- Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja izračunava broj parnih elemenata niza celih brojeva $a$ dužine $n$ koji prethode maksimalnom elementu niza. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. 
+ Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja
+ izračunava broj parnih elemenata niza celih brojeva $a$ dužine $n$
+ koji prethode maksimalnom elementu niza. Napisati i program koji
+ testira rad funkcije. Maksimalna dužina niza je $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1167,10 +1189,11 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \end{Answer}
 \fi
 
-%TODO pretpostavke o velicini niza nisam ujednacila, ima ih od bar dve vrste. Uglavnom su na kraju zadatka i trebalo bi da to uvek bude recenica iste formulacije, izaberi koja ti se najvise svidja, i dodaj to na ona mesta koja sam ja greskom preskocila. 
-
 \begin{Exercise}[label=p.broj_cifara] 
- Napisati funkciju \kckod{int cifre(char s[], int n)} koja izračunava broj cifara u nizu karaktera $a$ dužine $n$. Napisati program koji za karaktere koji se unose u zasebnim redovima ispisuje broj unetih cifara. Pretpostaviti da dužina niza neće biti veća od $100$. 
+ Napisati funkciju \kckod{int cifre(char s[], int n)} koja izračunava
+ broj cifara u nizu karaktera $a$ dužine $n$. Napisati program koji za
+ karaktere koji se unose u zasebnim redovima ispisuje broj unetih
+ cifara. Maksimalna dužina niza je $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1223,7 +1246,10 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \fi
 
 \begin{Exercise}[label=p.zbir_opsega_niza] 
- Napisati funkciju \kckod{int zbir(int a[], int n, int i, int j)} koja računa zbir elemenata niza celih brojeva $a$ dužine $n$ od pozicije $i$ do pozicije $j$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. 
+ Napisati funkciju \kckod{int zbir(int a[], int n, int i, int j)} koja
+ računa zbir elemenata niza celih brojeva $a$ dužine $n$ od pozicije
+ $i$ do pozicije $j$. Napisati i program koji testira rad
+ funkcije. Maksimalna dužina niza je $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1264,7 +1290,10 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \fi
 
 \begin{Exercise}[label=p.zbir_k_pozitivnih] 
- Napisati funkciju \kckod{float zbir\_pozitivnih(float a[], int n, int k)} koja izračunava zbir prvih $k$ pozitivnih elemenata realnog niza $a$ dužine $n$. Napisati i program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. 
+ Napisati funkciju \kckod{float zbir\_pozitivnih(float a[], int n, int
+   k)} koja izračunava zbir prvih $k$ pozitivnih elemenata realnog
+ niza $a$ dužine $n$. Napisati i program koji testira rad
+ funkcije. Maksimalna dužina niza je $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1308,7 +1337,10 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \fi
 
 \begin{Exercise}[label=p.kvadriranje_parnih] 
- Napisati funkciju \kckod{void kvadriranje(float a[], int n)} koja kvadrira elemente realnog niza $a$ dužine $n$ koji se nalaze na parnim pozicijama. Napisati program koji tranformiše na ovaj način uneti niz. Pretpostaviti da dužina niza neće biti veća od $100$. 
+ Napisati funkciju \kckod{void kvadriranje(float a[], int n)} koja
+ kvadrira elemente realnog niza $a$ dužine $n$ koji se nalaze na
+ parnim pozicijama. Napisati program koji tranformiše na ovaj način
+ uneti niz. Maksimalna dužina niza je $100$ elemenata.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1347,9 +1379,12 @@ Pretpostaviti da će uneti niz imati najviše $100$ elemenata.
 \end{Answer}
 \fi
 
-%TODO: resiti
-\begin{Exercise}[label=vp.bez_resenja_9] 
-Napisati funkciju \kckod{int blizu\_3(int a[],int n)} koja pronalazi i vraća indeks elementa niza koji je po vrednosti najbliži aritmetičkoj sredini onih elemenata niza koji su deljivi brojem tri. Napisati program koji testira rad funkcije. Pretpostaviti da dužina niza neće biti veća od $100$. 
+\begin{Exercise}[label=aritm_sredina_deljivih_sa_tri] 
+Napisati funkciju \kckod{int blizu\_3(int a[],int n)} koja pronalazi i
+vraća indeks elementa niza koji je po vrednosti najbliži aritmetičkoj
+sredini onih elemenata niza koji su deljivi brojem tri. Napisati
+program koji testira rad funkcije. Maksimalna dužina niza je $200$
+elemenata.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1357,7 +1392,7 @@ Napisati funkciju \kckod{int blizu\_3(int a[],int n)} koja pronalazi i vraća in
 #\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{1 2 3 4 5}#
-#\izlaz{2}#
+#\izlaz{3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1366,65 +1401,76 @@ Napisati funkciju \kckod{int blizu\_3(int a[],int n)} koja pronalazi i vraća in
 #\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{3 6 2 4 7}#
-#\izlaz{3}#
+#\izlaz{4}#
 \end{upotreba}
 \end{miditest}
-%\linkresenje{vp.bez_resenja_9}
+\linkresenje{aritm_sredina_deljivih_sa_tri}
 \end{Exercise}
 
 \ifresenja
 \begin{Answer}[ref=vp.bez_resenja_9]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/bez_resenja_9.c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/aritm_sredina_deljivih_sa_tri.c}
 \end{Answer}
 \fi
 
-%TODO: proveriti da li je u redu zadržati ovaj zadatak - preuzet je iz knjige Janicic&Maric
-
-%komentar na ovu temu sam stavila uz naredni zadatak, vazi i ovde
-
-%TODO: resiti - ne mora sve da bude reseno
-\begin{Exercise}[label=pv.bez_resenja_5] 
-Napisati funkcije za rad sa nizovima celih brojeva. 
+\begin{Exercise}[label=izbacivanje_ubacivanje_u_niz] 
+Prilikom ulaska u banku klijent dobija redni broj, a u nizu se čuva
+redosled opsluživanja klijenata. Tako, prvi klijent u nizu će biti
+prvi uslužen, a klijent koji je poslednji dosao se nalazi na kraju
+niza. Redni brojevi se izdaju počevši od $1$ svakog radnog dana, ali
+se niz za redosled stalno menja. Dodatno, postoje specijalni klijenti
+(npr. oni koji plaćaju platni promet ili oni koji podižu stambeni
+kredit) koji mogu dobiti i negativan redni broj da bi se razlikovali
+od uobičajenih usluga koje banka omogućava. Pomozite radniku
+obezbeđenja da lako prati redosled opsluživanja klijenata.
 \begin{enumerate}
-\item Napisati funkciju koja izbacuje poslednji element niza.
-\item Napisati funkciju koja izbacuje prvi element niza. Zadatak rešiti na dva načina: čuvanjem redosleda elemenata i premeštanjem poslednjeg elementa niza na upražnjenu poziciju.
-\item Napisati funkciju koja izbacuje element sa date pozicije $k$. 
-\item Napisati funkciju koja izbacuje sva pojavljivanja datog elementa $x$ iz niza.
-\item Napisati funkciju koja ubacuje dati element $x$ na kraj niza.
-\item Napisati funkciju koja ubacuje dati element $x$ na početak niza.
-\item Napisati funkciju koja ubacuje dati element $x$ na datu poziciju $k$. 
+\item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
+  $x$ na kraj niza.
+\item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
+  $x$ na početak niza (lica sa posebnim potrebama, trudnice, stara
+  lica i ostale ugrožene kategorije).
+\item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
+  $x$ na datu poziciju $k$ (manje prioritetna lica, recimo službena
+  lica ili roditelji sa decom, poziciju $k$ bira radnik obezbeđenja).
+\item Napisati funkciju koja izbacuje prvi element niza (usluženi
+  klijent).
+\item Napisati funkciju koja izbacuje poslednji element niza (klijent
+  je odustao jer je shvatio da ima mnogo klijenata ispred njega).
+\item Napisati funkciju koja izbacuje element sa date pozicije $k$
+  (klijent je odustao jer je dugo čekao).
 \end{enumerate}
-Napisati program koji testira rad zadatih funkcija. Sa standardnog ulaza učitati dimenziju niza (broj ne veći od $100$). %U slučaju greške ispisati odgovarajuću poruku. 
+Napisati program koji testira rad funkcija. Maksimalan broj klijenata
+u jednom danu je $2000$.
 
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza:}#
+#\izlaz{Unesite trenutni broj klijenata:}#
 #\ulaz{8}#
+#\izlaz{Unesite niz sa rednim brojevima klijenata:}#  
 #\ulaz{2 5 -2 16 33 19 8 11}#
-#\izlaz{Niz posle izbacivanja poslednjeg elementa: 2 5 -2 16 33 5 8}#
-#\izlaz{Niz nakon izbacivanja prvog elementa: 5 -2 16 33 5 8}#
-#\izlaz{Unesite poziciju elementa za izbacivanje: }#
-#\ulaz{3}#
-#\izlaz{Niz nakon izbacivanja 3. elementa: 5 -2 16 5 8}#
-#\izlaz{Unesite element cije pojavljivanje treba izbaciti: }#
-#\ulaz{5}#
-#\izlaz{Niz nakon izbacivanja elementa 5: -2 16 8}#
-#\izlaz{Unesite element koji treba ubaciti u niz: }#
-#\ulaz{19}#
-#\izlaz{Niz nakon ubacivanja elementa 19 na kraj: -2 16 8 19}#
-#\izlaz{Niz nakon ubacivanja elementa 19 na pocetak: 19 -2 16 8 19}#
-#\izlaz{Unesite poziciju na koju treba ubaciti element: }#
-#\ulaz{2}#
-#\izlaz{Niz nakon ubacivanja elementa 19 na poziciju 2: 19 -2 19 16 8 19}#
+#\izlaz{Unesite klijenta kojeg treba ubaciti u niz: }#
+#\ulaz{35}#
+#\izlaz{Niz nakon ubacivanja klijenta: 2 5 -2 16 33 19 8 11 35}#
+#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz: }#
+#\ulaz{36}#
+#\izlaz{Niz nakon ubacivanja klijenta: 36 2 5 -2 16 33 19 8 11 35}#
+#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz i njegovu poziciju: }#
+#\ulaz{-6 2}#
+#\izlaz{Niz nakon ubacivanja klijenta: 36 2 -6 5 -2 16 33 19 8 11 35}#  
+#\izlaz{Niz nakon odlaska klijenta: 2 -6 5 -2 16 33 19 8 11 35}#  
+#\izlaz{Niz nakon odlaska poslednjeg klijenta: 2 -6 5 -2 16 33 19 8 11}#
+#\izlaz{Unesite redni broj klijenta koji je napustio red: }#
+#\ulaz{-2}#
+#\izlaz{Niz nakon odlaska klijenta: 2 -6 5 16 33 19 8 11}#
 \end{upotreba}
 \end{maxitest}
-%\linkresenje{pv.bez_resenja_5}
+\linkresenje{izbacivanje_ubacivanje_u_niz}
 \end{Exercise}
 
 \ifresenja
 \begin{Answer}[ref=pv.bez_resenja_5]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/bez_resenja_5.c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/izbacivanje_ubacivanje_u_niz.c}
 \end{Answer}
 \fi
 
@@ -1456,60 +1502,22 @@ u datom nizu brojeva.
 \fi
 
 
-%TODO resiti --- ne mora sve da bude reseno
-\begin{Exercise}[label=vp.bez_resenja_2] 
-Napisati funkciju koja iz zadatog niza izbacuje sve elemente koji su deljivi svojim indeksom. Niz reorganizovati tako da nema \emph{rupa} koje su nastale izbacivanjem elemenata. Povratna vrednost funkcije je nova dimenzija niza. Napisati program koji za učitni niz (dimenzije manje od $100$) ispisuje niz dobijen nakon poziva funkcije. %U slučaju greške ispisati odgovarajuću poruku. 
-\napomena{Element na nultoj poziciji niza zadržati jer nije dozvoljeno deljenje nulom.}
-
-%ovde nije jasno da li treba i da nakon pomeranja vazi isto to pravilo da element nije deljiv sa svojim indeksom? npr, 0 1 4 6 --- izbacimo broj 4 jer je deljiv sa dva, i onda se dobija niz 0 1 6 --- da li onda treba da izbacimo i 6 jer je deljiv sa dva?
-
-%TODO dodati da svuda bude minimalno dva test primera
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj elemenata niza:}\ulaz{10}#
-#\izlaz{Unesite elemente niza:}#
-#\ulaz{4 2 1 6 7 10 8 2 16 27}#
-#\izlaz{4 1 7 8 2 16}#
-\end{upotreba}
-\end{miditest}
-%\linkresenje{vp.bez_resenja_2}
-\end{Exercise}
-
-\ifresenja
-\begin{Answer}[ref=vp.bez_resenja_2]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/.....c}
-\end{Answer}
-\fi
-
-
-% Mislim da ovaj zadatak mozemo izbaciti - ista funkcija se ocekuje u zadatku sa permutacijama
-
-%\begin{Exercise}[label=p2.1_] 
-%Napisati funkciju \kckod{void brojanje(int a[], int brojac[], int n)}
-%čiji su argumenti $a$ i $brojac$ celobrojni nizovi
-%dimenzije $n$. Vrednosti elemenata niza $a$ su između $0$ i $n-1$.
-%Funkcija izračunava elemente niza $brojac$ tako da je
-%$brojac[i]$ jednak broju pojavljivanja broja $i$ u nizu
-%$a$. Program testirati učitavanjem dimenzije (broj ne veći od $100$) i elemenata niza $a$ i ispisom rezultujućeg niza $brojac$. 
-%\linkresenje{p2.1_}
-%\end{Exercise}
-%
-%\ifresenja
-%\begin{Answer}[ref=p2.1_]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/1_10.c}
-%\end{Answer}
-
-
-%TODO: resiti - ne mora sve da bude reseno!
-\begin{Exercise}[label=vp.bez_resenja_4] 
-Za celobrojni niz $a$ dimenzije $n$ kažemo da je \textit{permutacija} ako sadrži sve brojeve od $1$ do $n$.
+\begin{Exercise}[label=permutacija] 
+Za celobrojni niz $a$ dimenzije $n$ kažemo da je \textit{permutacija}
+ako sadrži sve brojeve od $1$ do $n$.
 \begin{enumerate}
-\item  Napisati funkciju \kckod{void brojanje(int a[], int b[], int n)} koja na osnovu celobrojnog niza $a$ dimenzije $n$ formira niz $b$ tako što $i$-ti element niza $b$ odgovara broju pojavljivanja vrednosti $i$ u nizu $a$. 
-\item Napisati funkciju \kckod{int permutacija(int a[], int n)} koja proverava da li je zadati niz permutacija. Funkcija vraća vrednost $1$ ako je svojstvo ispunjeno, odnosno $0$ ako nije. \uputstvo{Koristiti funkciju $brojanje$ iz tačke (a).} 
+\item Napisati funkciju \kckod{void brojanje(int a[], int b[], int n)}
+  koja na osnovu celobrojnog niza $a$ dimenzije $n$ formira niz $b$
+  tako što $i$-ti element niza $b$ odgovara broju pojavljivanja
+  vrednosti $i$ u nizu $a$.
+\item Napisati funkciju \kckod{int permutacija(int a[], int n)} koja
+  proverava da li je zadati niz permutacija. Funkcija vraća vrednost
+  $1$ ako je svojstvo ispunjeno, odnosno $0$ ako
+  nije. \uputstvo{Koristiti funkciju $brojanje$ iz tačke (a).}
 \end{enumerate}
-Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji od $100$) i elemente niza i ispisuje da li je uneti niz permutacija ili ne.  
+Napisati program koji sa standardnog ulaza učitava dimenziju niza
+(broj manji od $100$) i elemente niza i ispisuje da li je uneti niz
+permutacija ili ne.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1529,12 +1537,12 @@ Napisati program koji sa standardnog ulaza učitava dimenziju niza (broj manji o
 #\izlaz{Uneti niz nije permutacija.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{vp.bez_resenja_4}
+\linkresenje{permutacija}
 \end{Exercise}
 
 \ifresenja
 \begin{Answer}[ref=vp.bez_resenja_4]
-%\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/....c}
+\includecode{resenja/2_PredstavljanjePodataka/2.1_Nizovi/permutacija.c}
 \end{Answer}
 \fi
 

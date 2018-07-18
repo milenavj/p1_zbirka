@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-#define MAX 100
+#define MAX 500
 
 /*
   Funkcija koja vraca 1 ukoliko broj x postoji u nizu, 0 inace.
@@ -58,7 +58,7 @@ int main()
   for(i=0;i<n_a;i++)
   {
     /*
-      Ukoliko se element a[i] ne nalazi u uniji, dodajemo ga u uniju i povecamo brojac elemenata u nizu unija.
+      Ukoliko se element a[i] ne nalazi u uniji, dodaje se u uniju i povecaca se brojac elemenata u nizu unija.
     */
     if(postoji(unija,n_u,a[i]) == 0)
     {
@@ -67,7 +67,7 @@ int main()
     }
 
     /*
-      Ukoliko se element a[i] postoji u nizu b i ne postoji u nizu presek, dodajemo ga u presek i povecavamo brojac elemenata u nizu presek.
+      Ukoliko se element a[i] nalazi u nizu b i ne postoji u nizu presek, dodaje se presek i povecava se brojac elemenata u nizu presek.
     */
     if(postoji(b, n_b, a[i])==1 && postoji(presek, n_p, a[i])==0)
     {
@@ -76,7 +76,7 @@ int main()
     }
 
     /*
-      Ukoliko element a[i] ne postoji u nizu b i ne postoji u nizu razlika, dodajemo ga u razliku i povecavamo brojac elemenata u nizu razlika.
+      Ukoliko element a[i] ne postoji u nizu b i ne postoji u nizu razlika, dodaje se u razliku i povecava se brojac elemenata u nizu razlika.
     */
     if(postoji(b, n_b, a[i])==0 && postoji(razlika, n_r, a[i])==0)
     {
@@ -86,7 +86,7 @@ int main()
   }
 
   /*
-    Elemente niza b koji ne postoje u uniji dodajemo u uniju.
+    Elemente niza b koji nisu uneti u uniju dodaju se u uniju.
   */
   for(i=0;i<n_b;i++)
     if(postoji(unija, n_u, b[i]))

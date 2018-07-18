@@ -15,7 +15,7 @@ int prost(int x)
   x=abs(x);
 
   /* Brojevi 1, 2 i 3 su prosti */
-  if(x == 1 || x == 2 || x == 3)
+  if(x == 2 || x == 3)
     return 1;
 
   /* Ako je broj paran nije prost */
