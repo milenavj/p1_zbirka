@@ -2,7 +2,7 @@
 
 #define MAX 100
 
-/* Funkcija vraca broj parnih elemenata niza koji prethode maksimalnom elementu niza */
+/* Funkcija vraca broj parnih elemenata niza koji prethode maksimalnom elementu niza. */
 int prebrojavanje(int a[], int n)
 {
   int i;
@@ -10,10 +10,10 @@ int prebrojavanje(int a[], int n)
   int maksimum;
   int pozicija_maksimuma;
   
-  /* Brojac elemenata koji su parni i prethode maksimalnom */
+  /* Brojac elemenata koji su parni i prethode maksimalnom. */
   int broj_parnih;
 
-  /* Pronalazi se maksimalni element niza i njegova pozicija */
+  /* Pronalazi se maksimalni element niza i njegova pozicija. */
   maksimum = a[0];
   pozicija_maksimuma = 0;
 
@@ -24,7 +24,7 @@ int prebrojavanje(int a[], int n)
       pozicija_maksimuma = i;
     }
 
-  /* Prebrojavaju se parni elementi koji prethode maksimalnom */
+  /* Prebrojavaju se parni elementi koji prethode maksimalnom. */
   broj_parnih = 0;
   for(i=0; i < pozicija_maksimuma; i++){
     if(a[i]%2==0){
@@ -32,7 +32,7 @@ int prebrojavanje(int a[], int n)
     }
   }
 
-  /* Vraca se izracunata vrednost */
+  /* Vraca se izracunata vrednost. */
   return broj_parnih;
 }
 
@@ -42,7 +42,7 @@ int main()
   int n;
   int i;
   
-  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost */
+  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost. */
   printf("Unesite broj elemenata niza:");
   scanf("%d", &n);
   if(n<=0 || n>MAX)
@@ -51,13 +51,13 @@ int main()
      return 0;
   }
   
-  /* Ucitavaju se elementi niza */
+  /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza:");
   for(i=0;i<n;i++){ 
    scanf("%d",&a[i]);
   }
    
-  /* Ispisuje se rezultat poziva funkcije */
+  /* Ispisuje se rezultat poziva funkcije. */
   printf("%d\n", prebrojavanje(a,n));
   
   return 0;

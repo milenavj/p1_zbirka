@@ -2,7 +2,7 @@
 
 #define MAX 100
 
-/* Funkcija kojom se ucitavaju elementi niza a dimenzije n */
+/* Funkcija kojom se ucitavaju elementi niza a dimenzije n. */
 void ucitaj(int a[], int n)
 {
    int i;
@@ -12,7 +12,7 @@ void ucitaj(int a[], int n)
    }
 }
 
-/* Funkcija kojom se ispisuju elementi niza a dimenzije n */
+/* Funkcija kojom se ispisuju elementi niza a dimenzije n. */
 void stampaj(int a[], int n)
 {
    int i;
@@ -23,7 +23,7 @@ void stampaj(int a[], int n)
 
 
 
-/* b) Funkcija koja obrce elemente niza */     
+/* Funkcija koja obrce elemente niza. */     
 void obrni(int a[], int n)   
 {          
   
@@ -31,11 +31,7 @@ void obrni(int a[], int n)
    int i,j;
    
    
-   /*
-    Za niz a[0], a[1], ...., a[n-2], a[n-1] obrnuti niz je a[n-1], a[n-2], ...., a[1], a[0]
-    Zato je potrebno razmeniti vrednosti elemenata a[0] i a[n-1], a[1] i a[n-2], itd. i zaustaviti se
-    kada je vrednost indeksa prvog elementa veca od vrednosti drugog elementa. 
-   */    
+   /* Za niz a[0], a[1], ...., a[n-2], a[n-1] obrnuti niz je a[n-1], a[n-2], ...., a[1], a[0]. Zato je potrebno razmeniti vrednosti elemenata a[0] i a[n-1], a[1] i a[n-2], itd. i zaustaviti se kada je vrednost indeksa prvog elementa veca od vrednosti drugog elementa. */    
 
    for(i=0,j=n-1;i<j;i++, j--)
    { 
@@ -46,33 +42,33 @@ void obrni(int a[], int n)
 
 }   
 
-/* c) Funkcija koja rotira niz ciklicno za jedno mesto u levo */
+/* Funkcija koja rotira niz ciklicno za jedno mesto u levo. */
 void rotiraj1(int a[], int n)
 {
    int i;
    int tmp;
    
-   /* Izdvaja se prvi element niza */
+   /* Izdvaja se prvi element niza. */
    tmp=a[0]; 
    
-   /* Pomeraju se preostali elementi niza */
+   /* Pomeraju se preostali elementi niza. */
    for(i=0;i<n-1;i++){
         a[i]=a[i+1]; 
    }
    
-   /* Poslednjem elementu se dodeljuje sacuvana vrednost prvog elementa */
+   /* Poslednjem elementu se dodeljuje sacuvana vrednost prvog elementa. */
    a[n-1] = tmp; 
 }
 
-/* d) Funkcija koja rotira niz ciklicno za k mesta u levo */
+/* Funkcija koja rotira niz ciklicno za k mesta u levo. */
 void rotirajk(int a[], int n, int k)
 {
    int i;
    
-   /* Odredjuje se vrednost broja k koja je u opsegu od 0 do n-1 kako bi se izbegla suvisna pomeranja */
+   /* Odredjuje se vrednost broja k koja je u opsegu od 0 do n-1 kako bi se izbegla suvisna pomeranja. */
    k=k%n;
    
-   /* Niz se rotira za jednu poziciju ulevo k puta */
+   /* Niz se rotira za jednu poziciju ulevo k puta. */
    for(i=0;i<k;i++)
         rotiraj1(a,n);
 }
@@ -86,7 +82,7 @@ int main()
   int m;
 
 
-  /* Ucitava se dimenzija niza i proverava se njena ispravnost */
+  /* Ucitava se dimenzija niza i proverava se njena ispravnost. */
   printf("Unesite dimenziju niza:");
   scanf("%d",&n);  
   if (n<1 || n>MAX)
@@ -95,22 +91,22 @@ int main()
         return -1;
   }       
  
-  /* Ucitavaju se elementi niza */
+  /* Ucitavaju se elementi niza. */
   ucitaj(a,n);
  
   /* Testira se rad napisanih funkcija */
   
-  /* a) */
+  /* Obrtanje niza. */
   printf("Elementi niza nakon obrtanja:\n");
   obrni(a,n);
   stampaj(a,n);
   
-  /* b) */
+  /* Rotiranje za jedno mesto u levo. */
   printf("Elementi niza nakon rotiranja za 1 mesto ulevo:\n");
   rotiraj1(a,n);
   stampaj(a,n);
   
-  /* c) */
+  /* Rotiranje za k mesta u levo. */
   printf("Unesite jedan pozitivan ceo broj:"); 
   scanf("%d",&k);
   if (k<=0)

@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Predprocesorska direktiva kojom se definise maksimalni broj elemenata niza */
+/* Predprocesorska direktiva kojom se definise maksimalni broj elemenata niza. */
 #define MAX 100
 
 int main()
@@ -12,7 +12,7 @@ int main()
   int skalarni_proizvod;
 
   
-  /* Ucitava se dimenzija vektora i proverava njena ispravnost */
+  /* Ucitava se dimenzija vektora i proverava njena ispravnost. */
   printf("Unesite dimenziju vektora: ");
   scanf("%d", &n);
   if (n<1 || n>100)  
@@ -21,7 +21,7 @@ int main()
     return -1;
   }
        
-  /* Ucitavaju se koordinate vektora */
+  /* Ucitavaju se koordinate vektora. */
   printf("Unesite koordinate vektora a: ");
   for (i=0; i<n; i++)
   {
@@ -34,13 +34,13 @@ int main()
     scanf("%d", &b[i]);
   }
   
-  /* Izracunava se skalarni proizvod po zadataj formuli */
+  /* Izracunava se skalarni proizvod po zadataj formuli. */
   skalarni_proizvod=0;
 
   for (i=0; i<n; i++)
     skalarni_proizvod = skalarni_proizvod + a[i]*b[i];
   
-  /* I ispisuje se njegova vrednost */
+  /* I ispisuje se njegova vrednost. */
   printf("Skalarni proizvod vektora a i b: %d\n",skalarni_proizvod);     
  
   return 0;

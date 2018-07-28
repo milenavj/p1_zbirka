@@ -3,24 +3,22 @@
 
 #define MAX 100
 
-/* Funkcija prebrojava cifre u datom nizu karaktera */
+/* Funkcija prebrojava cifre u datom nizu karaktera. */
 int cifre(char a[], int n)
 {
   int i;
   
-  /* Brojac cifara */
+  /* Brojac cifara. */
   int broj_cifara = 0;
  
-  /* Obilazi se element po element niza */
+  /* Obilazi se element po element niza. */
   for(i=0;i<n;i++){
-    /* Ako je tekuci element cifra */
-    if(isdigit(a[i])){
-      /* Uvecava se broj cifara */
+    /* Ako je tekuci element cifra uvecava se broj cifara. */
+    if(isdigit(a[i]))
       broj_cifara++;
-    }
   }
 
-  /* Vraca se izracunata vrednost */
+  /* Vraca se izracunata vrednost. */
   return broj_cifara;
 }
 
@@ -30,7 +28,7 @@ int main()
   int n;
   int i;
   
-  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost */
+  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost. */
   printf("Unesite broj elemenata niza:");
   scanf("%d", &n);
   if(n<=0 || n>MAX)
@@ -39,17 +37,17 @@ int main()
      return 0;
   }
   
-  /* Ucitavaju se elementi niza */
+  /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza:");
   for(i=0;i<n;i++) {
-    /* Preskace se prethodno uneti znak za novi red */
+   /* Preskace se prethodno uneti znak za novi red. */
    getchar();
    
-   /* A zatim se ucitava sam karakter i smesta u niz */
+   /* A zatim se ucitava sam karakter i smesta u niz. */
    scanf("%c",&a[i]);
   } 
   
-  /* Ispisuje se rezultat poziva funkcije */
+  /* Ispisuje se rezultat poziva funkcije. */
   printf("Broj cifara je: %d\n", cifre(a,n));
   
   return 0;

@@ -50,8 +50,7 @@ int main()
 	
 	brojanje(a, b, n);
 
-	/* Ukoliko se svaki element niza a javlja tacno jednom u nizu a, onda niz a jeste permutacija.
-      Ovo svojstvo se proverava koriscenjem dobijenog niza b. */
+	/* Ukoliko se svaki element niza a javlja tacno jednom u nizu a, onda niz a jeste permutacija. Ovo svojstvo se proverava koriscenjem dobijenog niza b. */
 	for(i=1; i<=n; i++)	
 		if (b[i] != 1)
 		{
@@ -59,8 +58,7 @@ int main()
 			return 0;			
 		}
 
-	/* Ukoliko prethodna petlja nije ranije zavrsena (i nije se izaslo iz programa), onda
-      svaki element niza b je jednak 1, odnosno svaki element se pojavljuje tacno jednom, pa niz a jeste permutacija. */
+	/* Ukoliko prethodna petlja nije ranije zavrsena (i nije se izaslo iz programa), onda svaki element niza b je jednak 1, odnosno svaki element se pojavljuje tacno jednom, pa niz a jeste permutacija. */
 	printf("Uneti niz je permutacija.\n");
 
 	return 0;

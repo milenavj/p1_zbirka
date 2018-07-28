@@ -1,13 +1,3 @@
-/*
-  Napisati funkciju uredi koja uredjuje svoja dva 
-  celobrojna argumenta tako da se u prvom nalazi manji
-  a u drugom veci. Napisati potom glavni program koji
-  ucitava dva cela broja i uredjuje njihove vrednosti
-  primenom napisane funkcije. Na primer, ako su ucitane
-  promenljive x=5 i y=2, njihove vrednosti nakon
-  primene funkcije uredi treba da budu x=2 i y=5. 
-*/
-
 #include <stdio.h>
 
 /*

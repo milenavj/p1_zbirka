@@ -2,18 +2,18 @@
 
 int main()
 {
-  /* Niz u kojem ce se cuvati informacije o pojavljivanju cifara */
+  /* Niz u kojem ce se cuvati informacije o pojavljivanju cifara. */
   int cifre[10];
   
-  /* Niz u kojem ce se cuvati informacije o pojavljivanju malih slova */
+  /* Niz u kojem ce se cuvati informacije o pojavljivanju malih slova. */
   int mala_slova[26];
   
-  /* Niz u kojem ce se cuvati informacije o pojavljivanju velikih slova */
+  /* Niz u kojem ce se cuvati informacije o pojavljivanju velikih slova. */
   int velika_slova[26];
   
   int c, i;
 
-  /* Brojaci se na pocetku inicijalizuju nulama */
+  /* Brojaci se na pocetku inicijalizuju nulama. */
   for(i=0;i<10;i++){
     cifre[i]=0;
   }
@@ -24,20 +24,20 @@ int main()
     velika_slova[i]=0;
   }   
   
-  /* Ucitavaju se karakteri sve do kraja ulaza */
+  /* Ucitavaju se karakteri sve do kraja ulaza. */
   while((c = getchar()) != EOF)
   {
-    /* Ako je procitani karakter veliko slovo ... */
+    /* Ako je procitani karakter veliko slovo uvecava se broj pojavljivanja odgovarajuceg velikog slova. Indeks velikog slova u nizu se odredjuje oduzimanjem slova A. */
     if (c>='A' && c<='Z'){
       velika_slova[c-'A']++;
     }
     else{
-      /* Ako je procitani karakter malo slovo ... */
+      /* Ako je procitani karakter malo slovo uvecava se broj pojavljivanja odgovarajuceg malog slova. */
       if (c>='a' && c<='z'){
         mala_slova[c-'a']++;
       }
       else{
-        /* Ako je procitani karakter cifra ... */
+        /* Ako je procitani karakter cifra uvecava se broj pojavljivanja odgovarajuce cifre. */
         if(c >='0' && c <= '9'){
           cifre[c-'0']++;
         }
@@ -45,7 +45,7 @@ int main()
     }
   }
 
-  /* Ispisuju se trazene informacije */
+  /* Ispisuju se trazene informacije. */
   for(i = 0; i < 10; i++){
     if (cifre[i]!=0)
       printf("Karakter %c se pojavljuje %d puta\n", '0' + i, cifre[i]);  

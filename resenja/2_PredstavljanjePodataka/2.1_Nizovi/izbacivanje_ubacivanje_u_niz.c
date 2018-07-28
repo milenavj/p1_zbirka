@@ -24,13 +24,11 @@ int ubaci_na_pocetak(int niz[], int n, int x)
 {
 	int i;
 
-	/* Prvo se svi elementi niza pomere za jednu poziciju u desno da bi se oslobodio prostor za prvi element niza. 
-      Poslednji element niza se pomera sa pozicije (n-1) na poziciju (n). Slicno se pomeraju i ostali elementi.
-   */
+	/* Prvo se svi elementi niza pomere za jednu poziciju u desno da bi se oslobodio prostor za prvi element niza. Poslednji element niza se pomera sa pozicije (n-1) na poziciju (n). Slicno se pomeraju i ostali elementi. */
 	for(i=n; i>0; i--)
 		niz[i] = niz[i-1];
 
-	/* Sada se na prvu poziciju upisuje novi element. Bitan je redosled naredbi: ako bi prvo bio upisan novi element, a tek onda izvrseno pomeranje, element na poziciji niz[0] bi bio obrisan i ne bi mogao biti upisan na poziciju niz[1]. */
+	/* Na prvu poziciju se upisuje novi element. Bitan je redosled naredbi: ako bi prvo bio upisan novi element, a tek onda izvrseno pomeranje, element na poziciji niz[0] bi bio obrisan i ne bi mogao biti upisan na poziciju niz[1]. */
 	niz[0] = x;
 
 	return n+1;
@@ -46,7 +44,7 @@ int ubaci_na_poziciju(int niz[], int n, int x, int pozicija)
 	for(i=n; i>pozicija; i--)
 		niz[i] = niz[i-1];
 
-	/* Sada se na poziciju upisuje novi element. */
+	/* Na poziciju se upisuje novi element. */
 	niz[pozicija] = x;
 
 	return n+1;
@@ -81,7 +79,7 @@ int brisi_element(int niz[], int n, int x)
 		if (niz[i] == x)
 			break;
 
-	/* Provera da li element postoji u nizu. Ako je brojac stigao do kraja niza, onda element ne postoji u nizu.*/
+	/* Provera da li element postoji u nizu. Ako je brojac stigao do kraja niza, onda element ne postoji u nizu. */
 	if (i == n)
 	{
 		printf("Klijent sa rednim brojem %d ne postoji u nizu.\n", x);

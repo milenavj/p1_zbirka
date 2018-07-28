@@ -33,13 +33,10 @@ int main()
 
 	unos(niz);
 	
-    /* Ideja u resenju je da se krene sa dva kraja niza -- sa pocetka niza i sa kraja i
-       svaki put kada se naidje na elemente koji po parnosti ne odgovaraju delu niza u kome treba da
-       budu, ti elementi se zamene. */
+    /* Ideja u resenju je da se krene sa dva kraja niza -- sa pocetka niza i sa kraja i svaki put kada se naidje na elemente koji po parnosti ne odgovaraju delu niza u kome treba da budu, ti elementi se zamene. */
 	while(i < j && i < DIMENZIJA && j >= 0)
 	{
-		/* Ukoliko elementi na pozicijama i i j su razlicite parnosti,
-           vrsi se razmena tih elemenata niza. */
+		/* Ukoliko elementi na pozicijama i i j su razlicite parnosti, vrsi se razmena tih elemenata niza. */
 		if (niz[i] % 2 != 0 && niz[j] % 2 == 0)
 		{
 			pom = niz[i];
@@ -47,13 +44,11 @@ int main()
 			niz[j] = pom;
 		}
 
-		/* Ukoliko je element na poziciji i paran, prelazi se na sledeci element niza,
-           brojac i se uvecava. */
+		/* Ukoliko je element na poziciji i paran, prelazi se na sledeci element niza, brojac i se uvecava. */
 		if (niz[i] % 2 == 0)
 			i++;
 
-		/* Ukoliko je element na poziciji j neparan, prelazi se na sledeci element niza,
-           brojac j se smanjuje. */
+		/* Ukoliko je element na poziciji j neparan, prelazi se na sledeci element niza, brojac j se smanjuje. */
 		if (niz[j] % 2 != 0)
 			j--;
 	}

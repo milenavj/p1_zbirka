@@ -48,8 +48,7 @@ int main()
 	    if (a[i] < b[j])
 		{
 			c[k] = a[i];
-			/* Kako element niza a je upisan u niz c, uvecava se brojac niza a.
-               Eelement niza b nije upisan u niz c, te brojac za niz b ne treba uvecavati. */
+			/* Kako element niza a je upisan u niz c, uvecava se brojac niza a. Element niza b nije upisan u niz c, te brojac za niz b ne treba uvecavati. */
 			i++;
 		}
 		else
@@ -58,8 +57,7 @@ int main()
 			j++;
 		}
 
-		/* U nizu c na poziciju k je upisan ili a[i] ili b[j].
-           Brojac k se uvecava. */
+		/* U nizu c na poziciju k je upisan ili a[i] ili b[j]. Brojac k se uvecava. */
 		k++;
 	}
 

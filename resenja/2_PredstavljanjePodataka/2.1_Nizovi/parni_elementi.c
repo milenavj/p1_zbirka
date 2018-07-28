@@ -17,14 +17,14 @@ int main()
     return -1;
   }
 
-  /* Ucitavaju se elementi niza */
+  /* Ucitavaju se elementi niza. */
   printf("Unesi elemente niza:\n");
   for (i=0; i<n; i++)
   {
     scanf("%d", &a[i]); 
   }
 
-  /* Ispisuju se elementi niza na parnim pozicijama */
+  /* Ispisuju se elementi niza na parnim pozicijama. */
   printf("Elementi niza na parnim pozicijama:\n");
   for (i=0; i<n; i+=2)
   {
@@ -32,7 +32,7 @@ int main()
   }
   printf("\n");
 
-  /* Ispisuju se parni elementi niza */
+  /* Ispisuju se parni elementi niza. */
   printf("Parni elementi niza:\n");
   for (i=0; i<n; i++){
     if (a[i]%2==0){
