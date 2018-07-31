@@ -1,26 +1,26 @@
 #include <stdio.h>
 
-/* Funkcija koja uklanja broj stotina iz broja n */
+/* Funkcija koja uklanja broj stotina iz broja n. */
 int ukloni_stotine(int n){
   
-  /* Ako je broj izmedju -100 i 100 nema cifru desetica pa onda vracamo isti taj broj */
+  /* Broj izmedju -100 i 100 nema cifru stotina, pa se vraca taj isti broj. */
   if(n>-100 && n<100)
 	return n;
   else
   {
-	/* U suprotnom vracamo broj sa uklonjenom cifrom stotina */
+	/* U suprotnom se vraca broj sa uklonjenom cifrom stotina. */
 
-	/* Odredjujemo znak broja */
+	/* Odredjivanje znaka broja. */
 	int znak=(n<0)? -1 : 1;
 	
-	/* I nadalje radimo sa apsolutnom vrednoscu broja */
+	/* Da bi se izbegle greske menja se apsolutna vrednost broja, a znak se naknadno dodaje pomocu mnozenja. */
 	n=abs(n);
 
 	return znak*((n/1000)*100 + n%100);
   }
 }
 
-/* Funkcija koja vraca znak broja */
+/* Funkcija koja vraca znak broja. */
 int znak(int broj){
   return broj<0?-1:1;
 }
@@ -31,15 +31,15 @@ int main(){
   
   while(1){
 	
-	/* Ucitavamo broj sa standardnog ulaza */
+	/* Unos broja. */
 	printf("Unesite broj: ");
 	scanf("%d", &broj);
 	
-	/* Broj 0 oznacava kraj rada */
+	/* Broj 0 oznacava kraj unosa. */
 	if(broj == 0)
 	  break;
 	
-	/* Ispisujemo rezultat, vodeci racuna da program treba da radi ispravno i za negativne brojeve */
+	/* Poziv funkcije i ispis rezultata. */
 	printf("%d\n", znak(broj)*ukloni_stotine(abs(broj)));
   }
   

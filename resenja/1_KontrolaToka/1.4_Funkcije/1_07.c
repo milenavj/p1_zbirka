@@ -1,21 +1,25 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-int broj_ncifara(int x)
+/* Funkcija odredjuje broj neparnih cifara u zapisu datog celog broja. */
+int broj_neparnih_cifara(int x)
 {
-   int s=0;
+   int broj_neaprnih_cifara=0;
+   /* Pomocna promenljiva u koju se smesta izdvojena cifra. */
    char cifra;
+   /* Posmatra se pozitivna vrednost broja. */
    x = abs(x);
    
    while(x)
    {
+		/* Izdvaja se poslednja cifra broja. */
       cifra = x%10;
-      s+=(cifra%2); /* izraz cifra%2 ima vrednost 1 kada je cifra neparna, 
-                       a 0 kada je cifra parna */
+      /* Moze se izbeci koriscenje naredbe if pomocu narednog izraza. Naime, vrednost izraza cifra%2 je 1 kada je cifra neparna, odnosno 0 kada je parna. Tako ce na broj neparnih cifara biti dodata jednica ako je cifra neparna, a ako je parna bice dodata 0, sto jeste zeljeno ponasanje. */
+      broj_neparnih_cifara+=(cifra%2); 
       x/=10;
    }
    
-   return s;
+   return broj_neparnih_cifara;
 }
 
 int main()

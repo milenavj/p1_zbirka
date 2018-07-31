@@ -63,8 +63,8 @@ funkcije.
 
 \begin{Exercise}[label=p1.4_02] 
 Napisati funkciju \kckod{unsigned int apsolutna\_vrednost(int x)} koja
-izračunava apsolutnu vrednost broja $x$. Napisati program koji
-učitava jedan ceo broj i ispisuje rezultat poziva funkcije.
+izračunava apsolutnu vrednost broja $x$. Napisati program koji učitava
+jedan ceo broj i ispisuje rezultat poziva funkcije.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -332,6 +332,23 @@ vrednosti i testira rad ove funkcije.
 \end{upotreba}
 \end{miditest}
 
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{8 8}#
+#\izlaz{Nekorektan unos.}
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
+#\izlaz{Unesite jedan prirodan broj:}\ulaz{-10}#
+#\izlaz{Nekorektan unos.}#
+\end{upotreba}
+\end{miditest}
+
+
 \linkresenje{v1.4_06}
 \end{Exercise}
 \ifresenja 
@@ -375,52 +392,6 @@ učitava ceo broj i ispisuje rezultat na tri decimale.
 \begin{Answer}[ref=p1.4_11]
 \includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi9/4_11.c}
 \end{Answer} 
-\fi
-
-%TODO ovaj zadatak je bio ponovljen - treba izabrati bolje resenje i boje test primere.
-
-\iffalse
-\begin{Exercise}[label=v1.4_05] 
- Napisati funkciju \kckod{aritmeticka\_sredina(int n)} koja računa
- aritmetičku sredinu cifara datog broja. Napisati program koji učitava
- ceo broj i ispisuje rezultat rada funkcje zaokružen na tri decimale.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{461}#
-#\izlaz{3.667}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1001}#
-#\izlaz{0.500}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-84723}#
-#\izlaz{4.800}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{0}#
-#\izlaz{0.000}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{v1.4_05}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=v1.4_05]
-\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_05.c}
-\end{Answer} 
-\fi
 \fi
 
 \begin{Exercise}[label=v1.4_09] 
@@ -469,11 +440,10 @@ učitava dva cela broja i ispisuje rezultat poziva funkcije.
 
 
 \begin{Exercise}[label=v1.4_07] 
-Napisati funkciju \kckod{int broj\_neparnih\_cifara(int x)} koja određuje broj
-neparnih cifre u zapisu datog celog broja. Testirati rad ove funkcije
-u programu koji učitava cele brojeve dok se ne unese nula i ispisuje
-broj neparnih cifara svakog unetog broja.
-%TODO broj\_neparnih\_cifara --- izmeniti i u resenju
+Napisati funkciju \kckod{int broj\_neparnih\_cifara(int x)} koja
+određuje broj neparnih cifre u zapisu datog celog broja. Testirati rad
+ove funkcije u programu koji učitava cele brojeve dok se ne unese nula
+i ispisuje broj neparnih cifara svakog unetog broja.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -741,7 +711,8 @@ broja $0$ ispisuje odgovarajuće brojeve kojima je uklonjena cifra stotine.
 \begin{Exercise}[label=p1.4_10] 
 Napisati funkciju \kckod{int rotacija(int n)} koja rotira cifre
 zadatog broja za jednu poziciju u levo. Napisati program koji za
-brojeve koji se unose sve do pojave broja $0$ ispisuje odgovarajuće rotirane brojeve.
+brojeve koji se unose sve do pojave broja $0$ ispisuje odgovarajuće
+rotirane brojeve.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -948,15 +919,11 @@ sve srećne brojeve od 1 do $n$. \napomena{Pretpostaviti da je unos korektan.}
 
 
 \begin{Exercise}[label=p1.4_15]
-%\komentarD{izbrisati Amstrongov broj u petljama} 
-%TODO definicija Armstrongovog broja je nesto drugacija, i to treba podesiti i u zadatku i u resenju: An Armstrong number is an n-digit number that is equal to the sum of the nth powers of its digits. https://en.wikipedia.org/wiki/Narcissistic_number
-Broj $a$ je Armstrongov ako je jednak sumi $n$-tih stepena svojih cifara, pri čemu je $n$ broj cifara broja $a$.
-%\begin{enumerate}
-%\item Napisati funkciju \kckod{int stepen(int x, int n)} koja izračunava $n$-ti stepen broja $x$.
-%\item 
-Napisati funkciju \kckod{int armstrong(int x)} koja vraća $1$ ako je broj Armstrongov, odnosno $0$ ako nije.
-%\end{enumerate}
-Napisati program koji za učitani ceo broj proverava da li je Armstrongov.
+Broj $a$ je Armstrongov ako je jednak sumi $n$-tih stepena svojih
+cifara, pri čemu je $n$ broj cifara broja $a$.  Napisati funkciju
+\kckod{int armstrong(int x)} koja vraća $1$ ako je broj Armstrongov,
+odnosno $0$ ako nije.  Napisati program koji za učitani ceo broj
+proverava da li je Armstrongov.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1024,10 +991,9 @@ testira rad napisane funkcije.
 
 \begin{Exercise}[label=p1.4_18]
 %komentarD{Uskladiti sa Fibonacijevim u petljama} 
-%TODO promenila sam povratni tip funkcije u unsigned --- izmeniti resenje ako treba
-Napisati funkciju \kckod{long unsigned fibonaci(int n)} koja računa $n$-ti
-element Fibonačijevog niza. Napisati i program koji učitava ceo broj
-$n\ (0\leq n\leq 50)$ i ispisuje traženi Fibonačijev broj.
+Napisati funkciju \kckod{long unsigned fibonaci(int n)} koja računa
+$n$-ti element Fibonačijevog niza. Napisati i program koji učitava ceo
+broj $n\ (0\leq n\leq 50)$ i ispisuje traženi Fibonačijev broj.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1084,7 +1050,7 @@ funkciju na karakterima koji se unose do pojave znaka \kckod{EOF}.
 \begin{Exercise}[label=p1.4_19] 
 Napisati funkciju \kckod{char sifra(char c, int k)} koja za dati
 karakter $c$ određuje šifru na sledeći način: ukoliko je $c$ slovo,
-šifra je karakter koji se nalazi $k$ pozicija ispred njega u
+šifra je karakter koji se nalazi $k$ pozicija pre njega u
 abecedi. Karakteri koji nisu slova se ne šifruju. Šifrovanje treba da
 bude kružno, što znači da je, na primer, šifra za karakter $b$ i
 pomeraj $2$ karakter $z$. Napisati program koji učitava karakter po
@@ -1160,12 +1126,13 @@ dva cela broja $g1$ i $g2$ i ispisuje sve godine iz intervala $[g1,
 \fi
 
 
-\begin{Exercise}[label=p1.4_] 
+\begin{Exercise}[label=broj_dana_u_mesecu] 
 Napisati funkciju \kckod{int broj\_dana(int mesec, int godina)} koja
 za dati mesec i godinu vraća broj dana u datom mesecu. Napisati
 program koji učitava dva cela broja (mesec i godinu) i ispisuje broj
 dana u datom mesecu. U slučaju nekorektnog unosa ispisati odgovarajuću
-poruku o grešci.
+poruku o grešci. \napomena{Pogledati rešenje zadataka
+  \ref{datum_sledeceg_dana}}.
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -1189,19 +1156,20 @@ poruku o grešci.
 \end{upotreba}
 \end{minitest}
 
-%\linkresenje{p1.4_}
+%\linkresenje{broj_dana_u_mesecu}
 \end{Exercise}
 %\ifresenja 
-%\begin{Answer}[ref=p1.4_]
-%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_08.c}
+%\begin{Answer}[ref=broj_dana_u_mesecu]
+%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/}
 %\end{Answer} 
 %\fi
 
-\begin{Exercise}[label=p1.4_] 
+\begin{Exercise}[label=ispravan_datum] 
 Napisati funkciju \kckod{int ispravan(int dan, int mesec, int godina)}
 koja za dati datum proverava da li je ispravan. Napisati program koji
 učitava tri cela broja (dan, mesec, godinu) i ispisuje da li je datum
-ispravan ili ne.
+ispravan ili ne. \napomena{Pogledati rešenje zadataka
+  \ref{datum_sledeceg_dana}}.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1233,18 +1201,18 @@ ispravan ili ne.
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{p1.4_}
+%\linkresenje{ispravan_datum}
 \end{Exercise}
 %\ifresenja 
-%\begin{Answer}[ref=p1.4_]
+%\begin{Answer}[ref=ispravan_datum]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/praktikumi8/4_.c}
 %\end{Answer} 
 %\fi
 
 
-\begin{Exercise}[label=p1.4_] 
+\begin{Exercise}[label=datum_sledeceg_dana] 
 Napisati funkciju \kckod{void sledeci\_dan(int dan, int mesec, int
-  godina)} koja za dati datum određuje datum sledećeg dana. Napisati
+  godina)} koja za dati datum ispisuje datum sledećeg dana. Napisati
 program koji učitava tri cela broja i ispisuje datum sledećeg dana. 
 
 \begin{miditest}
@@ -1273,23 +1241,24 @@ program koji učitava tri cela broja i ispisuje datum sledećeg dana.
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
-#\izlaz{Datum nije ispravan.}#
+#\izlaz{Uneti datum nije ispravan.}#
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{p1.4_}
+\linkresenje{datum_sledeceg_dana}
 \end{Exercise}
-%\ifresenja 
-%\begin{Answer}[ref=p1.4_]
-%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
-%\end{Answer} 
-%\fi
+\ifresenja 
+\begin{Answer}[ref=datum_sledeceg_dana]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/datum_sledeceg_dana.c}
+\end{Answer} 
+\fi
 
-\begin{Exercise}[label=p1.4_] 
+\begin{Exercise}[label=od_nove_godine] 
 Napisati funkciju \kckod{int od\_nove\_godine(int dan, int mesec, int
   godina)} koja određuje koliko je dana proteklo od Nove godine do
 datog datuma. Napisati program koji učitava tri cela broja i ispisuje
-koliko dana je proteklo od Nove godine.
+koliko dana je proteklo od Nove godine. \napomena{Pogledati rešenje
+  zadataka \ref{broj_dana_izmedju}}.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1321,20 +1290,20 @@ koliko dana je proteklo od Nove godine.
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{p1.4_}
+%\linkresenje{od_nove_godine}
 \end{Exercise}
 %\ifresenja 
-%\begin{Answer}[ref=p1.4_]
+%\begin{Answer}[ref=od_nove_godine]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
 %\end{Answer} 
 %\fi
 
-\begin{Exercise}[label=p1.4_] 
-%\komentar{preimenovala sam funkciju, preimenovati i u resenju}
+\begin{Exercise}[label=do_kraja_godine] 
 Napisati funkciju \kckod{int do\_kraja\_godine(int dan, int mesec, int
   godina)} koja određuje broj dana od datog datuma do kraja
 godine. Napisati program koji učitava tri cela broja i ispisuje broj
-dana do krja godine.
+dana do krja godine. \napomena{Pogledati rešenje zadataka
+  \ref{broj_dana_izmedju}}.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1367,17 +1336,16 @@ dana do krja godine.
 \end{miditest}
 
  
-\linkresenje{p1.4_}
+%\linkresenje{do_kraja_godine}
 \end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_]
+%\ifresenja 
+%\begin{Answer}[ref=do_kraja_godine]
 %\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
-\end{Answer} 
-\fi
+%\end{Answer} 
+%\fi
 
-\begin{Exercise}[label=p1.4_] 
-%\komentar{preimenovala sam funkciju, preimenovati i u resenju}
-Napisati funkciju \kckod{int broj\_dana\_između(int dan1, int mesec1,
+\begin{Exercise}[label=broj_dana_izmedju] 
+Napisati funkciju \kckod{int broj\_dana\_izmedju(int dan1, int mesec1,
   int godina1, int dan2, int mesec2, int godina2)} koja određuje broj
 dana između dva datuma. Napisati program koji učitava šest celih
 brojeva, koji označavaju dva datuma, i na standarni izlaz ispisuje
@@ -1397,7 +1365,7 @@ poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite prvi datum:}\ulaz{26.9.1986.}#
 #\izlaz{Unesite drugi datum:}\ulaz{2.2.1701.}#
-#\izlaz{Broj dana izmedju dva datuma je: 104319}#
+#\izlaz{Broj dana izmedju dva datuma je: 104301}#
 \end{upotreba}
 \end{miditest}
 
@@ -1406,7 +1374,7 @@ poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite prvi datum:}\ulaz{24.8.1998.}#
 #\izlaz{Unesite drugi datum:}\ulaz{12.10.2010.}#
-#\izlaz{Broj dana izmedju dva datuma je: 4432}#
+#\izlaz{Broj dana izmedju dva datuma je: 4440}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1414,15 +1382,15 @@ poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite prvi datum:}\ulaz{24.8.1998.}#
 #\izlaz{Unesite drugi datum:}\ulaz{31.4.2004.}#
-#\izlaz{Ulaz nije ispravan.}#
+#\izlaz{Uneti datum nije ispravan.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.4_}
+\linkresenje{broj_dana_izmedju}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_]
-%\includecode{resenja/1_KontrolaToka/1.4_Funkcije/1_14.c}
+\begin{Answer}[ref=broj_dana_izmedju]
+\includecode{resenja/1_KontrolaToka/1.4_Funkcije/broj_dana_izmedju.c}
 \end{Answer} 
 \fi
 

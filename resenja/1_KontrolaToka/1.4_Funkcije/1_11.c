@@ -7,15 +7,18 @@ int je_stepen(unsigned x, unsigned n)
    int i=1;
    int s=n;
    
+   /* Racuna se stepen broja n sve dok je on manji od x. */
    while(s<x)
    {
       s=s*n;
       i++;
    }
    
+   /* Ukoliko je izracunati stepen jednak broju x onda funkcija vraca izlozilac stepena. */
    if (s==x)
       return i;
    
+   /* U suprotnom vraca -1. */
    return -1;
 }
 

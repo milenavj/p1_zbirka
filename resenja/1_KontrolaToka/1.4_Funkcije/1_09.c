@@ -5,14 +5,20 @@
 int sadrzi(int x, int c)
 {
    char cifra;
+   /* Posmatra se pozitivna vrednost broja. */
    x=abs(x);
+
    while(x)
    {
+	   /* Odredjuje se poslednja cifra broja. */
       cifra = x%10;
+      /* Proverava se da li je poslednja cifra jednaka trazenoj cifri i ako jeste prekida se izvrsavanje funkcije i vraca se 1, kao oznaka da je broj nadjen. */
       if (cifra==c)
          return 1;
+      /* Inace, broj se umanjuje za poslednju cifru i prelazi se na sledecu iteraciju. */
       x/=10;
    }
+   /* Ukoliko se cifra ne nalazi u broju uslov u petlji nikad nece biti ispunjen. */
    return 0;
 }
 int main()

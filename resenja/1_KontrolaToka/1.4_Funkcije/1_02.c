@@ -10,7 +10,7 @@ float stepen(float a, int b)
   for(i=0;i<abs_b;i++)
     s=s*a;
 
-/* ukoliko je izlozilac b negativan, izracunamo a^|b| i vracamo reciprocnu vrednost izracunatog stepena */
+/* Ukoliko je izlozilac b negativan, prvo se izracuna a^|b|, a vraca se reciprocnu vrednost izracunatog stepena. */
   return b>0 ? s : 1/s;   
 }
 

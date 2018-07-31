@@ -1,21 +1,21 @@
 #include<stdio.h>
 
-/* Funkcija koja iscrtava romb */
+/* Funkcija koja iscrtava romb. */
 void romb(int n){
   int i, j;
   
-  /* U svakoj liniji */
+  /* Petlja iscrtava liniju po liniju romba. */
   for(i=0; i<n; i++){
   
-	/* Prvo ispisujemo n-i-1 razmaka */
+	/* U svakoj liniji prvo se ispisuje n-i-1 razmaka. */
 	for(j=0; j<n-i-1; j++)
 	  printf(" ");
 	
-	/* Zatim ispisujemo n zvezdica */
+	/* A zatim se ispisuje n zvezdica. */
 	for(j=0; j<n; j++)
 	  printf("*");
 	
-	/* Na kraju svake linije stoji oznaka za novi red */
+	/* Na kraju svake linije stoji oznaka za novi red. */
 	printf("\n");
   }
   
@@ -24,11 +24,11 @@ void romb(int n){
 int main(){
   int n;
   
-  /* Ucitavamo broj n */
+  /* Ucitava se velicina romba. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
   
-  /* Proveravamo korektnost ulaza i ispisujemo rezultat */
+  /* Proverava se korektnost ulaza i poziva funkcija za iscrtavanje romba. */
   if(n<=0)
 	printf("Greska: pogresna dimenzija!\n");
   else

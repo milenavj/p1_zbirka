@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 
-void ispis(float x, float y, int n) /* funkcija nema povratnu vrednost; zbog toga je povratni tip void */
+/* Funkcija nema povratnu vrednost, zbog toga je povratni tip void. */
+void ispis(float x, float y, int n) 
 {
   float i;
   float korak=(y-x)/(n-1);
@@ -28,8 +29,9 @@ int main()
       printf("Nekorektan unos\n");
       return -1;
   }
-  if (b<a) /* u slucaju da je desni kraj intervala manji od levog */
-  {        /* zamenimo im mesta */
+  /* Kada je desni kraj intervala manji od levog, zamene im se mesta. */
+  if (b<a) 
+  {        
      t=a;
      a=b;
      b=t;

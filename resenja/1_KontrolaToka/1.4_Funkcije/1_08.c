@@ -1,26 +1,26 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Funkcija vraca 1 ako je broj prost i 0 u suprotnom.  */
-int prost (int x) /* 1-broj je prost, 0-broj nije prost */
+/* Funkcija vraca 1 ako je broj prost, a 0 u suprotnom.  */
+int prost (int x) 
 {
   int i;
 
-  if (x==2 || x==3) /* brojevi 2 i 3 su prosti */
+  /* Brojevi 2 i 3 su prosti. */
+  if (x==2 || x==3) 
     return 1;       
       
-  if (x%2==0)       /* parni brojevi nisu prosti */
+  /* Parni brojevi nisu prosti. */
+  if (x%2==0)       
     return 0;
   
-  for (i=3; i<=sqrt(x);i+=2) /* trazimo delioca */
-    if (x%i==0) /* ako je pronadjen, to znaci da broj nije prost */
-      return 0; /* zavrsavamo funkciju */
+  /* Dovoljno je proveravati da li delioc datog broja postoji u intervalu od 3 do korena iz tog broja. */
+  for (i=3; i<=sqrt(x);i+=2) 
+    /* Ako neki broj i deli broj x, onda on nije prost i izlazi se iz funkcije. */
+    if (x%i==0) 
+      return 0; 
 
-  /* ukoliko izvrsavanje funkcije dodje do poslednje naredbe return, 
-     to znaci da broj nije ispunio nijedan od prethodnih uslova 
-     (nije ni 2, ni 3, ni paran, niti ima ijednog delioca), odakle
-     sledi da je prost i zbog toga vracamo 1
-  */      
+  /* Ako ni jedan od prethodnih uslova nije bio ispunjen, to znaci da ni jedan broj ne deli x, pa je on prost. */      
   return 1;
 }
 
@@ -30,16 +30,21 @@ int main()
   scanf("%d",&n);
   int i,j;
   
-  i=1; /* kandidat za prost broj */
-  j=0; /* brojac prostih brojeva */
+  /* Tekuci broj za koji se ispituje da li je prost. */
+  i=1; 
+  /* Brojac prostih brojeva. */
+  j=0; 
   while(j<n)
   {
-     if (prost(i))         /* ako je broj prost */
+     /* Poziva se funkcija da se odredi da li je tekuci broj i prost. */
+     if (prost(i))         
      {
-        printf("%d\n", i); /* stampamo ga i */
-        j++;               /* uvecavamo brojac prostih brojeva */
+        /* Ako jeste, stampa se i uvecava se brojac prostih brojeva. */
+        printf("%d\n", i); 
+        j++;               
      }
-     i++; /* bilo da je i prost ili ne, uvecavamo ga za 1 i nastavljamo sa sledecom iteracijom */
+     /* U narednoj iteraciji ispituje se sledeci broj. */
+     i++; 
   }
   
   return 0;

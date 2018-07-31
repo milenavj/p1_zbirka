@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-/*
-	Funkcija koja racuna minimum tri cela broja
-*/
+/*	Funkcija koja racuna minimum tri cela broja. */
 int min(int x, int y, int z){
   int min;
   
+  /* Pretpostvka je da je minimum broj x. Potom se minimum poredi sa druga dva broja i ukoliko pretpostavka nije dobra, vrednost minimuma se menja. */
   min=x;
   
   if(min>y) 
@@ -20,11 +19,11 @@ int min(int x, int y, int z){
 int main(){
   int x,y,z;
 	
-  /* Ucitavamo brojeve */
+  /* Unose se tri broja. */
   printf("Unesite brojeve: ");
   scanf("%d%d%d", &x, &y, &z);
   
-  /* Pozivamo funkciju i ispisujemo rezultat */
+  /* Poziv funkcije i ispis rezultata. */
   printf("Minimum je: %d\n", min(x,y,z));
 	
   return 0;

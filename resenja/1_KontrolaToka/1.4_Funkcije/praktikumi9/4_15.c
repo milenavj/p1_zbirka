@@ -1,10 +1,9 @@
 #include <stdio.h>
 
-/* Funkcija racuna broj x na n-ti stepen */
+/* Funkcija racuna broj x na n-ti stepen. */
 int stepen(int x, int n) {
 
   int i; 
-  /* Promenljiva u kojoj se cuva proizvod broja x sa samim sobom, n puta */
   int st = 1;
   
   for(i = 1; i <= n; i++)
@@ -13,44 +12,38 @@ int stepen(int x, int n) {
   return st;
 }
 
+/* Funkcija odredjuje broj cifara broja. */
+int broj_cifara(int x)
+{
+	int i=0;
+
+	while(x)
+	{
+		i++;
+		x /= 10;
+	}
+
+	return i;
+}
+
 /* Funkcija proverava da li je broj Armstrongov. */
 int armstrong(int x) {
 
-  /* u y se cuva zbir i-tih stepena cifara */
-  int y;
-  /* stepen za koji se proverava */
-  int i = 1; 
-  /* prilikom izdvajanja cifara, broj x se menja, 
-   * te treba imati promenlju koja cuva pravu vrednost x 
-   */
-  int original = x; 
-  
-  do {
-    
-    y = 0;
-    /* Racunamo i-te stepene za svaku cifru,
-     * i istovremeno te stepen sabiramo.
-     * Rezultat pamtimo u promenljivoj y.
-     */
-    while(x) {
-    
-      y += stepen(x % 10, i);
-      x /= 10;
-    }
-    
-    /* x je sada promenjen, pa ga treba vratiti na pravu vrednost. */
-    x = original;
-    i++;
-    
-  } while(y < x); /* Petlju vrtimo sve dok je zbir stepena cifara manji od datog broja. */
-  
-  /* Ukoliko smo nasli i, takvo da je zbir i-tih stepena cifara
-   * jednak upravo broju x, takav broj je Armstrongov,
-   * te izraz x == y vraca 1.
-   * 
-   * Inace, vraca 0, tj. broj nije Armstrongov.
-   */
-  return x == y;
+	/* U y se cuva zbir i-tih stepena cifara. */
+	int suma = 0;
+	/* Stepen za koji se proverava. */
+	int i = broj_cifara(x); 
+	/* Prilikom izdvajanja cifara, broj x se menja i zato se koristi dodatna promenljiva u kojoj se cuva vrednost x pre promena. */
+	int original = x; 
+ 
+	while(x) {
+      /* Za svaku izdvojenu cifru racuna se stepen i dodaje na ukupnu sumu. */
+		suma += stepen(x % 10, i);
+		x /= 10;
+	}
+
+   /* Nakon rada petlje x je postao 0 pa se zato poredjenje vrsi sa pomocnom promenljivom. Ukoliko je broj Armstrongov izracunata suma i originalan broj su jednaki. */
+	return original == suma;
 }
 
 int main() {

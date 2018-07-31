@@ -3,38 +3,30 @@
 
 int rotacija(int n){
   
-  /* U promenljivoj broj pamtimo originalnu vrednost n */
   int broj, br = 0, znak;
   
-  /* Odredjujemo znak broja */
+  /* Ako je broj jednocifren, nema potrebe da se rotira. */
+  if(n>-10 && n < 10)
+	 return n;
+
+  /* Odredjivanje znaka broja. */
   znak=(n<0) ? -1: 1; 
   
-  /* I nadalje radimo sa apsolutnom vrednoscu broja */
+  /* Nadalje se radi sa apsolutnom vrednoscu broja. */
   n=abs(n);
   
-  /* U promenljivoj broj cuvamo kopiju broja n */
+  /* U promenljivoj broj se cuva kopija broja n. */
   broj=n;
-
-  /* Ako je broj jednocifren, nema potrebe da ga rotiramo. */
-  if(n>-10 && n < 10)
-	  return n;
   
-  /* Petljom izdvajamo cifru po cifru, kako bismo dosli do krajnje leve cifre broja
-   (one koja treba da postane krajnje desna), npr za n = 1234, treba da dobijemo 1,
-   zatim da "pomerimo" 234 u levo i da na kraj nalepimo 1 = 2341 */
+  /* Izdvaja se cifra po cifra, sve do krajnje leve cifre broja (one koja treba da postane krajnje desna), npr za n = 1234, treba da se izdvoji prvi broj = 1 i ostatak = 234, a zatim na kraj ostataka treba dodati prvu cifru = 2341. */
   
-  /* Na kraju ove petlje, u n se nalazi najlevlja cifra broja (koja treba da postane krajnje desna),
-   dok se u br nalazi broj cifara unetog broja */
+  /* Nakon zavrsetka ove petlje, u parametru n se nalazi najlevlja cifra broja (koja treba da postane krajnje desna), dok se u parametru br nalazi broj cifara unetog broja. */
   while(n >=10){
 	  n/=10;
 	  br++;
   }
   
-  /* 
-   Levi deo (234) dobijamo kao n%(10^broj_cifara)
-   Zatim levi deo pomnozimo sa 10, da bi dobili 2340
-   Zatim na levi deo dodamo desni deo (1) koja se nalazi u promenljivoj n
-   */
+  /* Ostatak (234) se dobija kao n%(10^broj_cifara). Zatim se ostatak pomnozi sa 10, da bi se broj uvecao za jednu, poslednju cifru (2340). Na kraju, na dobijeni broj se doda (sabre) prvi broj koji se nalazi u parametru n. */
    
   return znak* ((broj%(int)pow(10, br))*10 + n);
 }
@@ -44,15 +36,15 @@ int main(){
   int n;
   while(1){
 	
-	/* Ucitavamo broj */
+	/* Unos broja. */
 	printf("Unesite broj: ");
 	scanf("%d", &n);
 	
-	/* Ako je uneta 0, izlazimo iz petlje */
+	/* Broj 0 oznacava kraj unosa. */
 	if(n == 0)
 	  break;
 	
-	/* Stampamo broj rotiran za jedno mesto u levo */
+	/* Poziv funkcije i stampanje broja rotiranog za jedno mesto u levo. */
 	printf("%d\n", rotacija(n));
   }
   

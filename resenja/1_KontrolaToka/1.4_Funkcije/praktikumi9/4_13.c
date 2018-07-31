@@ -1,10 +1,6 @@
 #include <stdio.h>
 
-/* Funkcija racuna faktorijel broja.
- * Faktorijel formiramo mnozenjem sa trenutnom vrednoscu broja x,
- * a zatim smanjujuci tu vrednost za 1.
- * Ukoliko je x = 5, f = 5 * 4 * 3 * 2 * 1
- */
+/* Funkcija racuna faktorijel broja. */
 int faktorijel(int x) {
 
   int f = 1;
@@ -22,16 +18,7 @@ int main() {
   printf("Unesite dva broja: ");
   scanf("%d%d", &x, &y);
   
-  /* Provera uslova.
-   * 
-   * Faktorijel je veoma brza funkcija, tj.
-   * s povecanjem broja x, drasticno brzo uvecava se i vrednost x!.
-   * Tip podatka int ima ogranicenje u velicini broja koji moze da sadrzi.
-   * Za 13! i vece, int ne bi mogao da sacuva sve cifre potrebne za zapis tako velikog broja,
-   * te bi doslo do prekoracenja.
-   * 
-   * Slicno, faktorijel nije definisan nad skupom negativnih celih brojeva.
-   */
+  /* Faktorijel je funkcija koja veoma brzo raste, tj. s povecanjem broja x, drasticno brzo uvecava se i vrednost x!. Tip podatka int ima ogranicenje u velicini broja koji moze da sadrzi. Za 13! i vece, int ne bi mogao da sacuva sve cifre potrebne za zapis tako velikog broja, te bi doslo do prekoracenja. Faktorijel nije definisan nad skupom negativnih celih brojeva. */
   if(x < 0 || y < 0 || x > 12 || y > 12) {
     printf("Greska: pogresan unos!\n");
   }

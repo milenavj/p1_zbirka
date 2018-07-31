@@ -1,23 +1,8 @@
-/*
-. a) Napisati funkciju 
-
-	int konverzija (int c)
-
-koja prebacuje veliko slovo u ekvivalentno malo i obrnuto.
-
-b) Napisati program koji omogucava korisniku da unese niz karaktera
-sa tastature, a potom ispisuje uneseni niz konvertovanih karaktera.
-Na primer, za uneti tekst "Kolokvijum iz Prog1 je 1.12." program
-treba da ispise "kOLOVKIJUM IZ pROG1 JE 1.12."
-
-*/
 #include <stdio.h>
 
+/* Funkcija konvertuje malo slovo u veliko ili veliko slovo u malo, ostali karakteri su nepromenjeni. U resenju zadatka se mogu koristiti i ugradjene funkcije islower, isupper, tolower i toupper (procitati vise o njima na man stranama). Funkcije pripadaju zaglavlju ctype.h. Za vezbu napisati resenje koriscenjem ugradjenih funkcija. */
 int konverzija(int c)
 {
-  /* kljucna rec return vraca povratnu vrednost funkcije (ako je ima) */
-  /* i zavrsava izvrsavanje funkcije */
-
   if (c>='A' && c<='Z')
     return c+'a'-'A';
 
@@ -31,9 +16,10 @@ int main()
 {
   int c;
 
-  while((c=getchar())!=EOF)  /* korisnik unosi karakter po karakter do konstante EOF */
-    putchar(konverzija(c));  /* funkcija putchar ispisuje jedan 
-                                karakter na standardni izlaz */
+  /* Korisnik unosi karakter po karakter do konstante EOF. */
+  while((c=getchar())!=EOF)  
+    /* Poziva se funkcija koja menja karakter i novodobijeni karakter se ispisuje sa funkcijom putchar. */
+    putchar(konverzija(c));  
 
   return 0;
 }

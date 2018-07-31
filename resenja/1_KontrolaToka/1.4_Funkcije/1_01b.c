@@ -2,13 +2,7 @@
 
 int kub(int a)
 {
-   /*
-      u listi argumenata funkcije mozemo, a ne moramo, imati promenljivu
-      istog naziva kao promenljiva koja je deklarisana u main funkciji
-      (u ovom slucaju promenljiva a); ova promenljiva se razlikuje
-      od promenljive a deklarisane u main funkciji i vidljiva je
-      samo unutar funkcije kub      
-   */
+   /* U listi argumenata funkcije moze, a ne mora, postojati promenljiva istog naziva kao promenljiva koja je deklarisana u main funkciji (u ovom slucaju promenljiva a). Ova promenljiva se razlikuje od promenljive a deklarisane u main funkciji i vidljiva je samo unutar funkcije kub. */
    return a*a*a;
 }
 
@@ -18,7 +12,8 @@ int main()
    printf("Unesi ceo broj:");
    scanf("%d",&a);
    
-   kb = kub(a);     /* promenljivoj kb dodeljujemo povratnu vrednost funkcije kub */
+   /* Promenljivoj kb se dodeljuje povratna vrednost funkcije kub. */
+   kb = kub(a);     
    
    printf("Kub broja %d je %d\n", a, kb);
    return 0;
