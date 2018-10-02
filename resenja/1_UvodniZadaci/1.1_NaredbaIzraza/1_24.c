@@ -3,21 +3,22 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   float a, b, c;
   float obim, s, povrsina;
 
-  /* Ucitavamo potrebne podatke */
+  /* Ucitavaju se duzine stranica. */
   printf("Unesite duzine stranica trougla: ");
   scanf("%f%f%f", &a, &b, &c);
 
-  /* Obim */
+  /* Racuna se obim. */
   obim = a + b + c;
 
-  /* Povrsina - koristicemo Heronov obrazac */
+  /* Racuna se povrsina koriscenjem Heronovog obrasca. */
   s = obim / 2;
   povrsina = sqrt(s * (s - a) * (s - b) * (s - c));
 
-  /* Ispisujemo trazene vrednosti */
+  /* Ispis rezultata. */
   printf("Obim: %.2f\n", obim);
   printf("Povrsina: %.2f\n", povrsina);
 

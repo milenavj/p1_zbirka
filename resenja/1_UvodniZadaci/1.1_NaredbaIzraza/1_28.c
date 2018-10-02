@@ -3,10 +3,11 @@
 
 int main()
 {
-  unsigned x, p;
+  /* Deklaracija potrebnih promenljivih. */
+  unsigned int x, p;
   char c;
-  unsigned levo, desno;
-  unsigned novo_x;
+  unsigned int levo, desno;
+  unsigned int novo_x;
 
   /* Ucitavamo potrebne vrednosti. Sa unosom podataka tipa char
      moramo biti pazljivi i o tome ce vise biti reci u narednim
@@ -21,11 +22,16 @@ int main()
      spojeno, tada ih prilikom unosa mozemo razdvojiti bilo kojim
      karakterom. Zbog toga blanko znakove u format stringu funkcije 
      scanf treba izbegavati i ovo je redak slucaj kada je njihova
-     upotreba opravdana.
+     upotreba opravdana.Kada ucitavamo karaktersku promenljivu, njena numericka
+     vrednost je jednaka ASCII kodu unetog karaktera. Na primer,
+     ako karakter '0' ucitamo u promenljivu c, njena numericka
+     vrednost bice 48. Da bismo pretvorili ovu numericku vrednost u 
+     numericku vrednost koja odgovara cifri, od nje oduzimamo ASCII 
+     kod karakterske konstante '0' koji iznosi upravo 48. 
 
      Ako zelimo da odstampamo znak ", u format stringu funkcije
      printf navodimo \". */
-  printf("Unesite vrednosti u formatu \"x p c\": ");
+  printf("Unesite redom x, p i c: ");
   scanf("%u %u %c", &x, &p, &c);
 
   /* Kada ucitavamo karaktersku promenljivu, njena numericka
@@ -36,21 +42,19 @@ int main()
      kod karakterske konstante '0' koji iznosi upravo 48. */
   c = c - '0';
 
-  /* Odredjujemo deo broja koji se nalazi desno od pozicije p */
-  desno = x % (unsigned) pow(10, p);
+  /* Racuna se deo broja koji se nalazi desno od pozicije p. */
+  desno = x % (unsigned int) pow(10, p);
 
-  /* Odredjujemo deo broja koji se nalazi levo od pozicije p */
-  levo = x / (unsigned) pow(10, p);
+  /* Racuna se deo broja koji se nalazi levo od pozicije p. */
+  levo = x / (unsigned int) pow(10, p);
 
-  /* Odredjujemo novi broj */
-  novo_x =
-      levo * (unsigned) pow(10, p + 1) + 
-         c * (unsigned) pow(10, p) + desno;
+  /* Rezultat se racuna nadovezivanjem levog dela, cifre c i desnog dela. */
+  novo_x =levo * (unsigned int) pow(10, p + 1) + 
+         c * (unsigned int) pow(10, p) + desno;
 
-  /* Ispisujemo dobijenu vrednost */
+  /* Ispisuje se dobijena vrednost. */
   printf("Rezultat je: %u\n", novo_x);
 
-  /* Zavrsavamo sa programom */
   return 0;
 
 }

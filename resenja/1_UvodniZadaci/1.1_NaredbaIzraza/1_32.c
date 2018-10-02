@@ -2,18 +2,22 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   float a, b, rez;
   float min, max;
+  
+  /* Ucitavaju se dva realna broja. */
   printf("Unesite dva realna broja:");
   scanf("%f%f", &a, &b);
 
-  /* Odredjujemo minimalnu i maksimalnu vrednost unetih brojeva */
+  /* Racunaju se minimalna i maksimalna vrednost unetih brojeva. */
   min = (a < b) ? a : b;
   max = (a > b) ? a : b;
 
-  /* Racunamo vrednost promenljive rez */
+  /* Racuna se vrednost rezultata. */
   rez = (min + 0.5) / (1 + max * max);
 
+  /* Ispis rezultata. */
   printf("Rezultat je %.2f\n", rez);
 
   return 0;

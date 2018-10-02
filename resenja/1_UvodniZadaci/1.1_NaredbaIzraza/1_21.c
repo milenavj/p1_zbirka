@@ -2,23 +2,23 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   float a, b;
   float obim, povrsina;
 
-  /* Ucitavamo potrebne podatke */
+  /* Ucitavaju se duzine stranica pravougaonika. */
   printf("Unesite duzine stranica pravougaonika: ");
   scanf("%f%f", &a, &b);
 
-  /* Obim */
+  /* Izracunava se obim pravougaonika. */
   obim = 2 * (a + b);
 
-  /* Povrsina */
+  /* Izracunava se povrsina pravougaonika. */
   povrsina = a * b;
 
-  /* Ispisujemo trazene vrednosti */
+  /* Ispis rezultata na dve decimale. */
   printf("Obim: %.2f\n", obim);
   printf("Povrsina: %.2f\n", povrsina);
 
-  /* Zavrsavamo sa programom */
   return 0;
 }
