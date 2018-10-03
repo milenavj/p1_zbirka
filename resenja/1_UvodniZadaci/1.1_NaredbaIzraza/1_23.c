@@ -10,7 +10,7 @@ int main()
   printf("Unesite duzinu stranice trougla:");
   scanf("%f", &a);
 
-  /* Racuna se obim i povrsina. */
+  /* Racunaju se obim i povrsina. */
   O = 3 * a;
   P = (a * a * sqrt(3)) / 4;
 

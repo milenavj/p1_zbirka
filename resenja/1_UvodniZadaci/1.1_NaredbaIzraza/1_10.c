@@ -5,11 +5,8 @@ int main()
   /* Deklaracija promenljive u koju ce se upisati pozitivan trocifren broj. */
   unsigned int x;
 
-  /* Promenljive koje cuvaju cifre treba da budu najmanjeg celobrojnog tipa jer nece sadrzati druge vrednosti osim jednocifrenih celih brojeva. 
-    Zbog toga se koristi tip char. */
-  char cifra_jedinice;
-  char cifra_desetice;
-  char cifra_stotine;
+  /* Promenljive koje cuvaju cifre treba da budu najmanjeg celobrojnog tipa jer nece sadrzati druge vrednosti osim jednocifrenih celih brojeva. Zbog toga se koristi tip char. */
+  char cifra_jedinice, cifra_desetice, cifra_stotine;
 
   /* Ucitava se trocifren broj. */
   printf("Unesite trocifreni broj:");

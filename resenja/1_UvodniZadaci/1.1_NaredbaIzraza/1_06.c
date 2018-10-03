@@ -3,9 +3,7 @@
 int main()
 {
   /* Deklaracija promenljivih cija je vrednost neoznacen ceo broj. */
-  unsigned int cena;
-  unsigned int kolicina;
-  unsigned int iznos;
+  unsigned int cena, kolicina, iznos;
   unsigned int kusur;
 
   /* Ucitavaju se vrednosti cene, kolicine i iznosa. */
