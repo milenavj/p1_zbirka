@@ -6,11 +6,11 @@ int main()
   int x, y, rezultat;
 
   /* Ucitava se vrednost broja x. */
-  printf("Unesite vrednost celobrojne promenljive x: ");
+  printf("Unesite vrednost promenljive x: ");
   scanf("%d", &x);
 
   /* Ucitava se vrednost broja y. */
-  printf("Unesite vrednost celobrojne promenljive y: ");
+  printf("Unesite vrednost promenljive y: ");
   scanf("%d", &y);
 
   /* I nacin ispisa: dodela zbira x+y promenljivoj rezultat i 

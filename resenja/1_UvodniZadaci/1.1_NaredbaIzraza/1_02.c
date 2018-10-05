@@ -2,7 +2,7 @@
 
 int main()
 {
-  /* Deklaracija celobrojne promenljive u koju ce biti upisan uneti broj. */
+  /* Deklaracija celobrojne promenljive. */
   int n;
 
   /* Ucitava se vrednost celog broja. */

@@ -25,7 +25,7 @@ int main()
      as=((float)(a+b+c))/3; */
 
   /* Ispis rezultata. */
-  printf("Aritmeticka sredina unetih brojeva je %.2f\n", as);
+  printf("Aritmeticka sredina:  %.2f\n", as);
   
   return 0;
 }

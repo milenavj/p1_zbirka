@@ -7,7 +7,7 @@ int main()
   float a, P, O;
 
   /* Ucitava se duzina stranice. */
-  printf("Unesite duzinu stranice trougla:");
+  printf("Unesite duzinu stranice trougla: ");
   scanf("%f", &a);
 
   /* Racunaju se obim i povrsina. */

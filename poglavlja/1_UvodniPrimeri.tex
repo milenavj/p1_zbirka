@@ -62,15 +62,15 @@ Napisati program za uneti ceo broj ispisuje njegov kvadrat i njegov kub.
 
 
 \begin{Exercise}[label=UZ_NI_03] 
-Napisati program koji za uneta dva cela broja ispisuje njihov zbir, razliku, proizvod, 
+Napisati program koji za uneta dva cela broja $x$ i $y$ ispisuje njihov zbir, razliku, proizvod, 
 ceo deo pri deljenju prvog broja drugim brojem i ostatak pri deljenju prvog broja drugim brojem. 
-\napomena{Pretpostaviti da je unos korektan, tj.~da druga uneta vrednost nije 0.}
+\napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite vrednost celobrojne promenljive x:}\ulaz{7}#
-#\izlaz{Unesite vrednost celobrojne promenljive y:}\ulaz{2}#
+#\izlaz{Unesite vrednost promenljive x:}\ulaz{7}#
+#\izlaz{Unesite vrednost promenljive y:}\ulaz{2}#
 #\izlaz{7 + 2 = 9}#
 #\izlaz{7 - 2 = 5}#
 #\izlaz{7 * 2 = 14}#
@@ -81,8 +81,8 @@ ceo deo pri deljenju prvog broja drugim brojem i ostatak pri deljenju prvog broj
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite vrednost celobrojne promenljive x:}\ulaz{-3}#
-#\izlaz{Unesite vrednost celobrojne promenljive y:}\ulaz{8}#
+#\izlaz{Unesite vrednost promenljive x:}\ulaz{-3}#
+#\izlaz{Unesite vrednost promenljive y:}\ulaz{8}#
 #\izlaz{-3 + 8 = 5}#
 #\izlaz{-3 - 8 = -11}#
 #\izlaz{-3 * 8 = -24}#
@@ -103,8 +103,8 @@ ceo deo pri deljenju prvog broja drugim brojem i ostatak pri deljenju prvog broj
 
 
 \begin{Exercise}[label=UZ_NI_04]
-Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate cene dva kupljena artikla. 
-\napomena{Pretpostaviti da su cene artikala pozitivni celi brojevi i da je unos korektan.}
+Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate cene dva kupljena artikla. Cene artikala su pozitivni celi brojevi.
+\napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -138,7 +138,8 @@ tip promenljivih za artikle treba da bude \kckod{unsigned int}.
 \begin{Exercise}[label=UZ_NI_05]
 Napisati program koji za unetu količinu jabuka u kilogramima i unetu
 cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. 
-\napomena{Pretpostaviti da je cena jabuka pozitivan ceo broj i da je unos korektan.} 
+Obe ulazne vrednosti su pozitivni celi brojevi.
+\napomena{Pretpostaviti da je unos ispravan.} 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -170,20 +171,22 @@ Zbog pretpostavke da su cene artikala pozitivni celi brojevi, tip promenljivih z
 \begin{Exercise}[label=UZ_NI_06] 
 Napisati program koji pomaže kasirki da obračuna kusur koji treba da vrati kupcu. 
 Za unetu cenu artikla, količinu artikla i iznos koji je kupac dao, program treba da 
-ispiše vrednost kusura. \napomena{Pretpostaviti da su cene svih artikala pozitivni celi brojevi, 
-kao i da su unete vrednosti ispravne, tj.~da se može vratiti kusur.}
+ispiše vrednost kusura. Sve ulazne vrednosti su pozitivni celi brojevi. 
+\napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite cenu, kolicinu i iznos:}\ulaz{132 2 500}#
+#\izlaz{Unesite cenu, kolicinu i iznos:}#
+#\ulaz{132 2 500}#
 #\izlaz{Kusur je 236 dinara.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite cenu, kolicinu i iznos:}\ulaz{59 6 2000}#
+#\izlaz{Unesite cenu, kolicinu i iznos:}#
+#\ulaz{59 6 2000}#
 #\izlaz{Kusur je 1646 dinara.}#
 \end{upotreba}
 \end{miditest}
@@ -232,12 +235,12 @@ Napisati program koji za uneta vremena poletanja i sletanja aviona ispisuje duž
 
 
 \begin{Exercise}[label=UZ_NI_08] 
-Date su dve celobrojne promenljive. Napisati program koji razmenjuje njihove vrednosti.
+Date su dve celobrojne promenljive $x$ i $y$. Napisati program koji razmenjuje njihove vrednosti.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dve celobrojne vrednosti:}\ulaz{5 7}#
+#\izlaz{Unesite vrednosti x i y:}\ulaz{5 7}#
 #\izlaz{Pre zamene: x=5, y=7}#
 #\izlaz{Posle zamene: x=7, y=5}#
 \end{upotreba}
@@ -245,7 +248,7 @@ Date su dve celobrojne promenljive. Napisati program koji razmenjuje njihove vre
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dve celobrojne vrednosti:}\ulaz{237 -592}#
+#\izlaz{Unesite vrednosti x i y:}\ulaz{237 -592}#
 #\izlaz{Pre zamene: x=237, y=-592}#
 #\izlaz{Posle zamene: x=-592, y=237}#
 \end{upotreba}
@@ -268,14 +271,14 @@ promenljive}.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dve celobrojne vrednosti:}\ulaz{5 7}#
+#\izlaz{Unesite vrednosti a i b:}\ulaz{5 7}#
 #\izlaz{Nove vrednosti su: a=12, b=-2}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dve celobrojne vrednosti:}\ulaz{237 -592}#
+#\izlaz{Unesite vrednosti a i b:}\ulaz{237 -592}#
 #\izlaz{Nove vrednosti su: a=-355, b=829}#
 \end{upotreba}
 \end{miditest}
@@ -669,7 +672,7 @@ Napisati program koji za unetu realnu vrednost dužine poluprečnika kruga ispis
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite duzinu poluprecnika kruga:}\ulaz{4.2}#
+#\izlaz{Unesite poluprecnik:}\ulaz{4.2}#
 #\izlaz{Obim: 26.39}#
 #\izlaz{Povrsina: 55.42}#
 \end{upotreba}
@@ -677,7 +680,7 @@ Napisati program koji za unetu realnu vrednost dužine poluprečnika kruga ispis
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite duzinu poluprecnika kruga:}\ulaz{14.932}#
+#\izlaz{Unesite poluprecnik:}\ulaz{14.932}#
 #\izlaz{Obim: 93.82}#
 #\izlaz{Povrsina: 700.46}#
 \end{upotreba}
@@ -696,6 +699,7 @@ Napisati program koji za unetu realnu vrednost dužine poluprečnika kruga ispis
 Napisati program koji za unetu realnu vrednost dužine stranice jednakostraničnog trougla 
 ispisuje njegov obim i površinu zaokružene na dve decimale. 
 \napomena{Pretpostaviti da je unos ispravan.}
+\uputstvo{Za računanje korena broja koristiti funkciju \kckod{sqrt} čija se deklaracija nalazi u zaglavlju \kckod{math.h}.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -730,7 +734,8 @@ njegov obim i površinu zaokružene na dve decimale.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite duzine stranica trougla:}\ulaz{3 4 5}#
+#\izlaz{Unesite duzine stranica trougla:}#
+#\ulaz{3 4 5}#
 #\izlaz{Obim: 12.00}#
 #\izlaz{Povrsina: 6.00}#
 \end{upotreba}
@@ -738,7 +743,8 @@ njegov obim i površinu zaokružene na dve decimale.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite duzine stranica trougla:}\ulaz{4.3 9.7 8.8}#
+#\izlaz{Unesite duzine stranica trougla:}#
+#\ulaz{4.3 9.7 8.8}#
 #\izlaz{Obim:  22.80}#
 #\izlaz{Povrsina: 18.91}#
 \end{upotreba}
@@ -796,14 +802,14 @@ Napisati program koji za tri uneta cela broja ispisuje njihovu artimetičku sred
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite tri cela broja:}\ulaz{11 5 4}#
-#\izlaz{Aritmeticka sredina unetih brojeva je 6.67}#
+#\izlaz{Aritmeticka sredina: 6.67}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite tri cela broja:}\ulaz{3 -8 13}#
-#\izlaz{Aritmeticka sredina unetih brojeva je 2.67}#
+#\izlaz{Aritmeticka sredina: 2.67}#
 \end{upotreba}
 \end{miditest}
 
@@ -818,11 +824,11 @@ Napisati program koji za tri uneta cela broja ispisuje njihovu artimetičku sred
 
 \begin{Exercise}[label=UZ_NI_27] 
 Napisati program koji pomaže moleru da izračuna površinu zidova prostorije koju treba da okreči. 
-Za unete dimenzije sobe u metrima (dužinu, širinu i visinu), program treba da ispiše površinu zidova 
+Za unete celobrojne vrednosti dimenzije sobe u metrima (dužinu, širinu i visinu), program treba da ispiše površinu zidova 
 za krečenje pod pretpostavkom da na vrata i prozore otpada oko 20\%. 
-Omogućiti i da na osnovu unete cene usluge po kvadratnom metru program izračuna ukupnu cenu krečenja. 
+Omogućiti i da na osnovu unete celobrojene cene usluge po kvadratnom metru program izračuna ukupnu cenu krečenja. 
 Sve realne vrednosti ispisati zaokružene na dve decimale. 
-\napomena{Podrazumevati da su dimenzije sobe i cena krečenja po kvadratu pozitivni celi brojevi i da je unos ispravan.}
+\napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -852,12 +858,9 @@ Sve realne vrednosti ispisati zaokružene na dve decimale.
 
 
 \begin{Exercise}[label=UZ_NI_28] 
-Napisati program koji za unete pozitivne cele brojeve $x$, $p$ i $c$ ispisuje broj 
-koji se dobija ubacivanjem cifre $c$  u broj $x$ na poziciju $p$. 
-\napomena{Podrazumevati da je unos ispravan, tj.~da je broj $p$ manji od ukupnog 
-broja cifara broja $x$. Numeracija cifara počinje od nule, odnosno cifra najmanje 
-težine nalazi se na nultoj poziciji.} 
-\uputstvo{Koristiti funkciju \kckod{pow} iz \kckod{math.h} biblioteke.}
+Napisati program koji za unete pozitivne cele brojeve $x$, $p$ i $c$ ispisuje broj koji se dobija ubacivanjem cifre $c$  u broj $x$ na poziciju $p$. Pretpostaviti da numeracija cifara počinje od nule, odnosno da se cifra najmanje težine nalazi se na nultoj poziciji.
+\napomena{Pretpostaviti da je unos ispravan.} 
+\uputstvo{Koristiti funkciju \kckod{pow} čija se deklaracija nalazi u zaglavlju \kckod{math.h}.}
 
 \begin{miditest}
 \begin{upotreba}{1}

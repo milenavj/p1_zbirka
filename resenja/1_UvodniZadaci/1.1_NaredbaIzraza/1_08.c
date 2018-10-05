@@ -7,7 +7,7 @@ int main()
   int p;
 
   /* Ucitavaju se vrednosti x i y. */
-  printf("Unesite dve celobrojne vrednosti:");
+  printf("Unesite vrednosti x i y: ");
   scanf("%d%d", &x, &y);
 
   /* Ispis vrednosti promenljivih pre zamene. */

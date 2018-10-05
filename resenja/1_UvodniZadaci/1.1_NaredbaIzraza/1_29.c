@@ -7,7 +7,7 @@ int main()
   int rezultata, rezultatb, rezultatc;
 
   /* Ucitavaju se dva cela broja. */
-  printf("Unesite dva cela broja:");
+  printf("Unesite dva cela broja: ");
   scanf("%d%d", &a, &b);
 
   /* Izraz a != b ima vrednost 1 ako je ova relacija tacna, a 0 ako

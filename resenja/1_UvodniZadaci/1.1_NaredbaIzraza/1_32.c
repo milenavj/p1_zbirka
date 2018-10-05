@@ -7,7 +7,7 @@ int main()
   float min, max;
   
   /* Ucitavaju se dva realna broja. */
-  printf("Unesite dva realna broja:");
+  printf("Unesite dva realna broja: ");
   scanf("%f%f", &a, &b);
 
   /* Racunaju se minimalna i maksimalna vrednost unetih brojeva. */

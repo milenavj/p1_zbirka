@@ -9,7 +9,7 @@ int main()
   /* Ucitavaju se brojevi n i m. */
   printf("Unesite pozitivan ceo broj: ");
   scanf("%u", &n);
-  printf("Unesite pozitivan dvocifreni broj:");
+  printf("Unesite pozitivan dvocifreni broj: ");
   scanf("%u", &m);
 
   /* Levi deo rezultata su sve cifre levo od cifre stotina.

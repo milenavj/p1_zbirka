@@ -9,7 +9,7 @@ int main()
   char cifra_jedinice, cifra_desetice, cifra_stotine;
 
   /* Ucitava se trocifren broj. */
-  printf("Unesite trocifreni broj:");
+  printf("Unesite trocifreni broj: ");
   scanf("%u", &x);
 
   /* Izdvajaju se cifre jedinice, desetice i stotine. */

@@ -6,7 +6,7 @@ int main()
   int a, b, max;
   
   /* Ucitavaju se dve celobrojne vrednosti. */
-  printf("Unesite dva cela broja:");
+  printf("Unesite dva cela broja: ");
   scanf("%d%d", &a, &b);
 
   /* Racuna se maksimum koriscenjem ternarnog operatora uslova. */

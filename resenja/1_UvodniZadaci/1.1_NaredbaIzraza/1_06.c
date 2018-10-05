@@ -7,7 +7,7 @@ int main()
   unsigned int kusur;
 
   /* Ucitavaju se vrednosti cene, kolicine i iznosa. */
-  printf("Unesite cenu, kolicinu i iznos: ");
+  printf("Unesite cenu, kolicinu i iznos:\n");
   scanf("%u%u%u", &cena, &kolicina, &iznos);
 
   /* Izracunava se kusur. */

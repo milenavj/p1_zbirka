@@ -4,7 +4,7 @@ int main()
 {
   /* Deklaracija i ucitavanje cene proizvoda. */
   unsigned int x;
-  printf("Unesite cenu proizvoda:");
+  printf("Unesite cenu proizvoda: ");
   scanf("%u", &x);
 
   /* Vrednost x/5000 predstavlja maksimalan broj novcanica od 5000 dinara koje je moguce iskoristiti za placanje racuna.

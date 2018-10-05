@@ -9,8 +9,8 @@ int main()
   char cifra_desetice;
   char cifra_stotine;
 
-  /* Ucitava se neoznacen trocifren broj. */
-  printf("Unesite trocifreni broj:");
+  /* Ucitava se neoznacen trocifreni broj. */
+  printf("Unesite trocifreni broj: ");
   scanf("%u", &x);
 
   /* Izdvajaju se pojedinacne cifre broja. */

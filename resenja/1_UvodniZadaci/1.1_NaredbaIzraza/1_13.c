@@ -40,6 +40,5 @@ int main()
   broj_zamena = hiljade * 1000 + jedinice * 100 + desetice * 10 + stotine;
   printf("Broj sa zamenjenom cifrom jedinica i stotina: %u\n", broj_zamena);
 
-
   return 0;
 }

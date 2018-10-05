@@ -6,7 +6,7 @@ int main()
   int a, b;
 
   /* Ucitavaju se vrednosti a i b. */
-  printf("Unesite dve celobrojne vrednosti:");
+  printf("Unesite vrednosti a i b: ");
   scanf("%d%d", &a, &b);
 
   /* U promenljivu a se smesta suma a+b. */
