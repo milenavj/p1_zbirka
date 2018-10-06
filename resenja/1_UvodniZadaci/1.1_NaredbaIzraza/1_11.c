@@ -11,7 +11,8 @@ int main()
     Na primer, neka je uneta cena 8367 dinara, vrednost izraza 8367/5000 je jednaka 1. */
   printf("%u = %u*5000 + ", x, x / 5000);
   
-  /* Da bi se isti postupak primenio i na ostale novcanice, potrebno je izracunati preostali iznos. Jedan nacin da se to uradi je racunanje ostatka pri deljenju unete vrednosti x (u primeru 8367) sa 5000. On iznosi 3367. Ovu vrednost dodeljujemo promeljivoj x. */
+  /* Da bi se isti postupak primenio i na ostale novcanice, potrebno je izracunati preostali iznos. 
+    Jedan nacin da se to uradi je racunanje ostatka pri deljenju unete vrednosti x (u primeru 8367) sa 5000. On iznosi 3367. Ovu vrednost dodeljujemo promeljivoj x. */
   x = x % 5000;
 
   /* Postupak se ponavlja i za za ostale novcanice. */

@@ -18,7 +18,7 @@ int main()
   cifra_stotine = x / 100;
 
   /* Ispis rezultata.
-    NAPOMENA: Kada se stampa numericka vrednost promenljive tipa char koristi se %d. Kada se stampa karakter ciji je ASCII kod jednak vrednosti te promenljive, tada se koristi %c. U ovom slucaju je potrebno stampati numericku vrednost. */
+     NAPOMENA: Kada se stampa numericka vrednost promenljive tipa char koristi se %d. Kada se stampa karakter ciji je ASCII kod jednak vrednosti te promenljive, tada se koristi %c. U ovom slucaju je potrebno stampati numericku vrednost. */
   printf("jedinica %d, desetica %d, stotina %d\n", cifra_jedinice,
          cifra_desetice, cifra_stotine);
 
