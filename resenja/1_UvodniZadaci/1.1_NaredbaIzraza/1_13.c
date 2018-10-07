@@ -31,12 +31,12 @@ int main()
   printf("Suma kvadrata cifara: %d\n", suma_kvadrata);
 
   /* Izracunava se broj zapisan istim ciframa ali u obrnutom
-     redosledu */
+     redosledu. */
   broj_obrnuto = jedinice * 1000 + desetice * 100 + stotine * 10 + hiljade;
   printf("Broj u obrnutom poretku: %u\n", broj_obrnuto);
 
   /* Izracunava se broj u kojem su cifra jedinica i cifra stotina
-     zamenile mesta */
+     zamenile mesta. */
   broj_zamena = hiljade * 1000 + jedinice * 100 + desetice * 10 + stotine;
   printf("Broj sa zamenjenom cifrom jedinica i stotina: %u\n", broj_zamena);
 

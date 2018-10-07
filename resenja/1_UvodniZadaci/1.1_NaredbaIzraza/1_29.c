@@ -15,11 +15,11 @@ int main()
   rezultata = a != b;
 
   /* Izraz a%2==0 && b%2==0 je konjunkcija koja se sastoji od dve
-     relacije jednakosti. Izraz a%2==0 ima vrednost 1 ako je ova
-     relacija tacna, a 0 u suprotnom. */
+     relacije poredjenja jednakosti. Izraz a%2==0 ima vrednost 1 ako
+     je ova relacija tacna, a 0 u suprotnom. */
   rezultatb = (a % 2 == 0 && b % 2 == 0);
 
-  /* Izraz a>0 && a<=100 && b>0 && b<=100 konjunkcija koja se
+  /* Izraz a>0 && a<=100 && b>0 && b<=100 je konjunkcija koja se
      sastoji od cetiri konjunkata. Svaki od konjunkata je izraz
      koji sadrzi relacioni operator i ima vrednost 1 ako relacija
      vazi, a 0 ako ne vazi. */
