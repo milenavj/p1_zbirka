@@ -2,32 +2,27 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   int dan, mesec, godina;
   int prethodni_dan, prethodni_mesec, prethodni_godina;
 
-  /* Citamo datum */
+  /* Ucitava se vrednost datuma. */
   printf("Unesite datum: ");
-  scanf("%d.%d.%d", &dan, &mesec, &godina);
+  scanf("%d.%d.%d.", &dan, &mesec, &godina);
 
-  /* Racunamo dan, mesec i godinu prethodnog dana */
+  /* Racunaju se dan, mesec i godina prethodnog dana. */
   prethodni_dan = dan - 1;
   prethodni_mesec = mesec;
   prethodni_godina = godina;
 
-  /* I po potrebi vrsimo korekcije */
-
-  /* Ako je u pitanju prvi u mesecu */
+  /* Ako je potrebno, vrse se korekcije. */
   if (prethodni_dan == 0) {
-    /* Treba korigovati mesec */
     prethodni_mesec = mesec - 1;
-    /* Ako je u pitanju januar */
     if (prethodni_mesec == 0) {
-      /* Treba korigovati i godinu */
       prethodni_mesec = 12;
       prethodni_godina = godina - 1;
     }
 
-    /* Analiziramo redni broj meseca kako bi odredili tacan dan */
     switch (prethodni_mesec) {
     case 1:
     case 3:
@@ -53,8 +48,8 @@ int main()
     }
   }
 
-  /* Ispisujemo datum koji smo izracunali */
-  printf("Prethodni datum: %d.%d.%d\n",
+  /* Ispis rezultata. */
+  printf("Prethodni datum: %d.%d.%d.\n",
          prethodni_dan, prethodni_mesec, prethodni_godina);
 
   return 0;

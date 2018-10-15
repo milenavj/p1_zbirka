@@ -2,12 +2,15 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   char op;
   int x, y;
 
-  printf("Unesite operator i dva cela broja: ");
-  scanf("%c %d %d", &op, &x, &y);
+  /* Ucitava se izraz. */
+  printf("Unesite izraz: ");
+  scanf("%d %c %d", &x, &op, &y);
 
+  /* U zavisnosti od unete operacije, racuna se vrednost izraza. */
   switch (op) {
   case '+':
     printf("Rezultat je: %d\n", x + y);
@@ -20,15 +23,15 @@ int main()
     break;
   case '/':
     if (y == 0)
-      printf("Greska: deljenje nulom nije dozvoljeno!\n");
+      printf("Greska: deljenje nulom.\n");
     else
-      printf("Rezultat je: %f\n", x * 1.0 / y);
+      printf("Rezultat je: %d\n", x / y);
     break;
   case '%':
     printf("Rezultat je: %d\n", x % y);
     break;
   default:
-    printf("Greska: nepoznat operator!\n");
+    printf("Greska: nepoznat operator.\n");
   }
 
   return 0;

@@ -2,28 +2,33 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   int godina;
   int mesec;
   int prestupna;
 
+  /* Ucitava se vrednost godine. */
   printf("Unesite godinu: ");
   scanf("%d", &godina);
 
+  /* Vrsi se provera ispravnosti ulaznih podataka. */
   if (godina < 0) {
-    printf("Lose uneta godina!\n");
+    printf("Greska: neispravan unos godine.\n");
     return -1;
   }
 
-  /* Provera da li je godina prestupna, zbog februara */
-  if ((godina % 4 == 0 && godina % 100 != 0)
-      || godina % 400 == 0)
+  /* Vrsi se provera da li je godina prestupna, zbog februara */
+  if ((godina % 4 == 0 && godina % 100 != 0) || godina % 400 == 0)
     prestupna = 1;
   else
     prestupna = 0;
 
+  /* Ucitava se redni broj meseca. */
   printf("Unesite redni broj meseca: ");
   scanf("%d", &mesec);
 
+  /* U zavisnosti od vrednosti meseca, ispisuje se odgovarajuci
+     rezultat. */
   switch (mesec) {
   case 1:
     printf("Januar, 31 dan\n");
@@ -65,7 +70,8 @@ int main()
     printf("Decembar, 31 dan\n");
     break;
   default:
-    printf("Lose unet redni broj meseca!\n");
+    printf("Greska: neispravan unos meseca.\n");
+    return -1;
   }
 
   return 0;

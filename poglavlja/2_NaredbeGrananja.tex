@@ -3,76 +3,65 @@
 
 \section{Naredbe grananja}
 
-%\subsection{Samo if}
+% UVODNI PRIMERI
 
-\begin{Exercise}[label=v1.2_05] 
-Napisati program koji za dva uneta cela broja  ispisuje njihov minimum.
+\begin{Exercise}[label=KT_NG_01] 
+Napisati program koji ispisuje najmanji od tri uneta cela broja.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dva cela broja:}\ulaz{5 18}#
-#\izlaz{Minimum je 5.}#
+#\izlaz{Unesite tri cela broja:}\ulaz{5 18 -1}#
+#\izlaz{Najmanji: -1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dva cela broja:}\ulaz{43 -16}#
-#\izlaz{Minimum je -16.}#
+#\izlaz{Unesite tri cela broja:}\ulaz{0 43 16}#
+#\izlaz{Najmanji: 0}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_05}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=v1.2_05]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_01.c}
-\end{Answer}
-\fi
-
-\begin{Exercise}[label=v1.2_05a] 
-Napisati program koji za dva uneta cela broja ispisuje njihov maksimum. 
-
 \begin{miditest}
-\begin{upotreba}{1}
+\begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite dva cela broja:}\ulaz{141 67}#
-#\izlaz{Maksimum je 141.}#
+#\izlaz{Unesite tri cela broja:}\ulaz{3 3 3}#
+#\izlaz{Najmanji: 3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{2}
+\begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite dva cela broja:}\ulaz{-893 -54}#
-#\izlaz{Maksimum je -54.}#
+#\izlaz{Unesite tri cela broja:}\ulaz{-5 -5 -5}#
+#\izlaz{Najmanji: -5}#
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{v1.2_05a}
+\linkresenje{KT_NG_01}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_05a]	
-Rešenje je analogno rešenju broj \ref{v1.2_05}.
+ \begin{Answer}[ref=KT_NG_01]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_01.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=v1.2_10] 
+\begin{Exercise}[label=KT_NG_02] 
 Napisati program koji za uneti realan broj ispisuje njegovu apsolutnu vrednost zaokruženu na dve decimale.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite jedan realan broj:}\ulaz{7.42}#
-#\izlaz{Njegova apsolutna vrednost je: 7.42}#
+#\izlaz{Apsolutna vrednost: 7.42}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite jedan realan broj:}\ulaz{-562.428}#
-#\izlaz{Njegova apsolutna vrednost je: 562.43}#
+#\izlaz{Apsolutna vrednost: 562.43}#
 \end{upotreba}
 \end{miditest}
 
@@ -80,40 +69,41 @@ Napisati program koji za uneti realan broj ispisuje njegovu apsolutnu vrednost z
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite jedan realan broj:}\ulaz{0}#
-#\izlaz{Njegova apsolutna vrednost je: 0.00}#
+#\izlaz{Apsolutna vrednost: 0.00}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite jedan realan broj:}\ulaz{52}#
-#\izlaz{Njegova apsolutna vrednost je: 52.00}#
+#\izlaz{Apsolutna vrednost: 52.00}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_10}
+\linkresenje{KT_NG_02}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_10]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_03.c}
+ \begin{Answer}[ref=KT_NG_02]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_02.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=v1.2_02] 
-Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost zaokruženu na četiri decimale.
+\begin{Exercise}[label=KT_NG_03] 
+Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost zaokruženu na četiri decimale. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite jedan ceo broj:}\ulaz{22}#
-#\izlaz{Reciprocna vrednost unetog broja: 0.0455.}#
+#\izlaz{Reciprocna vrednost: 0.0455}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite jedan ceo broj:}\ulaz{-9}#
-#\izlaz{Reciprocna vrednost unetog broja: -0.1111.}#
+#\izlaz{Reciprocna vrednost: -0.1111}#
 \end{upotreba}
 \end{miditest}
 
@@ -121,40 +111,40 @@ Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost za
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite jedan ceo broj:}\ulaz{0}#
-#\izlaz{Nedozvoljeno deljenje nulom.}#
+#\izlaz{Greska: nedozvoljeno deljenje nulom.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite jedan ceo broj:}\ulaz{57298}#
-#\izlaz{Reciprocna vrednost unetog broja: 0.0000.}#
+#\izlaz{Reciprocna vrednost: 0.0000}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_02}
+\linkresenje{KT_NG_03}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_02]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_04.c}
+ \begin{Answer}[ref=KT_NG_03]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_03.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=v1.2_09] 
+\begin{Exercise}[label=KT_NG_04] 
 Napisati program koji učitava tri cela broja i ispisuje zbir pozitivnih.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite tri cela broja:}\ulaz{1 3 -6}#
-#\izlaz{Suma unetih pozitivnih brojeva: 4}#
+#\izlaz{Zbir pozitivnih: 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite tri cela broja:}\ulaz{-15 81 0}#
-#\izlaz{Suma unetih pozitivnih brojeva: 81}#
+#\izlaz{Zbir pozitivnih: 81}#
 \end{upotreba}
 \end{miditest}
 
@@ -162,340 +152,121 @@ Napisati program koji učitava tri cela broja i ispisuje zbir pozitivnih.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite tri cela broja:}\ulaz{-719 -48 -123}#
-#\izlaz{Suma unetih pozitivnih brojeva: 0}#
+#\izlaz{Zbir pozitivnih: 0}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite tri cela broja:}\ulaz{16 2 576}#
-#\izlaz{Suma unetih pozitivnih brojeva: 594}#
+#\izlaz{Zbir pozitivnih: 594}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_09}
+\linkresenje{KT_NG_04}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_09]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_05.c}
+ \begin{Answer}[ref=KT_NG_04]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_04.c}
 \end{Answer}
 \fi
 
 
-
-
-
-
-\begin{Exercise}[label=v1.2_06] 
-U prodavnici je organizovana akcija da svaki kupac dobije najjeftiniji od tri artikla za jedan dinar. Napisati program koji za unete cene tri artikla izračunava ukupnu cenu, kao i koliko dinara se uštedi zahvaljujući popustu. \napomena{Pretpostaviti da su cene artikala pozitivni celi brojevi.}
+\begin{Exercise}[label=KT_NG_05] 
+U prodavnici je organizovana akcija da svaki kupac dobije najjeftiniji od tri artikla za jedan dinar. 
+Napisati program koji za unete cene tri artikla izračunava ukupnu cenu, kao i koliko dinara se uštedi 
+zahvaljujući popustu. Cene artikala su celi brojevi. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite cene tri artikla:}\ulaz{35 125 97}#
-#\izlaz{Cena sa popustom: 223}#
-#\izlaz{Usteda: 34}#
+#\izlaz{Unesite tri cene:}\ulaz{35 125 97}#
+#\izlaz{Cena sa popustom: 223 din}#
+#\izlaz{Usteda: 34 din}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite cene tri artikla:}\ulaz{1034 15 25}#
-#\izlaz{Cena sa popustom: 1060}#
-#\izlaz{Usteda: 14}#
+#\izlaz{Unesite tri cene:}\ulaz{1034 15 25}#
+#\izlaz{Cena sa popustom: 1060 din}#
+#\izlaz{Usteda: 14 din}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite cene tri artikla:}\ulaz{500 500 500}#
-#\izlaz{Cena sa popustom: 1001}#
-#\izlaz{Usteda: 499}#
+#\izlaz{Unesite tri cene:}\ulaz{500 500 500}#
+#\izlaz{Cena sa popustom: 1001 din}#
+#\izlaz{Usteda: 499 din}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite cene tri artikla:}\ulaz{247 133 126}#
-#\izlaz{Cena sa popustom: 381}#
-#\izlaz{Usteda: 125}#
+#\izlaz{Unesite tri cene:}\ulaz{247 -133 126}#
+#\izlaz{Greska: neispravan unos cene.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_06}
+\linkresenje{KT_NG_05}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_06]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_06.c}
+ \begin{Answer}[ref=KT_NG_05]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_05.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=p1.2_01] 
-Napisati program koji za uneti četvorocifreni broj ispisuje njegovu najveću cifru. 
+\begin{Exercise}[label=KT_NG_06] 
+Napisati program koji za uneto vreme u formatu \textit{sat:minut} ispisuje koliko je sati i minuta ostalo do ponoći. 
+Broj sati treba da bude iz intervala $[0,24)$, a broj minuta iz intervala $[0,60)$. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{6835}#
-#\izlaz{Najveca cifra je: 8}#
+#\izlaz{Unesite vreme: }\ulaz{18:19}#
+#\izlaz{Do ponoci: 5 sati i 41 minuta}
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{238}#
-#\izlaz{Greska: Niste uneli cetvorocifren broj!}#
+#\izlaz{Unesite vreme: }\ulaz{23:7}#
+#\izlaz{Do ponoci: 0 sati i 53 minuta}
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{7777}#
-#\izlaz{Najveca cifra je: 7}#
+#\izlaz{Unesite vreme: }\ulaz{24:20}#
+#\izlaz{Greska: neispravan unos vremena.}
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-2002}#
-#\izlaz{Najveca cifra je: 2}#
+#\izlaz{Unesite vreme: }\ulaz{14:0}#
+#\izlaz{Do ponoci: 10 sati i 0 minuta}
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_01}
+\linkresenje{KT_NG_06}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_01]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_07.c}
-\end{Answer}
-\fi
-
-\begin{Exercise}[label=v1.2_01] 
-Napisati program koji za uneto vreme (broj sati iz intervala $[0,24)$ i broj minuta iz intervala $[0,60)$) ispisuje koliko je sati i minuta ostalo do ponoći. 
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite vreme (broj sati u itervalu [0,24),}#
-#\izlaz{broj minuta u intervalu [0,60)):}\ulaz{18 19}#
-#\izlaz{Do ponoci je ostalo 5 sati i 41 minuta.}
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite vreme (broj sati u itervalu [0,24),}#
-#\izlaz{broj minuta u intervalu [0,60)):}\ulaz{23 7}#
-#\izlaz{Do ponoci je ostalo 0 sati i 53 minuta.}
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite vreme (broj sati u itervalu [0,24),}#
-#\izlaz{broj minuta u intervalu [0,60)):}\ulaz{24 20}#
-#\izlaz{Neispravan unos.}
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite vreme (broj sati u itervalu [0,24),}#
-#\izlaz{broj minuta u intervalu [0,60)):}\ulaz{14 0}#
-#\izlaz{Do ponoci je ostalo 10 sati i 0 minuta.}
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.2_01}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=v1.2_01]
-%TODO dodati uresenje komentar na slozeni if uslov
-% dodato
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_08.c}
+ \begin{Answer}[ref=KT_NG_06]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_06.c}
 \end{Answer}
 \fi
 
 
+\begin{Exercise}[label=KT_NG_07] 
+Napisati program koji za unetu godinu ispisuje da li je prestupna. 
+Godina je neoznačen ceo broj.
 
-
-
-
-
-\begin{Exercise}[label=v1.2_08] 
-%\komentarJ{Zadatak je preformulisan. Bila je ideja da se nekako pokaze c-'0' ali mislim da u ovom zadatku to nije zgodno. Svakako je vazno da se ovaj koncept vidi u nekom zadatku kasnije. }
-Napisati program koji za učitani karakter ispisuje uneti karakter i njegov ASCII kod. Ukoliko je uneti karakter malo (veliko) slovo, ispisati i odgovarajuće veliko (malo) slovo i njegov ASCII kod.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{0}#
-#\izlaz{Uneti karakter: 0, njegov ASCII kod: 48}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{?}#
-#\izlaz{Uneti karakter: ?, njegov ASCII kod: 63}#
-\end{upotreba}
-\end{miditest}
-
-\begin{maxitest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{A}#
-#\izlaz{Uneti karakter: A, njegov ASCII kod: 65}#
-#\izlaz{odgovarajuce malo slovo: a, njegov ASCII kod: 97}#
-\end{upotreba}
-\end{maxitest}
-
-\begin{maxitest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{v}#
-#\izlaz{Uneti karakter: v, njegov ASCII kod: 118}#
-#\izlaz{odgovarajuce veliko slovo: V, njegov ASCII kod: 86}#
-\end{upotreba}
-\end{maxitest}
-
-\linkresenje{v1.2_08}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=v1.2_08]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_09.c}
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[label=p1.2_07] 
-Napisati program koji za unetih pet karaktera ispisuje koliko je među njima malih slova.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{A u E f h}#
-#\izlaz{Broj malih slova: 3}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{k L M 9 o}#
-#\izlaz{Broj malih slova: 2}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.2_07}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=p1.2_07]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_10.c}
-\end{Answer}
-\fi
-
-%\komentarJ{Naredna 3 zadatka sa karakterima su sa i smera. Meni se nijedan ne dopada a nisu mnogo ni ilustrativni. Prvi je besmislen. Drugi i treci ucitava karaktere pomocu getchar sto mi ne radimo pre petlji plus koriste tolower i isgigit sto takodje ne spominjemo ovako rano. }
-%\komentarM{Prvi sam izbrisala, dva sam ostavila zbog Danijele.}
-
-\begin{Exercise}[label=p1.6_] 
-Program učitava pet karaktera. Napisati koliko
-se puta pojavilo veliko ili malo slovo \verb|a|. 
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{aBcAe}#
-#\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{aa4A\_}#
-#\izlaz{3}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{aAaAa}#
-#\izlaz{5}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{B6(vV}#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.6_}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=p1.6_]
-%TODO Dodati komentare u resenja
-%dodato
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_11.c}
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[label=p1.7_] 
-Program učitava pet karaktera. Ispisati koliko
-puta su se pojavile cifre. 
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{A1cA3}#
-#\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{2a45\_}#
-#\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{43986}#
-#\izlaz{5}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{B6(vV}#
-#\izlaz{1}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.7_}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=p1.7_]
-%TODO Dodati komentare u resenja
-% dodato
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_12.c}
-\end{Answer}
-\fi
-
-
-
-%\subsection{If-else se jednom pojavljuje}
-
-
-\begin{Exercise}[label=v1.2_04] 
- Napisati program koji za unetu godinu ispisuje da li je prestupna.
- 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -525,58 +296,290 @@ puta su se pojavile cifre.
 #\izlaz{Godina nije prestupna.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{v1.2_04}
+\linkresenje{KT_NG_07}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_04]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_13.c}
+ \begin{Answer}[ref=KT_NG_07]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_07.c}
 \end{Answer}
 \fi
 
+% KARAKTERI
 
-\begin{Exercise}[label=p1.2_02] 
-Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. Napisati program koji za dati trocifren broj proverava da li je Armstrongov.
+\begin{Exercise}[label=KT_NG_08] 
+Napisati program koji za učitani karakter ispisuje uneti karakter i njegov ASCII kod. 
+Ukoliko je uneti karakter malo (veliko) slovo, ispisati i odgovarajuće veliko (malo) slovo i njegov ASCII kod.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{153}#
-#\izlaz{Broj je Amstrongov.}#
+#\izlaz{Unesite karakter:}\ulaz{0}#
+#\izlaz{Uneti karakter: 0} #
+#\izlaz{ASCII kod: 48}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{111}#
-#\izlaz{Broj nije Amstrongov.}#
+#\izlaz{Unesite karakter:}\ulaz{?}#
+#\izlaz{Uneti karakter: ?}#
+#\izlaz{ASCII kod: 63}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{84}#
-#\izlaz{Greska: Niste uneli trocifren broj!}#
+#\izlaz{Unesite karakter:}\ulaz{A}#
+#\izlaz{Uneti karakter: A}#
+#\izlaz{ASCII kod: 65}#
+#\izlaz{Odgovarajuce malo slovo: a}#
+#\izlaz{ASCII kod: 97}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{371}#
-#\izlaz{Broj je Amstrongov.}#
+#\izlaz{Unesite karakter:}\ulaz{v}#
+#\izlaz{Uneti karakter: v}#
+#\izlaz{ASCII kod: 118}#
+#\izlaz{Odgovarajuce veliko slovo: V}#
+#\izlaz{ASCII kod: 86}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_02}
+\linkresenje{KT_NG_08}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_02]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_14.c}
+ \begin{Answer}[ref=KT_NG_08]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_08.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=p1.2_04] 
+
+\begin{Exercise}[label=KT_NG_09] 
+Napisati program koji učitava 3 karaktera od kojih prvi mora biti cifra i 
+ispisuje zbir ASCII kodova svih unetih karaktera, pomnozen sa vrednoscu unete cifre. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+\napomena{Karakteri koji se unose su razmaknuti belinama.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{1 A c}#
+#\izlaz{Rezultat: 213}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{2 a \_}#
+#\izlaz{Rezultat: 484}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{4 3 9}#
+#\izlaz{Rezultat: 640}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{B 6 (}#
+#\izlaz{Greska: prvi karakter nije cifra.}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{KT_NG_09}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_09]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_09.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=KT_NG_10] 
+Napisati program koji učitava 3 karaktera i ispisuje proizvod svih karaktera koji su cifre. 
+Ukoliko među unetim karakterima nema cifara, program treba da ispise odgovarajuću poruku.
+\napomena{Karakteri koji se unose su razmaknuti belinama.}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{A 5 3}#
+#\izlaz{Proizvod cifara: 15}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{k ! m}#
+#\izlaz{Medju unetim karakterima nema cifara.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{9 9 9}#
+#\izlaz{Proizvod cifara: 729}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{a 8 0}#
+#\izlaz{Proizvod cifara: 0}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_10}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_10]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_10.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=KT_NG_11] 
+Kasir unosi šifru artikla koja se zadaje kao 3 spojena karaktera koji mogu biti mala slova, velika slova ili cifre. 
+U kasi, sve šifre su zapisane malim slovima i ciframa. Napisati program koji unos kasira konvertuje u unos
+koji je odgovarajući za kasu, tj. koji sva velika slova pretvara u odgovarajuća mala, a ostale karaktere ne menja. 
+U slučaju neispravnog unosa šifre, ispisati odgovarajuću poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite sifru:}\ulaz{aBc}#
+#\izlaz{abc}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite sifru:}\ulaz{a?!}#
+#\izlaz{Greška: ? je neispravan karakter.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{5A5}#
+#\izlaz{5a5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite karaktere:}\ulaz{123}#
+#\izlaz{123}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{KT_NG_11}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_11]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_11.c}
+\end{Answer}
+\fi
+
+
+% CIFRE 
+
+
+\begin{Exercise}[label=KT_NG_12] 
+Napisati program koji za uneti četvorocifreni broj ispisuje njegovu najveću cifru. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{6835}#
+#\izlaz{Najveca cifra je: 8}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{7777}#
+#\izlaz{Najveca cifra je: 7}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{238}#
+#\izlaz{Greska: niste uneli cetvorocifreni broj.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{-2002}#
+#\izlaz{Najveca cifra je: 2}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_12}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_12]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_12.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=KT_NG_13] 
+Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. 
+Napisati program koji za dati trocifren broj proverava da li je Armstrongov.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite trocifreni broj:}\ulaz{153}#
+#\izlaz{Broj je Armstrongov.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite trocifreni broj:}\ulaz{111}#
+#\izlaz{Broj nije Armstrongov.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite trocifreni broj:}\ulaz{84}#
+#\izlaz{Greska: niste uneli trocifreni broj.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite trocifreni broj:}\ulaz{371}#
+#\izlaz{Broj je Armstrongov.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_13}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_13]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_13.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=KT_NG_14] 
 Napisati program koji ispisuje proizvod parnih cifara unetog četvorocifrenog broja. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -596,219 +599,75 @@ Napisati program koji ispisuje proizvod parnih cifara unetog četvorocifrenog br
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{288}#
+#\izlaz{Greska: niste uneli cetvorocifreni broj.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
 #\izlaz{Unesite cetvorocifreni broj:}\ulaz{-1234}#
 #\izlaz{Proizvod parnih cifara: 8}#
 \end{upotreba}
 \end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{288}#
-#\izlaz{Broj nije cetvorocifren!}#
-\end{upotreba}
-\end{miditest}
 
-
-\linkresenje{p1.2_04}
+\linkresenje{KT_NG_14}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_04]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_15.c}
+ \begin{Answer}[ref=KT_NG_14]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_14.c}
 \end{Answer}
 \fi
 
 
-
-
-
-
-\begin{Exercise}[label=p1.2_08] 
- Napisati program koji učitava četvorocifreni broj i ispisuje broj koji se dobija kada se unetom broju razmene najmanja i najveća cifra. \napomena{U slučaju da se najmanja ili najveća cifra pojavljuju na više pozicija, uzeti prvo pojavljivanje.}
+\begin{Exercise}[label=KT_NG_15] 
+ Napisati program koji učitava četvorocifreni broj i ispisuje broj koji se dobija kada se unetom broju razmene najmanja i najveća cifra. 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+ \napomena{U slučaju da se najmanja ili najveća cifra pojavljuju na više pozicija, uzeti prvo pojavljivanje sa, gledajući sa desna na levo.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{2863}#
-#\izlaz{8263}#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{2863}#
+#\izlaz{Rezultat: 8263}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{247}#
-#\izlaz{Broj nije cetvorocifren!}#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{1192}#
+#\izlaz{Rezultat: 1912}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1192}#
-#\izlaz{9112}#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{247}#
+#\izlaz{Greska: niste uneli cetvorocifreni broj.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-4239}#
-#\izlaz{-4932}#
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{-4239}#
+#\izlaz{Rezultat: -4932}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_08}
+\linkresenje{KT_NG_15}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_08]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_16.c}
+ \begin{Answer}[ref=KT_NG_15]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_15.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=p1_19]
-Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nalaze u istom kvadrantu i ispisuje odgovor
-\verb|DA| ili \verb|NE|. 
-%\komentarJ{Nemamo resenje za ovaj zadatak.}
-%TODO Traziti Danijeli!
-
-\linkresenje{p1_19}
-\end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=p1_19]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
-%\end{Answer}
-%\fi
-
-
-\begin{Exercise}[label=p1_20]
-Napisati program koji ispituje da li se tačke $A(x_1, y_1)$, $B(x_2, y_2)$ i $C(x_3, y_3)$ nalaze na istoj pravoj i
-ispisuje odgovor \verb|DA| ili \verb|NE|. \\
-%\komentarJ{Nemamo resenje za ovaj zadatak.}
-%TODO Traziti Danijeli!
-
-%\linkresenje{p1_20}
-\end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=p1_20]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
-%\end{Answer}
-%\fi
-
-
-\begin{Exercise}[label=p1.2_11] 
- Napisati program za rad sa intervalima. Za dva intervala realne prave $[a1, b1]$ i
-$[a2, b2]$, program treba da odredi:
-\begin{itemize}
-\item [a)] dužinu zajedničkog dela ta dva intervala
-\item [b)] najveći interval sadržan u datim intervalima (presek), a ako on ne postoji dati
-odgovarajuću poruku.
-\item [c)] dužinu realne prave koju pokrivaju ta dva intervala
-\item [d)] najmanji interval koji sadrži date intervale.
-\end{itemize}
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite redom a1, b1, a2 i b2:}\ulaz{2 9 4 11}#
-#\izlaz{Duzina zajednickog dela: 5}#
-#\izlaz{Presek intervala: [4,9]}#
-#\izlaz{Zajednicka duzina intervala: 9}#
-#\izlaz{Najmanji interval: [2, 11]}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite redom a1, b1, a2 i b2:}\ulaz{1 2 10 13}#
-#\izlaz{Duzina zajednickog dela: 0}#
-#\izlaz{Presek intervala: prazan}#
-#\izlaz{Zajednicka duzina intervala: 4}#
-#\izlaz{Najmanji interval: [1, 13]}#
-\end{upotreba}
-\end{miditest}
-
-%\linkresenje{p1.2_11}
-\end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=p1.2_11]
-%\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_11.c}
-%\end{Answer}
-%\fi
-
-
-%\subsection{If-else ugnjezdeno}
-
-
-\begin{Exercise}[label=v1.2_03] 
-Napisati program koji za uneti ceo broj $x$ ispisuje njegov znak, tj da li je broj jednak nuli, manji od nule ili veći od nule.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite jedan ceo broj:}\ulaz{17}#
-#\izlaz{Broj je veci od nule.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite jedan ceo broj:}\ulaz{0}#
-#\izlaz{Broj je jednak nuli.}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite jedan ceo broj:}\ulaz{-586}#
-#\izlaz{Broj je manji od nule.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite jedan ceo broj:}\ulaz{62}#
-#\izlaz{Broj je veci od nule.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.2_03}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=v1.2_03]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_20.c}
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[label=v1.2_07] 
-Napisati program koji za unete koeficijente kvadratne jednačine ispisuje koliko realnih rešenja jednačina ima i ako ih ima, ispisuje ih zaokružene na dve decimale.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite koeficijente A, B i C:}\ulaz{1 3 2}#
-#\izlaz{Jednacina ima dva razlicita realna resenja:\\ -1.00 i -2.00}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite koeficijente A, B i C:}\ulaz{1 1 1}#
-#\izlaz{Jednacina nema resenja.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.2_07}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=v1.2_07]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_21.c}
-\end{Answer}
-\fi
-
-\begin{Exercise}[label=v1.2_13] 
+\begin{Exercise}[label=KT_NG_16] 
 Napisati program koji za uneti četvorocifreni broj proverava
-da li su njegove cifre uređene rastuće, opadajuće ili nisu
-uređene i štampa odgovarajuću poruku.
+da li su njegove cifre uređene neopadajuće, nerastuće ili nisu
+uređene i štampa odgovarajuću poruku.  
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -827,75 +686,217 @@ uređene i štampa odgovarajuću poruku.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite cetvorocifreni broj:}\ulaz{6792}#
-#\izlaz{Cifre nisu uredjene.}#\end{upotreba}
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{88}#
+#\izlaz{Greska: niste uneli cetvorocifreni broj.}#
+\end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite cetvorocifreni broj:}\ulaz{88}#
-#\izlaz{Uneti broj nije cetvorocifren.}#\end{upotreba}
+#\izlaz{Unesite cetvorocifreni broj:}\ulaz{6792}#
+#\izlaz{Cifre nisu uredjene.}#
+\end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_13}
+\linkresenje{KT_NG_16}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_13]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_22.c}
+ \begin{Answer}[ref=KT_NG_16]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_16.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=p1.2_06] 
- Napisati program koji učitava karakter i:
- \begin{description}
-\item{a)} ako je $c$ malo slovo, ispisuje odgovarajuće veliko
-\item{b)} ako je $c$ veliko slovo, ispisuje odgovarajuće malo
-\item{c)} ako je $c$ cifra, ispisuje poruku $cifra$
-\item{d)} u ostalim slučajevima, ispisuje karakter $c$ između dve zvezdice.
-\end{description}
+% MATEMATICKI + UGNJEZDENA GRANANJA
+
+
+\begin{Exercise}[label=KT_NG_17]
+Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nalaze u istom kvadrantu i ispisuje odgovor
+\verb|DA| ili \verb|NE|. Koordinate tačaka su realni brojevi jednostruke tačnosti.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{K}#
-#\izlaz{k}#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{1.5 6}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{2.33 9.8}#
+#\izlaz{DA}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{8}#
-#\izlaz{cifra}#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{-3 6}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{0.33 -5}#
+#\izlaz{NE}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{>}#
-#\izlaz{*>*}#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{0 -6}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{-1 -99.66}#
+#\izlaz{DA}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite karakter:}\ulaz{o}#
-#\izlaz{O}#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{3 -6}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{-0.33 0}#
+#\izlaz{NE}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_06}
+\linkresenje{KT_NG_17}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_06]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_23.c}
+ \begin{Answer}[ref=KT_NG_17]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_17.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=p1.2_03] 
- U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti  ceo broj $k$ (1 \geq $k$ \geq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.
+\begin{Exercise}[label=KT_NG_18]
+Napisati program koji ispituje da li se tačke $A(x_1, y_1)$, $B(x_2, y_2)$ i $C(x_3, y_3)$ nalaze na istoj pravoj i
+ispisuje odgovor \verb|DA| ili \verb|NE|. \\
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{1.5 6}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{-2.5 -10}#
+#\izlaz{Unesite koordinate tacke C:}\ulaz{3 12}#
+#\izlaz{DA}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{-1.5 3}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{-0.4 9.8}#
+#\izlaz{Unesite koordinate tacke C:}\ulaz{2 3}#
+#\izlaz{NE}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{1.55 6}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{-8.4 9.8}#
+#\izlaz{Unesite koordinate tacke C:}\ulaz{5 4.682412}#
+#\izlaz{DA}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{5.5 3.5}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{5.5 3.5}#
+#\izlaz{Unesite koordinate tacke C:}\ulaz{5.5 3.5}#
+#\izlaz{DA}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{1 2}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{1 2}#
+#\izlaz{Unesite koordinate tacke C:}\ulaz{-56 1.3}#
+#\izlaz{DA}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{6}
+#\naslovInt#
+#\izlaz{Unesite koordinate tacke A:}\ulaz{3.4 3.5}#
+#\izlaz{Unesite koordinate tacke B:}\ulaz{-10 -1}#
+#\izlaz{Unesite koordinate tacke C:}\ulaz{-10 -1}#
+#\izlaz{DA}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_18}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_18]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_18.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=KT_NG_19] 
+ Napisati program za rad sa intervalima. Za dva celobrojna intervala $[a1, b1]$ i
+$[a2, b2]$, program treba da odredi:
+\begin{itemize}
+\item [a)] dužinu preseka datih intervala
+\item [b)] presečni interval datih intervala
+\item [c)] dužinu prave koju pokrivaju dati intervali
+\item [d)] najmanji interval koji sadrži date intervale.
+\end{itemize}
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite a1, b1, a2 i b2:}\ulaz{2 9 4 11}#
+#\izlaz{Duzina preseka: 5}#
+#\izlaz{Presecni interval: [4,9]}#
+#\izlaz{Duzina koju pokrivaju: 9}#
+#\izlaz{Najmanji interval: [2, 11]}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite a1, b1, a2 i b2:}\ulaz{1 2 10 13}#
+#\izlaz{Duzina preseka: 0}#
+#\izlaz{Presecni interval: prazan}#
+#\izlaz{Duzina koju pokrivaju: 4}#
+#\izlaz{Najmanji interval: [1, 13]}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_19}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_19]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_19.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=KT_NG_20] 
+Napisati program koji za unete koeficijente kvadratne jednačine ispisuje koliko realnih rešenja jednačina ima i ako ih ima, 
+ispisuje ih zaokružene na dve decimale.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite koeficijente A, B i C:}\ulaz{1 3 2}#
+#\izlaz{Jednacina ima dva razlicita realna resenja:\\ -1.00 i -2.00}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite koeficijente A, B i C:}\ulaz{1 1 1}#
+#\izlaz{Jednacina nema resenja.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_20}
+\end{Exercise}
+\ifresenja
+ \begin{Answer}[ref=KT_NG_20]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_20.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=KT_NG_21] 
+ U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti 
+ ceo broj $k$ (1 \geq $k$ \geq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -912,20 +913,34 @@ uređene i štampa odgovarajuću poruku.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_03}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite k:}\ulaz{200}#
+#\izlaz{Greska: neispravan unos pozicije.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite k:}\ulaz{10}#
+#\izlaz{Na 10-toj poziciji je broj 1.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_21}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_03]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_24.c}
+ \begin{Answer}[ref=KT_NG_21]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_21.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=p1.2_12] 
+\begin{Exercise}[label=KT_NG_22] 
 Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Napisati program koji za učitanu vrednost realne promenljive $x$ i vrednost celobrojne promenljive $k$ koje može biti 1, 2 ili 3 izračunava
-vrednost funkcije $F(k, x) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta i ispisuje je zaokruženu na dve decimale.
-U slučaju neispravnog ulaza, odštampati odgovarajuću poruku o grešci.
-%TODO \komentar{dodati test primer za neispravan ulaz}
-%dodato
+vrednost funkcije $F(x, k) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta i ispisuje je zaokruženu na dve decimale.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -945,7 +960,7 @@ U slučaju neispravnog ulaza, odštampati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite redom x i k:}\ulaz{2.31 0}#
-#\izlaz{Greska: nedozvoljena vrednost za k}#
+#\izlaz{Greska: nedozvoljena vrednost za k.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -956,22 +971,21 @@ U slučaju neispravnog ulaza, odštampati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_12}
+\linkresenje{KT_NG_22}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_12]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_25.c}
+ \begin{Answer}[ref=KT_NG_22]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_22.c}
 \end{Answer}
 \fi
-
 
 %\subsection{Switch-case}
 
 
+\begin{Exercise}[label=KT_NG_23] 
+ Napisati program koji za uneti redni broj dana u nedelji ispisuje ime odgovarajućeg dana. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{Exercise}[label=p1.2_13] 
- Napisati program koji za uneti redni broj dana u nedelji ispisuje ime odgovarajućeg dana. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. 
- 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -991,7 +1005,7 @@ U slučaju neispravnog ulaza, odštampati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj: }\ulaz{8}#
-#\izlaz{Greska: nedozvoljeni unos!}#
+#\izlaz{Greska: neispravan unos dana.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1002,16 +1016,16 @@ U slučaju neispravnog ulaza, odštampati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_13}
+\linkresenje{KT_NG_23}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_13]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_26.c}
+ \begin{Answer}[ref=KT_NG_23]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_23.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=v1.2_11] 
-Napisati program koji za uneti karakter ispituje da li je samoglasnik.
+\begin{Exercise}[label=KT_NG_24] 
+Napisati program koji za uneti karakter ispituje da li je samoglasnik ili ne.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1043,70 +1057,73 @@ Napisati program koji za uneti karakter ispituje da li je samoglasnik.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_11}
+\linkresenje{KT_NG_24}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_11]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_27.c}
+ \begin{Answer}[ref=KT_NG_24]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_24.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=p1.2_14] 
-Napisatiti program koji učitava dva cela broja i jedan od karaktera +, -, *, / ili \% i ispisuje vrednost izraza dobijenog primenom date operacije na date argumente. U slučaju pogrešnog unosa ispisati odgovarajuću poruku. 
+\begin{Exercise}[label=KT_NG_25] 
+Napisatiti program koji učitava dva cela broja i jedan od karaktera +, -, *, / ili \% i ispisuje vrednost izraza 
+dobijenog primenom date operacije na date argumente. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
  \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite operator i dva cela broja:}\ulaz{- 8 11}#
+#\izlaz{Unesite izraz:}\ulaz{8 - 11}#
 #\izlaz{Rezultat je: -3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite operator i dva cela broja:}\ulaz{/ 14 0}#
-#\izlaz{Greska: deljenje nulom nije dozvoljeno!}#
+#\izlaz{Unesite izraz:}\ulaz{14 / 0}#
+#\izlaz{Greska: deljenje nulom.}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite operator i dva cela broja:}\ulaz{? 5 7}#
-#\izlaz{Greska: nepoznat operator!}#
+#\izlaz{Unesite izraz:}\ulaz{5 ? 7}#
+#\izlaz{Greska: nepoznat operator.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite operator i dva cela broja:}\ulaz{/ 19 5}#
+#\izlaz{Unesite izraz:}\ulaz{19 / 5}#
 #\izlaz{Rezultat je: 3}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_14}
+\linkresenje{KT_NG_25}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_14]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_28.c}
+ \begin{Answer}[ref=KT_NG_25]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_25.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=v1.2_12] 
-Napisati program koji za uneti dan i mesec ispisuje godišnje doba kojem pripadaju. \napomena{Podrazumevati da je unos korektan.}
+\begin{Exercise}[label=KT_NG_26] 
+Napisati program koji za uneti datum u formatu \textit{dan.mesec.} ispisuje godišnje doba kojem pripadaju. 
+\napomena{Podrazumevati da je unos korektan.}
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dan i mesec:}\ulaz{14 10}#
+#\izlaz{Unesite dan i mesec:}\ulaz{14.10.}#
 #\izlaz{jesen}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dan i mesec:}\ulaz{2 8}#
+#\izlaz{Unesite dan i mesec:}\ulaz{2.8.}#
 #\izlaz{leto}#
 \end{upotreba}
 \end{miditest}
@@ -1114,95 +1131,102 @@ Napisati program koji za uneti dan i mesec ispisuje godišnje doba kojem pripada
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite dan i mesec:}\ulaz{27 2}#
+#\izlaz{Unesite dan i mesec:}\ulaz{27.2.}#
 #\izlaz{zima}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite dan i mesec:}\ulaz{19 5}#
+#\izlaz{Unesite dan i mesec:}\ulaz{19.5.}#
 #\izlaz{prolece}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.2_12}
+\linkresenje{KT_NG_26}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_12]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_29.c}
+ \begin{Answer}[ref=KT_NG_26]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_26.c}
 \end{Answer}
 \fi
 
 
-
-
-
-\begin{Exercise}[label=v1.2_17] 
+\begin{Exercise}[label=KT_NG_27] 
 Napisati program koji za unetu godinu i mesec ispisuje naziv meseca kao i koliko dana ima u tom mesecu te godine.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-\linkresenje{v1.2_17}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite godinu:}\ulaz{2018}#
+#\izlaz{Unesite mesec:}\ulaz{1}#
+#\izlaz{Januar, 31 dan}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite godinu:}\ulaz{2000}#
+#\izlaz{Unesite mesec:}\ulaz{2}#
+#\izlaz{Februar, 29 dana}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite godinu:}\ulaz{2018}#
+#\izlaz{Unesite mesec:}\ulaz{13}#
+#\izlaz{Greska: neispravan unos meseca.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite godinu:}\ulaz{1998}#
+#\izlaz{Unesite mesec:}\ulaz{2}#
+#\izlaz{Februar, 28 dana}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_27}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_17]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_30.c}
+ \begin{Answer}[ref=KT_NG_27]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_27.c}
 \end{Answer}
 \fi
 
 
-%\begin{Exercise}[label=v1.2_18] 
-% Za uneti datum odreduje ispisuje se naziv godisnjeg doba kome datum pripada.
-% \komentarJ{Da li ovaj tekst imamo negde ranije?}
-% \komentarJ{Da, v1.2_12. Zadatak je zakomentarisan.}
-%\linkresenje{v1.2_18}
-%\end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=v1.2_18]
-%\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/1_23.c}
-%\end{Answer}
-%\fi
-
-
-
-%\item Napisati program koji za uneti pozitivan petocifreni broj $n$ određuje i ispisuje broj njegovih parnih i broj njegovih neparnih cifara. Za analizu cifara koristiti \textit{switch} naredbu.\\
-%\begin{miditest}
-%\begin{upotreba}{1}
-%#\naslovInt#
-%#\izlaz{Unesite broj n:}\ulaz{23456}#
-%#\izlaz{Broj parnih cifara: 3}#
-%#\izlaz{Broj neparnih cifara: 2}#
-%\end{upotreba}
-%\end{miditest}
-
-
-\begin{Exercise}[label=p1.2_15] 
- Napisati program koji za uneti datum u formatu \textit{dan.mesec.godina.} proverava da li je korektan.\\
+\begin{Exercise}[label=KT_NG_28] 
+ Napisati program koji za uneti datum u formatu \textit{dan.mesec.godina.} proverava da li je korektan.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{25.11.1983.}#
-#\izlaz{Datum je korektan!}#
+#\izlaz{Datum je korektan.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{1.17.2004.}#
-#\izlaz{Datum nije korektan!}#
+#\izlaz{Datum nije korektan.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_15}
+\linkresenje{KT_NG_28}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_15]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_31.c}
+ \begin{Answer}[ref=KT_NG_28]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_28.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=p1.2_16] 
+\begin{Exercise}[label=KT_NG_29] 
  Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum prethodnog dana. 
  
 \begin{miditest}
@@ -1220,16 +1244,31 @@ Napisati program koji za unetu godinu i mesec ispisuje naziv meseca kao i koliko
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.2_16}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{1.1.2019.}#
+#\izlaz{Prethodni datum: 31.12.2018.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{10.12.2015.}#
+#\izlaz{Prethodni datum: 9.11.2015.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_29}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_16]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_32.c}
+ \begin{Answer}[ref=KT_NG_29]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_29.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=p1.2_17] 
+\begin{Exercise}[label=KT_NG_30] 
  Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum narednog dana. 
  
 \begin{miditest}
@@ -1246,56 +1285,85 @@ Napisati program koji za unetu godinu i mesec ispisuje naziv meseca kao i koliko
 #\izlaz{Naredni datum: 2.12.2005.}#
 \end{upotreba}
 \end{miditest}
-%\linkresenje{p1.2_17}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{31.12.2008.}#
+#\izlaz{Naredni datum: 1.1.2009.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{5.5.2005.}#
+#\izlaz{Naredni datum: 6.5.2005.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_30}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=p1.2_17]
-Rešenje je analogno rešenju zadatka \ref{p1.2_16}.
-%\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/praktikumi5/2_17.c}
+\begin{Answer}[ref=KT_NG_30]
+ 
+Rešenje je analogno rešenju zadatka \ref{KT_NG_29}.
 \end{Answer}
 \fi
 
 
-
-
-\begin{Exercise}[label=p1.9_]
-Korisnik unosi tri cela broja: $P$, $Q$ i $R$.
-Nakon toga unosi i dva karaktera, $op1$ i $op2$. Ovi karakteri predstavljaju operacije nad unetim brojevima i imaju naredno značenje:
+\begin{Exercise}[label=KT_NG_31]
+Korisnik unosi tri cela broja $P$, $Q$ i $R$ i dva karaktera, $op1$ i $op2$. 
+Ovi karakteri predstavljaju operacije nad unetim brojevima i imaju naredno značenje:
 \begin{itemize}
 \item karakter \textbf{k} predstavlja  logičku konjukciju
 \item karakter \textbf{d} predstavlja  logičku disjunkciju
 \item karakter \textbf{m} predstavlja  relaciju manje
 \item karakter \textbf{v} predstavlja  relaciju veće
 \end{itemize}
-Program treba da sračuna vrednost izraza 
-\kckod{P op1 Q op2 R} i da ga ispiše.
+Program treba da sračuna vrednost izraza \kckod{P op1 Q op2 R} i da ga ispiše.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite tri cela broja:}\ulaz{0 1 2}#
-#\izlaz{Unesite dva karaktera cela broja:}\ulaz{k m}#
-#\izlaz{1}#
+#\izlaz{Unesite izraz:}\ulaz{0 k 1 m 2}#
+#\izlaz{Vrednost izraza: 1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite tri cela broja:}\ulaz{-3 -1 0}#
-#\izlaz{Unesite dva karaktera cela broja:}\ulaz{d k}#
-#\izlaz{0}#
+#\izlaz{Unesite izraz:}\ulaz{-3 d -1 k 0}#
+#\izlaz{Vrednost izraza: 0}#
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{p1.9_}
-\end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=p1.9_]
-%\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/1_14.c}
-%\end{Answer}
-%\fi
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite izraz:}\ulaz{-3 k 1 d 0}#
+#\izlaz{Vrednost izraza: 1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite izraz:}\ulaz{-3 m -1 m 100}#
+#\izlaz{Vrednost izraza: 1}#
+\end{upotreba}
+\end{miditest}
 
-\begin{Exercise}[difficulty=1, label=v1.2_14] 
+\linkresenje{KT_NG_31}
+\end{Exercise}
+\ifresenja
+\begin{Answer}[ref=KT_NG_31]
+ 
+Rešenje je analogno rešenju zadatka \ref{KT_NG_25}.
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[difficulty=1, label=KT_NG_32] 
 Program učitava jedan karakter i osam realnih brojeva koji predstavljaju 
 koordinate četiri tačke: $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3), D(x_4, y_4)$. Na osnovu unetog karaktera 
 ispisuje se odgovarajuća poruka na standardni izlaz:
@@ -1313,58 +1381,74 @@ ispisuje se odgovarajuća poruka na standardni izlaz:
 $x_1 * p + x_2 * q = x_4 - x_3,y_1 * p + y_2 * q = y_4 - y_3$
     određen, neodređen ili nema rešenja, i u slučaju da je određen ispisuje rešenja.
 \end{itemize} 
-\linkresenje{v1.2_14}
+\linkresenje{KT_NG_32}
 \end{Exercise}
 \ifresenja
- \begin{Answer}[ref=v1.2_14]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_34.c}
+ \begin{Answer}[ref=KT_NG_32]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_32.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=p1_21]
+\begin{Exercise}[difficulty=1, label=KT_NG_33]
 Polje šahovske table se definiše parom prirodnih brojeva ne većih od $8$: prvi se odnosi na red, drugi na kolonu. Ako su dati takvi
-parovi, napisati program koji proverava: \\
+parovi, napisati program koji proverava:
 \begin{description}
-\item[a)] da li su polja (k, m) i (l, n) iste boje
+\item[a)] da li su polja (k, l) i (m, n) iste boje
 \item[b)] da li kraljica sa (k, l) ugrožava polje (m, n)
 \item[c)] da li konj sa (k, l) ugrožava polje (m, n)
 \end{description}
-%\komentarJ{Nemamo resenje za ovaj zadatak.}
-%TODO Traziti Danijeli
+Pretpostaviti da je polje (1,1) crno i da predstavlja donji levi ugao sahovske table. 
+%TODO Mozda ubaciti neku sliku/skicu sahovske table? 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-%\linkresenje{p1_21}
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite (k,l):}\ulaz{1 1}#
+#\izlaz{Unesite (m,n):}\ulaz{2 2}#
+#\izlaz{Polja su iste boje.}#
+#\izlaz{Kraljica sa (1,1) ugrozava (2,2).}#
+#\izlaz{Konj sa (1,1) ne ugrozava (2,2).}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite (k,l):}\ulaz{1 1}#
+#\izlaz{Unesite (m,n):}\ulaz{3 2}#
+#\izlaz{Polja su razlicite boje.}#
+#\izlaz{Kraljica sa (1,1) ne ugrozava (3,2).}#
+#\izlaz{Konj sa (1,1) ugrozava (3,2).}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite (k,l):}\ulaz{5 4}#
+#\izlaz{Unesite (m,n):}\ulaz{3 3}#
+#\izlaz{Polja su razlicite boje.}#
+#\izlaz{Kraljica sa (5,4) ne ugrozava (3,3).}#
+#\izlaz{Konj sa (5,4) ugrozava (3,3).}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite (k,l):}\ulaz{0 1}#
+#\izlaz{Unesite (m,n):}\ulaz{3 9}#
+#\izlaz{Greska: neispravna pozicija.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{KT_NG_33}
 \end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=p1_21]
-%\includecode{resenja/1_UvodniZadaci/1_01.c}
-%\end{Answer}
-%\fi
-
-
-
-
-%\begin{Exercise}[label=v1.2_15] 
- %Upotreba funkcija isalpha, isdigit, toupper, tolower
-
- %isalpha( karakter ) - funkcija vraca vrednost razlicitu od 0 ako je karakter slovo (malo ili veliko), inace 0
- %isdigit( karakter ) - funkcija vraca vrednost razlicitu od 0 ako je karakter cifra, inace 0
- %isupper( karakter ) - funkcija vraca vrednost razlicitu od 0 ako je karakter veliko slovo, inace 0
- %islower( karakter ) - funkcija vraca vrednost razlicitu od 0 ako je karakter malo slovo, inace 0
- %toupper( karakter ) - ukoliko je karakter malo slovo, funkcija vraca odgovarajuce veliko slovo,
-%                       inace vraca isti karakter
- %tolower( karakter ) - ukoliko je karakter veliko slovo, funkcija vraca odgovarajuce malo slovo,
- %                      inace vraca isti karakter
- %\komentarJ{Ovo je demonstrativan zadatak, ove funkcije se vide vec vise puta ranije, da li da ostaje?}
-%\komentarJ{Zadatak je zakomentarisan.}
-%\linkresenje{v1.2_15}
-%\end{Exercise}
-%\ifresenja
-% \begin{Answer}[ref=v1.2_15]
-%\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/1_20.c}
-%\end{Answer}
-%\fi
-
+\ifresenja
+ \begin{Answer}[ref=KT_NG_33]
+\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_33.c}
+\end{Answer}
+\fi
 
 
 \ifresenja
