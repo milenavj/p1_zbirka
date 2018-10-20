@@ -2,41 +2,38 @@
 
 int main()
 {
-  /* Promenljiva x oznacava tekuci uneti broj. */
-  int n, x;
-  /* Brojac. */
-  int i;
+  /* Deklaracija potrebnih promenljivih. */
+  int n, x, i;
   int zbir = 0;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  if (n < 0) {
-    printf("Neispravan unos.\n");
+  /* Vrsi se provera ispravnosti ulaza. */
+  if (n <= 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
+  /* Ucitava se n brojeva i izracunava se trazeni zbir. */
   printf("Unesite n brojeva: ");
-
-  /* Inicijalizuje se brojac sa kojim se kontrolise broj *
-     ucitavanja - treba da ih bude tacno n. */
   i = 0;
   while (i < n) {
-    /* Ucitava se broj. */
+    /* Ucitava se jedan broj. */
     scanf("%d", &x);
 
-    /* Proverava se da li broj negativan i neparan. */
-    if (x < 0 && x % 2 != 0) {
-      /* Ako jeste, dodajemo ga na zbir. */
+    /* Ako je ucitani broj negativan i neparan, 
+       dodaje se na zbir. */
+    if (x < 0 && x % 2 != 0)
       zbir = zbir + x;
-    }
 
-    /* Uvecava se brojac iteracija. */
+    /* Uvecava se brojac. */
     i++;
   }
 
-  /* Ispisuje se rezultat. */
-  printf("%d\n", zbir);
+  /* Ispis rezultata. */
+  printf("Zbir neparnih i negativnih: %d\n", zbir);
 
   return 0;
 }

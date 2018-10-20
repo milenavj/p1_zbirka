@@ -3,23 +3,20 @@
 
 int main()
 {
-  int n;
-  int d;
-  /* Uzastopni brojevi za koje se racuna rastojanje. */
+  /* Deklaracija potrebnih promenljivih. */
+  int n, d, i;
   int x, y;
-  int broj_parova;
-  int i;
+  int broj_parova = 0;
 
-
+  /* Ucitavaju se vrednosti n i d i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite brojeve n i d: ");
   scanf("%d %d", &n, &d);
 
-  if (n < 0 || d < 0) {
-    printf("Neispravan unos.\n");
+  if (n <= 1 || d < 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
-
-  broj_parova = 0;
 
   printf("Unesite n brojeva: ");
 
@@ -29,7 +26,7 @@ int main()
   for (i = 1; i < n; i++) {
     scanf("%d", &y);
 
-    /* Provera da li su brojevi na rastojanju d. */
+    /* Provera se da li su brojevi na rastojanju d. */
     if (abs(y - x) == d)
       broj_parova++;
 
@@ -38,6 +35,7 @@ int main()
     x = y;
   }
 
+  /* Ispis rezultata. */
   printf("Broj parova: %d\n", broj_parova);
 
   return 0;

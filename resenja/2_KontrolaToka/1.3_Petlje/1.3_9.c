@@ -2,24 +2,28 @@
 
 int main()
 {
+  /* Deklaracija broja n. */
   int n;
 
-  /* Ucitavamo broj */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj: ");
   scanf("%d", &n);
 
+  /* Slucaj kada broj n ima vrednost nula se posebno obradjuje.
+     Kada ovo ne bi bilo navedeno, petlja u nastavku bi se 
+     u ovom slucaju izvrsavala beskonacno. */
   if (n == 0) {
     printf("0\n");
-  } else {
-    /* Sve dok je poslednja cifra u zapisu broja n nula */
-    while (n % 10 == 0) {
-      /* Broj delimo sa 10 tj. uklanjamo mu nulu sa kraja */
-      n = n / 10;
-    }
+    return 0;
+  } 
+  
+  /* Dok god je poslednja cifra broja n nula, broj n se deli sa
+      10 i na taj nacin se iz broja uklanja poslednja cifra. */
+  while (n % 10 == 0)
+    n = n / 10;
 
-    /* Ispisujemo rezultat */
-    printf("%d\n", n);
-  }
+  /* Ispis rezultata. */
+  printf("%d\n", n);
 
   return 0;
 }

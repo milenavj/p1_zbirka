@@ -2,41 +2,39 @@
 
 int main()
 {
-  /* Prirodni broj koji se unosi. */
-  int n;
-  /* Promenljiva u koju se smesta suma cifara broja. */
-  int suma = 0;
-  /* Pomocna promenljiva u koju se smesta unesen broj. */
-  int pom_n;
+  /* Deklaracija potrebnih promenljivih. */
+  int n, suma, pom_n;
 
-  printf("Unesi broj ");
+  /* Ucitava se vrednost broja n. */
+  printf("Unesite broj: ");
   scanf("%d", &n);
 
-  /* U zadatku pise da se unosi prirodan broj, sto znaci da treba
-     proveriti da li je veci od 0 */
-
+  /* Vrsi se provera ispravnosti ulaza. */
   if (n <= 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Potrebno je koristiti pomocnu promenljivu jer u telu petlje se 
-     odstranjuju cifre broja i na taj nacin uneseni broj se menja.
-     Nakon rada petlje potrebno je ponovo koristiti uneseni broj, a 
-     to znaci da treba sacuvati neizmenjen broj. */
+  /* Pravi se kopija originalnog broja, da bi originalna vrednost
+     n ostala nepromenjena. */
   pom_n = n;
 
+  /*Inicijalizacija sume cifara. */
+  suma = 0;
+  
+  /* Racuna se suma cifara. */
   while (pom_n != 0) {
-    /* Na sumu dodajemo poslednju cifru. */
+    /* Na sumu se dodaje poslednja cifra broja. */
     suma += pom_n % 10;
-    /* Sa broja skidamo poslednju cifru. */
+    /* Sa broja se skida poslednja cifra. */
     pom_n /= 10;
   }
 
+  /* Ispis rezultata. */
   if (n % suma == 0)
-    printf("Deljiv je sumom svojih cifara.\n");
+    printf("Broj %d je deljiv sa %d.\n", n, suma);
   else
-    printf("Nije deljiv sumom svojih cifara.\n");
+    printf("Broj %d nije deljiv sa %d.\n", n, suma);
 
   return 0;
 }

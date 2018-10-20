@@ -1,33 +1,32 @@
-/* Sa standardnog ulaza se unosi ceo broj n, a zatim i n karaktera. 
-   Napisati program koji proverava da li se od unetih karaktera
-   moze napisati rec Zima. */
-
 #include <stdio.h>
 #include <math.h>
 
 int main()
 {
-  int n;
-  int broj_Z, broj_i, broj_m, broj_a;
+  /* Deklaracija i inicijalizacija potrebnih promenljivih. */
+  int n, i;
+  int broj_Z = 0, broj_i = 0, broj_m = 0, broj_a = 0;
   char novi_red, c;
-  int i;
 
-  broj_Z = 0;
-  broj_i = 0;
-  broj_m = 0;
-  broj_a = 0;
-
-  printf("Unesite broj: ");
+  /* Ucitava se broj karaktera i vrsi se provera ispravnosti 
+     ulaza. */
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Ucitavanje karakter po karakter. */
-  for (i = 0; i < n; i++) {
-    printf("Unestite %d. karakter: ", i + 1);
+  if (n <= 0) {
+    printf("Greska: neispravan unos.\n");
+    return -1;
+  }
+
+  /* Ucitavaju se karakteri. */
+  for (i = 1; i <= n; i++) {
+    printf("Unestite %d. karakter: ", i);
+    
     /* Prvo se cita belina koja se nalazi nakon prethodnog unosa,
        pa tek posle procitane beline se cita uneseni karakter. */
     scanf("%c%c", &novi_red, &c);
 
-    /* Analiziramo karakter */
+    /* Obradjuje se ucitani karakter. */
     switch (c) {
     case 'Z':
       broj_Z++;
@@ -44,14 +43,12 @@ int main()
     }
   }
 
-  /* Ako u unosu ima barem jedno veliko slovo z i barem po jedno
-     malo slovo i, m i a, rec se moze napisati. A u suprotnom ne
-     moze. */
-  if (broj_Z && broj_i && broj_m && broj_a) {
+  /* Ako su svi brojaci razliciti od nule, rec "Zima" se moze
+     napisati pomocu unetih karaktera. */
+  if (broj_Z && broj_i && broj_m && broj_a)
     printf("Moze se napisati rec Zima.\n");
-  } else {
+  else
     printf("Ne moze se napisati rec Zima.\n");
-  }
 
   return 0;
 }

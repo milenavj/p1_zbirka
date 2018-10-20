@@ -2,50 +2,53 @@
 
 int main()
 {
-  /* Promenljiva cena oznacava trenutno unesenu cenu. */
-  float cena;
-  float m;
+  /* Deklaracije potrebnih promenljivih. */
+  float cena, m;
   int n, i;
-  int broj_brojeva = 0;
+  int broj_artikala = 0;
 
-  printf("Unesite koliko novaca ima Nikola: ");
+  /* Ucitava se vrednost broja m. */
+  printf("Nikolin budzet: ");
   scanf("%f", &m);
 
+  /* Vrsi se provera ispravnosti ulaza. */
   if (m < 0) {
-    printf("Nikola ne moze imati negativno novaca.\n");
+    printf("Greska: neispravan unos novca.\n");
     return -1;
   }
 
+  /* Ucitava se broj n. */
   printf("Unesite broj artikala: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */
   if (n < 0) {
-    printf("Broj artikala ne moze biti negativan.\n");
+    printf("Greska: neispravan unos broja artikala.\n");
     return -1;
   }
 
+  /* Unose se cene artikala i racuna se rezultat. */
   printf("Unesite cene artikala: ");
-
-  i = 0;
-  while (i < n) {
+  
+  for(i=0; i<n; i++){
     /* Ucitava se cena artikla. */
     scanf("%f", &cena);
 
+    /* Vrsi se provera ispravnosti vrednosti cene. */
     if (cena <= 0) {
-      printf("Cena ne moze biti negativna.\n");
+      printf("Greska: neispravan unos cene.\n");
       return -1;
     }
 
-    /* Provera da li je cena manji od zadatog broja m. */
-    if (cena < m) {
-      /* Ako jeste, uvecava se brojac brojeva za 1. */
-      broj_brojeva++;
+    /* Provera se da li Nikola moze da kupi trenutni artikal. */
+    if (cena <= m) {
+      /* Ako moze, uvecava se brojac artikala za 1. */
+      broj_artikala++;
     }
-
-    i++;
   }
 
-  printf("%d\n", broj_brojeva);
+  /* Ispis rezultata. */
+  printf("Ukupno artikala: %d\n", broj_artikala);
 
   return 0;
 }

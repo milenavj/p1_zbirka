@@ -7,8 +7,8 @@
 %--------------------------------------------------------------------
 
 
-\begin{Exercise}[label=v1.3_1] 
-Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo da programiramo}.  
+\begin{Exercise}[label=PET_01] 
+Napisati program koji pet puta ispisuje tekst \kckod{Mi volimo da programiramo}.  
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -21,25 +21,24 @@ Napisati program koji $5$ puta ispisuje tekst \kckod{Mi volimo da programiramo}.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.3_1}
-
-
+\linkresenje{PET_01}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=v1.3_1]
+\begin{Answer}[ref=PET_01]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_1.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_2] 
-Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
+\begin{Exercise}[label=PET_02] 
+Napisati program koji učitava nenegativan ceo broj $n$ i $n$ puta ispisuje tekst
 \kckod{Mi volimo da programiramo}. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{6}#
+#\izlaz{Unesite broj n:}\ulaz{6}#
 #\izlaz{Mi volimo da programiramo.}#
 #\izlaz{Mi volimo da programiramo.}#
 #\izlaz{Mi volimo da programiramo.}#
@@ -51,79 +50,95 @@ Napisati program koji učitava ceo broj $n$ i ispisuje $n$ puta tekst
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ceo broj}\ulaz{0}#
+#\izlaz{Unesite broj n:}\ulaz{0}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_2}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-5}#
+#\izlaz{Greska: pogresan unos broja n.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{1}#
+#\izlaz{Mi volimo da programiramo.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_02}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_2]
+\begin{Answer}[ref=PET_02]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_2.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_3] 
-Napisati program koji učitava pozitivan ceo broj $n$
+\begin{Exercise}[label=PET_03] 
+Napisati program koji učitava nenegativan ceo broj $n$
 a potom ispisuje sve cele brojeve od $0$ do $n$. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ceo pozitivan broj:}\ulaz{4}#
+#\izlaz{Unesite broj n:}\ulaz{4}#
 #\izlaz{0 1 2 3 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ceo pozitivan broj:}\ulaz{-10}#
-#\izlaz{Neispravan unos. Promenljiva mora biti pozitivna!}#
+#\izlaz{Unesite broj n:}\ulaz{-10}#
+#\izlaz{Greska: pogresan unos broja n.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_3}
+\linkresenje{PET_03}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_3]
+\begin{Answer}[ref=PET_03]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_3.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_4] 
-Napisati program koji učitava dva cela broja $n$ i $m$ ispisuje sve
+\begin{Exercise}[label=PET_04] 
+Napisati program koji učitava dva cela broja $n$ i $m$, $(n \leq m)$ i ispisuje sve
 cele brojeve iz intervala $[n,m]$.
 \begin{enumerate}
 \item Koristiti \kckod{while} petlju.
 \item Koristiti \kckod{for} petlju.
 \item Koristiti \kckod{do-while} petlju.
  \end{enumerate}
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dva cela broja:}\ulaz{-2 4}#
+#\izlaz{Unesite granice intervala:}\ulaz{-2 4}#
 #\izlaz{-2 -1 0 1 2 3 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dva cela broja:}\ulaz{10 6}#
-#\izlaz{Neispravan unos. Nisu dobro zadate granice intervala!}#
+#\izlaz{Unesite granice intervala:}\ulaz{10 6}#
+#\izlaz{Greska: pogresan unos granica. }#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_4}
+\linkresenje{PET_04}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_4]
+\begin{Answer}[ref=PET_04]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4a.c}
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4b.c}
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4c.c}
 \end{Answer}
 \fi
-
-%\komentarM{Komentari u resenjima su uglavnom ok. Jedino smo rekli da stil treba da bude bezlican, tj da umesto "ucitavamo broj" ili "transformisemo vrednost" kazemo "ucitava se broj" ili "vrednost se transformise". Ima i jedne i druge vrste komentara, cak i u istom resenju, i to treba ujednaciti.}
 
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
@@ -131,82 +146,95 @@ cele brojeve iz intervala $[n,m]$.
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
 
-\begin{Exercise}[label=1.3_5] 
- Napisati program koji učitava ceo pozitivan broj i izračunava njegov
- faktorijel. U slučaju neispravnog unosa ispisati odgovarajuću poruku.
+\begin{Exercise}[label=PET_05] 
+ Napisati program koji učitava ceo pozitivan broj $x$ i izračunava njegov
+ faktorijel. 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-%\komentarD{Ja sam proveravala i kod mene do prekoracenja dolazi od
-%22. Prilicno sam sigurna u to jer za svaki broj rezulatat je veci za
-%jednu cifru, a onda za 22 vise nije i nema logike u odnosu na
-%rezultat za 21!. Ovde se u resenju koristi unsigned long int, pa je
-%mozda to razlog zasto kasnije dolazi do prekoracenja.}
-
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite pozitivan broj:}\ulaz{18}#
-#\izlaz{Faktorijel = 6402373705728000}#
+#\izlaz{Unesite broj x:}\ulaz{18}#
+#\izlaz{18! = 6402373705728000}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite pozitivan broj:}\ulaz{8}#
-#\izlaz{Faktorijel = 40320}#
+#\izlaz{Unesite broj x:}\ulaz{8}#
+#\izlaz{8! = 40320}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite pozitivan broj:}\ulaz{40}#
-#\izlaz{Broj je veliki, dolazi do prekoracenja.}#
+#\izlaz{Unesite broj x:}\ulaz{40}#
+#\izlaz{Pri racunanju 40! ce doci do prekoracenja.}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{-5}#
+#\izlaz{Greska: neispravan unos. }#
+\end{upotreba}
+\end{miditest}
 
- \linkresenje{1.3_5}
+ \linkresenje{PET_05}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_5]
+\begin{Answer}[ref=PET_05]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_5.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_6] 
- Sa standradnog ulaza unose se realan broj $x$ i ceo pozitivan broj
+\begin{Exercise}[label=PET_06] 
+ Sa standradnog ulaza unose se realan broj $x$ i ceo nenegativan broj
  $n$. Napisati program koji izračunava $n$-ti stepen broja $x$,
  tj.~$x^n$.
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite redom brojeve x i n:}\ulaz{4 3}#
-#\izlaz{64.00000}#
+#\izlaz{Rezultat: 64.00000}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite redom brojeve x i n:}\ulaz{5.8 5}#
-#\izlaz{6563.56768}#
+#\izlaz{Rezultat: 6563.56768}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite redom brojeve x i n:}\ulaz{11.43 0}#
-#\izlaz{1.00000}#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{11.43 -6}#
+#\izlaz{Greska: neispravan unos broja n.}#
 \end{upotreba}
-\end{minitest}
-\linkresenje{1.3_6}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{11.43 0}#
+#\izlaz{Rezultat: 1.00000}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_06}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_6]
+\begin{Answer}[ref=PET_06]
   \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_6.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_7]
+\begin{Exercise}[label=PET_07]
  Sa standradnog ulaza unose se realan broj $x$ i ceo broj
  $n$. Napisati program koji izračunava $n$-ti stepen broja $x$. 
  
@@ -214,89 +242,98 @@ cele brojeve iz intervala $[n,m]$.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite redom brojeve x i n:}\ulaz{2 -3}#
-#\izlaz{0.125}#
+#\izlaz{Rezultat: 0.125}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite redom brojeve x i n:}\ulaz{-3 2}#
-#\izlaz{9.000}#
+#\izlaz{Rezultat: 9.000}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_7}
+\linkresenje{PET_07}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_7]
+\begin{Answer}[ref=PET_07]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_7.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_8] 
+\begin{Exercise}[label=PET_08] 
 Pravi delioci celog broja su svi delioci sem jedinice i samog tog
-broja.  Napisati program za uneti ceo pozitivan broj $x$
-ispisuje sve njegove prave delioce. U slučaju greške pri unosu
-podataka ispisati odgovarajuću poruku.  
+broja. Napisati program za uneti ceo pozitivan broj $x$
+ispisuje sve njegove prave delioce.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ceo broj veci od 0:}\ulaz{100}#
+#\izlaz{Unesite broj x:}\ulaz{100}#
 #\izlaz{2 4 5 10 20 25 50}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{-6}#
-#\izlaz{neispravan unos.}#
+#\izlaz{Unesite broj x:}\ulaz{-6}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_8}
+\linkresenje{PET_08}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_8]
+\begin{Answer}[ref=PET_08]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_8.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_9] 
- Napisati program koji za uneti prirodan broj uklanja sve nule
+
+\begin{Exercise}[label=PET_09] 
+ Napisati program koji za uneti ceo broj uklanja sve nule
  sa njegove desne strane. Ispisati novodobijeni broj. 
  
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{12000}#
 #\izlaz{12}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{856}#
-#\izlaz{856}#
+#\izlaz{Unesite broj:}\ulaz{0}#
+#\izlaz{0}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{140}#
-#\izlaz{14}#
+#\izlaz{Unesite broj:}\ulaz{-1400}#
+#\izlaz{-14}#
 \end{upotreba}
-\end{minitest}
-\linkresenje{1.3_9}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{147}#
+#\izlaz{147}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_09}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_9]
+\begin{Answer}[ref=PET_09]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_9.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_10] 
+\begin{Exercise}[label=PET_10] 
 Napisati program koji učitava ceo broj i ispisuje njegove cifre u
 obrnutom poretku. 
 
@@ -314,146 +351,168 @@ obrnutom poretku.
 #\izlaz{5 4 3 2 9 8}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_10}
+\linkresenje{PET_10}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_10]
+\begin{Answer}[ref=PET_10]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_10.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_11] 
+\begin{Exercise}[label=PET_11] 
 Napisati program koji za uneti prirodan broj ispisuje da li je on deljiv
-sumom svojih cifara.
+sumom svojih cifara. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{12}#
-#\izlaz{Deljiv je sumom svojih cifara.}#
+#\izlaz{Broj 12 je deljiv sa 3.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{2564}#
-#\izlaz{Nije deljiv sumom svojih cifara.}#
+#\izlaz{Broj 2564 nije deljiv sa 17.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{-4}#
-#\izlaz{Neispravan ulaz.}#
+#\izlaz{Greska: neispravan ulaz.}#
 \end{upotreba}
-\end{minitest}
-
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{0}#
-#\izlaz{Neispravan ulaz.}#
+#\izlaz{Greska: neispravan ulaz.}#
 \end{upotreba}
-\end{minitest}
-\linkresenje{1.3_11}
+\end{miditest}
+\linkresenje{PET_11}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_11]
+\begin{Answer}[ref=PET_11]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_11.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_12] 
+\begin{Exercise}[label=PET_12] 
 Napisati program koji učitava pozitivan ceo broj $n$, a zatim učitava
 $n$ celih brojeva i ispisuje sumu pozitivnih i sumu negativnih unetih
 brojeva.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{7}#
-#\izlaz{Unesite brojeve:}#
+#\izlaz{Unesite broj n:}\ulaz{7}#
+#\izlaz{Unesite 7 brojeva:}#
 #\ulaz{8 -50 45 2007 -67 -123 14}#
 #\izlaz{Suma pozitivnih: 2074}#
 #\izlaz{Suma negativnih: -240}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{5}#
-#\izlaz{Unesite brojeve:}#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite 5 brojeva:}#
 #\ulaz{-5 -20 -4 -200 -8}#
 #\izlaz{Suma pozitivnih: 0}#
 #\izlaz{Suma negativnih: -237}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-6}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Unesite broj n:}\ulaz{-6}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{minitest}
-\linkresenje{1.3_12}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_12}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_12]
+\begin{Answer}[ref=PET_12]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_12.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_13] 
-Program unosi ceo pozitivan broj $n$, a potom i $n$ celih
-brojeva. Izračunati i ispisati zbir onih brojeva koji su neparni i
+
+\begin{Exercise}[label=PET_13] 
+Napisati program koji učitava ceo pozitivan broj $n$, a potom i $n$ celih
+brojeva. Izračunati i ispisati zbir onih brojeva koji su istovremeno neparni i
 negativni.
-
-\begin{minitest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n brojeva:}#
-#\ulaz{1 -5 -6 3 -11}#
-#\izlaz{-16}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}#
-#\ulaz{5 8 13 17}#
-#\izlaz{0}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-4}#
-#\izlaz{Neispravan unos.}#
-\end{upotreba}
-\end{minitest}
-\linkresenje{1.3_13}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=1.3_13]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_13.c}
-\end{Answer}
-\fi
-
-\begin{Exercise}[label=1.3_14] 
-Program učitava ceo pozitivan broj $n$, a potom $n$ celih brojeva.
-Naći sumu brojeva koji su deljivi sa $5$, a nisu deljivi sa $7$. U
-slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite brojeve:}\ulaz:{2 35 5 -175 -20 }#
+#\izlaz{Unesite n brojeva:}#
+#\ulaz{1 -5 -6 3 -11}#
+#\izlaz{Zbir neparnih i negativnih: -16}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-4}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}#
+#\ulaz{5 8 13 17}#
+#\izlaz{Zbir neparnih i negativnih: 0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_13}
+\end{Exercise}
+\ifresenja
+\begin{Answer}[ref=PET_13]
+\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_13.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=PET_14] 
+Napisati program koji učitava ceo pozitivan broj $n$, a potom $n$ celih brojeva i
+računa i ispisuje sumu brojeva koji su deljivi sa $5$, a nisu deljivi sa $7$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz:{2 35 5 -175 -20 }#
 #\izlaz{Suma je -15.}#
 \end{upotreba}
 \end{miditest}
@@ -461,7 +520,7 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{-3}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
@@ -469,7 +528,7 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{10}#
-#\izlaz{Unesite brojeve:}#
+#\izlaz{Unesite n brojeva:}#
 #\ulaz{-5 6 175 -20 -25 -8 42 245 1 6}#
 #\izlaz{Suma je -50.}#
 \end{upotreba}
@@ -483,188 +542,154 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 #\izlaz{Suma je -535.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_14}
+
+\linkresenje{PET_14}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_14]
+\begin{Answer}[ref=PET_14]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_14.c}
 \end{Answer}
 \fi
 
-\iffalse
-\begin{Exercise}[label=1.3_14_5] 
-Broj je prost ako je deljiv samo sa $1$ i sa samim sobom.
-Program učitava ceo broj $n$, a potom proverava da li je broj 
-prost i ispisuje odgovarajuću poruku.
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Broj je prost.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{100}#
-#\izlaz{Broj nije prost.}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-17}#
-#\izlaz{Broj nije prost.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{101}#
-#\izlaz{Broj je prost.}#
-\end{upotreba}
-\end{miditest}
-%\linkresenje{1.3_14_5}
-\end{Exercise}
-%\ifresenja
-\begin{Answer}[ref=1.3_14_5]
-%\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_14_5.c}
-%\end{Answer}
-%\fi
-\fi
-
-\begin{Exercise}[label=1.3_15] 
+\begin{Exercise}[label=PET_15] 
 Nikola želi da obraduje baku i da joj kupi jedan poklon u radnji. On
-na raspolaganju ima $m$ novaca. U radnji se nalazi $n$ artikala i
+na raspolaganju ima $m$ dinara. U radnji se nalazi $n$ artikala i
 zanima ga koliko ima artikala u radnji čija cena je manja ili
 jednaka $m$. Napisati program koji pomaže Nikoli da brzo odrediti
-broj atikala. Program učitava realan pozitivan broj $m$, ceo
-pozitivan broj $n$ i $n$ realnih pozitivnih brojeva različitih
-od $0$. Ispisati koliko artikala ima manju ili jednaku cenu od $m$. U
-slučaju greške ispisati odgovarajuću poruku. 
+broj atikala. Program učitava realan nenegativan broj $m$, ceo
+nenegativan broj $n$ i $n$ realnih pozitivnih brojeva. 
+Ispisati koliko artikala ima cenu čija je vrednost manja ili jednaka $m$. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj m:}\ulaz{12.37}#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n brojeva:}\ulaz{11 54.13 6 13 8}#
-#\izlaz{3}#
+#\izlaz{Nikolin budzet:}\ulaz{12.37}#
+#\izlaz{Unesite broj artikala:}\ulaz{5}#
+#\izlaz{Unesite cene artikala:}\ulaz{11 54.13 6 13 8}#
+#\izlaz{Ukupno artikala: 3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj m:}\ulaz{2}#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}\ulaz{1 11 4.32 3}#
-#\izlaz{1}#
+#\izlaz{Nikolin budzet:}\ulaz{2}#
+#\izlaz{Unesite broj artikala:}\ulaz{4}#
+#\izlaz{Unesite cene artikala:}\ulaz{1 11 4.32 3}#
+#\izlaz{Ukupno artikala: 1}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj m:}\ulaz{2}#
-#\izlaz{Unesite broj n:}\ulaz{-4}#
-#\izlaz{Broj artikala ne moze biti negativan.}#
+#\izlaz{Nikolin budzet:}\ulaz{2}#
+#\izlaz{Unesite broj artikala:}\ulaz{-4}#
+#\izlaz{Greska: neispravan unos broja artikala.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj m:}\ulaz{30}#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}\ulaz{67 -100 23 98}#
-#\izlaz{Cena ne moze biti negativna.}# 
+#\izlaz{Nikolin budzet:}\ulaz{30}#
+#\izlaz{Unesite broj artikala:}\ulaz{4}#
+#\izlaz{Unesite cene artikala:}\ulaz{67 -100 23 98}#
+#\izlaz{Greska: neispravan unos cene.}# 
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_15}
+\linkresenje{PET_15}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_15]
+\begin{Answer}[ref=PET_15]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_15.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_16] 
+\begin{Exercise}[label=PET_16] 
 Napisati program koji učitava cele brojeve sve dok se ne unese
-nula. Nakon toga ispisati proizvod onih unetih brojeva koji su
+nula i ispisuje proizvod onih unetih brojeva koji su
 pozitivni.  
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite brojeve:}#
 #\ulaz{-87 12 -108 -13 56 0}#
-#\izlaz{Proizvod pozitivnih unetih brojeva je 672.}#
+#\izlaz{Proizvod pozitivnih brojeva je 672.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite brojeve:}#
-#\ulaz{-5 -200 -43 0}#
-#\izlaz{Nisu uneseni pozitivni brojevi.}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite brojeve:}\ulaz{0}#
-#\izlaz{Nisu uneseni brojevi.}#
+#\izlaz{Nije unet nijedan broj.}#
 \end{upotreba}
-\end{minitest}
-\linkresenje{1.3_16}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{-5 -200 -43 0}#
+#\izlaz{Medju unetim brojevima nema pozitivnih.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{1 0}#
+#\izlaz{Proizvod pozitivnih brojeva je 1.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_16}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_16]
+\begin{Answer}[ref=PET_16]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_16.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_17] 
- Napisati program koji za pozitivan ceo broj proverava i ispisuje da
- li se cifra 5 nalazi u njegovom zapisu.
+
+\begin{Exercise}[label=PET_17] 
+ Napisati program koji za uneti ceo broj proverava i ispisuje da
+ li se cifra $5$ nalazi u njegovom zapisu.
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{1857}#
-#\izlaz{Cifra 5 se nalazi u zapisu!}#
+#\izlaz{Broj 1857 sadrzi cifru 5.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{84}#
-#\izlaz{Cifra 5 se ne nalazi u zapisu!}#
+#\izlaz{Broj 84 ne sadrzi cifru 5.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-235515}#
-#\izlaz{Cifra 5 se nalazi u zapisu!}#
+#\izlaz{Unesite broj:}\ulaz{-2515}#
+#\izlaz{Broj -2515 sadrzi cifru 5.}#
 \end{upotreba}
 \end{minitest}
-\linkresenje{1.3_17}
+\linkresenje{PET_17}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_17]
+\begin{Answer}[ref=PET_17]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_17.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_18] 
-Program učitava cele brojeve sve do unosa broja nula $0$. Napisati
-program koji izračunava i ispisuje aritmetičku sredinu unetih brojeva
+\begin{Exercise}[label=PET_18] 
+Napisati program koji učitava cele brojeve sve do unosa broja nula, a zatim
+izračunava i ispisuje aritmetičku sredinu unetih brojeva
 na četiri decimale.
 
 \begin{miditest}
@@ -677,45 +702,46 @@ na četiri decimale.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{762 -12 800 2010 -356 899 -101 0}#
-#\izlaz{Aritmeticka sredina: 571.7143}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
 #\izlaz{Unesite brojeve:}\ulaz{0}#
 #\izlaz{Nisu uneseni brojevi.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_18}
+
+\begin{maxitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{762 -12 800 2010 -356 899 -101 0}#
+#\izlaz{Aritmeticka sredina: 571.7143}#
+\end{upotreba}
+\end{maxitest}
+
+\linkresenje{PET_18}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_18]
+\begin{Answer}[ref=PET_18]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_18.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_19] 
-U prodavnici se nalaze artikala čije cene su realni pozitivni
-brojevi. Program unosi cene artikala sve do unosa broja nula
-$0$. Napisati program koji izračunava i ispisuje prose\v cnu vrednost
-cena u radnji.
+\begin{Exercise}[label=PET_19] 
+U prodavnici se nalaze artikali čije su cene realni pozitivni
+brojevi. Program ucitava cene artikala sve do unosa broja nula i
+izračunava i ispisuje prosečnu vrednost cena u radnji.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite cene:}\ulaz{8 5.2 6.11 3 0}#
-#\izlaz{Prosecna cena je: 5.5775}#
+#\izlaz{Prosecna cena: 5.5775}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite cene:}\ulaz{6.32 -9}#
-#\izlaz{Cena ne moze biti negativana.}#
+#\izlaz{Greska: neispravan unos cene.}#
 \end{upotreba}
 \end{miditest}
 
@@ -726,33 +752,27 @@ cena u radnji.
 #\izlaz{Nisu unesene cene.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_19}
+\linkresenje{PET_19}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_19]
+\begin{Answer}[ref=PET_19]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_19.c}
 \end{Answer}
 \fi
 
 
-
-
-
-
-
-
-
-\begin{Exercise}[label=1.3_20] 
-Program učitava ceo pozitivan broj $n$, a potom $n$ realnih
-brojeva. Odrediti koliko puta je prilikom unosa došlo do promene
-znaka. Ispisati dobijenu vrednost.
+\begin{Exercise}[label=PET_20] 
+Napisati program koji učitava ceo pozitivan broj $n$, a potom $n$ realnih
+brojeva, a zatim određuje i ispisuje koliko puta je prilikom unosa došlo 
+do promene znaka.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{10}#
+#\izlaz{Unesite broj n:}\ulaz{9}#
 #\izlaz{Unesite brojeve:}#
-#\ulaz{7.82 4.3 -1.2 56.8 -3.4 -72.1 8.9 11.2 -11.2 -102.4}#
+#\ulaz{7.82 4.3 -1.2 56.8 -3.4 -72.1 8.9 11.2 -11.2}#
 #\izlaz{Broj promena je 5.}#
 \end{upotreba}
 \end{miditest}
@@ -770,66 +790,71 @@ znaka. Ispisati dobijenu vrednost.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{-6}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{0}#
-#\izlaz{Broj promena je 0.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_20}
+
+\linkresenje{PET_20}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_20]
+\begin{Answer}[ref=PET_20]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_20.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_21] 
-U prodavnici se nalazi $n$ artikala čije cene su realni
+\begin{Exercise}[label=PET_21] 
+U prodavnici se nalazi $n$ ($n>0$) artikala čije su cene pozitivni realni
 brojevi. Napisati program koji učitava $n$, a potom i cenu svakog od
 $n$ artikala i određuje i ispisuje najmanju cenu.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj artikla:}\ulaz{6}#
-#\izlaz{Unesite artikle:}#
+#\izlaz{Unesite cene artikala:}#
 #\ulaz{12 3.4 90 100.53 53.2 12.8}#
-#\izlaz{Minimalna cena je: 3.400000}#
+#\izlaz{Najmanja cena: 3.400000}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj artikla:}\ulaz{3}#
-#\izlaz{Unesite artikle:}\ulaz{4 -8 92}#
-#\izlaz{Cena ne moze biti negativna.}#
+#\izlaz{Unesite cene artikala:}#
+#\ulaz{4 -8 92}#
+#\izlaz{Greska: neispravan unos cene.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
 
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj artikla:}\ulaz{-9}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{minitest}
-\linkresenje{1.3_21}
+\end{miditest}
+
+\linkresenje{PET_21}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_21]
+\begin{Answer}[ref=PET_21]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_21.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_22] 
-Program učitava ceo pozitivan broj $n$, a zatim i $n$ celih
-brojeva. Napisati program koji ispisuje broj sa najvećom cifrom
-desetica. Ukoliko ima više takvih, ispisati prvi.
+\begin{Exercise}[label=PET_22] 
+Napisati program koji učitava ceo nenegativan broj $n$, a zatim i $n$ celih
+brojeva i ispisuje broj sa najvećom cifrom desetica. 
+Ukoliko ima više takvih, ispisati prvi.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -837,7 +862,7 @@ desetica. Ukoliko ima više takvih, ispisati prvi.
 #\izlaz{Unesite broj n:}\ulaz{5}#
 #\izlaz{Unesite brojeve:}#
 #\ulaz{18 365 25 1 78}#
-#\izlaz{Broj sa najvecom cifrom desetica je 78.}#
+#\izlaz{Broj sa najvecom cifrom desetica: 78.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -846,36 +871,47 @@ desetica. Ukoliko ima više takvih, ispisati prvi.
 #\izlaz{Unesite broj n:}\ulaz{8}#
 #\izlaz{Unesite brojeve:}#
 #\ulaz{14 1576 -1267 -89 109 122 306 918}#
-#\izlaz{Broj sa najvecom cifrom desetica je -89.}#
+#\izlaz{Broj sa najvecom cifrom desetica: -89.}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-12}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{100 200 300 400}#
+#\izlaz{Broj sa najvecom cifrom desetica: 100.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_22}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-12}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_22}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_22]
+\begin{Answer}[ref=PET_22]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_22.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_23] 
-Program učitava ceo pozitivan broj $n$, a zatim i $n$ celih
-brojeva. Napisati program koji ispisuje broj sa najvećim brojem
-cifara. Ukoliko ima više takvih, ispisati prvi.
+\begin{Exercise}[label=PET_23] 
+Napisati program koji učitava ceo nenegativan broj $n$, a zatim i $n$ celih
+brojeva i ispisuje broj sa najvećim brojem cifara. 
+Ukoliko ima više takvih, ispisati prvi.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n brojeva:}\ulaz{18 365 25 1 78}#
-#\izlaz{Najvise cifara ima broj 365.}#
+#\izlaz{Unesite n brojeva:}\ulaz{18 -365 251 1 78}#
+#\izlaz{Najvise cifara ima broj -365.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -887,49 +923,100 @@ cifara. Ukoliko ima više takvih, ispisati prvi.
 #\izlaz{Najvise cifara ima broj 892.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_23}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Nisu uneseni brojevi.}
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-7}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{0 1 2 -3 4}#
+#\izlaz{Najvise cifara ima broj 0.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{6}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n brojeva:}\ulaz{-5 4 -3 2 1}#
+#\izlaz{Najvise cifara ima broj -5.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_23}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_23]
+\begin{Answer}[ref=PET_23]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_23.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_24] 
-Program učitava ceo pozitivan broj $n$, a zatim i $n$ celih
-brojeva. Napisati program koji ispisuje broj sa najvećom vodećom
+\begin{Exercise}[label=PET_24] 
+Napisati program koji učitava ceo nenegativan broj $n$, a zatim i $n$ celih
+brojeva i zatim računa i ispisuje broj sa najvećom vodećom
 cifrom. Vodeća cifra je cifra najveće težine u zapisu broja. Ukoliko
 ima više takvih, ispisati prvi.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n brojeva:}\ulaz{8 964 32 511 27}#
+#\izlaz{Unesite n brojeva:}\ulaz{8 964 -32 511 27}#
 #\izlaz{Broj sa najvecom vodecom cifrom je 964.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{1}
+\begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{Unesite n brojeva:}\ulaz{41 669 8}#
-#\izlaz{Broj sa najvecom vodecom cifrom je 8.}#
+#\izlaz{Unesite n brojeva:}\ulaz{41 669 -8}#
+#\izlaz{Broj sa najvecom vodecom cifrom je -8.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_24}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{3}#
+#\izlaz{Unesite n brojeva:}\ulaz{0 0 0}#
+#\izlaz{Broj sa najvecom vodecom cifrom je 0.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Nisu uneseni brojevi.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_24}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_24]
+\begin{Answer}[ref=PET_24]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_24.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_25] 
-Vršna su merenja nadmorskih visina na određenom delu teritorije i
+\begin{Exercise}[label=PET_25] 
+Vršena su merenja nadmorskih visina na određenom delu teritorije i
 naučnike zanima razlika između najveće i najmanje nadmorske
-visine. Napisati program koji učitava realne brojeve sve do unosa $0$
+visine. Napisati program koji učitava cele brojeve sve do unosa $0$
 koji označavaju nadmorske visine i ispisuje razliku najveće i najmanje
 nadmorske visine.
 
@@ -947,22 +1034,45 @@ nadmorske visine.
 #\izlaz{Razlika: 9}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_25}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{0}#
+#\izlaz{Nisu unete nadmorske visine.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{-500 0}#
+#\izlaz{Razlika: 0}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{-500 -300 -5000 0}#
+#\izlaz{Razlika: 4700}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_25}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_25]
+\begin{Answer}[ref=PET_25]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_25.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_26] 
-Program učitava cele pozitivane brojeve $n$ ($n>1$) i $d$, a zatim i
-$n$ celih brojeva. Napisati program koji izračunava koliko ima parova
+\begin{Exercise}[label=PET_26] 
+Napisati program koji učitava cele brojeve $n$ ($n>1$) i $d$ ($d>=0$), a zatim i
+$n$ celih brojeva i zatim izračunava i ispisuje koliko ima parova
 uzastopnih brojeva među unetim brojevima koji se nalaze na rastojanju
-$d$. Rastojanje između brojeva je definisano sa
-$d(x,y)=|y-x|$. Ispisati rezultat.
+$d$. Rastojanje između brojeva je definisano sa $d(x,y)=|y-x|$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -981,67 +1091,84 @@ $d(x,y)=|y-x|$. Ispisati rezultat.
 #\izlaz{Broj parova: 4}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_26}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve n i d:}\ulaz{5 0}#
+#\izlaz{Unesite n brojeva:}\ulaz{1 1 1 1 1}#
+#\izlaz{Broj parova: 4}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite brojeve n i d:}\ulaz{1 3}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_26}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_26]
+\begin{Answer}[ref=PET_26]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_26.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_27] 
+\begin{Exercise}[label=PET_27] 
 Napisati program koji uneti prirodan broj transformiše tako što svaku
 parnu cifru u zapisu broja uveća za jedan. Ispisati novodobijeni broj.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{2417}#
-#\izlaz{3517}#
+#\izlaz{Rezultat: 3517}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{138}#
-#\izlaz{139}#
+#\izlaz{Rezultat: 139}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{59}#
-#\izlaz{59}#
+#\izlaz{Rezultat: 59}#
 \end{upotreba}
 \end{minitest}
-\linkresenje{1.3_27}
+
+\linkresenje{PET_27}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_27]
+\begin{Answer}[ref=PET_27]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_27.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_28]
-  Napisati program koji formira i ispisuje broj koji se dobija
-  izbacivanjem svake druge cifre polaznog celog broja, počevši od
-  krajnje desne cifre.
+\begin{Exercise}[label=PET_28]
+Napisati program koji učitava jedan ceo broj i zatim formira i ispisuje broj 
+koji se dobija izbacivanjem svake druge cifre polaznog broja, idući sa desna na levo.
  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{21854}#
-#\izlaz{284}#
+#\izlaz{Rezultat: 284}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{18}#
-#\izlaz{8}#
+#\izlaz{Rezultat: 8}#
 \end{upotreba}
 \end{miditest}
 
@@ -1049,28 +1176,31 @@ parnu cifru u zapisu broja uveća za jedan. Ispisati novodobijeni broj.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{1}#
-#\izlaz{1}#
+#\izlaz{Rezultat: 1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{-67123}#
-#\izlaz{-613}#
+#\izlaz{Rezultat: -613}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_28}
+
+\linkresenje{PET_28}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_28]
+\begin{Answer}[ref=PET_28]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_28.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_29] 
+
+\begin{Exercise}[difficulty=1, label=PET_29] 
  Napisati program koji na osnovu unetog prirodnog broja formira i
- ispisuje broj koji se dobija izbacivanjem cifara koje su jednake
- zbiru svojih suseda.
+ ispisuje broj koji se dobija izbacivanjem cifara koje su u polaznom broju
+ jednake zbiru svojih suseda.
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -1090,114 +1220,117 @@ parnu cifru u zapisu broja uveća za jedan. Ispisati novodobijeni broj.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{-5}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{minitest}
-\linkresenje{1.3_29}
+\linkresenje{PET_29}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_29]
+\begin{Answer}[ref=PET_29]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_29.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_30] 
+
+\begin{Exercise}[difficulty=1, label=PET_30] 
 Broj je \textit{palindrom} ukoliko se isto čita i sa leve i sa desne
 strane. Napisati program koji učitava prirodan broj i proverava da li
 je učitani broj palindrom.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{25452}#
-#\izlaz{Broj je palindrom!}#
+#\izlaz{Broj je palindrom.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{895}#
-#\izlaz{Broj nije palindrom!}#
+#\izlaz{Broj nije palindrom.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{5}#
-#\izlaz{Broj je palindrom!}#
+#\izlaz{Broj je palindrom.}#
 \end{upotreba}
 \end{minitest}
-\linkresenje{1.3_30}
+\linkresenje{PET_30}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_30]
+\begin{Answer}[ref=PET_30]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_30.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_31] 
-%\komentar{Uskladiti formulaciju zadatka sa odgovarajućom formulacijom kod nizova.}
-Fibonačijev niz počinje ciframa $1$ i $1$, a svaki član se dobija
-zbirom prethodna dva. Napisati program koji učitava ceo prirodan broj
-$n$ i određuje i ispisuje $n$-ti član Fibonačijevog niza.
+\begin{Exercise}[label=PET_31] 
+Fibonačijev niz počinje ciframa $0$ i $1$, a svaki član se dobija
+kao zbir prethodna dva. Napisati program koji učitava ceo nenegativan broj
+$n$ i određuje i ispisuje $n$-ti član Fibonačijevog niza. Niz se indeksira
+počevši od nule.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{10}#
-#\izlaz{Trazeni broj je: 55}#
+#\izlaz{Unesite broj n:}\ulaz{10}#
+#\izlaz{F[10] = 55}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{-100}#
-#\izlaz{Neispravan unos. Pozicija u Fibonacijevom}#
-#\izlaz{nizu mora biti pozitivan broj koji nije 0!}#
+#\izlaz{Unesite broj n:}\ulaz{-100}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{78}#
-#\izlaz{Trazeni broj je: 375819880}#
+#\izlaz{Unesite broj n:}\ulaz{40}#
+#\izlaz{F[40] = 102334155}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{20}#
-#\izlaz{Trazeni broj je: 6765}#
+#\izlaz{Unesite broj n:}\ulaz{20}#
+#\izlaz{F[20] = 6765}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_31}
+
+\linkresenje{PET_31}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_31]
+\begin{Answer}[ref=PET_31]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_31.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_32] 
+\begin{Exercise}[label=1.3_32] 
 Niz prirodnih brojeva formira se prema sledećem pravilu:
 \begin{equation*}
 a_{n+1} = \left\{
-\begin{array}{rl}
+\begin{array}{cl}
 \frac{a_n}{2} & \text{ako je } a_n \text{ parno}\\
 \frac{3\cdot a_n + 1}{2} & \text{ako je } a_n \text{ neparno}\\
 \end{array} \right.
 \end{equation*}
 Napisati program koji za uneti početni član niza $a_0$ (ceo pozitivan
 broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. 
-
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{56}#
+#\izlaz{Unesite prvi clan:}\ulaz{56}#
 #\izlaz{56 28 14 7 11 17 26 13 20 10}#
 #\izlaz{5 8 4 2 1}#
 \end{upotreba}
@@ -1205,15 +1338,15 @@ broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{-48}#
-#\izlaz{Nekorektan unos. Broj mora biti pozitivan.}#
+#\izlaz{Unesite prvi clan:}\ulaz{-48}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{67}#
+#\izlaz{Unesite prvi clan:}\ulaz{67}#
 #\izlaz{67 101 152 76 38 19 29 44 22 11}#
 #\izlaz{17 26 13 20 10 5 8 4 2 1}#
 \end{upotreba}
@@ -1221,27 +1354,28 @@ broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$.
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite ceo broj:}\ulaz{33}#
+#\izlaz{Unesite prvi clan:}\ulaz{33}#
 #\izlaz{33 50 25 38 19 29 44 22}#
 #\izlaz{11 17 26 13 20 10 5 8 4 2 1}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_32}
+\linkresenje{PET_32}
 \end{Exercise}
+
 \ifresenja
-\begin{Answer}[ref=1.3_32]
+\begin{Answer}[ref=PET_32]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_32.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_33] 
-Papir $A_0$ ima povr\v sinu 1$m^2$ i odnos stranica
+\begin{Exercise}[difficulty=1, label=PET_33] 
+Papir $A_0$ ima površinu 1$m^2$ i odnos stranica
 $1:\sqrt{2}$. Papir $A_1$ dobija se podelom papira $A_0$ po dužoj
 ivici. Papir $A_2$ dobija se podelom $A_1$ papira po dužoj ivici
-itd. Napisati program koji za uneti prirodan broj $k$ ispisuje 
+itd. Napisati program koji za uneti nenegativan broj $k$ ispisuje 
 dimenzije papira $A_k$ u milimetrima. Rezultat ispisati kao celobrojne
-vrednosti.  
+vrednosti. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
   
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1253,16 +1387,16 @@ vrednosti.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite format papira:}\ulaz{3}#
-#\izlaz{297 420}#
+#\izlaz{Unesite format papira:}\ulaz{0}#
+#\izlaz{840 1189}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite format papira:}\ulaz{7}#
-#\izlaz{74 105}#
+#\izlaz{Unesite format papira:}\ulaz{-7}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1272,10 +1406,10 @@ vrednosti.
 #\izlaz{37 52}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_33}
+\linkresenje{PET_33}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_33]
+\begin{Answer}[ref=PET_33]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_33.c}
 \end{Answer}
 \fi
@@ -1287,7 +1421,7 @@ vrednosti.
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
 
-\begin{Exercise}[label=1.3_34] 
+\begin{Exercise}[label=PET_34] 
 Napisati program koji učitava karaktere dok se ne unese karakter tačka,
 i ako je karakter malo slovo ispisuje odgovarajuće veliko, ako je
 karakter veliko slovo ispisuje odgovarajuće malo, a u suprotnom
@@ -1307,15 +1441,16 @@ ispisuje isti karakter kao i uneti.
 #\izlaz{programiranje 1 JE ZANIMLJIVO!}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_34}
+
+\linkresenje{PET_34}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_34]
+\begin{Answer}[ref=PET_34]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_34.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_35] 
+\begin{Exercise}[label=PET_35] 
 Napisati program koji učitava karaktere sve do kraja ulaza, a potom
 ispisuje broj velikih slova, broj malih slova, broj cifara, broj
 belina i zbir unetih cifara.
@@ -1324,7 +1459,8 @@ belina i zbir unetih cifara.
 \begin{upotreba}{1}
 #\naslovInt#
 #\ulaz{Tekst sa brojevima: 124, -8900, 23...}#
-#\izlaz{velika: 1, mala: 15, cifre: 9, beline: 5}#
+#\izlaz{velika: 1, mala: 15}#
+#\izlaz{cifre: 9, beline: 5}#
 #\izlaz{suma cifara: 29}#
 \end{upotreba}
 \end{miditest}
@@ -1332,23 +1468,25 @@ belina i zbir unetih cifara.
 \begin{upotreba}{2}
 #\naslovInt#
 #\ulaz{NEMA cifara!}#
-#\izlaz{velika: 4, mala: 6, cifre: 0, beline: 1 }#
+#\izlaz{velika: 4, mala: 6}#
+#\izlaz{cifre: 0, beline: 1}#
 #\izlaz{suma cifara: 0}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_35}
+\linkresenje{PET_35}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_35]
+\begin{Answer}[ref=PET_35]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_35.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_36] 
+\begin{Exercise}[label=PET_36] 
  Program učitava ceo pozitivan broj $n$, a potom i $n$ karaktera. Za
  svaki od samoglasnika ispisati koliko puta se pojavio među unetim
  karakterima. Ne praviti razliku između malih i velikih slova.
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1374,19 +1512,41 @@ belina i zbir unetih cifara.
 #\izlaz{Samoglasnik u: 0}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_36}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Unesite n karaktera:}\ulaz{UuUuU}#
+#\izlaz{Samoglasnik a: 0}#
+#\izlaz{Samoglasnik e: 0}#
+#\izlaz{Samoglasnik i: 0}#
+#\izlaz{Samoglasnik o: 0}#
+#\izlaz{Samoglasnik u: 5}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-7}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_36}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_36]
+\begin{Answer}[ref=PET_36]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_36.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_37] 
-Program učitava ceo broj $n$, a zatim i $n$ karaktera. Napisati
+\begin{Exercise}[label=PET_37] 
+Program učitava prirodan broj $n$, a zatim i $n$ karaktera. Napisati
 program koji proverava da li se od unetih karaktera može napisati reč
 \textit{Zima}.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1416,10 +1576,19 @@ program koji proverava da li se od unetih karaktera može napisati reč
 #\izlaz{Moze se napisati rec Zima.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_37}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_37}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_37]
+\begin{Answer}[ref=PET_37]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_37.c}
 \end{Answer}
 \fi
@@ -1432,79 +1601,111 @@ program koji proverava da li se od unetih karaktera može napisati reč
 %--------------------------------------------------------------------
 
 
-\begin{Exercise}[label=1.3_38] 
+\begin{Exercise}[label=PET_38] 
 Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje
 vrednost sume kubova brojeva od $1$ do $n$, odnosno $s = 1+2^3+3^3+
-\ldots +n^3$. U slučaju greške pri unosu podataka ispisati
-odgovarajuću poruku. 
+\ldots +n^3$. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite pozitivan ceo broj:}\ulaz{14}#
-#\izlaz{Suma kubova od 1 do 14: 11025}#
+#\izlaz{Unesite broj n:}\ulaz{14}#
+#\izlaz{Suma kubova: 11025}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite pozitivan ceo broj}\ulaz{25}#
-#\izlaz{Suma kubova od 1 do 25: 105625}#
+#\izlaz{Unesite broj n:}\ulaz{25}#
+#\izlaz{Suma kubova: 105625}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_38}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-5}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_38}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_38]
+\begin{Answer}[ref=PET_38]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_38.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_39] 
+\begin{Exercise}[label=PET_39] 
 Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje sumu
 kubova, $s = 1+2^3+3^3+ \ldots +k^3$, za svaku vrednost $k = 1,
-\ldots, n$.. U slučaju greške pri unosu podataka ispisati odgovarajuću
-poruku. 
+\ldots, n$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite pozitivan ceo broj:}\ulaz{5}#
-#\izlaz{i=1, s=1}#
-#\izlaz{i=2, s=9}#
-#\izlaz{i=3, s=36}#
-#\izlaz{i=4, s=100}#
-#\izlaz{i=5, s=225}#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{k=1, suma=1}#
+#\izlaz{k=2, suma=9}#
+#\izlaz{k=3, suma=36}#
+#\izlaz{k=4, suma=100}#
+#\izlaz{k=5, suma=225}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite pozitivan ceo broj}\ulaz{8}#
-#\izlaz{i=1, s=1}#
-#\izlaz{i=2, s=9}#
-#\izlaz{i=3, s=36}#
-#\izlaz{i=4, s=100}#
-#\izlaz{i=5, s=225}#
-#\izlaz{i=6, s=441}#
-#\izlaz{i=7, s=784}#
-#\izlaz{i=8, s=1296}#
+#\izlaz{Unesite broj n:}\ulaz{8}#
+#\izlaz{k=1, suma=1}#
+#\izlaz{k=2, suma=9}#
+#\izlaz{k=3, suma=36}#
+#\izlaz{k=4, suma=100}#
+#\izlaz{k=5, suma=225}#
+#\izlaz{k=6, suma=441}#
+#\izlaz{k=7, suma=784}#
+#\izlaz{k=8, suma=1296}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_39}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-5}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_39}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_39]
+\begin{Answer}[ref=PET_39]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_39.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_40]
- Program učitava realan broj $x$ i ceo pozitivan broj $n$. Napisati
- program koji izračunava i ispisuje sumu $S=x+2\cdot x^2+3\cdot
+\begin{Exercise}[label=PET_40]
+ Napisati program koji učitava realan broj $x$ i ceo pozitivan broj $n$ i 
+ izračunava i ispisuje sumu $S=x+2\cdot x^2+3\cdot
  x^3+\ldots+n\cdot x^n$.
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1520,20 +1721,37 @@ poruku.
 #\izlaz{S=74.343750}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_40}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{5.5 0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{-0.5 -5}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_40}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_40]
+\begin{Answer}[ref=PET_40]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_40.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[label=1.3_41]
- Program učitava realan broj $x$ i ceo pozitivan broj $n$. Napisati
- program koji izračunava i ispisuje sumu
- $S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.
- 
+\begin{Exercise}[label=PET_41]
+Napisati program koji učitava realan broj $x$ i ceo pozitivan broj $n$ i 
+izračunava i ispisuje sumu
+$S=1+\frac{1}{x}+\frac{1}{x^2}+\ldots\frac{1}{x^n}$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1548,27 +1766,44 @@ poruku.
 #\izlaz{S=2.213249}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_41}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{5.5 0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{-0.5 -5}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_41}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_41]
+\begin{Answer}[ref=PET_41]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_41.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_42] 
-Napisati program koji učitava realane brojeve $x$ i $eps$ i sa zadatom
+\begin{Exercise}[difficulty=1, label=PET_42] 
+Napisati program koji učitava realne brojeve $x$ i $eps$ i sa zadatom
 tačnošću $eps$ izračunava i ispisuje sumu
 $S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$.  Izračunati sumu u
 odnosu na tačnost $eps$ znači uporediti poslednji član sume sa $eps$ i
 ukoliko je taj poslednji član manji od $eps$ prekinuti dalja
-izračunavanja.  \uputstvo{Prilikom računanja sume koristiti prethodni
-  izračunati član sume u računanju sledećeg člana sume. Naime, ako je
-  izračunat član sume $\frac{x^n}{n!}$ na osnovu njega se lako može
-  dobiti član $\frac{x^{n+1}}{(n+1)!}$. Nikako ne računati stepen i
-  faktorijel odvojeno zbog neefikasnosti takvog rešenja i zbog
-  mogućnosti prekoračenja.}
+izračunavanja.  
+\uputstvo{Prilikom računanja sume koristiti prethodni
+izračunati član sume u računanju sledećeg člana sume. Naime, ako je
+izračunat član sume $\frac{x^n}{n!}$ na osnovu njega se lako može
+dobiti član $\frac{x^{n+1}}{(n+1)!}$. Nikako ne računati stepen i
+faktorijel odvojeno zbog neefikasnosti takvog rešenja i zbog
+mogućnosti prekoračenja.}
   
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1586,21 +1821,21 @@ izračunavanja.  \uputstvo{Prilikom računanja sume koristiti prethodni
 #\izlaz{S=20.079666}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_42}
+
+\linkresenje{PET_42}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_42]
+\begin{Answer}[ref=PET_42]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_42.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_43]
+\begin{Exercise}[difficulty=1, label=PET_43]
 Napisati program koji učitava realane brojeve $x$ i $eps$ i sa zadatom
 tačnošću $eps$ izračunava i ispisuje sumu
 $S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}-\frac{x^5}{5!}\ldots$.
-\napomena{Voditi računa o efikasnosti rešenja i o mogućnosti
-  prekoračenja.}
+\napomena{Voditi računa o efikasnosti rešenja i o mogućnosti prekoračenja.}
   
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1618,139 +1853,159 @@ $S=1-x+\frac{x^2}{2!}-\frac{x^3}{3!}+\frac{x^4}{4!}-\frac{x^5}{5!}\ldots$.
 #\izlaz{S=0.049072}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_43}
+
+\linkresenje{PET_43}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_43]
+\begin{Answer}[ref=PET_43]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_43.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_44] 
-Napisati program koji učitava realan broj $x$ i prirodan broj $n$
-izračunava sumu $S = (1 + \cos(x))\cdot(1 + \cos(x^2))\cdot \ldots
-\cdot(1 + \cos(x^n))$. \napomena{Voditi računa o efikasnosti
-  rešenja}.  
+
+\begin{Exercise}[label=PET_44] 
+Napisati program koji učitava realan broj $x$ i prirodan broj $n$ i
+izračunava proizvod $P = (1 + \cos(x))\cdot(1 + \cos(x^2))\cdot \ldots
+\cdot(1 + \cos(x^n))$. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+\napomena{Voditi računa o efikasnosti rešenja}.  
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite redom brojeve x i n:}\ulaz{3.4 5}#
-#\izlaz{Proizvod = 0.026817}#
+#\izlaz{P = 0.026817}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite redom brojeve x i n:}\ulaz{12 8}#
-#\izlaz{Proizvod = 2.640565}#
+#\izlaz{P = 2.640565}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{1.3_44}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{12 0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite redom brojeve x i n:}\ulaz{12 -6}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{PET_44}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_44]
+\begin{Answer}[ref=PET_44]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_44.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_45] 
-Napisati program koji učitava ceo prirodan broj n i ispisuje vrednost
+\begin{Exercise}[difficulty=1, label=PET_45] 
+Napisati program koji učitava prirodan broj n i ispisuje vrednost
 razlomka  \\
-	\[
-		\frac{1}{1 + \frac{1}{2 + \frac{1}{3 + \frac{1}{4 + \frac{1}{\ldots + \frac{1}{(n-1) + \frac{1}{n}}}}}}}.
-	\]
-	
+\[
+  \frac{1}{1 + \frac{1}{2 + \frac{1}{3 + \frac{1}{4 + \frac{1}{\ldots + \frac{1}{(n-1) + \frac{1}{n}}}}}}}.
+\]
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite prirodan broj:}\ulaz{4}#
-#\izlaz{Razlomak = 0.697674}#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{R = 0.697674}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite prirodan broj:}\ulaz{20}#
-#\izlaz{Razlomak = 0.697775}#
+#\izlaz{Unesite broj n:}\ulaz{20}#
+#\izlaz{R = 0.697775}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite prirodan broj:}\ulaz{0}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{minitest}
 
-\linkresenje{1.3_45}
+\linkresenje{PET_45}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_45]
+\begin{Answer}[ref=PET_45]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_45.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_46] 
-Napisati program koji računa sumu
+
+\begin{Exercise}[difficulty=1, label=PET_46] 
+Napisati program koji učitava realan broj $x$ i prirodan broj $n$ i računa sumu
 $$1 - \frac{x^{2}}{2!} + \frac{x^{4}}{4!} - \ldots +
-(-1)^{n}\frac{x^{2n}}{(2n)!}.$$ za unete cele brojeve $x$ i $n$. 
+(-1)^{n}\frac{x^{2n}}{(2n)!}.$$
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \napomena{Voditi računa o efikasnosti rešenja i o mogućnosti prekoračenja.} 
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite x i n:}\ulaz{5.6 8}#
-#\izlaz{S=0.735084}#
+#\izlaz{S=0.779792}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite x i n:}\ulaz{14.32 11}#
-#\izlaz{S=17273.136719}#
+#\izlaz{S=-6714.066406}#
 \end{upotreba}
 \end{minitest}
-
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite prirodan broj:}\ulaz{-6}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{minitest}
 
-\linkresenje{1.3_46}
+\linkresenje{PET_46}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_46]
+\begin{Answer}[ref=PET_46]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_46.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_47] 
+\begin{Exercise}[difficulty=1, label=PET_47] 
 Program učitava ceo pozitivan broj $n$ veći od $0$.  Napisati program
 koji računa proizvod
 $$S = (1 + \frac{1}{2!})(1 + \frac{1}{3!})\ldots(1 +
-\frac{1}{n!}).$$ U slučaju greške pri unosu podataka ispisati 
-odgovarajuću  poruku. \napomena{Voditi računa o efikasnosti rešenja i o
-  mogućnosti prekoračenja.} 
+\frac{1}{n!}).$$ 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+\napomena{Voditi računa o efikasnosti rešenja i o mogućnosti prekoračenja.} 
   
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{1.838108}#
+#\izlaz{P = 1.838108}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{7}#
-#\izlaz{1.841026}#
+#\izlaz{P = 1.841026}#
 \end{upotreba}
 \end{miditest}
 
@@ -1758,26 +2013,26 @@ odgovarajuću  poruku. \napomena{Voditi računa o efikasnosti rešenja i o
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{0}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{10}#
-#\izlaz{1.841077}#
+#\izlaz{P = 1.841077}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_47}
+\linkresenje{PET_47}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_47]
+\begin{Answer}[ref=PET_47]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_47.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_48] 
-Program učitava ceo pozitivan neparan broj $n$.  Napisati program koji
+\begin{Exercise}[difficulty=1, label=PET_48] 
+Program učitava ceo pozitivan neparan broj $n$ ($n\geq5$).  Napisati program koji
 za uneto $n$ izračunava:
 $$S = 1\cdot3\cdot5 - 1\cdot3\cdot5\cdot7 + 1\cdot3\cdot5\cdot7\cdot9
 - 1\cdot3\cdot5\cdot7\cdot9\cdot11 + \ldots
@@ -1805,43 +2060,43 @@ greške pri unosu podataka ispisati odgovarajuću poruku.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{20}#
-#\izlaz{Neispravan unos}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{-3}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_48}
+\linkresenje{PET_48}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_48]
+\begin{Answer}[ref=PET_48]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_48.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_49] 
+\begin{Exercise}[label=PET_49] 
 Program učitava realne brojeve $x$ i $a$ i ceo pozitivan broj $n$ veći
 od $0$.  Napisati program koji izračunava:
- $$((\ldots \underbrace{(((x+a)^2 + a)^2 + a)^2 + \ldots a)^2}_n.$$ U
-slučaju greške pri unosu podataka ispisati odgovarajuću poruku. 
+ $$((\ldots \underbrace{(((x+a)^2 + a)^2 + a)^2 + \ldots a)^2}_n.$$
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dva relana broja x i a::}\ulaz{3.2 0.2}#
-#\izlaz{Unesite prirodan broj:}\ulaz{5}#
+#\izlaz{Unesite brojeve x i a:}\ulaz{3.2 0.2}#
+#\izlaz{Unesite broj n:}\ulaz{5}#
 #\izlaz{Izraz = 135380494030332048.000000}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dva relana broja x i a::}\ulaz{2 1}#
-#\izlaz{Unesite prirodan broj:}\ulaz{3}#
+#\izlaz{Unesite brojeve x i a:}\ulaz{2 1}#
+#\izlaz{Unesite broj n:}\ulaz{3}#
 #\izlaz{Izraz = 10201.000000}#
 \end{upotreba}
 \end{miditest}
@@ -1849,23 +2104,23 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite dva relana broja x i a::}\ulaz{2.6 0.3}#
-#\izlaz{Unesite prirodan broj:}\ulaz{3}#
+#\izlaz{Unesite brojeve x i a:}\ulaz{2.6 0.3}#
+#\izlaz{Unesite broj n:}\ulaz{3}#
 #\izlaz{Izraz = 5800.970129}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite dva relana broja x i a::}\ulaz{5.4 7}#
-#\izlaz{Unesite prirodan broj:}\ulaz{-2}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Unesite brojeve x i a:}\ulaz{5.4 7}#
+#\izlaz{Unesite broj n:}\ulaz{-2}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_49}
+\linkresenje{PET_49}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_49]
+\begin{Answer}[ref=PET_49]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_49.c}
 \end{Answer}
 \fi
@@ -1876,8 +2131,9 @@ slučaju greške pri unosu podataka ispisati odgovarajuću poruku.
 % \subsection{Dvostruka petlja i ispisivanje slike}
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
-\begin{Exercise}[label=1.3_50] 
-Za unetu pozitivnu celobrojnu vrednost $n$ napisati programe koji ispisuju odgovarajuće brojeve. Pretpostaviti da je unos korektan.
+\begin{Exercise}[label=PET_50] 
+Za unetu pozitivnu celobrojnu vrednost $n$ napisati programe koji ispisuju 
+odgovarajuće brojeve. Pretpostaviti da je unos korektan.
 
 \begin{enumerate}
 \item Napisati program koji za unetu pozitivnu celobrojnu vrednost 
@@ -1944,10 +2200,9 @@ $n$ ispisuje tablicu množenja.
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{1.3_50b}
-
-
-\item Napisati program koji za uneto $n$ ispisuje tablicu brojeva tako da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
+\item Napisati program koji za uneto $n$ ispisuje tablicu brojeva tako 
+da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta 
+dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1968,8 +2223,6 @@ $n$ ispisuje tablicu množenja.
 #\izlaz{4 1 2 3 }#
 \end{upotreba}
 \end{miditest}
-
-%\linkresenje{1.3_50c}
 
 
 \item Napisati program koji za uneto
@@ -2020,10 +2273,10 @@ tačke $(0,0)$ jednaka $(0,1)$.
 \end{enumerate}
 \end{Exercise}
 
-\linkresenje{1.3_50}
+\linkresenje{PET_50}
 
 \ifresenja
-\begin{Answer}[ref=1.3_50]
+\begin{Answer}[ref=PET_50]
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_50a.c}{Rešenje (a)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_50b.c}{Rešenje (b)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_50c.c}{Rešenje (c)}
@@ -2031,7 +2284,7 @@ tačke $(0,0)$ jednaka $(0,1)$.
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_51] 
+\begin{Exercise}[label=PET_51] 
 Napisati program koji za unet prirodan broj $n$ zvezdicama iscrtava
 odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \begin{enumerate}
@@ -2108,17 +2361,17 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \end{upotreba}
 \end{miditest}
 \end{enumerate}
-\linkresenje{1.3_51}
+\linkresenje{PET_51}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_51]
+\begin{Answer}[ref=PET_51]
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_51a.c}{Rešenje (a)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_51b.c}{Rešenje (b)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_51c.c}{Rešenje (c)}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_52]
+\begin{Exercise}[difficulty=1, label=PET_52]
  Napisati program koji za uneti prirodan broj $n$ zvezdicama iscrtava
  slovo \textit{X} dimenzije $n$. Pretpostaviti da je unos korektan.
 
@@ -2142,16 +2395,16 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 #\izlaz{*\ *}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_52}
+\linkresenje{PET_52}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_52]
+\begin{Answer}[ref=PET_52]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_52.c}
 \end{Answer}
 \fi
 
 
-\begin{Exercise}[difficulty=1, label=1.3_53]
+\begin{Exercise}[difficulty=1, label=PET_53]
  Napisati program koji za uneti prirodan neparan broj $n$ korišćenjem
  znaka $+$ iscrtava veliko $+$ dimenzije $n$. Pretpostaviti da je unet
  prirodan broj.
@@ -2181,21 +2434,20 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Pogresan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{1.3_53}
+\linkresenje{PET_53}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_53]
+\begin{Answer}[ref=PET_53]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_53.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[label=1.3_54] 
+\begin{Exercise}[label=PET_54] 
 Napisati program koji učitava prirodan broj $n$, a potom iscrtava
 odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \begin{enumerate}
@@ -2357,10 +2609,10 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \end{upotreba}
 \end{miditest}
 \end{enumerate}
-\linkresenje{1.3_54}
+\linkresenje{PET_54}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_54]
+\begin{Answer}[ref=PET_54]
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_54a.c}{Rešenje (a)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_54b.c}{Rešenje (b)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_54c.c}{Rešenje (c)}
@@ -2371,7 +2623,7 @@ odgovarajuću sliku. Pretpostaviti da je unos korektan.
 \fi
 
 
-\begin{Exercise}[label=1.3_55] 
+\begin{Exercise}[label=PET_55] 
 Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću sliku.
 \begin{enumerate}
 \item  Slika sadrži jednakostranični trougao stranice $n$ koji je sastavljen od
@@ -2511,7 +2763,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 \end{Exercise}
 
 \ifresenja
-\begin{Answer}[ref=1.3_55]
+\begin{Answer}[ref=PET_55]
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_55a.c}{Rešenje (a)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_55b.c}{Rešenje (b)}
 \includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_55c.c}{Rešenje (c)}
@@ -2522,7 +2774,7 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 
 
 
-\begin{Exercise}[difficulty=1, label=1.3_56] 
+\begin{Exercise}[difficulty=1, label=PET_56] 
  Napisati program koji za uneti prirodan broj $n$ iscrtava strelice
  dimenzije $n$. Pretpostaviti da je unos korektan.
  
@@ -2552,15 +2804,15 @@ Napisati program koji učitava ceo broj $n$, a potom iscrtava odgovarajuću slik
 #\izlaz{*}#
 \end{upotreba}
 \end{miditest} 
-\linkresenje{1.3_56}
+\linkresenje{PET_56}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_56]
+\begin{Answer}[ref=PET_56]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_56.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_57] 
+\begin{Exercise}[difficulty=1, label=PET_57] 
 Napisati program koji učitava ceo broj $n$, i iscrtava sliku koja se
 dobija na sledeći način: u prvom redu je jedna zvezdica, u drugom redu
 su dve zvezdice razdvojene razmakom, treći red je sastavljen od
@@ -2582,15 +2834,15 @@ Pretpostaviti da je unos korektan.
 #\izlaz{*******}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_57}
+\linkresenje{PET_57}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_57]
+\begin{Answer}[ref=PET_57]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_57.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_58] 
+\begin{Exercise}[difficulty=1, label=PET_58] 
 Program učitava prirodne brojeve $m$ i $n$. Napisati
 program koji iscrtava jedan do drugog stranice $n$ kvadrata čija je
 svaka strana sastavljena od $m$ zvezdica razdvojenih prazninom.
@@ -2600,7 +2852,7 @@ Podrazumevati da je unos korektan.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5 3}#
+#\izlaz{Unesite brojeve n i m:}\ulaz{5 3}#
 #\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#         
 #\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#           
 #\izlaz{*\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *\ \ \ \ \ \ \ *}#             
@@ -2611,22 +2863,22 @@ Podrazumevati da je unos korektan.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4 4}#
+#\izlaz{Unesite brojeve n i m:}\ulaz{4 4}#
 #\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
 #\izlaz{*\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *}#
 #\izlaz{*\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *\ \ \ \ \ *}#
 #\izlaz{*\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *\ *}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_58}
+\linkresenje{PET_58}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_58]
+\begin{Answer}[ref=PET_58]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_58.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[difficulty=1, label=1.3_59] 
+\begin{Exercise}[difficulty=1, label=PET_59] 
 Program učitava prirodan broj $n$. Napisati program koji štampa romb
 sastavljen od minusa u pravougaoniku sastavljenom od zvezdica.
 Podrazumevati da je unos korektan.
@@ -2657,15 +2909,15 @@ Podrazumevati da je unos korektan.
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_59}
+\linkresenje{PET_59}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_59]
+\begin{Answer}[ref=PET_59]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_59.c}
 \end{Answer}
 \fi
 
-\begin{Exercise}[label=1.3_60] 
+\begin{Exercise}[label=PET_60] 
 Napisati program koji učitava ceo broj $n$ ($n \geq 2$) i koji
 iscrtava sliku kuće sa krovom: kuća je kocka stranice $n$, a krov
 jednakostranični trougao stranice $n$. Pretpostaviti da je unos
@@ -2696,22 +2948,20 @@ korektan.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{1.3_60}
+\linkresenje{PET_60}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_60]
+\begin{Answer}[ref=PET_60]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_60.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[difficulty=1, label=1.3_61] 
+\begin{Exercise}[difficulty=1, label=PET_61] 
 Program učitava ceo pozitivan broj $n$. Napisati program koji ispisuje
 brojeve od $1$ do $n$, zatim od $2$ do $n-1$, $3$ do $n-2$, itd. Ispis
-se završava kada nije moguće ispisati ni jedan broj. Za neispravan
-unos, program ispisuje odgovarajuću poruku. Pretpostaviti da je unos
-korektan.
+se završava kada nije moguće ispisati ni jedan broj.
+Pretpostaviti da je unos korektan.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -2723,8 +2973,8 @@ korektan.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-4}#
-#\izlaz{-1}#
+#\izlaz{Unesite broj n:}\ulaz{6}#
+#\izlaz{1 2 3 4 5 6 2 3 4 5 3 4}#
 \end{upotreba}
 \end{miditest}
 
@@ -2742,22 +2992,21 @@ korektan.
 #\izlaz{1 2 3 2}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{1.3_61}
+\linkresenje{PET_61}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_61]
+\begin{Answer}[ref=PET_61]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_61.c}
 \end{Answer}
 \fi
 
 
-
-\begin{Exercise}[difficulty=1, label=1.3_62] 
+\begin{Exercise}[difficulty=1, label=PET_62] 
 Napisati program koji učitava ceo pozitivan broj $n$ i ispisuje sve
 brojeve od $1$ do $n$, zatim svaki drugi broj od $1$ do $n$, zatim
 svaki treći broj od $1$ do $n$ itd., završavajući sa svakim $n$-tim
-(tj. samo sa $1$). U slučaju greške pri unosu podataka odštampati
-ogovarajuću poruku.
+(tj. samo sa $1$).
+Pretpostaviti da je unos korektan.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -2789,21 +3038,14 @@ ogovarajuću poruku.
 #\izlaz{1}#
 \end{upotreba}
 \end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-23}#
-#\izlaz{Neispravan unos.}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{1.3_62}
+
+\linkresenje{PET_62}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=1.3_62]
+\begin{Answer}[ref=PET_62]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_62.c}
 \end{Answer}
 \fi
-
 
 
 \ifresenja

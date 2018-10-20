@@ -2,22 +2,23 @@
 
 int main()
 {
+  /* Deklaracije potrebnih promenljivih. */
   unsigned int n, i, j;
-  char c, blanko;
+  char c, novi_red;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
+  /* Ucitava se karakter koji ce se koristiti za iscrtavanje.
+     Napomena: voditi racuna da treba preskociti novi red koji
+     korisnik zadaje nakon unosa broja n. */
   printf("Unesite karakter c: ");
-  /* Zbog pritiskanja tastera ENTER nakon unosa promenljive broj
-     potrebno je ucitati karakter za novi red u promenljivu blanko
-     pre ucitavanja karaktera kojim se iscrtava trougao. */
-  scanf("%c%c", &blanko, &c);
+  scanf("%c%c", &novi_red, &c);
 
-  /* Brojac i odredjuje koji red slike se trenutno ispisuje. */
+  /* Iscrtavanje trazenog trougla. Iscrtavaju se samo ivice 
+     trougla, ostalo se popunjava belinama. */
   for (i = 0; i < n; i++) {
-    /* Iscrtavaju se samo ivice trougla, ostalo se popunjava
-       belinama. */
     for (j = 0; j <= i; j++)
       if (i == n - 1 || j == 0 || j == i)
         printf("%c", c);

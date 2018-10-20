@@ -2,27 +2,31 @@
 
 int main()
 {
-  /* Promenljiva i je brojac. */
+  /* Deklaracija i inicijalizacija potrebnih promenljivih. */
   int n, i;
-  /* Brojaci za svaki od samoglasnika. */
   int broj_a = 0, broj_e = 0, broj_i = 0, broj_o = 0, broj_u = 0;
-  /* Promenljiva c je tekuci ucitani karakter. */
-  char c, belina;
+  char c;
 
+  /* Ucitava se broj karaktera i vrsi se provera ispravnosti 
+     ulaza. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
   if (n < 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
+  /* Kako je korisnik nakon unosa broja n uneo oznaku za novi red,
+     potrebno je preskociti taj novi red jer bi u suprotnom on bio
+     ucitan kao prvi od n karaktera (oznaka za novi red je
+     regularan karakter kao sto je to 'a' ili ' ').*/
+  getchar();
+  
+  /* Ucitavaju se karakteri i broje se samoglasnici. */
   for (i = 0; i < n; i++) {
-    /* Prvo se cita belina koja se nalazi nakon prethodnog unosa,
-       pa tek posle procitane beline se cita uneseni karakter. */
-    scanf("%c%c", &belina, &c);
+    scanf("%c", &c);
 
-    /* Provera da li je ucitani karakter samoglasnik. */
     switch (c) {
     case 'a':
     case 'A':
@@ -47,11 +51,12 @@ int main()
     }
   }
 
-  printf("samoglasnik a: %d\n", broj_a);
-  printf("samoglasnik e: %d\n", broj_e);
-  printf("samoglasnik i: %d\n", broj_i);
-  printf("samoglasnik o: %d\n", broj_o);
-  printf("samoglasnik u: %d\n", broj_u);
+  /* Ispis rezultata. */
+  printf("Samoglasnik a: %d\n", broj_a);
+  printf("Samoglasnik e: %d\n", broj_e);
+  printf("Samoglasnik i: %d\n", broj_i);
+  printf("Samoglasnik o: %d\n", broj_o);
+  printf("Samoglasnik u: %d\n", broj_u);
 
   return 0;
 }

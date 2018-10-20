@@ -2,30 +2,33 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   int n, i;
-  float x, S, stepen;
+  float x, suma, x_i;
 
+  /* Ucitavanje i provera ispravnosti ulaza. */
   printf("Unesite redom brojeve x i n: ");
   scanf("%f %d", &x, &n);
 
-  if (n < 0) {
-    printf("Neispravan unos.\n");
+  if (n <= 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Inicijalizacija sume. */
-  S = 0;
+  /* Vrednost sume se inicijalizuje na nulu, a vrednost x^i
+     na x. */
+  suma = 0;
+  x_i = x;
 
-  /* Stepen promenljiva ce sadrzati vrednosti stepena x^n. Pocetna
-     vrednost joj je 1 jer je x^0 = 1. */
-  stepen = 1;
-
+  /* Promenljiva x^i ima vrednosti [x, x^2, ..., x^n]. 
+     Vrednost sume se u svakoj iteraciji uvecava za i*x^i. */
   for (i = 1; i <= n; i++) {
-    stepen = stepen * x;
-    S = S + i * stepen;
+    suma += i * x_i;
+    x_i *= x;
   }
 
-  printf("S=%f\n", S);
+  /* Ispis rezultata. */
+  printf("S=%f\n", suma);
 
   return 0;
 }

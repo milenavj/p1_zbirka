@@ -2,29 +2,33 @@
 
 int main()
 {
-  int a0;
-  int an, an1;
-  printf("Unesi pocetni clan niza brojeva:");
-  scanf("%d", &a0);
-  if (a0 <= 0) {
-    printf("Nekorektan unos. Broj mora biti pozitivan.\n");
+  /* Deklaracija potrebnih promenljivih. */
+  int an;
+  
+  /* Ucitava se vrednost prvog clana i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite prvi clan:");
+  scanf("%d", &an);
+  
+  if (an <= 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
-  printf("%d\n", a0);
-  an = a0;
+ 
+  /* Dok se ne dodje do clana koji je 1, stampa se vrednost
+     trenutnog clana i vrsi se izracunavanje narednog, po
+     zadatoj formuli. */
   while (an != 1) {
-    if (an % 2) {
-      /* Ukoliko je vrednost izraza an%2 razlicita od nule, izraz
-         se tumaci kao tacan i izvrsavaju se naredbe iz if grane. */
-      an1 = (3 * an + 1) / 2;
-    } else {
-      /* U suprotnom, ukoliko je vrednost izraza an%2 jednaka nuli, 
-         izraz se tumaci kao netacan i izvrsavaju se naredbe iz
-         else grane. */
-      an1 = an / 2;
-    }
-    printf("%d\n", an1);
-    an = an1;
+    printf("%d ", an);
+
+    if (an % 2 != 0)
+      an = (3 * an + 1) / 2;
+    else
+      an = an / 2;
   }
+  
+  /* Na kraju se stampa i jedinica. */
+  printf("1\n");
+  
   return 0;
 }

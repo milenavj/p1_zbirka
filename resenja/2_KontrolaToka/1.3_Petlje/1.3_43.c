@@ -3,38 +3,38 @@
 
 int main()
 {
-  /* Promenljiva i je brojac, promenljiva S cuva izracunatu sumu,
-     promenljiva znak moze bito 1 ili -1 i odredjuje znak trenutnog 
-     clana sume, a promenljiva clan je tekuci clan niza. */
-  int i, znak;
-  float S;
+  /* Deklaracije potrebnih promenljivih. */
+  int i;
+  float suma;
   float x, eps, clan;
 
+  /* Ucitavaju se vrednosti x i eps. */
   printf("Unesite x: ");
   scanf("%f", &x);
 
   printf("Unesite tacnost eps: ");
   scanf("%f", &eps);
 
-
-  S = 0;
+  /* Inicijalizacije. */
+  suma = 0;
   clan = 1;
   i = 1;
-  znak = -1;
 
   /* Kako clanovi sume mogu biti negativni, potrebno je posmatrati
      apsolutnu vrednost clana. */
   while (fabs(clan) > eps) {
-    S = S + clan;
+    suma += clan;
 
-    /* Promena znaka. */
+    /* U svakoj iteraciji se racuna novi clan i mnozi se sa -1.
+       Na taj nacin se postize da je vrednost clana naizmenicno
+       pozitivna i negativna. */
     clan = clan * x / i;
-    clan *= znak;
+    clan *= -1;
 
     i++;
   }
 
-  printf("S=%f\n", S);
+  printf("S=%f\n", suma);
 
   return 0;
 }

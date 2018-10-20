@@ -2,26 +2,29 @@
 
 int main()
 {
+  /* Deklaracije potrebnih promenljivih. */
   int n, i;
-  /* Promenljiva clan je deo proizvoda i predstavlja 1/i!. */
-  double clan;
-  double S = 1;
+  double clan, proizvod = 1;
 
-  printf("Unesite prirodan broj: ");
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  if (n <= 1) {
-    printf("Neispravan unos.\n");
+  if (n <= 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
+  /* Racuna se trazeni proizvod. */
   clan = 1;
   for (i = 2; i <= n; i++) {
     clan = clan / i;
-    S *= 1 + clan;
+    proizvod *= 1 + clan;
   }
 
-  printf("S = %lf\n", S);
+  /* Ispis rezultata. */
+  printf("P = %lf\n", proizvod);
 
   return 0;
 }

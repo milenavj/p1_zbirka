@@ -2,8 +2,10 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   unsigned int n, i, j;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 

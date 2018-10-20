@@ -4,66 +4,56 @@
 
 int main()
 {
-  int x;
-  /* Tezina trenutne pozicije u broju. Moze biti 1, 10, 100, 1000
-     itd. */
-  int stepen_deset;
-  /* Trenutna izdvojena cifra iz broja x. */
-  int cifra;
-  /* Redni broj cifre koja se trenutno obradjuje, gledano s desna
-     na levo. */
-  int rbr;
-  /* Broj dobijen nakon transformacije. */
-  int y;
-  /* Promenljiva znak cuva znak unesenog broja. Moze biti -1 za
-     negativnu vrednost ili 1 za poziivnu vrednost. */
+  int x, pozicija, rezultat, cifra;
   int znak = 1;
 
-  /* Ucitavanje broja. */
+  /* Ucitava se vrednost polaznog broja. */
   printf("Unesite broj: ");
   scanf("%d", &x);
 
-  if (x <= 0) {
+  /* Ako je broj negativan, uzima se njegova apsolutna vrednost
+     i azurira se vrednost znaka broja. */
+  if (x < 0) {
     x = abs(x);
     znak = -1;
   }
-  /* Postavlja se vrednost stepena na 0 - to znaci da se prvo mnozi 
-     sa 10^0=1. */
-  stepen_deset = 0;
-
-  /* Postavlja se vrednost broja koji se formira na 0. */
-  y = 0;
-  /* Postavlja se redni broj pozicije na 0. */
-  rbr = 0;
-
-  /* Provera da li ima cifara u zapisu broja. */
+  
+  /* Pozicija oznacava tezinu trenutne cifre rezultata i moze imati
+     vrednosti 1, 10, 100, ... */
+  pozicija = 1;
+  rezultat = 0;
+  
+  /* Ideja: u rezultatu se zadrzavaju cifre jedinice, stotine,..
+     Na primer, x=12345
+     Pre petlje: pozicija = 1, rezultat = 0 
+     1. iteracija: 
+     cifra = 5, rezultat = 0+5*1=5, x = 123, pozicija = 10
+     2. iteracija: 
+     cifra = 3, rezultat = 5+3*10 = 35, x = 1, pozicija = 100
+     3. iteracija: 
+     cifra = 1, rezultat = 35+1*100, x = 0, pozicija = 1000
+     Petlja se zavrsava jer je x 0.
+     */
   while (x > 0) {
-
-    /* Izdvajanje cifre. */
+    /* Izdvajanje poslednje cifre. */
     cifra = x % 10;
 
-    /* Proverava se da li je pozicija izdvojene cifre parna - cifre 
-       na parnim pozicijama se zadrzavaju. */
-    if (rbr % 2 == 0) {
-      /* Ako jeste parna izdvojena cifra se dodaje novom broju.
-         Neophodno je izvrsiti promenu tipova, jer je double
-         povratni tip funkcije pow. */
-      y += cifra * ((int) pow(10, stepen_deset));
-
-      /* Uvecava se stepen zbog naredne cifre. */
-      stepen_deset++;
-    }
-
-    /* Azurira se redni broj cifre. */
-    rbr++;
-    /* I priprema se broj za naredno izdvajanje. */
-    x /= 10;
+    /* Rezultat se uvecava za vrednost cifre pomnozene sa vrednoscu
+       tezine njene pozicije u broju. */
+    rezultat += cifra * pozicija;
+    
+    /* Iz polaznog broja se uklanjaju poslednje dve cifre jer u 
+       rezultatu treba da ostane svaka druga cifra polaznog
+       broja.*/
+    x /= 100;
+    
+    /* Pozicija se mnozi sa 10, kako bi imala ispravnu vrednost u 
+       sledecoj iteraciji. */
+    pozicija *= 10;
   }
 
-  y = znak * y;
-
-  /* Ispisuje se rezultat. */
-  printf("%d\n", y);
+  /* Ispis rezultata */
+  printf("Rezultat: %d\n", znak * rezultat);
 
   return 0;
 }

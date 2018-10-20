@@ -2,26 +2,31 @@
 
 int main()
 {
-  int n;
-  float x;
-  float vrednost;
-  unsigned exp;
+  /* Deklaracije potrebnih promenljivih. */
+  int n, i;
+  float x, rezultat;
 
+  /* Ucitavaju se vrednosti brojeva x i n. */
   printf("Unesite redom brojeve x i n: ");
   scanf("%f %d", &x, &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */
   if (n < 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos broja n.\n");
     return -1;
   }
 
-  /* Pocetna vrednost stepena koji se racuna.  */
-  vrednost = 1;
+  /* Inicijalizacija rezultata. */
+  rezultat = 1;
 
-  for (exp = 1; exp <= n; exp++)
-    vrednost = vrednost * x;
+  /* Vrednost n-tog stepena broja x se dobija tako sto se tekuca
+     vrednost rezultata n puta pomnozi sa brojem x. 
+     (rezultat = x * x * ... * x) = x^n */
+  for (i=0; i<n; i++)
+    rezultat = rezultat * x;
 
-  printf("%f\n", vrednost);
+  /* Ispis rezultata. */
+  printf("Rezultat: : %.5f\n", rezultat);
 
   return 0;
 }

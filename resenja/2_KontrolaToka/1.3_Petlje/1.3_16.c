@@ -1,61 +1,57 @@
 #include <stdio.h>
 int main()
 {
-  int x;
+  /* Deklaracija potrebnih promenljivih. */
+  int x, proizvod;
 
-  /* U promenljivoj p se cuva prozivod. */
-  int p;
+  /* Indikator koji oznacava da li je korisnik uneo bar jedan 
+     broj. */
+  int unet_bar_jedan = 0;
 
-  /* Promenljiva u sluzi za proveru da li su brojevi uopste
-     uneseni. Na pocetku se pretpostavlja da nisu i postavlja se na 
-     0. */
-  int u = 0;
+  /* Indikator koji oznacava da li je korisnik uneo bar jedan
+     pozitivan broj. */
+  int unet_pozitivan = 0;
 
-  /* Promenljiva unesen_pozitivan sluzi za proveru da li su
-     pozitivni brojevi uopste uneseni. Na pocetku se pretpostavlja
-     da nisu i postavlja se na 0. */
-  int unesen_pozitivan = 0;
+  /* Inicijalizacija proizvoda. */
+  proizvod = 1;
 
-  p = 1;
-
-  /* Izraz 1 je konstantan, razlicit je od nule sto znaci da je to
-     tacan izraz. Uslov petlje je uvek tacan! */
   printf("Unesite brojeve:");
-
+  
+  /* Petlja ciji je uslov uvek ispunjen. */
   while (1) {
+    
+    /* Ucitava se jedan broj. */
     scanf("%d", &x);
 
-    /* Proveravanje da li je uneta nula. */
+    /* Ako je uneta nula, petlja se prekida naredbom break. */
     if (x == 0)
-
-      /* Naredba break prekida petlju. Izvrsavanje se nastavlja od 
-         prve naredbe nakon petlje. */
       break;
 
-    /* Ako je makar 1 broj razlicit od 0 promenljiva u ce biti
-       postavljena na 1. */
-    u = 1;
+    /* Ako petlja nije prekinuta, znaci da je unet bar jedan broj.
+       Iz tog razloga se vrednost indikatora za unete brojeve 
+       postavlja na 1. */
+    unet_bar_jedan = 1;
 
-    /* Ako je unet negativan broj, taj broj se ne mnozi sa ukupnim
-       proizvodom p; zato se nastavlja dalje. */
-    if (x < 0)
-      /* Naredba continue prekida trenutnu iteraciju petlje tako
-         sto preskace sve naredbe koje nakon njega slede.
-         Izvrsavanje se nastavlja od provere uslova petlje. */
-      continue;
-
-    /* Ako je makar jedan broj pozitivan, promenljiva
-       unesen_pozitivan se postavja na 1. */
-    unesen_pozitivan = 1;
-    p = p * x;
+    /* Proverava se da li je broj x pozitivan. */
+    if(x > 0){
+      
+      /* Ako jeste, znaci da je unet bar jedan pozitivan broj i iz
+         tog razloga se vrednost odgovarajuceg indikatora postavlja
+         na 1. */
+      unet_pozitivan = 1;
+      
+      /* Azurira se vrednost proizvoda pozitivnih brojeva. */
+      proizvod = proizvod * x;
+    }
   }
 
-  if (u == 0)
-    printf("Nisu uneseni brojevi.\n");
-  else if (unesen_pozitivan == 0)
-    printf("Nisu uneseni pozitivni brojevi. \n");
+  /* Ispis rezultata. */
+  if (unet_bar_jedan == 0)
+    printf("Nije unet ni jedan broj.\n");
+  else if (unet_pozitivan == 0)
+    printf("Medju unetim brojevima nema pozitivnih.\n");
   else
-    printf("Proizvod pozitivnih unetih brojevi je %d.\n", p);
+    printf("Proizvod pozitivnih brojeva je %d.\n", proizvod);
 
   return 0;
 }

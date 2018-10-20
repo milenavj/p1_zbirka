@@ -2,26 +2,26 @@
 
 int main()
 {
-  int n;
-  /* Brojac. */
-  int i;
-  /* Promenljiva u kojoj se cuva suma kubova. */
-  int s;
+  /* Deklaracije potrebnih promenljivih. */
+  int n, i;
+  int suma_kubova;
 
-  printf("Unesite pozitivan ceo broj:");
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite broj n:");
   scanf("%d", &n);
-
-  if (n < 0) {
-    printf("Neispravan unos.\n");
+  
+  if (n <= 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  i = 1;
-  s = 0;
-
-  for (i = 1; i <= n; i++) {
-    s += i * i * i;
-    printf("i=%d, s=%d\n", i, s);
+  /* Racuna se suma kubova svih brojeva iz intervala [1,n]
+     i u svakoj iteraciji se ispisuje njena vrednost. */
+  suma_kubova = 0;
+  for (i = 1; i <= n; i++){
+    suma_kubova += i * i * i;
+    printf("k=%d, suma=%d", i, suma_kubova);
   }
 
   return 0;

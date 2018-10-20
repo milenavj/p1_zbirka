@@ -3,42 +3,43 @@
 
 int main()
 {
-  int format;
-  /* Pomocna promenljiva koja sluzi kao brojac u petlji. */
-  int i;
-  /* Trenutne vrednosti za sirinu i visinu i pomocna promenljiva za 
-     promene u petlji. */
+  /* Deklaracija potrebnih promenljivih. */
+  int format, i;
   double sirina, duzina, nova_duzina;
-  unsigned int konacna_sirina, konacna_duzina;
 
-  printf("Uneti format papira: ");
+  /* Ucitava se format papira i vrsi se provera ispravnosti
+     ulaza.*/
+  printf("Unesite format papira: ");
   scanf("%d", &format);
 
-  if (format <= 0) {
-    printf("Neispravan unos.\n");
+  if (format < 0) {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* duzina/sirina = 1 : sqrt(2) duzina*sirina = 1000x1000mm^2 Na
-     osnovu ovih odnosa dobijamo pocetnu vrednost za sirinu i
-     duzinu, odnosno vrednosti za papir A0. */
-  duzina = sqrt(1000 * 1000 / sqrt(2));
-  sirina = sqrt(2) * duzina;
+  /* duzina/sirina = 1/sqrt(2) 
+     duzina*sirina = 1000mm x 1000mm
+     ---
+     duzina = sirina/sqrt(2)
+     duzina*sirina = 1000mm x 1000mm
+     ---
+     sirina*sirina/sqrt(2) = 1000*1000
+     sirina*sirina = sqrt(2) * 1000 * 1000
+     sirina = sqrt(sqrt(2) * 1000 * 1000)
+     ---
+     duzina = sirina/sqrt(2) */
+  sirina = sqrt(1000 * 1000 * sqrt(2));
+  duzina = sirina / sqrt(2);
 
-  /* Kako vec imamo odredjenu sirinu i duzinu za papir A0, petlju
-     krecemo od izracunavanja za papir A1, pa brojac i postavljamo
-     na 1. */
+  /* U petlji se racunaju duzina i sirina za uneti format. */
   for (i = 1; i <= format; i++) {
     nova_duzina = sirina / 2;
     sirina = duzina;
     duzina = nova_duzina;
   }
 
-  /* Duzina i sirina celi brojevi. */
-  konacna_sirina = (unsigned int) sirina;
-  konacna_duzina = (unsigned int) duzina;
-
-  printf("%u %u\n", konacna_duzina, konacna_sirina);
+  /* Ispis rezultata. Napomena: duzina i sirina celi brojevi. */
+  printf("%d %d\n", (int) duzina, (int) sirina);
 
   return 0;
 }

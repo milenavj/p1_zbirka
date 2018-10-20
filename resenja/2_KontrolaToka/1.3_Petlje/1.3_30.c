@@ -3,60 +3,39 @@
 
 int main()
 {
-  int x;
-  int broj_cifara;
-  int min_stepen, max_stepen;
-  int pom;
-  int leva_cifra, desna_cifra;
-  int indikator;
+  /* Deklaracija potrebnih promenljivih. */
+  int x, x_kopija, x_obrnuto;
 
+  /* Ucitava se vrednost pocetnog broja. */
   printf("Unesite broj: ");
   scanf("%d", &x);
 
-  /* Ako je korisnik uneo negativan broj, analizira se njegova
-     apsolutna vrednost. */
+  /* Uzima se apsolutna vrednost unetog broja.  */
   if (x < 0)
     x = -x;
 
-  /* Odredjuje se broj cifara u zapisu broja x da bi moglo da se
-     izdvajaju istovremeno cifre i sa leve i sa desne strane. */
-  broj_cifara = 0;
-  pom = x;
-  while (pom > 0) {
-    pom /= 10;
-    broj_cifara++;
+  /* Racuna se broj koji se dobije kada se broju x obrnu cifre.
+     Na primer, od 12345 treba da se dobije 54321.
+     Broj se obrce tako sto se u svakoj iteraciji njegova vrednost
+     pomnozi sa 10 i doda mu se sledeca cifra polaznog broja.
+     Za x_kopija=12345, x_obrnuto = 0
+     1. iteracija: x_obrnuto = 0*10 + 5 = 5, x_kopija = 1234
+     2. iteracija: x_obrnuto = 5*10 + 4 = 54, x_kopija = 123, 
+     3. iteracija: x_obrnuto = 54*10 + 3 = 543, itd.*/
+  x_kopija = x;
+  x_obrnuto = 0;
+  while (x_kopija != 0) {
+    x_obrnuto = x_obrnuto * 10 + x_kopija % 10;
+    x_kopija /= 10;
   }
 
-  /* Odredjuje se stepen koji stoji uz krajnju levu cifru broja. */
-  max_stepen = (int) pow(10, broj_cifara - 1);
-
-  /* Indikator je promenljiva koja ukazuje da li je broj palindrom
-     ili ne. */
-  indikator = 1;
-  while (x != 0 && indikator == 1) {
-    /* Izdvaja se leva cifra. */
-    leva_cifra = x / max_stepen;
-    /* Izdvaja se desna cifra. */
-    desna_cifra = x % 10;
-    /* Ako su cifre razlicite, odmah se moze zakljuciti da broj
-       nije palindrom i prekida se izvrsavanje petlje. */
-    if (leva_cifra != desna_cifra) {
-      indikator = 0;
-      break;
-    }
-    /* Formira se nova vrednost broja x tako sto se odbacuje
-       krajnja leva i krajnja desna cifra. */
-    x = (x % max_stepen - x % 10) / 10;
-    /* Koriguje se maksimalan stepen tako dobijenog broja - deli se 
-       sa 100 jer su odbacene 2 cifre. */
-    max_stepen = max_stepen / 100;
-  }
-
-  /* Ispisuje se rezultat. */
-  if (indikator == 1)
-    printf("Broj je palindrom!\n");
+  /* Broj je palindrom ako je jednak broju koji se dobije 
+     obrtanjem njegovih cifara.
+     Npr. x = 12321, x_obrnuto je takodje 12321.*/
+  if (x == x_obrnuto)
+    printf("Broj je palindrom.\n");
   else
-    printf("Broj nije palindrom!\n");
+    printf("Broj nije palindrom.\n");
 
   return 0;
 }

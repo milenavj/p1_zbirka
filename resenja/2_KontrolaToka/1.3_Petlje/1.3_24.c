@@ -1,48 +1,51 @@
 #include <stdio.h>
-#include <math.h>
+#include <stdlib.h>
 
 int main()
 {
+  /* Deklaracije potrebnih promenljivih. */
+  int n, i;
+  int x, x_kopija, vodeca_cifra;
+  int najveca_vodeca_cifra, rezultat;
 
-  int n;
-  int x, x_kopija;
-  int broj;
-  int vodeca_cifra, max_vodeca_cifra;
-  int i;
-
-  /* Citamo vrednost sa ulaza */
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Postavljamo maksimalnu vodecu cifru na 0 - cifre broja su vece 
-     ili jednake od 0 pa je ova vrednost neutralna */
-  max_vodeca_cifra = 0;
+  if (n < 0) {
+    printf("Greska: neispravan unos.\n");
+    return -1;
+  }
 
-  /* Ucitavamo broj po broj */
+  if (n == 0) {
+    printf("Nisu uneseni brojevi.\n");
+    return 0;
+  }
+
+  /* Inicijalizacija najvece vodece cifre na -1. */
+  najveca_vodeca_cifra = -1;
+
   printf("Unesite n brojeva: ");
   for (i = 0; i < n; i++) {
     scanf("%d", &x);
 
-    /* Odredjujemo vodecu cifru broja */
+    /* Racuna se vodeca cifra ucitanog broja x. */
     x_kopija = abs(x);
     while (x_kopija > 10) {
       x_kopija = x_kopija / 10;
     }
     vodeca_cifra = x_kopija;
 
-    /* Ako je izdvojena cifra veca od maksimalne vodece cifre */
-    if (vodeca_cifra > max_vodeca_cifra) {
-      /* Cuvamo je */
-      max_vodeca_cifra = vodeca_cifra;
-      /* I zbog ispisa, cuvamo i broj u kojem se ona pojavljuje */
-      /* Zbog ovoga smo morali i da racunamo vodecu cifru nad
-         kopijom broja x kako ne bismo promenili njegovu vrednost */
-      broj = x;
+    /* Ako je izdvojena cifra veca od najvece vodece cifre,
+       azuriraju se vrednosti najvece vodece cifre i rezultata. */
+    if (vodeca_cifra > najveca_vodeca_cifra) {
+      najveca_vodeca_cifra = vodeca_cifra;
+      rezultat = x;
     }
   }
 
-  /* Ispisujemo rezultat */
-  printf("%d\n", broj);
+  /* Ispis rezultata. */
+  printf("%d\n", rezultat);
 
   return 0;
 

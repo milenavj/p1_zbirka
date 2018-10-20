@@ -4,16 +4,17 @@
 int main()
 {
 
-  int n;
-  int x, x_kopija, br_cifara;
-  int max_br_cifara, broj;
-  int i;
+  /* Deklaracije potrebnih promenljivih. */
+  int n, i;
+  int x, x_kopija, broj_cifara;
+  int najveci_broj_cifara, rezultat;
 
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
   if (n < 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
@@ -22,34 +23,33 @@ int main()
     return 0;
   }
 
-  /* Maksimalan broj cifara se postavlja na 0, svaki broj ima vise
-     od 0 cifara pa je ova vrednost neutralna. */
-  max_br_cifara = 0;
+  /* Maksimalan broj cifara se postavlja na 0 jer svaki broj ima
+     vise od 0 cifara. */
+  najveci_broj_cifara = 0;
 
   printf("Unesite n brojeva: ");
   for (i = 0; i < n; i++) {
     scanf("%d", &x);
 
-    /* Odredjivanje broja cifara unetog broja x. */
+    /* Racuna se broj cifara unetog broja x. */
     x_kopija = abs(x);
-    br_cifara = 0;
-    while (x_kopija != 0) {
+    broj_cifara = 0;
+    do {
+      broj_cifara++;
       x_kopija = x_kopija / 10;
-      br_cifara++;
-    }
+    } while (x_kopija != 0);
 
-    /* Ako je broj cifara unetog broja veci od maksimalnog */
-    if (br_cifara > max_br_cifara) {
-      /* Cuvamo ga */
-      max_br_cifara = br_cifara;
-      /* I zbog ispisa rezultata, cuvamo i originalni broj */
-      /* Zbog ovoga smo morali i da racunamo broj cifara nad
-         kopijom broja x kako ne bismo promenili njegovu vrednost */
-      broj = x;
+    /* Ako je broj cifara unetog broja veci od najveceg broja
+       cifara, azuriraju se vrednosti najveceg broja cifara i
+       tekuceg rezultata. */
+    if (broj_cifara > najveci_broj_cifara) {
+      najveci_broj_cifara = broj_cifara;
+      rezultat = x;
     }
   }
 
-  printf("Najvise cifara ima broj %d\n", broj);
+  /* Ispis rezultata. */
+  printf("Najvise cifara ima broj %d.\n", rezultat);
 
   return 0;
 }

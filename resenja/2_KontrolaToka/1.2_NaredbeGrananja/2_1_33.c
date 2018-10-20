@@ -13,7 +13,7 @@ int main()
   printf("Unesite (m,n): ");
   scanf("%d%d", &m, &n);
 
-  /* Vrsi se provera korektnosti ulaznih podataka. */
+  /* Vrsi se provera ispravnosti ulaznih podataka. */
   if (k < 1 || k > 8 || l < 1 || l > 8 || 
       m < 1 || m > 8 || n < 1 || n > 8) {
     printf("Greska: neispravna pozicija.\n");

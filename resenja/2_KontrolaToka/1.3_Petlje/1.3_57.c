@@ -2,9 +2,11 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   unsigned int n;
   int i, j, k;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
@@ -16,21 +18,26 @@ int main()
 
   /* Brojac i odredjuje koji red slike se trenutno ispisuje. */
   for (i = 1; i <= n; i++) {
-    /* U svakom drugom redu broj ispisanih karaktera se uvecava za
-       2. */
+    /* U svakom drugom redu broj karaktera koji treba da se
+       ispisu se uvecava za 2. */
     if (i % 2 == 0)
       j += 2;
+    
+    /* Ispisuje se j karaktera. */
     for (k = 0; k < j; k++)
-      /* U svakom drugom redu se naiazmenicno ispisuje * ili
-         praznina. */
+      /* U svakom parnom redu se naiazmenicno 
+         ispisuju * i praznina. */
       if (i % 2 == 0) {
         if (k % 2 == 0)
           printf("*");
         else
           printf(" ");
-      } else
+      } 
+      else
+      {
+        /*U svakom neparnom redu se ispisuju samo *. */
         printf("*");
-
+      }
     printf("\n");
   }
 

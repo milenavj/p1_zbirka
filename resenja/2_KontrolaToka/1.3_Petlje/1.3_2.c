@@ -2,17 +2,23 @@
 
 int main()
 {
-  /* Brojac u petlji. */
-  int i = 0;
-  /* Promenljiva koja oznacava koliko puta cemo ispisati trazeni
-     tekst. */
-  int n;
+  /* Deklaracija potrebnih promenljivih. */
+  int i, n;
 
-  printf("Unesite ceo broj: ");
+  /* Ucitava se vrednost broja n. */
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Pre ulaska u telo petlje proverava se da li je ispunjen uslov
-     ulaska u petlju. */
+  /* Vrsi se provera ispravnosti ulaza. */
+  if (n < 0) {
+    printf("Greska: pogresan unos broja n.\n");
+    return -1;
+  }
+  
+  /* Inicijalizacija brojaca. */
+  i = 0;
+  
+  /* Trazena poruka se ispisuje n puta. */
   while (i < n) {
     printf("Mi volimo da programiramo.\n");
     i++;

@@ -2,18 +2,23 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   unsigned int n, m;
-  int i, j, k;
+  int i, j;
 
+  /* Ucitavaju se dimenzije slike. */
   printf("Unesite brojeve n i m: ");
   scanf("%u%u", &n, &m);
 
+  /* Brojac i odredjuje koji red slike se trenutno ispisuje.
+     Ukupno ima m redova. */
   for (i = 1; i <= m; i++) {
-    /* Za svaki kvadrat se racuna duzina bez poslednje ivice.
+    /* Brojac j oznacava koja kolona se trenutno ispisuje. 
+       Za svaki kvadrat se racuna duzina bez poslednje ivice.
        Kvadrat je sastavljen od (m-1) zvezdice i (m-1) praznine
        (praznine se nalaze izmedju zvezdica). Znaci ukupna duzina
-       je 2*(m-1) karakter, a kako ima n kvadrata, duzina je
-       n*2*(m-1). */
+       je 2*(m-1) karakter, a kako ima n kvadrata plus jedna kolona
+       za najdesniju ivicu, duzina je n*2*(m-1) + 1. */
     for (j = 0; j <= n * 2 * (m - 1); j++)
       /* Provera da li se ispisuje prvi ili poslednji red. */
       if (i == 1 || i == m)
@@ -23,8 +28,8 @@ int main()
         else
           printf(" ");
       else
-        /* Na kraju svakog kvadrata (nakon svake (m-1) zvezdice i
-           (m-1) praznine se ispisuje ivica kvadrata. */
+        /* Na ivicama kvardata se iscrtavaju * a na ostalim mestima
+           beline. */
       if (j % (2 * (m - 1)) == 0)
         printf("*");
       else

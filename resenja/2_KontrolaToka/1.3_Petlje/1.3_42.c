@@ -3,30 +3,34 @@
 
 int main()
 {
-  /* Promenljiva i je brojac, promenljiva S cuva izracunatu sumu, a 
-     promenljiva clan je tekuci clan niza. */
+  /* Deklaracije potrebnih promenljivih. */
   int i;
-  float S;
+  float suma, clan;
   float x, eps;
-  float clan;
 
+  /* Ucitavaju se vrednosti x i eps. */
   printf("Unesite x: ");
   scanf("%f", &x);
 
   printf("Unesite tacnost eps: ");
   scanf("%f", &eps);
 
-  S = 0;
-  /* Prvi clan sume je 1. */
+  /* Inicijalizacija sume, prvog clana i brojaca. */
+  suma = 0;
   clan = 1;
   i = 1;
+
+  /* U svakoj iteraciji na sumu se dodaje prethodno izracunati
+     clan sume i zatim se racuna sledeci clan. Petlja se prekida
+     kada vrednost sledeceg clana postane manja ili jednaka eps. */
   while (clan > eps) {
-    S = S + clan;
+    suma += clan;
     clan = clan * x / i;
     i++;
   }
 
-  printf("S=%f\n", S);
+  /* Ispis rezultata. */
+  printf("S=%f\n", suma);
 
   return 0;
 }

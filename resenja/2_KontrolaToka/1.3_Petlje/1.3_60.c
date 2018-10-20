@@ -2,8 +2,11 @@
 
 int main()
 {
-  unsigned int n, i, j;
+  /* Deklaracija potrebnih promenljivih. */
+  unsigned int n;
+  int i, j;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
@@ -15,6 +18,8 @@ int main()
     /* Prvo se ispisuju beline koje prethode karakterima *. */
     for (j = 0; j < n - i - 1; j++)
       printf(" ");
+    
+    /* Posle belina se ispisuje sam trougao.*/
     for (j = 0; j < 2 * i + 1; j++)
       if (j == 0 || j == 2 * i)
         printf("*");
@@ -23,7 +28,7 @@ int main()
     printf("\n");
   }
 
-  /* Potom se iscrtava kvadat. Da bi iscrtavanje bilo lakse
+  /* Potom se iscrtava kvadrat. Da bi iscrtavanje bilo lakse
      istovremeno se ispisuju dva karaktera. */
   for (i = 0; i < n; i++) {
     for (j = 0; j < n; j++)

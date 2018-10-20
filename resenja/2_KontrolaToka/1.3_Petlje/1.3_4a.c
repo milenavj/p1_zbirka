@@ -4,30 +4,30 @@
 
 int main()
 {
-  /* Promenljive koje oznacavaju granice intervala. */
-  int n, m;
-  /* Promenljiva koja oznacava trenutno ispisani broj intervala. */
-  int i;
+  /* Deklaracija potrebnih promenljivih. */
+  int n, m, i;
 
-  printf("Unesi dva cela broja: ");
+  /* Ucitavaju se vrednosti granica intervala. */
+  printf("Unesite granice intervala: ");
   scanf("%d%d", &n, &m);
 
+  /* Vrsi se provera ispravnosti ulaznih podataka. */
   if (m < n) {
-    printf
-        ("Neispravan unos. Nisu dobro zadate granice intervala!\n");
+    printf("Greska: pogresan unos granica.\n");
     return -1;
   }
 
-  /* Na pocetku ispisujemo prvi broj intervala, a to je n. */
+  /* Inicijalizacija brojaca na levu granicu intervala. */
   i = n;
-  /* uslov petlje se proverava pre ulaska u telo petlje */
+  
+  /* Ispisuju se sve vrednosti brojaca izmedju leve i desne
+     granice intervala, ukljucujuci i same granice. */
   while (i <= m) {
     printf("%d ", i);
     i++;
   }
 
   printf("\n");
-
 
   return 0;
 }

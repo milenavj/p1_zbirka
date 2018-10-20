@@ -2,26 +2,29 @@
 
 int main()
 {
-  int n, i, znak = -1;
-  /* Promenljiva clan je deo proizvoda i predstavlja 1*3*5*...*i. */
-  long int clan;
-  long int S = 0;
+  /* Deklaracija potrebnih promenljivih. */
+  int n, i;
+  long int clan, suma = 0;
 
-  printf("Unesite prirodan broj: ");
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
   if (n < 5 || n % 2 == 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  clan = 1 * 3;
+  /* Izracunava se trazena suma. */
+  clan = -1 * 3;
   for (i = 5; i <= n; i += 2) {
-    clan = znak * clan * i;
-    S += clan;
+    clan = -1 * clan * i;
+    suma += clan;
   }
 
-  printf("S = %ld\n", S);
+  /* Ispis rezultata. */
+  printf("S = %ld\n", suma);
 
   return 0;
 }

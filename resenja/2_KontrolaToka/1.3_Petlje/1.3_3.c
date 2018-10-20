@@ -2,31 +2,31 @@
 
 int main()
 {
-  /* Promenljivu x koristimo u dve svrhe. Prvo, ova promenljiva
-     kontrolise koliko puta se petlja izvrsila. Drugo, ovu
-     promenljivu koristimo za ispis potrebnih vrednosti. */
-  int x;
-  /* Promenljiva n se unosi i odredjuje koliko brojeva ispisujemo. */
-  int n;
+  /* Deklaracija potrebnih promenljivih. */
+  int i, n;
 
-  printf("Unesi pozitivan ceo broj: ");
+  /* Ucitava se vrednost broja n. */
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* U slucaju neispravnih podataka ispisujemo odgovarajucu poruku
-     i izlazimo iz programa. */
+  /* Vrsi se provera ispravnosti ulaza. */
   if (n < 0) {
-    printf("Neispravan unos. Promenljiva mora biti pozitivna!\n");
+    printf("Greska: pogresan unos broja n.\n");
     return -1;
   }
 
-  /* Ispis pocinjemo od 0, zato promenljivu x postavljamo na 0. */
-  x = 0;
-  while (x <= n) {
-    /* Ispisujemo broj. */
-    printf("%d\n", x);
-    /* Uvecavamo promenljivu za jedan jer smo broj ispisali i sada
-       zelimo da ispisemo sledeci broj. */
-    x++;
+  /* Inicijalizacija brojaca. */
+  i = 0;
+  
+  /* Posto je potrebno ispisati sve brojeve [0,n], telo petlje
+     se izvrsava za svako i <= n. */
+  while (i <= n) {
+    
+    /* Ispisuje se trenutna vrednost brojaca. */
+    printf("%d\n", i);
+    
+    /* Prelazi se na sledeci broj.  */
+    i++;
   }
 
   return 0;

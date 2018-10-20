@@ -2,26 +2,33 @@
 
 int main()
 {
+  /* Deklaracije potrebnih promenljivih. */
   int n, i;
-  double P;
+  double rezultat;
   double x, a;
 
-  printf("Unesite dva relana broja x i a: ");
+  /* Ucitavanje i provera ispravnosti ulaza. */
+  printf("Unesite brojeve x i a: ");
   scanf("%lf%lf", &x, &a);
 
-  printf("Unesite prirodan broj: ");
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
   if (n <= 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  P = x;
+  /* Racuna se vrednost zadatog izraza. Krece se od 
+     rezultat = (x+a)^2 i ide se ka spolja. 
+     Svaki put vrednost rezultata treba zameniti sa 
+     (rezultat + a)^2. */
+  rezultat = x;
   for (i = 0; i < n; i++)
-    P = (P + a) * (P + a);
+    rezultat = (rezultat + a) * (rezultat + a);
 
-  printf("Izraz = %lf\n", P);
+  /* Ispis rezultata. */
+  printf("Izraz = %lf\n", rezultat);
 
   return 0;
 }

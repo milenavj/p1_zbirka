@@ -2,61 +2,71 @@
 
 int main()
 {
-  int n, novo_n;
-  int stepen;
-  int cifra_levo, cifra_sredina, cifra_desno;
-
-  /* Ucitavanje broja. */
+  /* Deklaracija potrebnih promenljivih. */
+  int n;
+  int c1, c2, c3;
+  int pozicija, rezultat;
+  
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite broj: ");
   scanf("%d", &n);
 
   if (n <= 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Stepen broja 10 sa kojim se mnoze cifre izdvojenog broja. */
-  stepen = 1;
-
-  /* Nova vrednost broja. */
-  novo_n = 0;
-
-  /* Provera da li u zapisu broja postoje barem tri cifre.  */
-  while (n > 99) {
-    /* Izdvaja se srednja cifra, cifra desno od nje i cifra levo od 
-       nje: npr. za trojku 583 8 je srednja cifra, 3 je cifra
-       desno, a 5 cifra levo. */
-    cifra_desno = n % 10;
-    cifra_sredina = (n / 10) % 10;
-    cifra_levo = (n / 100) % 10;
-
-    /* U novi broj se smesta desna cifra. */
-    novo_n += cifra_desno * stepen;
-
-    /* Azurira se vrednost stepena. */
-    stepen = stepen * 10;
-
-    /* Provera da li je srednja cifra jednaka zbiru leve i desne
-       cifre. */
-    if (cifra_levo + cifra_desno == cifra_sredina) {
-
-      /* Treba izbaciti srednju cifru, pa broj n se azurira tako
-         sto se podeli sa 100. */
-      n = n / 100;
-    } else {
-
-      /* Inace, zadrzava se srednja cifra i odbacuje se samo
-         poslednja. */
-      n = n / 10;
+  /* Ako broj nema bar tri cifre, rezultat ima vrednost unetog
+     broja. */
+  if(n <= 99)
+  {
+    printf("Rezultat: %d\n", n);
+    return 0;
+  }
+  
+  /* Izdvajaju se poslednje tri cifre polaznog broja. */
+  c1 = n%10;
+  c2 = (n/10)%10;
+  c3 = (n/100)%10;
+  
+  /* Poslednja cifra se uvek nalazi u rezultatu jer ona nema
+    oba suseda. Zato rezultat inicijalizujemo na poslednju cifru,
+    a poziciju na 10. */
+  rezultat = c1;
+  pozicija = 10;
+  
+  /* Petlja se izvrsava dok god broj ima bar tri cifre. */
+  while(n>99)
+  {
+    /* Proverava se da li c2 treba da se nadje u rezultatu. Ako 
+       treba, rezultat se uvecava za vrednost cifre pomnozenu sa
+       vrednoscu tezine njene pozicije u rezultatu i tezina
+       pozicije se mnozi sa 10. */
+    if(c2 != c1 + c3)
+    {
+      rezultat += c2*pozicija;
+      pozicija *= 10;
     }
+   
+    /* Vrsi se pomeranje na sledece tri cifre polaznog broja. 
+       Iz polaznog broja brisemo poslednju cifru. Prva i druga 
+       cifra su vec izracunate, samo se vrsi njihovo premestanje
+       iz c2 i c3 u c1 i c2. Cifra c3 se racuna. */
+    n = n/10;
+    c1 = c2;
+    c2 = c3;
+    c3 = (n/100)%10; 
   }
 
-  /* Na novi broj se dodaje preostali dvocifreni ili jednocifreni
-     broj. */
-  novo_n = n * stepen + novo_n;
-
-  /* Ispisivanje rezultata. */
-  printf("%d\n", novo_n);
+  /* Po zavrsetku petlje, broj n je dvocifren i njegova cifra
+     desetica odgovara vodecoj cifri polaznog broja. Vodeca cifra
+     polaznog broja uvek treba da se nadje u rezultatu jer nema
+     oba suseda i iz tog razloga je dodajemo na tekuci rezultat. */
+  rezultat += (n/10)*pozicija;
+  
+  /* Ispis rezultata. */
+  printf("%d\n", rezultat);
 
 
   return 0;

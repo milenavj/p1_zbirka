@@ -2,12 +2,16 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   unsigned int n;
   int i, j;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
+  /* Slika se crta iz dva dela. */
+  
   /* Brojac i odredjuje koji red slike se trenutno ispisuje. */
   for (i = 0; i < n; i++) {
     /* Prvo se ispisuju beline koje prethode karakterima *. */
@@ -19,14 +23,9 @@ int main()
     printf("\n");
   }
 
-  /* Sada se ispisuje donji trougao. Kako je prvi red donjeg
+  /* Zatim se ispisuje donji trougao. Kako je prvi red donjeg
      trougla vec ispisan (poslednji red gornjeg trougla), potrebno
      je naciniti jednu iteraciju manje. */
-
-  /* Brojac i odredjuje koliko redova se ispisuje. Radi lakseg
-     izracunavanja koliko zvezdica i praznina je potrebno ispisati
-     u svakom redu, i se postavlja na n-1 i smanjuje u svakoj
-     iteraciji petlje. */
   for (i = n - 2; i >= 0; i--) {
     /* Prvo se ispisuju beline koje prethode karakterima *. */
     for (j = 0; j < n - i - 1; j++)

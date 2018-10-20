@@ -2,14 +2,19 @@
 
 int main()
 {
-  unsigned int n, i, j;
+  /* Deklaracija potrebnih promenljivih. */
+  unsigned int n;
+  int i, j;
 
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
-
+  
+  /* Brojac i je redni broj vrste koja se ispisuje. */
   for (i = 1; i <= n; i++) {
-    for (j = 1; j <= n; j++)
-      if (j % i == 1 || i == 1)
+    /* U svakoj vrsti se ispisuju brojevi izmedju 1 i n,
+       sa korakom i. */
+    for (j = 1; j <= n; j+=i)
         printf("%d ", j);
 
     printf("\n");

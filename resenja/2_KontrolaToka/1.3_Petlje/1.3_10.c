@@ -3,26 +3,34 @@
 
 int main()
 {
+  /* Deklaracija potrebnih promenljivih. */
   int x;
-  char cifra;
+  
+  /* Ucitava se vrednost broja x. */
   printf("Unesi ceo broj:");
   scanf("%d", &x);
 
-  /* Pretvaranje u apsolutnu vrednost se vrsi za slucaj kada je
-     unet negativan broj kako bismo osigurali da ce nam izdvojene
-     cifre biti pozitivne. */
+  /* Uzima se apsolutna vrednost broja da bi izdvojene cifre bile
+     pozitivni brojevi. Na primer, 123%10 je 3, a -123%10 je -3. */
   x = abs(x);
 
-  /* Kako uklanjamo cifre broja (pogledati telo petlje) u nekom
-     trenutku broj ce postati 0 jer smo uklonili sve njegove cifre. 
-     Tada prekidamo rad petlje. */
-  while (x > 0) {
-    /* Izdvajamo poslednju cifru broja x. */
-    cifra = x % 10;
-    printf("%d\n", cifra);
-    /* Uklanjamo poslednju cifru broja x. */
+  /* Slucaj kada je uneti broj 0 se posebno obradjuje. */
+  if(x == 0)
+  {
+    printf("0\n");
+    return 0;
+  }
+  
+  /* U petlji se obradjuje cifra po cifra broja, dok god ima 
+     neobradjenih cifara u broju. */
+  while (x != 0) {
+    /* Ispisuje se poslednja cifra broja x. */
+    printf("%d ", x % 10);
+    
+    /* Uklanja se poslednja cifra broja x. */
     x /= 10;
   }
+  printf("\n");
 
   return 0;
 }

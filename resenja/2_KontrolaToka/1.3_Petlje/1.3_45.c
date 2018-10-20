@@ -2,27 +2,30 @@
 
 int main()
 {
+  /* Deklaracije potrebnih promenljivih. */
   int n, i;
-  double Razlomak;
+  double razlomak;
 
-  printf("Unesite prirodan broj: ");
+  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite broj n: ");
   scanf("%d", &n);
 
   if (n <= 0) {
-    printf("Neispravan unos.\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
-
-  Razlomak = n;
 
   /* Razlomak se izracunava "od nazad", odnosno, krece se od
      najnizeg razlomka 1/n i od njega se nadalje formira sledeci,
      "visi" razlomak itd. Zavrsava se kada se stigne do koraka 0 +
      1/R. */
+  razlomak = n;
   for (i = n - 1; i >= 0; i--)
-    Razlomak = i + 1 / Razlomak;
+    razlomak = i + 1 / razlomak;
 
-  printf("Razlomak = %lf\n", Razlomak);
+  /* Ispis rezultata. */
+  printf("R = %lf\n", razlomak);
 
   return 0;
 }
