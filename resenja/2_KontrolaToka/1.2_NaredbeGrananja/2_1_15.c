@@ -9,7 +9,7 @@ int main()
   int najveca, najmanja, stepen_najvece, stepen_najmanje;
   int rezultat;
 
-  /* Ucitava se broj n. */
+  /* Ucitava se broj vrednost broja n. */
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 

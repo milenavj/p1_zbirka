@@ -8,7 +8,7 @@ int main()
   char jedinica, desetica, stotina, hiljada;
   int broj_parnih, proizvod_parnih;
 
-  /* Ucitava se broj n. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 

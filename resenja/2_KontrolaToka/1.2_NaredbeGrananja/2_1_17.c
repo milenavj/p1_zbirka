@@ -17,9 +17,9 @@ int main()
       (x1 <= 0 && y1 >= 0 && x2 <= 0 && y2 >= 0) ||
       (x1 >= 0 && y1 <= 0 && x2 >= 0 && y2 <= 0) ||
       (x1 <= 0 && y1 <= 0 && x2 <= 0 && y2 <= 0)) {
-    printf("DA\n");
+    printf("Tacke se nalaze u istom kvadrantu.\n");
   } else {
-    printf("NE\n");
+    printf("Tacke se ne nalaze u istom kvadrantu.\n");
   }
 
   return 0;

@@ -111,7 +111,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite jedan ceo broj:}\ulaz{0}#
-#\izlaz{Greska: nedozvoljeno deljenje nulom.}#
+#\izlaz{Greska: nedozvoljeno je deljenje nulom.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -357,53 +357,53 @@ Ukoliko je uneti karakter malo (veliko) slovo, ispisati i odgovarajuće veliko (
 \fi
 
 
-\begin{Exercise}[label=KT_NG_09] 
-Napisati program koji učitava 3 karaktera od kojih prvi mora biti cifra i 
-ispisuje zbir ASCII kodova svih unetih karaktera, pomnozen sa vrednoscu unete cifre. 
-U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-\napomena{Karakteri koji se unose su razmaknuti belinama.}
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{1 A c}#
-#\izlaz{Rezultat: 213}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{2 a \_}#
-#\izlaz{Rezultat: 484}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{4 3 9}#
-#\izlaz{Rezultat: 640}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{B 6 (}#
-#\izlaz{Greska: prvi karakter nije cifra.}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{KT_NG_09}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=KT_NG_09]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_09.c}
-\end{Answer}
-\fi
+% \begin{Exercise}[label=KT_NG_09] 
+% Napisati program koji učitava tri karaktera od kojih prvi mora biti cifra i 
+% ispisuje zbir ASCII kodova svih unetih karaktera, pomnozen sa vrednoscu unete cifre. 
+% U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+% \napomena{Karakteri koji se unose su razmaknuti belinama.}
+% 
+% \begin{miditest}
+% \begin{upotreba}{1}
+% #\naslovInt#
+% #\izlaz{Unesite karaktere:}\ulaz{1 A c}#
+% #\izlaz{Rezultat: 213}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{2}
+% #\naslovInt#
+% #\izlaz{Unesite karaktere:}\ulaz{2 a \_}#
+% #\izlaz{Rezultat: 484}#
+% \end{upotreba}
+% \end{miditest}
+% 
+% \begin{miditest}
+% \begin{upotreba}{3}
+% #\naslovInt#
+% #\izlaz{Unesite karaktere:}\ulaz{4 3 9}#
+% #\izlaz{Rezultat: 640}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{4}
+% #\naslovInt#
+% #\izlaz{Unesite karaktere:}\ulaz{B 6 (}#
+% #\izlaz{Greska: prvi karakter nije cifra.}#
+% \end{upotreba}
+% \end{miditest}
+% \linkresenje{KT_NG_09}
+% \end{Exercise}
+% \ifresenja
+%  \begin{Answer}[ref=KT_NG_09]
+% \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_09.c}
+% \end{Answer}
+% \fi
 
 
 \begin{Exercise}[label=KT_NG_10] 
-Napisati program koji učitava 3 karaktera i ispisuje proizvod svih karaktera koji su cifre. 
-Ukoliko među unetim karakterima nema cifara, program treba da ispise odgovarajuću poruku.
+Napisati program koji učitava tri karaktera i ispisuje proizvod svih karaktera koji su cifre. 
+Ukoliko među unetim karakterima nema cifara, program treba da ispiše odgovarajuću poruku.
 \napomena{Karakteri koji se unose su razmaknuti belinama.}
 
 \begin{miditest}
@@ -446,7 +446,7 @@ Ukoliko među unetim karakterima nema cifara, program treba da ispise odgovaraju
 
 
 \begin{Exercise}[label=KT_NG_11] 
-Kasir unosi šifru artikla koja se zadaje kao 3 spojena karaktera koji mogu biti mala slova, velika slova ili cifre. 
+Kasirka unosi šifru artikla koja se zadaje kao tri spojena karaktera koji mogu biti mala slova, velika slova ili cifre. 
 U kasi, sve šifre su zapisane malim slovima i ciframa. Napisati program koji unos kasira konvertuje u unos
 koji je odgovarajući za kasu, tj. koji sva velika slova pretvara u odgovarajuća mala, a ostale karaktere ne menja. 
 U slučaju neispravnog unosa šifre, ispisati odgovarajuću poruku o grešci.
@@ -621,10 +621,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=KT_NG_15] 
- Napisati program koji učitava četvorocifreni broj i ispisuje broj koji se dobija kada se unetom broju razmene najmanja i najveća cifra. 
+ Napisati program koji učitava četvorocifreni broj i ispisuje broj koji se dobija 
+ kada se unetom broju razmene najmanja i najveća cifra.  
+ U slučaju da se najmanja ili najveća cifra pojavljuju na više pozicija, 
+ uzeti prvo pojavljivanje sa, gledajući sa desna na levo.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
- \napomena{U slučaju da se najmanja ili najveća cifra pojavljuju na više pozicija, uzeti prvo pojavljivanje sa, gledajući sa desna na levo.}
-
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -711,15 +713,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=KT_NG_17]
-Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nalaze u istom kvadrantu i ispisuje odgovor
-\verb|DA| ili \verb|NE|. Koordinate tačaka su realni brojevi jednostruke tačnosti.
+Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nalaze u 
+istom kvadrantu. Koordinate tačaka su realni brojevi jednostruke tačnosti.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite koordinate tacke A:}\ulaz{1.5 6}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{2.33 9.8}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze u istom kvadrantu.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -727,7 +729,7 @@ Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nal
 #\naslovInt#
 #\izlaz{Unesite koordinate tacke A:}\ulaz{-3 6}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{0.33 -5}#
-#\izlaz{NE}#
+#\izlaz{Tacke se ne nalaze u istom kvadrantu.}#
 \end{upotreba}
 \end{miditest}
 
@@ -736,7 +738,7 @@ Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nal
 #\naslovInt#
 #\izlaz{Unesite koordinate tacke A:}\ulaz{0 -6}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{-1 -99.66}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze u istom kvadrantu.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -744,7 +746,7 @@ Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nal
 #\naslovInt#
 #\izlaz{Unesite koordinate tacke A:}\ulaz{3 -6}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{-0.33 0}#
-#\izlaz{NE}#
+#\izlaz{Tacke se ne nalaze u istom kvadrantu.}#
 \end{upotreba}
 \end{miditest}
 
@@ -758,8 +760,8 @@ Napisati program koji ispituje da li se tačke $A(x_1, y_1)$ i $B(x_2, y_2)$ nal
 
 
 \begin{Exercise}[label=KT_NG_18]
-Napisati program koji ispituje da li se tačke $A(x_1, y_1)$, $B(x_2, y_2)$ i $C(x_3, y_3)$ nalaze na istoj pravoj i
-ispisuje odgovor \verb|DA| ili \verb|NE|. \\
+Napisati program koji ispituje da li se tačke $A(x_1, y_1)$, $B(x_2, y_2)$ i $C(x_3, y_3)$ 
+nalaze na istoj pravoj. \\
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -767,7 +769,7 @@ ispisuje odgovor \verb|DA| ili \verb|NE|. \\
 #\izlaz{Unesite koordinate tacke A:}\ulaz{1.5 6}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{-2.5 -10}#
 #\izlaz{Unesite koordinate tacke C:}\ulaz{3 12}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze na istoj pravoj.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -776,7 +778,7 @@ ispisuje odgovor \verb|DA| ili \verb|NE|. \\
 #\izlaz{Unesite koordinate tacke A:}\ulaz{-1.5 3}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{-0.4 9.8}#
 #\izlaz{Unesite koordinate tacke C:}\ulaz{2 3}#
-#\izlaz{NE}#
+#\izlaz{Tacke se ne nalaze na istoj pravoj.}#
 \end{upotreba}
 \end{miditest}
 
@@ -786,7 +788,7 @@ ispisuje odgovor \verb|DA| ili \verb|NE|. \\
 #\izlaz{Unesite koordinate tacke A:}\ulaz{1.55 6}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{-8.4 9.8}#
 #\izlaz{Unesite koordinate tacke C:}\ulaz{5 4.682412}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze na istoj pravoj.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -795,7 +797,7 @@ ispisuje odgovor \verb|DA| ili \verb|NE|. \\
 #\izlaz{Unesite koordinate tacke A:}\ulaz{5.5 3.5}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{5.5 3.5}#
 #\izlaz{Unesite koordinate tacke C:}\ulaz{5.5 3.5}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze na istoj pravoj.}#
 \end{upotreba}
 \end{miditest}
 
@@ -805,7 +807,7 @@ ispisuje odgovor \verb|DA| ili \verb|NE|. \\
 #\izlaz{Unesite koordinate tacke A:}\ulaz{1 2}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{1 2}#
 #\izlaz{Unesite koordinate tacke C:}\ulaz{-56 1.3}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze na istoj pravoj.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -814,7 +816,7 @@ ispisuje odgovor \verb|DA| ili \verb|NE|. \\
 #\izlaz{Unesite koordinate tacke A:}\ulaz{3.4 3.5}#
 #\izlaz{Unesite koordinate tacke B:}\ulaz{-10 -1}#
 #\izlaz{Unesite koordinate tacke C:}\ulaz{-10 -1}#
-#\izlaz{DA}#
+#\izlaz{Tacke se nalaze na istoj pravoj.}#
 \end{upotreba}
 \end{miditest}
 
@@ -895,7 +897,7 @@ ispisuje ih zaokružene na dve decimale.
 
 \begin{Exercise}[label=KT_NG_21] 
  U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti 
- ceo broj $k$ (1 \geq $k$ \geq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.
+ ceo broj $k$ (1 \leq $k$ \leq 189) ispisuje cifru koja se nalazi na $k$-toj poziciji datog niza.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{miditest}
@@ -937,8 +939,11 @@ ispisuje ih zaokružene na dve decimale.
 \fi
 
 \begin{Exercise}[label=KT_NG_22] 
-Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Napisati program koji za učitanu vrednost realne promenljive $x$ i vrednost celobrojne promenljive $k$ koje može biti 1, 2 ili 3 izračunava
-vrednost funkcije $F(x, k) = f(f(f(...f(x)))$ gde je funkcija $f$ primenjena $k$-puta i ispisuje je zaokruženu na dve decimale.
+Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Napisati program koji za učitanu 
+vrednost realne promenljive $x$ i vrednost celobrojne promenljive $k$ koje može 
+biti 1, 2 ili 3 izračunava vrednost funkcije $F(x, k)$ koja se dobija tako što se 
+funkcija $f$ primeni $k$-puta ($F(x,1) = f(x), F(x, 2) = f(f(x)), F(x,3) = f(f(f(x)))$)
+i ispisuje je zaokruženu na dve decimale.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
@@ -1311,94 +1316,95 @@ Rešenje je analogno rešenju zadatka \ref{KT_NG_29}.
 \fi
 
 
-\begin{Exercise}[label=KT_NG_31]
-Korisnik unosi tri cela broja $P$, $Q$ i $R$ i dva karaktera, $op1$ i $op2$. 
-Ovi karakteri predstavljaju operacije nad unetim brojevima i imaju naredno značenje:
-\begin{itemize}
-\item karakter \textbf{k} predstavlja  logičku konjukciju
-\item karakter \textbf{d} predstavlja  logičku disjunkciju
-\item karakter \textbf{m} predstavlja  relaciju manje
-\item karakter \textbf{v} predstavlja  relaciju veće
-\end{itemize}
-Program treba da sračuna vrednost izraza \kckod{P op1 Q op2 R} i da ga ispiše.
-U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite izraz:}\ulaz{0 k 1 m 2}#
-#\izlaz{Vrednost izraza: 1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite izraz:}\ulaz{-3 d -1 k 0}#
-#\izlaz{Vrednost izraza: 0}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite izraz:}\ulaz{-3 k 1 d 0}#
-#\izlaz{Vrednost izraza: 1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite izraz:}\ulaz{-3 m -1 m 100}#
-#\izlaz{Vrednost izraza: 1}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{KT_NG_31}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=KT_NG_31]
- 
-Rešenje je analogno rešenju zadatka \ref{KT_NG_25}.
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[difficulty=1, label=KT_NG_32] 
-Program učitava jedan karakter i osam realnih brojeva koji predstavljaju 
-koordinate četiri tačke: $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3), D(x_4, y_4)$. Na osnovu unetog karaktera 
-ispisuje se odgovarajuća poruka na standardni izlaz:
-\begin{itemize}
-\item ukoliko je uneti karakter $k$ - proverava da li su date tačke temena pravougaonika čije su stranice paralelne koordinatnim osama i 
-    u slučaju da jesu, ispisuje vrednost obima datog pravougaonika. Možemo podrazumevati da će korisnik koordinate tačaka 
-    unosi redom $A,B,C,D$, pri čemu $ABCD$ opisuje pravougaonik čije su stranice $AB,BC,CD,DA$, a dijagonale $AC$ i $BD$. 
-    Na primer, tačke $(1,1),(2,1),(2,2),(1,2)$ čine pravougaonik čije su stranice paralelne koordinatnim osama i čiji je obim 4
-    a tačke $(1,1),(2,2),(3,3),(4,4)$ ne čine pravougaonik. 
-\item ukoliko je uneti karakter $h$ - proverava da li su unete tačke kolinearne i ukoliko jesu, ispisuje jednačinu prave kojoj pripadaju. 
-    Na primer, tačke $(1,2),(2,3),(3,4),(4,5)$ su kolinearne i pripadaju pravoj $y=x+1$, 
-    tačke $(1,1),(1,2),(1,3),(1,4)$ su kolinearne i pripadaju pravoj $x=1$,
-    a tačke $(1,1),(2,1),(2,2),(1,2)$ nisu kolinearne.
-\item ukoliko je uneti karakter $j$ - Kramerovim pravilom proverava da li je sistem jednačina
-$x_1 * p + x_2 * q = x_4 - x_3,y_1 * p + y_2 * q = y_4 - y_3$
-    određen, neodređen ili nema rešenja, i u slučaju da je određen ispisuje rešenja.
-\end{itemize} 
-\linkresenje{KT_NG_32}
-\end{Exercise}
-\ifresenja
- \begin{Answer}[ref=KT_NG_32]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_32.c}
-\end{Answer}
-\fi
+% \begin{Exercise}[label=KT_NG_31]
+% Korisnik unosi tri cela broja $P$, $Q$ i $R$ i dva karaktera, $op1$ i $op2$. 
+% Ovi karakteri predstavljaju operacije nad unetim brojevima i imaju naredno značenje:
+% \begin{itemize}
+% \item karakter \textbf{k} predstavlja  logičku konjukciju
+% \item karakter \textbf{d} predstavlja  logičku disjunkciju
+% \item karakter \textbf{m} predstavlja  relaciju manje
+% \item karakter \textbf{v} predstavlja  relaciju veće
+% \end{itemize}
+% Program treba da sračuna vrednost izraza \kckod{P op1 Q op2 R} i da ga ispiše.
+% U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+% 
+% \begin{miditest}
+% \begin{upotreba}{1}
+% #\naslovInt#
+% #\izlaz{Unesite izraz:}\ulaz{0 k 1 m 2}#
+% #\izlaz{Vrednost izraza: 1}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{2}
+% #\naslovInt#
+% #\izlaz{Unesite izraz:}\ulaz{-3 d -1 k 0}#
+% #\izlaz{Vrednost izraza: 0}#
+% \end{upotreba}
+% \end{miditest}
+% 
+% \begin{miditest}
+% \begin{upotreba}{3}
+% #\naslovInt#
+% #\izlaz{Unesite izraz:}\ulaz{-3 k 1 d 0}#
+% #\izlaz{Vrednost izraza: 1}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{4}
+% #\naslovInt#
+% #\izlaz{Unesite izraz:}\ulaz{-3 m -1 m 100}#
+% #\izlaz{Vrednost izraza: 1}#
+% \end{upotreba}
+% \end{miditest}
+% 
+% \linkresenje{KT_NG_31}
+% \end{Exercise}
+% \ifresenja
+% \begin{Answer}[ref=KT_NG_31]
+%  
+% Rešenje je analogno rešenju zadatka \ref{KT_NG_25}.
+% \end{Answer}
+% \fi
+% 
+% 
+% \begin{Exercise}[difficulty=1, label=KT_NG_32] 
+% Program učitava jedan karakter i osam realnih brojeva koji predstavljaju 
+% koordinate četiri tačke: $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3), D(x_4, y_4)$. Na osnovu unetog karaktera 
+% ispisuje se odgovarajuća poruka na standardni izlaz:
+% \begin{itemize}
+% \item ukoliko je uneti karakter $k$ - proverava da li su date tačke temena pravougaonika čije su stranice paralelne koordinatnim osama i 
+%     u slučaju da jesu, ispisuje vrednost obima datog pravougaonika. Možemo podrazumevati da će korisnik koordinate tačaka 
+%     unosi redom $A,B,C,D$, pri čemu $ABCD$ opisuje pravougaonik čije su stranice $AB,BC,CD,DA$, a dijagonale $AC$ i $BD$. 
+%     Na primer, tačke $(1,1),(2,1),(2,2),(1,2)$ čine pravougaonik čije su stranice paralelne koordinatnim osama i čiji je obim 4
+%     a tačke $(1,1),(2,2),(3,3),(4,4)$ ne čine pravougaonik. 
+% \item ukoliko je uneti karakter $h$ - proverava da li su unete tačke kolinearne i ukoliko jesu, ispisuje jednačinu prave kojoj pripadaju. 
+%     Na primer, tačke $(1,2),(2,3),(3,4),(4,5)$ su kolinearne i pripadaju pravoj $y=x+1$, 
+%     tačke $(1,1),(1,2),(1,3),(1,4)$ su kolinearne i pripadaju pravoj $x=1$,
+%     a tačke $(1,1),(2,1),(2,2),(1,2)$ nisu kolinearne.
+% \item ukoliko je uneti karakter $j$ - Kramerovim pravilom proverava da li je sistem jednačina
+% $x_1 * p + x_2 * q = x_4 - x_3,y_1 * p + y_2 * q = y_4 - y_3$
+%     određen, neodređen ili nema rešenja, i u slučaju da je određen ispisuje rešenja.
+% \end{itemize} 
+% \linkresenje{KT_NG_32}
+% \end{Exercise}
+% \ifresenja
+%  \begin{Answer}[ref=KT_NG_32]
+% \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_32.c}
+% \end{Answer}
+% \fi
 
 
 \begin{Exercise}[difficulty=1, label=KT_NG_33]
-Polje šahovske table se definiše parom prirodnih brojeva ne većih od $8$: prvi se odnosi na red, drugi na kolonu. Ako su dati takvi
+Polje šahovske table se definiše parom prirodnih brojeva ne većih od $8$: 
+prvi se odnosi na red, drugi na kolonu. Ako su dati takvi
 parovi, napisati program koji proverava:
 \begin{description}
 \item[a)] da li su polja (k, l) i (m, n) iste boje
 \item[b)] da li kraljica sa (k, l) ugrožava polje (m, n)
 \item[c)] da li konj sa (k, l) ugrožava polje (m, n)
 \end{description}
-Pretpostaviti da je polje (1,1) crno i da predstavlja donji levi ugao sahovske table. 
+Pretpostaviti da je polje (1,1) crno i da predstavlja donji levi ugao šahovske table. 
 %TODO Mozda ubaciti neku sliku/skicu sahovske table? 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 

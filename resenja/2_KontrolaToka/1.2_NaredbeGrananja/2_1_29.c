@@ -6,7 +6,7 @@ int main()
   int dan, mesec, godina;
   int prethodni_dan, prethodni_mesec, prethodni_godina;
 
-  /* Ucitava se vrednost datuma. */
+  /* Ucitava se datum. */
   printf("Unesite datum: ");
   scanf("%d.%d.%d.", &dan, &mesec, &godina);
 

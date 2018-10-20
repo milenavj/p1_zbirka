@@ -7,7 +7,7 @@ int main()
   int n;
   char jedinica, desetica, stotina, hiljada, najveca_cifra;
 
-  /* Ucitava se cetvorocifreni broj. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 

@@ -3,11 +3,11 @@
 
 int main()
 {
-  /* Deklaracija potrebnih promenlivih. */
+  /* Deklaracija potrebnih promenljivih. */
   int n;
   char jedinica, desetica, stotina;
 
-  /* Ucitava se broj n. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite trocifreni brojedinica: ");
   scanf("%d", &n);
 

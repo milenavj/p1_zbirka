@@ -20,7 +20,7 @@ int main()
      nalaze na jednoj pravoj. */
   if ((x1 == x2 && y1 == y2) ||
       (x1 == x3 && y1 == y3) || (x2 == x3 && y2 == y3)) {
-    printf("DA\n");
+    printf("Tacke se nalaze na istoj pravoj.\n");
     return 0;
   }
 
@@ -37,16 +37,16 @@ int main()
     /* Proverava se da li tacka C pripada pravoj y=k*x + n na
        kojoj se vec nalaze tacke A i B. */
     if (y3 == k * x3 + n) {
-      printf("DA\n");
+      printf("Tacke se nalaze na istoj pravoj.\n");
     } else {
-      printf("NE\n");
+      printf("Tacke se ne nalaze na istoj pravoj.\n");
     }
   } else {
     /* Proverava se da li se i tacka C nalazi na pravoj x = x2. */
     if (x3 == x2) {
-      printf("DA\n");
+      printf("Tacke se nalaze na istoj pravoj.\n");
     } else {
-      printf("NE\n");
+      printf("Tacke se ne nalaze na istoj pravoj.\n");
     }
   }
 
@@ -59,9 +59,9 @@ int main()
      x1*y2 + y1*x3 + x2*y3 - y1*x2 - x1*y3 - y2*x3 = 0
 
      if(x1*y2 + y1*x3 + x2*y3 - y1*x2 - x1*y3 - y2*x3 == 0)
-       printf("DA\n"); 
+       printf("Tacke se nalaze na istoj pravoj. \n"); 
      else 
-       printf("NE\n"); */
+       printf("Tacke se ne nalaze na istoj pravoj. \n"); */
 
   return 0;
 }

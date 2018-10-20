@@ -17,7 +17,7 @@ int main()
      kao indikator da je pri izvrsavanju programa doslo do neke
      greske. */
   if (x == 0) {
-    printf("Greska: nedozvoljeno deljenje nulom.\n");
+    printf("Greska: nedozvoljeno je deljenje nulom.\n");
     return -1;
   }
 
