@@ -23,12 +23,10 @@ int main()
      char c1, c2, c3; 
      scanf("%c %c %c", &c1, &c2, &c3); */
 
-
   /* Pogresan nacin ucitavanja ulaza: 
      scanf("%c%c%c", &c1, &c2, &c3); 
      U ovom slucaju ce u c1 biti upisan prvi karakter, u c2
      belina i u c3 drugi karakter. */
-
 
   /* Karakteri koji predstavljaju cifre su u ASCII tablici takodje
      smesteni sekvencijalno. Na primer, '0' ima ASCII kod 48, '1'

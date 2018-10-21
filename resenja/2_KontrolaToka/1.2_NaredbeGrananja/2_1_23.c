@@ -9,7 +9,25 @@ int main()
   printf("Unesite broj: ");
   scanf("%d", &dan);
 
+  /*I nacin: koriscenjem if-else naredbe. 
+  if(dan == 1)
+    printf("ponedeljak\n");
+  else if(dan == 2)
+    printf("utorak\n");
+  else if(dan == 3)
+    printf("sreda\n");
+  else if(dan == 4)
+    printf("cetvrtak\n");
+  else if(dan == 5)
+    printf("petak\n");
+  else if(dan == 6)
+    printf("subota\n");
+  else if(dan == 7)
+    printf("nedelja\n");
+  else
+    printf("Greska: neispravan unos dana.\n"); */
 
+  /* II nacin: koriscenjem switch naredbe.*/
   switch (dan) {
   case 1:
     /* Ako dan ima vrednost 1, ispisuje se ponedeljak. */

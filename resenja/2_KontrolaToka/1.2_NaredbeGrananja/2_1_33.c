@@ -29,7 +29,6 @@ int main()
   else
     printf("Polja su razlicite boje.\n");
 
-
   /* Proverava se da li kraljica sa (k,l) napada polje (m,n).
      Kraljica napada polje u sledecim situacijama: 
      1) Ako se nalaze u istom redu (k==m) 

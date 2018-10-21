@@ -404,7 +404,7 @@ Ukoliko je uneti karakter malo (veliko) slovo, ispisati i odgovarajuće veliko (
 \begin{Exercise}[label=KT_NG_10] 
 Napisati program koji učitava tri karaktera i ispisuje proizvod svih karaktera koji su cifre. 
 Ukoliko među unetim karakterima nema cifara, program treba da ispiše odgovarajuću poruku.
-\napomena{Karakteri koji se unose su razmaknuti belinama.}
+\napomena{Karakteri koji se unose su razmaknuti blanko znacima.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -447,7 +447,7 @@ Ukoliko među unetim karakterima nema cifara, program treba da ispiše odgovaraj
 
 \begin{Exercise}[label=KT_NG_11] 
 Kasirka unosi šifru artikla koja se zadaje kao tri spojena karaktera koji mogu biti mala slova, velika slova ili cifre. 
-U kasi, sve šifre su zapisane malim slovima i ciframa. Napisati program koji unos kasira konvertuje u unos
+U kasi, sve šifre su zapisane malim slovima i ciframa. Napisati program koji kasirkin unos konvertuje u unos
 koji je odgovarajući za kasu, tj. koji sva velika slova pretvara u odgovarajuća mala, a ostale karaktere ne menja. 
 U slučaju neispravnog unosa šifre, ispisati odgovarajuću poruku o grešci.
 
@@ -536,20 +536,23 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=KT_NG_13] 
 Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. 
-Napisati program koji za dati trocifren broj proverava da li je Armstrongov.
+Napisati program koji za dati pozitivan trocifreni broj proverava 
+da li je Armstrongov.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite trocifreni broj:}\ulaz{153}#
+#\izlaz{Unesite pozitivan trocifreni broj:}#
+#\ulaz{153}#
 #\izlaz{Broj je Armstrongov.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite trocifreni broj:}\ulaz{111}#
+#\izlaz{Unesite pozitivan trocifreni broj:}#
+#\ulaz{111}#
 #\izlaz{Broj nije Armstrongov.}#
 \end{upotreba}
 \end{miditest}
@@ -557,14 +560,16 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite trocifreni broj:}\ulaz{84}#
-#\izlaz{Greska: niste uneli trocifreni broj.}#
+#\izlaz{Unesite pozitivan trocifreni broj:}#
+#\ulaz{84}#
+#\izlaz{Greska: niste uneli pozitivan trocifreni broj.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite trocifreni broj:}\ulaz{371}#
+#\izlaz{Unesite pozitivan trocifreni broj:}#
+#\ulaz{371}#
 #\izlaz{Broj je Armstrongov.}#
 \end{upotreba}
 \end{miditest}
@@ -1116,7 +1121,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=KT_NG_26] 
 Napisati program koji za uneti datum u formatu \textit{dan.mesec.} ispisuje godišnje doba kojem pripadaju. 
-\napomena{Podrazumevati da je unos korektan.}
+\napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
 \begin{upotreba}{1}

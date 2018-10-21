@@ -29,57 +29,61 @@ int main()
   stotina = (n_abs / 100) % 10;
   hiljada = n_abs / 1000;
 
-  /* Racunaju se najveca i najmanja cifra, kao i pozicija na kojoj
-     se one nalaze. Radi lakseg izracunavanja, pozicija se pamti
-     kao stepen broja 10. Na primer, pozicija cifre jedinica je 1,
-     cifre desetica 10, itd... */
+  /* Po algoritmu za trazenje najvece/najmanje cifre (koji je 
+     prikazan u zadatku 2.1.11) racunaju se najveca i najmanja
+     cifra broja n, kao i pozicija na kojoj se one nalaze. 
+     Radi lakseg izracunavanja, pozicija se pamti kao stepen broja
+     10. Na primer, pozicija cifre jedinica je 1, cifre desetica 
+     10, itd... */
   najveca = jedinica;
-  najmanja = jedinica;
   stepen_najvece = 1;
-  stepen_najmanje = 1;
-
+  
   if (desetica > najveca) {
     najveca = desetica;
     stepen_najvece = 10;
-  }
-  if (desetica < najmanja) {
-    najmanja = desetica;
-    stepen_najmanje = 10;
   }
 
   if (stotina > najveca) {
     najveca = stotina;
     stepen_najvece = 100;
   }
+  
+  if (hiljada > najveca) {
+    najveca = hiljada;
+    stepen_najvece = 1000;
+  }
+
+  /* Racunanje najmanje cifre. */
+  najmanja = jedinica;
+  stepen_najmanje = 1;
+
+  if (desetica < najmanja) {
+    najmanja = desetica;
+    stepen_najmanje = 10;
+  }
+
   if (stotina < najmanja) {
     najmanja = stotina;
     stepen_najmanje = 100;
   }
 
-  if (hiljada > najveca) {
-    najveca = hiljada;
-    stepen_najvece = 1000;
-  }
   if (hiljada < najmanja) {
     najmanja = hiljada;
     stepen_najmanje = 1000;
   }
 
   /* Ideja: U broju 4179, najmanja cifra je 1 i njen stepen je 100,
-     a najveca cifra je 0 i njen stepen je 1. Zamena mesta se vrsi
+     a najveca cifra je 9 i njen stepen je 1. Zamena mesta se vrsi
      tako sto se oduzme 9 i doda 1, a zatim oduzme 100 i doda 900. */
-  if (n > 0){
-    rezultat = n - najveca * stepen_najvece 
-                 + najmanja * stepen_najvece 
-                 - najmanja * stepen_najmanje 
-                 + najveca * stepen_najmanje;
-  }
-  else {
-    rezultat = n + najveca * stepen_najvece 
-                 - najmanja * stepen_najvece 
-                 + najmanja * stepen_najmanje 
-                 - najveca * stepen_najmanje;
-  }
+  rezultat = n_abs - najveca * stepen_najvece 
+                   + najmanja * stepen_najvece 
+                   - najmanja * stepen_najmanje 
+                   + najveca * stepen_najmanje;
+  
+  /* Ako je pocetni broj bio negativan i rezultat treba da bude
+     negativan. */
+  if(n < 0)
+    rezultat = -rezultat;
   
   /* Ispis rezultata. */
   printf("Rezultat: %d\n", rezultat);

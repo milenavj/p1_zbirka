@@ -8,16 +8,12 @@ int main()
   char jedinica, desetica, stotina;
 
   /* Ucitava se vrednost broja n. */
-  printf("Unesite trocifreni brojedinica: ");
+  printf("Unesite pozitivan trocifreni broj: ");
   scanf("%d", &n);
-
-  /* Da bi program radio ispravno i za negativne brojeve, uzima se
-     apsolutna vrednost broja n. */
-  n = abs(n);
 
   /* Vrsi se provera ispravnosti ulaznih podataka. */
   if (n < 100 || n > 999) {
-    printf("Greska: niste uneli trocifreni broj.\n");
+    printf("Greska: niste uneli pozitivan trocifreni broj.\n");
     return -1;
   }
 

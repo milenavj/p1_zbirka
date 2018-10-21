@@ -3,20 +3,20 @@
 int main()
 {
   /* Deklaracija potrebnih promenljivih. */
-  float x1, y1, x2, y2;
+  float xa, ya, xb, yb;
 
   /* Ucitavaju se koordinate tacaka A i B. */
   printf("Unesite koordinate tacke A: ");
-  scanf("%f%f", &x1, &y1);
+  scanf("%f%f", &xa, &ya);
 
   printf("Unesite koordinate tacke B: ");
-  scanf("%f%f", &x2, &y2);
+  scanf("%f%f", &xb, &yb);
 
   /* Proverava se da li su obe tacke u istom kvadrantu. */
-  if ((x1 >= 0 && y1 >= 0 && x2 >= 0 && y2 >= 0) ||
-      (x1 <= 0 && y1 >= 0 && x2 <= 0 && y2 >= 0) ||
-      (x1 >= 0 && y1 <= 0 && x2 >= 0 && y2 <= 0) ||
-      (x1 <= 0 && y1 <= 0 && x2 <= 0 && y2 <= 0)) {
+  if ((xa >= 0 && ya >= 0 && xb >= 0 && yb >= 0) ||
+      (xa <= 0 && ya >= 0 && xb <= 0 && yb >= 0) ||
+      (xa >= 0 && ya <= 0 && xb >= 0 && yb <= 0) ||
+      (xa <= 0 && ya <= 0 && xb <= 0 && yb <= 0)) {
     printf("Tacke se nalaze u istom kvadrantu.\n");
   } else {
     printf("Tacke se ne nalaze u istom kvadrantu.\n");

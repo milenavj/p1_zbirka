@@ -8,11 +8,11 @@ int main()
 
   /* I nacin ucitavanja ulaza: koriscenjem funkcije getchar()
      Funkcija getchar cita jedan karakter sa ulaza i vraca njegov
-     ASCII kod. Napomena: beline su takodje karakteri i nece
-     automatski biti preskocene. Iz tog razloga se getchar poziva 5 
+     ASCII kod. Napomena: razmaci su takodje karakteri i nece
+     automatski biti preskoceni. Iz tog razloga se getchar poziva 5 
      puta u ovom primeru. Posto je poznato da su drugi i cetvrti
-     karakter beline, nema potrebe da se cuva povratna vrednost tih 
-     poziva. */
+     karakter blanko znaci, nema potrebe da se cuva povratna 
+     vrednost tih poziva. */
   int c1, c2, c3;
   printf("Unesite karaktere: ");
   c1 = getchar();
@@ -22,16 +22,14 @@ int main()
   c3 = getchar();
 
   /* II nacin ucitavanja ulaza: koriscenjem funkcije scanf()
-     Beline se navode kao deo ocekivanog formata ulaza. 
+     Blanko znaci se navode kao deo ocekivanog formata ulaza. 
      char c1, c2, c3; 
      scanf("%c %c %c", &c1, &c2, &c3); */
-
 
   /* Pogresan nacin ucitavanja ulaza: 
      scanf("%c%c%c", &c1, &c2, &c3); 
      U ovom slucaju ce u c1 biti upisan prvi karakter, u c2
-     belina i u c3 drugi karakter. */
-
+     blanko i u c3 drugi karakter. */
 
   /* Karakteri koji predstavljaju cifre su u ASCII tablici takodje
      smesteni sekvencijalno. Na primer, '0' ima ASCII kod 48, '1'

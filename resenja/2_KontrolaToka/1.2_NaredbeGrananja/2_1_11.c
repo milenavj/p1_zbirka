@@ -35,7 +35,6 @@ int main()
     return -1;
   }
 
-
   /* Funkcija tolower(c) radi sledece: ako je c veliko slovo, kao
      povratnu vrednost vraca odgovarajuce malo slovo, u suprotnom
      vraca c. Dakle, tolower('A') je 'a', a tolower('6') = '6',...

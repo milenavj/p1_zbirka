@@ -39,7 +39,6 @@ int main()
   if (hiljada > najveca_cifra)
     najveca_cifra = hiljada;
 
-
   /* Ispis rezultata */
   printf("Najveca cifra je: %d\n", najveca_cifra);
 
