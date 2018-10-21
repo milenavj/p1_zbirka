@@ -175,7 +175,7 @@ Napisati program koji učitava tri cela broja i ispisuje zbir pozitivnih.
 \begin{Exercise}[label=KT_NG_05] 
 U prodavnici je organizovana akcija da svaki kupac dobije najjeftiniji od tri artikla za jedan dinar. 
 Napisati program koji za unete cene tri artikla izračunava ukupnu cenu, kao i koliko dinara se uštedi 
-zahvaljujući popustu. Cene artikala su celi brojevi. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+zahvaljujući popustu. Cene artikala su pozitivni celi brojevi. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -534,6 +534,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=KT_NG_13] 
 Broj je Armstrongov ako je jednak zbiru kubova svojih cifara. 
 Napisati program koji za dati pozitivan trocifreni broj proverava 
@@ -581,6 +582,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_13.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_14] 
 Napisati program koji ispisuje proizvod parnih cifara unetog četvorocifrenog broja. 
@@ -669,6 +671,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_15.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_16] 
 Napisati program koji za uneti četvorocifreni broj proverava
@@ -873,6 +876,7 @@ $[a2, b2]$, program treba da odredi:
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=KT_NG_20] 
 Napisati program koji za unete koeficijente kvadratne jednačine ispisuje koliko realnih rešenja jednačina ima i ako ih ima, 
 ispisuje ih zaokružene na dve decimale.
@@ -899,6 +903,7 @@ ispisuje ih zaokružene na dve decimale.
 \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_20.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_21] 
  U nizu 12345678910111213....9899 ispisani su redom brojevi od 1 do 99. Napisati program koji za uneti 
@@ -942,6 +947,7 @@ ispisuje ih zaokružene na dve decimale.
 \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_21.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_22] 
 Data je funkcija $f(x) = 2 \cdot cos(x) - x^3$. Napisati program koji za učitanu 
@@ -1034,6 +1040,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=KT_NG_24] 
 Napisati program koji za uneti karakter ispituje da li je samoglasnik ili ne.
 
@@ -1074,6 +1081,7 @@ Napisati program koji za uneti karakter ispituje da li je samoglasnik ili ne.
 \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_24.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_25] 
 Napisatiti program koji učitava dva cela broja i jedan od karaktera +, -, *, / ili \% i ispisuje vrednost izraza 
@@ -1401,8 +1409,8 @@ Rešenje je analogno rešenju zadatka \ref{KT_NG_29}.
 
 
 \begin{Exercise}[difficulty=1, label=KT_NG_33]
-Polje šahovske table se definiše parom prirodnih brojeva ne većih od $8$: 
-prvi se odnosi na red, drugi na kolonu. Ako su dati takvi
+Polje šahovske table se definiše parom celih brojeva ($x,y$), $1 \leq x,y \leq 8$,
+gde je x redni broj reda, a y redni broj kolone. Ako su dati takvi
 parovi, napisati program koji proverava:
 \begin{description}
 \item[a)] da li su polja (k, l) i (m, n) iste boje
@@ -1410,7 +1418,6 @@ parovi, napisati program koji proverava:
 \item[c)] da li konj sa (k, l) ugrožava polje (m, n)
 \end{description}
 Pretpostaviti da je polje (1,1) crno i da predstavlja donji levi ugao šahovske table. 
-%TODO Mozda ubaciti neku sliku/skicu sahovske table? 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}

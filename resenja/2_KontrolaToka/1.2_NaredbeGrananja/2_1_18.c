@@ -36,21 +36,19 @@ int main()
     n = ya - k * xa;
     /* Proverava se da li tacka C pripada pravoj y=k*x + n na
        kojoj se vec nalaze tacke A i B. */
-    if (yc == k * xc + n) {
+    if (yc == k * xc + n)
       printf("Tacke se nalaze na istoj pravoj.\n");
-    } else {
+    else
       printf("Tacke se ne nalaze na istoj pravoj.\n");
-    }
   } else {
     /* Proverava se da li se i tacka C nalazi na pravoj x = xb. */
-    if (xc == xb) {
+    if (xc == xb)
       printf("Tacke se nalaze na istoj pravoj.\n");
-    } else {
+    else
       printf("Tacke se ne nalaze na istoj pravoj.\n");
-    }
   }
 
-  /* II nacin: c tacke su kolinearne ako je: 
+  /* II nacin: Tacke su kolinearne ako je: 
      |xa ya 1 | 
      |xb yb 1 | = 0 
      |xc yc 1 | 
