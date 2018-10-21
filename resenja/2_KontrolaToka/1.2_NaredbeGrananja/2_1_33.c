@@ -19,6 +19,11 @@ int main()
     printf("Greska: neispravna pozicija.\n");
     return -1;
   }
+  
+  if(k == m && l == n){
+    printf("Greska: pozicije moraju biti razlicite.\n");
+    return -1;
+  }
 
   /* Proverava se da li su (k,l) i (m,n) iste boje. Polja su iste
      boje ako su: 1) oba reda parna i obe kolone parne ILI 2) oba
@@ -38,11 +43,11 @@ int main()
         b) paralelna sporednoj dijagonali (k+l == m+n) */
   if ((k == m) || (l == n) || (abs(k - l) == abs(m - n)) 
       || (k + l == m + n)){
-    printf("Kraljica sa (%d, %d) ugrozava polje (%d, %d).\n", 
+    printf("Kraljica sa (%d, %d) ugrozava (%d, %d).\n", 
            k, l, m, n);
   }
   else {
-    printf("Kraljica sa (%d, %d) ne ugrozava polje (%d, %d).\n", 
+    printf("Kraljica sa (%d, %d) ne ugrozava (%d, %d).\n", 
            k, l, m, n);
   }
 
@@ -60,10 +65,10 @@ int main()
   }
   
   if (uslov)
-    printf("Konj sa (%d, %d) ugrozava polje (%d, %d).\n",
+    printf("Konj sa (%d, %d) ugrozava (%d, %d).\n",
            k, l, m, n);
   else
-    printf("Konj sa (%d, %d) ne ugrozava polje (%d, %d).\n",
+    printf("Konj sa (%d, %d) ne ugrozava (%d, %d).\n",
            k, l, m, n);
 
   return 0;
