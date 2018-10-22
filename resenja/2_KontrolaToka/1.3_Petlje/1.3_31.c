@@ -17,8 +17,7 @@ int main()
   }
 
   /* Ako je n=0, F[0] = 0, slicno ako je n=1 F[1] = 1. */
-  if(n < 2)
-  {
+  if(n < 2){
     printf("F[%d] = %d\n",n, n);
     return 0;
   }

@@ -3,7 +3,6 @@
 
 int main()
 {
-
   /* Deklaracije potrebnih promenljivih. */
   int n, i;
   int x, x_kopija, broj_cifara;

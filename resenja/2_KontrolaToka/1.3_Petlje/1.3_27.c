@@ -26,7 +26,6 @@ int main()
   /* U petlji se izdvaja cifra po cifra, dok god ima neobradjenih
      cifara. */
   while (x > 0) {
-
     /* Izdvaja se poslednja cifra iz zapisa i ako je njena vrednost
        paran broj, uvecava se za 1. */
     cifra = x % 10;

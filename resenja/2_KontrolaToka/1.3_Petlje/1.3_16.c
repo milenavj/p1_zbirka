@@ -34,7 +34,6 @@ int main()
 
     /* Proverava se da li je broj x pozitivan. */
     if(x > 0){
-      
       /* Ako jeste, znaci da je unet bar jedan pozitivan broj i iz
          tog razloga se vrednost odgovarajuceg indikatora postavlja
          na 1. */

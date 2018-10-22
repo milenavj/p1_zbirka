@@ -48,5 +48,4 @@ int main()
   printf("%d\n", rezultat);
 
   return 0;
-
 }

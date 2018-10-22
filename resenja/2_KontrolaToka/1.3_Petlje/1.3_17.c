@@ -20,7 +20,6 @@ int main()
 
   /* Petlja se izvrsava dok god ima cifara u broju. */
   while (n > 0) {
-
     /* Izdvaja se poslednja cifra broja. */
     cifra = n % 10;
 

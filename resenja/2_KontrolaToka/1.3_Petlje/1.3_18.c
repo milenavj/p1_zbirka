@@ -10,7 +10,6 @@ int main()
   /* Brojevi se ucitavaju u petlji sve do unosa broja 0. */
   printf("Unesite brojeve: ");
   while (1) {
-
     scanf("%d", &x);
 
     if (x == 0)

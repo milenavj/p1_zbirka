@@ -41,10 +41,8 @@ int main()
     }
 
     /* Provera se da li Nikola moze da kupi trenutni artikal. */
-    if (cena <= m) {
-      /* Ako moze, uvecava se brojac artikala za 1. */
+    if (cena <= m)
       broj_artikala++;
-    }
   }
 
   /* Ispis rezultata. */

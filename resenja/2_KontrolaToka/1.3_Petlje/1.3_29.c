@@ -68,7 +68,5 @@ int main()
   /* Ispis rezultata. */
   printf("%d\n", rezultat);
 
-
   return 0;
-
 }

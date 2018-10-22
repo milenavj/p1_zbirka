@@ -54,17 +54,7 @@ int main()
   /* Proverava se da li konj sa (k, l) napada polje (m, n). Postoji 
      8 mogucih vrednosti za polja koja konj napada. Vrsi se
      provera da li je (m,n) jednako nekom od tih polja. */
-  int uslov = 0;
-  if (((m == k + 2) || (m == k - 2)) && 
-      ((n == l - 1) || (n == l + 1))){
-    uslov = 1;
-  }
-  else if (((n == l - 2) || (n == l + 2)) && 
-           ((m == k + 1) || (m == k - 1))){
-    uslov = 1;
-  }
-  
-  if (uslov)
+  if ((abs(k-m) == 2 &&  abs(n-l) == 1) || (abs(n-l) == 2 && abs(m-k) == 1))
     printf("Konj sa (%d, %d) ugrozava (%d, %d).\n",
            k, l, m, n);
   else

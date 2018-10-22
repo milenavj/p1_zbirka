@@ -14,7 +14,7 @@ int main()
      5 uslov i < 5 nece biti ispunjen i prelazi se na prvu sledecu
      naredbu nakon tela petlje. */
   while (i < 5) { 
-
+    
     /* Ispis poruke. */
     printf("Mi volimo da programiramo.\n");
 

@@ -1,46 +1,56 @@
 #include<stdio.h>
+#include<stdlib.h>
 
 int main()
 {
   /* Deklaracija potrebnih promenljivih. */
-  int n, x, i;
-  int suma_pozitivnih;
-  int suma_negativnih;
+  int t, x, i;
+  int ukupan_prihod, ukupan_rashod, ukupan_rashod_abs;
 
-  /* Ucitava se vrednost broja n. */
-  printf("Unesite broj n:");
-  scanf("%d", &n);
+  /* Ucitava se vrednost broja t. */
+  printf("Unesite broj t:");
+  scanf("%d", &t);
 
   /* Vrsi se provera ispravnosti ulaza. */
-  if (n <= 0) {
+  if (t < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
+  } 
+  else if( t == 0) {
+    printf("Nema evidentiranih transakcija.");
+    return 0;
   }
 
   /* Inicijalizacija suma. */
-  suma_pozitivnih = 0;
-  suma_negativnih = 0;
+  ukupan_prihod = 0;
+  ukupan_rashod = 0;
 
-  /* Ucitavanje brojeva i izracunavanje suma. */
-  printf("Unesite %d brojeva: ", n);
+  /* Ucitavanje transakcija i izracunavanje suma. */
+  printf("Unesite transakcije: ");
   i = 0;
-  while (i < n) {
-    /* Ucitava se jedan broj. */
+  while (i < t) {
+    /* Ucitava se jedna transakcija. */
     scanf("%d", &x);
 
     /* Dodaje se na odgovarajucu sumu. */
     if (x < 0)
-      suma_negativnih += x;
+      ukupan_rashod += x;
     else
-      suma_pozitivnih += x;
+      ukupan_prihod += x;
 
     /* Uvecava se brojac. */
     i++;
   }
 
   /* Ispis rezultata. */
-  printf("Suma pozitivnih: %d\n", suma_pozitivnih);
-  printf("Suma negativnih: %d\n", suma_negativnih);
+  printf("Prihod: %d\n", ukupan_prihod);
+  printf("Rashod: %d\n", ukupan_rashod);
   
+  ukupan_rashod_abs = abs(ukupan_rashod);
+  if(ukupan_prihod >= ukupan_rashod_abs)
+    printf("Zarada: %d\n", ukupan_prihod - ukupan_rashod_abs);
+  else
+    printf("Gubitak: %d\n", ukupan_rashod_abs - ukupan_prihod);
+    
   return 0;
 }

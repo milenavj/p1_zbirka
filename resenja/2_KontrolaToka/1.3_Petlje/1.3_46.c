@@ -21,7 +21,6 @@ int main () {
 
   /* Racuna se trazena suma. */
   while (i <= 2 * n) {
-
       /* Svaki clan suma se od prethodnog clana razlikuje za
          x^2/(i*(i-1)). */
       clan = clan * x * x / (i * (i - 1));

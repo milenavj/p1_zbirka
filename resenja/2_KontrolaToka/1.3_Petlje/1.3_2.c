@@ -10,7 +10,7 @@ int main()
   scanf("%d", &n);
 
   /* Vrsi se provera ispravnosti ulaza. */
-  if (n < 0) {
+  if (n <= 0) {
     printf("Greska: pogresan unos broja n.\n");
     return -1;
   }

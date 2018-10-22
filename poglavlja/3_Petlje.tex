@@ -31,7 +31,7 @@ Napisati program koji pet puta ispisuje tekst \kckod{Mi volimo da programiramo}.
 
 
 \begin{Exercise}[label=PET_02] 
-Napisati program koji učitava nenegativan ceo broj $n$ i $n$ puta ispisuje tekst
+Napisati program koji učitava pozitivan ceo broj $n$ i $n$ puta ispisuje tekst
 \kckod{Mi volimo da programiramo}. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -51,6 +51,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: pogresan unos broja n.}#
 \end{upotreba}
 \end{miditest}
 
@@ -134,9 +135,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=PET_04]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4a.c}
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4b.c}
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4c.c}
+% \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4a.c}
+% \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4b.c}
+% \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4c.c}
+\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_4.c}
 \end{Answer}
 \fi
 
@@ -147,21 +149,21 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %--------------------------------------------------------------------
 
 \begin{Exercise}[label=PET_05] 
- Napisati program koji učitava pozitivan ceo broj $x$ i izračunava njegov
+ Napisati program koji učitava nenegativan ceo broj $n$ i izračunava njegov
  faktorijel. 
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{18}#
+#\izlaz{Unesite broj n:}\ulaz{18}#
 #\izlaz{18! = 6402373705728000}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{8}#
+#\izlaz{Unesite broj n:}\ulaz{8}#
 #\izlaz{8! = 40320}#
 \end{upotreba}
 \end{miditest}
@@ -169,14 +171,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{40}#
+#\izlaz{Unesite broj n:}\ulaz{40}#
 #\izlaz{Pri racunanju 40! ce doci do prekoracenja.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{-5}#
+#\izlaz{Unesite broj n:}\ulaz{-5}#
 #\izlaz{Greska: neispravan unos. }#
 \end{upotreba}
 \end{miditest}
@@ -191,10 +193,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=PET_06] 
- Sa standradnog ulaza unose se realan broj $x$ i ceo nenegativan broj
- $n$. Napisati program koji izračunava $n$-ti stepen broja $x$,
- tj.~$x^n$.
- U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+Napisati program koji učitava realan broj $x$ i ceo nenegativan broj
+$n$ i izračunava $n$-ti stepen broja $x$, tj.~$x^n$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -235,8 +236,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 \begin{Exercise}[label=PET_07]
- Sa standradnog ulaza unose se realan broj $x$ i ceo broj
- $n$. Napisati program koji izračunava $n$-ti stepen broja $x$. 
+Napisati program koji učitava realan broj $x$ i ceo broj
+$n$ i izračunava $n$-ti stepen broja $x$. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -404,36 +405,42 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=PET_12] 
-Napisati program koji učitava pozitivan ceo broj $n$, a zatim učitava
-$n$ celih brojeva i ispisuje sumu pozitivnih i sumu negativnih unetih
-brojeva.
+Knjigovodja vodi evidenciju o transakcijama jedne firme i treba da napiše izveštaj
+o godišnjem poslovanju te firme. Firma je tokom godine imala $t$ transakcija. Transakcije
+su predstavljene celim brojevima i u slučaju da je vrednost transakcije pozitivna, ta transakcija označava
+prihod firme, a u slučaju da je negativna rashod. 
+Napisati program koji učitava nenegativan ceo broj $t$ i podatke o $t$ transakcija i
+zatim izračunava i ispisuje ukupan prihod, ukupan rashod i zaradu, odnosno gubitak koji je firma ostvarila
+tokom godine. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{7}#
-#\izlaz{Unesite 7 brojeva:}#
+#\izlaz{Unesite broj t:}\ulaz{7}#
+#\izlaz{Unesite transakcije:}#
 #\ulaz{8 -50 45 2007 -67 -123 14}#
-#\izlaz{Suma pozitivnih: 2074}#
-#\izlaz{Suma negativnih: -240}#
+#\izlaz{Prihod: 2074}#
+#\izlaz{Rashod: -240}#
+#\izlaz{Zarada: 1834}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite 5 brojeva:}#
+#\izlaz{Unesite broj t:}\ulaz{5}#
+#\izlaz{Unesite transakcije:}#
 #\ulaz{-5 -20 -4 -200 -8}#
-#\izlaz{Suma pozitivnih: 0}#
-#\izlaz{Suma negativnih: -237}#
+#\izlaz{Prihod: 0}#
+#\izlaz{Rashod: -237}#
+#\izlaz{Gubitak: 237}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-6}#
+#\izlaz{Unesite broj t:}\ulaz{-6}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -441,7 +448,19 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{0}#
-#\izlaz{Greska: neispravan unos.}#
+#\izlaz{Nema evidentiranih transakcija.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\izlaz{Unesite broj t:}\ulaz{2}#
+#\izlaz{Unesite transakcije:}#
+#\ulaz{120 -120}#
+#\izlaz{Prihod: 120}#
+#\izlaz{Rashod: -120}#
+#\izlaz{Zarada: 0}#
 \end{upotreba}
 \end{miditest}
 
@@ -548,61 +567,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \ifresenja
 \begin{Answer}[ref=PET_14]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_14.c}
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[label=PET_15] 
-Nikola želi da obraduje baku i da joj kupi jedan poklon u radnji. On
-na raspolaganju ima $m$ dinara. U radnji se nalazi $n$ artikala i
-zanima ga koliko ima artikala u radnji čija cena je manja ili
-jednaka $m$. Napisati program koji pomaže Nikoli da brzo odrediti
-broj atikala. Program učitava realan nenegativan broj $m$, ceo
-nenegativan broj $n$ i $n$ pozitivnih realnih brojeva. 
-Ispisati koliko artikala ima cenu čija je vrednost manja ili jednaka $m$. 
-U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Nikolin budzet:}\ulaz{12.37}#
-#\izlaz{Unesite broj artikala:}\ulaz{5}#
-#\izlaz{Unesite cene artikala:}\ulaz{11 54.13 6 13 8}#
-#\izlaz{Ukupno artikala: 3}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Nikolin budzet:}\ulaz{2}#
-#\izlaz{Unesite broj artikala:}\ulaz{4}#
-#\izlaz{Unesite cene artikala:}\ulaz{1 11 4.32 3}#
-#\izlaz{Ukupno artikala: 1}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Nikolin budzet:}\ulaz{2}#
-#\izlaz{Unesite broj artikala:}\ulaz{-4}#
-#\izlaz{Greska: neispravan unos broja artikala.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Nikolin budzet:}\ulaz{30}#
-#\izlaz{Unesite broj artikala:}\ulaz{4}#
-#\izlaz{Unesite cene artikala:}\ulaz{67 -100 23 98}#
-#\izlaz{Greska: neispravan unos cene.}# 
-\end{upotreba}
-\end{miditest}
-\linkresenje{PET_15}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=PET_15]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_15.c}
 \end{Answer}
 \fi
 
@@ -726,7 +690,7 @@ na četiri decimale.
 
 \begin{Exercise}[label=PET_19] 
 U prodavnici se nalaze artikali čije su cene pozitivni realni
-brojevi. Program ucitava cene artikala sve do unosa broja nula i
+brojevi. Napisati program koji učitava cene artikala sve do unosa broja nula i
 izračunava i ispisuje prosečnu vrednost cena u radnji.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
@@ -852,11 +816,68 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
-\begin{Exercise}[label=PET_22] 
-Napisati program koji učitava ceo nenegativan broj $n$, a zatim i $n$ celih
-brojeva i ispisuje broj sa najvećom cifrom desetica. 
-Ukoliko ima više takvih, ispisati prvi.
+\begin{Exercise}[label=PET_15] 
+Nikola želi da obraduje baku i da joj kupi jedan poklon u radnji. On
+na raspolaganju ima $m$ dinara. U radnji se nalazi $n$ artikala i
+zanima ga koliko ima artikala u radnji čija cena je manja ili
+jednaka $m$. Napisati program koji pomaže Nikoli da brzo odrediti
+broj atikala. Program učitava realan nenegativan broj $m$, ceo
+nenegativan broj $n$ i $n$ pozitivnih realnih brojeva. 
+Ispisati koliko artikala ima cenu čija je vrednost manja ili jednaka $m$. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Nikolin budzet:}\ulaz{12.37}#
+#\izlaz{Unesite broj artikala:}\ulaz{5}#
+#\izlaz{Unesite cene artikala:}\ulaz{11 54.13 6 13 8}#
+#\izlaz{Ukupno artikala: 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Nikolin budzet:}\ulaz{2}#
+#\izlaz{Unesite broj artikala:}\ulaz{4}#
+#\izlaz{Unesite cene artikala:}\ulaz{1 11 4.32 3}#
+#\izlaz{Ukupno artikala: 1}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Nikolin budzet:}\ulaz{2}#
+#\izlaz{Unesite broj artikala:}\ulaz{-4}#
+#\izlaz{Greska: neispravan unos broja artikala.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Nikolin budzet:}\ulaz{30}#
+#\izlaz{Unesite broj artikala:}\ulaz{4}#
+#\izlaz{Unesite cene artikala:}\ulaz{67 -100 23 98}#
+#\izlaz{Greska: neispravan unos cene.}# 
+\end{upotreba}
+\end{miditest}
+\linkresenje{PET_15}
+\end{Exercise}
+\ifresenja
+\begin{Answer}[ref=PET_15]
+\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_15.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=PET_22] 
+Napisati program koji učitava ceo nenegativan broj $n$, $n$ celih
+brojeva i zatim izračunava i ispisuje tražene vrednosti.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
+\begin{enumerate}
+\item Broj sa najvećom cifrom desetica. Ukoliko ima više takvih, ispisati prvi.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -894,20 +915,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{PET_22}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=PET_22]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_22.c}
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[label=PET_23] 
-Napisati program koji učitava ceo nenegativan broj $n$, a zatim i $n$ celih
-brojeva i ispisuje broj sa najvećim brojem cifara. 
-Ukoliko ima više takvih, ispisati prvi.
-U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+\item Broj sa najvećim brojem cifara. Ukoliko ima više takvih, ispisati prvi.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -959,21 +967,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{PET_23}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=PET_23]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_23.c}
-\end{Answer}
-\fi
-
-
-\begin{Exercise}[label=PET_24] 
-Napisati program koji učitava nenegativan ceo broj $n$, a zatim i $n$ celih
-brojeva i zatim računa i ispisuje broj sa najvećom vodećom
-cifrom. Vodeća cifra je cifra najveće težine u zapisu broja. Ukoliko
+\item Broj sa najvećom vodećom cifrom. Vodeća cifra je cifra najveće težine u zapisu broja. Ukoliko
 ima više takvih, ispisati prvi.
-U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1008,11 +1003,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{PET_24}
+\end{enumerate}
+
+\linkresenje{PET_22}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=PET_24]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_24.c}
+\begin{Answer}[ref=PET_22]
+\includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_22.c}{Rešenje (a)}
+\includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_23.c}{Rešenje (b)}
+\includecodeLib{resenja/2_KontrolaToka/1.3_Petlje/1.3_24.c}{Rešenje (c)}
 \end{Answer}
 \fi
 

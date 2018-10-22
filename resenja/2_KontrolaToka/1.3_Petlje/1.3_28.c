@@ -4,6 +4,7 @@
 
 int main()
 {
+  /* Deklaracije potrebnih promenljivih. */
   int x, pozicija, rezultat, cifra;
   int znak = 1;
 
@@ -32,8 +33,7 @@ int main()
      cifra = 3, rezultat = 5+3*10 = 35, x = 1, pozicija = 100
      3. iteracija: 
      cifra = 1, rezultat = 35+1*100, x = 0, pozicija = 1000
-     Petlja se zavrsava jer je x 0.
-     */
+     Petlja se zavrsava jer x ima vrednost 0. */
   while (x > 0) {
     /* Izdvajanje poslednje cifre. */
     cifra = x % 10;

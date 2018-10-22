@@ -34,6 +34,7 @@ int main()
     i++;
   }
 
+  /* Ispis rezultata. */
   printf("S=%f\n", suma);
 
   return 0;
