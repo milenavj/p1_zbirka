@@ -4,27 +4,29 @@ int main()
 {
   /* Deklaracija potrebnih promenljivih. */
   int x;
-  int najmanji, najveci;
+  int najmanja, najveca;
 
   printf("Unesite brojeve: ");
   /* Prvi broj se ucitava izvan petlje zbog inicijalizacije
-     najvece i najmanje vrednosti. 
-     Napomena: Ovde bi inicijalizacija najveci=-1 bila pogresna
+     najvece i najmanje vrednosti nadmorske visine. 
+     Napomena: Ovde bi inicijalizacija najveca=-1 bila pogresna
      jer moze da se desi da su svi uneti brojevi negativni i manji
-     od -1 i onda bi najveci i nakon izvrsavanja tela petlje ostao
+     od -1 i onda bi najveca i nakon izvrsavanja tela petlje ostala
      -1. */
   scanf("%d", &x);
-  najveci = x;
-  najmanji = x;
+  najveca = x;
+  najmanja = x;
 
+  /* Ako nema unetih nadmorskih visina, ispisuje se odgovarajuca
+     poruka. */
   if(x == 0)
   {
     printf("Nisu unete nadmorske visine.");
     return 0;
   }
   
-  /* Za svaki ucitani broj se proverava da li je manji od najmanjeg
-     ili veci od najveceg i vrsi se azuriranje odgovarajucih
+  /* Za svaki ucitani broj se proverava da li je manji od najmanje
+     ili veci od najvecee i vrsi se azuriranje odgovarajucih
      vrednosti. Petlja se prekida kada se unese broj 0.*/
   while (1) {
     scanf("%d", &x);
@@ -32,15 +34,15 @@ int main()
     if(x == 0)
         break;
     
-    if (x > najveci)
-      najveci = x;
+    if (x > najveca)
+      najveca = x;
 
-    if (x < najmanji)
-      najmanji = x;
+    if (x < najmanja)
+      najmanja = x;
   }
   
   /* Ispis rezultata. */
-  printf("Razlika: %d\n", najveci - najmanji);
+  printf("Razlika: %d\n", najveca - najmanja);
 
   return 0;
 }

@@ -8,11 +8,11 @@ int main()
   int x, y;
   int broj_parova = 0;
 
-  /* Ucitavaju se vrednosti n i d i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitavaju se vrednosti n i d. */
   printf("Unesite brojeve n i d: ");
   scanf("%d %d", &n, &d);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n <= 1 || d < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

@@ -25,7 +25,7 @@ int main()
      postavi da bude prethodni za sledecu iteraciju. */
   scanf("%lf", &prethodni);
 
-  /* Kako je vec jedan broj unesen, brojac se postavlja na 1, a ne
+  /* Kako je vec jedan broj unet, brojac se postavlja na 1, a ne
      na 0. */
   for (i = 1; i < n; i++) {
     

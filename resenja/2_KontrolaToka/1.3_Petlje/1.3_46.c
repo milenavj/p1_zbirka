@@ -5,10 +5,11 @@ int main () {
   int i , n;
   float suma, x, clan;
   
-  /* Ucitavanje i provera ispravnosti ulaza. */
+  /* Ucitavaju se vrednosti x i n. */
   printf("Unesite redom brojeve x i n: ");
   scanf("%f%d", &x, &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n <= 0) {
       printf("Greska: neispravan unos.\n");
       return -1;

@@ -27,7 +27,7 @@ int main()
      i da je neophodno bar jednu od te dve vrednosti pretvoriti
      u realan broj kako deljenje ne bi bilo celobrojno. */
   if (broj_brojeva == 0)
-    printf("Nisu uneseni brojevi.\n");
+    printf("Nisu uneti brojevi.\n");
   else
     printf("Aritmeticka sredina: %.4f\n", 
            (double) suma / broj_brojeva);

@@ -14,7 +14,7 @@ int main()
     if (cena == 0)
       break;
 
-    /* Vrsi se provera korektnosti ulaza. */
+    /* Vrsi se provera ispravnosti ulaza. */
     if (cena < 0) {
       printf("Greska: neispravan unos cene.\n");
       return -1;
@@ -29,7 +29,7 @@ int main()
 
   /* Ispis rezultata. */
   if (broj_artikla == 0)
-    printf("Nisu unesene cene.\n");
+    printf("Nisu unete cene.\n");
   else
     printf("Prosecna cena: %.4f\n", suma / broj_artikla);
 

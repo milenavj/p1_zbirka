@@ -7,11 +7,11 @@ int main()
   int broj_a = 0, broj_e = 0, broj_i = 0, broj_o = 0, broj_u = 0;
   char c;
 
-  /* Ucitava se broj karaktera i vrsi se provera ispravnosti 
-     ulaza. */
+  /* Ucitava se broj karaktera. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

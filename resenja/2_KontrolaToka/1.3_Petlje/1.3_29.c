@@ -7,11 +7,11 @@ int main()
   int c1, c2, c3;
   int pozicija, rezultat;
   
-  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

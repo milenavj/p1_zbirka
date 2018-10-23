@@ -7,13 +7,13 @@ int main()
   double rezultat;
   double x, a;
 
-  /* Ucitavanje i provera ispravnosti ulaza. */
+  /* Ucitavaju se vrednosti ulaznih promenljivih. */
   printf("Unesite brojeve x i a: ");
   scanf("%lf%lf", &x, &a);
-
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

@@ -5,11 +5,11 @@ int main()
   /* Deklaracija potrebnih promenljivih. */
   int an;
   
-  /* Ucitava se vrednost prvog clana i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitava se vrednost prvog clana. */
   printf("Unesite prvi clan:");
   scanf("%d", &an);
   
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (an <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

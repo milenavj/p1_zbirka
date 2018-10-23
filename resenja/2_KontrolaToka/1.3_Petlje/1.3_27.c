@@ -3,16 +3,16 @@
 int main()
 {
   /* Deklaracija potrebnih promenljivih. */
-  int x, cifra;
+  int n, cifra;
   unsigned int rezultat;
   int pozicija;
 
-  /* Ucitava se vrednost broja x i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj: ");
-  scanf("%d", &x);
-
-  if (x <= 0) {
+  scanf("%d", &n);
+  
+  /* Vrsi se provera ispravnosti ulaza. */
+  if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
@@ -25,10 +25,10 @@ int main()
 
   /* U petlji se izdvaja cifra po cifra, dok god ima neobradjenih
      cifara. */
-  while (x > 0) {
+  while (n > 0) {
     /* Izdvaja se poslednja cifra iz zapisa i ako je njena vrednost
        paran broj, uvecava se za 1. */
-    cifra = x % 10;
+    cifra = n % 10;
     if (cifra % 2 == 0)
       cifra++;
 
@@ -38,7 +38,7 @@ int main()
     rezultat += cifra * pozicija;
 
     /* Uklanja se poslednja cifra broja. */
-    x /= 10;
+    n /= 10;
 
     /* Pozicija se mnozi sa 10. */
     pozicija *= 10;

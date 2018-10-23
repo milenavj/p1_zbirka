@@ -7,11 +7,11 @@ int main()
   int format, i;
   double sirina, duzina, nova_duzina;
 
-  /* Ucitava se format papira i vrsi se provera ispravnosti
-     ulaza.*/
+  /* Ucitava se format papira. */
   printf("Unesite format papira: ");
   scanf("%d", &format);
-
+ 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (format < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

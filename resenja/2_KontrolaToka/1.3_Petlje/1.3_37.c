@@ -8,11 +8,11 @@ int main()
   int broj_Z = 0, broj_i = 0, broj_m = 0, broj_a = 0;
   char novi_red, c;
 
-  /* Ucitava se broj karaktera i vrsi se provera ispravnosti 
-     ulaza. */
+  /* Ucitava se broj karaktera. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

@@ -40,7 +40,9 @@ int main()
  
      Uslov petlje se proverava na kraju svake iteracije.
      Zbog toga se do while petlja izvrsava bar jednom, cak i u
-     slucaju da uslov petlje nikada nije ispunjen.
+     slucaju da uslov petlje nikada nije ispunjen. U ovom slucaju
+     je to ispravno jer je poznato da ce interval imati bar
+     jedan element. U opstem slucaju to ne mora da vazi. 
      
   i = n;
   do {                          

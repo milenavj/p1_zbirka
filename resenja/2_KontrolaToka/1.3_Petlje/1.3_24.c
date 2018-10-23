@@ -8,17 +8,19 @@ int main()
   int x, x_kopija, vodeca_cifra;
   int najveca_vodeca_cifra, rezultat;
 
-  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
-
+  
+  /* Ako nema unetih brojeva, ispisuje se odgovarajuca poruka. */
   if (n == 0) {
-    printf("Nisu uneseni brojevi.\n");
+    printf("Nisu uneti brojevi.\n");
     return 0;
   }
 

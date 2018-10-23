@@ -7,10 +7,11 @@ int main()
   int n, i;
   double x, x_i, proizvod;
 
-  /* Ucitavanje i provera ispravnosti ulaza. */
+  /* Ucitavaju se vrednosti x i n. */
   printf("Unesite redom brojeve x i n: ");
   scanf("%lf %d", &x, &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

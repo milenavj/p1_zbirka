@@ -17,9 +17,9 @@ int main()
     return -1;
   }
 
-  /* Ako nema unesenih brojeva, ispisuje se odgovarajuca poruka. */
+  /* Ako nema unetih brojeva, ispisuje se odgovarajuca poruka. */
   if (n == 0) {
-    printf("Nisu uneseni brojevi.\n");
+    printf("Nisu uneti brojevi.\n");
     return 0;
   }
 

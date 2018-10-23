@@ -6,11 +6,11 @@ int main()
   int n, i;
   long int clan, suma = 0;
 
-  /* Ucitava se vrednost broja n i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
+  /* Vrsi se provera ispravnosti ulaza. */  
   if (n < 5 || n % 2 == 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
