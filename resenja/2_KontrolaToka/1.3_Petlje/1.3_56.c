@@ -25,7 +25,7 @@ int main()
     printf("\n");
   }
 
-  /* Zatim se iscrtava i donji deo slike, odnosno donji trougao.
+  /* II deo: crtanje donjeg dela slike, odnosno donji trougao.
      Brojac i odredjuje koji red donjeg trougla se trentno iscrtava. 
      Kako je prvi red donjeg trougla vec iscrtan (to je poslednji
      red gornjeg trougla), brojac se postavlja na 1. */

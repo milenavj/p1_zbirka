@@ -13,7 +13,7 @@ int main()
   /* Slika se sastoji iz dva dela, trougla i kvadrata i svaki deo
      se nezavisno iscrtava. */
 
-  /* Prvo se iscrtava krov, odnosno trougao. */
+  /* I deo: crtanje trougla (krova). */
   for (i = 0; i < n - 1; i++) {
     /* Prvo se ispisuju beline koje prethode karakterima *. */
     for (j = 0; j < n - i - 1; j++)
@@ -28,7 +28,7 @@ int main()
     printf("\n");
   }
 
-  /* Potom se iscrtava kvadrat. Da bi iscrtavanje bilo lakse
+  /* II deo: crtanje kvadrata. Da bi iscrtavanje bilo lakse
      istovremeno se ispisuju dva karaktera. */
   for (i = 0; i < n; i++) {
     for (j = 0; j < n; j++)

@@ -23,7 +23,7 @@ int main()
     printf("Unestite %d. karakter: ", i);
     
     /* Prvo se cita belina koja se nalazi nakon prethodnog unosa,
-       pa tek posle procitane beline se cita uneseni karakter. */
+       pa tek posle procitane beline se cita uneti karakter. */
     scanf("%c%c", &novi_red, &c);
 
     /* Obradjuje se ucitani karakter. */

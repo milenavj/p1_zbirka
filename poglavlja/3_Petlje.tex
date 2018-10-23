@@ -824,7 +824,7 @@ jednaka $m$. Napisati program koji pomaže Nikoli da brzo odrediti
 broj atikala. Program učitava realan nenegativan broj $m$, ceo
 nenegativan broj $n$ i $n$ pozitivnih realnih brojeva. 
 Ispisati koliko artikala ima cenu čija je vrednost manja ili jednaka $m$. 
-U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+\napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -845,23 +845,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Nikolin budzet:}\ulaz{2}#
-#\izlaz{Unesite broj artikala:}\ulaz{-4}#
-#\izlaz{Greska: neispravan unos broja artikala.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Nikolin budzet:}\ulaz{30}#
-#\izlaz{Unesite broj artikala:}\ulaz{4}#
-#\izlaz{Unesite cene artikala:}\ulaz{67 -100 23 98}#
-#\izlaz{Greska: neispravan unos cene.}# 
-\end{upotreba}
-\end{miditest}
 \linkresenje{PET_15}
 \end{Exercise}
 \ifresenja
@@ -1317,7 +1300,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
-\begin{Exercise}[label=1.3_32] 
+\begin{Exercise}[label=PET_32] 
 Niz prirodnih brojeva formira se prema sledećem pravilu:
 \begin{equation*}
 a_{n+1} = \left\{
@@ -1700,7 +1683,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=PET_39]
-\includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_39.c}
+Rešenje je analogno rešenju zadatka \ref{PET_38}.
 \end{Answer}
 \fi
 

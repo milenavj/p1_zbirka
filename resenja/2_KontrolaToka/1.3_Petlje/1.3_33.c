@@ -19,14 +19,14 @@ int main()
 
   /* duzina/sirina = 1/sqrt(2) 
      duzina*sirina = 1000mm x 1000mm
-     ---
+     =>
      duzina = sirina/sqrt(2)
      duzina*sirina = 1000mm x 1000mm
-     ---
+     =>
      sirina*sirina/sqrt(2) = 1000*1000
      sirina*sirina = sqrt(2) * 1000 * 1000
      sirina = sqrt(sqrt(2) * 1000 * 1000)
-     ---
+     =>
      duzina = sirina/sqrt(2) */
   sirina = sqrt(1000 * 1000 * sqrt(2));
   duzina = sirina / sqrt(2);

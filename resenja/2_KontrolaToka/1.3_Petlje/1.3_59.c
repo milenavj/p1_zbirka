@@ -27,7 +27,7 @@ int main()
     printf("\n");
   }
 
-  /* Zatim se ispisuje donji trougao. Kako je prvi red donjeg
+  /* II deo: crtanje donjeg trougla. Kako je prvi red donjeg
      trougla vec ispisan (poslednji red gornjeg trougla), potrebno
      je naciniti jednu iteraciju manje. */
   for (i = n - 2; i >= 0; i--) {

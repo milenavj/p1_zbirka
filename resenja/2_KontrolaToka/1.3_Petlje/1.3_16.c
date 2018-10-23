@@ -46,7 +46,7 @@ int main()
 
   /* Ispis rezultata. */
   if (unet_bar_jedan == 0)
-    printf("Nije unet ni jedan broj.\n");
+    printf("Nije unet nijedan broj.\n");
   else if (unet_pozitivan == 0)
     printf("Medju unetim brojevima nema pozitivnih.\n");
   else
