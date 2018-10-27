@@ -1,125 +1,33 @@
 \section{Funkcije}
 
-
-%\komentar{TODO Smisliti odgovarajući redosled za ove zadatke}
-
-\begin{Exercise}[label=v1.4_01] 
-Napisati funkciju \kckod{int kvadrat(int x)} koja računa kvadrat datog
-broja. Napisati program koji učitava ceo broj i ispuje rezultat poziva
-funkcije.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{15}#
-#\izlaz{Kvadrat broja 15 je 225}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-89}#
-#\izlaz{kvadrat broja -89 je 7921}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_01}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=v1.4_01]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_01.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=v1.4_01b] 
-Napisati funkciju \kckod{int kub(int x)} koja računa kub datog
-broja. Napisati program koji učitava ceo broj i ispuje rezultat poziva
-funkcije.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{15}#
-#\izlaz{Kub broja 15 je 3375}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-89}#
-#\izlaz{Kub broja -89 je -704969}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_01b}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=v1.4_01b]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_01b.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=p1.4_02] 
-Napisati funkciju \kckod{unsigned int apsolutna\_vrednost(int x)} koja
-izračunava apsolutnu vrednost broja $x$. Napisati program koji učitava
-jedan ceo broj i ispisuje rezultat poziva funkcije.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-34}#
-#\izlaz{Apsolutna vrednost: 34}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{5}#
-#\izlaz{Apsolutna vrednost: 5}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_02}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_02]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_02.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=p1.4_01] 
+\begin{Exercise}[label=FUN_01] 
 Napisati funkciju \kckod{int min(int x, int y, int z)} koja izračunava
 minimum tri broja. Napisati program koji učitava tri cela broja i
-ispisuje rezultat poziva funkcije.
+ispisuje povratnu vrednost napisane funkcije.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite brojeve:}\ulaz{19 8 14}#
-#\izlaz{Minimum je: 8}#
+#\izlaz{Minimum: 8}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite brojeve:}\ulaz{-6 11 -12}#
-#\izlaz{Minimum je: -12}#
+#\izlaz{Minimum: -12}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.4_01}
+\linkresenje{FUN_01}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_01]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_01.c}
+\begin{Answer}[ref=FUN_01]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun01.c}
 \end{Answer} 
 \fi
 
-
-
-\begin{Exercise}[label=p1.4_03] 
+\begin{Exercise}[label=FUN_02] 
 Napisati funkciju \kckod{float razlomljeni\_deo(float x)} koja
 izračunava razlomljeni deo broja $x$. Napisati program koji učitava
 jedan realan broj i ispisuje rezultat poziva funkcije.
@@ -138,51 +46,50 @@ jedan realan broj i ispisuje rezultat poziva funkcije.
 #\izlaz{Razlomljeni deo: 0.110000}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.4_03}
+\linkresenje{FUN_02}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_03]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_03.c}
+\begin{Answer}[ref=FUN_02]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun02.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=v1.4_02] 
-Napisati funkciju \kckod{float stepen(float x, int n)} koja računa
-vrednost $n$-tog stepena realnog broja $x$. Napisati program koji
-učitava relan broj $x$ i ceo broj $n$ i ispisuje rezultat rada
-funkcije.
+\begin{Exercise}[label=FUN_03] 
+ Napisati funkciju \kckod{int zbir\_delilaca(int n)} koja izračunava
+ zbir delilaca broja $n$. Napisati program koji učitava ceo pozitivan broj $k$ i
+ ispisuje zbir delilaca svakog broja od 1 do $k$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite jedan realan i jedan ceo broj:}#
-#\ulaz{4.5 3}#
-#\izlaz{4.500000\^3=91.125000}#
+#\izlaz{Unesite broj k:}\ulaz{6}#
+#\izlaz{1 3 4 7 6 12}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite jedan realan i jedan ceo broj:}#
-#\ulaz{-33.2 5}#
-#\izlaz{-33.200001\^5=-40335776.000000}#
+#\izlaz{Unesite broj k:}\ulaz{-2}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.4_02}
+\linkresenje{FUN_03}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_02]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_02.c}
+\begin{Answer}[ref=FUN_03]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun03.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=v1.4_11] 
+
+\begin{Exercise}[label=FUN_04] 
 Napisati funkciju \kckod{int je\_stepen(unsigned x, unsigned n)} koja
 za dva broja $x$ i $n$ utvrđuje da li je $x$ neki stepen broja
 $n$. Ukoliko jeste, funkcija vraća izložilac stepena, a u suprotnom
-vraća $-1$. Napisati program koji učitava dva cela pozitivna broja i
-ispisuje rezultat poziva funkcije. \napomena{Pretpostaviti da je unos korektan.}
+vraća $-1$. Napisati program koji učitava dva neoznačena broja i u zavisnosti 
+od povratne vrednosti funkcije ispisuje odgovarajuću poruku.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -199,166 +106,180 @@ ispisuje rezultat poziva funkcije. \napomena{Pretpostaviti da je unos korektan.}
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.4_11}
+\linkresenje{FUN_04}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_11]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_11.c}
+\begin{Answer}[ref=FUN_04]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun04.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=p1.4_13] 
-Napisati funkciju \kckod{int faktorijel(int n)} koja računa faktorijel
-broja $n$. Napisati i program koji učitava dva cela broja $x$ i $y$ iz
-intervala $[0,12]$ i ispisuje vrednost zbira $x!+y!$.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{4 5}#
-#\izlaz{144}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{18 -5}#
-#\izlaz{Greska: pogresan unos!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{6 0}#
-#\izlaz{721}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_13}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_13]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_13.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=v1.4_03] 
+\begin{Exercise}[label=FUN_05] 
 Napisati funkciju \kckod{int euklid(int x, int y)} koja za dva data
-cela broja određuje najveći zajednički delilac primenom Euklidovog
+cela broja određuje najvećeg zajedničkog delioca primenom Euklidovog
 algoritma. Napisati program koji učitava dva cela broja i ispisuje
-rezultat poziva funkcije.
+vrednost njihovog najvećeg zajedničkog delioca.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{1024 832}#
-#\izlaz{Najveci zajednicki delilac je 64}#
+#\izlaz{Najveci zajednicki delilac: 64}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{-900 112}#
-#\izlaz{Najveci zajednicki delilac je -4}#
+#\izlaz{Najveci zajednicki delilac: 4}#
 \end{upotreba}
 \end{miditest}
 
-
-\linkresenje{v1.4_03}
+\linkresenje{FUN_05}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_03]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_03.c}
+\begin{Answer}[ref=FUN_05]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun05.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=v1.4_04] 
+
+\begin{Exercise}[label=FUN_06] 
 Napisati funkciju \kckod{float zbir\_reciprocnih(int n)} koja za dato
 $n$ vraća zbir recipročnih vrednosti brojeva od $1$ do $n$. Napisati
-program koji učitava ceo broj i ispisuje rezultat rada funkcje
-zaokružen na dve decimale.
+program koji učitava ceo pozitivan broj $n$ i ispisuje rezultat rada funkcje
+zaokružen na dve decimale. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesi jedan pozitivan ceo broj:}\ulaz{10}#
-#\izlaz{Zbir reciprocnih je 2.93}#
+#\izlaz{Unesite broj n:}\ulaz{10}#
+#\izlaz{Zbir reciprocnih: 2.93}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesi jedan pozitivan ceo broj:}\ulaz{100}#
-#\izlaz{Zbir reciprocnih je 5.19}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_04}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=v1.4_04]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_04.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=v1.4_06] 
-Napisati funkciju \kckod{void ispis(float x, float y, unsigned n)}
-koja za dva realna broja $x$ i $y$ i jedan pozitivan ceo broj $n$
-ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih
-tačaka intervala $[x,y]$.  Napisati program koji učitava odgovarajuće 
-vrednosti i testira rad ove funkcije.
-
-%TODO test primer sa neispravnim unosom?
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
-#\izlaz{Unesite jedan prirodan broj:}\ulaz{10}#
-#\izlaz{0.6570 -0.3457 -0.0108 0.3659 -0.6731}#
-#\izlaz{0.8922 -0.9945 0.9666 -0.8122}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dva realna broja:}\ulaz{20.5 -8.32}#
-#\izlaz{Unesite jedan prirodan broj:}\ulaz{5}#
-#\izlaz{-0.8934 -0.8979 -0.1920 0.6658 0.9968}#
+#\izlaz{Unesite broj n:}\ulaz{100}#
+#\izlaz{Zbir reciprocnih: 5.19}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite dva realna broja:}\ulaz{8 8}#
-#\izlaz{Nekorektan unos.}
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
-#\izlaz{Unesite jedan prirodan broj:}\ulaz{-10}#
-#\izlaz{Nekorektan unos.}#
+#\izlaz{Unesite broj n:}\ulaz{-100}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-
-\linkresenje{v1.4_06}
+\linkresenje{FUN_06}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_06]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_06.c}
+\begin{Answer}[ref=FUN_06]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun06.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=p1.4_11] 
+\begin{Exercise}[label=FUN_07] 
+Napisati funkciju \kckod{int prebrojavanje(float x)} koja prebrojava
+koliko puta se broj $x$ pojavljuje u nizu brojeva koji se unose sve do
+unosa broja nula. Napisati program koji učitava vrednost broja $x$ i
+testira rad napisane funkcije.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{2.84}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{8.13 2.84 5 21.6 2.84 11.5 0}#
+#\izlaz{Broj pojavljivanja broja 2.84: 2}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj x:}\ulaz{-1.17}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{-128.35 8.965 8.968 89.36 0}#
+#\izlaz{Broj pojavljivanja broja -1.17: 0}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{FUN_07}
+\end{Exercise}
+\ifresenja 
+\begin{Answer}[ref=FUN_07]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun07.c}
+\end{Answer} 
+\fi
+
+
+\begin{Exercise}[label=FUN_08] 
+Broj je prost ako je deljiv samo sa $1$ i sa samim sobom. 
+\begin{itemize}
+ \item [a)] Napisati funkciju \kckod{int prost(int x)} koja ispituje da li je dati ceo
+  broj prost. Funkcija treba da vrati jedinicu ako je broj prost i nulu u suprotnom.
+ \item [b)] Napisati funkciju \kckod{void prvih\_n\_prostih(int n)} koja ispisuje prvih $n$ prostih brojeva.
+ \item [c)] Napisati funkciju \kckod{void prosti\_brojevi\_manji\_od\_n(int n)} koja ispisuje
+sve proste brojeve manje od broja $n$.
+\end{itemize}
+Napisati program koji učitava pozitivan ceo broj $n$ i ispisuje prvih $n$ prostih brojeva, kao i sve proste brojeve manje od $n$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Prvih n prostih: 2 3 5 7 11}#
+#\izlaz{Prosti manji od n: 2 3}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2}#
+#\izlaz{Prvih n prostih: 2 3}#
+#\izlaz{Prosti manji od n: ne postoje}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-11}#
+#\izlaz{Greska: neispravan unos. }#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{FUN_08}
+\end{Exercise}
+\ifresenja 
+\begin{Answer}[ref=FUN_08]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun08.c}
+\end{Answer} 
+\fi
+
+
+\begin{Exercise}[label=FUN_OLD_1] 
+Rešiti sledeće zadatke korišćenjem narednih funkcija.
+\begin{itemize}
+ \item [a)] Zadatak \ref{UZ_NI_02} korišćenjem funkcija \kckod{int kvadrat(int x)} koja računa kvadrat datog broja i \kckod{int kub(int x)} koja računa kub datog broja.
+ \item [b)] Zadatak \ref{KT_NG_02} korišćenjem funkcije \kckod{float apsolutna\_vrednost(float x)} koja izračunava apsolutnu vrednost datog broja.
+ \item [c)] Zadatak \ref{PET_07} korišćenjem funkcije \kckod{float stepen(float x, int n)} koja računa vrednost $n$-tog stepena realnog broja $x$.
+ \item [d)] Zadatak \ref{PET_31} korišćenjem funkcije \kckod{int fibonaci(int n)} koja računa $n$-ti element Fibonačijevog niza.
+\end{itemize}
+\end{Exercise}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%% CIFRE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{Exercise}[label=FUN_10] 
 Napisati funkciju \kckod{float aritmeticka\_sredina(int n)} koja
 računa aritmetičku sredinu cifara datog broja. Napisati i program koji
 učitava ceo broj i ispisuje rezultat na tri decimale.
@@ -386,32 +307,35 @@ učitava ceo broj i ispisuje rezultat na tri decimale.
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.4_11}
+\linkresenje{FUN_10}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_11]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_11.c}
+\begin{Answer}[ref=FUN_10]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun10.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=v1.4_09] 
+
+\begin{Exercise}[label=FUN_11] 
 Napisati funkciju \kckod{int sadrzi(int x, int c)} koja ispituje da li
 se cifra $c$ nalazi u zapisu celog broja $x$. Funkcija treba da vrati
-$1$ ako se cifra nalazi u broju, a $0$ inače. Napisati program koji
-učitava dva cela broja i ispisuje rezultat poziva funkcije.
+jedinicu ako se cifra nalazi u broju, a nulu inače. Napisati program koji
+učitava dva cela broja i u zavisnosti od povratne vrednosti funkcije
+ispisuje odgovarajuću poruku. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj i cifru:}\ulaz{17890 7}#
-#\izlaz{Cifra se nalazi u broju.}#
+#\izlaz{Cifra 7 se nalazi u zapisu broja 17890.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj i cifru:}\ulaz{1982 6}#
-#\izlaz{Cifra se ne nalazi u broju.}#
+#\izlaz{Unesite broj i cifru:}\ulaz{19 6}#
+#\izlaz{Cifra 6 se ne nalazi u zapisu broja 19.}#
 \end{upotreba}
 \end{miditest}
 
@@ -419,30 +343,30 @@ učitava dva cela broja i ispisuje rezultat poziva funkcije.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj i cifru:}\ulaz{17890 26}#
-#\izlaz{Neispravan unos.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj i cifru:}\ulaz{-1982 9}#
-#\izlaz{Cifra se nalazi u broju.}#
+#\izlaz{Cifra 9 se nalazi u zapisu broja -1982.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.4_09}
+\linkresenje{FUN_11}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_09]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_09.c}
+\begin{Answer}[ref=FUN_11]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun11.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=v1.4_07] 
+\begin{Exercise}[label=FUN_12] 
 Napisati funkciju \kckod{int broj\_neparnih\_cifara(int x)} koja
-određuje broj neparnih cifre u zapisu datog celog broja. Testirati rad
-ove funkcije u programu koji učitava cele brojeve dok se ne unese nula
+određuje broj neparnih cifre u zapisu datog celog broja. Napisati
+program koji učitava cele brojeve sve do unosa broja nula
 i ispisuje broj neparnih cifara svakog unetog broja.
 
 \begin{miditest}
@@ -450,13 +374,13 @@ i ispisuje broj neparnih cifara svakog unetog broja.
 #\naslovInt#
 #\izlaz{Unesite cele brojeve:}#
 #\ulaz{2341}# 
-#\izlaz{Broj neparnih cifara je 2}#
+#\izlaz{Broj neparnih cifara: 2}#
 #\ulaz{78}# 
-#\izlaz{Broj neparnih cifara je 1}#
+#\izlaz{Broj neparnih cifara: 1}#
 #\ulaz{800}# 
-#\izlaz{Broj neparnih cifara je 0}#
+#\izlaz{Broj neparnih cifara: 0}#
 #\ulaz{-99761}# 
-#\izlaz{Broj neparnih cifara je 4}#
+#\izlaz{Broj neparnih cifara: 4}#
 #\ulaz{0}# 
 \end{upotreba}
 \end{miditest}
@@ -465,43 +389,41 @@ i ispisuje broj neparnih cifara svakog unetog broja.
 #\naslovInt#
 #\izlaz{Unesite cele brojeve:}#
 #\ulaz{987611}#
-#\izlaz{Broj neparnih cifara je 4}#
+#\izlaz{Broj neparnih cifara: 4}#
 #\ulaz{135 }#
-#\izlaz{Broj neparnih cifara je 3}#
+#\izlaz{Broj neparnih cifara: 3}#
 #\ulaz{-701}#
-#\izlaz{Broj neparnih cifara je 2}#
+#\izlaz{Broj neparnih cifara: 2}#
 #\ulaz{602}#
-#\izlaz{Broj neparnih cifara je 0}#
+#\izlaz{Broj neparnih cifara: 0}#
 #\ulaz{-884}#
-#\izlaz{Broj neparnih cifara je 0}#
+#\izlaz{Broj neparnih cifara: 0}#
 #\ulaz{79901}#
-#\izlaz{Broj neparnih cifara je 4}#
+#\izlaz{Broj neparnih cifara: 4}#
 #\ulaz{0}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{v1.4_07}
+\linkresenje{FUN_12}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_07]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_07.c}
+\begin{Answer}[ref=FUN_12]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun12.c}
 \end{Answer} 
 \fi
 
 
-
-
-\begin{Exercise}[label=v1.4_10] 
+\begin{Exercise}[label=FUN_13] 
 Napisati program za ispitivanje svojstava cifara datog celog broja.
 \begin{enumerate}
-\item Napisati funkciju \kckod{sve\_parne\_cifre} koja ispituje da li
+\item Napisati funkciju \kckod{int sve\_parne\_cifre(int x)} koja ispituje da li
   se dati ceo broj sastoji isključivo iz parnih cifara. Funkcija treba
-  da vrati $1$ ako su sve cifre broja parne i $0$ u suprotnom.
-\item Napisati funkciju \kckod{sve\_cifre\_jednake} koja ispituje da
-  li su sve cifre datog celog broja jednake. Funkcija treba da vrati $1$
-  ako su sve cifre broja jednake i $0$ u suprotnom.
+  da vrati jedinicu ako su sve cifre broja parne, a nulu inače.
+\item Napisati funkciju \kckod{int sve\_cifre\_jednake(int x)} koja ispituje da
+  li su sve cifre datog celog broja jednake. Funkcija treba da vrati jedinicu
+  ako su sve cifre broja jednake i nulu u suprotnom.
 \end{enumerate}
-Napisati program koji učitava ceo broj i ispisuje da li su sve cifre
-parne i da li su sve cifre jednake.
+Program učitava ceo broj i u zavisnosti od povratnih vrednosti napisanih
+funkcija ispisuje odgovarajuće poruke.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -515,7 +437,7 @@ parne i da li su sve cifre jednake.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{55555}#
-#\izlaz{Sve cifre broja nisu parne.}#
+#\izlaz{Broj sadrzi bar jednu neparnu cifru.}#
 #\izlaz{Cifre broja su jednake.}#
 \end{upotreba}
 \end{miditest}
@@ -532,150 +454,33 @@ parne i da li su sve cifre jednake.
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj i cifru:}\ulaz{-342}#
-#\izlaz{Sve cifre broja nisu parne.}#
+#\izlaz{Broj sadrzi bar jednu neparnu cifru.}#
 #\izlaz{Cifre broja nisu jednake.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.4_10}
+\linkresenje{FUN_13}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_10]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_10.c}
+\begin{Answer}[ref=FUN_13]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun13.c}
 \end{Answer} 
 \fi
 
 
-
-
-
-\begin{Exercise}[label=p1.4_12] 
-Napisati funkciju \kckod{int zapis(int x, int y)} koja proverava da li
-se brojevi $x$ i $y$ zapisuju pomoću istih cifara. Funkcija treba da
-vrati vrednost $1$ ako je uslov ispunjen, a $0$ ako nije. Napisati i
-program koji učitava dva cela broja i ispisuje rezultat primene
-funkcije.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{251 125}#
-#\izlaz{Uslov je ispunjen!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
-#\izlaz{Uslov nije ispunjen!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
-#\izlaz{Uslov je ispunjen!}#
-\end{upotreba}
-\end{miditest} 
-
-\linkresenje{p1.4_12}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_12]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_12.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=p1.4_14] 
-Napisati funkciju \kckod{int rastuce(int n)} koja ispituje da li su
-cifre datog celog broja u rastućem poretku. Funkcija treba da vrati
-vrednost $1$ ako cifre ispunjavaju uslov, odnosno $0$ ako ne
-ispunjavaju uslov. Napisati i program koji učitava ceo broj i ispisuje
-poruku da li su cifre unetog broja u rastućem poretku.
+\begin{Exercise}[label=FUN_14] 
+Napisati funkciju \kckod{int ukloni(int n, int p)} koja menja
+broj $n$ tako što iz njegovog zapisa uklanja cifru na poziciji p.
+Pozicije se broje sa desna na levo. Cifra jedinica ima poziciju $1$.
+Napisati program koji učitava redni broj pozicije i zatim 
+za cele brojeve koji se unose sve do unosa broja nula,
+ispisuje brojeve kojima je uklonjena odgovarajuća cifra.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{2689}#
-#\izlaz{Cifre su u rastucem poretku!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{559}#
-#\izlaz{Cifre su u rastucem poretku!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{628}#
-#\izlaz{Cifre nisu u rastucem poretku!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_14}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_14]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_14.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=p1.4_16] 
-Napisati funkciju \kckod{int par\_nepar(int n)} koja ispituje da li su
-cifre datog celog broja naizmenično parne i neparne. Funkcija treba da
-vrati vrednost $1$ ako cifre ispunjavaju uslov, odnosno $0$ ako ne
-ispunjavaju uslov. Napisati i program koji učitava ceo broj i testira
-rad funkcije.
-  
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{2749}#
-#\izlaz{Broj ispunjava uslov!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-963}#
-#\izlaz{Broj ispunjava uslov!}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{27449}#
-#\izlaz{Broj ne ispunjava uslov!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_16}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_16]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_16.c}
-\end{Answer} 
-\fi
-
-
-
-\begin{Exercise}[label=p1.4_09] 
-Napisati funkciju \kckod{int ukloni\_stotine(int\ n)} koja modifikuje
-zadati broj tako što iz njegovog zapisa uklanja cifru stotina (ako
-postoji). Napisati program koji za brojeve koji se unose sve do pojave
-broja $0$ ispisuje odgovarajuće brojeve kojima je uklonjena cifra stotine.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+#\izlaz{Unesite poziciju:}\ulaz{3}#
 #\izlaz{Unesite broj:}\ulaz{1210}#
 #\izlaz{110}#
 #\izlaz{Unesite broj:}\ulaz{18}#
@@ -688,30 +493,179 @@ broja $0$ ispisuje odgovarajuće brojeve kojima je uklonjena cifra stotine.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
+#\izlaz{Unesite poziciju:}\ulaz{1}#
 #\izlaz{Unesite broj:}\ulaz{-9632}#
-#\izlaz{-932}#
+#\izlaz{-963}#
+#\izlaz{Unesite broj:}\ulaz{-2}#
+#\izlaz{0}#
 #\izlaz{Unesite broj:}\ulaz{246}#
-#\izlaz{46}#
+#\izlaz{24}#
 #\izlaz{Unesite broj:}\ulaz{-52}#
-#\izlaz{-52}#
+#\izlaz{-5}#
 #\izlaz{Unesite broj:}\ulaz{0}#
 \end{upotreba}
 \end{miditest}
 
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite poziciju:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 
-\linkresenje{p1.4_09}
+\linkresenje{FUN_14}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_09]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_09.c}
+\begin{Answer}[ref=FUN_14]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun14.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=p1.4_10] 
+\begin{Exercise}[label=FUN_15] 
+Napisati funkciju \kckod{int zapis(int x, int y)} koja proverava da li
+se brojevi $x$ i $y$ zapisuju pomoću istih cifara. Funkcija treba da
+vrati jedinicu ako je uslov ispunjen, a nulu ako nije. Napisati i
+program koji učitava dva cela broja i u zavisnosti od povratne vrednosti
+napisane funkcije ispisuje odgovarajuću poruku.
+ 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{251 125}#
+#\izlaz{Uslov je ispunjen.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
+#\izlaz{Uslov nije ispunjen.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
+#\izlaz{Uslov je ispunjen.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{-777 77}#
+#\izlaz{Uslov nije ispunjen.}#
+\end{upotreba}
+\end{miditest} 
+
+\linkresenje{FUN_15}
+\end{Exercise}
+\ifresenja 
+\begin{Answer}[ref=FUN_15]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun15.c}
+\end{Answer} 
+\fi
+
+
+\begin{Exercise}[label=FUN_16] 
+Napisati funkciju \kckod{int neopadajuce(int n)} koja ispituje da li su
+cifre datog celog broja u neopadajućem poretku. Funkcija treba da vrati
+jedinicu ako cifre ispunjavaju uslov, odnosno nulu ako ne
+ispunjavaju uslov. Napisati i program koji učitava ceo broj i ispisuje
+poruku da li su cifre unetog broja u neopadajućem poretku.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{2289}#
+#\izlaz{Cifre su u neopadajucem poretku.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{5}#
+#\izlaz{Cifre su u neopadajucem poretku.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{6628}#
+#\izlaz{Cifre nisu u neopadajucem poretku.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{-23}#
+#\izlaz{Cifre su u neopadajucem poretku.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{FUN_16}
+\end{Exercise}
+\ifresenja 
+\begin{Answer}[ref=FUN_16]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun16.c}
+\end{Answer} 
+\fi
+
+
+\begin{Exercise}[label=FUN_17] 
+Napisati funkciju \kckod{int par\_nepar(int n)} koja ispituje da li su
+cifre datog celog broja naizmenično parne i neparne. Funkcija treba da
+vrati jedinicu ako cifre ispunjavaju uslov, odnosno nulu ako ne
+ispunjavaju uslov. Napisati i program koji učitava ceo broj i 
+u zavisnosti od povratne vrednosti napisane funkcije
+ispisuje odgovarajuću poruku.
+  
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{2749}#
+#\izlaz{Broj ispunjava uslov.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{-963}#
+#\izlaz{Broj ispunjava uslov.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{27449}#
+#\izlaz{Broj ne ispunjava uslov.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{Broj ispunjava uslov.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{FUN_17}
+\end{Exercise}
+\ifresenja 
+\begin{Answer}[ref=FUN_17]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun17.c}
+\end{Answer} 
+\fi
+
+
+\begin{Exercise}[label=FUN_18] 
 Napisati funkciju \kckod{int rotacija(int n)} koja rotira cifre
-zadatog broja za jednu poziciju u levo. Napisati program koji za
-brojeve koji se unose sve do pojave broja $0$ ispisuje odgovarajuće
+zadatog celog broja za jednu poziciju u levo. Napisati program koji za
+brojeve koji se unose sve do unosa broja nula ispisuje odgovarajuće
 rotirane brojeve.
  
 \begin{miditest}
@@ -742,117 +696,101 @@ rotirane brojeve.
 \end{miditest}
 
 
-\linkresenje{p1.4_10}
+\linkresenje{FUN_18}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_10]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_10.c}
+\begin{Answer}[ref=FUN_18]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun18.c}
 \end{Answer} 
 \fi
 
 
+\begin{Exercise}[label=FUN_19] 
+Za dati broj može se formirati niz tako da je svaki sledeći član niza
+dobijen kao suma cifara prethodnog člana niza. Broj je \emph{srećan}
+ako se dati niz završava jedinicom. Napisati funkciju \kckod{int
+  srecan(int x)} koja vraća jedinicu ako je broj srećan, a nulu u
+suprotnom. Napisati program koji za uneti pozitivan ceo broj $n$ ispisuje
+sve srećne brojeve od 1 do $n$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-\begin{Exercise}[label=p1.4_08] 
- Napisati funkciju \kckod{int zbir\_delilaca(int n)} koja izračunava
- zbir delilaca broja $n$. Napisati program koji učitava ceo broj $k$ i
- ispisuje zbir delilaca svakog broja od 1 do $k$.
- 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj k:}\ulaz{6}#
-#\izlaz{1 3 4 7 6 12}#
+#\izlaz{Unesite broj n:}\ulaz{100}#
+#\izlaz{Srecni brojevi:}#
+#\izlaz{1 10 19 28 37 46 55 64 73 82 91 100}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj k:}\ulaz{-2}#
-#\izlaz{Greska: pogresan unos!}#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.4_08}
+\linkresenje{FUN_19}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_08]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_08.c}
+\begin{Answer}[ref=FUN_19]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun19.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=v1.4_08] 
-Broj je prost ako je deljiv samo sa $1$ i sa samim sobom. Napisati
-funkciju \kckod{int prost (int x)} koja ispituje da li je dati ceo
-broj prost. Funkcija treba da vrati $1$ ako je broj prost i $0$ u
-suprotnom. Napisati program koji za uneti ceo broj
-$n$ ispisuje prvih $n$ prostih brojeva.
+\begin{Exercise}[label=FUN_20]
+Prirodan broj $a$ je Armstrongov ako je jednak sumi $n$-tih stepena svojih
+cifara, pri čemu je $n$ broj cifara broja $a$.  Napisati funkciju
+\kckod{int armstrong(int x)} koja vraća jedinicu ako je broj Armstrongov,
+odnosno nulu ako nije.  Napisati program koji za učitani pozitivan ceo broj
+proverava da li je Armstrongov.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{17}#
-#\izlaz{Broj je prost!}#
+#\izlaz{Unesite broj:}\ulaz{153}#
+#\izlaz{Broj je Armstrongov.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{24}#
-#\izlaz{Broj nije prost!}#
+#\izlaz{Unesite broj:}\ulaz{1634}#
+#\izlaz{Broj je Armstrongov.}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-11}#
-#\izlaz{Broj nije prost!}#
+#\izlaz{Unesite broj:}\ulaz{118}#
+#\izlaz{Broj nije Armstrongov.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v1.4_08}
+\linkresenje{FUN_20}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_08]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_08.c}
+\begin{Answer}[ref=FUN_20]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun20.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=p1.4_] 
-Napisati funkciju \kckod{void prosti\_brojevi(int m)} koja ispisuje
-sve proste brojeve manje od broja $m$.  Napisati program koji učitava
-ceo broj veći od $1$ i ispisati rezultat poziva funkcije. U slučaju
-pogrešnog unosa, ispisati poruku o grešci. %\napomena{Koristiti funkciju \kckod{int prost(int x)}}.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{15}#
-#\izlaz{2 3 5 7 11 13}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{9}#
-#\izlaz{2 3 5 7}#
-\end{upotreba}
-\end{miditest}
 
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1}#
-#\izlaz{Greska: pogresan unos!}#
-\end{upotreba}
-\end{miditest}
+%%%%%%%%%%%%%%%%%%
+%%% MATH
+%%%%%%%%%%%%%%%%%%
 
-\end{Exercise}
-
-
-
-\begin{Exercise}[label=v1.4_12] 
+\begin{Exercise}[label=FUN_21] 
 Napisati funkciju \kckod{double e\_na\_x(double x, double eps)} koja
 računa vrednost $e^x$ kao parcijalnu sumu reda
 $\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje vrši dok je
@@ -876,185 +814,81 @@ $eps$ i ispisuje izračunatu vrednost $e^x$.
 #\izlaz{Rezultat: 0.049796}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{v1.4_12}
+\linkresenje{FUN_21}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=v1.4_12]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_12.c}
+\begin{Answer}[ref=FUN_21]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun21.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=v1.4_13] 
-Za dati broj može se formirati niz tako da je svaki sledeći član niza
-dobijen kao suma cifara prethodnog člana niza. Broj je \emph{srećan}
-ako se dati niz završava jedinicom. Napisati funkciju \kckod{int
-  srecan(int x)} koja vraća $1$ ako je broj srećan, a $0$ u
-suprotnom. Napisati program koji za uneti prirodan broj $n$ ispisuje
-sve srećne brojeve od 1 do $n$. \napomena{Pretpostaviti da je unos korektan.}
+
+\begin{Exercise}[label=FUN_22] 
+Napisati funkciju \kckod{void ispis(float x, float y, int n)}
+koja za dva realna broja $x$ i $y$ i jedan pozitivan ceo broj $n$
+ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih
+tačaka intervala $[x,y]$.  Napisati program koji učitava odgovarajuće 
+vrednosti i testira rad ove funkcije.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{100}#
-#\izlaz{Srecni brojevi:}#
-#\izlaz{1 10 19 28 37 46 55 64 73 82 91 100}#
+#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
+#\izlaz{Unesite broj n:}\ulaz{10}#
+#\izlaz{0.6570 -0.3457 -0.0108 0.3659 -0.6731}#
+#\izlaz{0.8922 -0.9945 0.9666 -0.8122}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{0}#
-#\izlaz{Nema srecnih brojeva.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_13}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=v1.4_13]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_13.c}
-\end{Answer} 
-\fi
-
-
-
-\begin{Exercise}[label=p1.4_15]
-Broj $a$ je Armstrongov ako je jednak sumi $n$-tih stepena svojih
-cifara, pri čemu je $n$ broj cifara broja $a$.  Napisati funkciju
-\kckod{int armstrong(int x)} koja vraća $1$ ako je broj Armstrongov,
-odnosno $0$ ako nije.  Napisati program koji za učitani ceo broj
-proverava da li je Armstrongov.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{153}#
-#\izlaz{Broj je Armstrongov!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{1634}#
-#\izlaz{Broj je Armstrongov!}#
+#\izlaz{Unesite dva realna broja:}\ulaz{20.5 -8.32}#
+#\izlaz{Unesite broj n:}\ulaz{5}#
+#\izlaz{-0.8934 -0.8979 -0.1920 0.6658 0.9968}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{118}#
-#\izlaz{Broj nije Armstrongov!}#
+#\izlaz{Unesite dva realna broja:}\ulaz{8 8}#
+#\izlaz{Greska: neispravan unos.}
 \end{upotreba}
 \end{miditest}
-
-\linkresenje{p1.4_15}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_15]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_15.c}
-\end{Answer} 
-\fi
-
-
-\begin{Exercise}[label=p1.4_17] 
-Napisati funkciju \kckod{int prebrojavanje(float x)} koja prebrojava
-koliko puta se broj $x$ pojavljuje u nizu brojeva koji se unose sve do
-pojave broja $0$. Napisati program koji učitava vrednost broja $x$ i
-testira rad napisane funkcije.
-
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{2.84}#
-#\izlaz{Unesite brojeve:}\ulaz{8.13 2.84 5 21.6 2.84 11.5 0}#
-#\izlaz{Broj pojavljivanja broja 2.84 je: 2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj x:}\ulaz{-1.17}#
-#\izlaz{Unesite brojeve:}\ulaz{-128.35 8.965 8.968 89.36 0}#
-#\izlaz{Broj pojavljivanja broja -1.17 je: 0}#
+#\izlaz{Unesite dva realna broja:}\ulaz{7 32}#
+#\izlaz{Unesite broj n:}\ulaz{-10}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p1.4_17}
+
+\linkresenje{FUN_22}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_17]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_17.c}
+\begin{Answer}[ref=FUN_22]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun22.c}
 \end{Answer} 
 \fi
 
-
-\begin{Exercise}[label=p1.4_18]
-%komentarD{Uskladiti sa Fibonacijevim u petljama} 
-Napisati funkciju \kckod{long unsigned fibonaci(int n)} koja računa
-$n$-ti element Fibonačijevog niza. Napisati i program koji učitava ceo
-broj $n\ (0\leq n\leq 50)$ i ispisuje traženi Fibonačijev broj.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{7}#
-#\izlaz{21}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{65}#
-#\izlaz{Greska: nedozvoljena vrednost!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p1.4_18}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_18]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_18.c}
-\end{Answer} 
-\fi
-
-\begin{Exercise}[label=v1.4_14] 
-Napisati funkciju \kckod{int konverzija (int c)} koja prebacuje veliko
-slovo u ekvivalentno malo i obrnuto. Napisati program koji testira ovu
-funkciju na karakterima koji se unose do pojave znaka \kckod{EOF}.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{ZDRAVO}#
-#\izlaz{zdravo}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite karaktere:}\ulaz{Dobro jutro, R2D2!}#
-#\izlaz{dOBRO JUTRO, r2d2!}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v1.4_14}
-\end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=v1.4_14]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_14.c}
-\end{Answer} 
-\fi
+%%%%%%%%%%%%%%%%%%
+%%% CHAR
+%%%%%%%%%%%%%%%%%%
 
 
-\begin{Exercise}[label=p1.4_19] 
+\begin{Exercise}[label=FUN_23] 
 Napisati funkciju \kckod{char sifra(char c, int k)} koja za dati
 karakter $c$ određuje šifru na sledeći način: ukoliko je $c$ slovo,
 šifra je karakter koji se nalazi $k$ pozicija pre njega u
 abecedi. Karakteri koji nisu slova se ne šifruju. Šifrovanje treba da
 bude kružno, što znači da je, na primer, šifra za karakter $b$ i
-pomeraj $2$ karakter $z$. Napisati program koji učitava karakter po
-karakter do kraja ulaza i ispisuje šifrovani tekst.
+pomeraj $2$ karakter $z$. Napisati program koji učitava nenegativan
+ceo broj $k$, a zatim i karaktere sve do kraja ulaza i 
+nakon svakog učitanog karaktera ispisuje njegovu šifru.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1071,149 +905,50 @@ karakter do kraja ulaza i ispisuje šifrovani tekst.
 #\izlaz{X}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.4_19}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite broj k:}\ulaz{-2}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{FUN_23}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_19]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi9/4_19.c}
+\begin{Answer}[ref=FUN_23]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun23.c}
 \end{Answer} 
 \fi
 
-
-
-\begin{Exercise}[label=p1.4_07] 
-Napisati funkciju \kckod{int prestupna(int godina)} koja za zadatu
-godinu proverava da li je prestupna. Funkcija treba da vrati $1$ ako
-je godina prestupna ili $0$ ako nije. Napisati program koji učitava
-dva cela broja $g1$ i $g2$ i ispisuje sve godine iz intervala $[g1,
-  g2]$ koje su prestupne.
- 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite dve godine:}\ulaz{2001 2010}#
-#\izlaz{Prestupne godine su: 2004 2008}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite dve godine:}\ulaz{2005 2015}#
-#\izlaz{Prestupne godine su: 2008 2012}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dve godine:}\ulaz{2010 2001}#
-#\izlaz{Greska: pogresan unos!}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite dve godine:}\ulaz{2001 2002}#
-#\izlaz{Nema prestupnih godina u ovom intervalu!}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p1.4_07}
+\begin{Exercise}[label=FUN_OLD_2] 
+Rešiti sledeće zadatke korišćenjem narednih funkcija.
+\begin{itemize}
+ \item [a)] Zadatak \ref{PET_34} korišćenjem funkcije \kckod{char konverzija(char c)} koja malo slovo pretvara u odgovarajuće veliko i obrnuto.
+ \item [b)] Zadatak \ref{PET_35} korišćenjem funkcije  \kckod{void prebrojavanje()} koja učitava karaktere sve do kraja ulaza i ispisuje broj malih slova, 
+ velikih slova, cifara, belina, kao i sumu svih unetih cifara.
+\end{itemize}
 \end{Exercise}
-\ifresenja 
-\begin{Answer}[ref=p1.4_07]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_07.c}
-\end{Answer} 
-\fi
 
+%%%%%%%%%%%%%%%%%%
+%%% GODINE
+%%%%%%%%%%%%%%%%%%
 
-\begin{Exercise}[label=broj_dana_u_mesecu] 
-Napisati funkciju \kckod{int broj\_dana(int mesec, int godina)} koja
-za dati mesec i godinu vraća broj dana u datom mesecu. Napisati
-program koji učitava dva cela broja (mesec i godinu) i ispisuje broj
-dana u datom mesecu. U slučaju nekorektnog unosa ispisati odgovarajuću
-poruku o grešci. \napomena{Pogledati rešenje zadataka
-  \ref{datum_sledeceg_dana}}.
-
-\begin{minitest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite mesec i godinu:}\ulaz{8 1998}#
-#\izlaz{Broj dana je: 31}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite mesec i godinu:}\ulaz{2 2004}#
-#\izlaz{Broj dana je: 29}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite mesec i godinu:}\ulaz{24 2004}#
-#\izlaz{Neispravan unos.}#
-\end{upotreba}
-\end{minitest}
-
-%\linkresenje{broj_dana_u_mesecu}
-\end{Exercise}
-%\ifresenja 
-%\begin{Answer}[ref=broj_dana_u_mesecu]
-%\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/}
-%\end{Answer} 
-%\fi
-
-\begin{Exercise}[label=ispravan_datum] 
-Napisati funkciju \kckod{int ispravan(int dan, int mesec, int godina)}
-koja za dati datum proverava da li je ispravan. Napisati program koji
-učitava tri cela broja (dan, mesec, godinu) i ispisuje da li je datum
-ispravan ili ne. \napomena{Pogledati rešenje zadataka
-  \ref{datum_sledeceg_dana}}.
-
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
-#\izlaz{Unesite datum:}\ulaz{24.8.1998.}#
-#\izlaz{Datum je ispravan.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\izlaz{Unesite datum:}\ulaz{31.4.1789.}#
-#\izlaz{Datum nije ispravan.}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite datum:}\ulaz{29.2.2004.}#
-#\izlaz{Datum je ispravan.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite datum:}\ulaz{29.14.2004.}#
-#\izlaz{Datum nije ispravan.}#
-\end{upotreba}
-\end{miditest}
-
-%\linkresenje{ispravan_datum}
-\end{Exercise}
-%\ifresenja 
-%\begin{Answer}[ref=ispravan_datum]
-%\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_.c}
-%\end{Answer} 
-%\fi
-
-
-\begin{Exercise}[label=datum_sledeceg_dana] 
-Napisati funkciju \kckod{void sledeci\_dan(int dan, int mesec, int
-  godina)} koja za dati datum ispisuje datum sledećeg dana. Napisati
-program koji učitava tri cela broja i ispisuje datum sledećeg dana. 
+\begin{Exercise}[label=FUN_25] 
+Napisati program koji učitava tri cela broja i ispisuje datum sledećeg dana. 
+Zadatak rešiti korišćenjem narednih funkcija.
+\begin{itemize}
+ \item [a)] \kckod{int prestupna(int godina)} koja za zadatu
+godinu proverava da li je prestupna. Funkcija treba da vrati jedinicu ako
+je godina prestupna ili nulu ako nije.
+ \item [b)] \kckod{int broj\_dana(int mesec, int godina)} koja
+za dati mesec i godinu vraća broj dana u datom mesecu.
+ \item [c)] \kckod{int ispravan(int dan, int mesec, int godina)}
+koja za dati datum proverava da li je ispravan.
+ \item [d)] \kckod{void sledeci\_dan(int dan, int mesec, int
+  godina)} koja za dati datum ispisuje datum sledećeg dana.
+\end{itemize}
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1241,24 +976,26 @@ program koji učitava tri cela broja i ispisuje datum sledećeg dana.
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
-#\izlaz{Uneti datum nije ispravan.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{datum_sledeceg_dana}
+\linkresenje{FUN_25}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=datum_sledeceg_dana]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/datum_sledeceg_dana.c}
+\begin{Answer}[ref=FUN_25]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun25.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=od_nove_godine] 
+
+\begin{Exercise}[label=FUN_26] 
 Napisati funkciju \kckod{int od\_nove\_godine(int dan, int mesec, int
   godina)} koja određuje koliko je dana proteklo od Nove godine do
 datog datuma. Napisati program koji učitava tri cela broja i ispisuje
-koliko dana je proteklo od Nove godine. \napomena{Pogledati rešenje
-  zadataka \ref{broj_dana_izmedju}}.
+koliko dana je proteklo od Nove godine. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{Pogledati rešenje zadataka \ref{FUN_28}}.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1286,24 +1023,20 @@ koliko dana je proteklo od Nove godine. \napomena{Pogledati rešenje
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
-#\izlaz{Datum nije ispravan.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-%\linkresenje{od_nove_godine}
 \end{Exercise}
-%\ifresenja 
-%\begin{Answer}[ref=od_nove_godine]
-%\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_14.c}
-%\end{Answer} 
-%\fi
 
-\begin{Exercise}[label=do_kraja_godine] 
+
+\begin{Exercise}[label=FUN_27] 
 Napisati funkciju \kckod{int do\_kraja\_godine(int dan, int mesec, int
   godina)} koja određuje broj dana od datog datuma do kraja
 godine. Napisati program koji učitava tri cela broja i ispisuje broj
-dana do krja godine. \napomena{Pogledati rešenje zadataka
-  \ref{broj_dana_izmedju}}.
+dana do krja godine. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{Pogledati rešenje zadataka \ref{FUN_28}}.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1331,26 +1064,20 @@ dana do krja godine. \napomena{Pogledati rešenje zadataka
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{31.4.2004.}#
-#\izlaz{Datum nije ispravan.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
- 
-%\linkresenje{do_kraja_godine}
 \end{Exercise}
-%\ifresenja 
-%\begin{Answer}[ref=do_kraja_godine]
-%\includecode{resenja/2_KontrolaToka/1.4_Funkcije/1_14.c}
-%\end{Answer} 
-%\fi
 
-\begin{Exercise}[label=broj_dana_izmedju] 
+
+\begin{Exercise}[label=FUN_28] 
 Napisati funkciju \kckod{int broj\_dana\_izmedju(int dan1, int mesec1,
   int godina1, int dan2, int mesec2, int godina2)} koja određuje broj
 dana između dva datuma. Napisati program koji učitava šest celih
 brojeva, koji označavaju dva datuma, i na standarni izlaz ispisuje
-broj dana između ta dva datuma. U slučaju pogrešnog unosa ispisati
-poruku o grešci.
+broj dana između ta dva datuma.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1382,22 +1109,28 @@ poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite prvi datum:}\ulaz{24.8.1998.}#
 #\izlaz{Unesite drugi datum:}\ulaz{31.4.2004.}#
-#\izlaz{Uneti datum nije ispravan.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{broj_dana_izmedju}
+\linkresenje{FUN_28}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=broj_dana_izmedju]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/broj_dana_izmedju.c}
+\begin{Answer}[ref=FUN_28]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun28.c}
 \end{Answer} 
 \fi
 
-\begin{Exercise}[label=p1.4_04] 
+
+%%%%%%%%%%%%%%%%%%
+%%%% ZVEZDICE
+%%%%%%%%%%%%%%%%%%
+
+\begin{Exercise}[label=FUN_29] 
 Napisati funkciju \kckod{void romb(int n)} koja iscrtava romb čija je
 stranica dužine $n$. Napisati program koji učitava ceo pozitivan broj
 i ispisuje rezultat poziva funkcije.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1423,23 +1156,24 @@ i ispisuje rezultat poziva funkcije.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{-5}#
-#\izlaz{Greska: pogresna dimenzija!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.4_04}
+\linkresenje{FUN_29}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_04]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_04.c}
+\begin{Answer}[ref=FUN_29]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun29.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=p1.4_05] 
+\begin{Exercise}[label=FUN_30] 
 Napisati funkciju \kckod{void grafikon\_h(int a, int b, int c, int d)}
 koja iscrtava horizontalni prikaz zadatih vrednosti. Napisati program
 koji učitava četiri pozitivna cela broja i prikazuje rezultat poziva
-funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci.
+funkcije.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1455,7 +1189,7 @@ funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite vrednosti:}\ulaz{8 -2 5 4}#
-#\izlaz{Greska: pogresan unos!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
@@ -1469,21 +1203,21 @@ funkcije. U slučaju pogrešnog unosa, ispisati poruku o grešci.
 #\izlaz{**********}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.4_05}
+\linkresenje{FUN_30}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_05]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_05.c}
+\begin{Answer}[ref=FUN_30]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun30.c}
 \end{Answer} 
 \fi
 
 
-\begin{Exercise}[label=p1.4_06] 
+\begin{Exercise}[label=FUN_31] 
 Napisati funkciju
 \kckod{void grafikon\_v(int a, int b, int c, int d)} koja iscrtava
 vertikalni prikaz zadatih vrednosti. Napisati program koji učitava
-četiri pozitivna cela broja i ispisuje rezultat poziva funkcije. U
-slučaju pogrešnog unosa, ispisati poruku o grešci.
+četiri pozitivna cela broja i ispisuje rezultat poziva funkcije.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1517,11 +1251,11 @@ slučaju pogrešnog unosa, ispisati poruku o grešci.
 #\izlaz{****}#
 \end{upotreba}
 \end{miditest}
-\linkresenje{p1.4_06}
+\linkresenje{FUN_31}
 \end{Exercise}
 \ifresenja 
-\begin{Answer}[ref=p1.4_06]
-\includecode{resenja/2_KontrolaToka/1.4_Funkcije/praktikumi8/4_06.c}
+\begin{Answer}[ref=FUN_31]
+\includecode{resenja/2_KontrolaToka/1.4_Funkcije/sve/fun31.c}
 \end{Answer} 
 \fi
 
