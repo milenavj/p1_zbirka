@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(void)
+int main()
 {
   /* Deklaracije potrebnih promenljivih. */
   int n, i, znak;

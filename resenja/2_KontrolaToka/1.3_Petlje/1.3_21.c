@@ -2,7 +2,7 @@
 
 int main()
 {
-  /*Deklaracije potrebnih promenljivih. */
+  /* Deklaracije potrebnih promenljivih. */
   int n, i;
   float cena, min_cena;
 
