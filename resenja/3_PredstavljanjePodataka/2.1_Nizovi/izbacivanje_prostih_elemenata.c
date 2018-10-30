@@ -1,60 +1,58 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
-#define MAX 100
+#define MAKS 100
 
-/* Funkcija koja proverava da li je zadati broj prost broj. Povratna vrednost funkcije je 1 ukoliko broj jeste prost, inace je 0. */
-int prost(int x)
-{
+/* Funkcija vraca 1 ako je broj prost, a 0 u suprotnom.  */
+int prost(int x){
   int i;
-  
-  /* Posmatra se apsolutna vrednost broja kako bi se pokrio i slucaj negativnih brojeva. */
-  x=abs(x);
 
   /* Brojevi 2 i 3 su prosti. */
-  if(x == 2 || x == 3)
+  if (x == 2 || x == 3)
     return 1;
 
-  /* Ako je broj paran nije prost. */
-  if(x%2 == 0)
+  /* Parni brojevi nisu prosti. */
+  if (x % 2 == 0)
     return 0;
 
-  /* Ako broj ima delioce u skupu [3, koren_broja(x)] takodje nije prost. */
-  for(i=3;i<=sqrt(x);i+=2){
-    if(x%i == 0)
+  /* Ako se naidje na broj koji deli broj x, onda broj x nije
+     prost. Provera se vrsi za sve neparne brojeve izmedju 3 i 
+     sqrt(x), jer kada bi x imao parnog delioca, onda bi i broj 2
+     delio x, a taj uslov je vec proveren. */
+  for (i = 3; i <= sqrt(x); i += 2)
+    if (x % i == 0)
       return 0;
-  }
 
-  /* Ako su svi uslovi ispunjeni, broj je prost. */
+  /* Ako nijedan od prethodnih uslova nije bio ispunjen, to znaci
+     da nijedan broj ne deli x, pa je on prost. */
   return 1;
 }
 
 int main()
 {
-  int a[MAX];
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS], b[MAKS];
   int i, j, n_a, n_b;
-  /* Rezultujuci niz. */
-  int b[MAX];
 
-
-  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost. */
+  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite broj elemenata niza: ");
   scanf("%d", &n_a);
-  if(n_a<1 || n_a>MAX)
-  {
-    printf("Greska: Nedozvoljena vrednost!\n");
-    return -1;
+  if (n_a < 1 || n_a > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
 
   /* Ucitavaju se elementi niza a. */
   printf("Unesite elemente niza: ");
-  for(i=0;i<n_a;i++)
+  for (i = 0; i < n_a; i++)
     scanf("%d", &a[i]);
-   
-  /* Kada se u nizu a naidje na prost element, on se upisuje u niz b i uvecava se brojac za niz b. */
-  for(i=0, j=0;i<n_a;i++){
-    if(prost(a[i]) == 0)
-    {
+
+  /* Kada se u nizu a naidje na prost element, on se upisuje u niz
+     b i uvecava se brojac za niz b. */
+  for (i = 0, j = 0; i < n_a; i++) {
+    if (prost(a[i]) == 0) {
       b[j] = a[i];
       j++;
     }
@@ -62,11 +60,11 @@ int main()
 
   /* Broj elemenata novodobijenog niza b je j. */
   n_b = j;
-  
+
   /* Ispisuju se elementi niza b. */
-  for(i=0;i<n_b;i++)
+  for (i = 0; i < n_b; i++)
     printf("%d ", b[i]);
   printf("\n");
-  
-  return 0;
+
+  exit(EXIT_SUCCESS);
 }

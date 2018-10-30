@@ -1,48 +1,48 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MAX 100
+#define MAKS 100
 
-/* Funkcija prebrojavanje vraca broj elemenata niza koji su manji od poslednjeg elementa. */
+/* Funkcija prebrojavanje vraca broj elemenata niza koji su manji
+   od poslednjeg elementa. */
 int prebrojavanje(int a[], int n)
 {
   int i;
-  
-  /* Brojac elemenata koji su manji od poslednjeg. */
-  int broj_manjih=0;
-  
-  /* Obilazi se element po element niza, */
-  for(i=0;i<n-1;i++){   
-    /* Ako je tekuci element manji od poslednjeg (on se nalazi na poziciji n-1) uvecava se brojac. */
-    if(a[i]<a[n-1])
+  int broj_manjih = 0;
+
+  /* Prebrojavaju se elementi niza za koje vazi da su manji od 
+     poslednjeg elementa (a[n-1]). Petlja ide od prvog do
+     predposlednjeg elementa. */
+  for (i = 0; i < n - 1; i++) {
+    if (a[i] < a[n - 1])
       broj_manjih++;
   }
-     
-  /* Vraca se izracunata vrednost. */   
+
   return broj_manjih;
 }
 
 int main()
 {
-  int a[MAX];
-  int n;
-  int i;
- 
-  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost. */
+  /* Deklaracija potrebnih promenljivih. */
+  int a[MAKS];
+  int n, i;
+
+  /* Ucitava se broj elemenata niza i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite broj elemenata niza:");
   scanf("%d", &n);
-  if(n<=0 || n>MAX)
-  {
-     printf("Greska: Nedozvoljena vrednost!\n");
-     return 0;
+  if (n <= 0 || n > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
-  
+
   /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza:");
-  for(i=0;i<n;i++)  
-   scanf("%d",&a[i]);
-   
-  /* Ispisuje se rezultat poziva funkcije. */
-  printf("%d\n", prebrojavanje(a,n));
-  
-  return 0;
+  for (i = 0; i < n; i++)
+    scanf("%d", &a[i]);
+
+  /* Ispis rezultata. */
+  printf("%d\n", prebrojavanje(a, n));
+
+  exit(EXIT_SUCCESS);
 }

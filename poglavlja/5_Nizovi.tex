@@ -4,11 +4,12 @@
 
 \begin{Exercise}[label=v.skalarni_proizvod] 
 Ako su $a = (a_1, \ldots, a_n)$ i $b = (b_1,\ldots, b_n)$ vektori
-dimenzije $n$, njihov skalarni proizvod je $a \cdot b = a_1\cdot b_1 +
+dimenzije $n$, njihov skalarni proizvod se definiše kao $a \cdot b = a_1\cdot b_1 +
 \ldots + a_n\cdot b_n$. Napisati program koji računa skalarni proizvod
 dva vektora. Vektori se zadaju kao celobrojni nizovi sa najviše $100$
 elemenata.  Program učitava dimenziju i elemente nizova, a na izlaz
 ispisuje vrednost skalarnog proizvoda.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -42,7 +43,7 @@ ispisuje vrednost skalarnog proizvoda.
 #\naslovInt#
 #\izlaz{Unesite dimenziju vektora: }#
 #\ulaz{120}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.skalarni_proizvod}
@@ -54,6 +55,7 @@ ispisuje vrednost skalarnog proizvoda.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=v.parni_elementi] 
 Napisati program koji za učitani niz ispisuje:
 \begin{enumerate}
@@ -61,6 +63,7 @@ Napisati program koji za učitani niz ispisuje:
 \item parne elemente niza.
 \end{enumerate}
 Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -94,7 +97,7 @@ Maksimalan broj elemenata niza je $100$.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza: }#
 #\ulaz{-4}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.parni_elementi}
@@ -104,6 +107,7 @@ Maksimalan broj elemenata niza je $100$.
 \includecode{resenja/3_PredstavljanjePodataka/2.1_Nizovi/parni_elementi.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=v.nizovi_funkcije_intro] 
 Takmičari na Beogradskom maratonu su označeni rednim brojevima počevši
@@ -130,6 +134,7 @@ trčanja. Napisati funkcije za rad sa ovim nizom.
 \end{enumerate}
 Napisati program koji testira rad zadatih funkcija. Maksimalan broj
 takmičara je $1000$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -149,7 +154,7 @@ takmičara je $1000$.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{-5}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.nizovi_funkcije_intro}
@@ -161,6 +166,7 @@ takmičara je $1000$.
 \end{Answer}
 \fi
 
+
 %ovaj ne treba resavati, ima za nijansu tezi zadatak dole, pronalaze se min-max i razmenjuju
 \begin{Exercise}[label=vp.bez_resenja_11] 
 Napisati funkciju \kckod{int min\_max(int a[], int n)} koja pronalazi
@@ -169,6 +175,7 @@ koristeći samo jedan prolaz kroz niz. Funkcija kao povratnu vrednost
 vraća manji od ta dva indeksa. Napisati program koji testira ovu
 funkciju za učitane nizove celih brojeva maksimalne dužine $100$
 elemenata.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -196,24 +203,26 @@ elemenata.
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza:}#
 #\ulaz{-45}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 %\linkresenje{vp.bez_resenja_11}
 \end{Exercise}
 
-\ifresenja
-\begin{Answer}[ref=vp.bez_resenja_11]
+%\ifresenja
+%\begin{Answer}[ref=vp.bez_resenja_11]
 %\includecode{resenja/3_PredstavljanjePodataka/2.1_Nizovi/bez_resenja_11.c}
-\end{Answer}
-\fi
+%\end{Answer}
+%\fi
+
 
 \begin{Exercise}[label=p.broj_manjih_od_poslednjeg] 
  Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja
  izračunava broj elemenata celobrojnog niza $a$ dužine $n$ koji su
  manji od poslednjeg elementa niza. Napisati i program koji testira
  rad funkcije. Maksimalan broj elemenata niza je $100$.
- 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -239,6 +248,14 @@ elemenata.
 #\izlaz{0}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza:}#
+#\ulaz{-45}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{p.broj_manjih_od_poslednjeg}
 \end{Exercise}
@@ -249,12 +266,14 @@ elemenata.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.broj_manjih_od_maksimuma] 
  Napisati funkciju \kckod{int prebrojavanje(int a[], int n)} koja
  izračunava broj parnih elemenata niza celih brojeva $a$ dužine $n$
  koji prethode maksimalnom elementu niza. Napisati i program koji
  testira rad funkcije. Maksimalan broj elemenata niza je $100$.
- 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -290,6 +309,7 @@ elemenata.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=v.nizovi_funkcije_razno] 
 Elementi niza celih brojeva su podaci o nadmorskim visinama u nekom
 području sveta.  Na kartografskoj mapi su indeksima označene različite
@@ -308,6 +328,7 @@ nadmorska visina). Napisati funkcije za rad sa ovim nizom.
 \end{enumerate}
 Napisati i program koji testira rad napisanih funkcija za uneti broj
 $m$. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -329,7 +350,7 @@ $m$. Maksimalan broj elemenata niza je $100$.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{-5}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.nizovi_funkcije_razno}
@@ -341,6 +362,7 @@ $m$. Maksimalan broj elemenata niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.elementi_3_pojavljivanja] 
 Marko skuplja sličice za Svetsko prvenstvo u fudbalu. U celobrojnom
 nizu $a$ se nalaze brojevi onih sličica koje je već sakupio. Marko je
@@ -348,6 +370,7 @@ primetio da mu se neke sličice ponavljaju i rešio je da ih razmeni sa
 drugarima. Napisati program koji od datog niza $a$ formira niz $b$
 sličica koje se u nizu $a$ pojavljuju više od dva puta. Maksimalan
 broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -392,6 +415,7 @@ broj elemenata niza je $100$.
 Sa standardnog ulaza se učitava dimenzija niza, elementi niza i jedan
 ceo broj $k$. Napisati program koji štampa indekse elemenata koji su
 deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -409,7 +433,7 @@ deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
 #\izlaz{Unesite elemente niza:}\ulaz{6 14 8 9}#
 #\izlaz{Unesite broj k:}\ulaz{5}#
 #\izlaz{U nizu nema elemenata koji su}#
-#\izlaz{deljivi brojem 5!}#
+#\izlaz{deljivi brojem 5.}#
 \end{upotreba}
 \end{miditest}
 
@@ -440,6 +464,7 @@ deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
   na tom potezu (autobusi označeni rednim brojevima od $k$ do $t$)
   saobračaju $m$ minuta duže. Uneti potrebne izmene u niz i ispisati
   elemente niza. Maksimalan broj autobusa je $200$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -480,11 +505,13 @@ deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.zbir_opsega_niza] 
  Napisati funkciju \kckod{int zbir(int a[], int n, int i, int j)} koja
  računa zbir elemenata niza celih brojeva $a$ dužine $n$ od pozicije
  $i$ do pozicije $j$. Napisati i program koji testira rad
  funkcije. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -501,7 +528,7 @@ deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
 #\izlaz{Unesite broj elemenata niza:}\ulaz{3}#
 #\izlaz{Unesite elemente niza:}\ulaz{-2 8 1}#
 #\izlaz{Unesite vrednosti za i i j:}\ulaz{8 12}#
-#\izlaz{Greska: Nekorektne vrednosti granica!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
@@ -524,9 +551,11 @@ deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.kvadriranje_elemenata] 
 Napisati program koji transformiše uneti niz tako što kvadrira sve
 negativne elemente niza. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -565,12 +594,14 @@ negativne elemente niza. Maksimalan broj elemenata niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.kvadriranje_parnih] 
  Napisati funkciju \kckod{void kvadriranje(float a[], int n)} koja
  kvadrira elemente realnog niza $a$ dužine $n$ koji se nalaze na
  parnim pozicijama. Napisati program koji tranformiše na ovaj način
  uneti niz. Maksimalan broj elemenata niza je $100$.
- 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -614,7 +645,8 @@ negativne elemente niza. Maksimalan broj elemenata niza je $100$.
    k)} koja izračunava zbir prvih $k$ pozitivnih elemenata realnog
  niza $a$ dužine $n$. Napisati i program koji testira rad
  funkcije. Maksimalan broj elemenata niza je $100$.
- 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -663,6 +695,7 @@ vraća indeks elementa niza koji je po vrednosti najbliži aritmetičkoj
 sredini onih elemenata niza koji su deljivi brojem tri. Napisati
 program koji testira rad funkcije. Maksimalan broj elemenata niza je
 $200$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -733,12 +766,14 @@ svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.broj_cifara] 
  Napisati funkciju \kckod{int cifre(char s[], int n)} koja izračunava
  broj cifara u nizu karaktera $a$ dužine $n$. Napisati program koji za
  karaktere koji se unose u zasebnim redovima ispisuje broj unetih
  cifara. Maksimalan broj elemenata niza je $100$. 
- 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -788,6 +823,7 @@ svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja
 \includecode{resenja/3_PredstavljanjePodataka/2.1_Nizovi/broj_cifara.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=v.prebrojavanje] 
 Napisati program koji učitava karaktere sa standardnog ulaza sve do
@@ -839,6 +875,7 @@ barem jednom. \uputstvo{Za evidenciju broja pojavljivanja cifara,
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=brojanje_slova] 
 Sa standardnog ulaza se unosi jedna linija teksta. Napisati program
 koji izračunava i ispisuje koliko puta se pojavilo svako od slova
@@ -880,10 +917,12 @@ velikih slova.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.niz_karaktera_obrnuto] 
  Napisati program koji učitane karaktere (najviše njih $100$,
  učitavaju se sve do pojave karaktera \textit{*}) ispisuje u redosledu
  suprotnom od redosleda čitanja.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -934,11 +973,13 @@ velikih slova.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=palindrom]
 Palindrom je tekst koji se isto čita i sa leve i sa desne
 strane. Napisati funkciju koja proverava da li elementi niza karaktera
 čine palindrom (zanemariti velika/mala slova). Maksimalan broj
 elemenata niza je $200$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -947,7 +988,7 @@ elemenata niza je $200$.
 #\ulaz{15}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{AnaVoliMilovana}#
-#\izlaz{Jeste palindrom!}#  
+#\izlaz{Jeste palindrom.}#  
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -979,7 +1020,8 @@ elemenata niza je $200$.
   se najmanji ili najveći element više puta pojavljuju u nizu, uzeti u
   obzir njihova prva pojavljivanja. Maksimalan broj elemenata niza je
   $100$. 
-  
+  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1002,7 +1044,7 @@ elemenata niza je $200$.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{145}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p.razmena_min_max}
@@ -1014,11 +1056,13 @@ elemenata niza je $200$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.unija_presek_razlika] 
 Korišćenjem nizova moguće je predstaviti skupove podataka. Napisati
 program koji demonstrira osnovne operacije nad skupovima --- unija,
 presek i razlika. Pomoću dva niza predstaviti dva skupa celih
 brojeva. Maksimalan broj elemenata niza je $500$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
   
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1067,12 +1111,14 @@ brojeva. Maksimalan broj elemenata niza je $500$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=v.ukrstanje_nizova] 
 Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$
 formira i na izlaz ispisuje niz $c$ koji se dobija naizmeničnim
 raspoređivanjem elemenata nizova $a$ i $b$, tj.~$c = [a_0, b_0, a_1,
   b_1, \ldots, a_{n-1}, b_{n-1}]$. Maksimalan broj elemenata niza je
 $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1092,7 +1138,7 @@ $100$.
 #\naslovInt#
 #\izlaz{Unesite dimenziju nizova:}#
 #\ulaz{105}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.ukrstanje_nizova}
@@ -1104,12 +1150,14 @@ $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.nizovi_spajanje] 
 Napisati program koji za dva učitana niza $a$ i $b$ dimenzije $n$
 formira i na izlaz ispisuje niz $c$ čija prva polovina odgovara
 elemetima niza $b$, a druga polovina elementima niza $a$, tj.~$c =
 [b_0, b_1, \ldots, b_{n-1}, a_0, a_1, \ldots, a_{n-1}]$.  Maksimalan
 broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1134,7 +1182,7 @@ broj elemenata niza je $100$.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{145}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p.nizovi_spajanje}
@@ -1156,6 +1204,7 @@ broj elemenata niza je $100$.
  dimenzije $n$. Napisati program koji formira i ispisuje niz $c$ koji
  se dobija spajanjem nizova $a$ i $b$ u treći, takođe sortiran
  neopadajuće, niz.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1186,7 +1235,7 @@ broj elemenata niza je $100$.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Uneti broj elemenata niza:}\ulaz{145}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p.nizovi_spajanje_sortiranih}
@@ -1232,6 +1281,7 @@ ovaj način. \napomena{Nije dozvoljeno koristiti pomoćne nizove.}
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
 Napisati funkcije za rad sa nizovima celih brojeva. 
 \begin{enumerate}
@@ -1241,6 +1291,7 @@ Napisati funkcije za rad sa nizovima celih brojeva.
 \end{enumerate}
 Napisati i program koji testira rad napisanih funkcija za uneti broj
 $m$. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1263,7 +1314,7 @@ $m$. Maksimalan broj elemenata niza je $100$.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{252}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.nizovi_funkcije_pomeranja}
@@ -1307,6 +1358,7 @@ obezbeđenja da lako prati redosled opsluživanja klijenata.
 \end{enumerate}
 Napisati program koji testira rad funkcija. Maksimalan broj klijenata
 u jednom danu je $2000$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -1340,11 +1392,13 @@ u jednom danu je $2000$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.izbacivanje_elemenata] 
 Napisati program koji za učitani niz formira i ispisuje niz koji se
 dobija izbacivanjem svih neparnih elemenata niza. Zadatak rešiti na
 dva načina: korišćenjem pomoćnog niza i transformacijom polaznog
 niza. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1394,8 +1448,9 @@ niza. Maksimalan broj elemenata niza je $100$.
 Napisati program koji učitava dimenziju $n$ celobrojnog niza $a$ i
 njegove elemente, i iz niza $a$ izbacuje sve elemente koji nisu
 deljivi svojom poslednjom cifrom. Izuzetak su elementi čija je poslednja
-cifra $0$ koje treba zadržati. Program treba da ispiše izmenjeni niz
+cifra nula i koje zbog toga treba zadržati. Program treba da ispiše izmenjeni niz
 na standardni izlaz. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1413,7 +1468,7 @@ na standardni izlaz. Maksimalan broj elemenata niza je $100$.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{0}#
-#\izlaz{Greska: Nedozvoljena vrednost!}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.brisanje_elemenata}
@@ -1425,6 +1480,7 @@ na standardni izlaz. Maksimalan broj elemenata niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=deljivi_indeksom] 
 Napisati program koji u nizu dužine $n$ čiji se elementi učitavaju sa
 ulaza eliminiše sve brojeve koji nisu deljivi svojim indeksom. Niz
@@ -1432,7 +1488,7 @@ reorganizovati tako da nema \emph{rupa} koje su nastale eliminacijom
 elemenata i ispisati na standardni izlaz. Maksimalan broj elemenata
 niza je $700$. Ne razmatrati da li je u novom nizu, nakom brisanja i
 pomeranja, element deljiv svojim indeksom.
-%U slučaju greške, ispisati odgovarajuću poruku. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \napomena{Nulti element niza treba zadržati jer nije dozvoljeno
   deljenje nulom.}
 
@@ -1465,12 +1521,13 @@ pomeranja, element deljiv svojim indeksom.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.izbacivanje_prostih_elemenata] 
 Napisati program koji za učitani niz ispisuje niz koji se dobija
 izbacivanjem svih elemenata koji su prosti brojevi. Zadatak rešiti na
 dva načina: korišćenjem pomoćnog niza i transformacijom polaznog niza.
 Maksimalan broj elemenata niza je $100$.  \napomena{Broj $1$ nije
-  prost}.
+  prost}. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1531,6 +1588,7 @@ Maksimalan broj elemenata niza je $100$.  \napomena{Broj $1$ nije
 \begin{Exercise}[label=neopadajuce]
   Napisati funkciju koja proverava da li su elementi celebrojnog niza
   uređeni neopadajuće. Maksimalan broj elemenata niza je $300$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1539,7 +1597,7 @@ Maksimalan broj elemenata niza je $100$.  \napomena{Broj $1$ nije
 #\ulaz{8}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{-40 -8 -8 2 30 30 46 200}#
-#\izlaz{Jeste uredjen neopadajuce!}#  
+#\izlaz{Jeste uredjen neopadajuce.}#  
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1561,10 +1619,12 @@ Maksimalan broj elemenata niza je $100$.  \napomena{Broj $1$ nije
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=najduzi_neopadajuci]
-Saki indeks niza označava jedan dan u mesecu, a elementi celobrojnog
+Svaki indeks niza označava jedan dan u mesecu, a elementi celobrojnog
 niza predstavljaju broj artikala koji se prodao tog dana. Naći koliko
 najduže je iz dana u dan broj prodatih artikala rastao.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1601,10 +1661,12 @@ najduže je iz dana u dan broj prodatih artikala rastao.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=uzastopni_jednaki] 
 Napisati funkciju koja određuje dužinu najduže serije jednakih
 uzastopnih elemenata u datom nizu brojeva. Maksimalan broj elemenata
 niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1633,15 +1695,17 @@ niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=podniz] 
 Napisati funkciju koja određuje da li se jedan niz javlja kao podniz
 uzastopnih elemenata drugog niza. Zadatak rešiti na dva načina:
 \begin{enumerate}
-\item Elementi moraju da budu uzastopni.
-\item Elementi ne moraju da budu uzastopni, ali je redosled
+\item Tako da elementi jednog niza moraju da budu uzastopni u drugom nizu.
+\item Tako da elementi jednog niza ne moraju da budu uzastopni u drugom nizu, ali je redosled
   pojavljivanja isti.
 \end{enumerate}
 Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1729,6 +1793,7 @@ ako sadrži sve brojeve od $1$ do $n$.
 Napisati program koji sa standardnog ulaza učitava dimenziju niza i
 elemente niza i ispisuje da li je uneti niz permutacija ili
 ne. Maksimalan broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1757,24 +1822,25 @@ ne. Maksimalan broj elemenata niza je $100$.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
  Napisati program koji za dva cela broja $x$ i $y$ koja se učitavaju
  sa standardnog ulaza proverava da li se zapisuju pomoću istih
  cifara. \uputstvo{Rešiti korišćenjem nizova. Pogledati zadatak
-   \ref{p1.4_12}}.
+   \ref{FUN_15}}.
  
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva broja:}\ulaz{251 125}#
-#\izlaz{Brojevi se zapisuju istim ciframa!}#
+#\izlaz{Brojevi se zapisuju istim ciframa.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dva broja:}\ulaz{8898 9988}#
-#\izlaz{Brojevi se ne zapisuju istim ciframa!}#
+#\izlaz{Brojevi se ne zapisuju istim ciframa.}#
 \end{upotreba}
 \end{miditest}
 
@@ -1782,7 +1848,7 @@ ne. Maksimalan broj elemenata niza je $100$.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dva broja:}\ulaz{-7391 1397}#
-#\izlaz{Brojevi se zapisuju istim ciframa!}#
+#\izlaz{Brojevi se zapisuju istim ciframa.}#
 \end{upotreba}
 \end{miditest} 
 \linkresenje{p.brojevi_sa_istim_zapisima}

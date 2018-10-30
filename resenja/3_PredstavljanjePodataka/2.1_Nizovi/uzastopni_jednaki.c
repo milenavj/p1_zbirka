@@ -1,62 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdlib.h>
 
-#define DIM 100
+#define MAKS 100
 
-/* Ucitavanje dimenzije i elemenata niza. */
+/* Funkcija koja ucitava elemenate niza i vrsi proveru ispravnosti
+   ulaza. Kao povratnu vrednost vraca dimenziju ucitanog niza. */
 int ucitavanje(int niz[])
 {
-	int i, n;
+  int i, n;
 
-	printf("Unesite dimenziju niza: ");
-	scanf("%d", &n);
-	
-	if (n<=0 || n>DIM)
-	{
-		printf("Nedozvoljena dimenzija niza.\n");
-		exit(EXIT_FAILURE);
-	}
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) {
+    printf("Nedozvoljena dimenzija niza.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	printf("Unesite elemente niza: ");
-	for(i=0; i<n; i++)
-		scanf("%d", &niz[i]);
+  printf("Unesite elemente niza: ");
+  for (i = 0; i < n; i++)
+    scanf("%d", &niz[i]);
 
-	return n;
+  return n;
 }
 
-int najduza_serija(int a[], int n) 
+/* Funkcija koja vraca duzinu najduze serije jednakih elemenata 
+   niza. */
+int najduza_serija(int a[], int n)
 {
-	int i;
-	/* Parametar u kome se cuva duzina serije. Na pocetku je duzina serije jednaka 1, odnosno, samo jedan element je u seriji. Kasnije, u petlji se ovaj broj moze uvecati. */
-	int ts = 1;
-	/* Parametar ns predstavlja duzinu najduze serije. Na pocetku se postavlja na 1, odnosno pretpostavlja se da je duzina najduze serije 1, a u petlji se ova vrednost moze izmeniti. */
-	int ns = 1;
+  int i;
+  /* Na pocetku i duzina trenutne serije i duzina maksimalne serije
+     se inicijalizuju na 1. */
+  int trenutna_serija = 1;
+  int najduza_serija = 1;
 
-	for (i = 1; i < n; i++) 
-	{
-		/* Proverava se da li su uzastopni elementi jednaki. Ako je to slucaj uvecava se duzina serije. */
-		if (a[i] == a[i-1])
-			ts++;
-		else
-		/* Ako uzastopni elementi nisu jednaki serija je prekinuta i paramtar za duzinu serije se postavlja ponovo na 1 da bi mogla da se racuna duzina sledece serije. */
-			ts = 1;
+  for (i = 1; i < n; i++) {
+    /* Proverava se da li su uzastopni elementi jednaki. Ako je to
+       slucaj uvecava se duzina serije. Ako uzastopni elementi nisu
+       jednaki serija je prekinuta i paramtar za duzinu serije se
+       postavlja ponovo na 1 da bi mogla da se racuna duzina
+       sledece serije. */
+    if (a[i] == a[i - 1])
+      trenutna_serija++;
+    else
+      trenutna_serija = 1;
 
-		/* Ukoliko je trenutna duzina serije veca od duzine do sada najduze serije, parametar za duzinu najduze serije se postavlja na novu, vecu vrednost. */
-		if (ts > ns)
-			ns = ts;
-	}
-	
-	return ns;
+    /* Ukoliko je trenutna duzina serije veca od duzine do sada
+       najduze serije, parametar za duzinu najduze serije se
+       postavlja na novu, vecu vrednost. */
+    if (trenutna_serija > najduza_serija)
+      najduza_serija = trenutna_serija;
+  }
+
+  return najduza_serija;
 }
 
 int main()
 {
-	int n, a[DIM];
-	int i;
+  /* Deklaracija potrebnih promenljivih. */
+  int n, a[MAKS];
 
-	n = ucitavanje(a);
+  /* Ucitavanje niza. */
+  n = ucitavanje(a);
 
-	printf("Duzina najduze serije je %d.\n", najduza_serija(a, n));
+  /* Ispis rezultata. */
+  printf("Duzina najduze serije je %d.\n", najduza_serija(a, n));
 
-	return 0;
+  exit(EXIT_SUCCESS);
 }

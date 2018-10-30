@@ -50,7 +50,7 @@ int najduza_serija_jednakih(int a[], int n)
    int i; 
    int j; 
    int duzina;
-   int max_duzina=0;
+   int MAKS_duzina=0;
 
 
    for(i=0,j=0;i<n-1;i++)
@@ -67,8 +67,8 @@ int najduza_serija_jednakih(int a[], int n)
          if(i==n-2)
          {
             j++;
-            if(j>max_duzina)
-               max_duzina=j;
+            if(j>MAKS_duzina)
+               MAKS_duzina=j;
          }
       }   
       else
@@ -88,8 +88,8 @@ int najduza_serija_jednakih(int a[], int n)
             j++;  
            
          /* azuriramo maksimalnu duzinu uspona */
-         if(j>max_duzina)
-            max_duzina=j;
+         if(j>MAKS_duzina)
+            MAKS_duzina=j;
          /* 
              duzina uspona se postavlja na nulu 
              kako bi mogli da je iskoristimo
@@ -102,7 +102,7 @@ int najduza_serija_jednakih(int a[], int n)
         
    }    
            
-   return max_duzina;
+   return MAKS_duzina;
 }
 
 

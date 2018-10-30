@@ -1,54 +1,55 @@
-#include<stdio.h>
+#include <stdio.h>
+#include <stdlib.h>
 
-#define MAX 100
+#define MAKS 100
 
-/* Funkcija racuna zbir elemenata niza od pozicije i do pozicije j. */
-int zbir(int a[], int n, int i, int j){
+/* Funkcija koja racuna zbir elemenata niza od pozicije i do 
+   pozicije j. */
+int zbir(int a[], int i, int j)
+{
   int k;
-  
-  /* Zbir elemenata niza iz zadatog opsega. */
-  int z = 0;
-  
-  /* Obilaze se elementi niza. */
-  for(k=i; k<=j; k++){
-	z+=a[k];
+  int rezultat = 0;
+
+  /* Obilaze se elementi niza iz zadatog opsega. */
+  for (k = i; k <= j; k++) {
+    rezultat += a[k];
   }
-  
-  /* Vraca se izracunata vrednost. */ 
-  return z;
+
+  /* Vraca se izracunata vrednost. */
+  return rezultat;
 }
 
-int main(){
-  
+int main()
+{
+  /* Deklaracije potrebnih promenljivih. */
   int n, i, j;
-  int a[MAX];
-  
-  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost. */
+  int a[MAKS];
+
+  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite broj elemenata niza: ");
   scanf("%d", &n);
-  if(n <= 0 || n > MAX)
-  {
-	printf("Greska: Nedozvoljena vrednost!\n");
-	return 0;
+  if (n <= 0 || n > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
-  
+
   /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza:");
-  for(i=0; i<n; i++)
-	scanf("%d", &a[i]);
-  
-  /* Ucitavaju se vrednosti granica. */
+  for (i = 0; i < n; i++)
+    scanf("%d", &a[i]);
+
+  /* Ucitavaju se vrednosti granica i vrsi se provera
+     ispravnosti ulaza. */
   printf("Unesite vrednosti za i i j: ");
   scanf("%d%d", &i, &j);
-  
-  /* Proverava se korektnost zadatog intervala. */
-  if(i < 0 || j < 0 || i > n-1 || j > n-1 || i > j){
-	printf("Greska: Nekorektne vrednosti granica!\n");
-	return 0;
+  if (i < 0 || j < 0 || i > n - 1 || j > n - 1 || i > j) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
-  
-  /* Ispisuje se rezultat poziva funkcije. */
-  printf("Zbir je: %d", zbir(a,n,i,j));
-  
-  return 0;
+
+  /* Ispis rezultata. */
+  printf("Zbir je: %d", zbir(a, i, j));
+
+  exit(EXIT_SUCCESS);
 }

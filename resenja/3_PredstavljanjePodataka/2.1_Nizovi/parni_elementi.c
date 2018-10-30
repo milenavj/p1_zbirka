@@ -1,46 +1,41 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MAX 100
+#define MAKS 100
 
 int main()
 {
-  int a[MAX];
-  int n;
-  int i;
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS];
+  int n, i;
 
-  /* Ucitava se dimenzija niza i proverava se njena ispravnost. */
-  printf("Unesi dimenziju niza:\n");
+  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite dimenziju niza:\n");
   scanf("%d", &n);
-  if (n<1 || n>MAX)
-  {
-    printf("Nedozvoljena vrednost!\n");
-    return -1;
+  if (n < 1 || n > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
 
   /* Ucitavaju se elementi niza. */
   printf("Unesi elemente niza:\n");
-  for (i=0; i<n; i++)
-  {
-    scanf("%d", &a[i]); 
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
   }
 
   /* Ispisuju se elementi niza na parnim pozicijama. */
   printf("Elementi niza na parnim pozicijama:\n");
-  for (i=0; i<n; i+=2)
-  {
+  for (i = 0; i < n; i += 2)
     printf("%d ", a[i]);
-  }
   printf("\n");
 
   /* Ispisuju se parni elementi niza. */
   printf("Parni elementi niza:\n");
-  for (i=0; i<n; i++){
-    if (a[i]%2==0){
+  for (i = 0; i < n; i++)
+    if (a[i] % 2 == 0)
       printf("%d ", a[i]);
-    }
-  }
   printf("\n");
-   
-  
-  return 0;
+
+  exit(EXIT_SUCCESS);
 }

@@ -1,64 +1,62 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MAX 100
+#define MAKS 100
 
-/* Funkcija vraca broj parnih elemenata niza koji prethode maksimalnom elementu niza. */
+/* Funkcija vraca poziciju najveceg elementa niza. */
+int pozicija_najveceg(int a[], int n)
+{
+  int i, pozicija = 0;
+  /* Prolazi se kroz niz i ako se naidje na element cija je
+     vrednost veca od trenutno najveceg (a[pozicija]), vrsi
+     se azuriranje pozicije trenutno najveceg. */
+  for(i=1; i<n; i++)
+    if(a[i] > a[pozicija])
+      pozicija = i;
+    
+  return pozicija;
+}
+
+/* Funkcija vraca broj parnih elemenata niza koji prethode
+   maksimalnom elementu niza. */
 int prebrojavanje(int a[], int n)
 {
   int i;
-  
-  int maksimum;
-  int pozicija_maksimuma;
-  
-  /* Brojac elemenata koji su parni i prethode maksimalnom. */
-  int broj_parnih;
+  int pozicija_maksimuma = pozicija_najveceg(a,n);
 
-  /* Pronalazi se maksimalni element niza i njegova pozicija. */
-  maksimum = a[0];
-  pozicija_maksimuma = 0;
-
-  for(i=1;i<n-1;i++)
-    if(a[i]> maksimum)
-    {
-      maksimum = a[i];
-      pozicija_maksimuma = i;
-    }
-
-  /* Prebrojavaju se parni elementi koji prethode maksimalnom. */
-  broj_parnih = 0;
-  for(i=0; i < pozicija_maksimuma; i++){
-    if(a[i]%2==0){
+  int broj_parnih = 0;
+  for (i = 0; i < pozicija_maksimuma; i++) {
+    if (a[i] % 2 == 0) {
       broj_parnih++;
     }
   }
 
-  /* Vraca se izracunata vrednost. */
   return broj_parnih;
 }
 
 int main()
 {
-  int a[MAX];
-  int n;
-  int i;
-  
-  /* Ucitava se broj elemenata niza i proverava se njegova ispravnost. */
+  /* Deklaracija potrebnih promenljivih. */
+  int a[MAKS];
+  int n, i;
+
+  /* Ucitava se broj elemenata niza i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite broj elemenata niza:");
   scanf("%d", &n);
-  if(n<=0 || n>MAX)
-  {
-     printf("Greska: Nedozvoljena vrednost!\n");
-     return 0;
+  if (n <= 0 || n > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
-  
+
   /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza:");
-  for(i=0;i<n;i++){ 
-   scanf("%d",&a[i]);
+  for (i = 0; i < n; i++) {
+    scanf("%d", &a[i]);
   }
-   
-  /* Ispisuje se rezultat poziva funkcije. */
-  printf("%d\n", prebrojavanje(a,n));
-  
-  return 0;
+
+  /* Ispis rezultata. */
+  printf("%d\n", prebrojavanje(a, n));
+
+  exit(EXIT_SUCCESS);
 }

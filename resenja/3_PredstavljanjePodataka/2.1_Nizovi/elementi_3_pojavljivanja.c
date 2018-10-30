@@ -1,71 +1,64 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MAX 100
+#define MAKS 100
 
-/* Funkcija koja vraca broj pojavljivanja broja x u nizu */
+/* Funkcija koja vraca broj pojavljivanja broja x u nizu. */
 int broj_pojavljivanja(int niz[], int n, int x)
 {
   int i;
-  
-  /* Broj pojavljivanja broja x */
-  int brojac = 0;
+  int brojac_pojavljivanja = 0;
 
-  /* Obilazi se element po element niza */
-  for(i=0;i<n;i++){
-    /* Ukoliko je tekuci element jednak trazenom broju */
-    if(niz[i] == x){
-      /* Uvecava se broj pojavljivanja */
-      brojac++;
+  for (i = 0; i < n; i++) {
+    if (niz[i] == x) {
+      brojac_pojavljivanja++;
     }
   }
 
-  /* Vraca se izracunata vrednost */
-  return rezultat;
+  return brojac_pojavljivanja;
 }
 
 int main()
 {
-  /* Niz elemenata koje zadaje korisnik */
-  int a[MAX];
-  
-  /* Niz elemenata koji se pojavljuju tri puta */
-  int b[MAX];
-  
-  int i, j, n, n_b;
+  /* Deklaracija potrebnih promenljivih. */
+  int a[MAKS], rezultujuci_niz[MAKS];
+  int i, n, j, duzina_rezultujuceg_niza;
 
-  /* Ucitava se broj elemenata korisnickog niza i proverava se njegova ispravnost. */
+  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
+     ulaza. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
-  if(n<1 || n>MAX)
-  {
-    printf("Greska: Nedozvoljena vrednost!\n");
-    return -1;
+  if (n < 1 || n > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi korisnickog niza. */
+  /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza a: ");
-  for(i=0;i<n;i++)
+  for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 
-  /* Parametar j je brojac elemenata rezultujuceg niza b. */
+  /* Parametar j je brojac elemenata rezultujuceg niza. */
   j = 0;
-  
+
   /* Obilazi se element po element niza a. */
-  for(i=0;i<n;i++)
-  {
-    /* Ukoliko se tekuci element pojavljuje vise od dva puta u nizu a i nije upisan u niz b koji trenutno ima j elemenata, dodaje se u niz b na poziciju j i uvecava se broj elemenata niza b. */
-    if(broj_pojavljivanja(a, n, a[i])>=3 && broj_pojavljivanja(b, j, a[i])==0)
-    {
-      b[j] = a[i];
+  for (i = 0; i < n; i++) {
+    /* Ukoliko se tekuci element pojavljuje vise od dva puta u nizu 
+       a i nije upisan u rezultujuci niz koji trenutno ima j
+       elemenata, dodaje se u rezultujuci niz na poziciju j i 
+       uvecava se broj elemenata rezultujuceg niza. */
+    if (broj_pojavljivanja(a, n, a[i]) >= 3
+        && broj_pojavljivanja(rezultujuci_niz, j, a[i]) == 0) {
+      rezultujuci_niz[j] = a[i];
       j++;
     }
   }
-  
-  /* Ispisuje se rezultujuci niz b, broj elemenata u nizu b je j. */
-  n_b = j;
-  for(i=0;i<n_b;i++)
-    printf("%d ", b[i]);
+
+  /* Ispis rezultata. */
+  duzina_rezultujuceg_niza = j;
+  for (i = 0; i < duzina_rezultujuceg_niza; i++)
+    printf("%d ", rezultujuci_niz[i]);
   printf("\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

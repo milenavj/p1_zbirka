@@ -1,63 +1,70 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdlib.h>
 
-/* Maksimalan broj dana u mesecu je 31, ali dani pocinju od 1, pa je potrebno odvojiti 32 mesta u nizu jer se nulti ne koristi. */
-#define DIM 32
+/* Maksimalan broj dana u mesecu je 31, ali dani pocinju od 1, pa
+   je potrebno odvojiti 32 mesta u nizu jer se nulti ne koristi. */
+#define MAKS_DANA 32
 
-/* Ucitavanje dimenzije i elemenata niza. */
+/* Funkcija ucitava dimenziju i elemente niza. */
 int ucitavanje(int niz[])
 {
-	int i, n;
+  int i, n;
 
-	printf("Unesite dimenziju niza: ");
-	scanf("%d", &n);
-	
-	if (n<=0 || n>DIM)
-	{
-		printf("Nedozvoljena dimenzija niza.\n");
-		exit(EXIT_FAILURE);
-	}
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
 
-	printf("Unesite broj prodatih artikala: ");
-	for(i=0; i<n; i++)
-		scanf("%d", &niz[i]);
+  if (n <= 0 || n > MAKS_DANA) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	return n;
+  printf("Unesite broj prodatih artikala: ");
+  for (i = 0; i < n; i++)
+    scanf("%d", &niz[i]);
+
+  return n;
 }
 
-int najduzi_neopadajuci(int a[], int n) 
+int najduzi_neopadajuci(int a[], int n)
 {
-	int i;
-	/* Parametar u kome se cuva duzina serije. Na pocetku je duzina serije jednaka 1, odnosno, samo jedan element je u seriji. Kasnije, u petlji se ovaj broj moze uvecati. */
-	int ts = 1;
-	/* Parametar ns predstavlja duzinu najduze serije. Na pocetku se postavlja na 1, odnosno pretpostavlja se da je duzina najduze serije 1, a u petlji se ova vrednost moze izmeniti. */
-	int ns = 1;
+  int i;
+  /* Na pocetku i duzina trenutne serije i duzina maksimalne serije
+     se inicijalizuju na 1. */
+  int duzina_trenutne_serije = 1;
+  int duzina_najduze_serije = 1;
 
-	for (i = 1; i < n; i++) 
-	{
-		/* Proverava se da li uzastopni elementi ispunjavaju neopadajuci uslov. Ako je to slucaj uvecava se duzina serije. */
-		if (a[i] >= a[i-1])
-			ts++;
-		else
-		/* Ako uzastopni elementi nisu jednaki serija je prekinuta i paramtar za duzinu serije se postavlja ponovo na 1 da bi mogla da se racuna duzina sledece serije. */
-			ts = 1;
+  for (i = 1; i < n; i++) {
+    /* Proverava se da li uzastopni elementi ispunjavaju
+       neopadajuci uslov. Ako je to slucaj uvecava se duzina
+       serije, a ako nije, duzina trenutne serije se vraca na 1,
+       kako bi se ispravno racunala duzina sledece serije. */
+    if (a[i] >= a[i - 1])
+      duzina_trenutne_serije++;
+    else
+      duzina_trenutne_serije = 1;
+    
+    /* Ukoliko je trenutna duzina serije veca od duzine do sada
+       najduze serije, parametar za duzinu najduze serije se
+       postavlja na novu, vecu vrednost. */
+    if (duzina_trenutne_serije > duzina_najduze_serije)
+      duzina_najduze_serije = duzina_trenutne_serije;
+  }
 
-		/* Ukoliko je trenutna duzina serije veca od duzine do sada najduze serije, parametar za duzinu najduze serije se postavlja na novu, vecu vrednost. */
-		if (ts > ns)
-			ns = ts;
-	}
-	
-	return ns;
+  return duzina_najduze_serije;
 }
 
 int main()
 {
-	int n, a[DIM];
-	int i;
+  /* Deklaracija potrebnih promenljivih. */
+  int a[MAKS_DANA], n;
 
-	n = ucitavanje(a);
+  /* Ucitava se ulaz. */
+  n = ucitavanje(a);
 
-	printf("Duzina najduzeg neopadajuceg prodavanja je %d.\n", najduzi_neopadajuci(a, n));
+  /* Ispis rezultata. */
+  printf("Duzina najduzeg neopadajuceg prodavanja je %d.\n",
+         najduzi_neopadajuci(a, n));
 
-	return 0;
+  exit(EXIT_SUCCESS);
 }
