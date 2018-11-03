@@ -2,7 +2,6 @@
 #include<math.h>
 #include<stdlib.h>
 
-
 /* Funkcija koja racuna broj cifara celog broja n. */
 int broj_cifara(int n)
 {
@@ -20,7 +19,6 @@ int broj_cifara(int n)
     
   return brojac;
 }
-
 
 /* Funkcija koja racuna broj koji se dobija rotacijom broja n za
    jedno mesto u levo. */
@@ -44,7 +42,6 @@ int rotacija(int n)
      mnozenjem sa znakom pocetnog broja. */
   return znak * (n_bez_prve_cifre*10 + prva_cifra);
 }
-
 
 int main()
 {

@@ -35,7 +35,6 @@ int broj_dana(int mesec, int godina)
   return -1;
 }
 
-
 /* Funkcija proverava da li je datum ispravan. Ako je datum
    ispravan funkcija vraca 1, inace vraca 0. */
 int ispravan(int dan, int mesec, int godina)
@@ -56,7 +55,7 @@ int ispravan(int dan, int mesec, int godina)
   return 1;
 }
 
-
+/* Funkcija koja racuna sledeci dan. */
 void sledeci_dan(int dan, int mesec, int godina)
 {
   /* Za kraj godine, odnosno za datum 31.12. sledeci datum je 1.1.

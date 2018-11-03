@@ -20,7 +20,6 @@ int broj_cifara(int n)
   return brojac;
 }
 
-
 /* Funkcija proverava da li je broj Armstrongov. */
 int armstrong(int x)
 {
@@ -38,7 +37,6 @@ int armstrong(int x)
      Armstrongov, u suprotnom nije. */
   return x_pocetno == suma;
 }
-
 
 int main()
 {

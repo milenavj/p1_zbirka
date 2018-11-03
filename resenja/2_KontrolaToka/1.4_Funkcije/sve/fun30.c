@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-
 /* Funkcija koja stampa n zvezdica za kojima sledi znak za novi
    red. */
 void stampaj_zvezdice(int n)
@@ -12,24 +11,17 @@ void stampaj_zvezdice(int n)
   printf("\n");
 }
 
-
 /* Funkcija koja crta grafikon. */
 void grafikon_h(int a, int b, int c, int d)
 {
   /* Prvo se ispisuje a zvezdica. */
   stampaj_zvezdice(a);
 
-  /* Zatim u sledecem redu b zvezdica. */
+  /* Postupak se ponavlja za vrednosti b, c i d. */
   stampaj_zvezdice(b);
-
-  /* Zatim u sledecem redu c zvezdica. */
   stampaj_zvezdice(c);
-
-  /* Zatim u poslednjem redu d zvezdica. */
   stampaj_zvezdice(d);
-
 }
-
 
 int main()
 {
@@ -37,12 +29,12 @@ int main()
   int a, b, c, d;
 
   /* Ucitavaju se vrednosti a,b,c,d. */
-  printf("Unesite vrednosti: ");
+  printf("Unesite brojeve: ");
   scanf("%d%d%d%d", &a, &b, &c, &d);
 
   /* Vrsi se provera ispravnosti ulaza i ispisuje se rezultat. */
   if (a < 0 || b < 0 || c < 0 || d < 0) {
-    printf("Greska: pogresan unos!\n");
+    printf("Greska: neispravan unos.\n");
     return -1;
   } else {
     grafikon_h(a, b, c, d);

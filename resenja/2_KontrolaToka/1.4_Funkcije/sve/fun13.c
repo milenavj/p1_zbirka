@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
 /* Funkcija proverava da li su sve cifre broja x parne i vraca
    1 ako je uslov ispunjen i 0 ako nije. */
 int sve_parne_cifre(int x)
@@ -23,7 +22,6 @@ int sve_parne_cifre(int x)
      treba da se vrati 1. */
   return 1;
 }
-
 
 /* Funkcija proverava da li su sve cifre broja x jednake i vraca
    1 ako jesu, a 0 u suprotnom. */
@@ -51,7 +49,6 @@ int sve_cifre_jednake(int x)
      vraca 1. */
   return 1;
 }
-
 
 int main()
 {

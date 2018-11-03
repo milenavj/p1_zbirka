@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-
 /* Funkcija koja racuna najveci od 4 prosledjena broja. */
 int maksimum(int a, int b, int c, int d)
 {
@@ -16,7 +15,6 @@ int maksimum(int a, int b, int c, int d)
 
   return max;
 }
-
 
 /* Pomocna funkcija za stampanje beline ili zvezdice. */
 void stampaj_znak(int polje, int granica)
@@ -61,14 +59,13 @@ void grafikon_v(int a, int b, int c, int d)
   }
 }
 
-
 int main()
 {
   /* Deklaracija potrebnih promenljivih. */
   int a, b, c, d;
 
   /* Ucitavaju se vrednosti cetiri broja. */
-  printf("Unesite vrednosti: ");
+  printf("Unesite brojeve: ");
   scanf("%d%d%d%d", &a, &b, &c, &d);
 
   /* Vrsi se provera ispravnosti ulaza i poziva se funkcija za

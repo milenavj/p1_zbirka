@@ -31,7 +31,6 @@ int par_nepar(int x)
   return 1;
 }
 
-
 int main()
 {
   /* Deklaracija potrebne promenljive. */

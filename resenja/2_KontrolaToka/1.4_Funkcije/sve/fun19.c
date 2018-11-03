@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-
 /* Funkcija koja vraca zbir cifara datog broja x. */
 int zbir_cifara(int x)
 {
@@ -11,7 +10,6 @@ int zbir_cifara(int x)
   }
   return zbir;
 }
-
 
 /* Funkcija koja vraca 1 ako je broj srecan, a 0 u suprotnom. */
 int srecan(int x)

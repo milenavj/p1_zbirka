@@ -1,12 +1,14 @@
 #include <stdio.h>
 
+/* Funkcija koja racuna zbir reciprocnih vrednosti brojeva
+   iz intervala [1,n]. */
 float zbir_reciprocnih(int n)
 {
   float zbir = 0;
   int i;
   
   /* Za svako i izmedju 1 i n na zbir se dodaje vrednost 1/i.
-     Napomena: zbog celobrojnog deljenja mora 1.0/i. */
+     Napomena: zbog celobrojnog deljenja mora da stoji 1.0/i. */
   for (i = 1; i <= n; i++)
     zbir += 1.0 / i;
   

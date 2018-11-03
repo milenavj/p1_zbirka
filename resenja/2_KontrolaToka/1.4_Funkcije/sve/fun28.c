@@ -1,6 +1,5 @@
 #include<stdio.h>
 
-
 /* Funkcija koja proverava da li je godina prestupna. */
 int prestupna(int godina)
 {
@@ -9,7 +8,6 @@ int prestupna(int godina)
   else
     return 0;
 }
-
 
 /* Funkcija odredjuje broj dana u datom mesecu. */
 int broj_dana(int mesec, int godina)
@@ -37,7 +35,6 @@ int broj_dana(int mesec, int godina)
   return -1;
 }
 
-
 /* Funkcija proverava da li je datum ispravan. Ako je datum
    ispravan funkcija vraca 1, inace vraca 0. */
 int ispravan(int dan, int mesec, int godina)
@@ -58,7 +55,6 @@ int ispravan(int dan, int mesec, int godina)
   return 1;
 }
 
-
 /* Funkcija odredjuje koliko dana je proteklo od pocetka godine. */
 int od_nove_godine(int dan, int mesec, int godina)
 {
@@ -74,7 +70,6 @@ int od_nove_godine(int dan, int mesec, int godina)
   return suma_dana + dan;
 }
 
-
 /* Funkcija odredjuje koliko dana ima do kraja godine. */
 int do_kraja_godine(int dan, int mesec, int godina)
 {
@@ -88,7 +83,6 @@ int do_kraja_godine(int dan, int mesec, int godina)
   /* Na kraju se dodaje koliko je dana je ostalo u datom mesecu. */
   return suma_dana + broj_dana(mesec, godina) - dan;
 }
-
 
 /* Funkcija vraca 1 ako je prvi datum pre drugog datuma. U
    suprotnom vraca 0. */
@@ -109,7 +103,6 @@ int prethodi(int dan1, int mesec1, int godina1, int dan2,
     return 0;
 }
 
-
 /* Funkcija vraca broj dana u datoj godini. */
 int broj_dana_u_godini(int godina)
 {
@@ -118,7 +111,6 @@ int broj_dana_u_godini(int godina)
   else
     return 365;
 }
-
 
 /* Funkcija koja racuna broj dana izmedju dva datuma. */
 int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
@@ -175,7 +167,6 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
 
   return suma_dana;
 }
-
 
 int main()
 {
