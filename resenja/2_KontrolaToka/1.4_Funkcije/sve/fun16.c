@@ -38,7 +38,7 @@ int main()
   /* Deklaracija potrebne promenljive. */
   int n;
   
-  /* Ucitava se vrednost  broja n. */
+  /* Ucitava se vrednost broja n. */
   printf("Unesite broj: ");
   scanf("%d", &n);
   

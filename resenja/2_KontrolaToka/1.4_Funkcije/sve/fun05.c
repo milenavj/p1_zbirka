@@ -1,6 +1,5 @@
 #include <stdio.h>
 
-
 /* Funkcija koja racuna nzd(x,y) primenom Euklidovog algoritma. */
 int euklid(int x, int y)
 {

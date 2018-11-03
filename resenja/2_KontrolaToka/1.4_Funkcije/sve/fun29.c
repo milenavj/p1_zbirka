@@ -18,7 +18,6 @@ void romb(int n)
     /* Ispisuje se novi red. */
     printf("\n");
   }
-
 }
 
 int main()
