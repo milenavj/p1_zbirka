@@ -12,7 +12,7 @@ int euklid(int x, int y)
      =>
      1. ostatak = x % y = 18 % 12 = 6
      2. x postaje y => x = 12
-     3.y postaje ostatak => y = 6
+     3. y postaje ostatak => y = 6
      =>
      1. ostatak = x % y = 12 % 6 = 0
      2. x postaje y => x = 6

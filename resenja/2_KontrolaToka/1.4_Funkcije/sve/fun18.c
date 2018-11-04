@@ -32,9 +32,10 @@ int rotacija(int n)
 
   /* Izdvajaju se prva cifra i deo broja bez prve cifre. 
      Na primer: ako je n = 1234 onda je br_cifara = 4
-     prva_cifra se dobija kao n / (10^br_cifara)  = 1234/1000 = 1.
-     n_bez_prve_cifre se dobija kao n%1000 = 234. */
-  int tezina_pozicije = pow(10, br_cifara); 
+     prva_cifra se dobija kao:
+     n / (10^(br_cifara-1)) = 1234/1000 = 1.
+     n_bez_prve_cifre se dobija kao: n%1000 = 234. */
+  int tezina_pozicije = pow(10, br_cifara-1); 
   prva_cifra = n / tezina_pozicije;
   n_bez_prve_cifre = n % tezina_pozicije;
   
