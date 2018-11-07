@@ -2,173 +2,210 @@
 \section{Pokazivači}
 
 
-\begin{Exercise}[label=v2.2_01] 
-Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se u prvom nalazi manji, a u drugom veći. Napisati program koji učitava dva cela broja i ispisuje rezultat poziva funkcije. 
+\begin{Exercise}[label=POK_01] 
+Napisati funkciju koja uređuje svoja dva celobrojna argumenta tako da se
+u prvom nalazi manja vrednost, a u drugom veća. 
+Napisati program koji učitava dva cela broja i ispisuje uređene brojeve. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite vrednosti promenljivih x i y: }\ulaz{2 5}#
-#\izlaz{Uredjene promenljive: x=2, y=5}#
+#\izlaz{Unesite dva broja: }\ulaz{2 5}#
+#\izlaz{Uredjene promenljive: 2, 5}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite vrednosti promenljivih x i y: }\ulaz{11 -4}#
-#\izlaz{Uredjene promenljive: x=-4, y=11}#
+#\izlaz{Unesite dva broja: }\ulaz{11 -4}#
+#\izlaz{Uredjene promenljive: -4, 11}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v2.2_01}
+\linkresenje{POK_01}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_01.c}
+\begin{Answer}[ref=POK_01]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok01.c}
 \end{Answer}
  \fi
 
-\begin{Exercise}[label=v2.2_02] 
-  Napisati funkciju koja za boju datu u \textit{rgb} formatu računa \textit{cmy} format po formulama:\\
-  $c = 1 - ( r / 255 )$\\
-  $m = 1 - ( g / 255 )$\\
-  $y = 1 - ( b / 255 )$\\
-  Napisati program koji učitava tri cela broja broja (\textit{rgb} format) i ispisuje rezultat poziva funkcije (\textit{cmy} format). \napomena{Vrednosti boja u \textit{rgb} formatu su u opsegu $[0,255]$.}\\
+ 
+\begin{Exercise}[label=POK_02] 
+  Napisati funkciju koja datu boju u \textit{rgb} formatu konvertuje u boju u \textit{cmy} formatu po sledećim formulama:\\
+  $$c = 1 - r / 255$$
+  $$m = 1 - g / 255$$
+  $$y = 1 - b / 255$$
+  Napisati program koji učitava boju u \textit{rgb} formatu i ispisuje vrednosti unete boje u \textit{cmy} formatu.
+  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+  \napomena{Vrednosti boja u \textit{rgb} formatu su u opsegu $[0,255]$.}\\
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite boju u rgb formatu: }\ulaz{56 111 24}#
-#\izlaz{c=0.78, m=0.56, y=0.91}#
+#\izlaz{Unesite boju u rgb formatu:}\ulaz{56 111 24}#
+#\izlaz{cmy: (0.78, 0.56, 0.91)}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite boju u rgb formatu: }\ulaz{156 -90 5}#
-#\izlaz{Nekorektan unos.}#
+#\izlaz{Unesite boju u rgb formatu:}\ulaz{156 -90 5}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite boju u rgb formatu: }\ulaz{9 0 237}#
-#\izlaz{c=0.96, m=1.00, y=0.07}#
+#\izlaz{Unesite boju u rgb formatu:}\ulaz{9 0 237}#
+#\izlaz{cmy: (0.96, 1.00, 0.07)}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite boju u rgb formatu: }\ulaz{300 11 27}#
-#\izlaz{Nekorektan unos.}#
+#\izlaz{Unesite boju u rgb formatu:}\ulaz{300 11 27}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v2.2_02}
+\linkresenje{POK_02}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=v2.2_02]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_02.c}
+\begin{Answer}[ref=POK_02]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok02.c}
 \end{Answer}
  \fi
 
-\begin{Exercise}[label=v2.2_03] 
-   Napisati funkciju koja za dve prave date svojim koeficijentima
-   pravca i slobodnim članovima određuje njihovu tačku preseka. 
-   Funkcija treba da vrati 1 ako se prave seku i 0 ako nemaju
-   tačku preseka (ako su paralelne). Napisati program
-   koji učitava podatke o pravama, poziva napisanu funkciju i 
-   ispisuje odgovarajuću poruku.
+ 
+\begin{Exercise}[label=POK_03] 
+Napisati funkciju koja za dve prave date svojim koeficijentima
+pravca i slobodnim članovima određuje njihovu tačku preseka. 
+Funkcija treba da vrati jedinicu ako se prave seku i nulu ako nemaju
+tačku preseka (ako su paralelne). Napisati program
+koji učitava podatke o pravama i ukoliko prave imaju presek, ispisuje
+koordinate tačke preseka, a ako nemaju, ispisuje odgovarajuću poruku.
    
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite k i n za prvu pravu: }\ulaz{4 5}#
-#\izlaz{Unesite k i n za drugu pravu: }\ulaz{11 -4}#
+#\izlaz{Unesite k i n za prvu pravu:}\ulaz{4 5}#
+#\izlaz{Unesite k i n za drugu pravu:}\ulaz{11 -4}#
 #\izlaz{Prave se seku u tacki (1.29,10.14).}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite k i n za prvu pravu: }\ulaz{0.5 -4.7}#
-#\izlaz{Unesite k i n za drugu pravu: }\ulaz{0.5 9.1}#
+#\izlaz{Unesite k i n za prvu pravu:}\ulaz{0.5 -4.7}#
+#\izlaz{Unesite k i n za drugu pravu:}\ulaz{0.5 9.1}#
 #\izlaz{Prave su paralelne.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{v2.2_03}
+\linkresenje{POK_03}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=v2.2_03]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_03.c}
+\begin{Answer}[ref=POK_03]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok03.c}
 \end{Answer}
  \fi
 
-\begin{Exercise}[label=v2.xy] 
-Napisati funkciju koja za dva cela broja izračunava njihov količnik i ostatak pri deljenju. Funkcija treba da vrati vrednost 1 ukoliko je uspešno izračunala vrednosti i 0 ukoliko deljenje nije moguće. Napisati program koji testira rad ove funkcije. 
+ 
+\begin{Exercise}[label=POK_04] 
+Napisati funkciju koja za dva cela broja izračunava njihov količnik i ostatak pri deljenju. 
+Funkcija treba da vrati vrednost jedinicu ukoliko je uspešno izračunala vrednosti, 
+a nulu ukoliko deljenje nije moguće. Napisati program koji učitava dva cela broja i 
+ispisuje njihov količnik i ostatak pri deljenju. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{4 5}#
+#\izlaz{Kolicnik: 0}#
+#\izlaz{Ostatak: 4}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{4 0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite brojeve:}\ulaz{-123 11}#
+#\izlaz{Kolicnik: -11}#
+#\izlaz{Ostatak: -2}#
+\end{upotreba}
+\end{minitest}
+
+\linkresenje{POK_04}
 \end{Exercise}
-
-\begin{Exercise}[label=v2.xyz] 
-Napisati funkciju koja za dinarsku vrednost cene artikla izračunava odgovarajuću cenu u evrima i u dolarima. Napisati program koji testira rad ove funkcije. 
-%TODO dodati kurs evra i dolara, ovo bi trebalo da budu dve funkcije, treba nekako opravdati stavljanje u istu funkciju
-\end{Exercise}
-
-\begin{Exercise}[label=v2.xyz] 
-Napisati funkciju koja za dužinu trajanja filma kaja je data u sekundama, određuje ukupno trajanje filma u satima, minutama i sekundama. Napisati program koji testira rad ove funkcije. 
-\end{Exercise}
+\ifresenja
+\begin{Answer}[ref=POK_04]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok04.c}
+\end{Answer}
+\fi
 
 
-
-\begin{Exercise}[label=p2.6_06] 
- Napisati funkciju \kckod{void\ modifikacija(char*\ s,\ char*\ t, int*\ br\_modifikacija)} koja na osnovu niske $s$ formira nisku $t$ tako što svako malo slovo zamanjuje velikim. Broj izvršenih modifikacija se čuva u okviru argumenta $br\_modifikacija$. Pretpostaviti da niska $s$ neće biti duža od 20 karaktera. Napisati program koji testira rad napisane funkcije. 
-%TODO ovaj zadatak je potpuno neprirodan jer se broj modifikacija moze vratiti kao povratna vrednost funkcije 
-%ovo bi trebalo modifikovati tako da se malo zamenjuje velikim, veliko malim, a da onda imamo dva argumenta koja prate modifikacije
+\begin{Exercise}[label=POK_05] 
+Napisati funkciju koja za dužinu trajanja filma koje je dato u sekundama, 
+određuje ukupno trajanje filma u satima, minutama i sekundama. 
+Napisati program koji učitava trajanje filma u sekundama i ispisuje odgovarajuće
+vreme trajanja u formatu \textit{broj\_sati:broj\_minuta:broj\_sekundi}.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{123abc789XY}#
-#\izlaz{Modifikovana niska je: 123ABC789XY}#
-#\izlaz{Broj modifikacija je: 3}#
+#\izlaz{Trajanje fima u sekundama:}\ulaz{5000}#
+#\izlaz{1h:23m:20s}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{zimA}#
-#\izlaz{Modifikovana niska je: ZIMA}#
-#\izlaz{Broj modifikacija je: 3}#
+#\izlaz{Trajanje fima u sekundama:}\ulaz{-300}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{SNEG}#
-#\izlaz{Modifikovana niska je: SNEG}#
-#\izlaz{Broj modifikacija je: 0}#
+#\izlaz{Trajanje fima u sekundama:}\ulaz{2500}#
+#\izlaz{0h:41m:40s}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{1234}#
-#\izlaz{Modifikovana niska je: 1234}#
-#\izlaz{Broj modifikacija je: 0}#
+#\izlaz{Trajanje fima u sekundama:}\ulaz{7824}#
+#\izlaz{2h:10m:24s}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.6_06}
+\linkresenje{POK_05}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=p2.6_06]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/9.c}
+\begin{Answer}[ref=POK_05]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok05.c}
 \end{Answer}
- \fi
+\fi
 
 
-\begin{Exercise}[label=p2.6_07] 
- Napisati funkciju \kckod{void\ interpunkcija(int*\ br\_tacaka,\ int*\ br\_zareza)} koja prebrojava tačke i zareze u tekstu koji se unosi sa standardnog ulaza. Napisati program koji testira napisanu funkciju.\\
+\begin{Exercise}[label=POK_06] 
+ Napisati funkciju \kckod{void interpunkcija(int* broj\_tacaka, int* broj\_zareza)} koja 
+ sa ulaza učitava karakter po karakter sve do kraja ulaza i prebrojava sva pojavljivanja
+ karaktera tačka i sva pojavljivanja karaktera zarez. 
+ Napisati program koji za uneti tekst ispisuje koliko puta se pojavila tačka, a koliko
+ puta se pojavio zarez.\\
+ 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -198,22 +235,29 @@ Napisati funkciju koja za dužinu trajanja filma kaja je data u sekundama, odre�
 \end{upotreba}
 \end{minitest}
 
-\linkresenje{p2.6_07}
+\linkresenje{POK_06}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=p2.6_07]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/10.c}
+\begin{Answer}[ref=POK_06]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok06.c}
 \end{Answer}
  \fi
 
 
-\begin{Exercise}[label=p2.6_08] 
- Napisati funkciju \kckod{void\ par\_nepar(int\ a[],\ int\ n,\ int\ parni[],\ int*\ pn,\ int\ neparni[],\ int*\ nn)} koja razbija niz $a$ na niz parnih i niz neparnih brojeva. Pokazivači $pn$ i $nn$ redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata. Pretpostaviti da dužina niza $a$ neće biti veća od 50. Napisati program koji testira napisanu funkciju.\\
+\begin{Exercise}[label=POK_07] 
+ Napisati funkciju \kckod{void par\_nepar(int a[], int n, int parni[], int* np, int neparni[], int* nn)} 
+ koja razbija niz $a$ na niz parnih i niz neparnih brojeva. 
+ Pokazivači $np$ i $nn$ redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata. 
+ Maksimalan broj elemenata niza je $50$. 
+ Napisati program koji učitava dimenziju niza, a zatim i elemente niza i 
+ ispisuje odgovarajuće nizove parnih, odnosno neparnih elemenata unetog niza. 
+ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj elemenata niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{1 8 9 -7 -16 24 77 4}#
 #\izlaz{Niz parnih brojeva: 8 -16 24 4}#
 #\izlaz{Niz neparnih brojeva: 1 9 -7 77}#
@@ -222,53 +266,56 @@ Napisati funkciju koja za dužinu trajanja filma kaja je data u sekundama, odre�
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj elemenata niza: }\ulaz{5}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{5}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{2 4 6 8 -11}#
 #\izlaz{Niz parnih brojeva: 2 4 6 8}#
 #\izlaz{Niz neparnih brojeva: -11}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj elemenata niza: }\ulaz{2}#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{2}#
 #\izlaz{Unesite elemente niza: }#
 #\ulaz{-15 15}#
-#\izlaz{Niz parnih brojeva: }#
+#\izlaz{Niz parnih brojeva:}#
 #\izlaz{Niz neparnih brojeva: -15 15}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj elemenata niza: }\ulaz{1}#
-#\izlaz{Unesite elemente niza: }#
-#\ulaz{0}#
-#\izlaz{Niz parnih brojeva: 0}#
-#\izlaz{Niz neparnih brojeva:}#
+#\izlaz{Unesite broj elemenata niza:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.6_08}
+\linkresenje{POK_07}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=p2.6_08]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/11.c}
+\begin{Answer}[ref=POK_07]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok07.c}
 \end{Answer}
  \fi
 
 
-\begin{Exercise}[label=p2.6_09] 
- Napisati funckiju \kckod{void\ min\_max(float\ a[],\ int\ n,\ float*\ min,\ float*\ max)} koja izračunava minimalni i maksimalni element niza $a$ dužine $n$. Napisati program koji učitava niz realnih brojeva maksimalne dužine 50 i ispisuje vrednosti minimuma i maksimuma zaokruženu na tri decimale. \\
+\begin{Exercise}[label=POK_08] 
+ Napisati funckiju \kckod{void min\_max(float a[], int n, float* najmanji, float* najveci)} koja 
+ izračunava najmanji i najveći element niza $a$ dužine $n$. 
+ Napisati program koji učitava niz realnih brojeva maksimalne dužine 50 i 
+ ispisuje vrednosti namanjeg i najvećeg elementa niza, zaokružene na tri decimale.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza: }\ulaz{5}#
 #\izlaz{Unesite elemente niza: }#
 #\ulaz{24.16 -32.11 999.25 14.25 11}#
-#\izlaz{Minimum: -32.110}#
-#\izlaz{Maksimum: 999.250}#
+#\izlaz{Najmanji: -32.110}#
+#\izlaz{Najveci: 999.250}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -277,497 +324,36 @@ Napisati funkciju koja za dužinu trajanja filma kaja je data u sekundama, odre�
 #\izlaz{Unesite broj elemenata niza: }\ulaz{4}#
 #\izlaz{Unesite elemente niza: }#
 #\ulaz{-5.126 -18.29 44 29.268}#
-#\izlaz{Minimum: -18.290}#
-#\izlaz{Maksimum: 44.000}#
+#\izlaz{Najmanji: -18.290}#
+#\izlaz{Najveci: 44.000}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza: }\ulaz{1}#
 #\izlaz{Unesite elemente niza: }#
 #\ulaz{4.16}#
-#\izlaz{Minimum: 4.160}#
-#\izlaz{Maksimum: 4.160}#
+#\izlaz{Najmanji: 4.160}#
+#\izlaz{Najveci: 4.160}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj elemenata niza: }\ulaz{3}#
-#\izlaz{Unesite elemente niza: }#
-#\ulaz{7.82 18.989 7.82}#
-#\izlaz{Minimum: 7.820}#
-#\izlaz{Maksimum: 18.989}#
+#\izlaz{Unesite broj elemenata niza: }\ulaz{-3}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
-\linkresenje{p2.6_09}
+\linkresenje{POK_08}
 \end{Exercise}
 \ifresenja
-\begin{Answer}[ref=p2.6_09]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/12.c}
+\begin{Answer}[ref=POK_08]
+\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/sve/pok08.c}
 \end{Answer}
  \fi
-
-
-\begin{Exercise}[label=v2.2_04] 
-    Napisati program koji ispisuje broj navedenih argumenata komandne linije,
-    a zatim i same argumenate i njihove redne brojeve. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out abcde 123 -5 3.7}#
-#\naslovInt#
-#\izlaz{Broj argumenata je 5:}#
-#\izlaz{0: ./a.out}#
-#\izlaz{1: abcde}#
-#\izlaz{2: 123}#
-#\izlaz{3: -5}#
-#\izlaz{4: 3.7}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{Broj argumenata je 1:}#
-#\izlaz{0: ./a.out}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v2.2_04}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_04]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_04.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=p2.6_01] 
-Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. \uputstvo{Koristiti funkciju \kckod{atoi}}.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out 5 mkp 9 -2 11 a 4 2}#
-#\naslovInt#
-#\izlaz{Zbir numerickih argumenata: 29}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out ab u f hj}#
-#\naslovInt#
-#\izlaz{Zbir numerickih argumenata: 0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out 33 1 p 44}#
-#\naslovInt#
-#\izlaz{Zbir numerickih argumenata: 78}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{Zbir numerickih argumenata: 0}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p2.6_01}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=p2.6_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/4.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=p2.6_02] 
-Napisati program koji ispisuje argumente komandne linije koji počinju slovom \textit{z}.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out zima jabuka zvezda Zrak}#
-#\naslovInt#
-#\izlaz{zima zvezda}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out bundeva pomorandza}#
-#\naslovInt#
-#\izlaz{}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out sanke zapad zujanje}#
-#\naslovInt#
-#\izlaz{zapad zujanje}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p2.6_02}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=p2.6_02]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/5.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=p2.6_03] 
-Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slovo \textit{z}.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out zvezda grozd jesen kisa}#
-#\naslovInt#
-#\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out AZBUKA deda mraz }#
-#\naslovInt#
-#\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out japan caj}#
-#\naslovInt#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-
-
-\linkresenje{p2.6_03}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=p2.6_03]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/6.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=p2.6_04] 
- Napisati program koji na osnovu broja $n$ koji se zadaje kao argument komandne linije ispisuje cele brojeve iz intervala $[-n,\ n]$. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out 2}#
-#\naslovInt#
-#\izlaz{-2 -1 0 1 2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out 4}#
-#\naslovInt#
-#\izlaz{-4 -3 -2 -1 0 1 2 3 4}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out 0}#
-#\naslovInt#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{maxitest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{Greska: nedostaje argument komandne linije!}#
-\end{upotreba}
-\end{maxitest}
-
-\linkresenje{p2.6_04}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=p2.6_04]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/7.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=p2.6_05] 
- Napisati program koji proverava da li se među zadatim argumentima komandne linije nalaze barem dva ista.  \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out pec zima deda mraz pec}#
-#\naslovInt#
-#\izlaz{Medju argumentima ima istih.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out xyz abc abc abc efgh}#
-#\naslovInt#
-#\izlaz{Medju argumentima ima istih.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out 11 15 abc 888}#
-#\naslovInt#
-#\izlaz{Medju argumentima nema istih.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{Medju argumentima nema istih.}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{p2.6_05}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=p2.6_05]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/8.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=v2.2_05] 
-Napisati funkciju koja za dva data stringa određuje koliko se uzastopnih karaktera prvog stringa nalazi u drugom stringu počev od početka. Napisati 
-   program koji testira napisanu funkciju  za dva stringa 
-   koji se unose kao argumenti komandne linije.   \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out aladin bal}#
-#\naslovInt#
-#\izlaz{3}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out aladin lad}#
-#\naslovInt#
-#\izlaz{4}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out Aladin ala}#
-#\naslovInt#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out aladin}#
-#\naslovInt#
-#\izlaz{Nekorektan poziv}#
-#\izlaz{Program treba pozvati sa ./a.out arg1 arg2}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v2.2_05}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_05]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_05.c}
-\end{Answer}
- \fi
-
-
-
-\begin{Exercise}[label=v2.2_01] 
- Napisati program koji
-ispisuje sve opcije koje su navedene u komandnoj liniji. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out -abc input.txt -d -Fg output}#
-#\naslovInt#
-#\izlaz{a b c d F g}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out ulaz.txt  }#
-#\naslovInt#
-#\izlaz{}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out file.txt -x -yZ -g output}#
-#\naslovInt#
-#\izlaz{x yZ g}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v2.2_01}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=v2.2_06] 
-Napisati funkciju \kckod{void sifruj(char s[], char c, int k)} koja šifruje
-   string s na sledeći način: svako malo i veliko slovo stringa s konvertuje u
-   slovo koje je u abecedi od njega udaljeno k pozicija, i to 
-   k pozicija ulevo, ako je karakter c jednak karakteru 'L' ili udesno
-   ako je karakter c jednak karakteru 'D'. Šifrovanje treba da bude kružno. Ako string
-   s sadrži karakter koji nije alfanumerički, ostaviti ga nešifriranog. Napisati program koji testira napisanu funkciju za string i prirodan
-   broj koji se unose kao argumenti komandne linije dok se pravac šifrovanja unosi
-   kao opcija -p koja može imati vrednosti 'L' ili 'D'. Ukoliko opcija -p nije 
-   navedena, podrazumevani pravac je udesno. \napomena{Možemo podrazumevati da string sadrži najviše 30 karaktera}.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out abcd 2}#
-#\naslovInt#
-#\izlaz{cdef}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out abcd 2 -p D}#
-#\naslovInt#
-#\izlaz{cdef}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out abcd 2 -p L}#
-#\naslovInt#
-#\izlaz{yzab}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out abcd -3 -p L}#
-#\naslovInt#
-#\izlaz{Nekorektan unos}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{5}
-#\poziv{./a.out abcd 3 -p X}#
-#\naslovInt#
-#\izlaz{Nekorektan unos}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{6}
-#\poziv{./a.out ab12cd 2 -p D}#
-#\naslovInt#
-#\izlaz{Nekorektan unos}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v2.2_06}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_06]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
-\end{Answer}
- \fi
-
-\iffalse
-\begin{Exercise}[label=v2.2_01] 
-Tekst
-%\komentarJ{Ovaj zadatak nema mnogo smisla, predlazem da ga izbacimo.}
-\linkresenje{v2.2_01}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-\end{Answer}
- \fi
-\fi
-
-\iffalse
-\begin{Exercise}[label=v2.2_01] 
-%\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
-Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije
-napraviti niz \verb|A[0] = a, A[1] = a+1,|
-\verb|A[2] = a+2, ..., A[b-a] = b| i ispisati ga. Pretpostaviti da je
-maksimalna du\v zina niza 200 elemenata. Proveriti da li $a < b$ i
-$b-a < 200$ i ako ovi uslovi nisu ispunjeni ispisati poruku da je do\v
-slo do gre\v ske. U slu\v caju da je dato manje ili vi\v se argumenata
-komandne linije ispisati poruku o gre\v sci. \\ 
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out 34}#
-#\naslovInt#
-#\izlaz{greska}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out 12 20}#
-#\naslovInt#
-#\izlaz{12 13 14 15 16 17 18 19 20}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out 30 8}#
-#\naslovInt#
-#\izlaz{greska}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out -4 -1}#
-#\naslovInt#
-#\izlaz{-4 -3 -2 -1}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{v2.2_01}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-\end{Answer}
- \fi
-
-\fi
-
-\begin{Exercise}[label=v2.2_01] 
-%\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
-Parametri komandne linije su $n, a$ i $b$ ($a < b$). Treba popuniti
-prvih {\tt n} elemenata niza {\tt A} celim slu\v cajnim brojevima koji
-su između {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
-izlaz. Maksimalan broj elemenata niza {\tt A} je 200. Ukoliko nisu
-zadati svi argumenti komandne linije ili ne zadovoljavaju potrebna
-svojstva ispisati poruku o gre\v sci. 
-
-%\linkresenje{v2.2_01}
-\end{Exercise}
-%\ifresenja
-%\begin{Answer}[ref=v2.2_01]
-%\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-%\end{Answer}
-% \fi
-
-
 
 \ifresenja
 \section{Rešenja}
