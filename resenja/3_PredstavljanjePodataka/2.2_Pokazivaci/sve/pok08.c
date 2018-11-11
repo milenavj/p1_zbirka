@@ -15,7 +15,8 @@ void min_max(float a[], int n, float *najmanji, float *najveci)
 
   /* U petlji se prolazi kroz ostale clanove niza i po potrebi se
      vrsi azuriranje najmanje i najvece vrednosti. */
-  for (i = 1; i < n; i++) {
+  for (i = 1; i < n; i++) 
+  {
     if (a[i] > *najveci)
       *najveci = a[i];
 
@@ -38,7 +39,8 @@ int main()
   scanf("%d", &n);
 
   /* Vrsi se provera ispravnosti ulaza. */
-  if (n < 0 || n > MAKS) {
+  if (n < 0 || n > MAKS)
+  {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

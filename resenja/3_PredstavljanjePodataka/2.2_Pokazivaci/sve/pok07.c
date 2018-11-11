@@ -17,12 +17,15 @@ void par_nepar(int a[], int n, int parni[], int *np,
      uveca svaki put kada se naidje na novi element ovog niza. 
      Promenljiva k je brojac za niz neparnih brojeva i on treba da
      se uveca sveki put kada se naidje na novi element ovog niza. */
-  for (i = 0, j = 0, k = 0; i < n; i++) {
-    if (a[i] % 2 == 0) {
+  for (i = 0, j = 0, k = 0; i < n; i++) 
+  {
+    if (a[i] % 2 == 0) 
+    {
       parni[j] = a[i];
       j++;
     } 
-    else {
+    else 
+    {
       neparni[k] = a[i];
       k++;
     }
@@ -56,7 +59,8 @@ int main()
   scanf("%d", &n);
 
   /* Vrsi se provera ispravnosti ulaza. */
-  if (n < 0 || n > MAKS) {
+  if (n < 0 || n > MAKS) 
+  {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

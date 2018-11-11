@@ -1,7 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void konverzija(int trajanje, int* psati, int* pminuti, int* psekunde)
+/* Funkcija koja dato trajanje izrazeno u ukupnom broju sekundi
+   konvertuje u trajanje koje je izrazeno u broju sati, minuta
+   i sekundi. */
+void konverzija(int trajanje, int* psati, int* pminuti, 
+                int* psekunde)
 {
   *psati = trajanje / 3600;
   trajanje -= *psati * 3600;
@@ -12,7 +16,7 @@ void konverzija(int trajanje, int* psati, int* pminuti, int* psekunde)
   *psekunde = trajanje;
 }
 
-int main()
+int main() 
 {
   /* Deklaracija potrebnih promenljivih. */
   int trajanje, sati, minuti, sekunde;
@@ -22,7 +26,7 @@ int main()
   scanf("%d", &trajanje);
   
   /* Vrsi se provera ispravnosti ulaza. */
-  if(trajanje < 0)
+  if(trajanje < 0) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);

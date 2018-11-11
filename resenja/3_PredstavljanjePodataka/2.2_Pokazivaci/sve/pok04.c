@@ -1,6 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Funkcija koja racuna kolicnik i ostatak pri deljenju a sa b.
+   Ukoliko su ove vrednosti uspesno izracunate, funkcija vraca 1,
+   a inace vraca nulu. */
 int kolicnik_ostatak(int a, int b, int* pk, int* po)
 {
   if(b == 0)
@@ -21,7 +24,8 @@ int main()
   scanf("%d%d", &a, &b);
   
   /* Ispis rezultata. */
-  if(kolicnik_ostatak(a, b, &kolicnik, &ostatak)){
+  if(kolicnik_ostatak(a, b, &kolicnik, &ostatak))
+  {
     printf("Kolicnik: %d\n", kolicnik);
     printf("Ostatak: %d\n", ostatak);
   }
