@@ -4,6 +4,7 @@
 
 #define MAKS_NISKA 21
 
+/* Funkcija kopira prvih n karaktera niske s u nisku t. */
 void kopiraj_n(char t[], char s[], int n)
 {
   int i;

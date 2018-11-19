@@ -3,20 +3,15 @@
 
 #define MAKS_NISKA 31
 
-/* Funkcija koja ubacuje zvezdice na svako drugo mesto
-   niske s. */
-void ubaci_zvezdice(char s[]){
+/* Funkcija ubacuje zvezdice na svako drugo mesto niske s. */
+void ubaci_zvezdice(char s[])
+{
   int i;
   
   for(i=0; s[i] != '\0' && s[i+1] != '\0'; i+=2)
     s[i+1] = '*';
   
-  /* Uslov u petlji moze krace da se zapise na sledeci nacin: 
-   for(i=0; s[i] && s[i+1]; i+=2)
-    s[i+1] = '*';
-   */
-  
-  /* III nacin: 
+  /* II nacin: 
    for(i=0; s[i]; i++)
      if(i%2 == 1)
       s[i] = '*';

@@ -5,7 +5,7 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija koja proverava da li je karakter c samoglasnik. */
+/* Funkcija proverava da li je karakter c samoglasnik. */
 int samoglasnik(char c)
 {
   /* Karakter se pretvara u veliko slovo kako bi se izbegle posebne
@@ -19,7 +19,7 @@ int samoglasnik(char c)
   return 0;
 }
 
-/* Funkcija koja proverava da li se niska s zavrsava samoglasnikom. */
+/* Funkcija proverava da li se niska s zavrsava samoglasnikom. */
 int samoglasnik_na_kraju(char s[])
 {
   /* Funkcija strlen racuna duzinu date niske. Njena deklaracija se 

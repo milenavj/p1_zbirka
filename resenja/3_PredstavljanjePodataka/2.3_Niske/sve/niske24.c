@@ -4,8 +4,8 @@
 
 #define MAKS_NISKA 101
 
-/* Funkcija koja ucitava liniju maksimalne duzine n i upisuje
-   je u s. Funkcija ne smesta znak za novi red na kraj linije. */
+/* Funkcija ucitava liniju maksimalne duzine n i upisuje je u s.
+   Funkcija ne smesta znak za novi red na kraj linije. */
 void ucitaj_liniju(char s[], int n)
 {
   int i = 0, c;
@@ -18,8 +18,13 @@ void ucitaj_liniju(char s[], int n)
   s[i] = '\0';
 }
 
-/* Funkcija koja vraca pokazivac na prvo pojavljivanje niske
-   t u okviru niske s ili NULL ukoliko se t ne nalazi u s. */
+/* Funkcija vraca pokazivac na prvo pojavljivanje niske
+   t u okviru niske s ili NULL ukoliko se t ne nalazi u s.
+   
+   Trazeni rezultat moze se dobiti koriscenjem funkcije strstr
+   cija se deklaracija nalazi u zaglavlju string.h. 
+   Funkcija strstr_klon predstavlja jednu mogucu implementaciju
+   ove funkcije. */
 char* strstr_klon(char s[], char t[])
 {
   int i, j;
@@ -62,6 +67,12 @@ int main()
       printf("%d ", i);
       bar_jedna = 1;
     }
+    /* II nacin: koriscenjem funkcije strstr cija se deklaracija
+       nalazi u zaglavlju string.h: 
+      if(strstr(linija, "program") != NULL){
+        printf("%d ", i);
+        bar_jedna = 1; 
+      } */
   }
   printf("\n");
   

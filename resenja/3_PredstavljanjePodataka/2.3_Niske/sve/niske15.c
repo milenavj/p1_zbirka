@@ -17,13 +17,18 @@ int formiraj_broj(char b[])
   int broj = 0, znak;
   
   /* Odredjivanje znaka broja i pozicije prve cifre. */
-  if(b[0] == '-'){
+  if(b[0] == '-')
+  {
     znak = -1;
     i = 1;
-  }else if(b[0] == '+'){
+  }
+  else if(b[0] == '+')
+  {
     znak = 1;
     i = 1;
-  }else{
+  }
+  else
+  {
     i = 0;
     znak = 1;
   }

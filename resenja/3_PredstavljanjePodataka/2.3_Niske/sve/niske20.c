@@ -5,7 +5,7 @@
 
 #define MAKS_RECENICA 81
 
-/* Funkcija koja ucitava recenicu maksimalne duzine n. */
+/* Funkcija ucitava recenicu maksimalne duzine n. */
 int ucitaj_recenicu(char s[], int n)
 {
   int i = 0, c;
@@ -41,10 +41,10 @@ int ucitaj_recenicu(char s[], int n)
   return i+1;
 }
 
-/* Funkcija koja prebrojava mala i velika slova. */
+/* Funkcija prebrojava mala i velika slova. */
 void prebroj(char s[] , int* broj_malih, int* broj_velikih)
 {
-  int mala = 0, velika = 0, i;
+  int i, mala = 0, velika = 0;
   
   for(i=0; s[i]; i++)
   {

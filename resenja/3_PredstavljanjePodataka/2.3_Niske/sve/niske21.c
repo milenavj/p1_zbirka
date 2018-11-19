@@ -4,7 +4,12 @@
 #define MAKS_NISKA 21
 
 /* Funkcija vraca adresu prvog pojavljivanja karaktera c u niski s
-   ili NULL ukoliko se c ne pojavljuje u s. */
+   ili NULL ukoliko se c ne pojavljuje u s. 
+   
+   Trazeni rezultat moze se dobiti koriscenjem funkcije strchr
+   cija se deklaracija nalazi u zaglavlju string.h. 
+   Funkcija strchr_klon predstavlja jednu mogucu implementaciju
+   ove funkcije. */
 char* strchr_klon(char s[], char c)
 {
   int i;

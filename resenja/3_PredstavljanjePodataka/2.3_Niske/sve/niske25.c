@@ -3,8 +3,14 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija koja poredi dve niske. Niske je potrebno porediti
-   karakter po karakter. */
+/* Funkcija poredi dve niske i vraca nulu ukoliko su jednake,
+   nesto pozitivno ukoliko je niska s1 leksikografski iza s2,
+   a neku negativnu vrednost inace.
+   
+   Trazeni rezultat moze se dobiti koriscenjem funkcije strcmp
+   cija se deklaracija nalazi u zaglavlju string.h. 
+   Funkcija strcmp_klon predstavlja jednu mogucu implementaciju
+   ove funkcije. */
 int strcmp_klon(char s1[], char s2[])
 {
   int i;
@@ -45,6 +51,11 @@ int main()
 
   /* Vrsi se poredjenje niski i ispisuje se rezultat. */
   rezultat = strcmp_klon(s,t);
+  
+  /* II nacin: Koriscenjem funkcije strcmp cija se deklaracija
+     nalazi u zaglavlju string.g:
+  rezultat = strcmp(s, t); */
+  
   if(rezultat == 0)
     printf("%s\n", s);
   else if(rezultat < 0)

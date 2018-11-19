@@ -3,14 +3,14 @@
 
 #define MAKS_NISKA 11
 
-/* Funkcija koja proverava da li je niska t podniska niske s. */
+/* Funkcija proverava da li je niska t podniska niske s. */
 int podniska(char s[], char t[])
 {
   int i, j;
 
   /* Spoljasnja petlja ide redom po niski s. */
-  for (i = 0; s[i] != '\0'; i++) {
-
+  for (i = 0; s[i] != '\0'; i++) 
+  {
     /* Unutrasnja petlja ide redom po niski t pomocu brojaca j
        i proverava da li se cela niska t poklapa sa delom niske
        s koji pocinje na poziciji i.

@@ -8,7 +8,7 @@
 #define MAKS_NISKA (MAKS_DUZINA + 1)
 #define MAKS_REZULTAT (2 * MAKS_DUZINA + 1)
 
-/* Funkcija koja od niske s formira nisku t dupliranjem svakog
+/* Funkcija formira nisku t od niske s dupliranjem svakog
    karaktera. Npr. abc postaje aabbcc. */
 void dupliranje(char t[], char s[])
 {
@@ -16,7 +16,8 @@ void dupliranje(char t[], char s[])
 
   /* Brojac i oznacava tekucu poziciju u niski s, a
      brojac j oznacava tekucu poziciju u niski t. */
-  for (i = 0, j = 0; s[i] != '\0'; i++, j += 2) {
+  for (i = 0, j = 0; s[i] != '\0'; i++, j += 2) 
+  {
     t[j] = s[i];
     t[j + 1] = s[i];
   }

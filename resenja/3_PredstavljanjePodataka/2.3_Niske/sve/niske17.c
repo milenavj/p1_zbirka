@@ -4,9 +4,10 @@
 
 #define MAKS_NISKA 8
 
-/* Funkcija koja proverava da li je prosledjeni karakter ispravna
+/* Funkcija proverava da li je prosledjeni karakter ispravna
    heksadekadna cifra. */
-int heksa_cifra(char c){
+int heksa_cifra(char c)
+{
   c = toupper(c);
   
   /* Cifra je ispravna ako je cifra ili ako je neko od slova:
@@ -14,9 +15,10 @@ int heksa_cifra(char c){
   return isdigit(c) || (c >= 'A' && c <= 'F');
 }
 
-/* Funkcija koja proverava da li prosledjena niska s predstavlja
+/* Funkcija proverava da li prosledjena niska s predstavlja
    ispravan heksadekadni broj. */
-int heksadekadni_broj(char s[]){
+int heksadekadni_broj(char s[])
+{
   int i;
 
   /* Svaki heksadekasni broj pocinje sa 0x ili 0X. */

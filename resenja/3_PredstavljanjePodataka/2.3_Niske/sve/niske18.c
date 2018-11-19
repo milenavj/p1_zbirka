@@ -5,7 +5,7 @@
 
 #define MAKS_NISKA 8
 
-/* Funkcija koja racuna dekadnu vrednost jedne heksadekadne cifre.
+/* Funkcija racuna dekadnu vrednost jedne heksadekadne cifre.
    Ako je c broj, vrednost se dobija oduzimanjem '0'.
    Ako je c slovo, vrednost se dobija oduzimanjem 'A' i dodavanjem
    10 (npr. vrednost karaktera 'B' je 10 + 'B' - 'A' = 11). */
@@ -17,7 +17,7 @@ int vrednost_heksa_cifre(char c)
     return 10 + toupper(c) - 'A';
 }
 
-/* Funkcija koja racuna dekadnu vrednost heksadekadnog broja */
+/* Funkcija racuna dekadnu vrednost heksadekadnog broja. */
 int dekadna_vrednost(char s[])
 {
   int i, tezina_pozicije = 1, rezultat = 0;
@@ -34,7 +34,8 @@ int dekadna_vrednost(char s[])
      i = 4, rezultat += vrednost('8')*16 => rezultat += 8*16
      i = 3, rezultat += vrednost('a')*256 => rezultat += 10*256
      i = 2, rezultat += vrednost('1')*4096 => rezultat += 1*4096 */
-  for (i = n - 1; i >= 2; i--) {
+  for (i = n - 1; i >= 2; i--)
+  {
     rezultat += tezina_pozicije * vrednost_heksa_cifre(s[i]);
     tezina_pozicije *= 16;
   }

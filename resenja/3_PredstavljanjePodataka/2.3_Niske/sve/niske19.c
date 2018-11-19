@@ -1,11 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include<string.h>
+#include <string.h>
 
 #define MAKS_LINIJA 81
 
-/* Funkcija koja ucitava liniju maksimalne duzine n i upisuje
-   je u s. Funkcija ne smesta znak za novi red na kraj linije. */
+/* Funkcija ucitava liniju maksimalne duzine n i upisuje je u s.
+   Funkcija ne smesta znak za novi red na kraj linije. */
 int ucitaj_liniju(char s[], int n)
 {
   int i = 0;
@@ -14,7 +14,8 @@ int ucitaj_liniju(char s[], int n)
   /* Ucitava se karakter po karakter dok se ne unese novi red
      ili oznaka za kraj ulaza ili dok se ne dostigne maksimalan
      broj karaktera. */
-  while ((c = getchar()) != '\n' && i < n-1 && c != EOF) {
+  while ((c = getchar()) != '\n' && i < n-1 && c != EOF)
+  {
     s[i] = c;
     i++;
   }
@@ -35,8 +36,10 @@ int main()
   /* U petlji se ucitavaju linije sve dok se ne unese prazna linija.
      Ukoliko se unese linija koja je duza od trenutno najduze,
      vrsi se azuriranje duzine najduze linije, kao i same linije. */
-  while ((duzina = ucitaj_liniju(linija, MAKS_LINIJA)) > 0) {
-    if (duzina_najduze < duzina) {
+  while ((duzina = ucitaj_liniju(linija, MAKS_LINIJA)) > 0) 
+  {
+    if (duzina_najduze < duzina) 
+    {
       duzina_najduze = duzina;
       strcpy(najduza_linija, linija);
     }

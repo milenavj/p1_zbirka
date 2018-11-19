@@ -4,17 +4,17 @@
 
 #define MAKS_NISKA 21
 
-/* Funckija koja sva slova niske s pretvara u velika slova. */
-void u_velika_slova(char s[]){
+/* Funckija pretvara sva slova niske s u velika slova. */
+void u_velika_slova(char s[])
+{
   int i;
   
   for(i=0; s[i]; i++)
     s[i] = toupper(s[i]);
 }
 
-/* Funkcija koja vraca 1 ako su niske s1 i s2 jednake, a nulu
-   inace. */
-int poredjenje(char s1[], char s2[]){
+/* Funkcija vraca 1 ako su niske s1 i s2 jednake, a nulu inace. */
+int jednake(char s1[], char s2[]){
   int i;
   
   /* Prolazi se kroz obe niske dok god ima neobradjenih karaktera
@@ -46,7 +46,7 @@ int main(){
   u_velika_slova(s2);
   
   /* Ispis rezultata. */
-  if(poredjenje(s1, s2))
+  if(jednake(s1, s2))
     printf("Niske su jednake.\n");
   else
     printf("Niske nisu jednake.\n");

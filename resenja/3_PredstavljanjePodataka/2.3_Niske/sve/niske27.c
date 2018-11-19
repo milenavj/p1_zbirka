@@ -4,7 +4,7 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija koja rotira nisku za jedno mesto ulevo. */
+/* Funkcija rotira nisku za jedno mesto ulevo. */
 void rotiraj1(char s[], int n)
 {
   int i;
@@ -19,7 +19,7 @@ void rotiraj1(char s[], int n)
   s[n-1] = prvi;
 }
 
-/* Funkcija koja rotira nisku s za k mesta ulevo. */
+/* Funkcija rotira nisku s za k mesta ulevo. */
 void rotiraj(char s[], int k){
   int i;
   int n = strlen(s);
@@ -41,7 +41,8 @@ int main()
   scanf("%d", &k);
   
   /* Vrsi se provera ispravnosti ulaza. */
-  if(k < 0){
+  if(k < 0)
+  {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

@@ -4,10 +4,15 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija koja racuna duzinu prefiksa niske t koji se moze 
+/* Funkcija racuna duzinu prefiksa niske t koji se moze 
    zapisati pomocu karaktera niske s. 
    Na primer, t="programiranje", s="grupacija", rezultat je 2 jer
-   niska s sadrzi prva dva karaktera niske t, ali ne i treci. */
+   niska s sadrzi prva dva karaktera niske t, ali ne i treci. 
+   
+   Trazeni rezultat moze se dobiti koriscenjem funkcije strspn
+   cija se deklaracija nalazi u zaglavlju string.h. 
+   Funkcija strspn_klon predstavlja jednu mogucu implementaciju
+   ove funkcije. */
 int strspn_klon(char t[], char s[])
 {
   int i, brojac = 0;
@@ -16,7 +21,8 @@ int strspn_klon(char t[], char s[])
      vrsi provera da li se on nalazi u zapisu niske s. Za ovo se
      koristi funkcija strchr. Ako se nalazi, uvecava se brojac,
      a ako se ne nalazi, prekida se petlja. */
-  for(i=0; t[i]; i++){
+  for(i=0; t[i]; i++)
+  {
     if(strchr(s, t[i]) != NULL)
       brojac++;
     else

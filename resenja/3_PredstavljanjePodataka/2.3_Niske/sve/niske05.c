@@ -4,7 +4,7 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija koja proverava da li niska s sadrzi bas jedno
+/* Funkcija proverava da li niska s sadrzi bar jedno
    veliko slovo. */
 int sadrzi_veliko(char s[])
 {
@@ -15,6 +15,19 @@ int sadrzi_veliko(char s[])
       return 1;
     
   return 0;
+  
+  /* Cesta greska:
+       for(i=0; s[i]; i++)
+       {
+          if(isupper(s[i]))
+            return 1;
+          else 
+            return 0;
+       }
+     Cim se naidje na prvi karakter koji nije veliko
+     slovo, vraca se 0 kao oznaka da niska ne sadrzi
+     veliko slovo, sto nije tacno. Nula moze da se vrati
+     tek kada se prodju svi karakteri niske s. */
 }
 
 int main()

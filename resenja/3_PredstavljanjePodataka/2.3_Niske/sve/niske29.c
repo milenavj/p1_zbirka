@@ -19,16 +19,20 @@ char sledeci(char c)
   return c+1;
 }
 
-/* Funkcija koja svako slovo niske s menja sa slovom
-   koje se u ASCII tablici nalazi neposredno iza njega.
-   Specijalan slucaj je slovo z koje treba da se zameni
-   sa slovom a. Ostali karakteri ostaju nepromenjeni. */
-void sifruj(char s[], char rezultat[]){
+/* Funkcija od niske s formira rezultujucu nisku koja se dobija
+   na sledeci nacin: 
+   1. ako je s[i] slovo, onda se u rezultujucu nisku upisuju naredna
+   tri slova alfabeta (kada se stigne do kraja alfabeta, ide se u
+   krug, tj. nakon slova z sledi slovo a)
+   2. ako s[i] nije slovo, samo se s[i] prepisuje u rezultat. */
+void sifruj(char s[], char rezultat[])
+{
   int i, j;
   
   /* Brojac i se koristi za nisku s, a brojac j za
      rezultujucu nisku. */
-  for(i=0, j=0; s[i]; i++){
+  for(i=0, j=0; s[i]; i++)
+  {
     if(isalpha(s[i]))
     {
       /* Ako je s[i] slovo, onda se u rezultat upisuju 3 slova koja

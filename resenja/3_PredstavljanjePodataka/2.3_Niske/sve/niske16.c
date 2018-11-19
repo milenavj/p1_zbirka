@@ -3,11 +3,12 @@
 
 #define MAKS_NISKA 10
 
-/* Funkcija koja racuna broj cifara broja n. */
+/* Funkcija racuna broj cifara broja n. */
 int broj_cifara(int n)
 {
   int i = 0;
-  do{
+  do
+  {
     i++;
     n/=10;
   }while(n);
@@ -15,7 +16,7 @@ int broj_cifara(int n)
   return i;
 }
 
-/* Funkcija koja od prosledjenog broja formira nisku. */
+/* Funkcija od prosledjenog broja formira nisku. */
 void broj_u_nisku(int broj, char s[])
 {
   int n, cifra, i;
@@ -37,7 +38,8 @@ void broj_u_nisku(int broj, char s[])
   /* Cifre broja se upisuju u nisku s sa desna na levo. */
   s[n] = '\0';
   i = n-1;
-  do{ 
+  do
+  { 
     /* Karakter koji odgovara trenutnoj cifri se dobija izrazom
        '0' + cifra. Na primer, '0' + 5 je '5' jer se karakter '5'
        nalazi 5 mesta nakon karaktera '0' u ASCII tablici. */

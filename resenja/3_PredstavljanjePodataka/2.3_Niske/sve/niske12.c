@@ -40,7 +40,8 @@ int main()
      zavrsetku petlje vrsi jos jedno nadovezivanje niske s, ali ne
      i niske "-". */
   t[0] = '\0';
-  for(i=0; i<n-1; i++) {
+  for(i=0; i<n-1; i++) 
+  {
     strcat(t, s);
     strcat(t, "-");
   }

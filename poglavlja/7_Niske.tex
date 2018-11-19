@@ -78,11 +78,11 @@ Napisati program koji učitava nisku maksimalne dužine 20 karaktera i ispisuje 
 \begin{Exercise}[label=NIS_03] 
 Napisati program koji vrši poređenje niski. Napisati funkcije:
 \begin{enumerate}
-\item \kckod{int poredjenje(char s1[], char s2[])} koja vraća jedinicu ako su $s_1$ i $s_2$ jednake niske, a nulu inace.
+\item \kckod{int jednake(char s1[], char s2[])} koja vraća jedinicu ako su $s_1$ i $s_2$ jednake niske, a nulu inače.
 \item \kckod{void u\_velika\_slova(char s[])} koja pretvara sva slova niske $s$ u velika slova, a ostale karaktere ne menja.
 \end{enumerate}
 Program učitava dve reči maksimalne dužine 20 karaktera i ispituje da li su unete reči jednake. Pri poređenju treba zanemariti
-razliku izmedju malih i velikih slova.
+razliku između malih i velikih slova.
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -253,7 +253,7 @@ Pretpostaviti da niska može da ima najviše 20 karaktera.
 
 \begin{Exercise}[label=NIS_07] 
  Napisati funkciju \kckod{int podniska(char s[], char t[])} koja proverava da li je niska $t$ podniska niske $s$. 
- Napisati  program koji učitava dve niske maksimalne dužine 10 karaktera i testira rad napisane funkcije.
+ Napisati program koji učitava niske $s$ i $t$ maksimalne dužine 10 karaktera i ispisuje da li je niska $t$ podniska niske $s$.
  
 \begin{minitest}
 \begin{upotreba}{1}
@@ -363,8 +363,9 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera ispisuje
 \begin{Exercise}[label=NIS_10] 
  Napisati funkciju \kckod{void ukloni(char *s)} koja iz niske uklanja
  sva slova iza kojih neposredno sledi slovo koje je u abecedi nakon
- njih, pri čemu se veličina slova zanemaruje. Testirati funkciju u programu
- za učitanu liniju od najviše 100 karaktera. 
+ njih, pri čemu se veličina slova zanemaruje. 
+ Napisati program koji učitava liniju teksta koja ima najviše 100 karaktera
+ i ispisuje liniju koja se dobije nakon uklanjanja pomenutih karaktera.
  
 \begin{minitest}
 \begin{upotreba}{1}
@@ -400,8 +401,8 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera ispisuje
 
 
 \begin{Exercise}[label=NIS_11] 
-   Napisati program koji učitava nisku $s$ i formira nisku $t$
-   trostrukim nadovezivanjem niske $s$. Možemo pretpostaviti da niska $s$ sadrži najviše 30 karaktera. 
+   Napisati program koji učitava nisku $s$ maksimalne dužine $30$ karaktera i formira nisku $t$
+   trostrukim nadovezivanjem niske $s$. 
    
 \begin{minitest}
 \begin{upotreba}{1}
@@ -475,7 +476,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=NIS_13] 
 Napisati funkciju \kckod{void kopiraj\_n(char t[], char s[], int n)} koja kopira najviše $n$ karaktera niske $s$ u nisku $t$. 
 Napisati program koji testira rad napisane funkcije. Pretpostaviti da je maksimalna dužina niske $s$ $20$ karaktera.
-U slucaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -512,7 +513,10 @@ U slucaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=NIS_14] 
- Napisati funkciju \kckod{void dupliranje(char t[], char s[])} koja na osnovu niske $s$ formira nisku $t$ tako što duplira svaki karakter niske $s$. Napisati program koji učitava nisku maksimalne dužine 20 karaktera i testira rad napisane funkcije.
+ Napisati funkciju \kckod{void dupliranje(char t[], char s[])} koja na osnovu niske $s$ formira 
+ nisku $t$ tako što duplira svaki karakter niske $s$. 
+ Napisati program koji učitava nisku maksimalne dužine $20$ karaktera i ispisuje nisku koja se
+ dobije nakon dupliranja karaktera.
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -753,7 +757,7 @@ Napisati funkcije za rad sa rečenicama:
 \begin{enumerate}
 \item \kckod{int procitaj\_recenicu(char s[], int n)} koja učitava rečenicu i smešta je u nisku $s$. 
 Funkcija vraća dužinu učitane rečenice. Učitavanje se završava nakon učitanog karaktera \kckod{.}, nakon $n$ učitanih karaktera ili ako
-se dodje do kraja ulaza.
+se dođe do kraja ulaza.
 \item \kckod{void prebroj(char s[], int *broj\_malih, int *broj\_velikih)} koja prebrojava mala i velika slova u niski $s$.
 \end{enumerate}
  Napisati program koji učitava rečenice do kraja ulaza i ispisuje onu rečenicu kod koje je apsolutna razlika broja malih i velikih slova najveća.
@@ -809,7 +813,9 @@ se dodje do kraja ulaza.
 
 \begin{Exercise}[label=NIS_21] 
 Napisati funkciju \kckod{char* strchr\_klon(char s[], char c)} koja vraća pokazivač na prvo pojavljivanje 
-karaktera $c$ u niski $s$ ili $NULL$ ukoliko se karakter $c$ ne pojavljuje u niski $s$. 
+karaktera $c$ u niski $s$ ili $NULL$ ukoliko se karakter $c$ ne pojavljuje u niski $s$.
+\footnote{Funkcija $strchr\_klon$ odgovara funkciji $strchr$ čija se deklaracija nalazi u zaglavlju string.h.
+Slično važi i za ostale \textit{klon} funkcije iz narednih zadataka.} 
 Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera i karakter $c$ ispisuje
 indeks prvog pojavljivanja karaktera c u okviru učitane niske ili $-1$ ukoliko učitana niska ne
 sadrži uneti karakter.
@@ -1275,7 +1281,7 @@ koja datu dekadnu vrednost $broj$ zapisuje u datoj osnovi $osnovi$ i smešta rez
 Pretpostaviti da je $0 < b \leq 16$.  
 \end{enumerate}
 
-Napisati program koji ucitava broj $n$ i osnove $o_1$ i $o_2$ i ispisuje dekadnu vrednost broja $n$ u osnovi $o_1$, kao i
+Napisati program koji učitava broj $n$ i osnove $o_1$ i $o_2$ i ispisuje dekadnu vrednost broja $n$ u osnovi $o_1$, kao i
 vrednost koja se dobije kada se ta dekadna vrednost zapise u osnovi $o_2$.
 Pretpostaviti da je ulaz ispravan i da će svi brojevi biti u opsegu tipa \kckod{unsigned}. 
 

@@ -5,7 +5,7 @@
 
 #define MAKS_LINIJA 21
 
-/* Funkcija koja iz niske s uklanja sva slova. */
+/* Funkcija uklanja sva slova iz niske s. */
 void ukloni_slova(char s[])
 {
   int i, j;

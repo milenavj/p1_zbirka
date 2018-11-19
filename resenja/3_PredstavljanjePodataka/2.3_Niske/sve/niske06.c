@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 #define MAKS_NISKA 21
 
-/* Funkcija koja vraca indeks prvog pojavljivanja karaktera c u
-   okviru niske s. Ukoliko se ne pojavljuje, funkcija vraca -1. */
+/* Funkcija vraca indeks prvog pojavljivanja karaktera c u okviru
+   niske s. Ukoliko se ne pojavljuje, funkcija vraca -1. */
 int pozicija(char s[], char c)
 {
   int i;

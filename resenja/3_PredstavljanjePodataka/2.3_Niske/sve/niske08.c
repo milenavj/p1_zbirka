@@ -5,8 +5,8 @@
 
 #define MAKS_LINIJA 101
 
-/* Funkcija koja ucitava liniju maksimalne duzine n i upisuje
-   je u s. Funkcija ne smesta znak za novi red na kraj linije. */
+/* Funkcija ucitava liniju maksimalne duzine n i upisuje je u s.
+   Funkcija ne smesta znak za novi red na kraj linije. */
 void ucitaj_liniju(char s[], int n)
 {
   int i = 0;
@@ -15,7 +15,8 @@ void ucitaj_liniju(char s[], int n)
   /* Ucitava se karakter po karakter dok se ne unese novi red
      ili oznaka za kraj ulaza ili dok se ne dostigne maksimalan
      broj karaktera. */
-  while ((c = getchar()) != '\n' && i < n-1 && c != EOF) {
+  while ((c = getchar()) != '\n' && i < n-1 && c != EOF) 
+  {
     s[i] = c;
     i++;
   }
@@ -25,7 +26,7 @@ void ucitaj_liniju(char s[], int n)
   s[i] = '\0';
 }
 
-/* Funkcija koja uklanja beline sa kraja niske s. */
+/* Funkcija uklanja beline sa kraja niske s. */
 void skrati(char s[])
 {
   int i;
@@ -54,7 +55,17 @@ int main()
   /* Ucitava se cela linija sa ulaza. */
   printf("Unesite nisku:\n");
   ucitaj_liniju(s, MAKS_LINIJA);
-
+  
+  /* NAPOMENA: 
+     Postoji vise nacina za ucitavanje cele linije sa standardnog
+     ulaza koriscenjem funkcija iz standardne c biblioteke. Jedan od
+     njih je koriscenjem funkcije gets:
+     gets(s);
+     Postoje razlozi zasto ova funkcija nije bezbedna za koriscenje
+     i oni ce biti objasnjeni u kasnijim poglaljima.
+     U poglavlju "Datoteke" ce biti predstavljeni i bezbedni nacini 
+     da se to uradi koriscenjem nekih drugoh funkcija. */
+  
   /* Ispis rezultata. */
   printf("Ucitana niska: *%s*\n", s);
   skrati(s);
