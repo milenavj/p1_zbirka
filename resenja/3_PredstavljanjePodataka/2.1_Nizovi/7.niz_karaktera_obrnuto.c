@@ -16,7 +16,7 @@ int main()
   {  
     printf("Unesite karakter: ");
     scanf("%c", &c);
-    /* Cita se znak za novi red nakon unesenog karaktera. */
+    /* Cita se znak za novi red nakon unetog karaktera. */
     getchar();
 
     /* Ukoliko je unet karakter * izlazi se iz petlje. */

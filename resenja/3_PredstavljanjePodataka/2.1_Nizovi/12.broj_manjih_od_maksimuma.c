@@ -3,60 +3,45 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int a[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
-  
-  return n;
 }
 
 /* Funkcija vraca poziciju najveceg elementa niza. */
-int pozicija_najveceg(int a[], int n)
-{
-  int i, pozicija = 0;
-  /* Prolazi se kroz niz i ako se naidje na element cija je
-     vrednost veca od trenutno najveceg (a[pozicija]), vrsi
-     se azuriranje pozicije trenutno najveceg. */
-  for(i=1; i<n; i++)
-    if(a[i] > a[pozicija])
-      pozicija = i;
-    
-  return pozicija;
-}
+// int pozicija_najveceg(int a[], int n)
+// {
+//   int i, pozicija = 0;
+//   /* Prolazi se kroz niz i ako se naidje na element cija je
+//      vrednost veca od trenutno najveceg (a[pozicija]), vrsi
+//      se azuriranje pozicije trenutno najveceg. */
+//   for(i=1; i<n; i++)
+//     if(a[i] > a[pozicija])
+//       pozicija = i;
+//     
+//   return pozicija;
+// }
 
 /* Funkcija vraca broj parnih elemenata niza koji prethode
    maksimalnom elementu niza. */
-int prebrojavanje(int a[], int n)
-{
-  int i;
-  int pozicija_maksimuma = pozicija_najveceg(a,n);
-
-  int broj_parnih = 0;
-  for (i = 0; i < pozicija_maksimuma; i++) {
-    if (a[i] % 2 == 0) {
-      broj_parnih++;
-    }
-  }
-
-  return broj_parnih;
-}
+// int prebrojavanje(int a[], int n)
+// {
+//   int i;
+//   int pozicija_maksimuma = pozicija_najveceg(a,n);
+// 
+//   int broj_parnih = 0;
+//   for (i = 0; i < pozicija_maksimuma; i++) {
+//     if (a[i] % 2 == 0) {
+//       broj_parnih++;
+//     }
+//   }
+// 
+//   return broj_parnih;
+// }
 
 /* Zadatak se moze resiti i jednom prolaskom kroz niz. 
    Ideja je da se paralelno radi pretraga maksimalnog elementa
@@ -100,8 +85,18 @@ int main()
   int a[MAKS];
   int n;
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Ispis rezultata. */
   /* I nacin: 

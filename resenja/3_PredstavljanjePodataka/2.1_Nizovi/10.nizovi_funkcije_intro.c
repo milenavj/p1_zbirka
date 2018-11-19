@@ -3,15 +3,16 @@
 
 #define MAKS 1000
 
-/* Funkcija koja ucitava elemente niza. */
+/* Funkcija ucitava elemente niza. */
 void ucitaj(int a[], int n)
 {
   int i;
+  printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 }
 
-/* Funkcija koja ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza. */
 void ispisi(int a[], int n)
 {
   int i;
@@ -20,7 +21,7 @@ void ispisi(int a[], int n)
   printf("\n");
 }
 
-/* Funkcija koja racuna sumu elemenata niza. */
+/* Funkcija racuna sumu elemenata niza. */
 int suma(int a[], int n)
 {
   int i;
@@ -30,14 +31,14 @@ int suma(int a[], int n)
   return suma_elemenata;
 }
 
-/* Funkcija koja racuna prosecnu vrednost elemenata niza. */
+/* Funkcija racuna prosecnu vrednost elemenata niza. */
 float prosek(int a[], int n)
 {
   int suma_elemenata = suma(a, n);
   return (float) suma_elemenata / n;
 }
 
-/* Funkcija koja izracunava maksimum elemenata niza. */
+/* Funkcija izracunava maksimum elemenata niza. */
 int maksimum(int a[], int n)
 {
   int najveci, i;
@@ -50,7 +51,7 @@ int maksimum(int a[], int n)
   return najveci;
 }
 
-/* Funkcija koja izracunava poziciju maksimalnog elementa u nizu. */
+/* Funkcija izracunava poziciju maksimalnog elementa u nizu. */
 int pozicija_maksimuma(int a[], int n)
 {
   int najveci, pozicija_najveceg;
@@ -81,7 +82,7 @@ int main()
      ulaza. */
   printf("Unesite dimenziju niza:");
   scanf("%d", &n);
-  if (n < 1 || n > MAKS) 
+  if (n <= 0 || n > MAKS) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);

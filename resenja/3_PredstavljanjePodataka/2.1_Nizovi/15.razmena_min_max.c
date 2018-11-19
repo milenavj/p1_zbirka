@@ -3,31 +3,16 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int a[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
-  
-  return n;
 }
 
-/* Funkcija koja ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int a[], int n)
 {
   int i;
@@ -36,7 +21,7 @@ void ispisi(int a[], int n)
   printf("\n");
 }
 
-/* Funkcija koja razmenjuje najmanji i najveci element niza. */
+/* Funkcija razmenjuje najmanji i najveci element niza. */
 void razmeni_min_max(int brojevi[], int n)
 {
   int i;  
@@ -76,8 +61,18 @@ int main()
   int brojevi[MAKS];
   int n;
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(brojevi);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(brojevi, n);
 
   /* Razmenjuju se najmanji i najveci element. */
   razmeni_min_max(brojevi, n);

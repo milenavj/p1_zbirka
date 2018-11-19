@@ -3,31 +3,16 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
-    scanf("%d", &niz[i]);
-  
-  return n;
+    scanf("%d", &a[i]);
 }
 
-/* Funkcija koja ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int a[], int n)
 {
   int i;
@@ -36,7 +21,7 @@ void ispisi(int a[], int n)
   printf("\n");
 }
 
-/* Funkcija koja obrce elemente niza. */
+/* Funkcija obrce elemente niza. */
 void obrni(int a[], int n)
 {
   int t, i, j;
@@ -54,7 +39,7 @@ void obrni(int a[], int n)
   }
 }
 
-/* Funkcija koja rotira niz ciklicno za jedno mesto u levo. */
+/* Funkcija rotira niz ciklicno za jedno mesto u levo. */
 void rotiraj1(int a[], int n)
 {
   int i, prvi;
@@ -71,7 +56,7 @@ void rotiraj1(int a[], int n)
   a[n - 1] = prvi;
 }
 
-/* Funkcija koja rotira niz ciklicno za k mesta u levo. */
+/* Funkcija rotira niz ciklicno za k mesta u levo. */
 void rotirajk(int a[], int n, int k)
 {
   int i;
@@ -91,8 +76,18 @@ int main()
   int a[MAKS];
   int n, k;
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Obrtanje niza. */
   printf("Elementi niza nakon obrtanja:\n");

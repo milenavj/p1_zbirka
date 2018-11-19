@@ -14,7 +14,7 @@ int main()
      ulaza. */
   printf("Unesite dimenziju vektora: ");
   scanf("%d", &n);
-  if (n < 1 || n > MAKS) 
+  if (n <= 0 || n > MAKS) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);

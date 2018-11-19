@@ -4,32 +4,16 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
-    scanf("%d", &niz[i]);
-  
-  return n;
+    scanf("%d", &a[i]);
 }
 
-/* Funkcija koja vraca duzinu najduze serije jednakih elemenata 
-   niza. */
+/* Funkcija vraca duzinu najduze serije jednakih elemenata niza. */
 int najduza_serija(int a[], int n)
 {
   int i;
@@ -64,8 +48,18 @@ int main()
   /* Deklaracija potrebnih promenljivih. */
   int n, a[MAKS];
 
-  /* Ucitavanje niza. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Ispis rezultata. */
   printf("Duzina najduze serije je %d.\n", najduza_serija(a, n));

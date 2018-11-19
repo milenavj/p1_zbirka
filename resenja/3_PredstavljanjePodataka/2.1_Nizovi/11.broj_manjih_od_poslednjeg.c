@@ -3,28 +3,13 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int a[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
-  
-  return n;
 }
 
 /* Funkcija prebrojavanje vraca broj elemenata niza koji su manji
@@ -51,9 +36,19 @@ int main()
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS];
   int n;
+  
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(a);
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Ispis rezultata. */
   printf("%d\n", prebrojavanje(a, n));

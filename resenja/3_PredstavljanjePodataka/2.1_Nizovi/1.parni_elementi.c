@@ -15,7 +15,7 @@ int main()
      ulaza. */
   printf("Unesite dimenziju niza:\n");
   scanf("%d", &n);
-  if (n < 1 || n > MAKS) 
+  if (n <= 0 || n > MAKS) 
   {
     printf("Greska: neispravan unos.\n");
     /* Za izlazak iz programa moze da se koristi i funkcija exit.

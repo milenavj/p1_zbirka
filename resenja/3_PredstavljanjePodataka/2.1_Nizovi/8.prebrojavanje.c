@@ -19,6 +19,15 @@ void ispisi(int niz[], int n, char c)
   }
 }
 
+/* Funkcija inicijalizuje niz postavljajuci vrednosti svih
+   elemenata na nulu. */
+void inicijalizuj(int niz[], int n)
+{
+  int i;
+  for (i = 0; i < n; i++)
+    niz[i] = 0;
+}
+
 int main()
 {
   /* Deklaracije nizova brojaca za cifre, mala i velika slova. */
@@ -27,18 +36,13 @@ int main()
   int velika_slova[DUZINA_ALFABETA];
   
   /* Deklaracije pomocnih promenljivih. */
-  int c, i;
-
-  /* Brojaci se na pocetku inicijalizuju nulama. */
-  for (i = 0; i < BROJ_CIFARA; i++)
-    cifre[i] = 0;
+  int c;
   
-  for (i = 0; i < DUZINA_ALFABETA; i++) 
-  {
-    mala_slova[i] = 0;
-    velika_slova[i] = 0;
-  }
-
+  /* Brojaci se na pocetku inicijalizuju nulama. */
+  inicijalizuj(cifre, BROJ_CIFARA);
+  inicijalizuj(mala_slova, DUZINA_ALFABETA);
+  inicijalizuj(velika_slova, DUZINA_ALFABETA);
+  
   /* Ucitavaju se karakteri sve do kraja ulaza. */
   while ((c = getchar()) != EOF) 
   {

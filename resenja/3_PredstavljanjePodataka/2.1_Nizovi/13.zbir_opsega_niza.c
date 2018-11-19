@@ -3,31 +3,16 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int a[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
-  
-  return n;
 }
 
-/* Funkcija koja racuna zbir elemenata niza od pozicije i do 
+/* Funkcija racuna zbir elemenata niza od pozicije i do 
    pozicije j. */
 int zbir(int a[], int i, int j)
 {
@@ -49,8 +34,18 @@ int main()
   int n, i, j;
   int a[MAKS];
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Ucitavaju se vrednosti granica i vrsi se provera
      ispravnosti ulaza. */

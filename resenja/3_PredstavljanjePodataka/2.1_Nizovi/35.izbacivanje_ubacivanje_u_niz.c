@@ -3,7 +3,7 @@
 
 #define MAKS 2000
 
-/* Funkcija za ispis elemenata niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispis(int niz[], int n)
 {
   int i;
@@ -12,19 +12,31 @@ void ispis(int niz[], int n)
   printf("\n");
 }
 
-/* Funkcija za ubacivanje na kraj niza. Vraca novu dimenziju niza. */
+/* Funkcija ubacuje element x na kraj niza. Vraca novu dimenziju
+   niza. */
 int ubaci_na_kraj(int niz[], int n, int x)
 {
+  if(n == MAKS)
+  {
+    printf("Greska: prekoracen je maksimalan broj elemenata niza.");
+    exit(EXIT_FAILURE);
+  }
+  
   niz[n] = x;
   return n + 1;
 }
 
-/* Funkcija za ubacivanje na pocetak niza. Vraca novu dimenziju
+/* Funkcija ubacuje element x na pocetak niza. Vraca novu dimenziju
    niza. */
 int ubaci_na_pocetak(int niz[], int n, int x)
 {
+  if(n == MAKS)
+  {
+    printf("Greska: prekoracen je maksimalan broj elemenata niza.");
+    exit(EXIT_FAILURE);
+  }
+  
   int i;
-
   /* Prvo se svi elementi niza pomere za jednu poziciju u desno da
      bi se oslobodio prostor za prvi element niza. Poslednji
      element niza se pomera sa pozicije (n-1) na poziciju (n).
@@ -41,12 +53,17 @@ int ubaci_na_pocetak(int niz[], int n, int x)
   return n + 1;
 }
 
-/* Funkcija za ubacivanje elementa na neku poziciju u nizu. Vraca
+/* Funkcija ubacuje element x na neku poziciju u nizu. Vraca
    novu dimenziju niza. */
 int ubaci_na_poziciju(int niz[], int n, int x, int pozicija)
 {
+  if(n == MAKS)
+  {
+    printf("Greska: prekoracen je maksimalan broj elemenata niza.");
+    exit(EXIT_FAILURE);
+  }
+  
   int i;
-
   /* Prvo se svi elementi niza od pozicije do kraja pomere za jedno 
      mesto u desno da bi se oslobodio prostor za novi element niza. 
    */
@@ -59,12 +76,17 @@ int ubaci_na_poziciju(int niz[], int n, int x, int pozicija)
   return n + 1;
 }
 
-/* Funkcija za brisanje prvog elementa niza. Vraca novu dimenziju
+/* Funkcija brise prvi element niza. Vraca novu dimenziju
    niza. */
 int brisi_prvog(int niz[], int n)
 {
+  if(n == 0)
+  {
+    printf("Greska: nije moguce brisanje iz praznog niza.\n");
+    exit(EXIT_FAILURE);
+  }
+  
   int i;
-
   /* Svi elementi niza pomeraju se za jedno mesto u levo. */
   for (i = 0; i < n - 1; i++)
     niz[i] = niz[i + 1];
@@ -72,16 +94,22 @@ int brisi_prvog(int niz[], int n)
   return n - 1;
 }
 
-/* Funkcija za brisanje poslednjeg elementa niza. Vraca novu
+/* Funkcija brise poslednji element niza. Vraca novu
    dimenziju niza. */
 int brisi_poslednjeg(int niz[], int n)
 {
+  if(n == 0)
+  {
+    printf("Greska: nije moguce brisanje iz praznog niza.\n");
+    exit(EXIT_FAILURE);
+  }
+  
   /* Dovoljno je smanjiti dimenziju niza, elemente niza nije
      potrebno brisati. */
   return n - 1;
 }
 
-/* Funkcija za brisanje elementa niza. Pretpostavlja se da element
+/* Funkcija brise element x. Pretpostavlja se da element
    ima samo jedno pojavljivanje (za vezbu napisati funkciju koja
    brise sva pojavljivanja, ako ih ima vise). Vraca novu dimenziju
    niza. */

@@ -4,33 +4,17 @@
 
 #define MAKS 200
 
-int ucitaj(char niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(char niz[], int n)
 {
-  int n, i;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
-  ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Preskace se novi red nakon unosa dimenzije. Ovo se radi
-     jer sledi ucitavanje karaktera i bez ove linije, prvi
-     karakter koji bi se upisao u niz bi bio novi red. */
-  getchar();
-  
+  int i;
   /* Ucitava se niz od n karaktera. */
   printf("Unesite elemete niza: ");
   for (i = 0; i < n; i++)
     scanf("%c", &niz[i]);
-  
-  return n;
 }
 
-/* Funkcija koja proverava da li je niz karaktera palindrom. */
+/* Funkcija proverava da li je niz karaktera palindrom. */
 int je_palindrom(char niz[], int n)
 {
   int i;
@@ -52,9 +36,24 @@ int main()
   /* Deklaracije potrebnih promenljivih. */
   char niz[MAKS];
   int n;
+  
+  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
+     ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+  
+  /* Preskace se novi red nakon unosa dimenzije. Ovo se radi
+     jer sledi ucitavanje karaktera i bez ove linije, prvi
+     karakter koji bi se upisao u niz bi bio novi red. */
+  getchar();
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(niz);
+  /* Ucitavaju se elementi niza. */
+  ucitaj(niz, n);
 
   /* Ispis rezultata. */
   if(je_palindrom(niz, n))

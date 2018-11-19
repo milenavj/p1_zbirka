@@ -3,31 +3,16 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int a[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite podatke: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
-  
-  return n;
 }
 
-/* Funkcija koja proverava da li niz sadrzi zadatu vrednost m. */
+/* Funkcija proverava da li niz sadrzi zadatu vrednost m. */
 int sadrzi(int a[], int n, int m)
 {
   int i;
@@ -45,7 +30,7 @@ int sadrzi(int a[], int n, int m)
   return 0;
 }
 
-/* Funkcija koja vraca indeks prvog pojavljivanja elementa m
+/* Funkcija vraca indeks prvog pojavljivanja elementa m
    u nizu a ili -1 ukoliko se m ne nalazi u nizu a. */
 int prvo_pojavljivanje(int a[], int n, int m)
 {
@@ -60,7 +45,7 @@ int prvo_pojavljivanje(int a[], int n, int m)
   return -1;
 }
 
-/* Funkcija koja vraca indeks poslednjeg pojavljivanja elementa m
+/* Funkcija vraca indeks poslednjeg pojavljivanja elementa m
    u nizu a ili -1 ukoliko se m ne nalazi u nizu a. */
 int poslednje_pojavljivanje(int a[], int n, int m)
 {
@@ -84,8 +69,18 @@ int main()
   int a[MAKS];
   int n, m, i;
 
-  /* Ucitavaju se dimenzija i elementi niza. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Ucitava se vrednost za pretragu. */
   printf("Unesite vrednost m:");

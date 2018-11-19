@@ -217,10 +217,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{8}#
 #\izlaz{Unesite vreme putovanja:}#
 #\ulaz{24 78 13 124 56 90 205 45}#
-#\izlaz{Unesite vrednosti k i t:}#
-#\ulaz{3 6}#
-#\izlaz{Unesite vrednost m:}#
-#\ulaz{23}#
+#\izlaz{Unesite vrednosti k, t i m:}#
+#\ulaz{3 6 23}#
 #\izlaz{Vreme putovanja nakon izmena:}#
 #\izlaz{24 78 36 147 79 113 205 45}#
 \end{upotreba}
@@ -232,10 +230,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{8}#
 #\izlaz{Unesite vreme putovanja:}#
 #\ulaz{24 78 13 124 56 90 205 45}#
-#\izlaz{Unesite vrednosti k i t:}#
-#\ulaz{3 15}#
-#\izlaz{Redni brojevi autobusa nisu}#
-#\izlaz{u dozvoljenom opsegu.}#
+#\izlaz{Unesite vrednosti k, t i m:}#
+#\ulaz{3 15 3}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{autobusi}
@@ -478,7 +475,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{5}#
-#\ulaz{19 47 27 34 16}#
+#\izlaz{Unesite elemente niza:}\ulaz{19 47 27 34 16}#
 #\izlaz{Vreme trcanja takmicara: 19 47 27 34 16}#
 #\izlaz{Ukupno vreme: 143}#
 #\izlaz{Prosecno vreme trcanja: 28.6}#
@@ -654,7 +651,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
    k)} koja izračunava zbir prvih $k$ pozitivnih elemenata realnog
  niza $a$ dužine $n$. 
  Napisati program koji učitava dimenziju niza, elemente niza i broj $k$ i 
- zatim ispisuje zbir prvih k pozitivnih elemenata niza.
+ zatim ispisuje zbir prvih $k$ pozitivnih elemenata niza.
  Maksimalan broj elemenata niza je $100$.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -800,7 +797,7 @@ primetio da mu se neke sličice ponavljaju i rešio je da ih razmeni sa
 drugarima. 
 Napisati funkciju \kckod{int duplikati(int a[], int n, int b[])} koja od niza $a$ dimenzije $n$
 formira niz b koji sadrzi sve elemente niza $a$ koji se pojavljuju bar dva puta u nizu. Funkcija
-kao povratnu vrednost vraca dimenziju niza $b$.
+kao povratnu vrednost vraća dimenziju niza $b$.
 Napisati program koji učitava Markove sličice i ispisuje sve duplikate.
 Maksimalan broj elemenata niza je $600$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
@@ -848,7 +845,7 @@ Palindrom je tekst koji se isto čita i sa leve i sa desne
 strane. Napisati funkciju koja proverava da li elementi niza karaktera
 čine palindrom (zanemariti velika/mala slova). 
 Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje da li je
-uneti niz karaktera palindrom ili ne. 
+uneti niz karaktera palindrom. 
 Maksimalan broj elemenata niza je $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -890,7 +887,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
   Napisati funkciju koja proverava da li su elementi celebrojnog niza
   uređeni neopadajuće. 
   Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje
-  da li je pomenuti uslov ispunjen ili ne. 
+  da li je pomenuti uslov ispunjen. 
   Maksimalan broj elemenata niza je $300$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -1014,7 +1011,7 @@ uzastopnih elemenata drugog niza. Zadatak rešiti na dva načina:
   pojavljivanja isti.
 \end{enumerate}
 Napisati program koji učitava dimenzije i elemente dva niza i zatim ispisuje
-  da li je neki od pomenutih uslova ispunjen ili ne.
+  da li je neki od pomenutih uslova ispunjen.
 Maksimalan broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -1102,8 +1099,8 @@ ako sadrži sve brojeve od $1$ do $n$.
   nije. \uputstvo{Koristiti funkciju $brojanje$ iz tačke (a).}
 \end{enumerate}
 Napisati program koji učitava dimenziju niza i
-elemente niza i ispisuje da li je uneti niz permutacija ili
-ne. Maksimalan broj elemenata niza je $100$.
+elemente niza i ispisuje da li je uneti niz permutacija. 
+Maksimalan broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1137,8 +1134,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
  Napisati program koji učitava dva cela broja $x$ i $y$ i 
  proverava da li se uneti brojevi zapisuju pomoću istih
- cifara. \uputstvo{Rešiti korišćenjem nizova. Pogledati zadatak
-   \ref{FUN_15}}.
+ cifara. \uputstvo{Zadatak rešiti korišćenjem nizova.}.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1518,7 +1514,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=v.brisanje_elemenata]
 Napisati funkciju koja iz datog niza briše sve elemente koji nisu
 deljivi svojom poslednjom cifrom. Izuzetak su elementi čija je poslednja
-cifra nula i koje zbog toga treba zadržati.Funkcija kao povratnu vrednost treba
+cifra nula i koje zbog toga treba zadržati. Funkcija kao povratnu vrednost treba
 da vrati broj elemenata niza nakon brisanja. 
 Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobije 
 brisanjem pomenutih elemenata. Zadatak rešiti bez korišćenja pomoćnog niza.
@@ -1602,8 +1598,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=p.unija_presek_razlika] 
 Korišćenjem nizova moguće je predstaviti skupove podataka. Napisati
-program koji demonstrira osnovne operacije nad skupovima --- unija,
-presek i razlika. Pomoću dva niza predstaviti dva skupa celih
+program koji demonstrira osnovne operacije nad skupovima (uniju,
+presek i razliku). Pomoću dva niza predstaviti dva skupa celih
 brojeva. Maksimalan broj elemenata niza je $500$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
   
@@ -1611,24 +1607,24 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza a:}\ulaz{5}#
-#\izlaz{Unesite elemente niza a:}\ulaz{2 8 1 5 2}#
+#\izlaz{Unesite elemente niza a:}\ulaz{1 2 3 4 5}#
 #\izlaz{Unesite broj elemenata niza b:}\ulaz{3}#
-#\izlaz{Unesite elemente niza b:}\ulaz{5 7 8}#
-#\izlaz{Unija: 2 8 1 5 2 5 7 8}#
-#\izlaz{Presek: 5}#
-#\izlaz{Razlika: 2 1 2}#
+#\izlaz{Unesite elemente niza b:}\ulaz{5 4 9}#
+#\izlaz{Unija: 1 2 3 4 5 9}#
+#\izlaz{Presek: 4 5}#
+#\izlaz{Razlika: 1 2 3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza a:}\ulaz{3}#
-#\izlaz{Unesite elemente niza a:}\ulaz{11 4 4}#
+#\izlaz{Unesite elemente niza a:}\ulaz{11 4 -5}#
 #\izlaz{Unesite broj elemenata niza b:}\ulaz{2}#
 #\izlaz{Unesite elemente niza b:}\ulaz{18 9}#
-#\izlaz{Unija: 11 4 4 18 9}#
+#\izlaz{Unija: 11 4 -5 18 9}#
 #\izlaz{Presek: }#
-#\izlaz{Razlika: 11 4 4}#
+#\izlaz{Razlika: 11 4 -5}#
 \end{upotreba}
 \end{miditest}
 
@@ -1637,11 +1633,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite broj elemenata niza a:}\ulaz{6}#
 #\izlaz{Unesite elemente niza a:}\ulaz{12 7 9 12 5 1}#
-#\izlaz{Unesite broj elemenata niza b:}\ulaz{4}#
-#\izlaz{Unesite elemente niza b:}\ulaz{1 12 22 12}#
-#\izlaz{Unija: 12 7 9 12 5 1 1 12 22 12}#
-#\izlaz{Presek: 12 12 1}#
-#\izlaz{Razlika: 7 9 5}#
+#\izlaz{Greska: skup ne moze imati duplikate.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj elemenata niza a:}\ulaz{-2}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
@@ -1658,7 +1657,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=izbacivanje_ubacivanje_u_niz] 
 Prilikom ulaska u banku klijent dobija redni broj, a u nizu se čuva
 redosled opsluživanja klijenata. Tako, prvi klijent u nizu će biti
-prvi uslužen, a klijent koji je poslednji dosao se nalazi na kraju
+prvi uslužen, a klijent koji je poslednji došao se nalazi na kraju
 niza. Redni brojevi se izdaju počevši od $1$ svakog radnog dana, ali
 se niz za redosled stalno menja. Dodatno, postoje specijalni klijenti
 (npr. oni koji plaćaju platni promet ili oni koji podižu stambeni

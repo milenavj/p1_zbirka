@@ -3,31 +3,16 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
-    scanf("%d", &niz[i]);
-  
-  return n;
+    scanf("%d", &a[i]);
 }
 
-/* Funkcija koja ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int niz[], int n)
 {
   int i;
@@ -36,6 +21,9 @@ void ispisi(int niz[], int n)
   printf("\n");
 }
 
+/* Funkcija razmenjuje elemente niza tako da se na pocetku niza
+   nalaze svi parni elementi niza, nakon kojih slede svi neparni
+   elementi niza. */
 void promeni_redosled(int niz[], int n)
 {
   int i = 0, j = n - 1;
@@ -72,8 +60,18 @@ int main()
   int niz[MAKS];
   int n;
 
-  /* Ucitavaju se dimenzija i elemenati niza. */
-  n = ucitaj(niz);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(niz, n);
 
   /* Menja se niz na trazeni nacin. */
   promeni_redosled(niz, n);

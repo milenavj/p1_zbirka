@@ -4,36 +4,21 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
-    scanf("%d", &niz[i]);
-  
-  return n;
+    scanf("%d", &a[i]);
 }
 
-/* Funkcija koja ispisuje elemente niza. */
-void ispisi(int niz[], int n)
+/* Funkcija ispisuje elemente niza dimenzije n. */
+void ispisi(int a[], int n)
 {
   int i;
   for (i = 0; i < n; i++)
-    printf("%d ", niz[i]);
+    printf("%d ", a[i]);
   printf("\n");
 }
 
@@ -91,8 +76,18 @@ int main()
   int a[MAKS], b[MAKS];
   int n_a, n_b;
 
-  /* Ucitavaju se elementi niza a. */
-  n_a = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n_a);
+  if (n_a <= 0 || n_a > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n_a);
 
   /* Formira se niz b brisanjem prostih iz niza a. */
   n_b = obrisi_proste(a, n_a, b);

@@ -3,6 +3,15 @@
 
 #define BROJ_CIFARA 10
 
+/* Funkcija inicijalizuje niz postavljajuci vrednosti svih
+   elemenata na nulu. */
+void inicijalizuj(int niz[], int n)
+{
+  int i;
+  for (i = 0; i < n; i++)
+    niz[i] = 0;
+}
+
 /* Funkcija izdvaja cifru po cifru broja i uvecava odgovarajuci
    element niza koji odgovara brojacu za tu cifru. Na primer,
    za broj=1123, po zavrsetku ove funkcije niz[1] ce imati vrednost
@@ -10,11 +19,10 @@
    vrednost 1, a svi ostali elementi niza ce imati vrednost 0. */
 void analiza_cifara(int broj, int niz[])
 {
-  int c, i;
+  int c;
 
   /* Inicijalizacia svih brojaca na nule. */
-  for (i = 0; i < BROJ_CIFARA; i++)
-    niz[i] = 0;
+  inicijalizuj(niz, BROJ_CIFARA);
 
   /* Uvecavanje odgovarajucih brojaca. */
   do {

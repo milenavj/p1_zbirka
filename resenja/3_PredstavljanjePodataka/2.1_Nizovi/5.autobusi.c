@@ -28,23 +28,12 @@ int main()
     scanf("%d", &niz[i]);
 
   /* Ucitavaju se redni brojevi autobusa cije se vreme putovanja
-     menja.  */
-  printf("Unesite vrednosti k i t:\n");
-  scanf("%d%d", &k, &t);
+     menja i vrednost kasnjenja. */
+  printf("Unesite vrednosti k, t i m:\n");
+  scanf("%d%d%d", &k, &t, &m);
 
   /* Vrsi se provera ispravnosti ulaza. */
-  if (k <= 0 || k > n || t <= 0 || t > n) 
-  {
-    printf("Redni brojevi autobusa nisu u dozvoljenom opsegu.\n");
-    exit(EXIT_FAILURE);
-  }
-
-  /* Ucitava se vrednost kasnjenja. */
-  printf("Unesite vrednost m:\n");
-  scanf("%d", &m);
-
-  /* Vrsi se provera ispravnosti ulaza. */
-  if (m < 0) 
+  if (k <= 0 || k > n || t <= 0 || t > n || m < 0) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);

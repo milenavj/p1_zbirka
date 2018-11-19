@@ -6,26 +6,16 @@
    je potrebno odvojiti 32 mesta u nizu jer se nulti ne koristi. */
 #define MAKS_DANA 32
 
-/* Funkcija ucitava dimenziju i elemente niza. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  
-  if (n <= 0 || n > MAKS_DANA) {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-
+  int i;  
   printf("Unesite broj prodatih artikala: ");
   for (i = 0; i < n; i++)
-    scanf("%d", &niz[i]);
-
-  return n;
+    scanf("%d", &a[i]);
 }
 
+/* Funkcija racuna duzinu najduzeg neopadajuceg podniza niza a. */
 int najduzi_neopadajuci(int a[], int n)
 {
   int i;
@@ -59,8 +49,18 @@ int main()
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS_DANA], n;
 
-  /* Ucitava se ulaz. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS_DANA) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi niza. */
+  ucitaj(a, n);
 
   /* Ispis rezultata. */
   printf("Duzina najduzeg neopadajuceg prodavanja je %d.\n",

@@ -3,21 +3,10 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int niz[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju niza: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
+  int i;
   
   /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza: ");
@@ -33,11 +22,9 @@ int ucitaj(int niz[])
       exit(EXIT_SUCCESS);
     }
   }
-  
-  return n;
 }
 
-/* Funkcija koja prebrojava koliko puta se pojavljuje svaki element
+/* Funkcija prebrojava koliko puta se pojavljuje svaki element
    niza a. */
 void brojanje(int a[], int b[], int n)
 {
@@ -58,6 +45,7 @@ void brojanje(int a[], int b[], int n)
     b[a[i]]++;
 }
 
+/* Funkcija proverava da li je niz a permutacija. */
 int permutacija(int a[], int n)
 {
    /* Niz b moze imati index MAKS (jer niz b se posmatra od 1 do
@@ -85,8 +73,18 @@ int main()
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS], n;
 
-  /* Ucitavaju se dimenzija i elementi niza a. */
-  n = ucitaj(a);
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju niza: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+  
+  /* Ucitavaju se elementi niza a. */
+  ucitaj(a, n);
 
   /* Ispis rezultta. */
   if(permutacija(a, n))

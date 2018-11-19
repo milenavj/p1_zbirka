@@ -3,36 +3,15 @@
 
 #define MAKS 100
 
-/* Funkcija koja ucitava dimenziju i elemente nizova.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz1[], int niz2[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int niz[], int n)
 {
-  int i, n;
-  
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite dimenziju nizova: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi prvog niza. */
-  printf("Unesite elemente niza a: ");
+  int i;  
   for (i = 0; i < n; i++)
-    scanf("%d", &niz1[i]);
-  
-  /* Ucitavaju se elementi drugog niza. */
-  printf("Unesite elemente niza b: ");
-  for (i = 0; i < n; i++)
-    scanf("%d", &niz2[i]);
-  
-  return n;
+    scanf("%d", &niz[i]);
 }
 
-/* Funkcija koja ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int niz[], int n)
 {
   int i;
@@ -41,6 +20,7 @@ void ispisi(int niz[], int n)
   printf("\n");
 }
 
+/* Funkcija formira niz c nadovezivanjem nizova a i b. */
 void spoji(int a[], int b[], int n, int c[])
 {
   int i;
@@ -63,8 +43,21 @@ int main()
   int a[MAKS], b[MAKS], c[2 * MAKS];
   int n;
 
-  /* Ucitavaju se dimenzija i elementi nizova. */
-  n = ucitaj(a, b);
+  /* Ucitava se dimenzija nizova i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite dimenziju nizova: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavaju se elementi nizova. */
+  printf("Unesite elemente niza a: ");
+  ucitaj(a, n);
+  printf("Unesite elemente niza b: ");
+  ucitaj(b, n);
 
   /* Formira se niz c. */
   spoji(a, b, n, c);

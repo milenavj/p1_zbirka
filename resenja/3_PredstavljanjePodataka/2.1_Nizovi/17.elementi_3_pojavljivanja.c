@@ -3,30 +3,16 @@
 
 #define MAKS 600
 
-/* Funkcija koja ucitava dimenziju i elemente niza.
-   Kao povratnu vrednost vraca ucitanu dimenziju. */
-int ucitaj(int niz[])
+/* Funkcija ucitava elemente niza dimenzije n. */
+void ucitaj(int a[], int n)
 {
-  int i, n;
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
-  printf("Unesite broj n: ");
-  scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
-    printf("Greska: neispravan unos.\n");
-    exit(EXIT_FAILURE);
-  }
-  
-  /* Ucitavaju se elementi niza. */
+  int i;  
   printf("Unesite elemente niza a: ");
   for (i = 0; i < n; i++)
-    scanf("%d", &niz[i]);
-  
-  return n;
+    scanf("%d", &a[i]);
 }
 
-/* Funkcija koja ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int niz[], int n)
 {
   int i;
@@ -35,7 +21,7 @@ void ispisi(int niz[], int n)
   printf("\n");
 }
 
-/* Funkcija koja proverava da li niz a dimenzije n sadrzi zadatu
+/* Funkcija proverava da li niz a dimenzije n sadrzi zadatu
    vrednost x. Pretraga se vrsi od prosledjene pozicije. */
 int sadrzi(int niz[], int n, int od_pozicije, int x)
 {
@@ -47,6 +33,8 @@ int sadrzi(int niz[], int n, int od_pozicije, int x)
   return 0;
 }
 
+/* Funkcija formira niz b tako sto u njega ubacuje sve elemente
+   niza a koji se u tom nizu pojavljuju bar dva puta. */
 int duplikati(int a[], int n, int b[])
 {
   /* Promenljiva j je brojac elemenata rezultujuceg niza. */
@@ -79,16 +67,26 @@ int main()
 {
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS], b[MAKS];
-  int na, nb;
+  int n_a, n_b;
+
+  /* Ucitava se dimenzija niza i vrsi se provera 
+     ispravnosti ulaza. */
+  printf("Unesite broj n: ");
+  scanf("%d", &n_a);
+  if (n_a <= 0 || n_a > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
   /* Ucitavaju se podaci o slicicama. */
-  na = ucitaj(a);
+  ucitaj(a, n_a);
 
   /* Niz b se popunjava duplikatima iz a. */
-  nb = duplikati(a, na, b);
+  n_b = duplikati(a, n_a, b);
 
   /* Ispis rezultata. */
-  ispisi(b, nb);
+  ispisi(b, n_b);
 
   exit(EXIT_SUCCESS);
 }
