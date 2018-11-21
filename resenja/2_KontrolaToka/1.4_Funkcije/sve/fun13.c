@@ -10,7 +10,8 @@ int sve_parne_cifre(int x)
 
   /* Ako se naidje na cifru koja nije parna, onda se kao povratna
      vrednost funkcije vraca 0. */
-  while (x > 0) {
+  while (x > 0) 
+  {
     cifra = x % 10;
     if (cifra % 2 == 1)
       return 0;
@@ -37,7 +38,8 @@ int sve_cifre_jednake(int x)
   /* Za sve ostale cifre se proverava da li su jednake poslednjoj.
      Ako se naidje na neku koja nije, onda nisu sve cifre broja
      x jednake i kao povratna vrednost se vraca 0. */
-  while (x) {
+  while (x) 
+  {
     if (x % 10 != poslednja_cifra)
       return 0;
 

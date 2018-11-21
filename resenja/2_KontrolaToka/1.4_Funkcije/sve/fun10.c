@@ -19,7 +19,8 @@ float aritmeticka_sredina(int x)
   /* Dok god ima neobradjenih cifara, na zbir se dodaje poslednja
      cifra, brojac cifara se uvecava za 1 i sa broja x se uklanja
      poslednja cifra. */
-  while (x) {
+  while (x) 
+  {
     zbir_cifara += x % 10;
     broj_cifara++;
     x /= 10;

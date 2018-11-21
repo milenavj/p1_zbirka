@@ -11,7 +11,8 @@ int je_stepen(unsigned int x, unsigned int n)
 
   /* U svakoj iteraciji petlje, s se azurira tako da ima
      vrednost n^i. Postupak se ponavlja dok je s manji od x. */
-  while (s < x) {
+  while (s < x)
+  {
     s = s * n;
     i++;
   }
@@ -41,9 +42,9 @@ int main()
   /* U zavisnosti od povratne vrednosti funkcije, vrsi se
      ispis rezultata. */
   if (st != -1)
-    printf("%u=%u^%d\n", x, n, st);
+    printf("Jeste: %u=%u^%d\n", x, n, st);
   else
-    printf("%u nije stepen broja %u\n", x, n);
+    printf("Broj %u nije stepen broja %u.\n", x, n);
 
   return 0;
 }

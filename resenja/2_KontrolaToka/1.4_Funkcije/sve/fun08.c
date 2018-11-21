@@ -2,7 +2,8 @@
 #include <math.h>
 
 /* Funkcija vraca 1 ako je broj prost, a 0 u suprotnom.  */
-int prost(int x){
+int prost(int x)
+{
   int i;
 
   /* Brojevi 2 i 3 su prosti. */
@@ -28,7 +29,8 @@ int prost(int x){
 
 /* Funkcija ispisuje prvih n prostih brojeva. 
    Kljucna rec void oznacava da funkcija nema povratnu vrednost. */
-void prvih_n_prostih(int n){
+void prvih_n_prostih(int n)
+{
   int broj_prostih = 0;
   int k = 2;
   
@@ -69,7 +71,6 @@ void prosti_brojevi_manji_od_n(int n)
   {
     if(prost(k))
       printf("%d ", k);
-    
     k++;
   }
   printf("\n");

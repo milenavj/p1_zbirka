@@ -5,7 +5,8 @@
 char sifra(char c, int k)
 {
   /* Provera da li je karakter malo slovo. */
-  if (c >= 'a' && c <= 'z') {
+  if (c >= 'a' && c <= 'z') 
+  {
     /* Ako karakter koji je k pozicija pre datog karaktera ispada
        iz opsega malih slova. */
     if (c - k < 'a')
@@ -19,7 +20,8 @@ char sifra(char c, int k)
          te je dovoljno njega vratiti. */
       return c - k;
   } 
-  else if (c >= 'A' && c <= 'Z') {
+  else if (c >= 'A' && c <= 'Z') 
+  {
     /* Postupak se ponavlja i za velika slova. */
     if (c - k < 'A')
       return 'Z' - (k - (c - 'A') - 1);

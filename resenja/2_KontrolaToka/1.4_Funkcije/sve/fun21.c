@@ -5,7 +5,8 @@
    suma(x^n/n!), gde indeks n ide od od 0 do beskonacno, pri cemu
    se sumiranje vrsi dok je razlika sabiraka u redu po apsolutnoj
    vrednosti manja od eps. */
-double e_na_x(double x, double eps){
+double e_na_x(double x, double eps)
+{
   double s = 1;
   double clan = 1;
   int n = 1;
@@ -23,7 +24,8 @@ double e_na_x(double x, double eps){
 
      Sumiranje se sprovodi sve dok je sabirak po apsolutnoj
      vrednosti veci od trazene tacnosti eps. */
-  do {
+  do 
+  {
     clan = (clan * x) / n;
     s += clan;
     n++;

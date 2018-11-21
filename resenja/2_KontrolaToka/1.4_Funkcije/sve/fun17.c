@@ -13,7 +13,8 @@ int par_nepar(int x)
   prethodna_cifra = x % 10;
   x /= 10;
 
-  while (x) {
+  while (x) 
+  {
     tekuca_cifra = x % 10;
 
     /* Ukoliko su uzastopne cifre iste parnosti, uslov nije

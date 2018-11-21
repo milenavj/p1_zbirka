@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Funkcija koja racuna nzd(x,y) primenom Euklidovog algoritma. */
+/* Funkcija racuna nzd(x,y) primenom Euklidovog algoritma. */
 int euklid(int x, int y)
 {
   int ostatak;
@@ -19,7 +19,8 @@ int euklid(int x, int y)
      3. y postaje ostatak => y = 0
      => procedura se zavrsava jer je y jednako 0, a 
      rezultat je poslednji ne-nula ostatak, tj. x.*/
-  while (y) {
+  while (y) 
+  {
     ostatak = x % y;
     x = y;
     y = ostatak;

@@ -16,7 +16,8 @@ int neopadajuce(int n)
   /* U petlji se proverava poredak svake dve susedne cifre. Ukoliko
      se detektuje da je poredak narusen, izlazi se iz funkcije i 
      vraca se vrednost 0. */
-  while (n) {
+  while (n) 
+  {
     tekuca_cifra = n % 10;
     
     if (tekuca_cifra > prethodna_cifra)

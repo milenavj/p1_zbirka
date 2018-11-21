@@ -1,12 +1,13 @@
 #include<stdio.h>
 
-/* Funkcija koja iscrtava romb. */
+/* Funkcija iscrtava romb. */
 void romb(int n)
 {
   int i, j;
 
   /* Petlja iscrtava liniju po liniju romba. */
-  for (i = 0; i < n; i++) {
+  for (i = 0; i < n; i++) 
+  {
     /* U svakoj liniji prvo se ispisuje n-i-1 razmaka. */
     for (j = 0; j < n - i - 1; j++)
       printf(" ");
@@ -30,7 +31,8 @@ int main()
   scanf("%d", &n);
 
   /* Vrsi se provera ispravnosti ulaza. */
-  if (n <= 0){
+  if (n <= 0)
+  {
     printf("Greska: neispravan unos.\n");
     return -1;
   }

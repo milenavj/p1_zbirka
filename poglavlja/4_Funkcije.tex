@@ -30,7 +30,7 @@ ispisuje njihov minimum.
 \begin{Exercise}[label=FUN_02] 
 Napisati funkciju \kckod{float razlomljeni\_deo(float x)} koja
 izračunava razlomljeni deo broja $x$. Napisati program koji učitava
-jedan realan broj i ispisuje njegov razlomljeni deo.
+jedan realan broj i ispisuje njegov razlomljeni deo na šest decimala.
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -95,7 +95,7 @@ da li vrednost prvog broja odgovara vrednosti nekog stepena drugog broja.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva broja:}\ulaz{81 3}#
-#\izlaz{Jeste: 81 = 3\^4}#
+#\izlaz{Jeste: 81 = 3\^\ 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -825,7 +825,7 @@ Napisati funkciju \kckod{void ispis(float x, float y, int n)}
 koja za dva realna broja $x$ i $y$ i jedan pozitivan ceo broj $n$
 ispisuje vrednosti sinusne funkcije u $n$ ravnomerno raspoređenih
 tačaka intervala $[x,y]$.  Napisati program koji učitava granice intervala
-i broj tačaka i ispisuje odgovarauće vrednosti sinusne funkcije, zaokružene na
+i broj tačaka i ispisuje odgovarajuće vrednosti sinusne funkcije, zaokružene na
 četiri decimale.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -1052,7 +1052,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{31.12.1680.}#
-#\izlaz{Broj dana od Nove godine je: 0}#
+#\izlaz{Broj dana do Nove godine je: 0}#
 \end{upotreba}
 \end{miditest}
 
@@ -1060,7 +1060,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite datum:}\ulaz{28.2.2004.}#
-#\izlaz{Broj dana od Nove godine je: 307}#
+#\izlaz{Broj dana do Nove godine je: 307}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1083,8 +1083,8 @@ Za rešavanje ovog zadatka koristi se funkcija \kckod{do\_kraja\_godine} koja je
 \begin{Exercise}[label=FUN_28] 
 Napisati funkciju \kckod{int broj\_dana\_izmedju(int dan1, int mesec1,
   int godina1, int dan2, int mesec2, int godina2)} koja određuje broj
-dana između dva datuma. Napisati program koji učitava šest celih
-brojeva, koji označavaju dva datuma, i na standarni izlaz ispisuje
+dana između dva datuma. Napisati program koji učitava dva datuma u formatu
+\kckod{dd.mm.gggg} i na standarni izlaz ispisuje
 broj dana između ta dva datuma.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 

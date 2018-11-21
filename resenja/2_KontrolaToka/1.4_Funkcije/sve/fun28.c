@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/* Funkcija koja proverava da li je godina prestupna. */
+/* Funkcija proverava da li je godina prestupna. */
 int prestupna(int godina)
 {
   if ((godina % 100 != 0 && godina % 4 == 0) || godina % 400 == 0)
@@ -112,7 +112,7 @@ int broj_dana_u_godini(int godina)
     return 365;
 }
 
-/* Funkcija koja racuna broj dana izmedju dva datuma. */
+/* Funkcija racuna broj dana izmedju dva datuma. */
 int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
                       int mesec2, int godina2) {
   int pom, i;
@@ -120,7 +120,8 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
 
   /* Vrsi se provera koji od datuma je ranije i ukoliko je to
      potrebno, razmenjuju se tako da broj 1 ide uz prvi datum. */
-  if (!prethodi(dan1, mesec1, godina1, dan2, mesec2, godina2)) {
+  if (!prethodi(dan1, mesec1, godina1, dan2, mesec2, godina2)) 
+  {
     pom = dan1;
     dan1 = dan2;
     dan2 = pom;
@@ -135,7 +136,8 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
   }
 
   /* Ako su godine razlicite. */
-  if (godina1 != godina2) {
+  if (godina1 != godina2) 
+  {
     /* Za manji datum dodaje se broj dana do kraja godine. */
     suma_dana = do_kraja_godine(dan1, mesec1, godina1);
 
@@ -148,7 +150,8 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
     suma_dana += od_nove_godine(dan2, mesec2, godina2);
   }
   /* Ako su godine iste, ali meseci razliciti. */
-  else if (mesec1 != mesec2) {
+  else if (mesec1 != mesec2) 
+  {
     /* Dodaje se broj dana do kraja prvog meseca. */
     suma_dana = broj_dana(mesec1, godina1) - dan1;
 
@@ -182,8 +185,9 @@ int main()
 
   /* Vrsi se provera ispravnosti unetih datuma. */
   if (!ispravan(dan1, mesec1, godina1)
-      || !ispravan(dan2, mesec2, godina2)) {
-    printf("Uneti datum nije ispravan.\n");
+      || !ispravan(dan2, mesec2, godina2)) 
+  {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 

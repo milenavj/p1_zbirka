@@ -11,7 +11,8 @@ int sadrzi(int x, int c)
   /* Izdvaja se cifra po cifra broja x.
      Ako se naidje na cifru cija je vrednost c, onda se kao
      rezultat funkcije vraca 1 (jer x sadrzi c). */
-  while (x) {
+  while (x) 
+  {
     if (x % 10 == c)
       return 1;
     x /= 10;

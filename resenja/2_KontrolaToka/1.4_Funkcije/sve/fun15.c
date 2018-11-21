@@ -21,7 +21,7 @@ int pozicija_cifre(int broj, int cifra)
   return -1;
 }
 
-/* Funkcija koja iz zapisa broja izbacuje cifru koja se nalazi
+/* Funkcija iz zapisa broja izbacuje cifru koja se nalazi
    na prosledjenoj poziciji. Pozicija je stepen broja 10. 
    Na primer, za x=1234 i pozicija = 10, treba da se izbaci 3.
    levi_deo = 1234/(10*10) = 12
@@ -42,7 +42,8 @@ int zapis(int x, int y)
   x = abs(x);
   y = abs(y);
 
-  while (x) {
+  while (x) 
+  {
     /* Proverava se da li y sadrzi poslednju cifru broja x. */
     pozicija = pozicija_cifre(y, x % 10);
     

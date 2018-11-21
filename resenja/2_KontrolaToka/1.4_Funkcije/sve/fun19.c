@@ -1,17 +1,18 @@
 #include<stdio.h>
 
-/* Funkcija koja vraca zbir cifara datog broja x. */
+/* Funkcija vraca zbir cifara datog broja x. */
 int zbir_cifara(int x)
 {
   int zbir = 0;
-  while (x) {
+  while (x) 
+  {
     zbir += x%10;
     x /= 10;
   }
   return zbir;
 }
 
-/* Funkcija koja vraca 1 ako je broj srecan, a 0 u suprotnom. */
+/* Funkcija vraca 1 ako je broj srecan, a 0 u suprotnom. */
 int srecan(int x)
 {
   /* Dok god u broju x ima vise od 2 cifre, vrednost broja x se

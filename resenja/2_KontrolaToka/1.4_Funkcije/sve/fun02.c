@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Funkcija koja vraca razlomljeni deo prosledjenog broja. */
+/* Funkcija vraca razlomljeni deo prosledjenog broja. */
 float razlomljeni_deo(float x)
 {
   /* Napomena: Funkcija fabs racuna apsolutnu vrednost realnog

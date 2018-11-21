@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Funkcija koja racuna minimum tri cela broja.
+/* Funkcija racuna minimum tri cela broja.
    Promenljive u listi argumenata funkcije (x, y i z), kao i one
    deklarisane u samoj funkciji (minimum), lokalne su za tu
    funkciju, sto znaci da im se ne moze pristupiti nigde izvan

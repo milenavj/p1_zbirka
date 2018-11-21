@@ -11,7 +11,8 @@ int prebrojavanje(float x)
      Svaki put kada se unese broj koji je jednak broju x,
      brojac pojavljivanja se uveca za 1. */
   printf("Unesite brojeve:\n");
-  while(1){
+  while(1)
+  {
     scanf("%f", &y);
     
     if(y == 0)

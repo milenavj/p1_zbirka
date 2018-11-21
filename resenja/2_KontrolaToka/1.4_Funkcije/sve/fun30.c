@@ -1,7 +1,6 @@
 #include<stdio.h>
 
-/* Funkcija koja stampa n zvezdica za kojima sledi znak za novi
-   red. */
+/* Funkcija stampa n zvezdica za kojima sledi znak za novi red. */
 void stampaj_zvezdice(int n)
 {
   int i;
@@ -11,7 +10,7 @@ void stampaj_zvezdice(int n)
   printf("\n");
 }
 
-/* Funkcija koja crta grafikon. */
+/* Funkcija crta grafikon. */
 void grafikon_h(int a, int b, int c, int d)
 {
   /* Prvo se ispisuje a zvezdica. */
@@ -33,7 +32,8 @@ int main()
   scanf("%d%d%d%d", &a, &b, &c, &d);
 
   /* Vrsi se provera ispravnosti ulaza i ispisuje se rezultat. */
-  if (a < 0 || b < 0 || c < 0 || d < 0) {
+  if (a < 0 || b < 0 || c < 0 || d < 0) 
+  {
     printf("Greska: neispravan unos.\n");
     return -1;
   } 

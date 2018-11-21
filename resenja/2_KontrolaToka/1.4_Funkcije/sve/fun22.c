@@ -33,7 +33,8 @@ int main()
   /* Ucitava se broj n i vrsi se provera ispravnosti ulaza. */
   printf("Unesite broj n:");
   scanf("%d", &n);
-  if (n <= 1) {
+  if (n <= 1) 
+  {
     printf("Greska: neispravan unos.\n");
     return -1;
   }

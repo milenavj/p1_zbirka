@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/* Funkcija koja proverava da li je godina prestupna. */
+/* Funkcija proverava da li je godina prestupna. */
 int prestupna(int godina)
 {
   if ((godina % 100 != 0 && godina % 4 == 0) || godina % 400 == 0)
@@ -55,7 +55,7 @@ int ispravan(int dan, int mesec, int godina)
   return 1;
 }
 
-/* Funkcija koja racuna sledeci dan. */
+/* Funkcija racuna sledeci dan. */
 void sledeci_dan(int dan, int mesec, int godina)
 {
   /* Za kraj godine, odnosno za datum 31.12. sledeci datum je 1.1.
@@ -88,8 +88,9 @@ int main()
   scanf("%d.%d.%d.", &dan, &mesec, &godina);
 
   /* Vrsi se provera ispravnosti datuma. */
-  if (!ispravan(dan, mesec, godina)) {
-    printf("Uneti datum nije ispravan.\n");
+  if (!ispravan(dan, mesec, godina))
+  {
+    printf("Greska: neispravan unos.\n");
     return -1;
   }
 

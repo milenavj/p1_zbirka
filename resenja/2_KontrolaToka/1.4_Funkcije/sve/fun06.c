@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Funkcija koja racuna zbir reciprocnih vrednosti brojeva
+/* Funkcija racuna zbir reciprocnih vrednosti brojeva
    iz intervala [1,n]. */
 float zbir_reciprocnih(int n)
 {

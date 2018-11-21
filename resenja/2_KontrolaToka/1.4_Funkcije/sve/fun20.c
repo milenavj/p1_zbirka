@@ -2,7 +2,7 @@
 #include <math.h>
 #include <stdlib.h>
 
-/* Funkcija koja racuna broj cifara celog broja n. */
+/* Funkcija racuna broj cifara celog broja n. */
 int broj_cifara(int n)
 {
   int brojac = 0;
@@ -28,7 +28,8 @@ int armstrong(int x)
   int x_pocetno = x;
 
   /* Racuna se suma n-tih stepena cifara broja x. */
-  while (x) {
+  while (x) 
+  {
     suma += pow(x % 10, n);
     x /= 10;
   }

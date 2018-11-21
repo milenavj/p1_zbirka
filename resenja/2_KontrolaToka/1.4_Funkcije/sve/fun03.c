@@ -1,7 +1,8 @@
 #include <stdio.h>
 
-/* Funkcija koja racuna zbir delilaca broja x. */ 
-int zbir_delilaca(int x) {
+/* Funkcija racuna zbir delilaca broja x. */ 
+int zbir_delilaca(int x) 
+{
   int i;
   
   /* Inicijalizacija zbira na 0. */
@@ -13,7 +14,8 @@ int zbir_delilaca(int x) {
      se pored vrednosti i dodaje i x/i. 
      Na primer, za x=6, kada je i=2, dodaju se i 2 i 6/2 = 3, a za
      x = 4, kada je i=2, dodaje se samo 2. */
-  for (i = 1; i*i <= x; i++) {
+  for (i = 1; i*i <= x; i++) 
+  {
     if (x % i == 0)
     {
       zbir += i;
@@ -36,7 +38,8 @@ int main()
   scanf("%d", &k);
 
   /* Vrsi se provera ispravnosti ulaznih podataka. */
-  if (k <= 0){
+  if (k <= 0)
+  {
     printf("Greska: neispravan unos.\n");
     return -1;
   }

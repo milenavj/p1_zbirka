@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 
-/* Funkcija koja uklanja cifru sa pozicije p iz broja n. 
+/* Funkcija uklanja cifru sa pozicije p iz broja n. 
    Cifra jedinica ima poziciju 1, desetica 2, itd.*/
 int ukloni(int n, int p)
 {
@@ -46,7 +46,8 @@ int main()
   /* Ucitavaju se brojevi dok se ne unese nula i za svaki
      ucitani broj se ispisuje broj koji se dobije uklanjanjem
      cifre koja se nalazi na poziciji p. */
-  while (1) {
+  while (1) 
+  {
     printf("Unesite broj: ");
     scanf("%d", &broj);
 

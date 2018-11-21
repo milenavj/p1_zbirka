@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-/* Funkcija koja racuna najveci od 4 prosledjena broja. */
+/* Funkcija racuna najveci od 4 prosledjena broja. */
 int maksimum(int a, int b, int c, int d)
 {
   int max;
@@ -25,7 +25,7 @@ void stampaj_znak(int polje, int granica)
     printf("*");
 }
 
-/* Funkcija koja iscrtava vertikalni grafikon. */
+/* Funkcija iscrtava vertikalni grafikon. */
 void grafikon_v(int a, int b, int c, int d)
 {
   int i, max;
@@ -35,8 +35,8 @@ void grafikon_v(int a, int b, int c, int d)
   max = maksimum(a, b, c, d);
 
   /* Grafikon ukupno ima max horizontalnih linija. */
-  for (i = 0; i < max; i++) {
-
+  for (i = 0; i < max; i++) 
+  {
     /* U svakoj od horizontalnih linija se nalazi po 4 polja: polje 
        za a,b,c i d uspravnu liniju. U svako od polja treba da se
        upise ili * ili belina, u zavisnosti od vrednosti i toga
@@ -70,7 +70,8 @@ int main()
 
   /* Vrsi se provera ispravnosti ulaza i poziva se funkcija za
      ispis grafikona. */
-  if (a < 0 || b < 0 || c < 0 || d < 0){
+  if (a < 0 || b < 0 || c < 0 || d < 0)
+  {
     printf("Greska: neispravan unos.\n");
     return -1;
   }

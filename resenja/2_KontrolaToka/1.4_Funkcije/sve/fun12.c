@@ -9,7 +9,8 @@ int broj_neparnih_cifara(int x)
   char cifra;
   x = abs(x);
 
-  while (x) {
+  while (x) 
+  {
     /* Izdvaja se poslednja cifra broja. */
     cifra = x % 10;
     /* Moze se izbeci koriscenje naredbe if pomocu narednog izraza. 
