@@ -21,7 +21,7 @@ void analiza_cifara(int broj, int niz[])
 {
   int c;
 
-  /* Inicijalizacia svih brojaca na nule. */
+  /* Inicijalizacija svih brojaca na nule. */
   inicijalizuj(niz, BROJ_CIFARA);
 
   /* Uvecavanje odgovarajucih brojaca. */

@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <stdlib.h>
 
 /* Maksimalan broj dana u mesecu je 31, ali dani pocinju od 1, pa
    je potrebno odvojiti 32 mesta u nizu jer se nulti ne koristi. */
@@ -12,7 +11,14 @@ void ucitaj(int a[], int n)
   int i;  
   printf("Unesite broj prodatih artikala: ");
   for (i = 0; i < n; i++)
+  {
     scanf("%d", &a[i]);
+    if(a[i] < 0)
+    {
+      printf("Greska: neispravan unos.\n");
+      exit(EXIT_FAILURE);
+    }
+  }
 }
 
 /* Funkcija racuna duzinu najduzeg neopadajuceg podniza niza a. */

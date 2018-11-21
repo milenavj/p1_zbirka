@@ -71,7 +71,6 @@ int main()
   n = brisanje(a, n);
 
   /* Ispisuje se rezultujuci niz. */
-  printf("Niz a nakon izmena:\n");
   ispisi(a, n);
 
   exit(EXIT_SUCCESS);

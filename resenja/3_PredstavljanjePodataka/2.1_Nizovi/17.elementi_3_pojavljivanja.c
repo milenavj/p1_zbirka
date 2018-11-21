@@ -86,6 +86,7 @@ int main()
   n_b = duplikati(a, n_a, b);
 
   /* Ispis rezultata. */
+  printf("Elementi niza b: ");
   ispisi(b, n_b);
 
   exit(EXIT_SUCCESS);

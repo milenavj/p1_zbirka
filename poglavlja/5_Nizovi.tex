@@ -90,6 +90,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{9.53 5 1 4.89}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{104}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{p.kvadriranje_elemenata}
 \end{Exercise}
 
@@ -138,8 +145,20 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dimenziju vektora: }#
-#\ulaz{120}#
+#\ulaz{0}#
 #\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju vektora: }#
+#\ulaz{1}#
+#\izlaz{Unesite koordinate vektora a:}#
+#\ulaz{-1}#
+#\izlaz{Unesite koordinate vektora b:}#
+#\ulaz{1}#
+#\izlaz{Skalarni proizvod: -1}# 
 \end{upotreba}
 \end{miditest}
 \linkresenje{v.skalarni_proizvod}
@@ -187,6 +206,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{0 3 4}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{6}#
+#\izlaz{Unesite elemente niza:}\ulaz{1 2 3 4 5 6}#
+#\izlaz{Unesite broj k:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{p.pretraga_deljivih_sa_k}
 \end{Exercise}
@@ -203,7 +231,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
   čuva vreme putovanja svakog autobusa u minutima. Međutim, zbog
   radova na putu između Požege i Užica, svi autobusi koji saobraćaju
   na tom potezu (autobusi označeni rednim brojevima od $k$ do $t$)
-  saobračaju $m$ minuta duže. 
+  saobraćaju $m$ minuta duže. 
   Napisati program koji učitava broj autobusa $n$, $n$ celih brojeva
   koji označavaju vreme putovanja tih autobusa i vrednosti $k$, $t$ i $m$
   i ispisuje vreme putovanja svih autobusa nakon unetih izmena.
@@ -475,12 +503,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}#
 #\ulaz{5}#
-#\izlaz{Unesite elemente niza:}\ulaz{19 47 27 34 16}#
-#\izlaz{Vreme trcanja takmicara: 19 47 27 34 16}#
-#\izlaz{Ukupno vreme: 143}#
-#\izlaz{Prosecno vreme trcanja: 28.6}#
-#\izlaz{Maksimalno vreme trcanja: 47}#
-#\izlaz{Indeks pobednika: 4}#
+#\izlaz{Unesite elemente niza:}\ulaz{140 126 170 220 130}#
+#\izlaz{Vreme trcanja takmicara: 140 126 170 220 130}#
+#\izlaz{Ukupno vreme: 786}#
+#\izlaz{Prosecno vreme trcanja: 157.20}#
+#\izlaz{Maksimalno vreme trcanja: 220}#
+#\izlaz{Indeks pobednika: 1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -586,12 +614,18 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{1}#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{105}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{p.broj_manjih_od_maksimuma}
 \end{Exercise}
 
 \ifresenja
-%TODO: napravi resenje u jednom prolazu kroz niz
 \begin{Answer}[ref=p.broj_manjih_od_maksimuma]
 \includecode{resenja/3_PredstavljanjePodataka/2.1_Nizovi/12.broj_manjih_od_maksimuma.c}
 \end{Answer}
@@ -621,7 +655,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{3}#
 #\izlaz{Unesite elemente niza:}\ulaz{-2 8 1}#
-#\izlaz{Unesite vrednosti za i i j:}\ulaz{8 12}#
+#\izlaz{Unesite vrednosti za i i j:}\ulaz{1 12}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -633,6 +667,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite elemente niza:}\ulaz{-2 5 9 11 6 -3 -4}#
 #\izlaz{Unesite vrednosti za i i j:}\ulaz{2 5}#
 #\izlaz{Zbir: 23}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{9 5 7 6}#
+#\izlaz{Unesite vrednosti za i i j:}\ulaz{2 2}#
+#\izlaz{Zbir: 7}#
 \end{upotreba}
 \end{miditest}
   
@@ -684,6 +727,16 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{-35.11 5.29 -1.98 12.1 12.2 -3.33 -4.17}#
 #\izlaz{Unesite vrednost k:}\ulaz{15}# 
 #\izlaz{Zbir: 29.59}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{3}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{-0.11 5.29 -4.17}#
+#\izlaz{Unesite vrednost k:}\ulaz{-15}# 
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 
@@ -744,7 +797,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati program koji vrši pretragu niza nadmorskih visina.
 \begin{enumerate}
 \item Napisati funkciju koja proverava da li niz sadrži zadatu
-  nardmorsku visinu $m$. Povratna vrednost funkcije je $1$ ako je
+  nadmorsku visinu $m$. Povratna vrednost funkcije je $1$ ako je
   vrednost sadržana u nizu ili $0$ ako nije.
 \item Napisati funkciju koja vraća vrednost prve pozicije na kojoj se
   nalazi element koji ima nadmorsku visinu $m$ ili $-1$ ukoliko
@@ -830,6 +883,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Elementi niza b: }#
 \end{upotreba}
 \end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{0}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{p.elementi_3_pojavljivanja}
 \end{Exercise}
@@ -856,7 +916,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{15}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{AnaVoliMilovana}#
-#\izlaz{Jeste palindrom.}#  
+#\izlaz{Niz jeste palindrom.}#  
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -866,9 +926,29 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{26}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{Zanimljivo je programirati!}#
-#\izlaz{Nije palindrom.}#  
+#\izlaz{Niz nije palindrom.}#  
 \end{upotreba}
 \end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{1}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{a}#
+#\izlaz{Niz jeste palindrom.}#  
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{226}#
+#\izlaz{Greska: neispravan unos.}# 
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{palindrom}
 \end{Exercise}
 
@@ -884,7 +964,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %-----------------------------------------------------------------------------------
 
 \begin{Exercise}[label=neopadajuce]
-  Napisati funkciju koja proverava da li su elementi celebrojnog niza
+  Napisati funkciju koja proverava da li su elementi celobrojnog niza
   uređeni neopadajuće. 
   Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje
   da li je pomenuti uslov ispunjen. 
@@ -911,6 +991,26 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Niz nije uredjen neopadajuce.}#  
 \end{upotreba}
 \end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{1}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{5}#
+#\izlaz{Niz jeste uredjen neopadajuce.}#  
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{304}#
+#\izlaz{Greska: neispravan unos.}#  
+\end{upotreba}
+\end{miditest}
+
 \linkresenje{neopadajuce}
 \end{Exercise}
 
@@ -956,6 +1056,26 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{prodavanja je 3.}#
 \end{upotreba}
 \end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{-5}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{31}#
+#\izlaz{Unesite broj prodatih artikala:}#
+#\ulaz{-215 223 262 95 18 116 334 97}#
+#\ulaz{146 146 19 314 -270 115 21 40}#
+#\ulaz{253 27 210 68 96 175 41 242}#
+#\ulaz{98 163 -8 218 107 102}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{najduzi_neopadajuci}
 \end{Exercise}
 
@@ -977,8 +1097,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{9 -1 2 2 2 2 80 -200}#
 #\izlaz{Duzina najduze serije je 4.}#
 \end{upotreba}
@@ -986,10 +1106,27 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{9 9 0 -3 -3 -3 -3 72}#
 #\izlaz{Duzina najduze serije je 4.}#
+\end{upotreba}
+\end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1 2 3 4 5 6 7 8}#
+#\izlaz{Duzina najduze serije je 1.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{108}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{uzastopni_jednaki}
@@ -1018,11 +1155,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{-4 2 7 90 -22 15  14 7}#
-#\izlaz{Unesite dimenziju niza: }\ulaz{4}#
-#\izlaz{Unesite elemente niza: }\ulaz{90 -22 15 14}#
+#\izlaz{Unesite dimenziju niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{90 -22 15 14}#
 #\izlaz{Elementi drugog niza cine}#
 #\izlaz{uzastopni podniz prvog niza.}#
 #\izlaz{Elementi drugog niza cine}#
@@ -1032,11 +1169,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{-4 2 7 90 -22 15  14 7}#
-#\izlaz{Unesite dimenziju niza: }\ulaz{4}#
-#\izlaz{Unesite elemente niza: }\ulaz{2 7 15 7}#
+#\izlaz{Unesite dimenziju niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{2 7 15 7}#
 #\izlaz{Elementi drugog niza ne cine}#
 #\izlaz{uzastopni podniz prvog niza.}#
 #\izlaz{Elementi drugog niza cine}#
@@ -1047,11 +1184,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}  
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{-4 2 7 90 -22 15 14 7}#
-#\izlaz{Unesite dimenziju niza: }\ulaz{4}#
-#\izlaz{Unesite elemente niza: }\ulaz{90 -22 200 1}#
+#\izlaz{Unesite dimenziju niza:}\ulaz{4}#
+#\izlaz{Unesite elemente niza:}\ulaz{90 -22 200 1}#
 #\izlaz{Elementi drugog niza ne cine}#
 #\izlaz{uzastopni podniz prvog niza.}#
 #\izlaz{Elementi drugog niza ne}#
@@ -1061,11 +1198,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza: }\ulaz{8}#
-#\izlaz{Unesite elemente niza: }#
+#\izlaz{Unesite dimenziju niza:}\ulaz{8}#
+#\izlaz{Unesite elemente niza:}#
 #\ulaz{-4 2 7 90 -22 15 14 7}#
-#\izlaz{Unesite dimenziju niza: }\ulaz{1}#
-#\izlaz{Unesite elemente niza: }\ulaz{90}#
+#\izlaz{Unesite dimenziju niza:}\ulaz{1}#
+#\izlaz{Unesite elemente niza:}\ulaz{90}#
 #\izlaz{Elementi drugog niza cine}#
 #\izlaz{uzastopni podniz prvog niza.}#
 #\izlaz{Elementi drugog niza cine}#
@@ -1121,6 +1258,23 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Uneti niz nije permutacija.}#
 \end{upotreba}
 \end{miditest}
+
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{1}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1}#
+#\izlaz{Uneti niz je permutacija.}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dimenziju niza:}\ulaz{101}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{permutacija}
 \end{Exercise}
 
@@ -1158,6 +1312,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Brojevi se zapisuju istim ciframa.}#
 \end{upotreba}
 \end{miditest} 
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite dva broja:}\ulaz{-1 1}#
+#\izlaz{Brojevi se zapisuju istim ciframa.}#
+\end{upotreba}
+\end{miditest} 
 \linkresenje{p.brojevi_sa_istim_zapisima}
 \end{Exercise}
 
@@ -1172,11 +1333,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 % Pravljenje novih nizova, transformacija nizova
 %-----------------------------------------------------------------------------------
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
-Napisati sledeće funkcije koje vrše transormacije celobrojnog niza:
+Napisati sledeće funkcije koje vrše transformacije celobrojnog niza:
 \begin{enumerate}
 \item Napisati funkciju koja obrće elemente niza.     
-\item Napisati funkciju koja rotira niz ciklično za jedno mesto u levo.
-\item Napisati funkciju koja rotira niz ciklično za $k$ mesta u levo.
+\item Napisati funkciju koja rotira niz ciklično za jedno mesto ulevo.
+\item Napisati funkciju koja rotira niz ciklično za $k$ mesta ulevo.
 \end{enumerate}
 Napisati program koji učitava dimenziju niza, elemente niza i pozitivan ceo broj $k$
 i ispisuje niz koji se dobije nakon obrtanja početnog niza, niz koji se dobije
@@ -1310,7 +1471,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  od nizova $a$ i $b$ dimenzije $n$ koji su uređeni neopadajuće po vrednosti
  formira niz $c$ koji je uređen na isti način.
  Napisati program koji učitava dimenziju i elemente uređenih nizova $a$ i $b$ i
- ispisuje niz koji se dobie spajanjem ovih nizova na pomenuti način.
+ ispisuje niz koji se dobije spajanjem ovih nizova na pomenuti način.
 Maksimalan broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -1322,7 +1483,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{2 11 28 40 63}#
 #\izlaz{Unesite elemente sortiranog niza:}#
 #\ulaz{-19 -5 5 11 52}#
-#\izlaz{Niz c:}#
 #\izlaz{-19 -5 2 5 11 11 28 40 52 63}#
 \end{upotreba}
 \end{miditest}
@@ -1334,7 +1494,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{-2 4 8}#
 #\izlaz{Unesite elemente sortiranog niza:}#
 #\ulaz{6 15 19}#
-#\izlaz{Niz c:}#
 #\izlaz{-2 4 6 8 15 19}#
 \end{upotreba}
 \end{miditest}
@@ -1492,15 +1651,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{}#
 \end{upotreba}
 \end{miditest}
-
-\begin{maxitest}
+\begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{8}#
-#\izlaz{Unesite elemente niza:}\ulaz{15 -22 -23 13 18 46 14 -31}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{15 -22 -23 13 18 46 14 -31}#
 #\izlaz{-22 18 46 14}#
 \end{upotreba}
-\end{maxitest}
+\end{miditest}
 \linkresenje{p.izbacivanje_elemenata}
 \end{Exercise}
 
@@ -1528,7 +1687,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{9}#
 #\izlaz{Unesite elemente niza a:}#
 #\ulaz{173 -25 23 7 17 25 34 61 -4612}#
-#\izlaz{Niz a nakon izmene:}#
 #\izlaz{-25 7 25 61 -4612}#
 \end{upotreba}
 \end{miditest}
@@ -1552,7 +1710,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=deljivi_indeksom]
 Napisati funkciju koja iz datog niza briše sve brojeve koji nisu deljivi svojim indeksom.
-Ne razmatrati da li je u novom nizu, nakom brisanja i pomeranja, element deljiv svojim indeksom.
+Ne razmatrati da li je u novom nizu, nakon brisanja i pomeranja, element deljiv svojim indeksom.
 Funkcija kao povratnu vrednost treba da vrati broj elemenata niza nakon brisanja. 
 Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobije 
 brisanjem pomenutih elemenata. Zadatak rešiti bez korišćenja pomoćnog niza.
@@ -1660,10 +1818,10 @@ redosled opsluživanja klijenata. Tako, prvi klijent u nizu će biti
 prvi uslužen, a klijent koji je poslednji došao se nalazi na kraju
 niza. Redni brojevi se izdaju počevši od $1$ svakog radnog dana, ali
 se niz za redosled stalno menja. Dodatno, postoje specijalni klijenti
-(npr. oni koji plaćaju platni promet ili oni koji podižu stambeni
-kredit) koji mogu dobiti i negativan redni broj da bi se razlikovali
+(npr. oni koji podižu stambeni kredit) koji mogu dobiti i negativan 
+redni broj da bi se razlikovali
 od uobičajenih usluga koje banka omogućava. Pomozite radniku
-obezbeđenja da lako prati redosled opsluživanja klijenata.
+obezbeđenja da lakše prati redosled opsluživanja klijenata.
 \begin{enumerate}
 \item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
   $x$ na kraj niza.
