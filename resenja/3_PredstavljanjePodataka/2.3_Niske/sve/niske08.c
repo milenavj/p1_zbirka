@@ -67,9 +67,9 @@ int main()
      da se to uradi koriscenjem nekih drugoh funkcija. */
   
   /* Ispis rezultata. */
-  printf("Ucitana niska: *%s*\n", s);
+  printf("Ucitana niska:\n*%s*\n", s);
   skrati(s);
-  printf("Izmenjena niska: *%s*\n", s);
+  printf("Izmenjena niska:\n*%s*\n", s);
   
   exit(EXIT_SUCCESS);
 }

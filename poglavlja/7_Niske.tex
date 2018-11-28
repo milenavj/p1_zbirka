@@ -299,20 +299,25 @@ Pretpostaviti da niska može da ima najviše 20 karaktera.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{rep belina }#
-#\izlaz{Ucitana niska: *rep belina }#             #\izlaz{ *}#
-#\izlaz{Izmenjena niska: *rep belina*}#
+#\izlaz{Unesite nisku:}#
+#\ulaz{rep belina }#
+#\izlaz{Ucitana niska:}#
+#\izlaz{*rep belina }#             #\izlaz{ *}#
+#\izlaz{Izmenjena niska:}#
+#\izlaz{*rep belina*}#
 \end{upotreba}
 \end{miditest}
-
-\begin{maxitest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite nisku:}\ulaz{tri tabulatora na kraju            }#
-#\izlaz{Ucitana niska: *tri tabulatora na kraju}#			#\izlaz{ *}#
-#\izlaz{Izmenjena niska: *tri tabulatora na kraju*}#
+#\izlaz{Unesite nisku:}#
+#\ulaz{tri tabulatora na kraju            }#
+#\izlaz{Ucitana niska:}#
+#\izlaz{*tri tabulatora na kraju}#			#\izlaz{ *}#
+#\izlaz{Izmenjena niska:}#
+#\izlaz{*tri tabulatora na kraju*}#
 \end{upotreba}
-\end{maxitest}
+\end{miditest}
 \linkresenje{NIS_08}
 \end{Exercise}
 \ifresenja
@@ -552,7 +557,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=NIS_15] 
 Napisati program koji učitava nisku cifara sa eventualnim vodećim znakom i pretvara je u ceo broj.
-  
+\napomena{Pretpostaviti da je unos ispravan.}
+
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -762,6 +768,7 @@ se dođe do kraja ulaza.
 \end{enumerate}
  Napisati program koji učitava rečenice do kraja ulaza i ispisuje onu rečenicu kod koje je apsolutna razlika broja malih i velikih slova najveća.
  Pri učitavanju rečenica zanemariti sve beline koje se nalaze između dve rečenice. 
+Pretpostaviti da jedna rečenica sadrži najviše 80 karaktera.
 
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -861,6 +868,7 @@ sadrži uneti karakter.
 \includecode{resenja/3_PredstavljanjePodataka/2.3_Niske/sve/niske21.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=NIS_22] 
  Napisati funkciju \kckod{int strspn\_klon(char t[], char s[])} koja izračunava dužinu prefiksa niske $t$ sastavljenog od karaktera niske $s$. 
@@ -1043,11 +1051,11 @@ učitane niske u rastućem leksikografskom poretku, a ako su jednake, ispisuje s
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite nisku s:}#
-#\ulaz{beogradjanin}#
+#\ulaz{radnik}#
 #\izlaz{Unesite nisku t:}#
-#\ulaz{beogradjanka}#
-#\izlaz{beogradjanin}#
-#\izlaz{beogradjanka}#
+#\ulaz{radnica}#
+#\izlaz{radnica}#
+#\izlaz{radnik}#
 \end{upotreba}
 \end{minitest}
 
@@ -1099,8 +1107,9 @@ dužine 20 karaktera i ispisuje obrnutu nisku.
 
 \begin{Exercise}[label=NIS_27] 
 Napisati funkciju \kckod{void rotiraj(char s[], int k)} koja rotira
-nisku $s$ za $k$ mesta ulevo. Napisati program koji rotira učitanu nisku 
-maksimalne dužine 20 karaktera i ispisuje rotiranu nisku.
+nisku $s$ za $k$ mesta ulevo. Napisati program koji učitava nisku maksimalne dužine 20 karaktera
+i nenegativan ceo broj k i ispisuje rotiranu nisku. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -1282,7 +1291,7 @@ Pretpostaviti da je $0 < b \leq 16$.
 \end{enumerate}
 
 Napisati program koji učitava broj $n$ i osnove $o_1$ i $o_2$ i ispisuje dekadnu vrednost broja $n$ u osnovi $o_1$, kao i
-vrednost koja se dobije kada se ta dekadna vrednost zapise u osnovi $o_2$.
+vrednost koja se dobije kada se ta dekadna vrednost zapiše u osnovi $o_2$.
 Pretpostaviti da je ulaz ispravan i da će svi brojevi biti u opsegu tipa \kckod{unsigned}. 
 
 \begin{miditest}

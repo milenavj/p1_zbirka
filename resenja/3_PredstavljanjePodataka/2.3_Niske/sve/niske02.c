@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAKS_NISKA 31
+#define MAKS_NISKA 21
 
 /* Funkcija ubacuje zvezdice na svako drugo mesto niske s. */
 void ubaci_zvezdice(char s[])

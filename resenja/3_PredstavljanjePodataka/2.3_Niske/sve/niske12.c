@@ -4,6 +4,11 @@
 
 #define MAKS_NISKA 21
 #define MAKS_N 10
+/* Rezultat se dobija nadovezivanjem niske maksimalne duzine
+   MAKS_NISKA-1 i karaktera '-' najvise MAKS_N puta.
+   Odavde je maksimalna duzina rezultata: 
+   (MAKS_NISKA - 1 + 1) * MAKS_N = MAKS_NISKA*MAKS_N.
+   Na ovo treba dodati jos jedan karakter zbog terminalne nule. */ 
 #define MAKS_REZULTAT (MAKS_NISKA*MAKS_N + 1)
 
 int main()
