@@ -1,53 +1,53 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 10
+#define MAKS 10
 
-void ucitavanje(int mat[][MAX], int* n)
+/* Funkcija ucitava elemente matrice dimenzije n*n. */
+void ucitaj(int a[][MAKS], int n)
 {
   int i, j;
-
-  printf("Uneti dimenzije matrice: ");
-  scanf("%d", n);
-
-  if (*n <= 0 || *n > MAX)
-  {
-    printf("Neispravna dimenzija matrice\n");
-    exit(EXIT_FAILURE);
-  }
-
-  printf("Uneti matricu celih brojeva\n");
-
-  for(i=0; i<*n; i++)
-    for(j=0; j<*n; j++)
-      scanf("%d", &mat[i][j]);
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
-int suma_kolone(int mat[][MAX], int n, int j)
+/* Funkcija racuna sumu elemenata kolone j. */
+int suma_kolone(int a[][MAKS], int n, int j)
 {
   int suma = 0, i;
   
   for(i=0; i<n; i++)
-    suma += mat[i][j];
+    suma += a[i][j];
   
   return suma;
 }
 
-int uredjene_sume(int mat[][MAX], int n)
+/* Funkcija proverava da li su sume kolona uredjene rastuce i
+   vraca jedinicu ako jesu, a nulu inace. */
+int uredjene_sume(int a[][MAKS], int n)
 {
-  int suma1, suma2;
+  int prethodna_suma, trenutna_suma;
   int j;
   
-  suma1 = suma_kolone(mat, n, 0);
+  /* Prva suma se inicijalizuje na sumu prve kolone. */
+  prethodna_suma = suma_kolone(a, n, 0);
   
   for(j=1; j<n; j++)
   {
-    suma2 = suma_kolone(mat, n, j);
+    /* Racuna se suma trenutne kolone. */
+    trenutna_suma = suma_kolone(a, n, j);
     
-    if (suma1 >= suma2)
+    /* Ukoliko je ta suma manja ili jednaka prethodnoj, poredak
+       suma nije rastuci. */
+    if (trenutna_suma <= prethodna_suma)
       return 0;
     
-    suma1 = suma2;
+    /* Suma trenutne kolone postaje suma prethodne kolone
+       za narednu iteraciju. */
+    prethodna_suma = trenutna_suma;
   }
   
   return 1;
@@ -55,16 +55,27 @@ int uredjene_sume(int mat[][MAX], int n)
 
 int main()
 {
-  int mat[MAX][MAX];
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
   int n;
     
-  ucitavanje(mat, &n);
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenziju matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
   
-  if (uredjene_sume(mat, n))
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
+  
+  /* Ispis rezultata. */
+  if (uredjene_sume(a, n))
     printf("Sume jesu uredjenje strogo rastuce.\n");
   else
     printf("Sume nisu uredjenje strogo rastuce.\n");
 
-  
   return 0;
 }

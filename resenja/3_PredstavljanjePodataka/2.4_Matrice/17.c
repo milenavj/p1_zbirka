@@ -1,59 +1,69 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(double mat[][MAX], int* m, int* n)
+/* Funkcija ucitava elemente matrice dimenzije m*n. */
+void ucitaj(double a[][MAKS], int m, int n)
 {
   int i, j;
-
-  printf("Uneti dimenzije matrice: ");
-  scanf("%d%d", m, n);
-
-  if (*n <= 0 || *n > MAX || *m <= 0 || *m > MAX)
-  {
-    printf("Neispravna dimenzija matrice\n");
-    exit(EXIT_FAILURE);
-  }
-
-  printf("Uneti matricu celih brojeva\n");
-
-  for(i=0; i<*m; i++)
-    for(j=0; j<*n; j++)
-      scanf("%lf", &mat[i][j]);
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<m; i++)
+    for(j=0; j<n; j++)
+      scanf("%lf", &a[i][j]);
 }
 
 int main()
 {
-  double mat[MAX][MAX];
+  /* Deklaracije potrebnih promenljivih. */
+  double a[MAKS][MAKS];
   int m, n, k, i, j;
   
   int indeks_kolone;
-  double max_kolone, min_vrste;
+  double maks_kolone, min_vrste;
   
-  ucitavanje(mat, &m, &n);
-    
+  /* Ucitavanje dimenzija prve matrice i provera ispravnosti
+     ulaza. */
+  printf("Unesite dimenzije matrice: ");
+  scanf("%d%d", &m, &n);
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+  
+  /* Ucitavanje elemenata prve matrice. */
+  ucitaj(a, m, n);
+  
+  /* Pronalazak elemenata koji su sedlo. */
   for(i=0; i<m; i++)
   {
-    min_vrste = mat[i][0];
+    /* Pronalazi se najmanji element u tekucoj vrsti. Pamti 
+       se kolona kojoj taj element pripada. */
+    min_vrste = a[i][0];
     indeks_kolone = 0;
       
     for(j=1; j<n; j++)
-      if (mat[i][j] < min_vrste)
+    {
+      if (a[i][j] < min_vrste)
       {
-        min_vrste = mat[i][j];
+        min_vrste = a[i][j];
         indeks_kolone = j;
       }
-      
-    max_kolone = mat[0][indeks_kolone];
+    }
+    
+    /* Pronalazi se najveci element u zapamcenoj koloni. */
+    maks_kolone = a[0][indeks_kolone];
     
     for(k=1; k<m; k++)
-      if (mat[k][indeks_kolone] > max_kolone)
-        max_kolone = mat[k][indeks_kolone];
+      if (a[k][indeks_kolone] > maks_kolone)
+        maks_kolone = a[k][indeks_kolone];
       
-    if (min_vrste == max_kolone)
+    /* Element je sedlo ukoliko je on istovremeno najmanji u svojoj
+       vrsti i najveci u svojoj koloni. */
+    if (min_vrste == maks_kolone)
       printf("Sedlo: %d %d %g\n", i, indeks_kolone, min_vrste);
- 
   }
     
   return 0;

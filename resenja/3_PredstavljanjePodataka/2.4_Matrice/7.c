@@ -1,51 +1,61 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(int mat[][MAX], int* n)
+/* Funkcija ucitava elemente matrice dimenzije n*n. */
+void ucitaj(int a[][MAKS], int n)
 {
-	int i, j;
-
-	printf("Uneti dimenzije matrice: ");
-	scanf("%d", n);
-
-	if (*n <= 0 || *n > MAX)
-	{
-		printf("Neispravna dimenzija matrice\n");
-		exit(EXIT_FAILURE);
-	}
-
-	printf("Uneti matricu celih brojeva\n");
-
-	for(i=0; i<*n; i++)
-		for(j=0; j<*n; j++)
-			scanf("%d", &mat[i][j]);
+  int i, j;
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
-int donje_trougaona(int a[][MAX], int n)
+/* Funkcija proverava da li je matrica donje trougaona i vraca
+   jedinicu ukoliko jeste, a nulu inace. */
+int donje_trougaona(int a[][MAKS], int n)
 {
-	int i, j;
+  int i, j;
 
-	for(i=0; i<n; i++)
-		for(j=i+1; j<n; j++)
-			if (a[i][j] != 0)
-				return 0;
+  /* Prolazi se kroz sve elemente iznad glavne dijagonale i
+     ukoliko se naidje na element koji je razlicit od nule,
+     onda matrica nije donje trougaona. */
+  for(i=0; i<n; i++)
+      for(j=i+1; j<n; j++)
+          if (a[i][j] != 0)
+              return 0;
 
-	return 1;
+  /* Ukoliko su svi elementi iznad glavne dijagonale nule, 
+     matrica jeste donje trougaona. */
+  return 1;
 }
 
 int main()
 {
-	int a[MAX][MAX];
-	int n;
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
+  int n;
 
-	ucitavanje(a, &n);
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenziju matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	if (donje_trougaona(a, n))
-		printf("Matrica jeste donje trougaona.\n");
-	else
-		printf("Matrica nije donje trougaona.\n");
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
 
-	return 0;
+  /* Ispis rezultata. */
+  if (donje_trougaona(a, n))
+      printf("Matrica jeste donje trougaona.\n");
+  else
+      printf("Matrica nije donje trougaona.\n");
+
+  return 0;
 }

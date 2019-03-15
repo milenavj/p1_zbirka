@@ -1,85 +1,95 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(float mat[][MAX], int* n)
+/* Funkcija ucitava elemente matrice dimenzije n*n. */
+void ucitaj(float a[][MAKS], int n)
 {
-	int i, j;
-
-	printf("Uneti dimenzije matrice: ");
-	scanf("%d", n);
-
-	if (*n <= 0 || *n > MAX)
-	{
-		printf("Neispravna dimenzija matrice\n");
-		exit(EXIT_FAILURE);
-	}
-
-	printf("Uneti matricu celih brojeva\n");
-
-	for(i=0; i<*n; i++)
-		for(j=0; j<*n; j++)
-			scanf("%f", &mat[i][j]);
+  int i, j;
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      scanf("%f", &a[i][j]);
 }
 
-float trag(float a[][MAX], int n)
+/* Funkcija racuna trag matrice. */
+float trag(float a[][MAKS], int n)
 {
-	float suma = 0;
-	int  i;
+  float suma = 0;
+  int i;
 
-	for(i=0; i<n; i++)
-		suma += a[i][i];
+  for(i=0; i<n; i++)
+      suma += a[i][i];
 
-	return suma;
+  return suma;
 }
 
-float suma_sporedna(float a[][MAX], int n)
+/* Funkcija racuna sumu elemenata koji se nalaze na sporednoj
+   dijagonali matrice. */
+float suma_sporedna(float a[][MAKS], int n)
 {
-	float suma = 0;
-	int  i;
-	
-	for(i=0; i<n; i++)
-		suma += a[i][n-i-1];
+  float suma = 0;
+  int i;
+  
+  for(i=0; i<n; i++)
+      suma += a[i][n-i-1];
 
-	return suma;
+  return suma;
 }
 
-float suma_iznad(float a[][MAX], int n)
+/* Funckija racuna sumu elemenata koji se nalaze iznad glavne
+   dijagonale matrice. */
+float suma_iznad(float a[][MAKS], int n)
 {
-	float suma = 0;
-	int  i, j;
-	
-	for(i=0; i<n; i++)
-		for(j=i+1; j<n; j++)
-			suma += a[i][j];
+  float suma = 0;
+  int  i, j;
+  
+  for(i=0; i<n; i++)
+      for(j=i+1; j<n; j++)
+          suma += a[i][j];
 
-	return suma;
+  return suma;
 }
 
-float suma_ispod(float a[][MAX], int n)
+/* Funkcija racuna sumu elemenara koji se nalaze ispod sporedne
+   dijagonale matrice. */
+float suma_ispod(float a[][MAKS], int n)
 {
-	float suma = 0;
-	int  i, j;
-	
-	for(i=0; i<n; i++)
-		for(j=n-i-1; j>i; j--)
-			suma += a[i][j];
+  float suma = 0;
+  int  i, j;
+  
+  for(i=0; i<n; i++)
+      for(j=n-i-1; j>i; j--)
+          suma += a[i][j];
 
-	return suma;
+  return suma;
 }
 
 int main()
 {
-	float a[MAX][MAX];
-	int n;
+  /* Deklaracije potrebnih promenljivih. */
+  float a[MAKS][MAKS];
+  int n;
+  
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenziju matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	ucitavanje(a, &n);
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
 
-	printf("Trag je %.3f.\n", trag(a, n));
-	printf("Suma na sporednoj dijagonali je %.3f.\n", suma_sporedna(a, n));
-	printf("Suma iznad glavne dijagonale je %.3f.\n", suma_iznad(a, n));
-	printf("Suma ispod sporedne dijagonale je %.3f.\n", suma_ispod(a, n));
+  /* Ispis rezultata. */
+  printf("Trag je %.2f.\n", trag(a, n));
+  printf("Suma na sporednoj dijagonali je %.2f.\n", suma_sporedna(a, n));
+  printf("Suma iznad glavne dijagonale je %.2f.\n", suma_iznad(a, n));
+  printf("Suma ispod sporedne dijagonale je %.2f.\n", suma_ispod(a, n));
 
-	return 0;
+  return 0;
 }

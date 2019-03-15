@@ -1,72 +1,78 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(int mat[][MAX], int* m, int* n)
+/* Funkcija ucitava elemente matrice dimenzije m*n. */
+void ucitaj(int a[][MAKS], int m, int n)
 {
-	int i, j;
-
-	printf("Uneti dimenzije matrice: ");
-	scanf("%d%d", m, n);
-
-	if (*n <= 0 || *n > MAX || *m <= 0 || *m > MAX)
-	{
-		printf("Neispravna dimenzija matrice\n");
-		exit(EXIT_FAILURE);
-	}
-
-	printf("Uneti matricu celih brojeva\n");
-
-	for(i=0; i<*m; i++)
-		for(j=0; j<*n; j++)
-			scanf("%d", &mat[i][j]);
+  int i, j;
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<m; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
-void ispis(int mat[][MAX], int m, int n)
+/* Funkcija ispisuje elemente matrice dimenzije m*n. */
+void ispisi(int a[][MAKS], int m, int n)
 {
-	int i, j;
+  int i, j;
 
-	for(i=0; i<m; i++)
-	{
-		for(j=0; j<n; j++)
-			printf("%d ", mat[i][j]);
-		printf("\n");
-	}		
+  for(i=0; i<m; i++)
+  {
+    for(j=0; j<n; j++)
+      printf("%d ", a[i][j]);
+    printf("\n");
+  }     
 }
 
-void razmeni(int mat[][MAX], int m, int n, int k, int t)
+/* Funkcija razmenjuje elemente k-te i t-te vrste. */
+void razmeni(int a[][MAKS], int m, int n, int k, int t)
 {
-	int j, pom;
+  int j, pom;
 
-	for(j = 0; j< n; j++)
-	{
-		pom = mat[k][j];
-		mat[k][j] = mat[t][j];
-		mat[t][j] = pom;
-	}
+  for(j = 0; j< n; j++)
+  {
+      pom = a[k][j];
+      a[k][j] = a[t][j];
+      a[t][j] = pom;
+  }
 }
 
 int main()
 {
-  int mat[MAX][MAX];
-	int m, n;
-	int k, t;
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
+  int m, n;
+  int k, t;
 
-	ucitavanje(mat, &m, &n);
-	
-	printf("Uneti indekse vrsta: ");
-	scanf("%d%d", &k, &t);
+  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenzije matrice: ");
+  scanf("%d%d", &m, &n);
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+  
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, m, n);
+  
+  /* Ucitavanje indeksa vrsta i provera ispravnosti ulaza. */
+  printf("Unesite indekse vrsta: ");
+  scanf("%d%d", &k, &t);
+  if (k < 0 || k >= m || t < 0 || t>= m)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	if (k < 0 || k >= m || t < 0 || t>= m)
-	{
-		printf("Neispravni indeksi vrsta.\n");
-		return -1;
-	}
+  /* Razmena k-te i t-te vrste. */
+  razmeni(a, m, n, k, t);
 
-	razmeni(mat, m, n, k, t);
+  /* Ispis rezultata. */
+  ispisi(a, m, n);
 
-	ispis(mat, m, n);
-
-	return 0;
+  return 0;
 }

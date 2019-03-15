@@ -1,56 +1,72 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(int mat[][MAX], int* n)
+/* Funkcija ucitava elemente matrice dimenzije n*n. */
+void ucitaj(int a[][MAKS], int n)
 {
-	int i, j;
-
-	printf("Uneti dimenzije matrice: ");
-	scanf("%d", n);
-
-	if (*n <= 0 || *n > MAX)
-	{
-		printf("Neispravna dimenzija matrice\n");
-		exit(EXIT_FAILURE);
-	}
-
-	printf("Uneti matricu celih brojeva\n");
-
-	for(i=0; i<*n; i++)
-		for(j=0; j<*n; j++)
-			scanf("%d", &mat[i][j]);
+  int i, j;
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
 int main()
 {
-	int a[MAX][MAX];
-	int n, i, j;
-	int max_zbir, trenutni_zbir = 0, indeks_kolone = 0;
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
+  int n, i, j;
+  int maksimalni_zbir, trenutni_zbir = 0, indeks_kolone;
 
-	ucitavanje(a, &n);
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenziju matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	for(i=0; i<n; i++)
-		trenutni_zbir += a[i][0];
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
 
-	max_zbir = trenutni_zbir;
+  /* Maksimalni zbir se inicijalizuje na vrednost zbira prve
+     kolone. U ovom slucaju bi bilo pogresno da se maksimalni
+     zbir inicijalizuje na nulu jer moze da se desi da su svi
+     elementi matrice negativni.
+     Drugi nacin da se ispravno inicijalizuje maksimalni zbir
+     jeste da mu se dodeli vrednost konstante INT_MIN cija se
+     definicija nalazi u zaglavlju limits.h. */
+  for(i=0; i<n; i++)
+      trenutni_zbir += a[i][0];
 
-	for(j=1; j<n; j++)
-	{
+  maksimalni_zbir = trenutni_zbir;
+  indeks_kolone = 0;
 
-		trenutni_zbir = 0;
-		for(i=0; i<n; i++)
-			trenutni_zbir += a[i][j];
+  /* Racuna se zbir svake sledece kolone i azurira se vrednost
+     maksimalnog zbira. */
+  for(j=1; j<n; j++)
+  {
+      /* Racuna se zbir kolone j. */
+      trenutni_zbir = 0;
+      for(i=0; i<n; i++)
+          trenutni_zbir += a[i][j];
 
-		if (trenutni_zbir > max_zbir)
-		{
-			max_zbir = trenutni_zbir;
-			indeks_kolone = j;
-		}
-	}
+      /* Ukoliko je taj zbir veci od trenutno maksimalnog zbira, 
+         azurira se vrednost maksimalnog zbira i pamti se tekuca
+         kolona. */
+      if (trenutni_zbir > maksimalni_zbir)
+      {
+          maksimalni_zbir = trenutni_zbir;
+          indeks_kolone = j;
+      }
+  }
 
-	printf("Indeks kolone je: %d\n", indeks_kolone);
+  /* Ispis rezultata. */
+  printf("Indeks kolone je: %d\n", indeks_kolone);
 
-	return 0;
+  return 0;
 }

@@ -1,57 +1,66 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(int mat[][MAX], int* m, int* n)
+/* Funkcija ucitava elemente matrice dimenzije m*n. */
+void ucitaj(int a[][MAKS], int m, int n)
 {
-	int i, j;
-
-	printf("Uneti dimenzije matrice: ");
-	scanf("%d%d", m, n);
-
-	if (*n <= 0 || *n > MAX || *m <= 0 || *m > MAX)
-	{
-		printf("Neispravna dimenzija matrice\n");
-		exit(EXIT_FAILURE);
-	}
-
-	printf("Uneti matricu celih brojeva\n");
-
-	for(i=0; i<*m; i++)
-		for(j=0; j<*n; j++)
-			scanf("%d", &mat[i][j]);
+  int i, j;
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<m; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
-void ispis(int mat[][MAX], int m, int n)
+/* Funkcija ispisuje elemente matrice dimenzije m*n. */
+void ispisi(int a[][MAKS], int m, int n)
 {
-	int i, j;
+  int i, j;
 
-	for(i=0; i<m; i++)
-	{
-		for(j=0; j<n; j++)
-			printf("%d ", mat[i][j]);
-		printf("\n");
-	}		
+  for(i=0; i<m; i++)
+  {
+    for(j=0; j<n; j++)
+      printf("%d ", a[i][j]);
+    printf("\n");
+  }     
 }
 
-void transponovana(int a[][MAX], int m, int n, int b[][MAX])
+/* Funkcija formira maticu t koja se dobija transponovanjem
+   matrice a. */
+void transponovana(int a[][MAKS], int m, int n, int t[][MAKS])
 {
-	int i, j;
+  int i, j;
 
-	for(i=0; i<m; i++)
-		for(j=0; j<n; j++)
-			b[j][i] = a[i][j];
+  for(i=0; i<m; i++)
+      for(j=0; j<n; j++)
+          t[j][i] = a[i][j];
 }
 
 int main()
 {
-   int mat[MAX][MAX], t[MAX][MAX];
-	int m, n;
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS], t[MAKS][MAKS];
+  int m, n;
 
-	ucitavanje(mat, &m, &n);
-	transponovana(mat, m, n, t);
-	ispis(t, n, m);
+  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenzije matrice: ");
+  scanf("%d%d", &m, &n);
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+  
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, m, n);
+  
+  /* Formiranje transponovane matrice. */
+  transponovana(a, m, n, t);
+  
+  /* Ispis rezultata. */
+  ispisi(t, n, m);
 
-	return 0;
+  return 0;
 }

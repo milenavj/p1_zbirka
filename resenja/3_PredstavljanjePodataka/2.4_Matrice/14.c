@@ -1,72 +1,90 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(int mat[][MAX], int* n)
+/* Funkcija ucitava elemente matrice dimenzije n*n. */
+void ucitaj(int a[][MAKS], int n)
 {
   int i, j;
-
-  printf("Uneti dimenzije matrice: ");
-  scanf("%d", n);
-
-  if (*n <= 0 || *n > MAX)
-  {
-    printf("Neispravna dimenzija matrice\n");
-    exit(EXIT_FAILURE);
-  }
-
-  printf("Uneti matricu celih brojeva\n");
-
-  for(i=0; i<*n; i++)
-    for(j=0; j<*n; j++)
-      scanf("%d", &mat[i][j]);
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
-int suma_kolone(int mat[][MAX], int n, int j)
+/* Funkcija racuna sumu kolone j. */
+int suma_kolone(int a[][MAKS], int n, int j)
 {
   int i, suma = 0;
   
   for(i=0; i<n; i++)
-    suma += mat[i][j];
+    suma += a[i][j];
   
   return suma;
 }
 
-int suma_vrste(int mat[][MAX], int n, int i)
+/* Funkcija racuna sumu i-te vrste. */
+int suma_vrste(int a[][MAKS], int n, int i)
 {
   int j, suma = 0;
   
   for(j=0; j<n; j++)
-    suma += mat[i][j];
+    suma += a[i][j];
   
   return suma;
 }
 
-int magicni_kvadrat(int mat[][MAX], int n)
+/* Funkcija proverava da li elementi matrice predstavljaju 
+   magicni kvadrat. */
+int magicni_kvadrat(int a[][MAKS], int n)
 {
-  int suma = suma_kolone(mat, n, 0);
+  /* Da bi matrica bila magicni kvadrat, sume svih vrsta i kolona 
+     treba da budu jednke. Suma se zato inicijalizuje na sumu
+     prve kolone. */
+  int suma = suma_kolone(a, n, 0);
   int i, j;
   
+  /* Proverava se da li su sume ostalih kolona jednake izracunatoj
+     sumi. Ukoliko se naidje na kolonu koja ne zadovoljava ovaj
+     uslov, matrica nije magicni kvadrat. */
   for(j=1; j<n; j++)
-    if (suma_kolone(mat, n, j) != suma)
+    if (suma_kolone(a, n, j) != suma)
       return 0;
   
+  /* Proverava se i da li su sume svih vrsta jednake izracunatoj
+     sumi. Ukoliko se naidje na vrstu koja ne zadovoljava ovaj
+     uslov, matrica nije magicni kvadrat. */
   for(i=0; i<n; i++)
-    if (suma_vrste(mat, n, i) != suma)
+    if (suma_vrste(a, n, i) != suma)
       return 0;
-    
+  
+  /* Ako sve vrste i kolone imaju jednake sume, matrica je
+     magicni kvadrat. */
   return 1;
 }
 
 int main()
 {
-  int mat[MAX][MAX];
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
   int n;
     
-  ucitavanje(mat, &n);
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenziju matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
   
-  if (magicni_kvadrat(mat, n))
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
+  
+  /* Ispis rezultata. */
+  if (magicni_kvadrat(a, n))
     printf("Matrica jeste magicni kvadrat.\n");
   else
     printf("Matrica nije magicni kvadrat.\n");

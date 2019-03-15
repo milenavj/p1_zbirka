@@ -1,29 +1,22 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 50
+#define MAKS 50
 
-void ucitavanje(int mat[][MAX], int* m, int* n)
+/* Funkcija ucitava elemente matrice dimenzije m*n. */
+void ucitaj(int a[][MAKS], int m, int n)
 {
   int i, j;
-
-  printf("Uneti dimenzije matrice: ");
-  scanf("%d%d", m, n);
-
-  if (*n <= 0 || *n > MAX || *m <= 0 || *m > MAX)
-  {
-    printf("Neispravna dimenzija matrice\n");
-    exit(EXIT_FAILURE);
-  }
-
-  printf("Uneti matricu celih brojeva\n");
-
-  for(i=0; i<*m; i++)
-    for(j=0; j<*n; j++)
-      scanf("%d", &mat[i][j]);
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<m; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
-void kreiraj_niz(int mat[][MAX], int m, int n, double b[])
+/* Funkcija formira niz b tako sto element b[i] ima vrednost
+   prosecne vrednosti i-te vrste matrice. */
+void kreiraj_niz(int a[][MAKS], int m, int n, double b[])
 {
   int i, j, suma;
   
@@ -31,7 +24,7 @@ void kreiraj_niz(int mat[][MAX], int m, int n, double b[])
   {
     suma = 0;
     for(j=0; j<n; j++)
-      suma += mat[i][j];
+      suma += a[i][j];
     
     b[i] = (double)suma/n;
   }
@@ -39,14 +32,27 @@ void kreiraj_niz(int mat[][MAX], int m, int n, double b[])
 
 int main()
 {
-  int mat[MAX][MAX];
-  double  b[MAX];
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
+  double  b[MAKS];
   int m, n, i;
 
-  ucitavanje(mat, &m, &n);
+  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenzije matrice: ");
+  scanf("%d%d", &m, &n);
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
   
-  kreiraj_niz(mat, m, n, b);
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, m, n);
   
+  /* Formira se niz b. */
+  kreiraj_niz(a, m, n, b);
+  
+  /* Ispis rezultata. */
   printf("Dobijeni niz je:\n");
   for(i=0; i<m; i++)
     printf("%g ", b[i]);

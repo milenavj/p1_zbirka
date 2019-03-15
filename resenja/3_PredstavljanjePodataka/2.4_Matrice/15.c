@@ -1,44 +1,65 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#define MAX 100
+#define MAKS 100
 
-void ucitavanje(int mat[][MAX], int* n)
+/* Funkcija ucitava elemente matrice dimenzije n*n. */
+void ucitaj(int a[][MAKS], int n)
 {
   int i, j;
-
-  printf("Uneti dimenzije matrice: ");
-  scanf("%d", n);
-
-  if (*n <= 0 || *n > MAX)
-  {
-    printf("Neispravna dimenzija matrice\n");
-    exit(EXIT_FAILURE);
-  }
-
-  printf("Uneti matricu celih brojeva\n");
-
-  for(i=0; i<*n; i++)
-    for(j=0; j<*n; j++)
-      scanf("%d", &mat[i][j]);
+  
+  printf("Unesite elemente matrice:\n");
+  for(i=0; i<n; i++)
+    for(j=0; j<n; j++)
+      scanf("%d", &a[i][j]);
 }
 
 int main()
 {
-  int mat[MAX][MAX];
+  /* Deklaracije potrebnih promenljivih. */
+  int a[MAKS][MAKS];
   int n;
   int i, j, k;
     
-  ucitavanje(mat, &n);
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite dimenziju matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS)
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
   
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
+  
+  /* Petlja kojom se ispisuju dijagonale iznad sporedne
+     dijagonale, ukljucujuci i sporednu dijagonalu. 
+     Npr. za n=4, indeksi elemenata u matrici su:
+     (0,0) (0,1) (0,2) (0,3)
+     (1,0) (1,1) (1,2) (1,3)
+     (2,0) (2,1) (2,2) (2,3)
+     (3,0) (3,1) (3,2) (3,3)
+     Dakle, ispis elemenata ide u sledecem redosledu:
+     (0,0)
+     (0,1) (1,0)
+     (0,2) (1,1) (2,0)
+     (0,3) (1,2) (2,1) (3,0)
+     Za k-ti ispis vazi da indeksi vrsta imaju vrednosti
+     od nula do k, a indeksi kolona od k do nula. 
+     */
   for(k=0; k<n; k++)
   {
+    /* Indeks kolone se inicijalizuje na k. */
     j = k;
+    /* Indeks vrste se inicijalizuje na 0. */
     i = 0;
     
+    /* Ispisuju se odgovarajuci elementi, indeks vrste se povecava,
+       a indeks kolone se smanjuje. */
     while(j >= 0)
     {
-      printf("%d ", mat[i][j]);
+      printf("%d ", a[i][j]);
       i++;
       j--;
     }
@@ -46,7 +67,20 @@ int main()
     printf("\n");
   }
   
-  
+  /* Petlja kojom se ispisuju dijagonale ispod sporedne
+     dijagonale.
+     Npr. za n=4, indeksi elemenata u matrici su:
+     (0,0) (0,1) (0,2) (0,3)
+     (1,0) (1,1) (1,2) (1,3)
+     (2,0) (2,1) (2,2) (2,3)
+     (3,0) (3,1) (3,2) (3,3)
+     Dakle, ispis elemenata ide u sledecem redosledu:
+     (1,3) (2,2) (3,1)
+     (2,3) (3,2)
+     (3,3)
+     Za k-ti ispis vazi da indeksi vrsta imaju vrednosti
+     od k do n-1, a indeksi kolona od n-1 do 1.
+     */
   for(k=1; k<n; k++)
   {
     i = k;
@@ -54,7 +88,7 @@ int main()
     
     while(i < n)
     {
-      printf("%d ", mat[i][j]);
+      printf("%d ", a[i][j]);
       i++;
       j--;
     }
