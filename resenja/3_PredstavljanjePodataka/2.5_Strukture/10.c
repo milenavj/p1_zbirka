@@ -1,103 +1,119 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <math.h>
 
-#define MAX_TACAKA 1000
+#define MAKS_TACAKA 1000
 
-typedef struct
+typedef struct 
 {
-	int x, y;
-}TACKA;
+  int x, y;
+} Tacka;
 
-double rastojanje(TACKA a, TACKA b)
+/* Funkcija racuna rastojanje izmedju dve tacke. */
+double rastojanje(const Tacka* a, const Tacka* b)
 {
-	return sqrt(pow(a.x - b.x, 2) + pow(a.y - b.y, 2));
+  return sqrt(pow(a->x - b->x, 2) + pow(a->y - b->y, 2));
 }
 
-unsigned ucitaj_poligon(TACKA* tacke, unsigned n)
+/* Funkcija ucitava tacke poligona. */
+int ucitaj_poligon(Tacka poligon[], int maks_tacaka)
 {
-	int i = 0;
+  int i = 0;
 
-	while(i < n && scanf("%d%d", &tacke[i].x, &tacke[i].y) != EOF)
-		i++;
+  while (scanf("%d%d", &poligon[i].x, &poligon[i].y) != EOF)
+  {
+    i++;
+    if(i >= maks_tacaka)
+      break;
+  }
 
-	return i;
+  return i;
 }
 
-double obim(TACKA* poligon, unsigned n)
+/* Funkcija racuna obim poligona. */
+double obim_poligona(Tacka poligon[], int n)
 {
-	double o = rastojanje(poligon[0], poligon[n-1]);
-	int i;
+  double obim = 0;
+  int i;
 
-	for(i=0; i<n-1; i++)
-		o += rastojanje(poligon[i], poligon[i+1]);
+  for (i = 0; i < n - 1; i++)
+    obim += rastojanje(&poligon[i], &poligon[i + 1]);
 
-	return o;
+  obim += rastojanje(&poligon[n - 1], &poligon[0]);
+  
+  return obim;
 }
 
-double maksimalna_stranica(TACKA* poligon, unsigned n)
+/* Funkcija racuna najduzu stranicu poligona. */
+double maksimalna_stranica(Tacka poligon[], int n)
 {
-	double max = rastojanje(poligon[0], poligon[n-1]);
-	double stranica;
-	int i;
+  double maks = rastojanje(&poligon[0], &poligon[n - 1]);
+  double stranica;
+  int i;
 
-	for(i=0; i<n-1; i++)
-	{
-		stranica = rastojanje(poligon[i], poligon[i+1]);
-		if (stranica > max)
-			max = stranica;
-	}
+  for (i = 0; i < n - 1; i++) {
+    stranica = rastojanje(&poligon[i], &poligon[i + 1]);
+    if (stranica > maks)
+      maks = stranica;
+  }
 
-	return max;
+  return maks;
 }
 
-double povrsina_trougla(TACKA A, TACKA B, TACKA C)
+/* Funkcija racuna povrsinu trougla cija su temena A, B i C. */
+double povrsina_trougla(const Tacka* A, const Tacka* B, const Tacka* C)
 {
-	double a = rastojanje(B, C);
-	double b = rastojanje(A, C);
-	double c = rastojanje(A, B);
+  double a = rastojanje(B, C);
+  double b = rastojanje(A, C);
+  double c = rastojanje(A, B);
 
-	double s = (a + b + c)/2;
+  double s = (a + b + c) / 2;
 
-	return sqrt(s*(s -a)*(s - b)*(s - c));
+  return sqrt(s * (s - a) * (s - b) * (s - c));
 }
 
-double povrsina(TACKA* poligon, unsigned n)
+/* Funkocija racuna povrsinu poligona. */
+double povrsina_poligona(Tacka * poligon, int n)
 {
-	double P = 0;
-	int i;
+  double P = 0;
+  int i;
 
-	for(i=1; i<n-1; i++)
-		P += povrsina_trougla(poligon[0], poligon[i], poligon[i+1]);
+  for (i = 1; i < n - 1; i++)
+    P += povrsina_trougla(&poligon[0], &poligon[i], &poligon[i + 1]);
 
-	return P;
+  return P;
 }
 
 int main()
 {
-	int N;
-	unsigned m;
-	TACKA poligon[MAX_TACAKA];
+  /* Deklaracije potrebnih promenljivih. */
+  int maks_tacaka, n;
+  Tacka poligon[MAKS_TACAKA];
 
-	printf("Uneti maksimalan broj tacaka poligona: ");
-	scanf("%d", &N);
+  /* Ucitavanje maksimalnog broja tacaka i provera ispravnosti. */
+  printf("Uneti maksimalan broj tacaka poligona: ");
+  scanf("%d", &maks_tacaka);
+  if (maks_tacaka < 3 || maks_tacaka > MAKS_TACAKA) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	if (N < 3 || N > MAX_TACAKA)
-	{
-		printf("Neispravan broj tacaka poligona.\n");
-		return -1;
-	}
+  /* Ucitavanje poligona. */
+  n = ucitaj_poligon(poligon, maks_tacaka);
+  if (n < 3) 
+  {
+    printf("Greska: poligon mora imati bar tri tacke.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	m = ucitaj_poligon(poligon, N);
+  /* Ispis rezultata. */
+  printf("Obim poligona je %.3lf.\n", 
+         obim_poligona(poligon, n));
+  printf("Duzina maksimalne stranice je %.3lf.\n",
+         maksimalna_stranica(poligon, n));
+  printf("Povrsina poligona je %.3lf.\n", 
+         povrsina_poligona(poligon, n));
 
-	if (m < 3)
-	{
-		printf("Neispravan broj tacaka poligona.\n");
-		return -1;
-	}
-
-	printf("Obim poligona je %.3lf.\n", obim(poligon, m));
-	printf("Duzina maksimalne stranice je %.3lf.\n", maksimalna_stranica(poligon, m));
-	printf("Povrsina poligona je %.3lf.\n", povrsina(poligon, m));
-
-	return 0;
+  return 0;
 }

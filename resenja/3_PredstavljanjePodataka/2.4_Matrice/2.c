@@ -7,10 +7,10 @@
 void ucitaj(int a[][MAKS], int m, int n)
 {
   int i, j;
-  
+
   printf("Unesite elemente matrice:\n");
-  for(i=0; i<m; i++)
-    for(j=0; j<n; j++)
+  for (i = 0; i < m; i++)
+    for (j = 0; j < n; j++)
       scanf("%d", &a[i][j]);
 }
 
@@ -19,23 +19,21 @@ void ispisi(int a[][MAKS], int m, int n)
 {
   int i, j;
 
-  for(i=0; i<m; i++)
-  {
-    for(j=0; j<n; j++)
+  for (i = 0; i < m; i++) {
+    for (j = 0; j < n; j++)
       printf("%d ", a[i][j]);
     printf("\n");
-  }     
+  }
 }
 
-/* Funkcija formira maticu t koja se dobija transponovanjem
-   matrice a. */
+/* Funkcija formira maticu t transponovanjem matrice a. */
 void transponovana(int a[][MAKS], int m, int n, int t[][MAKS])
 {
   int i, j;
 
-  for(i=0; i<m; i++)
-      for(j=0; j<n; j++)
-          t[j][i] = a[i][j];
+  for (i = 0; i < m; i++)
+    for (j = 0; j < n; j++)
+      t[j][i] = a[i][j];
 }
 
 int main()
@@ -47,18 +45,18 @@ int main()
   /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice: ");
   scanf("%d%d", &m, &n);
-  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS)
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
-  
+
   /* Ucitavanje elemenata matrice. */
   ucitaj(a, m, n);
-  
+
   /* Formiranje transponovane matrice. */
   transponovana(a, m, n, t);
-  
+
   /* Ispis rezultata. */
   ispisi(t, n, m);
 

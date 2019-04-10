@@ -7,10 +7,10 @@
 void ucitaj(int a[][MAKS], int n)
 {
   int i, j;
-  
+
   printf("Unesite elemente matrice:\n");
-  for(i=0; i<n; i++)
-    for(j=0; j<n; j++)
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
       scanf("%d", &a[i][j]);
 }
 
@@ -19,11 +19,11 @@ void ucitaj(int a[][MAKS], int n)
 int sortirana_kolona(int a[][MAKS], int n, int j)
 {
   int i;
-  
-  for(i=0; i<n-1; i++)
-    if (a[i][j] >= a[i+1][j])
+
+  for (i = 0; i < n - 1; i++)
+    if (a[i][j] >= a[i + 1][j])
       return 0;
-    
+
   return 1;
 }
 
@@ -32,11 +32,11 @@ int sortirana_kolona(int a[][MAKS], int n, int j)
 int sortirani_po_kolonama(int a[][MAKS], int n)
 {
   int j;
-    
-  for(j=0; j<n; j++)
+
+  for (j = 0; j < n; j++)
     if (!sortirana_kolona(a, n, j))
       return 0;
-        
+
   return 1;
 }
 
@@ -45,11 +45,11 @@ int sortirani_po_kolonama(int a[][MAKS], int n)
 int sortirana_vrsta(int a[][MAKS], int n, int i)
 {
   int j;
-  
-  for(j=0; j<n-1; j++)
-    if (a[i][j] >= a[i][j+1])
+
+  for (j = 0; j < n - 1; j++)
+    if (a[i][j] >= a[i][j + 1])
       return 0;
-    
+
   return 1;
 }
 
@@ -58,11 +58,11 @@ int sortirana_vrsta(int a[][MAKS], int n, int i)
 int sortirani_po_vrstama(int a[][MAKS], int n)
 {
   int i;
-    
-  for(i=0; i<n; i++)
+
+  for (i = 0; i < n; i++)
     if (!sortirana_vrsta(a, n, i))
       return 0;
-        
+
   return 1;
 }
 
@@ -71,24 +71,24 @@ int sortirani_po_vrstama(int a[][MAKS], int n)
 int sortirana_glavna(int a[][MAKS], int n)
 {
   int i;
-  
-  for(i=0; i<n-1; i++)
-    if (a[i][i] >= a[i+1][i+1])
+
+  for (i = 0; i < n - 1; i++)
+    if (a[i][i] >= a[i + 1][i + 1])
       return 0;
-    
+
   return 1;
 }
 
-/* Funkcija proverava da li je sporedna dijagonala matrice sortirana
-   rastuce i vraca jedinicu ukoliko jeste, a nulu inace. */
+/* Funkcija proverava da li je sporedna dijagonala matrice
+   sortirana rastuce i vraca jedinicu ukoliko jeste, a nulu inace. */
 int sortirana_sporedna(int a[][MAKS], int n)
 {
   int i;
-  
-  for(i=0; i<n-1; i++)
-    if (a[i][n-i-1] >= a[i+1][n-i-2])
+
+  for (i = 0; i < n - 1; i++)
+    if (a[i][n - i - 1] >= a[i + 1][n - i - 2])
       return 0;
-    
+
   return 1;
 }
 
@@ -104,16 +104,16 @@ int main()
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
-    
+
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS)
+  if (n <= 0 || n > MAKS) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
-  
+
   /* Ucitavanje elemenata matrice. */
   ucitaj(a, n);
 

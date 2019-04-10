@@ -1,125 +1,138 @@
 #include <stdio.h>
-#define MAX 1000
+#include <stdlib.h>
 
-typedef struct
+#define MAKS 1000
+
+typedef struct 
 {
-	char o;
-	int x;
-	int y;
-} IZRAZ;
+  char o;
+  int x;
+  int y;
+} Izraz;
 
-
-int korektan_izraz(const IZRAZ izraz)
+/* Funkcija proverava da li je izraz ispravno zadat. */
+int korektan_izraz(const Izraz* izraz)
 {
-   if(izraz.o != '+' && izraz.o != '-' && izraz.o != '*' && izraz.o != '/')
-   {
-      printf("Nedozvoljena operacija!\n");
-      return 0;
-   }
-   if(izraz.o == '/' && izraz.y == 0)
-   {
-      printf("Deljenje nulom!\n");
-      return 0;
-   }
-   return 1;
-}
-
-/* Racunanje vrednosti izraza. */
-int vrednost(const IZRAZ izraz)
-{
-   int v;
-	
-   switch (izraz.o)
-   {
-      case '+':
-         return izraz.x + izraz.y;
-      case '-':
-         return izraz.x - izraz.y;
-      case '*':
-         return izraz.x * izraz.y;
-      case '/':
-         return izraz.x / izraz.y;
-   }
-}
-
-
-/*
-   Promenljiva izraz ce se promeniti u funkciji 
-   ucitaj_izraz tako sto ce njenim neinicijalizovanim
-   poljima o,x,y biti dodeljene vrednosti ucitane 
-   sa ulaza. Zbog toga ovu promenljivu 
-   funkciji prosledjujemo po adresi, preko pokazivaca.
+  if (izraz->o != '+' && izraz->o != '-' && 
+      izraz->o != '*' && izraz->o != '/') 
+  {
+    printf("Greska: neispravna operacija.\n");
+    return 0;
+  }
   
-   S obzirom da ucitavanje karaktera nije prvo
-   ucitavanje koje se obavlja u programu, funkcijom
-   getchar() se ucita karakter kojim se razdvaja
-   unos karaktera od prethodnog unosa (najcesce blanko
-   znak ili znak za novi red).
+  if (izraz->o == '/' && izraz->y == 0) 
+  {
+    printf("Greska: deljenje nulom.\n");
+    return 0;
+  }
   
-*/
-
-int ucitaj_izraz(IZRAZ* izraz)
-{
-   getchar();
-   scanf("%c%d%d",&izraz->o, &izraz->x, &izraz->y);
-   if (!korektan_izraz(*izraz))
-      return 0;
-   return 1;
+  return 1;
 }
 
-
-void stampaj_izraz(const IZRAZ izraz)
+/* Funkcija ucitava n izraza sa standardnog ulaza. */
+void ucitaj(Izraz izrazi[], int n)
 {
-   printf("%d %c %d = %d\n", izraz.x, izraz.o, izraz.y, vrednost(izraz));
+  int i;
+  
+  printf("Unesite izraze u prefiksnoj notaciji:\n");
+  for (i = 0; i < n; i++)
+  {
+    scanf("%c%d%d", &izrazi[i].o, &izrazi[i].x, &izrazi[i].y);
+    /* Preskace se novi red koji se nalazi nakon izraza, kako bi 
+       naredni izraz bio ispravno ucitan. */
+    getchar(); 
+    
+    /* Provera ispravnosti ucitanog izraza. */
+    if (!korektan_izraz(&izrazi[i])) 
+    {
+      printf("Greska: neispravan unos.\n");
+      exit(EXIT_FAILURE);
+    }
+  }
+  
 }
 
-int max_vr(IZRAZ izrazi[], int n)
+/* Funkcija racuna vrednost izraza. */
+int vrednost(const Izraz* izraz)
 {
-   int i;
-   int max;
-   
-   max=vrednost(izrazi[0]);
-	   
-   for(i=1; i<n; i++)
-      if(vrednost(izrazi[i])>max)
-         max=vrednost(izrazi[i]);
+  switch (izraz->o) 
+  {
+    case '+':
+      return izraz->x + izraz->y;
+    case '-':
+      return izraz->x - izraz->y;
+    case '*':
+      return izraz->x * izraz->y;
+    case '/':
+      return izraz->x / izraz->y;
+    default:
+      printf("Greska: neispravna operacija.\n");
+      exit(EXIT_FAILURE);
+  }
+}
 
-   return max;	
+/* Funkcija racuna najvecu vrednost izraza. */
+int najveca_vrednost(Izraz izrazi[], int n)
+{
+  int i;
+  int maks_vrednost, tr_vrednost;
+
+  maks_vrednost = vrednost(&izrazi[0]);
+  
+  for (i = 1; i < n; i++)
+  {
+    tr_vrednost = vrednost(&izrazi[i]);
+    if (tr_vrednost > maks_vrednost)
+      maks_vrednost = tr_vrednost;
+  }
+
+  return maks_vrednost;
 }
 
 int main()
 {
-   int n;
-   IZRAZ izrazi[MAX];
-   int max;
-   int i;
-	
-   printf("Uneti broj izraza: ");
-   scanf("%d", &n);
-   if(n<0 || n>MAX)
-   {
-      printf("Nekorektna vrednost broja n!\n");
-      return -1;
-   }
-	
-	
-   printf("Uneti izraze u prefiksnoj notaciji:\n");
-   for(i=0; i<n; i++)
-      if(ucitaj_izraz(&izrazi[i])==0)
-      {
-         printf("Nekorektan unos\n");                 
-         return -1;
-      }
+  /* Deklaracije potrebnih promenljivih. */
+  int n;
+  Izraz izrazi[MAKS];
+  int maks, trenutna_vrednost;
+  float polovina;
+  int i;
 
-   	
-   max = max_vr(izrazi, n);
-   printf("Maksimalna vrednost izraza:%d\n", max);
-        
-   printf("Izrazi cija je vrednost manja od polovine maksimalne vrednosti:\n");	
-   
-   for(i=0; i<n; i++)    
-      if(vrednost(izrazi[i])<max/2)
-         stampaj_izraz(izrazi[i]);
-         				
-   return 0;
+  /* Ucitavanje broja izraza i provera ispravnosti ulaza. */
+  printf("Unesite broj izraza: ");
+  scanf("%d", &n);
+  if (n < 0 || n > MAKS) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Preskace se belina koja se unosi nakon broja izraza. 
+     Ovaj korak je neophodan jer se izraz zadaje u formatu
+     <operacija> <operand> <operand> 
+     A <operacija> je tipa char i kada bi ovaj korak bio
+     izostavljen, ta belina bi bila ucitana kao <operacija>
+     za prvi izraz. */
+  getchar();
+  ucitaj(izrazi, n);
+  
+  /* Pronalazak polovine maksimalne vrednosti. */
+  maks = najveca_vrednost(izrazi, n);
+  printf("Maksimalna vrednost izraza:%d\n", maks);
+  polovina = maks / 2.0;
+  
+  /* Ispis rezultata. */
+  printf("Izrazi cija je vrednost manja od polovine maksimalne "
+         "vrednosti:\n");
+  for (i = 0; i < n; i++)
+  {
+    trenutna_vrednost = vrednost(&izrazi[i]);
+    if (trenutna_vrednost < polovina)
+    {
+      printf("%d %c %d = %d\n", izrazi[i].x, izrazi[i].o, 
+             izrazi[i].y, trenutna_vrednost);
+    }
+  }
+
+  return 0;
 }

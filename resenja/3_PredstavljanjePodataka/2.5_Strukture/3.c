@@ -1,36 +1,66 @@
 #include <stdio.h>
-#define MAX_DUZINA 20
-#define MAX_BR_GRADOVA 50
+#include <stdlib.h>
 
-typedef struct Grad{
-	char ime_grada[MAX_DUZINA+1];
-	float temperatura;
-}Grad;
+#define MAKS_IME 21
+#define MAKS_GRADOVA 50
+#define DONJA_GRANICA 3
+#define GORNJA_GRANICA 8
 
+typedef struct 
+{
+  char ime_grada[MAKS_IME];
+  float temperatura;
+} Grad;
 
-int main(){
-	int n, i;
-	Grad grad[MAX_BR_GRADOVA];
-	
-	printf("Unesite broj n: ");
-	scanf("%d", &n);
-	if(n<0 || n>MAX_BR_GRADOVA){
-		printf("Greska: pogresan unos!\n");
-		return 0;
-	}
-	
-	for(i=0; i<n; i++){
-		printf("Unesite grad i temperaturu: ");
-		scanf("%s %f", grad[i].ime_grada, &grad[i].temperatura);
-	}
-	
-	printf("Gradovi sa idealnom temperaturom za klizanje u decembru:\n");
-	for(i=0; i<n; i++){
-		if(grad[i].temperatura>=3 && grad[i].temperatura<=8){
-			printf("%s\n", grad[i].ime_grada);
-		}
-	}
-	
-	return 0;
+/* Funkcija ucitava podatke o gradovima u niz. */
+void ucitaj(Grad gradovi[], int n)
+{
+  int i;
+  for (i = 0; i < n; i++) 
+  {
+    printf("Unesite grad i temperaturu: ");
+    scanf("%s %f", gradovi[i].ime_grada, &gradovi[i].temperatura);
+  }
 }
 
+/* Funkcija ispisuje gradove sa idealnom temperaturom za klizanje
+   u decembru. */
+void ispisi(Grad gradovi[], int n)
+{
+  int i;
+  
+  printf("Gradovi sa idealnom temperaturom za "
+          "klizanje u decembru:\n");
+  for (i = 0; i < n; i++)
+  {
+    if (gradovi[i].temperatura >= DONJA_GRANICA && 
+        gradovi[i].temperatura <= GORNJA_GRANICA)
+    {
+      printf("%s\n", gradovi[i].ime_grada);
+    }
+  }  
+}
+
+int main()
+{
+  /* Deklaracije potrebnih promenljivih. */
+  int n;
+  Grad gradovi[MAKS_GRADOVA];
+
+  /* Ucitavanje broja gradova i provera ispravnosti ulaza. */
+  printf("Unesite broj gradova: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS_GRADOVA) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavanje podataka o gradovima. */
+  ucitaj(gradovi, n);
+
+  /* Ispis rezultata. */
+  ispisi(gradovi, n);
+
+  return 0;
+}

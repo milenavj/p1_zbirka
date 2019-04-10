@@ -1,97 +1,95 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-typedef struct
-{
-	int brojilac;
-	int imenilac;
-}razlomak;
+typedef struct {
+  int brojilac;
+  int imenilac;
+} Razlomak;
 
+/* Funkcija Euklidovim algoritmom racuna najveci zajednicki
+   delilac brojeva a i b. */
 int nzd(int a, int b)
 {
-	int pom;
+  int ostatak;
 
-	if (a < b)
-	{
-		pom = a;
-		a = b;
-		b = pom;
-	}
+  while (b != 0) {
+    ostatak = a % b;
+    a = b;
+    b = ostatak;
+  }
 
-	while(b != 0)
-	{
-		pom = a % b;
-		a = b;
-		b = pom;
-	}
-
-	return a;
+  return a;
 }
 
-razlomak zbir(razlomak a, razlomak b)
+/* Funkcija vraca razlomak koji se dobija deljenjem imenioca i
+   brojioca sa njihovim najvecim zajednickim deliocem. */
+void uprosti(Razlomak * r)
 {
-	razlomak c;
-	int nzd_razlomka;
-
-	c.brojilac = a.brojilac * b.imenilac + b.brojilac*a.imenilac;
-	c.imenilac = a.imenilac*b.imenilac;
-
-  /* Brojilac i imenilac dobijenog zbira se dele najvecim zajednickim
-   * deliocom.
-   */
-	nzd_razlomka = nzd(c.brojilac, c.imenilac);
-
-	c.brojilac = c.brojilac/nzd_razlomka;
-	c.imenilac = c.imenilac/nzd_razlomka;
-
-	return c;
+  int nzd_razlomka = nzd(r->brojilac, r->imenilac);
+  r->brojilac /= nzd_razlomka;
+  r->imenilac /= nzd_razlomka;
 }
 
-razlomak proizvod(razlomak a, razlomak b)
+/* Funkcija racuna zbir razlomaka a i b. */
+Razlomak saberi(const Razlomak* a, const Razlomak* b)
 {
-	razlomak c;
-	int nzd_razlomka;
+  Razlomak c;
 
-	c.brojilac = a.brojilac*b.brojilac;
-	c.imenilac = a.imenilac*b.imenilac;
+  c.brojilac = a->brojilac * b->imenilac + b->brojilac * a->imenilac;
+  c.imenilac = a->imenilac * b->imenilac;
+  uprosti(&c);
 
-  /* Brojilac i imenilac dobijenog zbira se dele najvecim zajednickim
-   * deliocom.
-   */
-	nzd_razlomka = nzd(c.brojilac, c.imenilac);
+  return c;
+}
 
-	c.brojilac = c.brojilac/nzd_razlomka;
-	c.imenilac = c.imenilac/nzd_razlomka;
+/* Funkcija racuna proizvod razlomaka a i b. */
+Razlomak pomnozi(const Razlomak* a, const Razlomak* b)
+{
+  Razlomak c;
 
-	return c;
+  c.brojilac = a->brojilac * b->brojilac;
+  c.imenilac = a->imenilac * b->imenilac;
+  uprosti(&c);
+
+  return c;
 }
 
 int main()
 {
-	int n, i;
+  /* Deklaracije potrebnih promenljivih. */
+  int n, i;
+  Razlomak suma, proizvod, r;
 
-	razlomak suma, proizvod_svih, r;
+  /* Ucitavanje broja razlomaka i provera ispravnosti ulaza. */
+  printf("Unesite broj razlomaka: ");
+  scanf("%d", &n);
+  if (n <= 0) 
+  {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-	printf("Unesi broj razlomaka: ");
-	scanf("%d", &n);
+  /* Inicijalizacija sume i proizvoda. */
+  suma.brojilac = 0;
+  suma.imenilac = 1;
+  proizvod.brojilac = 1;
+  proizvod.imenilac = 1;
 
+  /* Ucitavanje razlomaka i racunanje rezultata. */
+  printf("Unesite razlomke:\n");
+  for (i = 0; i < n; i++) 
+  {
+    scanf("%d%d", &r.brojilac, &r.imenilac);
 
-	suma.brojilac = 0;
-	suma.imenilac = 1;
+    suma = saberi(&suma, &r);
+    proizvod = pomnozi(&proizvod, &r);
+  }
 
-	proizvod_svih.brojilac = 1;
-	proizvod_svih.imenilac = 1;
+  /* Ispis rezultata. */
+  printf("Suma svih razlomaka je %d/%d.\n", suma.brojilac,
+         suma.imenilac);
+  printf("Proizvod svih razlomaka je %d/%d.\n", proizvod.brojilac,
+         proizvod.imenilac);
 
-	printf("Uneti razlomke:\n");
-	for(i=0; i<n; i++)
-	{
-		scanf("%d%d", &r.brojilac, &r.imenilac);
-
-		suma = zbir(suma, r);
-		proizvod_svih = proizvod(proizvod_svih, r);
-	}
-
-	printf("Suma svih razlomaka je %d/%d.\n", suma.brojilac, suma.imenilac);
-	printf("Proizvod svih razlomaka je %d/%d.\n", proizvod_svih.brojilac, proizvod_svih.imenilac);
-
-	return 0;
+  return 0;
 }

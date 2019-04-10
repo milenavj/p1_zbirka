@@ -1,64 +1,69 @@
 #include <stdio.h>
 #include <string.h>
 
-#define MAX_DUZINA 21
-#define MAX_BR_VOCKI 50
+#define MAKS_IME 21
+#define MAKS_VOCKI 50
 
-typedef struct vocka
+/* Struktura koja opisuje vocku. */
+typedef struct 
 {
-  char ime[MAX_DUZINA];
+  char ime[MAKS_IME];
   float vitamin;
-} VOCKA;
+} Vocka;
 
+/* Funkcija ucitava podatke o vockama u niz struktura.  
+   Kao povratnu vrednost vraca broj ucitanih vocki. */
+int ucitaj(Vocka niz[])
+{
+  int i=0;
+  char ime[MAKS_IME];
+  
+  /* Vocke se ucitavaju sve dok se ne unese rec "KRAJ". */
+  do 
+  {
+    printf("Unesite ime vocke i njenu kolicinu vitamina C: ");
+
+    /* Ucitavanje imena vocke. */
+    scanf("%s", ime);
+    if (strcmp(ime, "KRAJ") == 0)
+      break;
+    strcpy(niz[i].ime, ime);
+
+    /* Ucitavanje kolicine vitamina C. */
+    scanf("%f", &niz[i].vitamin);
+
+    i++;
+  }
+  while (i < MAKS_VOCKI);
+  
+  return i;
+}
+
+/* Funkcija pronalazi vocku sa najvise C vitamina. */
+Vocka vocka_sa_najvise_vitamina(Vocka niz[], int n)
+{
+  /* Pronalazak pozicije vocke sa najvise vitamina c. */
+  int maks_i = 0, i;
+  for (i = 1; i < n; i++)
+    if (niz[i].vitamin > niz[maks_i].vitamin)
+      maks_i = i;
+    
+  /* Kao povratna vrednost se vraca vocka na poziciji maks_i. */
+  return niz[maks_i];
+}
 
 int main()
 {
-  VOCKA vocke[MAX_BR_VOCKI];
-  int i = 0, n, max_vocka;
-  char ime[MAX_DUZINA];
+  /* Deklaracije potrebnih promenljivih. */
+  Vocka vocke[MAKS_VOCKI], najzdravija;
+  int n;
 
-  /*
-    Program ucitava podatke o vockama i smesta ih u niz
-    sve dok se ne unese rec KRAJ ili ucita MAX_BR_VOCKI vocki.
-  */
-  do
-  {
-    printf("Unesite ime vocke i njenu kolicinu vitamina C: ");
-    scanf("%s",ime);
-    /*
-      Kada se unese rec KRAJ prekida se petlja.
-    */
-    if(strcmp(ime, "KRAJ") == 0)
-      break;
-
-    /*
-      Inace ucitava se kolicina vitamina
-      i ta vrednost se smesta u vocku na poziciji "i".
-    */
-    strcpy(vocke[i].ime,ime);
-    scanf("%f",&vocke[i].vitamin);
-    i++;
-  }
-  while(i<MAX_BR_VOCKI);
-
-  n = i;
-
-  /*
-    Pretpostavka je da prva vocka ima najvise vitamina. 
-    Petljom se prolazi niz vocki i ukoliko se naidje na vocku koja ima vise vitamina
-    od one koja trenutno ima najvise, azurira se vrednosti maksimalne vocke.
-    
-    Sve vreme se cuva indeks vocke sa najvise vitamina C.
-  */
+  /* Ucitavanje ulaza. */
+  n = ucitaj(vocke);
   
-  max_vocka = 0;
-  for(i=1;i<n;i++)
-    if(vocke[i].vitamin > vocke[max_vocka].vitamin)
-    {
-      max_vocka = i;
-    }
+  /* Ispis rezultata. */
+  najzdravija = vocka_sa_najvise_vitamina(vocke, n);
+  printf("Voce sa najvise C vitamina je: %s\n", najzdravija.ime);
 
-  printf("Voce sa najvise C vitamina je: %s\n", vocke[max_vocka].ime);
-  
   return 0;
 }

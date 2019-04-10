@@ -7,10 +7,10 @@
 void ucitaj(int a[][MAKS], int n)
 {
   int i, j;
-  
+
   printf("Unesite elemente matrice:\n");
-  for(i=0; i<n; i++)
-    for(j=0; j<n; j++)
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
       scanf("%d", &a[i][j]);
 }
 
@@ -21,25 +21,24 @@ int refleksivna(int a[][MAKS], int n)
 {
   int i;
 
-  for(i=0; i<n; i++)
-      if (a[i][i] != 1)
-          return 0;
-  
+  for (i = 0; i < n; i++)
+    if (a[i][i] != 1)
+      return 0;
+
   return 1;
 }
 
 /* Relacija je simetricna ukoliko za svaki par i, j vazi da je
-   a[i][j] = a[j][i].
-   Funkcija proverava da li je relacija zadata matricom a
-   simetricna i vraca 1 ukoliko jeste, a 0 inace. */
+   a[i][j] = a[j][i]. Funkcija proverava da li je relacija zadata
+   matricom a simetricna i vraca 1 ukoliko jeste, a 0 inace. */
 int simetricna(int a[][MAKS], int n)
 {
   int i, j;
 
-  for(i=0; i<n; i++)
-      for(j=0; j<n; j++)
-          if (a[i][j] != a[j][i])
-              return 0;
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      if (a[i][j] != a[j][i])
+        return 0;
 
   return 1;
 }
@@ -52,23 +51,23 @@ int tranzitivna(int a[][MAKS], int n)
 {
   int i, j, k;
 
-  for(i=0; i<n; i++)
-      for(j=0; j<n; j++)
-          for(k=0; k<n; k++)
-              if (a[i][j] == 1 && a[j][k] == 1 && a[i][k] == 0)
-                  return 0;
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      for (k = 0; k < n; k++)
+        if (a[i][j] == 1 && a[j][k] == 1 && a[i][k] == 0)
+          return 0;
 
   return 1;
 }
 
 /* Relacija je relacija ekvivalencije ukoliko je refleksivna,
-   tranzitivna i simetricna.
-   Funkcija proverava da li je relacija zadata matricom a relacija
-   ekvivalencije i vraca 1 ukoliko jeste, a 0 inace. */
+   tranzitivna i simetricna. Funkcija proverava da li je relacija
+   zadata matricom a relacija ekvivalencije i vraca 1 ukoliko
+   jeste, a 0 inace. */
 int ekvivalencija(int a[][MAKS], int n)
 {
   if (refleksivna(a, n) && simetricna(a, n) && tranzitivna(a, n))
-      return 1;
+    return 1;
 
   return 0;
 }
@@ -82,35 +81,35 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS)
+  if (n <= 0 || n > MAKS) 
   {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
-  
+
   /* Ucitavanje elemenata matrice. */
   ucitaj(a, n);
 
   /* Racunanje i ispis rezultata. */
   if (refleksivna(a, n))
-      printf("Relacija jeste refleksivna.\n");
+    printf("Relacija jeste refleksivna.\n");
   else
-      printf("Relacija nije refleksivna.\n");
+    printf("Relacija nije refleksivna.\n");
 
   if (simetricna(a, n))
-      printf("Relacija jeste simetricna.\n");
+    printf("Relacija jeste simetricna.\n");
   else
-      printf("Relacija nije simatricna.\n");
+    printf("Relacija nije simatricna.\n");
 
   if (tranzitivna(a, n))
-      printf("Relacija jeste tranzitivna.\n");
+    printf("Relacija jeste tranzitivna.\n");
   else
-      printf("Relacija nije tranzitivna.\n");
+    printf("Relacija nije tranzitivna.\n");
 
   if (ekvivalencija(a, n))
-      printf("Relacija jeste ekvivalencija.\n");
+    printf("Relacija jeste ekvivalencija.\n");
   else
-      printf("Relacija nije ekvivalencija.\n");
+    printf("Relacija nije ekvivalencija.\n");
 
   return 0;
 }

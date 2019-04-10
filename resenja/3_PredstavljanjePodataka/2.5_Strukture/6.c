@@ -1,47 +1,67 @@
 #include <stdio.h>
+#include <stdlib.h>
 
-#define MAX_PRODAVNICA 50
-#define DUZINA_RECI 21
+#define MAKS_PODATAKA 50
+#define MAKS_NAZIV 21
 
-typedef struct
+typedef struct 
 {
-	char prodavnica[DUZINA_RECI];
-	double cena;
-}podatak;
+  char naziv_prodavnice[MAKS_NAZIV];
+  double cena_artikla;
+} Artikal;
+
+/* Funkcija ucitava podatke o ceni artikla u razlicitim
+   prodavnicama. */
+void ucitaj(Artikal niz[], int n)
+{
+  int i;
+  for (i = 0; i < n; i++) 
+  {
+    scanf("%s%lf", niz[i].naziv_prodavnice, &niz[i].cena_artikla);
+    if (niz[i].cena_artikla <= 0) 
+    {
+      printf("Greska: neispravan unos.\n");
+      exit(EXIT_FAILURE);
+    }
+  } 
+}
+
+/* Funkcija ispisuje imena svih prodavnica u kojima je cena
+   artikla manja ili jednaka zeljenoj ceni. */
+void ispisi(Artikal niz[], int n, double zeljena_cena)
+{
+  int i;
+  printf("Povoljne prodavnice su:\n");
+  for (i = 0; i < n; i++)
+    if (niz[i].cena_artikla <= zeljena_cena)
+      printf("%s\n", niz[i].naziv_prodavnice);
+}
 
 int main()
 {
-	podatak niz[MAX_PRODAVNICA];
-	double zeljena;
-	int n, i;
+  /* Deklaracije potrebnih promenljivih. */
+  Artikal niz[MAKS_PODATAKA];
+  double zeljena_cena;
+  int n;
 
-	printf("Uneti broj prodavnica: ");
-	scanf("%d", &n);
-
-	if (n <=0 || n > MAX_PRODAVNICA)
-	{
-		printf("Neispravan broj prodavnica.\n");
-		return -1;
-	}
-
-	for(i=0; i<n; i++)
+  /* Ucitavanje broja prodavnica i provera ispravnosti ulaza. */
+  printf("Unesite broj prodavnica: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS_PODATAKA) 
   {
-		scanf("%s%lf", niz[i].prodavnica, &niz[i].cena);
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
 
-		if (niz[i].cena <= 0)
-		{
-			printf("Neispravna cena.\n");
-			return -1;
-		}
-	}
+  /* Ucitavanje podataka o cenama. */
+  ucitaj(niz, n);
 
-	printf("Uneti zeljenu cenu: ");
-	scanf("%lf", &zeljena);
+  /* Ucitavanje zeljene cene. */
+  printf("Unesite zeljenu cenu: ");
+  scanf("%lf", &zeljena_cena);
 
-	printf("Povoljne prodavnice su:\n");
-	for(i=0; i<n; i++)
-		if (niz[i].cena <= zeljena)
-			printf("%s\n", niz[i].prodavnica);
-
-	return 0;
+  /* Ispis rezultata. */
+  ispisi(niz, n, zeljena_cena);
+  
+  return 0;
 }
