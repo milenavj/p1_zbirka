@@ -4,7 +4,7 @@
 
 #define MAKS 50
 
-typedef struct lopta {
+typedef struct {
   int poluprecnik;
   enum { plava, zuta, crvena, zelena } boja;
 } Lopta;

@@ -66,7 +66,6 @@ double povrsina_trougla(const Tacka* A, const Tacka* B, const Tacka* C)
   double a = rastojanje(B, C);
   double b = rastojanje(A, C);
   double c = rastojanje(A, B);
-
   double s = (a + b + c) / 2;
 
   return sqrt(s * (s - a) * (s - b) * (s - c));

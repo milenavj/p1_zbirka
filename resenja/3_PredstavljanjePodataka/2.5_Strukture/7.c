@@ -42,8 +42,6 @@ void ucitaj(Dete niz[], int n)
   }  
 }
 
-
-
 int main()
 {
   /* Deklaracija potrebnih promenljivih. */

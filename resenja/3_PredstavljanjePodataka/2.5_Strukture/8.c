@@ -48,8 +48,7 @@ void ucitaj(Izraz izrazi[], int n)
       printf("Greska: neispravan unos.\n");
       exit(EXIT_FAILURE);
     }
-  }
-  
+  } 
 }
 
 /* Funkcija racuna vrednost izraza. */

@@ -18,7 +18,6 @@ typedef struct
   Artikal artikli[MAKS_ARTIKALA];
 } Korpa;
 
-
 /* Funkcija ucitava jedan artikal i proverava ispravnost 
    ucitanih podataka. */
 void ucitaj_artikal(Artikal * a)

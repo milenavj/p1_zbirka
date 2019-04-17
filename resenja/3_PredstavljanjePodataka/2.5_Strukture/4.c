@@ -33,7 +33,6 @@ int ucitaj(ParReci recnik[])
   return i;
 }
 
-
 /* 
    Funkcija u recniku koji sadrzi n reci trazi prevod reci rec 
    i upisuje ga u prevod. Ukoliko se rec ne nalazi u recniku,
@@ -66,7 +65,6 @@ int main()
   /* Deklaracije potrebnih promenljivih. */
   ParReci recnik[MAKS_BROJ_RECI];
   int n;
-
   char rec[MAKS_REC];
   char prevod[MAKS_REC];
   char c;

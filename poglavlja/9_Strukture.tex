@@ -29,6 +29,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
+
 \begin{Exercise}[label=struc.5] 
 Definisati strukturu kojom se opisuje razlomak. Napisati funkcije
 koje izračunavaju zbir i proizvod dva razlomka. 
@@ -82,16 +83,16 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=struc.2] 
  Zimi su prehlade česte i treba unositi više vitamina C. Struktura
- $Vocka$ sadrži ime voćke (nisku maksimalne dužine $20$ karaktera) i
- količinu vitamina C u miligramima (realan broj).Napisati funkcije:
+ $Vocka$ sadrži ime voćke i
+ količinu vitamina C u miligramima (realan broj). Napisati funkcije:
 \begin{enumerate}
   \item \kckod{int ucitaj(Vocka niz[])} koja učitava voćke sa standardnog ulaza
      sve do unosa reči KRAJ i kao povratnu vrednost vraća broj učitanih voćki;
-  \item \kckod{Vocka vocka \_sa\_najvise\_vitamina(Vocka niz[], int n)}
+  \item \kckod{Vocka vocka\_sa\_najvise\_vitamina(Vocka niz[], int n)}
      koja pronalazi voćku koja ima najviše C vitamina.
 \end{enumerate}
  Napisati program koji učitava podatke o voćkama i ispisuje ime voćke sa najviše vitamina C. 
- Pretpostaviti da broj voćki neće biti veći od $50$. 
+ Pretpostaviti da broj voćki neće biti veći od $50$, kao i da je ime voćke niska od najviše $20$ karaktera. 
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{maxitest}
@@ -117,18 +118,18 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.3] 
-Definisati strukturu \kckod{Grad} koja sadrži ime grada (niska
-dužine $20$ karaktera) i prosečnu temperaturu u toku decembra (realan
+Definisati strukturu \kckod{Grad} koja sadrži ime grada i prosečnu temperaturu u toku decembra (realan
 broj). Napisati funkcije:
 \begin{enumerate}
   \item \kckod{void ucitaj(Grad gradovi[], int n)} koja učitava podatke
   o gradovima sa standardnog ulaza. 
   \item \kckod{void ispisi(Grad gradovi[], int n)} koja ispisuje podatke
-  o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni. 
+  o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni celzijusa. 
 \end{enumerate}
-Napisati program koji učitava imena $n$ ($0<n<50$) gradova i
+Napisati program koji učitava imena $n$ gradova i
 njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temperaturom za klizanje.
- U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
+Pretpostaviti da je maksimalan broj gradova $50$ i da je maksimalna dužina imena grada $20$ karaktera.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{maxitest}
 \begin{upotreba}{1}
@@ -168,9 +169,10 @@ njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temper
  jeziku i odgovarajući prevod na engleski jezik. Napisati program koji
  do kraja ulaza učitava sve parove reči, a potom za rečenicu koja se
  zadaje u jednoj liniji ispisati prevod. Ako je reč u rečenici
- nepoznata umesto nje ispisati odgovarajući broj zvezdica. Maksimalna
- dužina reči je $50$ karaktera, maksimalan broj parova reči je
- $100$, a maksimalna dužina rečenice je $100$ karaktera. 
+ nepoznata umesto nje ispisati odgovarajući broj zvezdica. 
+ Pretpostaviti da je maksimalna
+ dužina reči $50$ karaktera, maksimalan broj parova reči
+ $100$, a maksimalna dužina rečenice $100$ karaktera. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -210,13 +212,15 @@ njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temper
 
 
 \begin{Exercise}[label=struc.6] 
-Cenoteka pomaže kupcima da pronađu najpovoljniju cenu za proizvod koji
+\emph{Cenoteka} pomaže kupcima da pronađu najpovoljniju cenu za proizvod koji
 žele da kupe. Napisati program koji učitava najpre broj različitih
-prodavnica (ceo broj manji od $50$) a zatim i podatke o ceni traženog
-artikla -- zadaje se naziv prodavnice (niske maksimalne dužine $20$
-karaktera) i cena u toj prodavnici (realan broj). Korisnik zadaje
+prodavnica, a zatim i podatke o ceni traženog
+artikla u različitim prodavnicama. Jedan red ulaza sadrži naziv prodavnice 
+i cenu u toj prodavnici (realan broj). Korisnik zadaje
 željenu cenu proizvoda, a program ispisuje imena svih onih prodavnica
-u kojima je cena proizvoda jednaka ili manja od željene.
+u kojima je cena proizvoda manja ili jednaka željenoj.
+Pretpostaviti da je maksimalan broj prodavnica $50$, a maksimalna dužina naziva prodavnice
+$20$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
@@ -263,9 +267,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. Za
 dato obdanište dobija spisak $n$ dece sa kolonama: pol (\kckod{m} ili
 \kckod{z}), broj godina (od $3$ do $6$) i ocena koju je dete dalo radu
-obdaništa (od $1$ do $5$). Maksimalan broj dece u obdaništu je
-$200$. Napisati program koji za decu datog pola i broja godina
+obdaništa (od $1$ do $5$). Napisati program koji za decu datog pola i broja godina
 ispisuje na tri decimale prosečnu ocenu obdaništa.
+Pretpostaviti da je maksimalan broj dece u obdaništu $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
@@ -339,12 +343,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=struc.11] 
 Definisati strukturu kojom se opisuje student. Student je zadat svojim
-imenom i prezimenom (oba su maksimalne dužine $30$ karaktera), smerom
+imenom i prezimenom, smerom
 (R, I, V, N, T, O) i prosečnom ocenom. Napisati program koji učitava
 podatke o $n$ studenata, zatim učitava smer i ispisuje imena i
 prezimena onih studenta koji su sa datog smera. Potom ispisati podatke
 za studenta koji ima najveći prosek. Ako ima više takvih studenata
-ispisati ih sve. Maksimalan broj studenata je $2000$.
+ispisati ih sve. 
+Pretpostaviti da je maksimalan broj studenata $2000$, a maksimalna dužina imena i prezimena
+po $30$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
 \begin{miditest}
@@ -388,14 +394,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.14]
-Program učitava podatke o učenicima do kraja unosa. Učenika može biti
-najviše $30$.  
-Definisati strukturu \kckod{Djak} koja sadrži ime đaka (maksimalne
-dužine $20$ karaktera) i $9$ ocena (ocene su celi brojevi od $1$ do
+Definisati strukturu \kckod{Djak} koja sadrži ime đaka i $9$ ocena (ocene su celi brojevi od $1$ do
 $5$). Napisati program koji učitava podatke o đacima sve do kraja ulaza
 i na standardni izlaz ispisuje prvo imena nedovoljnih đaka, a zatim imena
 odličnih đaka. Đak je nedovoljan ako ima barem jednu jedinicu, a 
 odličan ako ima prosek ocena veći ili jednak $4.5$.
+Pretpostaviti da je maksimalna dužina imena djaka $20$ karaktera, kao i da
+je maksimalan broj djaka $30$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{maxitest}
@@ -446,12 +451,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=struc.13] 
 Defnisati strukturu \kckod{Osoba} kojom se opisuje jedan unos u
-imenik. Za svaku osobu su dati podaci: ime (maksimalne dužine $20$
-karaktera), prezime (maksimalne dužine $30$ karaktera) i email adresa
-(maksimalne dužine $50$ karaktera).  Napisati program koji učitava ceo
-broj $n$ ($0 < n \le 50$) a zatim podatke o $n$ osoba. Ispisati imena
+imenik. Za svaku osobu su dati podaci: ime, prezime i email adresa.
+Napisati program koji učitava ceo
+broj $n$, a zatim podatke o $n$ osoba. Ispisati imena
 i prezimena svih osoba koje imaju gmail adresu (čija se email adresa
 završava sa \kckod{@gmail.com}).
+Pretpostaviti da je maksimalan broj osoba $50$, kao i da je 
+maksimalna dužina imena osobe $20$ karaktera, 
+prezimena $30$ karaktera, a email adrese $50$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \napomena{Može se smatrati da je svaka email adresa dobro
 zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.}
@@ -478,7 +485,7 @@ zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.}
 #\izlaz{ime, prezime i email.}#
 #\ulaz{Homer Simpson homer@yahoo.com}#
 #\ulaz{Mardz Simpson mardz@matf.bg.ac.rs}#
-#\izlaz{Vlasnici gmail naloga su:}#
+#\izlaz{Nema vlasnika gmail naloga.}#
 \end{upotreba}
 \end{miditest}
 
@@ -494,12 +501,13 @@ zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.}
 Napisati program koji izračunava prosečnu cenu jedne potrošačke
 korpe. Potrošačka korpa se sastoji od broja kupljenih artikala i niza
 kupljenih artikala. Svaki artikal određen je svojim nazivom, količinom
-i cenom. Program treba da učita broj potrošača $n$ (najviše $100$),
+i cenom. Program treba da učita broj potrošača $n$,
 zatim podatke za $n$ potrošačkih korpi i da na osnovu učitanih
 podataka izračuna prosečnu cenu potrošačke korpe. Program ispisuje na
 dve decimale račune svake potrošačke korpe i na kraju ispisuje
-prosečnu cenu potrošačke korpe. Može se pretpostaviti da nijedan
-potrošač neće kupiti više od $20$ artikala, kao i da naziv svakog
+prosečnu cenu potrošačke korpe. 
+Pretpostaviti da je maksimalan broj potrosackih korpi $100$, maksimalan
+broj artikala u korpi $20$ i da naziv svakog
 artikla sadrži maksimalno $30$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
@@ -635,8 +643,8 @@ Napisati funkcije
  \item \kckod{int broj\_crvenih(Lopta niz[], int n)} koja prebrojava koliko ima crvenih lopti u nizu.
 \end{enumerate}
 Napisati program koji učitava informacije o $n$
-lopti ($0<n<50$) i ispisuje ukupnu zapreminu i broj crvenih
-lopti.
+lopti i ispisuje ukupnu zapreminu i broj crvenih lopti.
+Pretpostaviti da je maksimalan broj lopti $50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
@@ -712,8 +720,8 @@ obima i dužine stranica.
 
 \item Definisati funkciju \kckod{double obim(Tacka* poligon, int
   n)} koja izračunava obim poligona sa $n$ tačaka u zadatom nizu
-  \napomena{Prilikom računanja obima ne zaboraviti stranicu koja spaja
-    poslednje i prvo teme}.
+  \uputstvo{Prilikom računanja obima ne zaboraviti stranicu koja spaja
+    poslednje i prvo teme.}.
 
 \item Definisati funkciju \kckod{double maksimalna\_stranica(Tacka*
   poligon, int n)} koja izračunava dužinu najduže stranice
@@ -724,15 +732,15 @@ obima i dužine stranica.
 
 \item Napisati funkciju \kckod{double povrsina(Tacka* poligon,
   int n)} za računanje površine konveksnog
-  poligona. \napomena{Zadatak se može rešiti korišćenjem funkcije
+  poligona. uputstvo{Zadatak se može rešiti korišćenjem funkcije
     \kckod{povrsina\_trougla}}.
-
-\item Napisati program koji učitava poligon sa maksimalno $n$ temena
-  ($0 < n \le 1000$) i za učitani poligon ispisuje na tri decimale
-  obim, dužinu maksimalnu stranice i površinu. Pretpostaviti da je
-  uneti poligon konveksan. Poligon mora imati barem tri temena.
-  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{enumerate}
+Napisati program koji učitava poligon sa maksimalno $n$ temena
+  i za učitani poligon ispisuje na tri decimale
+  obim, maksimalnu dužinu stranice i površinu. Pretpostaviti da je
+  uneti poligon konveksan. Poligon mora imati barem tri temena.
+  Pretpostaviti da je maksimalan broj temena $1000$.
+  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -791,7 +799,7 @@ numeričke operacije (sabiranje, oduzimanje, množenje ili celobrojno
 deljenje) nad celim brojevima.
 \begin{enumerate}
 \item Napisati funkciju koja ispituje da li je dati izraz korektno
-  zadat i vraća jedinicu ako jeste a nulu inace. Podrazumeva se da je
+  zadat i vraća jedinicu ako jeste, a nulu inače. Podrazumeva se da je
   izraz korektno zadat ako operacija odgovara $+$, $-$, $*$ ili $/$ i
   u slučaju deljenja drugi operand je različit od $0$.
 \item Napisati funkciju koja za dati izraz određuje vrednost izraza.
@@ -800,10 +808,11 @@ deljenje) nad celim brojevima.
   operacija, a potom dva operanda.
 \end{enumerate}
 
-Napisati program koji učitava prirodan broj $n$, ($n<1000$) a
+Napisati program koji učitava prirodan broj $n$, a
 zatim $n$ izraza u prefiksnoj notaciji. Program treba da ispiše
 maksimalnu vrednost unetih izraza i sve izraze čija vrednost je manja
 od polovine maksimalne vrednosti.
+Pretpostaviti da je maksimalan broj izraza $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
@@ -873,7 +882,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[difficulty=1, label=struc.15] 
 Definisati strukturu kojom se opisuje polinom. Polinom je dat svojim
-stepenom (može biti najviše $10$) i realnim koeficijentima. 
+stepenom i realnim koeficijentima. 
 \begin{enumerate}
 \item Napisati funkciju koja sa standardnog ulaza učitava polinome sve do 
       kraja ulaza. Polinomi su zadati stepenom i koeficijentima. Funkcija kao 
@@ -885,10 +894,10 @@ stepenom (može biti najviše $10$) i realnim koeficijentima.
   $0$ i na mesto znaka $\pm$ zapisati odgovarajući znak, $+$ ili $-$,
   u zavisnosti od znaka odgovarajućeg koeficijenta.
 \item Napisati funkciju koja za dati polinom određuje njegov integral.
-\item Učitati polinome do kraja ulaza i za svaki učitani polinom
-  odrediti i ispisati integral tog polinoma. Maksimalan broj polinoma
-  je $100$.
 \end{enumerate}
+Napisati program koji učitava polinome do kraja ulaza i za svaki učitani polinom
+  određuje i ispisuje integral tog polinoma. 
+  Pretpostaviti da je maksimalan broj polinoma $100$, a maksimalan stepen polinoma $10$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}

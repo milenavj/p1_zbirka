@@ -52,7 +52,7 @@ int gmail(char email[])
 int main()
 {
   /* Deklaracije potrebnih promenljivih. */
-  int n, i;
+  int n, i, indikator;
   Osoba osobe[MAKS_OSOBA];
 
   /* Ucitavanje broja osoba i provera ispravnosti ulaza. */
@@ -70,10 +70,26 @@ int main()
     scanf("%s%s%s", osobe[i].ime, osobe[i].prezime, osobe[i].email);
 
   /* Ispis rezultata. */
-  printf("Vlasnici gmail naloga su:\n");
   for (i = 0; i < n; i++)
+  {
     if (gmail(osobe[i].email))
+    {
+      if(!indikator)
+      {
+        /* U ovu granu ce se uci samo kada se naidje na prvog
+           vlasnika gmail naloga. */
+        printf("Vlasnici gmail naloga su:\n");
+        indikator = 1;
+      }
       printf("%s %s\n", osobe[i].ime, osobe[i].prezime);
-
+    }
+  }
+  
+  /* Ukoliko se nije naislo ni na jednog vlasnika gmail naloga,
+     promenljiva indikator ce ostati 0 i u tom slucaju se ispsuje
+     odgovarajuca poruka. */
+  if(!indikator)
+    printf("Nema vlasnika gmail naloga.\n");
+  
   return 0;
 }
