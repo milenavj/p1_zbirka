@@ -6,13 +6,6 @@
 %\section{Argumenti komandne linije}
 
 \section{Datoteke}
-% \komentarJ{
-% poruke o gresci:\\
-% - ako je dat fiksan naziv datoteke, da li u test primere stavljamo slucaj kada datoteka ne postoji?\\
-% - da li je poruka o gresci uvek -1 ili da navodimo customized?\\
-% - da li naglasavati da je tekstualna datoteka (u zadacima sa i smera nekad stoji na pocetku zadatka 'tekstualna datoteka', kod nas ne\\
-% - kada treba da se ispise minimum ili maksimum nekakvog niza, ako nije precizirano sta se radi ako vise elemenata ima maksimalnu/minimalnu vrednost i nema resenja, da li da preciziramo u zadatku?)
-% }
 %% ----------- KARAKTER PO KARAKTER POCETAK ----------
 
 % \subsection{Unos karakter po karakter}
@@ -21,12 +14,12 @@
 Napisati program koji prepisuje sadržaj datoteke $ulaz.txt$ u datoteku $izlaz.txt$ karakter po karakter.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{v301, karakter po karakter, prepisivanje, fiksni naziv}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{ulaz.txt}#
 #\datoteka{Danas je 21. mart.}#
 #\datoteka{To je prvi dan proleca.}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{Danas je 21. mart.}#
 #\datoteka{To je prvi dan proleca.}#
@@ -37,6 +30,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{ulaz.txt}#
 #\datoteka{Ispit iz Programiranja 1 je}#
 #\datoteka{zakazan za 10. jun.}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{Ispit iz Programiranja 1 je}#
 #\datoteka{zakazan za 10. jun.}#
@@ -45,15 +39,16 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovDat{ulaz.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka ulaz.txt}#
-#\izlaz{ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{datoteke ulaz.txt}#
 \end{upotreba}
 \end{minitest}
 \linkresenje{v3_01}
 \end{Exercise}
 \begin{Answer}[ref=v3_01]
-\includecode{resenja/4_Datoteke/1/1.c}
+\includecode{resenja/4_Datoteke/sve/1.c}
 \end{Answer}
 
 
@@ -61,11 +56,11 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 Napisati program koji prepisuje svaki treći karakter datoteke $ulaz.txt$ u datoteku $izlaz.txt$.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p302, karakter po karakter, prepisivanje, fiksni naziv}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{ulaz.txt}#
 #\datoteka{Volim programiranje.}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{Vipgmae}#
 \end{upotreba}
@@ -75,6 +70,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{ulaz.txt}#
 #\datoteka{abcdefghi}#
 #\datoteka{123456789}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{adg}#
 #\datoteka{147}#
@@ -86,6 +82,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{U Beogradu ce biti}#
 #\datoteka{suncan i lep}#
 #\datoteka{dan.}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{Ueruei}#
 #\datoteka{nn pa}#
@@ -94,7 +91,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_02}
 \end{Exercise}
 \begin{Answer}[ref=p3_02]
-\includecode{resenja/4_Datoteke/praktikumi14/1_02.c}
+\includecode{resenja/4_Datoteke/sve/2.c}
 \end{Answer}
 
 
@@ -106,11 +103,11 @@ Na primer, \kckod{b} se zamenjuje sa \kckod{A},
 \kckod{z}, itd. Ostali karakteri ostaju nepromenjeni. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3id17, karakter po karakter, prepisivanje, fiksno ime, nema resenje}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{podaci.txt}#
 #\datoteka{ABC.123.xyz}#
+
 #\naslovDat{sifra.txt}#
 #\datoteka{zab.123.WXY}#
 \end{upotreba}
@@ -120,6 +117,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{podaci.txt}#
 #\datoteka{a=x+y;}#
 #\datoteka{x=b+5;}#
+
 #\naslovDat{sifra.txt}#
 #\datoteka{Z=W+X;}#
 #\datoteka{W=A+5;}#
@@ -128,78 +126,103 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovDat{podaci.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka podaci.txt}#
-#\izlaz{ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{datoteke podaci.txt.}#
 \end{upotreba}
 \end{minitest}
 \linkresenje{p3_id17}
 \end{Exercise}
 \begin{Answer}[ref=p3_id17]
-\includecode{resenja/4_Datoteke/ciklicna_zamena.c}
+\includecode{resenja/4_Datoteke/sve/3.c}
 \end{Answer}
 
 
 \begin{Exercise}[label=p3_iv3] 
 Sa standarnog ulaza učitavaju se imena dve datoteke i
-jedan karakter. Napisati program koji prepisuje sadržaj prve datoteke u drugu na sledeći način:
+jedan karakter koji označava opciju. 
+Napisati program koji prepisuje sadržaj prve datoteke u drugu na sledeći način:
 \begin{itemize}
-\item ukoliko je učitan karakter \kckod{u}, sva mala slova zamenjuje velikim
-\item ukoliko je učitan karakter \kckod{l}, sva velika slova zamenjuje malim
+\item ukoliko je zadata opcija \kckod{u}, sva mala slova zamenjuje velikim
+\item ukoliko je zadata opcija \kckod{l}, sva velika slova zamenjuje malim
 \end{itemize}
 Maksimalna dužina naziva datoteka je $20$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3iv3, karakter po karakter, prepisivanje, ima resenje}
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
+#\izlaz{Unesite imena datoteka i opciju:}#
 #\ulaz{ulaz.txt izlaz.txt u}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{danas je lep dan}#
 #\datoteka{i Ja zelim}#
 #\datoteka{da postanem programer}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{DANAS JE LEP DAN}#
 #\datoteka{I JA ZELIM}#
 #\datoteka{DA POSTANEM PROGRAMER}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
+#\izlaz{Unesite imena datoteka i opciju:}#
 #\ulaz{prva.dat druga.dat l}#
+
 #\naslovDat{prva.dat}#
 #\datoteka{Cena soka je 30}#
 #\datoteka{Cena vina je 150}#
 #\datoteka{Cena limunade je 200}#
 #\datoteka{Cena sendvica je 120}#
+
 #\naslovDat{druga.dat}#
 #\datoteka{cena soka je 30}#
 #\datoteka{cena vina je 150}#
 #\datoteka{cena limunade je 200}#
 #\datoteka{cena sendvica je 120}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
+#\izlaz{Unesite imena datoteka i opciju:}#
 #\ulaz{primer.c prazna.txt V}#
+
 #\naslovDat{primer.c}#
 #\datoteka{\#include <stdio.h>}#
 #\datoteka{int main()}#
 #\datoteka{\{}#
 #\datoteka{\}}#
+
 #\naslovDat{prazna.txt}#
 #\datoteka{}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan poziv.}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite imena datoteka i opciju:}#
+#\ulaz{primer.c prazna.txt V}#
+
+#\datoteka{primer.c ne postoji}#
+
+#\naslovIzlazZaGresku#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{prve datoteke.}#
+\end{upotreba}
+\end{miditest}
 \linkresenje{p3_iv3}
 \end{Exercise}
-\begin{Answer}[ref=p3_i1]
-\includecode{resenja/4_Datoteke/zamena.c}
+\begin{Answer}[ref=p3_iv3]
+\includecode{resenja/4_Datoteke/sve/4.c}
 \end{Answer}
 
 
@@ -210,20 +233,21 @@ Napisati program koji za dve datoteke čija se imena unose sa standarnog ulaza, 
 \item{za svako slovo u prvoj datoteci, u drugu datoteku upisuje $1$}
 \item{za sve ostale karaktere u prvoj datoteci, u drugu datoteku upisuje $2$}
 \end{itemize}
-Maksimalna dužina naziva datoteka je $20$
-karaktera. 
+Maksimalna dužina naziva datoteka je $20$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3id16, karakter po karakter, prepisivanje, nema resenje}
-\komentarJ{Dodat je deo zadatka za slucaj da datoteka ne postoji.}
-\komentarJ{ispraviti ovoliki prored izmedju stavki u okviru itemize (to se menja u zavisnosti od prostora na stranici)}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{prva.dat druga.dat}#
+#\izlaz{Unesite ime prve datoteke:}#
+#\ulaz{prva.dat}#
+#\izlaz{Unesite ime druge datoteke:}#
+#\ulaz{druga.dat}#
+
 #\naslovDat{prva.dat}#
 #\datoteka{abc.123.[]}#
 #\datoteka{567.ABC.{}}#
+
 #\naslovDat{druga.dat}#
 #\datoteka{111200022220002111222}
 \end{upotreba}
@@ -231,9 +255,14 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{ulaz.txt izlaz.txt}#
+#\izlaz{Unesite ime prve datoteke:}#
+#\ulaz{ulaz.txt}#
+#\izlaz{Unesite ime druge datoteke:}#
+#\ulaz{izlaz.txt}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{18. februar 2019.}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{11220000000211112}
 \end{upotreba}
@@ -241,17 +270,22 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\ulaz{in.txt out.txt}#
-#\naslovDat{in.txt ne postoji}#
+#\izlaz{Unesite ime prve datoteke:}#
+#\ulaz{in.dat}#
+#\izlaz{Unesite ime druge datoteke:}#
+#\ulaz{out.dat}#
+
+#\naslovDat{in.dat ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka in.txt}#
-#\izlaz{ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{prve datoteke.}#
 \end{upotreba}
 \end{minitest}
-\linkresenje{p3_}
+\linkresenje{p3_id16}
 \end{Exercise}
-\begin{Answer}[ref=p3_]
-\includecode{resenja/4_Datoteke/sveubroj.c}
+\begin{Answer}[ref=p3_id16]
+\includecode{resenja/4_Datoteke/sve/5.c}
 \end{Answer}
 
 
@@ -260,7 +294,6 @@ Napisati program koji prebrojava mala slova u datoteci $test.txt$ i dobijeni rez
 standardni izlaz.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p301, karakter po karakter, brojanje, fiksni naziv}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{test.txt}#
@@ -292,7 +325,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_01}
 \end{Exercise}
 \begin{Answer}[ref=p3_01]
-\includecode{resenja/4_Datoteke/praktikumi14/1_01.c}
+\includecode{resenja/4_Datoteke/sve/6.c}
 \end{Answer}
 
 
@@ -304,10 +337,10 @@ poruku.
 Maksimalna dužina naziva datoteka je $20$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p2id14, karakter po karakter, brojanje, nema resenje (domaci)}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
+#\izlaz{Unesite ime datoteke:}#
 #\ulaz{ulaz.txt}#
 #\naslovDat{ulaz.txt}#
 #\datoteka{danas je lep dan}#
@@ -320,6 +353,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
+#\izlaz{Unesite ime datoteke:}#
 #\ulaz{prva.dat}#
 #\naslovDat{prva.dat}#
 #\datoteka{Cena soka je 30}#
@@ -333,6 +367,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
+#\izlaz{Unesite ime datoteke:}#
 #\ulaz{primer.c}#
 #\naslovDat{primer.c}#
 #\datoteka{1 22 333.444 }#
@@ -343,7 +378,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_id14}
 \end{Exercise}
 \begin{Answer}[ref=p3_id14]
-\includecode{resenja/4_Datoteke/naj_cifra.c}
+\includecode{resenja/4_Datoteke/sve/7.c}
 \end{Answer}
 
 
@@ -351,40 +386,47 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 Napisati program koji u datoteci čije je ime dato kao argument komandne linije proverava da li su zagrade pravilno uparene.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3x2, argumenti, karakter po karakter, brojanje, nema resenja}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out zagrade.txt}#
+
 #\naslovDat{zagrade.txt}#
 #\datoteka{ab( cd) ..}#
 #\datoteka{((3+4)*5+1)*9}#
+
 #\naslovIzlaz#
-#\izlaz{jesu}#
+#\izlaz{Zagrade jesu uparene.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out primer2.dat}#
+
 #\naslovDat{primer2.dat}#
 #\datoteka{(7+8 }#
 #\datoteka{nisu(}#
 #\datoteka{uparene}#
+
 #\naslovIzlaz#
-#\izlaz{nisu}#
+#\izlaz{Zagrade nisu uparene.}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out primer3.dat}#
+
 #\naslovDat{primer3.dat}#
 #\datoteka{)) 7 + 6 ((}#
+
 #\naslovIzlaz#
-#\izlaz{nisu}#
+#\izlaz{Zagrade nisu uparene.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -392,7 +434,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_x2}
 \end{Exercise}
 \begin{Answer}[ref=p3_x2]
-\includecode{resenja/4_Datoteke/zagrade.c}
+\includecode{resenja/4_Datoteke/sve/8.c}
 \end{Answer}
 
 
@@ -415,12 +457,13 @@ Napisati program koji prebrojava slova i cifre u datoteci.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 \end{description}
 
-\komentarJ{x4, karakter, brojanje, argumenti, nema resenje}
 \begin{minitest}
 \begin{upotreba}{1}
 #\poziv{./a.out skup.txt}#
+
 #\naslovDat{skup.txt}#
 #\datoteka{abc56ighj9012hjFGHH  }#
+
 #\naslovIzlaz#
 #\izlaz{broj slova: 13}#
 #\izlaz{broj cifara: 6}#
@@ -429,8 +472,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\poziv{./a.out skup2.txt}#
+
 #\naslovDat{skup2.txt}#
 #\datoteka{ovdeimamo\$dolar}#
+
 #\naslovIzlaz#
 #\izlaz{broj slova: 9}#
 #\izlaz{broj cifara: 0}#
@@ -439,19 +484,24 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\poziv{./a.out skup3.txt}#
+
 #\naslovDat{skup3.txt}#
 #\datoteka{broJ3}#
 #\datoteka{ broj5}#
+
 #\naslovIzlaz#
 #\izlaz{broj slova: 4}#
 #\izlaz{broj cifara: 1}#
 \end{upotreba}
 \end{minitest}
+
 \begin{minitest}
 \begin{upotreba}{4}
 #\poziv{./a.out skup4.txt}#
+
 #\naslovDat{skup4.txt}#
 #\datoteka{11.2.2019.}#
+
 #\naslovIzlaz#
 #\izlaz{broj slova: 0}#
 #\izlaz{broj cifara: 2}#
@@ -460,15 +510,18 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{5}
 #\poziv{./a.out skup5.txt}#
-#\naslovDat{skup4.txt ne postoji}#
+
+#\naslovDat{skup5.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka skup4.txt}#
-#\izlaz{ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{6}
 #\poziv{./a.out}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -476,7 +529,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_x4}
 \end{Exercise}
 \begin{Answer}[ref=p3_x4]
-%\includecode{resenja/4_Datoteke/6/6.c}
+%\includecode{resenja/4_Datoteke/sve/9.c}
 \end{Answer}
 
 
@@ -487,11 +540,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 % \subsection{Rec po rec}
 
 \begin{Exercise}[label=p3_08] 
- Napisati program koji za reč $s$ maksimalne dužine 20 karaktera koja se zadaje sa standardnog ulaza 
- u datoteku $rotacije.txt$ upisuje sve rotacije reči $s$.
- U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
+ Napisati program koji sa standardnog ulaza učitava reč $s$ i u datoteku $rotacije.txt$
+ upisuje sve njene rotacije reči. Maksimalna dužina reči je $20$ karaktera.
+U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p308, rec po rec, fiksno ime}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -536,7 +588,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_08}
 \end{Exercise}
 \begin{Answer}[ref=p3_08]
-\includecode{resenja/4_Datoteke/praktikumi14/1_08.c}
+\includecode{resenja/4_Datoteke/sve/10.c}
 \end{Answer}
 
 
@@ -548,15 +600,16 @@ Maksimalna dužina naziva datoteke je $20$ karaktera. Može se pretpostaviti da
 datoteka sadrži samo slova i beline i da je maksimalna dužina jedne reči u datoteci $100$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3id18, rec po rec, ime jedne datoteke sa standardnog ulaza a drugo fiksno ime, nema resenje}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke: }\ulaz{ulaz.txt}#
-#\izlaz{Unesite broj k: }\ulaz{3}#
+#\izlaz{Unesite ime datoteke:}\ulaz{ulaz.txt}#
+#\izlaz{Unesite broj k:}\ulaz{3}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{jedan dva}#
 #\datoteka{tri cetiri}#
+
 #\naslovDat{rotirano.txt}#
 #\datoteka{anjed dva tri iricet}#
 \end{upotreba}
@@ -564,22 +617,27 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke: }\ulaz{in.dat}#
-#\izlaz{Unesite broj k: }\ulaz{5}#
+#\izlaz{Unesite ime datoteke:}\ulaz{in.dat}#
+#\izlaz{Unesite broj k:}\ulaz{5}#
+
 #\naslovDat{in.dat}#
 #\datoteka{Popodne ce biti kise}#
+
 #\naslovDat{rotirano.txt}#
 #\datoteka{nePopod ec itib isek}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke: }\ulaz{input.txt}#
-#\izlaz{Unesite broj k: }\ulaz{0}#
+#\izlaz{Unesite ime datoteke:}\ulaz{input.txt}#
+#\izlaz{Unesite broj k:}\ulaz{0}#
+
 #\naslovDat{input.txt}#
 #\datoteka{Popodne ce}#
 #\datoteka{biti kise}#
+
 #\naslovDat{rotirano.txt}#
 #\datoteka{Popodne ce biti kise}#
 \end{upotreba}
@@ -587,38 +645,42 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke: }\ulaz{tekst.dat}#
-#\izlaz{Unesite broj k: }\ulaz{7}#
+#\izlaz{Unesite ime datoteke:}\ulaz{tekst.dat}#
+#\izlaz{Unesite broj k:}\ulaz{7}#
+
 #\naslovDat{tekst.dat ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka tekst.dat ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p3_id18}
 \end{Exercise}
 \begin{Answer}[ref=p3_id18]
-\includecode{resenja/4_Datoteke/rotacija.c}
+\includecode{resenja/4_Datoteke/sve/11.c}
 \end{Answer}
 
 
 \begin{Exercise}[label=p3_iv6]         
 Napisati program koji iz datoteke čije se ime zadaje sa standardnog ulaza prepisuje reči na standardni 
 izlaz a one reči koje sadrže prvu reč iz datoteke i podvlaku upisuje u datoteku $rez.txt$. 
-Maksimalna dužina naziva
-datoteke je $20$ karaktera a reči u datoteci $50$ karaktera.
+Maksimalna dužina naziva datoteke je $20$ karaktera, a maksimalna dužina reči u datoteci $50$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3iv6, rec po rec, fiksno ime, ima resenje}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{dat1.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat1.txt}#
+
 #\naslovDat{dat1.txt}#
 #\datoteka{rec Opet \_rec Reci rec\_enica}#
 #\datoteka{DVa recica\_}#
+
 #\naslovIzlaz#
 #\izlaz{rec Opet \_rec Reci rec\_enica }#
 #\izlaz{DVa recica\_}#
+
 #\naslovDat{rez.txt: }#
 #\datoteka{\_rec rec\_enica recica\_}#
 \end{upotreba}
@@ -626,27 +688,34 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{dat2.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat2.txt}#
+
 #\naslovDat{dat2.txt}#
 #\datoteka{Sunce sija iznad grada}#
 #\datoteka{Sunce\_Moje Jedan Dva Su\_nce Sve }#
 #\datoteka{Sunce123\_123 suncanica.}#
+
 #\naslovIzlaz#
 #\izlaz{Sunce sija iznad grada}#
 #\izlaz{Sunce\_Moje Jedan Dva Su\_nce Sve }#
 #\izlaz{Sunce123\_123 suncanica.}#
+
 #\naslovDat{rez.txt: }#
 #\datoteka{Sunce\_Moje Sunce123\_123}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\ulaz{dat3.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat3.txt}#
+
 #\naslovDat{dat3.txt}#
 #\datoteka{4 abc 1234 (5+3)*12\_4 11-k}#
+
 #\naslovIzlaz#
 #\izlaz{4 abc 1234 (5+3)*12\_4 11-k}#
+
 #\naslovDat{rez.txt: }#
 #\datoteka{(5+3)*12\_4}
 \end{upotreba}
@@ -654,30 +723,33 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\ulaz{dat4.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat4.txt}#
+
 #\naslovDat{dat4.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka dat4.txt ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p3_iv6}
 \end{Exercise}
 \begin{Answer}[ref=p3_iv6]
-\includecode{resenja/4_Datoteke/recipodvlaka.c}
+\includecode{resenja/4_Datoteke/sve/12.c}
 \end{Answer}
 
 
 \begin{Exercise}[label=p3_id20]         
 Napisati program koji iz datoteke $razno.txt$ u datoteku $palindromi.txt$ prepisuje sve palindrome. 
 Podrazumeva se da je reč palindrom ako se čita isto sa leve i desne strane bez obzira na veličinu slova. 
-Maksimalna dužina reči je $200$ karaktera a maksimalan broj reči nije poznat.
+Maksimalna dužina reči je $200$ karaktera, a maksimalan broj reči nije poznat.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3id20, rec po rec, fiksno ime, nema resenje}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{razno.txt}#
 #\datoteka{Ana i melem su primeri palindroma.}#
+
 #\naslovDat{palindromi.txt: }#
 #\datoteka{Ana i melem}
 \end{upotreba}
@@ -687,15 +759,18 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{razno.txt}#
 #\datoteka{jabuka neven pomorandza kuk}#
 #\datoteka{Oko kapAk pero radar caj}#
+
 #\naslovDat{palindromi.txt: }#
 #\datoteka{neven kuk}#
 #\datoteka{Oko kapAk radar}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovDat{razno.txt}#
 #\datoteka{ovde nema palindroma}#
+
 #\naslovDat{palindromi.txt: }#
 \end{upotreba}
 \end{miditest}
@@ -703,6 +778,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{upotreba}{4}
 #\naslovDat{razno.txt}#
 #\datoteka{Ana voli Milovana.}#
+
 #\naslovDat{palindromi.txt: }#
 #\datoteka{Ana}#
 \end{upotreba}
@@ -710,7 +786,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_id20}
 \end{Exercise}
 \begin{Answer}[ref=p3_id20]
-\includecode{resenja/4_Datoteke/palindrom.c}
+\includecode{resenja/4_Datoteke/sve/13.c}
 \end{Answer}
 
 
@@ -725,18 +801,19 @@ Napisati program koji učitava reči iz datoteke u niz i:
 Maksimalna dužina naziva datoteka je $20$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3iv5, rec po rec, fiksno ime, ime se unosi sa standardnog ulaza, ima resenje}
-\komentarJ{ima dve varijante resenja, koristi se u obe dvodimenzioni niz}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{dat1.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat1.txt}#
+
 #\naslovDat{dat1.txt}#
 #\datoteka{12 jha14 hahaha deda mraz deda}#
 #\datoteka{mraz deda deda jase konj konj konj}#
+
 #\naslovIzlaz#
 #\izlaz{jha14 hahaha deda mraz deda mraz deda}#
 #\izlaz{deda jase konj konj konj}#
+
 #\naslovDat{rez.txt: }#
 #\datoteka{jha14 hahaha deda mraz jase konj}#
 \end{upotreba}
@@ -744,29 +821,35 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{dat2.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat2.txt}#
+
 #\naslovDat{dat2.txt}#
 #\datoteka{14}#
 #\datoteka{so secer supa so ljuto secer kiselo slatko}#
 #\datoteka{ljuto}#
 #\datoteka{paprika, ljuta paprika, ljuto dete}#
+
 #\naslovIzlaz#
 #\izlaz{so secer supa so ljuto secer kiselo slatko}#
 #\izlaz{ljuto paprika, ljuta paprika, ljuto dete}#
+
 #\naslovDat{rez.txt: }#
 #\datoteka{so secer supa ljuto kiselo slatko}#
 #\datoteka{paprika, ljuta dete}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\ulaz{dat3.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat3.txt}#
+
 #\naslovDat{dat3.txt}#
-#\datoteka{2}#
 #\datoteka{4 abc 1234 (5+3)*12.4 11-k}#
+
 #\naslovIzlaz#
 #\izlaz{abc 1234 (5+3)*12.4 11-k}#
+
 #\naslovDat{rez.txt: }#
 #\datoteka{abc 1234 (5+3)*12.4 11-k}#
 \end{upotreba}
@@ -774,16 +857,19 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\ulaz{dat4.txt}#
+#\izlaz{Unesite ime datoteke:}\ulaz{dat4.txt}#
+
 #\naslovDat{dat4.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka dat4.txt ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p3_iv5}
 \end{Exercise}
 \begin{Answer}[ref=p3_iv5]
-\includecode{resenja/4_Datoteke/ukloni_duplikate.c}
+\includecode{resenja/4_Datoteke/sve/14.c}
 \end{Answer}
 
 
@@ -794,13 +880,14 @@ karaktera strogo veći od $1000$. Reči su odvojene prazninama i nisu
 duže od $200$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3id19, karakter po karakter, prepisivanje, fiksno ime, nema resenje}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{ulaz.txt}#
 #\datoteka{Sa standardnog ulaza unosi se neoznacen}#
 #\datoteka{ceo broj. Formirati novi broj koji se dobija}#
-#\datoteka{izbacivanjem svake druge cifre iz polaznog broja.}#
+#\datoteka{izbacivanjem svake druge cifre iz polaznog}#
+#\datoteka{broja.}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{standardnog izbacivanjem}
 \end{upotreba}
@@ -812,16 +899,19 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{p1: 1234567890}#
 #\datoteka{p2: ABCDEFGHIJ}#
 #\datoteka{p3: abcdefghij}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{abcdefghij}
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovDat{ulaz.txt}#
 #\datoteka{konstruisanje test-primera sa}#
 #\datoteka{i dugackim recima kao prestolonaslednik}#
 #\datoteka{brojevima1234567890}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{konstruisanje test-primera}#
 #\datoteka{prestolonaslednik}#
@@ -833,9 +923,11 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{ulaz.txt}#
 #\datoteka{ima jos dugackih reci: predskazanje,}#
 #\datoteka{potom}#
-#\datoteka{nelogicnosti, zanemarivati, odugovlaciti, a ima}#
+#\datoteka{nelogicnosti, zanemarivati, }#
+#\datoteka{odugovlaciti, a ima}#
 #\datoteka{i i malih reci koje su kratke}#
 #\datoteka{predosecaj}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{predskazanje, nelogicnosti,}#
 #\datoteka{zanemarivati, odugovlaciti,}#
@@ -845,7 +937,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_id19}
 \end{Exercise}
 \begin{Answer}[ref=p3_id19]
-\includecode{resenja/4_Datoteke/zbir_ascii.c}
+\includecode{resenja/4_Datoteke/sve/15.c}
 \end{Answer}
 
 
@@ -867,10 +959,10 @@ pozitivan ceo broj $k$
 zadaje kao drugi argument komandne linije.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{v303, brojevi, argumenti}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out ulaz.txt 2}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{6}#
 #\datoteka{15}#
@@ -879,34 +971,42 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{9790}#
 #\datoteka{35}#
 #\datoteka{1}#
+
 #\naslovIzlaz#
-#\izlaz{3}#
+#\izlaz{Broj 2-cifrenih brojeva: 3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out in.dat 5}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{4}#
 #\datoteka{15}#
 #\datoteka{193}#
 #\datoteka{-27}#
 #\datoteka{9790}#
+
 #\naslovIzlaz#
-#\izlaz{0}#
+#\izlaz{Broj 5-cifrenih brojeva: 0}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out in.txt 3}#
+
 #\naslovDat{in.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka in.txt ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out in.txt}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -914,7 +1014,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{v3_03}
 \end{Exercise}
 \begin{Answer}[ref=v3_03]
-\includecode{resenja/4_Datoteke/3/3.c}
+\includecode{resenja/4_Datoteke/sve/16.c}
 \end{Answer}
 
 
@@ -922,7 +1022,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  Napisati program koji na standardni izlaz ispisuje maksimum brojeva iz datoteke $brojevi.txt$.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p305, brojevi}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{brojevi.txt}#
@@ -955,7 +1054,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_05}
 \end{Exercise}
 \begin{Answer}[ref=p3_05]
-\includecode{resenja/4_Datoteke/praktikumi14/1_05.c}
+\includecode{resenja/4_Datoteke/sve/17.c}
 \end{Answer}
 
 
@@ -969,7 +1068,6 @@ svih svojih susednih elemenata i štampa ih u obliku
 Pretpostaviti da je sadržaj datoteke ispravan.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3iv4, matrice, ima resenje}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{matrice.txt}#
@@ -977,6 +1075,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{1  2  3  4}#
 #\datoteka{7  2 15 -3}#
 #\datoteka{-1  3  1  3}#
+
 #\naslovIzlaz#
 #\izlaz{(1, 0, 7)}#
 #\izlaz{(1, 2, 15)}#
@@ -988,6 +1087,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{2 2}#
 #\datoteka{1  1  }#
 #\datoteka{-2  2 }#
+
 #\naslovIzlaz#
 #\izlaz{(0, 0, 1)}#
 #\izlaz{(0, 1, 1)}#
@@ -998,6 +1098,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{matrice.txt}#
 #\datoteka{1 4}#
 #\datoteka{9 3 5 2}#
+
 #\naslovIzlaz#
 #\izlaz{(0, 2, 5)}#
 \end{upotreba}
@@ -1005,7 +1106,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_iv4}
 \end{Exercise}
 \begin{Answer}[ref=p3_iv4]
-\includecode{resenja/4_Datoteke/matrica.c}
+\includecode{resenja/4_Datoteke/sve/18.c}
 \end{Answer}
 
 
@@ -1018,8 +1119,6 @@ program koji nalazi i štampa sve četvorke oblika
 elementi međusobno različiti.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3x6, matrice, fiksno ime, nema resenje}
-\komentarJ{preciziran tekst, uskladiti resenje}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{ulaz.txt}#
@@ -1027,6 +1126,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{1  2  3  4}#
 #\datoteka{7  2 15 -3}#
 #\datoteka{-1  3  1  3}#
+
 #\naslovIzlaz#
 #\izlaz{(3, 15, 4, -3)}#
 #\izlaz{(7, -1, 2, 3)}#
@@ -1037,25 +1137,27 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovDat{matrice.txt}#
-#\datoteka{2 2}#
-#\datoteka{1  1  }#
-#\datoteka{-2  2 }#
-#\naslovIzlaz#
+#\datoteka{1 4}#
+#\datoteka{9 3 5 2}#
+
+#\naslovIzlazZaGresku#
+#\izlaz{Greska: neispravna dimenzija.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovDat{matrice.txt}#
-#\datoteka{1 4}#
-#\datoteka{9 3 5 2}#
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravna dimenzija.}#
+#\datoteka{2 2}#
+#\datoteka{1  1  }#
+#\datoteka{-2  2 }#
+
+#\naslovIzlaz#
 \end{upotreba}
 \end{minitest}
 \linkresenje{p3_x6}
 \end{Exercise}
 \begin{Answer}[ref=p3_x6]
-%\includecode{resenja/4_Datoteke/6/6.c}
+%\includecode{resenja/4_Datoteke/sve/19.c}
 \end{Answer}
 
 %% ----------- BROJ PO BROJ KRAJ ----------
@@ -1063,19 +1165,17 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 %% ----------- STRUKTURE POCETAK ----------
 
-%\subsection{Strukture}
-
-\komentarJ{Prva tri zadatka nisu resena, trebalo bi resiti bar prvi}
 
 \begin{Exercise}[label=p3_07] 
- U datoteci $tacke.txt$ se nalazi broj tačaka, a zatim u posebnim linijama za svaku tačku njene $x$ i $y$ koordinate. 
- Napisati program koji u datoteku $rastojanja.txt$ upisuje rastojanje svake od učitanih tačaka od koordinatnog početka, 
+ U datoteci $tacke.txt$ se nalazi broj tačaka, a zatim u posebnim linijama 
+ za svaku tačku njene $x$ i $y$ koordinate. 
+ Napisati program koji u datoteku $rastojanja.txt$ upisuje rastojanje svake 
+ od učitanih tačaka od koordinatnog početka, 
  a na standardni izlaz koordinate tačke koja je od njega najudaljenija. 
  Koristiti strukturu $Tacka$ sa poljima $x$ i $y$, kao i funkciju kojom se računa rastojanje. 
  Maksimalan broj tačaka u datoteci je $50$.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p307, strukture, fiksno ime}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{tacke.txt}#
@@ -1087,12 +1187,12 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 #\naslovDat{rastojanja.txt}#
 #\datoteka{11.18}#
-#\datoteka{5.29}#
+#\datoteka{5.83}#
 #\datoteka{11.31}#
 #\datoteka{4.00}#
 
 #\naslovIzlaz#
-#\izlaz{Najudaljenija je tačka: 8 -8}#
+#\izlaz{Najudaljenija tačka: (8, -8)}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1109,32 +1209,25 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_07}
 \end{Exercise}
 \begin{Answer}[ref=p3_07]
-%\includecode{resenja/4_Datoteke/praktikumi14/1_07.c}
+\includecode{resenja/4_Datoteke/sve/20.c}
 \end{Answer}
 
 
 \begin{Exercise}[label=p3_x5]         
-Data je struktura kojom se opisuje trodimenzioni vektor:
-\begin{verbatim}
-typedef struct{
-    int x;
-    int y;
-    int z;
-} vektor;
-\end{verbatim}
+Definisati strukturu kojom se opisuje trodimenzioni vektor sa celobrojnim koordinatama $x$, $y$ i $z$.
 U datoteci $vektori.txt$ nalazi se nepoznati broj vektora (najviše $200$). 
 Napisati program koji učitava vektore iz ove datoteke i na standardni izlaz ispisuje 
 koordinate vektora sa najvećom dužinom. Dužina vektora se izračunava po formuli:
 $$|v|= \sqrt{x^2+y^2+z^2}$$
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3x5, struktura, fiksno ime, nema resenje}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{vektori.txt}#
 #\datoteka{2}#
 #\datoteka{4 -1 7}#
 #\datoteka{3 1 2}#
+
 #\naslovIzlaz#
 #\izlaz{4 -1 7}#
 \end{upotreba}
@@ -1143,8 +1236,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{upotreba}{2}
 #\naslovDat{vektori.txt}#
 #\datoteka{670}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan broj vektora.}#
+#\izlaz{Greska: neispravan broj}#
+#\izlaz{vektora.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -1154,10 +1249,12 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{0 0 0}#
 #\datoteka{0 1 0}#
 #\datoteka{1 0 0}#
+
 #\naslovIzlaz#
 #\izlaz{0 1 0}#
 \end{upotreba}
 \end{minitest}
+
 \begin{minitest}
 \begin{upotreba}{4}
 #\naslovDat{vektori.txt}#
@@ -1166,62 +1263,56 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{4 5 2}#
 #\datoteka{1 0 0}#
 #\datoteka{2 -1 2}#
+
 #\naslovIzlaz#
 #\izlaz{4 5 2}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{5}
-#\naslovDat{vektori.txt}#
-#\datoteka{4}#
-#\datoteka{3 0 1}#
-#\datoteka{4 5 2}#
-#\datoteka{1}#
-#\datoteka{2 -1 2}#
+#\naslovDat{vektori.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan}#
-#\izlaz{sadrzaj datoteke.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{6}
 #\naslovDat{vektori.txt}#
-#\datoteka{}#
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan}#
-#\izlaz{sadrzaj datoteke.}#
+#\datoteka{1}#
+#\datoteka{1 1 1}#
+
+#\naslovIzlaz#
+#\izlaz{1 1 1}#
 \end{upotreba}
 \end{minitest}
 \linkresenje{p3_x5}
 \end{Exercise}
 \begin{Answer}[ref=p3_x5]
-%\includecode{resenja/4_Datoteke/6/6.c}
+ 
+Rešenje je analogno rešenju zadatka \ref{p3_07}.
 \end{Answer}
 
 
 \begin{Exercise}[label=p3_x1]         
-Data je struktura koja opisuje pravougaonik dužinama svojih stranica i imenom:
-\begin{verbatim}
-typedef struct{
-    unsigned int a, b;
-    char ime[5];
-}Pravougaonik;
-\end{verbatim}
+Definisati strukturu \kckod{Pravougaonik} koja sadrži dužine stranica i ime pravougaonika.
 Napisati program koji iz datoteke čije ime se zadaje kao argument komandne linije 
 učitava podatke o pravougaonicima (nepoznato koliko), 
 a zatim ispisuje imena onih pravougaonika koji su kvadrati i vrednost 
 najveće površine među pravougaonicima koji nisu kvadrati.
-Maksimalan broj pravougaonika je $200$.
+Maksimalan broj pravougaonika je $200$, maksimalna dužina imena pravougaonika je $4$.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3x1, strukture, argumenti, nema resenja}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out pravougaonici.dat}#
+
 #\naslovDat{pravougaonici.dat}#
 #\datoteka{2 4 p1}#
 #\datoteka{3 3 p2}#
 #\datoteka{1 6 p3}#
+
 #\naslovIzlaz#
 #\izlaz{p2 8}#
 \end{upotreba}
@@ -1229,20 +1320,25 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out dva.dat}#
+
 #\naslovDat{dva.dat}#
 #\datoteka{5 2 pm}#
 #\datoteka{4 7 pv}#
+
 #\naslovIzlaz#
 #\izlaz{28}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out tri.dat}#
+
 #\naslovDat{tri.dat}#
 #\datoteka{5 5 m}#
 #\datoteka{3 3 s}#
 #\datoteka{8 8 xl}#
+
 #\naslovIzlaz#
 #\izlaz{m s xl}#
 \end{upotreba}
@@ -1250,7 +1346,9 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out empty.dat}#
+
 #\naslovDat{empty.dat}#
+
 #\naslovIzlaz#
 #\izlaz{}#
 \end{upotreba}
@@ -1258,7 +1356,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_x1}
 \end{Exercise}
 \begin{Answer}[ref=p3_x1]
-\includecode{resenja/4_Datoteke/pravougaonici_kvadrati.c}
+\includecode{resenja/4_Datoteke/sve/22.c}
 \end{Answer}
 
 
@@ -1267,10 +1365,9 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  a zatim u posebnim linijama za svakog studenta korisničko ime na Alasu i poslednjih pet ocena koje je dobio. 
  Napisati program koji pronalazi studenta koji je ostvario najbolji 
  uspeh i ispisuje njegove podatke. Ukoliko više studenata ima maksimalni prosek, 
- ispisati prvog. Pretpostaviti da broj studenata neće biti veći od $100$.
+ ispisati sve. Pretpostaviti da broj studenata neće biti veći od $100$.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p306, strukture, fiksno ime}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{studenti.txt}#
@@ -1295,12 +1392,13 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 #\naslovIzlaz#
 #\izlaz{korisnicko ime: mr16156, prosek ocena: 9.6}#
+#\izlaz{korisnicko ime: mi17234, prosek ocena: 9.6}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p3_06}
 \end{Exercise}
 \begin{Answer}[ref=p3_06]
-\includecode{resenja/4_Datoteke/praktikumi14/1_06.c}
+\includecode{resenja/4_Datoteke/sve/23.c}
 \end{Answer}
 
 
@@ -1308,7 +1406,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 Kreirati strukturu $Student$ koja sadrži:
 \begin{itemize}
 \item $ime\_i\_prezime$ (u polju se čuva ime i prezime studenta,
-  napr. "Marko Markovic", maksimalna dužina polja je 100
+  napr. "Marko Markovic", maksimalna dužina polja je $100$
   karaktera),
 \item $ocene$ (sadrži najviše $10$ ocena studenta)
 \item $br\_ocena$ (ukupan broj ocena za studenata)
@@ -1318,19 +1416,22 @@ U datoteci čije se ime zadaje kao argument komandne linije se nalaze podaci o s
 Za svakog studenta dato je ime, prezime i niz ocena koji se završava nulom. 
 Svi podaci su razdvojeni razmacima. Napisati program koji učitava podatke o studentima i
 na standardni izlaz ispisuje podatke za studenta sa najvećim prosekom (prosek ispisati na $2$ decimale).
+Ukoliko ima više takvih studenata, ispisati prvog.
 Maksimalan broj studenta je $100$. \uputstvo{Ime i prezime studenta se mogu pročitati pomoću
-specifikatora $\%s$ a potom se za kreiranje niske $ime\_i\_prezime$ u traženom formatu može iskoristiti funkcija $strcat$.}
+specifikatora $\%s$ a potom se za kreiranje niske $ime\_i\_prezime$ u 
+traženom formatu može iskoristiti funkcija $strcat$.}
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p3x3, struktura, argumenti, nema resenja}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out studenti.txt}#
+
 #\naslovDat{studenti.txt}#
 #\datoteka{Marko Markovic 5 6 7 8 9 0}#
 #\datoteka{Jelena Jankovic 10 10 10 0}#
 #\datoteka{Filip Viskovic 10 9 8 7 6 0}#
 #\datoteka{Jana Peric 10 10 9 9 8 8 7 0}#
+
 #\naslovIzlaz#
 #\izlaz{Jelena Jankovic 10 10 10 0 10.00}#
 \end{upotreba}
@@ -1338,6 +1439,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1345,7 +1447,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_x3}
 \end{Exercise}
 \begin{Answer}[ref=p3_x3]
-%\includecode{resenja/4_Datoteke/6/6.c}
+\includecode{resenja/4_Datoteke/sve/24.c}
 \end{Answer}
 
 
@@ -1356,24 +1458,27 @@ u prvom redu se nalazi broj razlomaka , a u svakom sledećem redu brojilac i ime
 Definisati strukturu koja opisuje razlomak i napisati program koji učitava niz
 razlomaka iz datoteke, a potom:
 \begin{enumerate}
-\item ukoliko je navedena opcija $x$, upisati u izlaznu datoteku recipročni razlomak za svaki razlomak iz niza (npr. za $2/3$
+\item ukoliko je navedena opcija $x$, upisati u izlaznu datoteku recipročni 
+razlomak za svaki razlomak iz niza (npr. za $2/3$
 treba upisati $3/2$) 
-\item ukoliko je navedena opcija $y$, upisati u izlaznu datoteku realnu vrednost recipročnog razlomka svakog razlomka iz niza
+\item ukoliko je navedena opcija $y$, upisati u izlaznu datoteku 
+realnu vrednost recipročnog razlomka svakog razlomka iz niza
 (npr. za $2/3$ treba upisati $1.5$)
 \end{enumerate}
-Pretpostaviti da se u ulaznoj datoteci nalazi najviše 100 razlomaka.
+Pretpostaviti da se u ulaznoj datoteci nalazi najviše $100$ razlomaka.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{v305, strukture, argumenti, opcije}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out ulaz.txt izlaz.txt -x}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{4}#
 #\datoteka{1 5}#
 #\datoteka{19 3}#
 #\datoteka{-2 7}#
 #\datoteka{97 90}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{5/1}#
 #\datoteka{3/19}#
@@ -1384,12 +1489,14 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out ulaz.txt izlaz.txt -y}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{4}#
 #\datoteka{1 5}#
 #\datoteka{19 3}#
 #\datoteka{-2 7}#
 #\datoteka{97 90}#
+
 #\naslovDat{izlaz.txt}#
 #\datoteka{5.000000}#
 #\datoteka{0.157894}#
@@ -1397,17 +1504,22 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{0.927835}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out ulaz.txt izlaz.txt -y}#
+
 #\naslovDat{ulaz.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka ulaz.txt ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out ulaz.txt izlaz.txt}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1415,7 +1527,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{v3_05}
 \end{Exercise}
 \begin{Answer}[ref=v3_05]
-\includecode{resenja/4_Datoteke/5/5.c}
+\includecode{resenja/4_Datoteke/sve/25.c}
 \end{Answer}
 
 
@@ -1434,12 +1546,14 @@ da svaka od njih sadrži najviše 30 karaktera kao i da se u datoteci
 nalaze podaci za najviše 100 automobila.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{v306, strukture, argumenti}
 \begin{minitest}
 \begin{upotreba}{1}
 #\poziv{./a.out 4000}#
+
 #\naslovInt#
+#\izlaz{Unesite naziv datoteke:}#
 #\ulaz{dat1.txt}#
+
 #\naslovDat{dat1.txt}#
 #\datoteka{7}#
 #\datoteka{renault twingo 2900}#
@@ -1449,6 +1563,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{dacia sandero 7800}#
 #\datoteka{fiat bravo 4900}#
 #\datoteka{fiat linea 4290}#
+
 #\naslovIzlaz#
 #\izlaz{Informacije o prosecnoj}#
 #\izlaz{ceni po markama:}#
@@ -1463,17 +1578,22 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\poziv{./a.out 5000}#
+
 #\naslovInt#
+#\izlaz{Unesite naziv datoteke:}#
 #\ulaz{dat1.txt}#
+
 #\naslovDat{dat1.txt ne postoji}#
+
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka dat1.txt}#
-#\izlaz{ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\poziv{./a.out}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1481,7 +1601,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{v3_06}
 \end{Exercise}
 \begin{Answer}[ref=v3_06]
-\includecode{resenja/4_Datoteke/6/6.c}
+\includecode{resenja/4_Datoteke/sve/26.c}
 \end{Answer}
 
 
@@ -1491,55 +1611,16 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 % \subsection{Linija po linija}
 
-\begin{Exercise}[label=v3_02] 
-Napisati program koji u datoteci čije se ime navodi kao argument komandne 
-linije određuje liniju maksimalne dužine i ispisuje je na standarni izlaz. 
-Ukoliko ima više takvih linija, ispisati onu koja je leksikografski prva. 
-Pretpostaviti da su linije maksimalne dužine 
-$80$ karaktera.
-U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
-
-\komentarJ{v302, linije, duzina, argumenti}
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out test.txt}#
-#\naslovDat{test.txt}#
-#\datoteka{Danas je veoma hladno decembarsko}#
-#\datoteka{popodne. Ne pada sneg, kazu mozda}#
-#\datoteka{ce sutra.}#
-
-#\naslovIzlaz#
-#\izlaz{Danas je veoma hladno decembarsko}#
-\end{upotreba}
-\end{miditest}
-\begin{minitest}
-\begin{upotreba}{2}
-#\poziv{./a.out in.txt}#
-#\naslovDat{in.txt ne postoji}#
-
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka }#
-#\izlaz{in.txt ne postoji.}#
-\end{upotreba}
-\end{minitest}
-
-\linkresenje{v3_02}
-\end{Exercise}
-\begin{Answer}[ref=v3_02]
-\includecode{resenja/4_Datoteke/2/2.c}
-\end{Answer}
-
-
 \begin{Exercise}[label=p3_03] 
  Kao argumenti komandne linije se zadaju ime datoteke i ceo broj $k$. 
  Napisati program koji na  standardni izlaz ispisuje sve linije zadate datoteke čija je dužina veća od $k$. 
  Maksimalna dužina linije je $80$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p303, duzina, argumenti, linije}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out test.txt 7}#
+
 #\naslovDat{test.txt}#
 #\datoteka{Teme koje su obradjivane:}#
 #\datoteka{Petlje}#
@@ -1564,7 +1645,46 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_03}
 \end{Exercise}
 \begin{Answer}[ref=p3_03]
-\includecode{resenja/4_Datoteke/praktikumi14/1_03.c}
+\includecode{resenja/4_Datoteke/sve/28.c}
+\end{Answer}
+
+
+\begin{Exercise}[label=v3_02] 
+Napisati program koji u datoteci čije se ime navodi kao argument komandne 
+linije određuje liniju maksimalne dužine i ispisuje je na standarni izlaz. 
+Ukoliko ima više takvih linija, ispisati onu koja je leksikografski prva. 
+Pretpostaviti da su linije maksimalne dužine $80$ karaktera.
+U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\poziv{./a.out test.txt}#
+
+#\naslovDat{test.txt}#
+#\datoteka{Danas je veoma hladno decembarsko}#
+#\datoteka{popodne. Ne pada sneg, kazu mozda}#
+#\datoteka{ce sutra.}#
+
+#\naslovIzlaz#
+#\izlaz{Danas je veoma hladno decembarsko}#
+\end{upotreba}
+\end{miditest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\poziv{./a.out in.txt}#
+
+#\naslovDat{in.txt ne postoji}#
+
+#\naslovIzlazZaGresku#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
+\end{upotreba}
+\end{minitest}
+
+\linkresenje{v3_02}
+\end{Exercise}
+\begin{Answer}[ref=v3_02]
+\includecode{resenja/4_Datoteke/sve/27.c}
 \end{Answer}
 
 
@@ -1580,17 +1700,19 @@ Ispis treba da bude u formatu \kckod{broj\_pojavljivanja:linija}.
 Maksimalna dužina reči je $100$ karaktera, a maksimalna dužina linije je $500$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
  
-\komentarJ{v304, linije, podniska, argumenti}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out input.txt output.txt}#
+
 #\naslovInt#
-#\izlaz{Unesite prirodan broj:} \ulaz{2}#
+#\izlaz{Unesite broj n:} \ulaz{2}#
+
 #\naslovDat{input.txt}#
 #\datoteka{sto}#
 #\datoteka{stolica lampa}#
 #\datoteka{postotak Stopiranje stopa}# 
 #\datoteka{presto Ostoja stotina prostorija}#
+
 #\naslovDat{output.txt}#
 #\datoteka{2: postotak Stopiranje stopa}# 
 #\datoteka{4: presto Ostoja stotina prostorija}#
@@ -1599,32 +1721,36 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out input.txt output.txt}#
+
 #\naslovInt#
-#\izlaz{Unesite prirodan broj:} \ulaz{3}#
+#\izlaz{Unesite broj n:} \ulaz{3}#
+
 #\naslovDat{input.txt}#
 #\datoteka{red}#
 #\datoteka{redar za ovu nedelju}#
 #\datoteka{redosled ured}# 
 #\datoteka{odrediti raspored}#
+
 #\naslovDat{output.txt}#
 
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out in.txt out.txt}#
+
 #\naslovDat{in.txt ne postoji}#
 
-#\naslovInt#
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: datoteka in.txt ne postoji.}#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out in.txt}#
 
-#\naslovInt#
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1632,7 +1758,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{v3_04}
 \end{Exercise}
 \begin{Answer}[ref=v3_04]
-\includecode{resenja/4_Datoteke/4/4.c}
+\includecode{resenja/4_Datoteke/sve/29.c}
 \end{Answer}
 
 
@@ -1642,7 +1768,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  kao i da dužina niske $s$ neće biti veća od $20$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p304, linije, podniska}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{ulaz.txt}#
@@ -1673,7 +1798,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_04}
 \end{Exercise}
 \begin{Answer}[ref=p3_04]
-\includecode{resenja/4_Datoteke/praktikumi14/1_04.c}
+\includecode{resenja/4_Datoteke/sve/30.c}
 \end{Answer}
 
 
@@ -1685,10 +1810,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  a ako je opcija izostavljena sve linije. Pretpostaviti da linije neće biti duže od 80 karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{p309, linije, prepisivanje, opcije, fiksno ime}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out -m}#
+
 #\naslovInt#
 #\izlaz{Unesite recenice: }#
 #\ulaz{programiranje u C-u je zanimljivo}#
@@ -1704,6 +1829,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out -V}#
+
 #\naslovInt#
 #\izlaz{Unesite recenice: }#
 #\ulaz{programiranje u C-u je zanimljivo}#
@@ -1716,10 +1842,11 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Kada porastem bicu programer!}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out -k}#
-#\naslovInt#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1727,7 +1854,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out}#
-#\naslovInt#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1735,7 +1862,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_09}
 \end{Exercise}
 \begin{Answer}[ref=p3_09]
-\includecode{resenja/4_Datoteke/praktikumi14/1_09.c}
+\includecode{resenja/4_Datoteke/sve/31.c}
 \end{Answer}
 
 
@@ -1746,20 +1873,22 @@ komandne linije. Pretpostaviti da je maksimalna dužina
 linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\komentarJ{iv10, linije, poredjenje, argumenti, ima resenje}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out ulaz.txt izlaz.txt}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{danas vezbamo}#
 #\datoteka{programiranje}#
 #\datoteka{ovo je primer kad su}#
 #\datoteka{datoteke iste}#
+
 #\naslovDat{izlaz.txt: }#
 #\datoteka{danas vezbamo}#
 #\datoteka{programiranje}#
 #\datoteka{ovo je primer kad su}#
 #\datoteka{datoteke iste}#
+
 #\naslovIzlaz#
 #\izlaz{}#
 \end{upotreba}
@@ -1767,28 +1896,34 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out primer1.dat primer2.dat}#
+
 #\naslovDat{primer1.dat}#
 #\datoteka{danas vezbamo}#
 #\datoteka{analizu}#
 #\datoteka{ovo je primer kad}#
 #\datoteka{su datoteke razlicite}#
-#\naslovDat{priemr2.dat}#
+
+#\naslovDat{primer2.dat}#
 #\datoteka{danas vezbamo}#
 #\datoteka{programiranje}#
 #\datoteka{ovo je primer kad su}#
 #\datoteka{datoteke razlicite}#
+
 #\naslovIzlaz#
 #\izlaz{2 3 4}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out prva.dat druga.dat}#
+
 #\naslovDat{prva.dat}#
 #\datoteka{ovo je primer}#
 #\datoteka{kada su}#
 #\datoteka{datoteke}#
 #\datoteka{razlicite duzine}#
+
 #\naslovDat{druga.dat}#
 #\datoteka{kada su }#
 #\datoteka{programiranje}#
@@ -1797,6 +1932,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 #\datoteka{duzine}#
 #\datoteka{i kada treba ispisati broj}#
 #\datoteka{tih redova}#
+
 #\naslovIzlaz#
 #\izlaz{1 4 5 6 7}#
 \end{upotreba}
@@ -1804,6 +1940,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out prva.dat}#
+
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
@@ -1811,7 +1948,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 \linkresenje{p3_iv10}
 \end{Exercise}
 \begin{Answer}[ref=p3_iv10]
-\includecode{resenja/4_Datoteke/diff.c}
+\includecode{resenja/4_Datoteke/sve/32.c}
 \end{Answer}
 
 
