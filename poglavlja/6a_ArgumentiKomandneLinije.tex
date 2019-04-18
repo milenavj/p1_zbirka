@@ -1,12 +1,16 @@
+\chapter{Ulaz i izlaz programa}
+
 \section{Argumenti komandne linije}
  
 \begin{Exercise}[label=v2.2_04] 
     Napisati program koji ispisuje broj navedenih argumenata komandne linije,
-    a zatim i same argumenate i njihove redne brojeve. \\
+    a zatim i same argumenate i njihove redne brojeve.
+    
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out abcde 123 -5 3.7}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Broj argumenata je 5:}#
 #\izlaz{0: ./a.out}#
 #\izlaz{1: abcde}#
@@ -18,7 +22,8 @@
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Broj argumenata je 1:}#
 #\izlaz{0: ./a.out}#
 \end{upotreba}
@@ -28,38 +33,45 @@
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=v2.2_04]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_04.c}
+\includecode{resenja/4a_ArgumentiKomandneLinije/1.c}
 \end{Answer}
  \fi
 
 
 \begin{Exercise}[label=p2.6_01] 
-Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. \uputstvo{Koristiti funkciju \kckod{atoi}}.\\
+Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. 
+\uputstvo{Koristiti funkciju \kckod{atoi}}.
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out 5 mkp 9 -2 11 a 4 2}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 29}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out ab u f hj}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 0}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out 33 1 p 44}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 78}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 0}#
 \end{upotreba}
 \end{miditest}
@@ -67,77 +79,130 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. \upu
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=p2.6_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/4.c}
+\includecode{resenja/4a_ArgumentiKomandneLinije/2.c}
 \end{Answer}
  \fi
 
+ 
+\begin{Exercise}[label=p2.6_04] 
+ Napisati program koji na osnovu broja $n$, koji se zadaje kao argument komandne 
+ linije, ispisuje cele brojeve iz intervala $[-n,\ n]$.
+ U slučaju greške ispisati odgovarajuću poruku o grešci.
+ 
+\begin{minitest}
+\begin{upotreba}{1}
+#\poziv{./a.out 2}#
+
+#\naslovIzlaz#
+#\izlaz{-2 -1 0 1 2}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\poziv{./a.out}#
+
+#\naslovIzlaz#
+#\izlaz{Greska: neispravan poziv.}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\poziv{./a.out 0}#
+
+#\naslovIzlaz#
+#\izlaz{0}#
+\end{upotreba}
+\end{minitest}
+
+\linkresenje{p2.6_04}
+\end{Exercise}
+\ifresenja
+\begin{Answer}[ref=p2.6_04]
+\includecode{resenja/4a_ArgumentiKomandneLinije/3.c}
+\end{Answer}
+ \fi 
+ 
 
 \begin{Exercise}[label=p2.6_02] 
-Napisati program koji ispisuje argumente komandne linije koji počinju slovom \textit{z}.\\
+Napisati program koji ispisuje argumente komandne linije koji počinju karakterom \textit{@}.
+
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out zima jabuka zvezda Zrak}#
-#\naslovInt#
-#\izlaz{zima zvezda}#
+#\poziv{./a.out @marija @milena \#zvezda}#
+
+#\naslovIzlaz#
+#\izlaz{Argumenti koji pocinju sa @:}#
+#\izlaz{@marija @milena}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out bundeva pomorandza}#
-#\naslovInt#
-#\izlaz{}#
+
+#\naslovIzlaz#
+#\izlaz{Nema argumenata koji pocinju sa @.}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out sanke zapad zujanje}#
-#\naslovInt#
-#\izlaz{zapad zujanje}#
+#\poziv{./a.out sanke @zapad zujanje}#
+
+#\naslovIzlaz#
+#\izlaz{Argumenti koji pocinju sa @:}#
+#\izlaz{@zapad}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{}#
+
+#\naslovIzlaz#
+#\izlaz{Nema argumenata koji pocinju sa @.}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p2.6_02}
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=p2.6_02]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/5.c}
+\includecode{resenja/4a_ArgumentiKomandneLinije/4.c}
 \end{Answer}
  \fi
 
 
 \begin{Exercise}[label=p2.6_03] 
-Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slovo \textit{z}.\\
+Napisati program koji ispisuje broj argumenata komandne linije koji sadrže karakter \textit{@}.
+
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out zvezda grozd jesen kisa}#
-#\naslovInt#
-#\izlaz{2}#
+#\poziv{./a.out pera@gmail.com www.math.rs}#
+
+#\naslovIzlaz#
+#\izlaz{1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
-#\poziv{./a.out AZBUKA deda mraz }#
-#\naslovInt#
+#\poziv{./a.out math.rs pera@math.rs }#
+
+#\naslovIzlaz#
 #\izlaz{2}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out japan caj}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{0}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{0}#
 \end{upotreba}
 \end{miditest}
@@ -147,78 +212,45 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slov
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=p2.6_03]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/6.c}
-\end{Answer}
- \fi
-
-
-\begin{Exercise}[label=p2.6_04] 
- Napisati program koji na osnovu broja $n$ koji se zadaje kao argument komandne linije ispisuje cele brojeve iz intervala $[-n,\ n]$. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out 2}#
-#\naslovInt#
-#\izlaz{-2 -1 0 1 2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out 4}#
-#\naslovInt#
-#\izlaz{-4 -3 -2 -1 0 1 2 3 4}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out 0}#
-#\naslovInt#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{maxitest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{Greska: nedostaje argument komandne linije!}#
-\end{upotreba}
-\end{maxitest}
-
-\linkresenje{p2.6_04}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=p2.6_04]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/7.c}
+\includecode{resenja/4a_ArgumentiKomandneLinije/5.c}
 \end{Answer}
  \fi
 
 
 \begin{Exercise}[label=p2.6_05] 
- Napisati program koji proverava da li se među zadatim argumentima komandne linije nalaze barem dva ista.  \\
+ Napisati program koji proverava da li se među zadatim argumentima 
+ komandne linije nalaze barem dva ista.
+ 
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out pec zima deda mraz pec}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out xyz abc abc abc efgh}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out 11 15 abc 888}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\poziv{./a.out}#
-#\naslovInt#
+
+#\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
 \end{upotreba}
 \end{miditest}
@@ -227,84 +259,91 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže slov
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=p2.6_05]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/praktikumi12/8.c}
+\includecode{resenja/4a_ArgumentiKomandneLinije/6.c}
 \end{Answer}
  \fi
 
 
-\begin{Exercise}[label=v2.2_05] 
-Napisati funkciju koja za dva data stringa određuje koliko se uzastopnih karaktera prvog stringa nalazi u drugom stringu počev od početka. Napisati 
-   program koji testira napisanu funkciju  za dva stringa 
-   koji se unose kao argumenti komandne linije.   \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out aladin bal}#
-#\naslovInt#
-#\izlaz{3}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out aladin lad}#
-#\naslovInt#
-#\izlaz{4}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out Aladin ala}#
-#\naslovInt#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out aladin}#
-#\naslovInt#
-#\izlaz{Nekorektan poziv}#
-#\izlaz{Program treba pozvati sa ./a.out arg1 arg2}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v2.2_05}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_05]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_05.c}
-\end{Answer}
- \fi
+% \begin{Exercise}[label=v2.2_05] 
+% Napisati funkciju koja za dva data stringa određuje koliko se uzastopnih 
+% karaktera prvog stringa nalazi u drugom stringu počev od početka. Napisati 
+%    program koji testira napisanu funkciju  za dva stringa 
+%    koji se unose kao argumenti komandne linije.   \\
+% \begin{miditest}
+% \begin{upotreba}{1}
+% #\poziv{./a.out aladin bal}#
+% #\naslovInt#
+% #\izlaz{3}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{2}
+% #\poziv{./a.out aladin lad}#
+% #\naslovInt#
+% #\izlaz{4}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{3}
+% #\poziv{./a.out Aladin ala}#
+% #\naslovInt#
+% #\izlaz{0}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{4}
+% #\poziv{./a.out aladin}#
+% #\naslovInt#
+% #\izlaz{Nekorektan poziv}#
+% #\izlaz{Program treba pozvati sa ./a.out arg1 arg2}#
+% \end{upotreba}
+% \end{miditest}
+% 
+% \linkresenje{v2.2_05}
+% \end{Exercise}
+% \ifresenja
+% \begin{Answer}[ref=v2.2_05]
+% \includecode{resenja/4a_ArgumentiKomandneLinije/1_05.c}
+% \end{Answer}
+%  \fi
 
 
 
 \begin{Exercise}[label=v2.2_01] 
- Napisati program koji
-ispisuje sve opcije koje su navedene u komandnoj liniji. \\
+ Napisati program koji ispisuje sve opcije koje su navedene u komandnoj liniji.
+ \uputstvo{Opcije su karakteri koji se nalaze nakon karaktera \kckod{-}.}
+ 
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out -abc input.txt -d -Fg output}#
-#\naslovInt#
-#\izlaz{a b c d F g}#
+#\poziv{./a.out -abc in.txt -d -Fg out}#
+
+#\naslovIzlaz#
+#\izlaz{Opcije su: a b c d F g}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out}#
-#\naslovInt#
-#\izlaz{}#
+
+#\naslovIzlaz#
+#\izlaz{Medju argumentima nema opcija.}#
 \end{upotreba}
 \end{miditest}
+
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out ulaz.txt  }#
-#\naslovInt#
-#\izlaz{}#
+
+#\naslovIzlaz#
+#\izlaz{Medju argumentima nema opcija.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
-#\poziv{./a.out file.txt -x -yZ -g output}#
-#\naslovInt#
-#\izlaz{x yZ g}#
+#\poziv{./a.out in.txt -x -yZ -g out}#
+
+#\naslovIzlaz#
+#\izlaz{Opcije su: x y Z g}#
 \end{upotreba}
 \end{miditest}
 
@@ -312,149 +351,149 @@ ispisuje sve opcije koje su navedene u komandnoj liniji. \\
 \end{Exercise}
 \ifresenja
 \begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
+\includecode{resenja/4a_ArgumentiKomandneLinije/7.c}
 \end{Answer}
  \fi
 
 
-\begin{Exercise}[label=v2.2_06] 
-Napisati funkciju \kckod{void sifruj(char s[], char c, int k)} koja šifruje
-   string s na sledeći način: svako malo i veliko slovo stringa s konvertuje u
-   slovo koje je u abecedi od njega udaljeno k pozicija, i to 
-   k pozicija ulevo, ako je karakter c jednak karakteru 'L' ili udesno
-   ako je karakter c jednak karakteru 'D'. Šifrovanje treba da bude kružno. Ako string
-   s sadrži karakter koji nije alfanumerički, ostaviti ga nešifriranog. Napisati program koji testira napisanu funkciju za string i prirodan
-   broj koji se unose kao argumenti komandne linije dok se pravac šifrovanja unosi
-   kao opcija -p koja može imati vrednosti 'L' ili 'D'. Ukoliko opcija -p nije 
-   navedena, podrazumevani pravac je udesno. \napomena{Možemo podrazumevati da string sadrži najviše 30 karaktera}.\\
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out abcd 2}#
-#\naslovInt#
-#\izlaz{cdef}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out abcd 2 -p D}#
-#\naslovInt#
-#\izlaz{cdef}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out abcd 2 -p L}#
-#\naslovInt#
-#\izlaz{yzab}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out abcd -3 -p L}#
-#\naslovInt#
-#\izlaz{Nekorektan unos}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{5}
-#\poziv{./a.out abcd 3 -p X}#
-#\naslovInt#
-#\izlaz{Nekorektan unos}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{6}
-#\poziv{./a.out ab12cd 2 -p D}#
-#\naslovInt#
-#\izlaz{Nekorektan unos}#
-\end{upotreba}
-\end{miditest}
-
-\linkresenje{v2.2_06}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_06]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_06.c}
-\end{Answer}
- \fi
-
-\iffalse
-\begin{Exercise}[label=v2.2_01] 
-Tekst
-%\komentarJ{Ovaj zadatak nema mnogo smisla, predlazem da ga izbacimo.}
-\linkresenje{v2.2_01}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-\end{Answer}
- \fi
-\fi
-
-\iffalse
-\begin{Exercise}[label=v2.2_01] 
-%\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
-Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije
-napraviti niz \verb|A[0] = a, A[1] = a+1,|
-\verb|A[2] = a+2, ..., A[b-a] = b| i ispisati ga. Pretpostaviti da je
-maksimalna du\v zina niza 200 elemenata. Proveriti da li $a < b$ i
-$b-a < 200$ i ako ovi uslovi nisu ispunjeni ispisati poruku da je do\v
-slo do gre\v ske. U slu\v caju da je dato manje ili vi\v se argumenata
-komandne linije ispisati poruku o gre\v sci. \\ 
-\begin{miditest}
-\begin{upotreba}{1}
-#\poziv{./a.out 34}#
-#\naslovInt#
-#\izlaz{greska}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\poziv{./a.out 12 20}#
-#\naslovInt#
-#\izlaz{12 13 14 15 16 17 18 19 20}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\poziv{./a.out 30 8}#
-#\naslovInt#
-#\izlaz{greska}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out -4 -1}#
-#\naslovInt#
-#\izlaz{-4 -3 -2 -1}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{v2.2_01}
-\end{Exercise}
-\ifresenja
-\begin{Answer}[ref=v2.2_01]
-\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-\end{Answer}
- \fi
-
-\fi
-
-\begin{Exercise}[label=v2.2_01] 
-%\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
-Parametri komandne linije su $n, a$ i $b$ ($a < b$). Treba popuniti
-prvih {\tt n} elemenata niza {\tt A} celim slu\v cajnim brojevima koji
-su između {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
-izlaz. Maksimalan broj elemenata niza {\tt A} je 200. Ukoliko nisu
-zadati svi argumenti komandne linije ili ne zadovoljavaju potrebna
-svojstva ispisati poruku o gre\v sci. 
-
-%\linkresenje{v2.2_01}
-\end{Exercise}
-%\ifresenja
-%\begin{Answer}[ref=v2.2_01]
-%\includecode{resenja/3_PredstavljanjePodataka/2.2_Pokazivaci/1_07.c}
-%\end{Answer}
+% \begin{Exercise}[label=v2.2_06] 
+% Napisati funkciju \kckod{void sifruj(char s[], char c, int k)} koja šifruje
+%    string s na sledeći način: svako malo i veliko slovo stringa s konvertuje u
+%    slovo koje je u abecedi od njega udaljeno k pozicija, i to 
+%    k pozicija ulevo, ako je karakter c jednak karakteru 'L' ili udesno
+%    ako je karakter c jednak karakteru 'D'. Šifrovanje treba da bude kružno. Ako string
+%    s sadrži karakter koji nije alfanumerički, ostaviti ga nešifriranog. Napisati program koji testira napisanu funkciju za string i prirodan
+%    broj koji se unose kao argumenti komandne linije dok se pravac šifrovanja unosi
+%    kao opcija -p koja može imati vrednosti 'L' ili 'D'. Ukoliko opcija -p nije 
+%    navedena, podrazumevani pravac je udesno. \napomena{Možemo podrazumevati da string sadrži najviše 30 karaktera}.\\
+% \begin{miditest}
+% \begin{upotreba}{1}
+% #\poziv{./a.out abcd 2}#
+% #\naslovInt#
+% #\izlaz{cdef}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{2}
+% #\poziv{./a.out abcd 2 -p D}#
+% #\naslovInt#
+% #\izlaz{cdef}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{3}
+% #\poziv{./a.out abcd 2 -p L}#
+% #\naslovInt#
+% #\izlaz{yzab}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{4}
+% #\poziv{./a.out abcd -3 -p L}#
+% #\naslovInt#
+% #\izlaz{Nekorektan unos}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{5}
+% #\poziv{./a.out abcd 3 -p X}#
+% #\naslovInt#
+% #\izlaz{Nekorektan unos}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{6}
+% #\poziv{./a.out ab12cd 2 -p D}#
+% #\naslovInt#
+% #\izlaz{Nekorektan unos}#
+% \end{upotreba}
+% \end{miditest}
+% 
+% \linkresenje{v2.2_06}
+% \end{Exercise}
+% \ifresenja
+% \begin{Answer}[ref=v2.2_06]
+% \includecode{resenja/4a_ArgumentiKomandneLinije/1_06.c}
+% \end{Answer}
+%  \fi
+% 
+% \iffalse
+% \begin{Exercise}[label=v2.2_01] 
+% Tekst
+% %\komentarJ{Ovaj zadatak nema mnogo smisla, predlazem da ga izbacimo.}
+% \linkresenje{v2.2_01}
+% \end{Exercise}
+% \ifresenja
+% \begin{Answer}[ref=v2.2_01]
+% \includecode{resenja/4a_ArgumentiKomandneLinije/1_07.c}
+% \end{Answer}
+%  \fi
 % \fi
+% 
+% \iffalse
+% \begin{Exercise}[label=v2.2_01] 
+% %\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
+% Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije
+% napraviti niz \verb|A[0] = a, A[1] = a+1,|
+% \verb|A[2] = a+2, ..., A[b-a] = b| i ispisati ga. Pretpostaviti da je
+% maksimalna du\v zina niza 200 elemenata. Proveriti da li $a < b$ i
+% $b-a < 200$ i ako ovi uslovi nisu ispunjeni ispisati poruku da je do\v
+% slo do gre\v ske. U slu\v caju da je dato manje ili vi\v se argumenata
+% komandne linije ispisati poruku o gre\v sci. \\ 
+% \begin{miditest}
+% \begin{upotreba}{1}
+% #\poziv{./a.out 34}#
+% #\naslovInt#
+% #\izlaz{greska}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{2}
+% #\poziv{./a.out 12 20}#
+% #\naslovInt#
+% #\izlaz{12 13 14 15 16 17 18 19 20}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{3}
+% #\poziv{./a.out 30 8}#
+% #\naslovInt#
+% #\izlaz{greska}#
+% \end{upotreba}
+% \end{miditest}
+% \begin{miditest}
+% \begin{upotreba}{4}
+% #\poziv{./a.out -4 -1}#
+% #\naslovInt#
+% #\izlaz{-4 -3 -2 -1}#
+% \end{upotreba}
+% \end{miditest}
+% \linkresenje{v2.2_01}
+% \end{Exercise}
+% \ifresenja
+% \begin{Answer}[ref=v2.2_01]
+% \includecode{resenja/4a_ArgumentiKomandneLinije/1_07.c}
+% \end{Answer}
+%  \fi
+% 
+% \fi
+% 
+% \begin{Exercise}[label=v2.2_01] 
+% %\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
+% Parametri komandne linije su $n, a$ i $b$ ($a < b$). Treba popuniti
+% prvih {\tt n} elemenata niza {\tt A} celim slu\v cajnim brojevima koji
+% su između {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
+% izlaz. Maksimalan broj elemenata niza {\tt A} je 200. Ukoliko nisu
+% zadati svi argumenti komandne linije ili ne zadovoljavaju potrebna
+% svojstva ispisati poruku o gre\v sci. 
+% 
+% %\linkresenje{v2.2_01}
+% \end{Exercise}
+% %\ifresenja
+% %\begin{Answer}[ref=v2.2_01]
+% %\includecode{resenja/4a_ArgumentiKomandneLinije/1_07.c}
+% %\end{Answer}
+% % \fi
 
 \ifresenja
 \section{Rešenja}
