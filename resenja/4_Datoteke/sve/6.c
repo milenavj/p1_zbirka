@@ -8,13 +8,13 @@ int main()
   FILE * ulaz;
   int c, broj_malih = 0;
 
-  /* Datoteka test.txt se otvara za citanje i proverava se da li je
+  /* Datoteka podaci.txt se otvara za citanje i proverava se da li je
      otvaranje proslo uspesno. */
-  ulaz = fopen("test.txt", "r");
+  ulaz = fopen("podaci.txt", "r");
   if (ulaz == NULL) 
   {
     fprintf(stderr, "Greska: neuspesno otvaranje datoteke "
-                    "test.txt.\n");
+                    "podaci.txt.\n");
     exit(EXIT_FAILURE);
   }
 
