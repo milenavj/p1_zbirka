@@ -135,6 +135,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \includecode{resenja/4_Datoteke/sve/3.c}
 \end{Answer}
 
+
 \begin{Exercise}[label=p3_id16]         
 Napisati program koji za dve datoteke čija se imena unose sa standarnog ulaza, radi sledeće:
 \begin{itemize}
@@ -142,7 +143,7 @@ Napisati program koji za dve datoteke čija se imena unose sa standarnog ulaza, 
 \item{za svako slovo u prvoj datoteci, u drugu datoteku upisuje $1$}
 \item{za sve ostale karaktere u prvoj datoteci, u drugu datoteku upisuje $2$}
 \end{itemize}
-Maksimalna dužina naziva datoteka je $20$ karaktera. 
+Pretpostaviti da je maksimalna dužina naziva datoteka $20$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{minitest}
@@ -206,7 +207,7 @@ Napisati program koji prepisuje sadržaj prve datoteke u drugu na sledeći nači
 \item ukoliko je zadata opcija \kckod{u}, sva mala slova zamenjuje velikim
 \item ukoliko je zadata opcija \kckod{l}, sva velika slova zamenjuje malim
 \end{itemize}
-Maksimalna dužina naziva datoteka je $20$ karaktera. 
+Pretpostaviti da je maksimalna dužina naziva datoteka $20$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -332,7 +333,7 @@ Napisati program koji u datoteci čije se ime unosi sa standardnog ulaza prebroj
 koliko se puta svaka cifra pojavljuje i na standardni izlaz ispisuje cifru sa najvećim brojem pojavljivanja. 
 Ukoliko ima više takvih cifara, ispisati sve. Ukoliko datoteka ne sadrži nijednu cifru, ispisati odgovarajuću
 poruku. 
-Maksimalna dužina naziva datoteka je $20$ karaktera.
+Pretpostaviti da je maksimalna dužina naziva datoteka $20$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{minitest}
@@ -545,7 +546,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 \begin{Exercise}[label=p3_08] 
  Napisati program koji sa standardnog ulaza učitava reč $s$ i u datoteku $rotacije.txt$
- upisuje sve njene rotacije. Maksimalna dužina reči je $20$ karaktera.
+ upisuje sve njene rotacije. Pretpostaviti da je maksimalna dužina reči $20$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{minitest}
@@ -600,7 +601,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 Sa standarnog ulaza se učitava ime datoteke i nenegativan ceo
 broj $k$. Napisati program koji učitava reči iz datoteke, i svaku pročitanu reč
 rotira za $k$ mesta u levo i tako dobijenu reč upisuje u datoteku čije je ime $rotirano.txt$. 
-Maksimalna dužina naziva datoteke je $20$ karaktera. Može se pretpostaviti da
+Pretpostaviti da je maksimalna dužina naziva datoteke $20$ karaktera, da
 datoteka sadrži samo slova i beline i da je maksimalna dužina jedne reči u datoteci $100$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
@@ -745,7 +746,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 \begin{Exercise}[label=p3_id20]         
 Napisati program koji iz datoteke $razno.txt$ u datoteku $palindromi.txt$ prepisuje sve palindrome.  
-Maksimalna dužina reči je $200$ karaktera, a maksimalan broj reči nije poznat.
+Pretpostaviti da je maksimalna dužina reči $200$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 \uputstvo{Reč je palindrom ako se čita isto sa leve i desne strane bez obzira na veličinu slova.}
 
@@ -796,13 +797,14 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 \begin{Exercise}[label=p3_iv5]         
 U datoteci čije se ime zadaje sa standardnog ulaza nalazi
-se broj $n$ ($n\leq 256$), a zatim i $n$ reči dužine najviše $50$ karaktera. 
+se broj $n$ ($n\leq 256$), a zatim i $n$ reči. 
 Napisati program koji učitava reči iz datoteke u niz i:
   \begin{enumerate}
   \item ispisuje ga na standardni izlaz 
   \item iz niza uklanja sve duplikate i upisuje transformisani niz u datoteku $rez.txt$ 
   \end{enumerate}
-Pretpostaviti da je maksimalna dužina naziva datoteke $20$ karaktera.
+Pretpostaviti da je maksimalna dužina naziva datoteke $20$ karaktera, 
+a maksimalna dužina jedne reči u datoteci $50$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1175,9 +1177,9 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  Napisati program koji u datoteku $rastojanja.txt$ upisuje rastojanje svake 
  od učitanih tačaka od koordinatnog početka, 
  a na standardni izlaz koordinate tačke koja je od njega najudaljenija. 
- Koristiti strukturu $Tacka$ sa poljima $x$ i $y$, kao i funkciju kojom se računa rastojanje
- tačke od koordinatnog početka. 
- Maksimalan broj tačaka u datoteci je $50$.
+ Koristiti strukturu \kckod{Tacka} sa poljima \kckod{x} i \kckod{y}, 
+ kao i funkciju kojom se računa rastojanje tačke od koordinatnog početka. 
+ Pretpostaviti da je maksimalan broj tačaka u datoteci $50$.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1219,9 +1221,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 \begin{Exercise}[label=p3_x5]         
 Definisati strukturu kojom se opisuje trodimenzioni vektor sa celobrojnim koordinatama $x$, $y$ i $z$.
-U datoteci $vektori.txt$ nalazi se nepoznati broj vektora (najviše $200$). 
+U datoteci $vektori.txt$ nalazi se nepoznati broj vektora. 
 Napisati program koji učitava vektore iz ove datoteke i na standardni izlaz ispisuje 
-koordinate vektora sa najvećom dužinom. Dužina vektora se izračunava po formuli:
+koordinate vektora sa najvećom dužinom. 
+Dužina vektora se izračunava po formuli:
 $$|v|= \sqrt{x^2+y^2+z^2}$$
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
@@ -1305,7 +1308,7 @@ Napisati program koji iz datoteke čije ime se zadaje kao argument komandne lini
 učitava podatke o pravougaonicima (nepoznato koliko), 
 a zatim ispisuje imena onih pravougaonika koji su kvadrati i vrednost 
 najveće površine među pravougaonicima koji nisu kvadrati.
-Maksimalan broj pravougaonika je $200$, maksimalna dužina imena pravougaonika je $4$.
+Pretpostaviti da je maksimalan broj pravougaonika $200$, a maksimalna dužina imena pravougaonika $4$.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1369,7 +1372,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  a zatim u posebnim linijama za svakog studenta korisničko ime na Alasu i poslednjih pet ocena koje je dobio. 
  Napisati program koji pronalazi studenta koji je ostvario najbolji 
  uspeh i ispisuje njegove podatke. Ukoliko više studenata ima maksimalni prosek, 
- ispisati sve. Pretpostaviti da broj studenata neće biti veći od $100$.
+ ispisati sve. 
+ Pretpostaviti da je maksimalan broj studenta $100$.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1407,24 +1411,19 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 
 \begin{Exercise}[label=p3_x3]         
-Kreirati strukturu $Student$ koja sadrži:
-\begin{itemize}
-\item $ime\_i\_prezime$ (u polju se čuva ime i prezime studenta,
-  napr. "Marko Markovic", maksimalna dužina polja je $100$
-  karaktera),
-\item $ocene$ (sadrži najviše $10$ ocena studenta)
-\item $br\_ocena$ (ukupan broj ocena za studenata)
-\item $prosek$ (prosečna ocena)
-\end{itemize}
+Definisati strukturu \kckod{Student} koja sadrži puno ime studenta, niz njegovih ocena, broj ocena i 
+prosečnu ocenu.
 U datoteci čije se ime zadaje kao argument komandne linije se nalaze podaci o studentima. 
 Za svakog studenta dato je ime, prezime i niz ocena koji se završava nulom. 
 Svi podaci su razdvojeni razmacima. Napisati program koji učitava podatke o studentima i
 na standardni izlaz ispisuje podatke za studenta sa najvećim prosekom (prosek ispisati na $2$ decimale).
 Ukoliko ima više takvih studenata, ispisati prvog.
-Maksimalan broj studenta je $100$. \uputstvo{Ime i prezime studenta se mogu pročitati pomoću
-specifikatora $\%s$ a potom se za kreiranje niske $ime\_i\_prezime$ u 
-traženom formatu može iskoristiti funkcija $strcat$.}
+Pretpostaviti da je maksimalan broj studenta $100$, maksimalan broj ocena $10$ i
+maksimalna dužina punog imena $100$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
+\uputstvo{Ime i prezime studenta se mogu pročitati pomoću
+specifikatora $\%s$ a potom se za kreiranje niske \kckod{puno\_ime} u 
+traženom formatu može iskoristiti funkcija \kckod{strcat}.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1462,12 +1461,10 @@ u prvom redu se nalazi broj razlomaka , a u svakom sledećem redu brojilac i ime
 Definisati strukturu koja opisuje razlomak i napisati program koji učitava niz
 razlomaka iz datoteke, a potom:
 \begin{enumerate}
-\item ukoliko je navedena opcija $x$, upisati u izlaznu datoteku recipročni 
-razlomak za svaki razlomak iz niza (npr. za $2/3$
-treba upisati $3/2$) 
-\item ukoliko je navedena opcija $y$, upisati u izlaznu datoteku 
+\item ukoliko je prilikom pokretanja programa navedena opcija \kckod{x}, upisati u izlaznu datoteku recipročni 
+razlomak za svaki razlomak iz niza
+\item ukoliko je prilikom pokretanja programa navedena opcija \kckod{y}, upisati u izlaznu datoteku 
 realnu vrednost recipročnog razlomka svakog razlomka iz niza
-(npr. za $2/3$ treba upisati $1.5$)
 \end{enumerate}
 Pretpostaviti da se u ulaznoj datoteci nalazi najviše $100$ razlomaka.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
@@ -1618,7 +1615,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_03] 
  Kao argumenti komandne linije se zadaju ime datoteke i ceo broj $k$. 
  Napisati program koji na  standardni izlaz ispisuje sve linije zadate datoteke čija je dužina veća od $k$. 
- Maksimalna dužina linije je $80$ karaktera.
+ Pretpostaviti da je maksimalna dužina linije $80$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1657,7 +1654,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 Napisati program koji u datoteci čije se ime navodi kao argument komandne 
 linije određuje liniju maksimalne dužine i ispisuje je na standarni izlaz. 
 Ukoliko ima više takvih linija, ispisati onu koja je leksikografski prva. 
-Pretpostaviti da su linije maksimalne dužine $80$ karaktera.
+Pretpostaviti da je maksimalna dužina linije $80$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1701,7 +1698,7 @@ u kojima se reč $r$ pojavljuje bar $n$ puta gde je
 $n$ pozitivan ceo broj koji se unosi sa standardnog ulaza. 
 Računaju se i samostalna pojavljivanja reči $r$ i pojavljivanja u okviru neke druge reči. 
 Ispis treba da bude u formatu \kckod{broj\_pojavljivanja:linija}.
-Maksimalna dužina reči je $100$ karaktera, a maksimalna dužina linije je $500$ karaktera.
+Pretpostaviti da je maksimalna dužina reči $100$ karaktera, a linije $500$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
  
 \begin{miditest}
@@ -1768,8 +1765,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 \begin{Exercise}[label=p3_04] 
  Napisati program koji prebrojava koliko se linija datoteke $ulaz.txt$ završava niskom $s$ 
- koja se učitava sa standardnog ulaza. Može se pretpostaviti da dužina linije neće biti veća od $80$ karaktera, 
- kao i da dužina niske $s$ neće biti veća od $20$ karaktera.
+ koja se učitava sa standardnog ulaza. 
+  Pretpostaviti da je maksimalna dužina linije $80$ karaktera, a niske s $20$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
@@ -1809,9 +1806,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_09] 
  Napisati program koji linije koje se učitavaju sa standardnog ulaza sve do kraja ulaza 
  prepisuje u datoteku $izlaz.txt$ i to, ako je prilikom pokretanja zadata opcija 
- \textit{-v} ili \textit{-V} samo one linije koje počinju velikim slovom, 
- ako je zadata opcija \textit{-m} ili \textit{-M} samo one linije koje počinju malim slovom, 
- a ako je opcija izostavljena sve linije. Pretpostaviti da linije neće biti duže od 80 karaktera.
+ \kckod{-v} ili \kckod{-V} samo one linije koje počinju velikim slovom, 
+ ako je zadata opcija \kckod{-m} ili \kckod{-M} samo one linije koje počinju malim slovom, 
+ a ako je opcija izostavljena sve linije.
+  Pretpostaviti da je maksimalna dužina linije $80$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{miditest}
