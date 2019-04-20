@@ -213,11 +213,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=struc.6] 
 \emph{Cenoteka} pomaže kupcima da pronađu najpovoljniju cenu za proizvod koji
-žele da kupe. Napisati program koji učitava najpre broj različitih
-prodavnica, a zatim i podatke o ceni traženog
-artikla u različitim prodavnicama. Jedan red ulaza sadrži naziv prodavnice 
-i cenu u toj prodavnici (realan broj). Korisnik zadaje
-željenu cenu proizvoda, a program ispisuje imena svih onih prodavnica
+žele da kupe. 
+Definisati strukturu \kckod{Artikal} koja sadrži naziv prodavnice i 
+cenu artikla u toj prodavnici (realan broj).
+Napisati program koji učitava najpre broj različitih
+prodavnica, a zatim i podatke o ceni artikla u različitim prodavnicama. 
+Potom korisnik zadaje željenu cenu proizvoda, a program ispisuje imena svih onih prodavnica
 u kojima je cena proizvoda manja ili jednaka željenoj.
 Pretpostaviti da je maksimalan broj prodavnica $50$, a maksimalna dužina naziva prodavnice
 $20$ karaktera.
@@ -265,10 +266,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=struc.7] 
 Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. Za
-dato obdanište dobija spisak $n$ dece sa kolonama: pol (\kckod{m} ili
-\kckod{z}), broj godina (od $3$ do $6$) i ocena koju je dete dalo radu
-obdaništa (od $1$ do $5$). Napisati program koji za decu datog pola i broja godina
-ispisuje na tri decimale prosečnu ocenu obdaništa.
+dato obdanište dobija spisak $n$ dece. 
+Definisati strukturu \kckod{Dete} koja sadrži polja pol (\kckod{m} ili
+\kckod{z}), broj godina (od $3$ do $6$) i ocenu koju je dete dalo radu
+obdaništa (od $1$ do $5$). 
+Napisati program koji učitava broj $n$ i informacije o $n$ dece. Potom
+od korisnika traži da unese pol i broj godina i ispisuje na tri decimale prosečnu ocenu
+koje je obdanište dobilo od dece sa unetim polom i brojem godina.
 Pretpostaviti da je maksimalan broj dece u obdaništu $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
