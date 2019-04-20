@@ -80,6 +80,12 @@ int main()
   for (i = 0; i < n; i++) 
   {
     scanf("%d%d", &r.brojilac, &r.imenilac);
+    
+    if (r.imenilac == 0) 
+    {
+      printf("Greska: neispravan unos.\n");
+      exit(EXIT_FAILURE);
+    }
 
     suma = saberi(&suma, &r);
     proizvod = pomnozi(&proizvod, &r);

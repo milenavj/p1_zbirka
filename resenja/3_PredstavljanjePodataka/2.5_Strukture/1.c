@@ -68,13 +68,24 @@ KompleksanBroj pomnozi(const KompleksanBroj * a,
 
 /* Funkcija izracunava kolicnik kompleksnih brojeva. */
 KompleksanBroj podeli(const KompleksanBroj * a, 
-                      const KompleksanBroj * b)
+                      const KompleksanBroj * b,
+                      int* postoji_kolicnik)
 {
   KompleksanBroj c;
-  c.re = (a->re * b->re + a->im * b->im) /
-      (b->re * b->re + b->im * b->im);
-  c.im = (b->re * a->im - a->re * b->im) /
-      (b->re * b->re + b->im * b->im);
+  
+  if (b->re != 0 || b->im != 0) 
+  {
+    c.re = (a->re * b->re + a->im * b->im) /
+        (b->re * b->re + b->im * b->im);
+    c.im = (b->re * a->im - a->re * b->im) /
+        (b->re * b->re + b->im * b->im);
+  }
+  else
+  {
+    printf("Kolicnik ne postoji.\n");
+    *postoji_kolicnik = 0;
+  }
+  
   return c;
 }
 
@@ -83,6 +94,7 @@ int main()
   /* Deklaracije potrebnih promenlivih. */
   KompleksanBroj a, b;
   KompleksanBroj c;
+  int postoji_kolicnik = 1;
 
   /* Ucitavanje kompleksnih brojeva. */
   printf("Unesite realni i imaginarni deo prvog broja: ");
@@ -109,14 +121,12 @@ int main()
          c.re, c.im > 0 ? '+' : ' ', c.im);
 
   /* Ispis kolicnika. */
-  if (b.re != 0 || b.im != 0) 
+  c = podeli(&a, &b, &postoji_kolicnik);
+  if(postoji_kolicnik)
   {
-    c = podeli(&a, &b);
     printf("Kolicnik: %.2f%c%.2f*i\n",
-           c.re, c.im > 0 ? '+' : ' ', c.im);
-  } 
-  else
-    printf("Kolicnik ne postoji.\n");
+            c.re, c.im > 0 ? '+' : ' ', c.im);
+  }
 
   return 0;
 }
