@@ -8,15 +8,15 @@
     
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out abcde 123 -5 3.7}#
+#\poziv{./a.out d1.txt 10 13.5 d2.txt}#
 
 #\naslovIzlaz#
 #\izlaz{Broj argumenata je 5:}#
 #\izlaz{0: ./a.out}#
-#\izlaz{1: abcde}#
-#\izlaz{2: 123}#
-#\izlaz{3: -5}#
-#\izlaz{4: 3.7}#
+#\izlaz{1: d1.txt}#
+#\izlaz{2: 10}#
+#\izlaz{3: 13.5}#
+#\izlaz{4: d2.txt}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -44,7 +44,7 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije.
 
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out 5 mkp 9 -2 11 a 4 2}#
+#\poziv{./a.out 5 ana 9 -2 11 aca 4 2}#
 
 #\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 29}#
@@ -52,7 +52,7 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije.
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
-#\poziv{./a.out ab u f hj}#
+#\poziv{./a.out a1 b1 c1 d1}#
 
 #\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 0}#
@@ -61,7 +61,7 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije.
 
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out 33 1 p 44}#
+#\poziv{./a.out 33 1 @matf 44}#
 
 #\naslovIzlaz#
 #\izlaz{Zbir numerickih argumenata: 78}#
@@ -186,7 +186,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 #\poziv{./a.out math.rs pera@math.rs }#
 
 #\naslovIzlaz#
-#\izlaz{2}#
+#\izlaz{1}#
 \end{upotreba}
 \end{miditest}
 
@@ -223,7 +223,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
  
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out pec zima deda mraz pec}#
+#\poziv{./a.out ulaz.txt izlaz.txt ulaz.txt}#
 
 #\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
@@ -231,7 +231,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
-#\poziv{./a.out xyz abc abc abc efgh}#
+#\poziv{./a.out srce pik tref tref}#
 
 #\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
@@ -240,7 +240,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out 11 15 abc 888}#
+#\poziv{./a.out Riba ribi grize rep.}#
 
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
@@ -264,61 +264,16 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
  \fi
 
 
-% \begin{Exercise}[label=v2.2_05] 
-% Napisati funkciju koja za dva data stringa određuje koliko se uzastopnih 
-% karaktera prvog stringa nalazi u drugom stringu počev od početka. Napisati 
-%    program koji testira napisanu funkciju  za dva stringa 
-%    koji se unose kao argumenti komandne linije.   \\
-% \begin{miditest}
-% \begin{upotreba}{1}
-% #\poziv{./a.out aladin bal}#
-% #\naslovInt#
-% #\izlaz{3}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{2}
-% #\poziv{./a.out aladin lad}#
-% #\naslovInt#
-% #\izlaz{4}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{3}
-% #\poziv{./a.out Aladin ala}#
-% #\naslovInt#
-% #\izlaz{0}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{4}
-% #\poziv{./a.out aladin}#
-% #\naslovInt#
-% #\izlaz{Nekorektan poziv}#
-% #\izlaz{Program treba pozvati sa ./a.out arg1 arg2}#
-% \end{upotreba}
-% \end{miditest}
-% 
-% \linkresenje{v2.2_05}
-% \end{Exercise}
-% \ifresenja
-% \begin{Answer}[ref=v2.2_05]
-% \includecode{resenja/4a_ArgumentiKomandneLinije/1_05.c}
-% \end{Answer}
-%  \fi
-
-
-
 \begin{Exercise}[label=v2.2_01] 
  Napisati program koji ispisuje sve opcije koje su navedene u komandnoj liniji.
  \uputstvo{Opcije su karakteri koji se nalaze nakon karaktera \kckod{-}.}
  
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out -abc in.txt -d -Fg out}#
+#\poziv{./a.out -rf in.txt}#
 
 #\naslovIzlaz#
-#\izlaz{Opcije su: a b c d F g}#
+#\izlaz{Opcije su: r f}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -332,7 +287,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out ulaz.txt  }#
+#\poziv{./a.out ulaz.txt}#
 
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema opcija.}#
@@ -340,10 +295,10 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
-#\poziv{./a.out in.txt -x -yZ -g out}#
+#\poziv{./a.out in.txt -l -n 10 -fi out.txt}#
 
 #\naslovIzlaz#
-#\izlaz{Opcije su: x y Z g}#
+#\izlaz{Opcije su: l n f i}#
 \end{upotreba}
 \end{miditest}
 
@@ -355,145 +310,6 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \end{Answer}
  \fi
 
-
-% \begin{Exercise}[label=v2.2_06] 
-% Napisati funkciju \kckod{void sifruj(char s[], char c, int k)} koja šifruje
-%    string s na sledeći način: svako malo i veliko slovo stringa s konvertuje u
-%    slovo koje je u abecedi od njega udaljeno k pozicija, i to 
-%    k pozicija ulevo, ako je karakter c jednak karakteru 'L' ili udesno
-%    ako je karakter c jednak karakteru 'D'. Šifrovanje treba da bude kružno. Ako string
-%    s sadrži karakter koji nije alfanumerički, ostaviti ga nešifriranog. Napisati program koji testira napisanu funkciju za string i prirodan
-%    broj koji se unose kao argumenti komandne linije dok se pravac šifrovanja unosi
-%    kao opcija -p koja može imati vrednosti 'L' ili 'D'. Ukoliko opcija -p nije 
-%    navedena, podrazumevani pravac je udesno. \napomena{Možemo podrazumevati da string sadrži najviše 30 karaktera}.\\
-% \begin{miditest}
-% \begin{upotreba}{1}
-% #\poziv{./a.out abcd 2}#
-% #\naslovInt#
-% #\izlaz{cdef}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{2}
-% #\poziv{./a.out abcd 2 -p D}#
-% #\naslovInt#
-% #\izlaz{cdef}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{3}
-% #\poziv{./a.out abcd 2 -p L}#
-% #\naslovInt#
-% #\izlaz{yzab}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{4}
-% #\poziv{./a.out abcd -3 -p L}#
-% #\naslovInt#
-% #\izlaz{Nekorektan unos}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{5}
-% #\poziv{./a.out abcd 3 -p X}#
-% #\naslovInt#
-% #\izlaz{Nekorektan unos}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{6}
-% #\poziv{./a.out ab12cd 2 -p D}#
-% #\naslovInt#
-% #\izlaz{Nekorektan unos}#
-% \end{upotreba}
-% \end{miditest}
-% 
-% \linkresenje{v2.2_06}
-% \end{Exercise}
-% \ifresenja
-% \begin{Answer}[ref=v2.2_06]
-% \includecode{resenja/4a_ArgumentiKomandneLinije/1_06.c}
-% \end{Answer}
-%  \fi
-% 
-% \iffalse
-% \begin{Exercise}[label=v2.2_01] 
-% Tekst
-% %\komentarJ{Ovaj zadatak nema mnogo smisla, predlazem da ga izbacimo.}
-% \linkresenje{v2.2_01}
-% \end{Exercise}
-% \ifresenja
-% \begin{Answer}[ref=v2.2_01]
-% \includecode{resenja/4a_ArgumentiKomandneLinije/1_07.c}
-% \end{Answer}
-%  \fi
-% \fi
-% 
-% \iffalse
-% \begin{Exercise}[label=v2.2_01] 
-% %\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
-% Ako su celi brojevi \verb|a| i \verb|b| argumenti komandne linije
-% napraviti niz \verb|A[0] = a, A[1] = a+1,|
-% \verb|A[2] = a+2, ..., A[b-a] = b| i ispisati ga. Pretpostaviti da je
-% maksimalna du\v zina niza 200 elemenata. Proveriti da li $a < b$ i
-% $b-a < 200$ i ako ovi uslovi nisu ispunjeni ispisati poruku da je do\v
-% slo do gre\v ske. U slu\v caju da je dato manje ili vi\v se argumenata
-% komandne linije ispisati poruku o gre\v sci. \\ 
-% \begin{miditest}
-% \begin{upotreba}{1}
-% #\poziv{./a.out 34}#
-% #\naslovInt#
-% #\izlaz{greska}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{2}
-% #\poziv{./a.out 12 20}#
-% #\naslovInt#
-% #\izlaz{12 13 14 15 16 17 18 19 20}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{3}
-% #\poziv{./a.out 30 8}#
-% #\naslovInt#
-% #\izlaz{greska}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{4}
-% #\poziv{./a.out -4 -1}#
-% #\naslovInt#
-% #\izlaz{-4 -3 -2 -1}#
-% \end{upotreba}
-% \end{miditest}
-% \linkresenje{v2.2_01}
-% \end{Exercise}
-% \ifresenja
-% \begin{Answer}[ref=v2.2_01]
-% \includecode{resenja/4a_ArgumentiKomandneLinije/1_07.c}
-% \end{Answer}
-%  \fi
-% 
-% \fi
-% 
-% \begin{Exercise}[label=v2.2_01] 
-% %\komentarJ{Da li je ovo zadatak iz pokazivaca? Link ka resenju je pogresan, da nije doslo do greske?}
-% Parametri komandne linije su $n, a$ i $b$ ($a < b$). Treba popuniti
-% prvih {\tt n} elemenata niza {\tt A} celim slu\v cajnim brojevima koji
-% su između {\tt a} i {\tt b}. I\v stampati niz {\tt A} na standarni
-% izlaz. Maksimalan broj elemenata niza {\tt A} je 200. Ukoliko nisu
-% zadati svi argumenti komandne linije ili ne zadovoljavaju potrebna
-% svojstva ispisati poruku o gre\v sci. 
-% 
-% %\linkresenje{v2.2_01}
-% \end{Exercise}
-% %\ifresenja
-% %\begin{Answer}[ref=v2.2_01]
-% %\includecode{resenja/4a_ArgumentiKomandneLinije/1_07.c}
-% %\end{Answer}
-% % \fi
 
 \ifresenja
 \section{Rešenja}

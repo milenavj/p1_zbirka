@@ -26,7 +26,7 @@ int main(int argc, char *argv[])
      atoi("abc") ima vrednost 0, ali atoi("12abc") ima vrednost 12.
      Dakle ova funkcija se zaustavlja u trenutku kada se u okviru
      niske naidje na prvi karakter koji nije cifra. Iz tog razloga
-     je potrebno proveriti da li dati agument sadrzi samo cifre. */
+     je potrebno proveriti da li dati argument sadrzi samo cifre. */
   for (i = 1; i < argc; i++)
     if(samo_cifre(argv[i]))
       suma += atoi(argv[i]);
