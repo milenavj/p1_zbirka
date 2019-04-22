@@ -7,7 +7,13 @@
 int samo_cifre(char arg[])
 {
   int i;
-  for(i=0; arg[i]; i++)
+  
+  /* Prvi karakter mora biti ili cifra ili znak broja. */
+  if(!isdigit(arg[0]) && arg[0] != '+' && arg[0] != '-')
+    return 0;
+  
+  /* Ostali karakteri moraju biti cifre. */
+  for(i=1; arg[i]; i++)
     if(!isdigit(arg[i]))
       return 0;
     
@@ -32,7 +38,7 @@ int main(int argc, char *argv[])
       suma += atoi(argv[i]);
   
   /* Ispis rezultata. */
-  printf("Zbir numerickih argumenata: %d\n", suma);
+  printf("Zbir celobrojnih argumenata: %d\n", suma);
 
   return 0;
 }

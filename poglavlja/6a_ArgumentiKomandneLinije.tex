@@ -39,32 +39,32 @@
 
 
 \begin{Exercise}[label=p2.6_01] 
-Napisati program koji ispisuje zbir numeričkih argumenata komandne linije. 
+Napisati program koji ispisuje zbir celobrojnih argumenata komandne linije. 
 \uputstvo{Koristiti funkciju \kckod{atoi}}.
 
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out 5 ana 9 -2 11 aca 4 2}#
+#\poziv{./a.out 5 ana 9 -2 11 aca 4 +2}#
 
 #\naslovIzlaz#
-#\izlaz{Zbir numerickih argumenata: 29}#
+#\izlaz{Zbir celobrojnih argumenata: 29}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
-#\poziv{./a.out a1 b1 c1 d1}#
+#\poziv{./a.out a1 b1 c1 d1 1a 1b 1c 1d}#
 
 #\naslovIzlaz#
-#\izlaz{Zbir numerickih argumenata: 0}#
+#\izlaz{Zbir celobrojnih argumenata: 0}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out 33 1 @matf 44}#
+#\poziv{./a.out 33 1 @matf 44 22.56}#
 
 #\naslovIzlaz#
-#\izlaz{Zbir numerickih argumenata: 78}#
+#\izlaz{Zbir celobrojnih argumenata: 78}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -72,7 +72,7 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije.
 #\poziv{./a.out}#
 
 #\naslovIzlaz#
-#\izlaz{Zbir numerickih argumenata: 0}#
+#\izlaz{Zbir celobrojnih argumenata: 0}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p2.6_01}
@@ -87,7 +87,7 @@ Napisati program koji ispisuje zbir numeričkih argumenata komandne linije.
 \begin{Exercise}[label=p2.6_04] 
  Napisati program koji na osnovu broja $n$, koji se zadaje kao argument komandne 
  linije, ispisuje cele brojeve iz intervala $[-n,\ n]$.
- U slučaju greške ispisati odgovarajuću poruku o grešci.
+ U slučaju neispravnog poziva programa ispisati odgovarajuću poruku o grešci.
  
 \begin{minitest}
 \begin{upotreba}{1}
