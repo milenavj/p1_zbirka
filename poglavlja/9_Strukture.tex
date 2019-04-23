@@ -89,7 +89,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
   \item \kckod{int ucitaj(Vocka niz[])} koja učitava voćke sa standardnog ulaza
      sve do unosa reči KRAJ i kao povratnu vrednost vraća broj učitanih voćki;
   \item \kckod{Vocka vocka\_sa\_najvise\_vitamina(Vocka niz[], int n)}
-     koja pronalazi voćku koja ima najviše C vitamina.
+     koja pronalazi voćku koja ima najviše vitamina C.
 \end{enumerate}
  Napisati program koji učitava podatke o voćkama i ispisuje ime voćke sa najviše vitamina C. 
  Pretpostaviti da broj voćki neće biti veći od $50$, kao i da je ime voćke niska od najviše $20$ karaktera. 
@@ -118,42 +118,49 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.3] 
-Definisati strukturu \kckod{Grad} koja sadrži ime grada i prosečnu temperaturu u toku decembra (realan
-broj). Napisati funkcije:
+Definisati strukturu \kckod{Grad} koja sadrži ime grada i prosečnu temperaturu u toku decembra.
+Napisati funkcije:
 \begin{enumerate}
   \item \kckod{void ucitaj(Grad gradovi[], int n)} koja učitava podatke
   o gradovima sa standardnog ulaza. 
   \item \kckod{void ispisi(Grad gradovi[], int n)} koja ispisuje podatke
-  o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni celzijusa. 
+  o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni Celzijusa. 
 \end{enumerate}
 Napisati program koji učitava imena $n$ gradova i
 njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temperaturom za klizanje.
 Pretpostaviti da je maksimalan broj gradova $50$ i da je maksimalna dužina imena grada $20$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
-\begin{maxitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj gradova:}\ulaz{4}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Beograd 7}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Uzice 1.5}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Subotica 4}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Zrenjanin 9}#
-#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
+#\izlaz{Unesite grad i temperaturu: }#
+#\ulaz{Beograd 7}#
+#\izlaz{Unesite grad i temperaturu: }#
+#\ulaz{Uzice 1.5}#
+#\izlaz{Unesite grad i temperaturu: }#
+#\ulaz{Subotica 4}#
+#\izlaz{Unesite grad i temperaturu: }#
+#\ulaz{Zrenjanin 9}#
+#\izlaz{Gradovi sa idealnom temperaturom}#
+#\izlaz{za klizanje u decembru:}#
 #\izlaz{Beograd}#
 #\izlaz{Subotica}#
 \end{upotreba}
-\end{maxitest}
-
-\begin{maxitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj gradova:}\ulaz{2}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Varsava 11}#
-#\izlaz{Unesite grad i temperaturu: }\ulaz{Prag 2}#
-#\izlaz{Gradovi sa idealnom temperaturom za klizanje u decembru:}#
+#\izlaz{Unesite grad i temperaturu: }#
+#\ulaz{Varsava 11}#
+#\izlaz{Unesite grad i temperaturu: }#
+#\ulaz{Prag 2}#
+#\izlaz{Gradovi sa idealnom temperaturom}#
+#\izlaz{za klizanje u decembru:}#
 \end{upotreba}
-\end{maxitest}
+\end{miditest}
  
 \linkresenje{struc.3}
 \end{Exercise}
@@ -215,7 +222,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \emph{Cenoteka} pomaže kupcima da pronađu najpovoljniju cenu za proizvod koji
 žele da kupe. 
 Definisati strukturu \kckod{Artikal} koja sadrži naziv prodavnice i 
-cenu artikla u toj prodavnici (realan broj).
+cenu artikla u toj prodavnici.
 Napisati program koji učitava najpre broj različitih
 prodavnica, a zatim i podatke o ceni artikla u različitim prodavnicama. 
 Potom korisnik zadaje željenu cenu proizvoda, a program ispisuje imena svih onih prodavnica
@@ -403,46 +410,54 @@ $5$). Napisati program koji učitava podatke o đacima sve do kraja ulaza
 i na standardni izlaz ispisuje prvo imena nedovoljnih đaka, a zatim imena
 odličnih đaka. Đak je nedovoljan ako ima barem jednu jedinicu, a 
 odličan ako ima prosek ocena veći ili jednak $4.5$.
-Pretpostaviti da je maksimalna dužina imena djaka $20$ karaktera, kao i da
-je maksimalan broj djaka $30$.
+Pretpostaviti da je maksimalna dužina imena đaka $20$ karaktera, kao i da
+je maksimalan broj đaka $30$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{maxitest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Maja 4 5 2 3 4 4 3 3 4}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Nikola 5 4 5 5 5 4 4 5 5}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Jasmina 2 2 1 1 2 3 3 1 3}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Pera 5 4 5 3 5 5 1 5 5}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Pavle 4 3 2 4 3 2 4 3 2}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Maja 4 5 2 3 4 4 3 3 4}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Nikola 5 4 5 5 5 4 4 5 5}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Jasmina 2 2 1 1 2 3 3 1 3}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Pera 5 4 5 3 5 5 1 5 5}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Pavle 4 3 2 4 3 2 4 3 2}#
 #\izlaz{Unesite podatke o djaku: }#
 #\izlaz{\ }#
 #\izlaz{NEDOVOLJNI: Jasmina Pera }#
 #\izlaz{ODLICNI: Nikola}#
 \end{upotreba}
-\end{maxitest}
-
-\begin{maxitest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Uros 3 4 2 3 4 2 3 4 4}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Nebojsa 4 5 5 5 4 5 5 5 5}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Sreten 2 3 2 4 5 4 4 4 2}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Uros 3 4 2 3 4 2 3 4 4}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Nebojsa 4 5 5 5 4 5 5 5 5}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Sreten 2 3 2 4 5 4 4 4 2}#
 #\izlaz{Unesite podatke o djaku: }#
 #\izlaz{\ }#
 #\izlaz{NEDOVOLJNI:}#
 #\izlaz{ODLICNI: Nebojsa}#
 \end{upotreba}
-\end{maxitest}
-
-\begin{maxitest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Mirko 2 3 4 4 4 3 3 3 4}#
-#\izlaz{Unesite podatke o djaku: }\ulaz{Mihailo 2 3 10 5 5 2 3 4 2}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Mirko 2 3 4 4 4 3 3 3 4}#
+#\izlaz{Unesite podatke o djaku: }#
+#\ulaz{Mihailo 2 3 10 5 5 2 3 4 2}#
 #\izlaz{Greska: neispravna ocena.}#
 \end{upotreba}
-\end{maxitest}
+\end{minitest}
 
 \linkresenje{struc.14}
 \end{Exercise}
@@ -455,16 +470,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=struc.13] 
 Defnisati strukturu \kckod{Osoba} kojom se opisuje jedan unos u
-imenik. Za svaku osobu su dati podaci: ime, prezime i email adresa.
+imenik. Za svaku osobu su dati podaci: ime, prezime i imejl adresa.
 Napisati program koji učitava ceo
 broj $n$, a zatim podatke o $n$ osoba. Ispisati imena
-i prezimena svih osoba koje imaju gmail adresu (čija se email adresa
-završava sa \kckod{@gmail.com}).
+i prezimena svih osoba koje imaju imejl adresu koja se završava sa \kckod{@gmail.com}.
 Pretpostaviti da je maksimalan broj osoba $50$, kao i da je 
 maksimalna dužina imena osobe $20$ karaktera, 
-prezimena $30$ karaktera, a email adrese $50$ karaktera.
+prezimena $30$ karaktera, a imejl adrese $50$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-\napomena{Može se smatrati da je svaka email adresa dobro
+\napomena{Može se smatrati da je svaka imejl adresa dobro
 zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.}
 
 \begin{miditest}
@@ -510,7 +524,7 @@ zatim podatke za $n$ potrošačkih korpi i da na osnovu učitanih
 podataka izračuna prosečnu cenu potrošačke korpe. Program ispisuje na
 dve decimale račune svake potrošačke korpe i na kraju ispisuje
 prosečnu cenu potrošačke korpe. 
-Pretpostaviti da je maksimalan broj potrosackih korpi $100$, maksimalan
+Pretpostaviti da je maksimalan broj potrošačkih korpi $100$, maksimalan
 broj artikala u korpi $20$ i da naziv svakog
 artikla sadrži maksimalno $30$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
@@ -717,13 +731,13 @@ obima i dužine stranica.
   koja izračunava rastojanje između dve tačke.
 
 \item Definisati funkciju \kckod{int ucitaj\_poligon(Tacka*
-  tacke, int n)} koja učitava maksimalno $n$ puta po dve
+  poligon, int n)} koja učitava maksimalno $n$ puta po dve
   vrednosti tipa \kckod{double} (koje predstavljaju koordinate temena
   poligona) i upisuje ih u zadati niz tačaka. Funkcija vraća broj
   uspešno učitanih tačaka.
 
 \item Definisati funkciju \kckod{double obim(Tacka* poligon, int
-  n)} koja izračunava obim poligona sa $n$ tačaka u zadatom nizu
+  n)} koja izračunava obim poligona sa $n$ tačaka u zadatom nizu.
   \uputstvo{Prilikom računanja obima ne zaboraviti stranicu koja spaja
     poslednje i prvo teme.}.
 
@@ -736,7 +750,7 @@ obima i dužine stranica.
 
 \item Napisati funkciju \kckod{double povrsina(Tacka* poligon,
   int n)} za računanje površine konveksnog
-  poligona. uputstvo{Zadatak se može rešiti korišćenjem funkcije
+  poligona. \uputstvo{Zadatak se može rešiti korišćenjem funkcije
     \kckod{povrsina\_trougla}}.
 \end{enumerate}
 Napisati program koji učitava poligon sa maksimalno $n$ temena
