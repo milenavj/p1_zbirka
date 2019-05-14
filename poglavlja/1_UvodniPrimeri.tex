@@ -12,7 +12,7 @@
 \section{Izrazi}
 
 \begin{Exercise}[label=UZ_NI_01] 
-Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo svima!}.
+Napisati program koji na standardni izlaz ispisuje poruku \kckod{Zdravo svima!}.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -33,7 +33,7 @@ Napisati program koji na standardni izlaz ispisuje tekst \kckod{Zdravo svima!}.
 
 
 \begin{Exercise}[label=UZ_NI_02] 
-Napisati program za uneti ceo broj ispisuje njegov kvadrat i njegov kub. 
+Napisati program koji za uneti ceo broj ispisuje njegov kvadrat i njegov kub. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -69,8 +69,8 @@ ceo deo pri deljenju prvog broja drugim brojem i ostatak pri deljenju prvog broj
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite vrednost promenljive x:}\ulaz{7}#
-#\izlaz{Unesite vrednost promenljive y:}\ulaz{2}#
+#\izlaz{Unesite vrednost broja x:}\ulaz{7}#
+#\izlaz{Unesite vrednost broja y:}\ulaz{2}#
 #\izlaz{7 + 2 = 9}#
 #\izlaz{7 - 2 = 5}#
 #\izlaz{7 * 2 = 14}#
@@ -137,7 +137,7 @@ tip promenljivih za artikle treba da bude \kckod{unsigned int}.
 
 \begin{Exercise}[label=UZ_NI_05]
 Napisati program koji za unetu količinu jabuka u kilogramima i unetu
-cenu po kilogramu ispisuje ukupnu vrednost date količine jabuka. 
+cenu po kilogramu ispisuje ukupnu cenu date količine jabuka. 
 Obe ulazne vrednosti su pozitivni celi brojevi.
 \napomena{Pretpostaviti da je unos ispravan.} 
 
@@ -233,22 +233,22 @@ Napisati program koji za uneta vremena poletanja i sletanja aviona ispisuje duž
 
 
 \begin{Exercise}[label=UZ_NI_08] 
-Date su dve celobrojne promenljive $x$ i $y$. Napisati program koji razmenjuje njihove vrednosti.
+Napisati program koji razmenjuje vrednosti dveju promenljivih $x$ i $y$. Njihove vrednosti, kao dva cela broja, zadaje korisnik.  
 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite vrednosti x i y:}\ulaz{5 7}#
-#\izlaz{Pre zamene: x=5, y=7}#
-#\izlaz{Posle zamene: x=7, y=5}#
+#\izlaz{Pre zamene: x = 5, y = 7}#
+#\izlaz{Posle zamene: x = 7, y = 5}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite vrednosti x i y:}\ulaz{237 -592}#
-#\izlaz{Pre zamene: x=237, y=-592}#
-#\izlaz{Posle zamene: x=-592, y=237}#
+#\izlaz{Pre zamene: x = 237, y = -592}#
+#\izlaz{Posle zamene: x = -592, y = 237}#
 \end{upotreba}
 \end{miditest}
 
@@ -270,14 +270,14 @@ promenljive}.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite vrednosti a i b:}\ulaz{5 7}#
-#\izlaz{Nove vrednosti su: a=12, b=-2}#
+#\izlaz{Nove vrednosti su: a = 12, b = -2}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite vrednosti a i b:}\ulaz{237 -592}#
-#\izlaz{Nove vrednosti su: a=-355, b=829}#
+#\izlaz{Nove vrednosti su: a = -355, b = 829}#
 \end{upotreba}
 \end{miditest}
 
@@ -379,7 +379,7 @@ Napisati program koji za uneti pozitivan četvorocifreni broj:
 \item izračunava proizvod cifara
 \item izračunava razliku sume krajnjih i srednjih cifara 
 \item izračunava sumu kvadrata cifara
-\item izračunava broj koji se dobija ispisom cifara u obrnutom poretku
+\item izračunava broj koji se dobija zapisom cifara u obrnutom poretku
 \item izračunava broj koji se dobija zamenom cifre jedinice i cifre stotine
 \end{enumerate}
 \napomena{Pretpostaviti da je unos ispravan.}
@@ -475,8 +475,8 @@ dobijen umetanjem broja $m$ između cifre stotina i cifre hiljada broja $n$.
 
 
 \begin{Exercise}[label=UZ_NI_16] 
-Napisati program koji učitava realnu vrednost izraženu u inčima, konvertuje tu vrednost u centimetre 
-i ispisuje je zaokruženu na dve decimale. \uputstvo{Jedan inč ima $2.54$ centimetra.}
+Napisati program koji učitava dužinu dijagonale monitora izraženu u inčima, konvertuje je u centimetre 
+i ispisuje zaokruženu na dve decimale. \uputstvo{Jedan inč ima $2,54$ centimetra.}
    
 \begin{miditest}
 \begin{upotreba}{1}
@@ -503,8 +503,7 @@ i ispisuje je zaokruženu na dve decimale. \uputstvo{Jedan inč ima $2.54$ centi
 
 
 \begin{Exercise}[label=UZ_NI_17] 
-Napisati program koji učitava dužinu izraženu u miljama, konvertuje tu vrednost u kilometre i ispisuje 
-je zaokruženu na dve decimale. \uputstvo{Jedna milja ima $1.609344$ kilometara.}
+Napisati program koji učitava dužinu pređenog puta izraženu u miljama, konvertuje je u kilometre i ispisuje zaokruženu na dve decimale. \uputstvo{Jedna milja ima $1,609344$ kilometara.}
    
 \begin{miditest}
 \begin{upotreba}{1}
@@ -532,8 +531,7 @@ Zadatak se rešava analogno zadatku \ref{UZ_NI_16}.
 
 
 \begin{Exercise}[label=UZ_NI_18] 
-Napisati program koji učitava težinu izraženu u funtama, konvertuje tu vrednost u kilograme i ispisuje 
-je zaokruženu na dve decimale. \uputstvo{Jedna funta ima $0.45359237$ kilograma.}
+Napisati program koji učitava težinu avionskog tereta zraženu u funtama, konvertuje je u kilograme i ispisuje zaokruženu na dve decimale. \uputstvo{Jedna funta ima $0,45359237$ kilograma.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -982,8 +980,7 @@ Zadatak se rešava analogno zadatku \ref{UZ_NI_30}
 
 
 \begin{Exercise}[label=UZ_NI_32]
-Napisati program koji za unete realne vrednosti promenljivih $x$ i
-$y$ ispisuje vrednost sledećeg izraza:
+Napisati program koji za zadate realne vrednosti $x$ i $y$ ispisuje vrednost sledećeg izraza
 $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$ zaokruženu na dve decimale. 
 
 \begin{miditest}
