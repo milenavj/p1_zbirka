@@ -118,16 +118,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.3] 
-Definisati strukturu \kckod{Grad} koja sadrži ime grada i prosečnu temperaturu u toku decembra.
+Definisati strukturu \kckod{Grad} koja sadrži ime grada i njegovu prosečnu temperaturu u toku decembra.
 Napisati funkcije:
 \begin{enumerate}
-  \item \kckod{void ucitaj(Grad gradovi[], int n)} koja učitava podatke
-  o gradovima sa standardnog ulaza. 
+  \item \kckod{void ucitaj(Grad gradovi[], int n)} koja učitava sa standardnog ulaza podatke
+  o $n$ gradova.  
   \item \kckod{void ispisi(Grad gradovi[], int n)} koja ispisuje podatke
   o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni Celzijusa. 
 \end{enumerate}
-Napisati program koji učitava imena $n$ gradova i
-njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temperaturom za klizanje.
+Napisati program koji učitava imena $n$ gradova i njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temperaturom za klizanje.
 Pretpostaviti da je maksimalan broj gradova $50$ i da je maksimalna dužina imena grada $20$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
@@ -175,7 +174,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  Definisati strukturu \kckod{ParReci} koja sadrži reč na srpskom
  jeziku i odgovarajući prevod na engleski jezik. Napisati program koji
  do kraja ulaza učitava sve parove reči, a potom za rečenicu koja se
- zadaje u jednoj liniji ispisati prevod. Ako je reč u rečenici
+ zadaje u jednoj liniji ispisuje prevod. Ako je reč u rečenici
  nepoznata umesto nje ispisati odgovarajući broj zvezdica. 
  Pretpostaviti da je maksimalna
  dužina reči $50$ karaktera, maksimalan broj parova reči
@@ -272,13 +271,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.7] 
-Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. Za
-dato obdanište dobija spisak $n$ dece. 
-Definisati strukturu \kckod{Dete} koja sadrži polja pol (\kckod{m} ili
-\kckod{z}), broj godina (od $3$ do $6$) i ocenu koju je dete dalo radu
-obdaništa (od $1$ do $5$). 
-Napisati program koji učitava broj $n$ i informacije o $n$ dece. Potom
-od korisnika traži da unese pol i broj godina i ispisuje na tri decimale prosečnu ocenu
+Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. Za svako obdanište poznat je spisak koji sadrži broj dece u grupi, a zatim i ocene koje je svako dete dalo o radu obdaništa. Definisati strukturu \kckod{Dete} koja sadrži polja pol (\kckod{m} ili
+\kckod{z}), broj godina (od $3$ do $6$) i ocenu koju je dete dalo radu obdaništa (od $1$ do $5$). 
+Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu i za 
+zadati pol i uzrast deteta i ispisuje korisniku na tri decimale prosečnu ocenu
 koje je obdanište dobilo od dece sa unetim polom i brojem godina.
 Pretpostaviti da je maksimalan broj dece u obdaništu $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
@@ -286,24 +282,24 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj dece: }\ulaz{5}#
-#\izlaz{Unesite podatke za svako dete, pol,}#
-#\izlaz{broj godina i ocenu:}#
+#\izlaz{Unesite broj dece u grupi: }\ulaz{5}#
+#\izlaz{Unesite podatke za svako dete (pol,}#
+#\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 5}#
 #\ulaz{z 3 4}#
 #\ulaz{m 4 2}#
 #\ulaz{m 5 4}#
 #\ulaz{m 3 4}#
-#\izlaz{Unesite pol i broj godina: }\ulaz{m 3}#
+#\izlaz{Unesite pol i broj godina za statistiku: }\ulaz{m 3}#
 #\izlaz{Prosecna ocena je: 4.500.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj dece: }\ulaz{10}#
-#\izlaz{Unesite podatke za svako dete, pol,}#
-#\izlaz{broj godina i ocenu:}#
+#\izlaz{Unesite broj dece u grupi: }\ulaz{10}#
+#\izlaz{Unesite podatke za svako dete (pol,}#
+#\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 5}#
 #\ulaz{z 4 4}#
 #\ulaz{m 5 4}#
@@ -314,7 +310,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{z 4 4}#
 #\ulaz{z 4 5}#
 #\ulaz{m 6 3}#
-#\izlaz{Unesite pol i broj godina: }\ulaz{z 4}#
+#\izlaz{Unesite pol i broj godina za statistiku: }\ulaz{z 4}#
 #\izlaz{Prosecna ocena je: 4.200.}#
 \end{upotreba}
 \end{miditest}
@@ -322,9 +318,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj dece: }\ulaz{15}#
-#\izlaz{Unesite podatke za svako dete, pol,}# 
-#\izlaz{broj godina i ocenu:}#
+#\izlaz{Unesite broj dece u grupi: }\ulaz{15}#
+#\izlaz{Unesite podatke za svako dete (pol,}# 
+#\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 2}#
 #\ulaz{z 7 5}#
 #\izlaz{Greska: neispravan broj godina.}#
@@ -333,12 +329,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj dece: }\ulaz{2}#
-#\izlaz{Unesite podatke za svako dete, pol,}# 
-#\izlaz{broj godina i ocenu:}#
+#\izlaz{Unesite broj dece u grupi: }\ulaz{2}#
+#\izlaz{Unesite podatke za svako dete (pol,}# 
+#\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 2}#
 #\ulaz{z 3 5}#
-#\izlaz{Unesite pol i broj godina: }\ulaz{h 5}#
+#\izlaz{Unesite pol i broj godina za statistiku: }\ulaz{h 5}#
 #\izlaz{Greska: neispravan pol.}#
 \end{upotreba}
 \end{miditest}
@@ -353,13 +349,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.11] 
-Definisati strukturu kojom se opisuje student. Student je zadat svojim
+Definisati strukturu kojom se opisuje student. Student se opisuje svojim
 imenom i prezimenom, smerom
 (R, I, V, N, T, O) i prosečnom ocenom. Napisati program koji učitava
-podatke o $n$ studenata, zatim učitava smer i ispisuje imena i
-prezimena onih studenta koji su sa datog smera. Potom ispisati podatke
-za studenta koji ima najveći prosek. Ako ima više takvih studenata
-ispisati ih sve. 
+podatke o $n$ studenata, a zatim i informaciju o smeru i ispisuje imena i
+prezimena onih studenta koji su sa datog smera, kao i podatke studenta koji ima najveći prosek. 
+Ako ima više takvih studenata ispisati podatke o svima. 
 Pretpostaviti da je maksimalan broj studenata $2000$, a maksimalna dužina imena i prezimena
 po $30$ karaktera.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
@@ -654,7 +649,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Definisati strukturu \kckod{Lopta} sa poljima \kckod{poluprecnik} (ceo
 broj u centimetrima) i \kckod{boja} (enumeracioni tip koji uključuje
 plavu, žutu, crvenu i zelenu boju). 
-Napisati funkcije
+Napisati funkcije: 
 \begin{enumerate}
  \item \kckod{void ucitaj(Lopta niz[], int n)} koja učitava podatke o $n$ lopti u niz.
  \item \kckod{double ukupna\_zapremina(Lopta niz[], int n)} koja računa ukupnu zapreminu svih lopti.
@@ -727,35 +722,28 @@ obima i dužine stranica.
   tačka Dekartovske ravni čije su $x$ i $y$ koordinate podaci tipa
   \kckod{double}.
 
-\item Definisati funkciju \kckod{double rastojanje(const Tacka* a, const Tacka* b)}
+\item Definisati funkciju \kckod{double rastojanje(const Tacka *A, const Tacka *B)}
   koja izračunava rastojanje između dve tačke.
 
-\item Definisati funkciju \kckod{int ucitaj\_poligon(Tacka*
-  poligon, int n)} koja učitava maksimalno $n$ puta po dve
+\item Definisati funkciju \kckod{int ucitaj\_poligon(Tacka *poligon, int n)} koja učitava maksimalno $n$ puta po dve
   vrednosti tipa \kckod{double} (koje predstavljaju koordinate temena
   poligona) i upisuje ih u zadati niz tačaka. Funkcija vraća broj
   uspešno učitanih tačaka.
 
-\item Definisati funkciju \kckod{double obim(Tacka* poligon, int
-  n)} koja izračunava obim poligona sa $n$ tačaka u zadatom nizu.
+\item Definisati funkciju \kckod{double obim(Tacka *poligon, int n)} koja izračunava obim poligona sa $n$ temena u zadatom nizu.
   \uputstvo{Prilikom računanja obima ne zaboraviti stranicu koja spaja
     poslednje i prvo teme.}.
 
-\item Definisati funkciju \kckod{double maksimalna\_stranica(Tacka*
-  poligon, int n)} koja izračunava dužinu najduže stranice
-  poligona sa $n$ tačaka u zadatom nizu.
+\item Definisati funkciju \kckod{double maksimalna\_stranica(Tacka *poligon, int n)} koja izračunava dužinu najduže stranice
+  poligona sa $n$ temena u zadatom nizu.
 
-\item Napisati funkciju \kckod{double povrsina\_trougla(const Tacka* A, const Tacka*
-  B, const Tacka* C)} za računanje površine trougla.
+\item Napisati funkciju \kckod{double povrsina\_trougla(const Tacka *A, const Tacka *B, const Tacka *C)} za računanje površine trougla.
 
-\item Napisati funkciju \kckod{double povrsina(Tacka* poligon,
-  int n)} za računanje površine konveksnog
-  poligona. \uputstvo{Zadatak se može rešiti korišćenjem funkcije
-    \kckod{povrsina\_trougla}}.
+\item Napisati funkciju \kckod{double povrsina(Tacka *poligon, int n)} za računanje površine konveksnog poligona. \uputstvo{Zadatak se može rešiti podelom poligona na trouglove i korišćenjem funkcije \kckod{povrsina\_trougla}}.
 \end{enumerate}
 Napisati program koji učitava poligon sa maksimalno $n$ temena
   i za učitani poligon ispisuje na tri decimale
-  obim, maksimalnu dužinu stranice i površinu. Pretpostaviti da je
+  obim, dužinu najduže stranice i površinu. Pretpostaviti da je
   uneti poligon konveksan. Poligon mora imati barem tri temena.
   Pretpostaviti da je maksimalan broj temena $1000$.
   U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
@@ -763,7 +751,7 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite maksimalan broj tacaka poligona: }\ulaz{10}#
+#\izlaz{Unesite maksimalan broj temena poligona: }\ulaz{10}#
 #\ulaz{0 0}#
 #\ulaz{0 6}#
 #\ulaz{3 3}#
@@ -775,7 +763,7 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite maksimalan broj tacaka poligona: }\ulaz{10}#
+#\izlaz{Unesite maksimalan broj temena poligona: }\ulaz{10}#
 #\ulaz{0 0}#
 #\ulaz{12 0}#
 #\ulaz{13 2}#
@@ -795,7 +783,7 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite maksimalan broj tacaka poligona: }\ulaz{4}#
+#\izlaz{Unesite maksimalan broj temena poligona: }\ulaz{4}#
 #\ulaz{0 0}#
 #\izlaz{Greska: poligon mora imati bar tri tacke.}#
 \end{upotreba}
@@ -814,11 +802,11 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 Definisati strukturu \kckod{Izraz} kojom se opisuje numerički izraz
 nad celim brojevima koji se sastoji od dva celobrojna operanda i
 numeričke operacije (sabiranje, oduzimanje, množenje ili celobrojno
-deljenje) nad celim brojevima.
+deljenje). 
 \begin{enumerate}
 \item Napisati funkciju koja ispituje da li je dati izraz korektno
   zadat i vraća jedinicu ako jeste, a nulu inače. Podrazumeva se da je
-  izraz korektno zadat ako operacija odgovara $+$, $-$, $*$ ili $/$ i
+  izraz korektno zadat ako je operacija $+$, $-$, $*$ ili $/$ i
   u slučaju deljenja drugi operand je različit od $0$.
 \item Napisati funkciju koja za dati izraz određuje vrednost izraza.
 \item Napisati funkciju koja učitava izraze. Funkcija treba da
@@ -903,18 +891,17 @@ Definisati strukturu kojom se opisuje polinom. Polinom je dat svojim
 stepenom i realnim koeficijentima. 
 \begin{enumerate}
 \item Napisati funkciju koja sa standardnog ulaza učitava polinome sve do 
-      kraja ulaza. Polinomi su zadati stepenom i koeficijentima. Funkcija kao 
+      kraja ulaza. Polinomi su zadati stepenom i koeficijentima počevši od slobodnog člana. Funkcija kao 
       povratnu vrednost vraća broj učitanih polinoma.
-\item Napisati funkciju koja ispisuje polinom u obliku \kckod{$k_0 \pm
+\item Napisati funkciju koja ispisuje polinom stepena $n$ sa koeficijentima $k_0$, $k_1$, ..., $k_n$ u obliku \kckod{$k_0 \pm
   k_1*x \pm k_2*x$\^{}$2 \pm k_3*x$\^{}$3 \pm \ldots \pm
-  k_n*x$\^{}$n$} (pri čemu je $n$ stepen polinoma). Koeficijente
-  ispisati na dve decimale. Ne ispisivati koeficijente koji su jednaki
-  $0$ i na mesto znaka $\pm$ zapisati odgovarajući znak, $+$ ili $-$,
-  u zavisnosti od znaka odgovarajućeg koeficijenta.
+  k_n*x$\^{}$n$}.  Na mesto znaka $\pm$ zapisati odgovarajući znak, $+$ ili $-$,
+  u zavisnosti od znaka odgovarajućeg koeficijenta. Koeficijente ispisivati na dve decimale. Koeficijente koji su jednaki
+  $0$ ne ispisivati.  
 \item Napisati funkciju koja za dati polinom određuje njegov integral.
 \end{enumerate}
 Napisati program koji učitava polinome do kraja ulaza i za svaki učitani polinom
-  određuje i ispisuje integral tog polinoma. 
+  određuje i ispisuje njegov integral.  
   Pretpostaviti da je maksimalan broj polinoma $100$, a maksimalan stepen polinoma $10$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 

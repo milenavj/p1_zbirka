@@ -108,12 +108,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=PET_04] 
-Napisati program koji učitava dva cela broja $n$ i $m$, $(n \leq m)$ i ispisuje sve
-cele brojeve iz intervala $[n,m]$.
+Napisati program koji učitava dva cela broja $n$ i $m$ $(n \leq m)$ i ispisuje sve
+cele brojeve iz intervala $[n,m]$. Pri rešavanju zadatka: 
 \begin{enumerate}
-\item Koristiti \kckod{while} petlju.
-\item Koristiti \kckod{for} petlju.
-\item Koristiti \kckod{do-while} petlju.
+\item koristiti \kckod{while} petlju
+\item koristiti \kckod{for} petlju
+\item koristiti \kckod{do-while} petlju
  \end{enumerate}
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -410,7 +410,7 @@ o godišnjem poslovanju te firme. Firma je tokom godine imala $t$ transakcija. T
 su predstavljene celim brojevima i u slučaju da je vrednost transakcije pozitivna, ta transakcija označava
 prihod firme, a u slučaju da je negativna rashod. 
 Napisati program koji učitava nenegativan ceo broj $t$ i podatke o $t$ transakcija i
-zatim izračunava i ispisuje ukupan prihod, ukupan rashod i zaradu, odnosno gubitak koji je firma ostvarila
+zatim izračunava i ispisuje ukupan prihod, ukupan rashod i zaradu, odnosno gubitak, koji je firma ostvarila
 tokom godine. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
@@ -531,7 +531,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n brojeva:}\ulaz:{2 35 5 -175 -20 }#
+#\izlaz{Unesite n brojeva:}\ulaz{2 35 5 -175 -20 }#
 #\izlaz{Suma je -15.}#
 \end{upotreba}
 \end{miditest}
@@ -572,8 +572,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=PET_16] 
-Napisati program koji učitava cele brojeve sve dok se ne unese
-nula i ispisuje proizvod onih unetih brojeva koji su
+Napisati program koji učitava cele brojeve sve do unosa broja nula i ispisuje proizvod onih unetih brojeva koji su
 pozitivni.  
 
 \begin{miditest}
@@ -726,7 +725,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=PET_20] 
-Napisati program koji učitava pozitivan ceo broj $n$, a potom $n$ realnih
+Napisati program koji učitava pozitivan ceo broj $n$, potom $n$ realnih
 brojeva, a zatim određuje i ispisuje koliko puta je prilikom unosa došlo 
 do promene znaka.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
@@ -1002,9 +1001,8 @@ ima više takvih, ispisati prvi.
 \begin{Exercise}[label=PET_25] 
 Vršena su merenja nadmorskih visina na određenom delu teritorije i
 naučnike zanima razlika između najveće i najmanje nadmorske
-visine. Napisati program koji učitava cele brojeve sve do unosa $0$
-koji označavaju nadmorske visine i ispisuje razliku najveće i najmanje
-nadmorske visine.
+visine. Napisati program koji učitava cele brojeve koji predstavljaju nadmorske visine 
+sve do unosa broja nula i ispisuje razliku najveće i najmanje nadmorske visine.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1255,7 +1253,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=PET_31] 
-Fibonačijev niz počinje ciframa $0$ i $1$, a svaki član se dobija
+Fibonačijev niz počinje članovima $0$ i $1$, a svaki naredni član se dobija
 kao zbir prethodna dva. Napisati program koji učitava nenegativan ceo broj
 $n$ i određuje i ispisuje $n$-ti član Fibonačijevog niza. Niz se indeksira
 počevši od nule.
@@ -1779,12 +1777,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[difficulty=1, label=PET_42] 
-Napisati program koji učitava realne brojeve $x$ i $eps$ i sa zadatom
-tačnošću $eps$ izračunava i ispisuje sumu
-$S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$.  Izračunati sumu u
-odnosu na tačnost $eps$ znači uporediti poslednji član sume sa $eps$ i
-ukoliko je taj poslednji član manji od $eps$ prekinuti dalja
-izračunavanja.  
+Napisati program koji učitava realne brojeve $x$ i $eps$ i sa tačnošću $eps$ izračunava i ispisuje sumu
+$S=1+x+\frac{x^2}{2!}+\frac{x^3}{3!}+\ldots$.  Za sumu S se kaže da je izračunata sa 
+tačnošću $eps$ ako je apsolutna vrednost poslednjeg člana sume manja od $eps$.   
 \uputstvo{Prilikom računanja sume koristiti prethodni
 izračunati član sume u računanju sledećeg člana sume. Naime, ako je
 izračunat član sume $\frac{x^n}{n!}$ na osnovu njega se lako može
@@ -2534,7 +2529,7 @@ odgovarajuću sliku. \napomena{Pretpostaviti da je unos ispravan.}
 
 \item
  Slika predstavlja trougao sastavljen od zvezdica. Trougao se dobija spajanjem
-  dva pravougla trougla čija kateta je dužine $n$, pri čemu je prav
+  dva pravougla trougla kateta dužine $n$, pri čemu je prav
   ugao prvog trougla u njegovom donjem levom uglu, dok je prav ugao
   drugog trougla u njegovom gornjem levom uglu, a spajanje se vrši po
   horiznotalnoj kateti. 
@@ -2800,7 +2795,7 @@ Napisati program koji učitava pozitivan ceo broj $n$, a potom iscrtava odgovara
 \fi
 
 \begin{Exercise}[difficulty=1, label=PET_57] 
-Napisati program koji učitava pozitivan ceo broj $n$, i iscrtava sliku koja se
+Napisati program koji učitava pozitivan ceo broj $n$ i iscrtava sliku koja se
 dobija na sledeći način: u prvom redu je jedna zvezdica, u drugom redu
 su dve zvezdice razdvojene razmakom, treći red je sastavljen od
 zvezdica i iste je dužine kao i drugi red, četvrti red se sastoji od
@@ -2866,7 +2861,7 @@ svaka strana sastavljena od $m$ zvezdica razdvojenih prazninom.
 \fi
 
 \begin{Exercise}[difficulty=1, label=PET_59] 
-Napisati program koji učitava pozitivan ceo broj $n$ i štampa romb
+Napisati program koji učitava pozitivan ceo broj $n$ i iscrtava romb
 sastavljen od minusa u pravougaoniku sastavljenom od zvezdica.
 \napomena{Pretpostaviti da je unos ispravan.}
 

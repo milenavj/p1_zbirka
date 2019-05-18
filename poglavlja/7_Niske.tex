@@ -41,7 +41,7 @@
 
 
 \begin{Exercise}[label=NIS_02] 
- Napisati funkciju \kckod{void ubaci\_zvezdice(char s[])} koja menja nisku $s$ tako što u njoj svaki drugi karakter zameni zvezdicom. 
+ Napisati funkciju \kckod{void ubaci\_zvezdice(char s[])} koja menja nisku $s$ tako što u njoj svaki drugi karakter zamenjuje zvezdicom. 
 Napisati program koji učitava nisku maksimalne dužine 20 karaktera i ispisuje izmenjenu nisku. 
  
 \begin{minitest}
@@ -125,10 +125,10 @@ razliku između malih i velikih slova.
 \begin{Exercise}[label=NIS_04] 
 Napisati program koji proverava da li se uneta niska završava samoglasnikom. Napisati funkcije:
 \begin{enumerate}
-\item  \kckod{int samoglasnik(char c)} --- ispituje da li je karakter $c$ samoglasnik;
-\item  \kckod{int samoglasnik\_na\_kraju(char s[])} --- ispituje da li se niska $s$ završava samoglasnikom.
+\item  \kckod{int samoglasnik(char c)} koja ispituje da li je karakter $c$ samoglasnik i vraća 1 ako jeste ili 0 ako nije.
+\item  \kckod{int samoglasnik\_na\_kraju(char s[])}  koja ispituje da li se niska $s$ završava samoglasnikom. 
 \end{enumerate}
-Pretpostaviti da je uneta niska maksimalne dužine 20 karaktera. 
+Program učitava reč maksimalne dužine 20 karaktera i ispisuje da li se reč završava samoglasnikom ili ne.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -207,8 +207,8 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera proverav
 
 
 \begin{Exercise}[label=NIS_06] 
-Napisati program koji za učitanu nisku $s$ i karakter $c$ ispituje da li se $c$ pojavljuje u niski $s$. 
-Ako se pojavljuje, program treba da ispiše indeks prvog pojavljivanja karaktera $c$ u niski $s$, a u suprotnom -1. 
+Napisati program koji za učitanu nisku $s$ i karakter $c$ ispituje da li se karakter $c$ pojavljuje u niski $s$. 
+Ako je to slučaj, program treba da ispiše indeks prvog pojavljivanja karaktera $c$ u niski $s$, a u suprotnom -1. 
 Pretpostaviti da niska može da ima najviše 20 karaktera.
 
 \begin{minitest}
@@ -253,7 +253,7 @@ Pretpostaviti da niska može da ima najviše 20 karaktera.
 
 \begin{Exercise}[label=NIS_07] 
  Napisati funkciju \kckod{int podniska(char s[], char t[])} koja proverava da li je niska $t$ podniska niske $s$. 
- Napisati program koji učitava niske $s$ i $t$ maksimalne dužine 10 karaktera i ispisuje da li je niska $t$ podniska niske $s$.
+ Napisati program koji učitava dve niske maksimalne dužine 10 karaktera i ispisuje da li je druga niska podniska prve.
  
 \begin{minitest}
 \begin{upotreba}{1}
@@ -441,7 +441,7 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera ispisuje
 
 
 \begin{Exercise}[label=NIS_12]  Napisati program koji za unetu reč maksimalne dužine 20 karaktera i pozitivan broj $n$ 
-manji od $10$, formira rezultujuću reč tako što unetu reč kopira $n$ puta, pri čemu se između svaka dva kopiranja umeće crtica. 
+manji od $10$, formira rezultujuću reč tako što unetu reč kopira $n$ puta pri čemu između svaka dva kopiranja umeće crtica. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{minitest}
@@ -712,10 +712,10 @@ Napisati funkciju \kckod{int ucitaj\_liniju(char s[], int n)}
 koja učitava liniju maksimalne dužine $n$ u nisku $s$
 i vraća dužinu učitane linije.  
 Napisati program koji učitava linije
-do \kckod{EOF} i ispisuje najdužu liniju i njenu dužinu. Ukoliko
+do kraja ulaza i ispisuje najdužu liniju i njenu dužinu. Ukoliko
 ima više linija maksimalne dužine, ispisati prvu. 
 Pretpostaviti da svaka linija sadrži najviše 80 karaktera.
-\napomena{Linija može da sadrži blanko znakove, ali ne sadrži znak za novi red ili \kckod{EOF}.}
+\napomena{Linija može da sadrži blanko znakove, ali ne može sadržati znak za novi red ili \kckod{EOF}.}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -761,7 +761,7 @@ Pretpostaviti da svaka linija sadrži najviše 80 karaktera.
 \begin{Exercise}[difficulty=1, label=NIS_20] 
 Napisati funkcije za rad sa rečenicama:
 \begin{enumerate}
-\item \kckod{int procitaj\_recenicu(char s[], int n)} koja učitava rečenicu i smešta je u nisku $s$. 
+\item \kckod{int procitaj\_recenicu(char s[], int n)} koja učitava rečenicu sa ulaza i smešta je u nisku $s$. 
 Funkcija vraća dužinu učitane rečenice. Učitavanje se završava nakon učitanog karaktera \kckod{.}, nakon $n$ učitanih karaktera ili ako
 se dođe do kraja ulaza.
 \item \kckod{void prebroj(char s[], int *broj\_malih, int *broj\_velikih)} koja prebrojava mala i velika slova u niski $s$.
@@ -803,7 +803,7 @@ Pretpostaviti da jedna rečenica sadrži najviše 80 karaktera.
 #\naslovInt#
 #\izlaz{Unesite tekst:}#
 #\ulaz{AAAbbb. bbbAAA. AbAbAb.}#
-#\izlaz{AAAbbb}#
+#\izlaz{AAAbbb.}#
 \end{upotreba}
 \end{minitest}
 
@@ -967,8 +967,8 @@ ovde prebrojavaju karakteri koji se ne nalaze u zapisu niske s.
 \begin{Exercise}[label=NIS_24] 
 Napisati funkciju \kckod{char* strstr\_klon(char s[], char t[])} koja vraća pokazivač na prvo
 pojavljivanje niske $t$ u niski $s$ ili $NULL$ ukoliko se niska $t$ ne pojavljuje u niski $s$. 
-Napisati program koji testira napisanu funkciju tako što učitava pet linija i ispisuje sve 
-redne brojeve linija koje sadr\v ze nisku $program$. Ukoliko ne postoji linija sa niskom $program$, 
+Napisati program koji testira napisanu funkciju tako što učitava pet linija i ispisuje redne brojeve svih 
+linija koje sadr\v ze nisku $program$. Ukoliko ne postoji linija sa niskom $program$, 
 ispisati odgovarajuću poruku. 
 Pretpostaviti da je svaka linija maksimalne dužine 100 karaktera kao i da se linije numerišu od broja 1. 
 
@@ -1147,9 +1147,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %\subsection{Sifriranja}
 
 \begin{Exercise}[label=NIS_28] 
-Napisati program koji šifrira unetu nisku tako što svako slovo zamenjuje 
-sledećim slovom abecede (slova ’z' i 'Z' zamenjuje redom sa 'a' i ’A’),
-a ostale karaktere ostavlja nepromenjene. 
+Napisati program koji šifuje unetu nisku tako što svako slovo zamenjuje 
+sledećim slovom abecede (slova ’z' i 'Z' zamenjuje, redom, sa 'a' i ’A’),
+a ostale karaktere ostavlja nepromenjene. Ovako dobijenu nisku ispisati. 
 Pretpostaviti da uneta niska nije duža od 20 karaktera.
 
 \begin{minitest}
@@ -1287,7 +1287,7 @@ Napisati program za rad sa brojevima zapisanim u različitim brojevnim sistemima
 određuje dekadnu vrednost zapisa datog neoznačenog broja $broj$ u datoj osnovi. 
 \item Napisati funkciju \kckod{void iz\_dekadnog\_sistema(unsigned int broj, unsigned int osnova, char rezultat[])} 
 koja datu dekadnu vrednost $broj$ zapisuje u datoj osnovi $osnovi$ i smešta rezultat u nisku $rezultat$. 
-Pretpostaviti da je $0 < b \leq 16$.  
+Pretpostaviti da je $0 < osnova \leq 16$.  
 \end{enumerate}
 
 Napisati program koji učitava broj $n$ i osnove $o_1$ i $o_2$ i ispisuje dekadnu vrednost broja $n$ u osnovi $o_1$, kao i
