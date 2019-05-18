@@ -38,7 +38,7 @@ int podniska(char s[], char t[]){
 }
 
 
-int main(){
+int main() {
   char s[MAX], t[MAX];
   
   /*Ucitavamo prvu nisku*/

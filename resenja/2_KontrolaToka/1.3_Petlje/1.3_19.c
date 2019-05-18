@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   float cena, suma = 0;
   int broj_artikla = 0;
 
-  /* Cene se ucitavaju sve do unosa broja 0. */
+  /* Ucitavanje cena sve do unosa broja 0. */
   printf("Unesite cene: ");
   while (1) {
     scanf("%f", &cena);
@@ -14,16 +13,16 @@ int main()
     if (cena == 0)
       break;
 
-    /* Vrsi se provera ispravnosti ulaza. */
+    /* Provera ispravnosti ulaza. */
     if (cena < 0) {
       printf("Greska: neispravan unos cene.\n");
       return -1;
     }
 
-    /* Suma se uvecava za vrednost unete cene. */
+    /* Uvecavanje sume za vrednost unete cene. */
     suma += cena;
 
-    /* Broj unetih artikala se uvecava za 1. */
+    /* Uvecavanje broja unetih artikala za 1. */
     broj_artikla++;
   }
 

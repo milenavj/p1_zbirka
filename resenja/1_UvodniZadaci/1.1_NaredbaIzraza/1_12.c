@@ -1,24 +1,20 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  unsigned int x;
-  unsigned int obrnuto_x;
-  char cifra_jedinice;
-  char cifra_desetice;
-  char cifra_stotine;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  unsigned int x, obrnuto_x;
+  char cifra_jedinice, cifra_desetice, cifra_stotine;
 
-  /* Ucitava se neoznacen trocifreni broj. */
+  /* Ucitavanje neoznacenog trocifrenog broja. */
   printf("Unesite trocifreni broj: ");
   scanf("%u", &x);
 
-  /* Izdvajaju se pojedinacne cifre broja. */
+  /* Izdvajanje pojedinacnih cifara broja. */
   cifra_jedinice = x % 10;
   cifra_desetice = (x / 10) % 10;
   cifra_stotine = x / 100;
 
-  /* Formira se rezultujuci broj. */
+  /* Formiranje rezultujuceg broja. */
   obrnuto_x = cifra_jedinice * 100 + cifra_desetice * 10 + cifra_stotine;
 
   /* Ispis rezultata. */

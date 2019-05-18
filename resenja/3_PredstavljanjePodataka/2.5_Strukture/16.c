@@ -9,8 +9,7 @@ typedef struct {
   char smer;
 } Sifra;
 
-char sifruj(char c, Sifra s)
-{
+char sifruj(char c, Sifra s) {
   int pomeraj;
 
   if (!isalnum(c))
@@ -83,8 +82,7 @@ char sifruj(char c, Sifra s)
   }
 }
 
-int main()
-{
+int main() {
   char linija[BROJ_KARAKTERA];
   Sifra sifre[BROJ_SIFRI];
   char c;

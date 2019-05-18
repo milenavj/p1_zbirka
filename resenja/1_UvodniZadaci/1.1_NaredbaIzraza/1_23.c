@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   float a, povrsina, obim;
 
-  /* Ucitava se duzina stranice. */
+  /* Ucitavanje duzina stranice. */
   printf("Unesite duzinu stranice trougla: ");
   scanf("%f", &a);
 
-  /* Racunaju se obim i povrsina. */
+  /* Racunanje obima i povrsine. */
   obim = 3 * a;
   povrsina = (a * a * sqrt(3)) / 4;
 

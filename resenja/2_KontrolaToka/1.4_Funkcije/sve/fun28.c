@@ -1,8 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /* Funkcija proverava da li je godina prestupna. */
-int prestupna(int godina)
-{
+int prestupna(int godina) {
   if ((godina % 100 != 0 && godina % 4 == 0) || godina % 400 == 0)
     return 1;
   else
@@ -10,8 +9,7 @@ int prestupna(int godina)
 }
 
 /* Funkcija odredjuje broj dana u datom mesecu. */
-int broj_dana(int mesec, int godina)
-{
+int broj_dana(int mesec, int godina) {
   switch (mesec) {
   case 1:
   case 3:
@@ -37,8 +35,7 @@ int broj_dana(int mesec, int godina)
 
 /* Funkcija proverava da li je datum ispravan. Ako je datum
    ispravan funkcija vraca 1, inace vraca 0. */
-int ispravan(int dan, int mesec, int godina)
-{
+int ispravan(int dan, int mesec, int godina) {
   /* Ako je godina negativna, datum nije ispravan. */
   if (godina < 0)
     return 0;
@@ -56,8 +53,7 @@ int ispravan(int dan, int mesec, int godina)
 }
 
 /* Funkcija odredjuje koliko dana je proteklo od pocetka godine. */
-int od_nove_godine(int dan, int mesec, int godina)
-{
+int od_nove_godine(int dan, int mesec, int godina) {
   int suma_dana = 0, i;
 
   /* Za sve mesece pre datog datuma dodaje se broj dana za dati
@@ -71,8 +67,7 @@ int od_nove_godine(int dan, int mesec, int godina)
 }
 
 /* Funkcija odredjuje koliko dana ima do kraja godine. */
-int do_kraja_godine(int dan, int mesec, int godina)
-{
+int do_kraja_godine(int dan, int mesec, int godina) {
   int suma_dana = 0, i;
 
   /* Za sve mesece posle datog datuma dodaje se broj dana za dati
@@ -87,8 +82,7 @@ int do_kraja_godine(int dan, int mesec, int godina)
 /* Funkcija vraca 1 ako je prvi datum pre drugog datuma. U
    suprotnom vraca 0. */
 int prethodi(int dan1, int mesec1, int godina1, int dan2,
-             int mesec2, int godina2)
-{
+             int mesec2, int godina2) {
   if (godina1 < godina2)
     return 1;
   else if (godina1 > godina2)
@@ -104,8 +98,7 @@ int prethodi(int dan1, int mesec1, int godina1, int dan2,
 }
 
 /* Funkcija vraca broj dana u datoj godini. */
-int broj_dana_u_godini(int godina)
-{
+int broj_dana_u_godini(int godina) {
   if (prestupna(godina))
     return 366;
   else
@@ -118,10 +111,9 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
   int pom, i;
   int suma_dana = 0;
 
-  /* Vrsi se provera koji od datuma je ranije i ukoliko je to
-     potrebno, razmenjuju se tako da broj 1 ide uz prvi datum. */
-  if (!prethodi(dan1, mesec1, godina1, dan2, mesec2, godina2)) 
-  {
+  /* Provera koji od datuma je ranije i ukoliko je to potrebno,
+     razmenjuju se tako da broj 1 ide uz prvi datum. */
+  if (!prethodi(dan1, mesec1, godina1, dan2, mesec2, godina2)) {
     pom = dan1;
     dan1 = dan2;
     dan2 = pom;
@@ -136,8 +128,7 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
   }
 
   /* Ako su godine razlicite. */
-  if (godina1 != godina2) 
-  {
+  if (godina1 != godina2) {
     /* Za manji datum dodaje se broj dana do kraja godine. */
     suma_dana = do_kraja_godine(dan1, mesec1, godina1);
 
@@ -150,8 +141,7 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
     suma_dana += od_nove_godine(dan2, mesec2, godina2);
   }
   /* Ako su godine iste, ali meseci razliciti. */
-  else if (mesec1 != mesec2) 
-  {
+  else if (mesec1 != mesec2) {
     /* Dodaje se broj dana do kraja prvog meseca. */
     suma_dana = broj_dana(mesec1, godina1) - dan1;
 
@@ -171,22 +161,20 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
   return suma_dana;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int dan1, mesec1, godina1, dan2, mesec2, godina2;
 
-  /* Ucitavaju se datumi. */
+  /* Ucitavanje datuma. */
   printf("Unesite prvi datum:");
   scanf("%d.%d.%d.", &dan1, &mesec1, &godina1);
 
   printf("Unesite drugi datum:");
   scanf("%d.%d.%d.", &dan2, &mesec2, &godina2);
 
-  /* Vrsi se provera ispravnosti unetih datuma. */
+  /* Provera ispravnosti unetih datuma. */
   if (!ispravan(dan1, mesec1, godina1)
-      || !ispravan(dan2, mesec2, godina2)) 
-  {
+      || !ispravan(dan2, mesec2, godina2)) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }

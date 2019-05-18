@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   char op;
   int x, y;
 
-  /* Ucitava se izraz. */
+  /* Ucitavanje izraza. */
   printf("Unesite izraz: ");
   scanf("%d %c %d", &x, &op, &y);
 
-  /* U zavisnosti od unete operacije, racuna se vrednost izraza. */
+  /* Racunanje vrednosti izraza u zavisnosti od unete operacije. */
   switch (op) {
   case '+':
     printf("Rezultat je: %d\n", x + y);

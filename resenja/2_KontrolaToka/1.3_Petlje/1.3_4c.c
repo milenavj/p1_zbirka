@@ -1,16 +1,15 @@
 /* Resenje pod c). */
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, m, i;
 
-  /* Ucitavaju se granice intervala. */
+  /* Ucitavanje granice intervala. */
   printf("Unesite granice intervala: ");
   scanf("%d%d", &n, &m);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (m < n) {
     printf("Greska: pogresan unos granica.\n");
     return -1;
@@ -18,11 +17,11 @@ int main()
 
   /* Inicijalizacija brojaca na levu granicu intervala. */
   i = n;
- 
-  /* Uslov petlje se proverava na kraju svake iteracije.
-     Zbog toga se do while petlja izvrsava bar jednom, cak i u
-     slucaju da uslov petlje nikada nije ispunjen. */
-  do {                          
+
+  /* Uslov petlje se proverava na kraju svake iteracije. Zbog toga
+     se do while petlja izvrsava bar jednom, cak i u slucaju da
+     uslov petlje nikada nije ispunjen. */
+  do {
     printf("%d ", i);
     i++;
   }

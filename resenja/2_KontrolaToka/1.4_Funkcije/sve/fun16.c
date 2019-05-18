@@ -3,8 +3,7 @@
 
 /* Funkcija proverava da li se cifre u zapisu broja nalaze u
    neopadajucem poretku. */
-int neopadajuce(int n)
-{
+int neopadajuce(int n) {
   int tekuca_cifra, prethodna_cifra;
   n = abs(n);
 
@@ -14,12 +13,11 @@ int neopadajuce(int n)
   n /= 10;
 
   /* U petlji se proverava poredak svake dve susedne cifre. Ukoliko
-     se detektuje da je poredak narusen, izlazi se iz funkcije i 
+     se detektuje da je poredak narusen, izlazi se iz funkcije i
      vraca se vrednost 0. */
-  while (n) 
-  {
+  while (n) {
     tekuca_cifra = n % 10;
-    
+
     if (tekuca_cifra > prethodna_cifra)
       return 0;
 
@@ -34,17 +32,15 @@ int neopadajuce(int n)
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebne promenljive. */
   int n;
-  
-  /* Ucitava se vrednost broja n. */
+
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj: ");
   scanf("%d", &n);
-  
-  /* U zavisnosti od povratne vrednosti napisane funkcije vrsi
-     se ispis odgovarajuce poruke. */
+
+  /* Ispis odgovarajuce poruke. */
   if (neopadajuce(n))
     printf("Cifre su u neopadajucem poretku.\n");
   else

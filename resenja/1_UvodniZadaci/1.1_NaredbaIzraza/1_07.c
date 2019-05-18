@@ -1,30 +1,28 @@
 #include <stdio.h>
 
-int main()
-{
-
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   unsigned int poletanje, poletanje_sat, poletanje_minut;
   unsigned int sletanje, sletanje_sat, sletanje_minut;
   unsigned int duzina, duzina_sat, duzina_minut;
 
-  /* Ucitavaju se sat i minut vremena poletanja. */
+  /* Ucitavanje vremena poletanja. */
   printf("Unesite vreme poletanja: ");
   scanf("%u%u", &poletanje_sat, &poletanje_minut);
 
-  /* Ucitavaju se sat i minut vremena sletanja. */
+  /* Ucitavanje vremena sletanja. */
   printf("Unesite vreme sletanja: ");
   scanf("%u%u", &sletanje_sat, &sletanje_minut);
 
-  /* Obe vrednosti se pretvaraju u sekunde, 
-     kako bi se lakse izracunala razlika. */
+  /* Pretvaranje oba vremena u sekunde radi lakseg racunanja 
+     razlike. */
   poletanje = poletanje_sat * 3600 + poletanje_minut * 60;
   sletanje = sletanje_sat * 3600 + sletanje_minut * 60;
 
   /* Racunanje razlike u sekundama izmedju sletanja i poletanja. */
   duzina = sletanje - poletanje;
 
-  /* Razlika u sekundama se pretvara u razliku u satima i minutima.
+  /* Pretvaranje razlike u sekundama u razliku u satima i minutima.
      Razlika u satima se dobija celobrojnim deljenjem broja sekundi
      sa 3600.
      Preostali broj minuta se dobija deljenjem preostalog broja 

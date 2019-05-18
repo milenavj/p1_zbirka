@@ -1,34 +1,33 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int n, x, i;
   int zbir = 0;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */
+  /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Ucitava se n brojeva i izracunava se trazeni zbir. */
+  /* Ucitavanje brojeva i racunanje trazenog zbira. */
   printf("Unesite n brojeva: ");
   i = 0;
   while (i < n) {
-    /* Ucitava se jedan broj. */
+    /* Ucitavanje jednog broja. */
     scanf("%d", &x);
 
-    /* Ako je ucitani broj negativan i neparan, 
-       dodaje se na zbir. */
+    /* Ako je ucitani broj negativan i neparan, dodaje se na 
+       zbir. */
     if (x < 0 && x % 2 != 0)
       zbir = zbir + x;
 
-    /* Uvecava se brojac. */
+    /* Uvecavanje brojaca. */
     i++;
   }
 

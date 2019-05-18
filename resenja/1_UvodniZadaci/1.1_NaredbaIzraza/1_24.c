@@ -1,20 +1,19 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   float a, b, c;
   float obim, s, povrsina;
 
-  /* Ucitavaju se duzine stranica. */
+  /* Ucitavanje duzina stranica. */
   printf("Unesite duzine stranica trougla:\n");
   scanf("%f%f%f", &a, &b, &c);
 
-  /* Racuna se obim. */
+  /* Racunanje obima. */
   obim = a + b + c;
 
-  /* Racuna se povrsina koriscenjem Heronovog obrasca. */
+  /* Racunanje povrsine koriscenjem Heronovog obrasca. */
   s = obim / 2;
   povrsina = sqrt(s * (s - a) * (s - b) * (s - c));
 

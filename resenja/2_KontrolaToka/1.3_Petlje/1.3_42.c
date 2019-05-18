@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int i;
-  float suma, clan;
-  float x, eps;
+  float suma, clan, x, eps;
 
-  /* Ucitavaju se vrednosti x i eps. */
+  /* Ucitavanje vrednosti x i eps. */
   printf("Unesite x: ");
   scanf("%f", &x);
 
@@ -20,9 +18,9 @@ int main()
   clan = 1;
   i = 1;
 
-  /* U svakoj iteraciji na sumu se dodaje prethodno izracunati
-     clan sume i zatim se racuna sledeci clan. Petlja se prekida
-     kada vrednost sledeceg clana postane manja ili jednaka eps. */
+  /* U svakoj iteraciji na sumu se dodaje prethodno izracunati clan 
+     sume i zatim se racuna sledeci clan. Petlja se prekida kada
+     vrednost sledeceg clana postane manja ili jednaka eps. */
   while (clan > eps) {
     suma += clan;
     clan = clan * x / i;
@@ -30,7 +28,7 @@ int main()
   }
 
   /* Ispis rezultata. */
-  printf("S=%f\n", suma);
+  printf("S = %f\n", suma);
 
   return 0;
 }

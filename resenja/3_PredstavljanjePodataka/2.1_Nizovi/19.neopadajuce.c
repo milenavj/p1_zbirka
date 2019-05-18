@@ -4,51 +4,43 @@
 #define MAKS 300
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(int a[], int n)
-{
-  int i;  
+void ucitaj(int a[], int n) {
+  int i;
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 }
 
-/* Funkcija vraca 1 ako je niz uredjen neopadajuce, 
-   a nulu inace. */
-int uredjen_neopadajuce(int niz[], int n)
-{
+/* Funkcija proverava da li je niz uredjen neopadajuce. */
+int uredjen_neopadajuce(int niz[], int n) {
   int i;
   for (i = 0; i < n - 1; i++)
-  {
     if (niz[i] > niz[i + 1])
       return 0;
-  }
-  
+
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, niz[MAKS];
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   ucitaj(niz, n);
 
   /* Ispis rezultata. */
-  if(uredjen_neopadajuce(niz, n))
+  if (uredjen_neopadajuce(niz, n))
     printf("Niz jeste uredjen neopadajuce.\n");
   else
     printf("Niz nije uredjen neopadajuce.\n");
-  
+
   exit(EXIT_SUCCESS);
 }

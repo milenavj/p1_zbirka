@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija i inicijalizacija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije i inicijalizacije potrebnih promenljivih. */
   int n, i;
   int broj_a = 0, broj_e = 0, broj_i = 0, broj_o = 0, broj_u = 0;
   char c;
 
-  /* Ucitava se broj karaktera. */
+  /* Ucitavanje broja karaktera. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */  
+  /* Provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
@@ -20,10 +19,10 @@ int main()
   /* Kako je korisnik nakon unosa broja n uneo oznaku za novi red,
      potrebno je preskociti taj novi red jer bi u suprotnom on bio
      ucitan kao prvi od n karaktera (oznaka za novi red je
-     regularan karakter kao sto je to 'a' ili ' ').*/
+     regularan karakter kao sto je to 'a' ili ' '). */
   getchar();
-  
-  /* Ucitavaju se karakteri i broje se samoglasnici. */
+
+  /* Ucitavanje karaktera i brojanje samoglasnika. */
   for (i = 0; i < n; i++) {
     scanf("%c", &c);
 

@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   unsigned int n, novibroj;
   unsigned int levi, desni, m;
 
-  /* Ucitavaju se brojevi n i m. */
+  /* Ucitavanje brojeva n i m. */
   printf("Unesite pozitivan ceo broj: ");
   scanf("%u", &n);
   printf("Unesite pozitivan dvocifreni broj: ");

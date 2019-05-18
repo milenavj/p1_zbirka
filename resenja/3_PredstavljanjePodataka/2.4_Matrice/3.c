@@ -3,24 +3,19 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije m*n. */
-void ucitaj(int a[][MAKS], int m, int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int m, int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < m; i++)
     for (j = 0; j < n; j++)
       scanf("%d", &a[i][j]);
 }
 
-/* Funkcija ispisuje elemente matrice dimenzije m*n. */
-void ispisi(int a[][MAKS], int m, int n)
-{
+/* Funkcija ispisuje elemente matrice dimenzije mxn. */
+void ispisi(int a[][MAKS], int m, int n) {
   int i, j;
-
-  for (i = 0; i < m; i++) 
-  {
+  for (i = 0; i < m; i++) {
     for (j = 0; j < n; j++)
       printf("%d ", a[i][j]);
     printf("\n");
@@ -28,30 +23,24 @@ void ispisi(int a[][MAKS], int m, int n)
 }
 
 /* Funkcija razmenjuje elemente k-te i t-te vrste. */
-void razmeni(int a[][MAKS], int m, int n, int k, int t)
-{
+void razmeni(int a[][MAKS], int m, int n, int k, int t) {
   int j, pom;
-
-  for (j = 0; j < n; j++) 
-  {
+  for (j = 0; j < n; j++) {
     pom = a[k][j];
     a[k][j] = a[t][j];
     a[t][j] = pom;
   }
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
-  int m, n;
-  int k, t;
+  int m, n, k, t;
 
-  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice: ");
   scanf("%d%d", &m, &n);
-  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) 
-  {
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
@@ -62,8 +51,7 @@ int main()
   /* Ucitavanje indeksa vrsta i provera ispravnosti ulaza. */
   printf("Unesite indekse vrsta: ");
   scanf("%d%d", &k, &t);
-  if (k < 0 || k >= m || t < 0 || t >= m) 
-  {
+  if (k < 0 || k >= m || t < 0 || t >= m) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

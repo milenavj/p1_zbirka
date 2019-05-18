@@ -31,7 +31,7 @@ int rotacija(int n){
   return znak* ((broj%(int)pow(10, br))*10 + n);
 }
 
-int main(){
+int main() {
   
   int n;
   while(1){

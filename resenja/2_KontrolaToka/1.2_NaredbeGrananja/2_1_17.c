@@ -1,18 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   float xa, ya, xb, yb;
 
-  /* Ucitavaju se koordinate tacaka A i B. */
+  /* Ucitavanje koordinata tacaka A i B. */
   printf("Unesite koordinate tacke A: ");
   scanf("%f%f", &xa, &ya);
 
   printf("Unesite koordinate tacke B: ");
   scanf("%f%f", &xb, &yb);
 
-  /* Proverava se da li su obe tacke u istom kvadrantu. */
+  /* Provera da li su obe tacke u istom kvadrantu i ispis
+     odgovarajuce poruke. */
   if ((xa >= 0 && ya >= 0 && xb >= 0 && yb >= 0) ||
       (xa <= 0 && ya >= 0 && xb <= 0 && yb >= 0) ||
       (xa >= 0 && ya <= 0 && xb >= 0 && yb <= 0) ||

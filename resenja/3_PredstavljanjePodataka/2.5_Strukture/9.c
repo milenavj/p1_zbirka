@@ -10,14 +10,12 @@ typedef struct {
 } Lopta;
 
 /* Funkcija racuna zapreminu lopte. */
-float zapremina(const Lopta* l)
-{
+float zapremina(const Lopta *l) {
   return pow(l->poluprecnik, 3) * 4 / 3 * M_PI;
 }
 
 /* Funkcija racuna zbir zapremina svih lopti u nizu. */
-float ukupna_zapremina(Lopta lopte[], int n)
-{
+float ukupna_zapremina(Lopta lopte[], int n) {
   int i;
   float ukupno = 0;
 
@@ -29,31 +27,26 @@ float ukupna_zapremina(Lopta lopte[], int n)
 
 /* Funkcija broji lopte cija je boja jednaka boji koja je
    prosledjena kao argument funkcije. */
-int broj_lopti_u_boji(Lopta lopte[], int n, unsigned boja)
-{
-  int br = 0;
-  int i;
+int broj_lopti_u_boji(Lopta lopte[], int n, unsigned boja) {
+  int brojac = 0, i;
 
   for (i = 0; i < n; i++)
     if (lopte[i].boja == boja)
-      br++;
+      brojac++;
 
-  return br;
+  return brojac;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   Lopta lopte[MAKS];
-  int n;
-  int i;
+  int i, n;
   unsigned boja;
 
   /* Ucitavanje broja lopti i provera ispravnosti ulaza. */
   printf("Unesite broj lopti: ");
   scanf("%d", &n);
-  if (n < 0 || n > MAKS) 
-  {
+  if (n < 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
@@ -61,12 +54,10 @@ int main()
   /* Ucitavanje lopti u niz. */
   printf("Unesite dalje poluprecnike i boje lopti "
          "(1-plava, 2-zuta, 3-crvena, 4-zelena):\n");
-  for (i = 0; i < n; i++) 
-  {
+  for (i = 0; i < n; i++) {
     printf("%d. lopta: ", i + 1);
     scanf("%d%u", &lopte[i].poluprecnik, &boja);
-    if(boja < 1 || boja>4)
-    {
+    if (boja < 1 || boja > 4) {
       printf("Greska: neispravan unos.\n");
       exit(EXIT_FAILURE);
     }

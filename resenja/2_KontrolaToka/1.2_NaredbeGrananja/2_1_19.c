@@ -1,16 +1,15 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a1, a2, b1, b2;
 
-  /* Ucitavaju se granice intervala. */
+  /* Ucitavanje granica intervala. */
   printf("Unesite a1, b1, a2 i b2: ");
   scanf("%d%d%d%d", &a1, &b1, &a2, &b2);
 
-  /* U zavisnosti od razlicitih polozaja dva intervala, racunaju se 
-     i ispisuju trazene vrednosti. */
+  /* Racunanje i ispis trazenih vrednosti (u zavisnosti od 
+     razlicitih polozaja dva intervala). */
   if (a1 <= a2 && b1 >= a2) {
     /* I slucaj: intervali se seku i [a1,b1] je pre [a2,b2]. */
     printf("Duzina preseka:: %d\n", b1 - a2);

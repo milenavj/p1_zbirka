@@ -1,61 +1,53 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include <ctype.h>
 
-#define MAX_NAZIV 21
+#define MAKS_IME 21
 
 /* Funkcija ispisuje prosledjenu poruku o gresci na standardni
-   izlaz za greske i izlazi iz programa. */
-void greska(char* poruka)
-{
-  fprintf(stderr, "%s", poruka);
+   izlaz za greske i prekida izvrsavanje programa. */
+void greska(char *poruka) {
+  fprintf(stderr, "%s\n", poruka);
   exit(EXIT_FAILURE);
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   FILE *ulaz, *izlaz;
-  char ime1[MAX_NAZIV], ime2[MAX_NAZIV];
-  char c, karakter;
+  char ime_datoteke1[MAKS_IME], ime_datoteke2[MAKS_IME];
+  char opcija, karakter;
 
   /* Ucitavanje imena datoteka i opcije. */
   printf("Unesite imena datoteka i opciju:");
-  scanf("%s%s %c", ime1, ime2, &c);
+  scanf("%s%s %c", ime_datoteke1, ime_datoteke2, &opcija);
 
   /* Provera ispravnosti opcije. */
-  if (c != 'u' && c != 'l')
-    greska("Greska: neispravan unos.\n");
+  if (opcija != 'u' && opcija != 'l')
+    greska("Greska: neispravan unos.");
 
-  /* Prva datoteka se otvara za citanje i proverava se da li je
-     otvaranje proslo uspesno. */
-  ulaz = fopen(ime1, "r");
+  /* Otvaranje prve datoteke za citanje i provera uspeha. */
+  ulaz = fopen(ime_datoteke1, "r");
   if (ulaz == NULL)
-    greska("Greska: neuspesno otvaranje prve datoteke.\n");
+    greska("Greska: neuspesno otvaranje prve datoteke.");
 
-  /* Druga datoteka se otvara za pisanje i proverava se da li je
-     otvaranje proslo uspesno. */
-  izlaz = fopen(ime2, "w");
+  /* Otvaranje druge datoteke za pisanje i provera uspeha. */
+  izlaz = fopen(ime_datoteke2, "w");
   if (izlaz == NULL)
-    greska("Greska: neuspesno otvaranje druge datoteke.\n");
+    greska("Greska: neuspesno otvaranje druge datoteke.");
 
   /* Ako je uneta opcija 'u', svi karakteri se pretvaraju u velika
      slova, a ako je opcija 'l' u mala. Izmenjena slova se upisuju
      u izlaznu datoteku. */
-  if (c == 'u') 
-  {
+  if (opcija == 'u')
     while ((karakter = fgetc(ulaz)) != EOF)
       fputc(toupper(karakter), izlaz);
-  } 
-  else 
-  {
+  else
     while ((karakter = fgetc(ulaz)) != EOF)
       fputc(tolower(karakter), izlaz);
-  }
-  
-  /* Zatvaraju se datoteke. */  
+
+  /* Zatvaranje datoteka. */
   fclose(ulaz);
   fclose(izlaz);
-  
+
   return 0;
 }

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Duzina niske koja se ucitava, bez terminalne nule. */
+/* Duzina niske koja se ucitava, bez terminirajuce nule. */
 #define MAKS_DUZINA 20
 
 /* Duzine originalne i rezultujuce niske. */
@@ -10,32 +10,29 @@
 
 /* Funkcija formira nisku t od niske s dupliranjem svakog
    karaktera. Npr. abc postaje aabbcc. */
-void dupliranje(char t[], char s[])
-{
+void dupliranje(char t[], char s[]) {
   int i, j;
 
-  /* Brojac i oznacava tekucu poziciju u niski s, a
-     brojac j oznacava tekucu poziciju u niski t. */
-  for (i = 0, j = 0; s[i] != '\0'; i++, j += 2) 
-  {
+  /* Brojac i oznacava tekucu poziciju u niski s, a brojac j
+     oznacava tekucu poziciju u niski t. */
+  for (i = 0, j = 0; s[i] != '\0'; i++, j += 2) {
     t[j] = s[i];
     t[j + 1] = s[i];
   }
 
-  /* Upisuje se terminalna nula na kraj rezultujuce niske. */
+  /* Upisuje se terminirajuca nula na kraj rezultujuce niske. */
   t[j] = '\0';
 }
 
-int main()
-{
-  /* Deklaracija niski. */
+int main() {
+  /* Deklaracija potrebnih promenljivih. */
   char s[MAKS_NISKA], t[MAKS_REZULTAT];
 
-  /* Ucitava se niska. */
+  /* Ucitavanje niske. */
   printf("Unesite nisku: ");
   scanf("%s", s);
 
-  /* Poziva se funkcija za dupliranje. */
+  /* Formiranje niske t. */
   dupliranje(t, s);
 
   /* Ispis rezultata. */

@@ -1,34 +1,33 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  int an;
-  
-  /* Ucitava se vrednost prvog clana. */
+int main() {
+  /* Deklaracija potrebne promenljive. */
+  int a_n;
+
+  /* Ucitavanje vrednosti prvog clana. */
   printf("Unesite prvi clan:");
-  scanf("%d", &an);
-  
-  /* Vrsi se provera ispravnosti ulaza. */  
-  if (an <= 0) {
+  scanf("%d", &a_n);
+
+  /* Provera ispravnosti ulaza. */
+  if (a_n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
- 
-  /* Dok se ne dodje do clana koji je 1, stampa se vrednost
-     trenutnog clana i vrsi se izracunavanje narednog, po
-     zadatoj formuli. */
-  while (an != 1) {
-    printf("%d ", an);
 
-    if (an % 2 != 0)
-      an = (3 * an + 1) / 2;
+  /* Dok se ne dodje do clana koji je 1, stampa se vrednost
+     trenutnog clana i vrsi se izracunavanje narednog, po zadatoj
+     formuli. */
+  while (a_n != 1) {
+    printf("%d ", a_n);
+
+    if (a_n % 2 != 0)
+      a_n = (3 * a_n + 1) / 2;
     else
-      an = an / 2;
+      a_n = a_n / 2;
   }
-  
-  /* Na kraju se stampa i jedinica. */
+
+  /* Ispis jedinice na kraju. */
   printf("1\n");
-  
+
   return 0;
 }

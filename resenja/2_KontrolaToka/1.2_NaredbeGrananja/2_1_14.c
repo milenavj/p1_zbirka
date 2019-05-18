@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  int n;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  int n, broj_parnih, proizvod_parnih;
   char jedinica, desetica, stotina, hiljada;
-  int broj_parnih, proizvod_parnih;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 
@@ -16,13 +14,13 @@ int main()
      se apsolutna vrednost broja n. */
   n = abs(n);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (n < 1000 || n > 9999) {
     printf("Greska: niste uneli cetvorocifreni broj.\n");
     return -1;
   }
 
-  /* Izdvajaju se cifre broja n. */
+  /* Izdvajanje cifara broja n. */
   jedinica = n % 10;
   desetica = (n / 10) % 10;
   stotina = (n / 100) % 10;
@@ -55,11 +53,10 @@ int main()
   }
 
   /* Ispis rezultata. */
-  if (broj_parnih == 0) {
+  if (broj_parnih == 0)
     printf("Nema parnih cifara.\n");
-  } else {
+  else
     printf("Proizvod parnih cifara: %d\n", proizvod_parnih);
-  }
 
   return 0;
 }

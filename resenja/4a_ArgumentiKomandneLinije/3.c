@@ -1,19 +1,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[])
-{
-  /* Deklaracije potrebnih promenljivih. */
+int main(int argc, char *argv[]) {
+  /* Deklaracija potrebnih promenljivih. */
   int n, i;
 
-  /* Proverava se broj argumenata komandne linije. */
-  if (argc != 2) 
-  {
+  /* Provera broja argumenata komandne linije. */
+  if (argc != 2) {
     printf("Greska: neispravan poziv.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitava se broj n i uzima se njegova apsolutna vrednost. */
+  /* Ucitavanje broja n i cuvanje njegove apsolutne vrednosti. */
   n = atoi(argv[1]);
   n = abs(n);
 

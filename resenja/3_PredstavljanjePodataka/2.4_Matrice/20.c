@@ -3,9 +3,8 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije m*n. */
-void ucitaj(int a[][MAKS], int m, int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int m, int n) {
   int i, j;
 
   printf("Unesite elemente matrice:\n");
@@ -16,12 +15,10 @@ void ucitaj(int a[][MAKS], int m, int n)
 
 /* Funkcija formira niz b tako sto element b[i] ima vrednost
    prosecne vrednosti i-te vrste matrice. */
-void kreiraj_niz(int a[][MAKS], int m, int n, double b[])
-{
+void kreiraj_niz(int a[][MAKS], int m, int n, double b[]) {
   int i, j, suma;
 
-  for (i = 0; i < m; i++) 
-  {
+  for (i = 0; i < m; i++) {
     suma = 0;
     for (j = 0; j < n; j++)
       suma += a[i][j];
@@ -30,18 +27,16 @@ void kreiraj_niz(int a[][MAKS], int m, int n, double b[])
   }
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   double b[MAKS];
   int m, n, i;
 
-  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice: ");
   scanf("%d%d", &m, &n);
-  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) 
-  {
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
@@ -49,7 +44,7 @@ int main()
   /* Ucitavanje elemenata matrice. */
   ucitaj(a, m, n);
 
-  /* Formira se niz b. */
+  /* Formiranje niza b. */
   kreiraj_niz(a, m, n, b);
 
   /* Ispis rezultata. */

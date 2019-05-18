@@ -1,20 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 #include<math.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   char c;
   float x1, y1, x2, y2, x3, y3, x4, y4;
   float dab, dad;
   float delta, deltap, deltaq;
-  float O;
-  float k, n;
+  float O, k, n;
 
-  printf("Unesi jedan karakter:");
+  printf("Unesite jedan karakter:");
   scanf("%c", &c);
 
-  printf("Unesi realne koordinate 4 tacke:");
+  printf("Unesite realne koordinate 4 tacke:");
   scanf("%f%f%f%f%f%f%f%f", &x1, &y1, &x2, &y2, &x3, &y3, &x4, &y4);
 
   switch (c) {
@@ -29,15 +27,13 @@ int main()
              "koje su paralelne koordinatnim osama\n");
     break;
   case 'h':
-    /* 
-       Ukoliko se tacke A(x1,y1) i B(x2,y2) ne nalaze na pravoj
+    /* Ukoliko se tacke A(x1,y1) i B(x2,y2) ne nalaze na pravoj
        koja je paralelna x osi, izracunamo k,n za pravu odredjenu
        tackama A(x1,y1) i B(x2,y2) */
     if ((x1 - x2) != 0) {
       k = (y1 - y2) / (x1 - x2);
       n = y1 - k * x1;
-      /* 
-         Proverimo da li tacke C(x3,y3) i D(x4,y4) nalaze na toj
+      /* Proverimo da li tacke C(x3,y3) i D(x4,y4) nalaze na toj
          pravoj */
       if (y3 == x3 * k + n && y4 == x4 * k + n)
         printf("Tacke su kolinearne, pripadaju pravoj "

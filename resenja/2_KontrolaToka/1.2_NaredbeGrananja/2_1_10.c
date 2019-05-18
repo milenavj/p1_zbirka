@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   unsigned int broj_cifara = 0;
   unsigned int proizvod_cifara = 1;
@@ -43,7 +42,7 @@ int main()
      oduzeti ASCII kod karaktera '0'. Na primer, '4'-'0' = 52 - 48
      = 4. */
 
-  /* Racuna se proizvod onih karaktera koji su cifre. */
+  /* Racunanje proizvoda onih karaktera koji su cifre. */
   if (c1 >= '0' && c1 <= '9') {
     proizvod_cifara *= (c1 - '0');
     broj_cifara++;

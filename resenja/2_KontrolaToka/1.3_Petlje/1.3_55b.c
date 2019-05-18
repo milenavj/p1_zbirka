@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   unsigned int n;
   int i, j;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
@@ -15,10 +14,10 @@ int main()
      u svakom redu, i se postavlja na n-1 i smanjuje u svakoj
      iteraciji petlje. */
   for (i = n - 1; i >= 0; i--) {
-    /* Prvo se ispisuju beline koje prethode karakterima *. */
+    /* Ispis belina koje prethode zvezdicama. */
     for (j = 0; j < n - i - 1; j++)
       printf(" ");
-    /* Posle belina se ispisuje potreban broj karaktera *. */
+    /* Ispis potrebnog broja zvezdica. */
     for (j = 0; j < 2 * i + 1; j++)
       printf("*");
     printf("\n");

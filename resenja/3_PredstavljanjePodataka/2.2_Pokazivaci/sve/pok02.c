@@ -8,8 +8,7 @@
    Kako se pomocu naredbe return ne moze vratiti vise od jedne
    vrednosti, neophodno je da se promenljive cije se vrednosti
    racunaju prenesu preko pokazivaca. */
-void rgb_u_cmy(int r, int g, int b, float* c, float* m, float* y)
-{
+void rgb_u_cmy(int r, int g, int b, float *c, float *m, float *y) {
   *c = 1 - r / 255.0;
   *m = 1 - g / 255.0;
   *y = 1 - b / 255.0;
@@ -17,27 +16,24 @@ void rgb_u_cmy(int r, int g, int b, float* c, float* m, float* y)
 
 /* Funkcija koja proverava da li je vrednost boje u ispravnom
    opsegu. */
-int ispravna_rgb_vrednost(int a)
-{
-  if (a < MIN_RGB || a > MAKS_RGB)
+int ispravna_rgb_vrednost(int boja) {
+  if (boja < MIN_RGB || boja > MAKS_RGB)
     return 0;
   return 1;
 }
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int r, g, b;
   float c, m, y;
 
-  /* Ucitava se vrednost boje u rgb formatu. */
+  /* Ucitavanje vrednosti boje u rgb formatu. */
   printf("Unesite boju u rgb formatu: ");
   scanf("%d%d%d", &r, &g, &b);
 
-  /* Vrsi se provera ispravnosti ulaza. */
+  /* Provera ispravnosti ulaza. */
   if (!ispravna_rgb_vrednost(r) || !ispravna_rgb_vrednost(g) ||
-      !ispravna_rgb_vrednost(b))
-  {
+      !ispravna_rgb_vrednost(b)) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

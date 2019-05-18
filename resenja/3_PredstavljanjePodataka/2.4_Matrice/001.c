@@ -4,15 +4,12 @@
 
 #define MAKS 50
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
-  int m, n;
-  int suma = 0;
-  int i, j;
+  int i, j, m, n, suma = 0;
 
-  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {

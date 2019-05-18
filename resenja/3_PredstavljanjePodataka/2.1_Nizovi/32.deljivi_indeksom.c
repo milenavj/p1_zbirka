@@ -4,17 +4,15 @@
 #define MAKS 700
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(int a[], int n)
-{
-  int i;  
+void ucitaj(int a[], int n) {
+  int i;
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 }
 
 /* Funkcija ispisuje elemente niza dimenzije n. */
-void ispisi(int a[], int n)
-{
+void ispisi(int a[], int n) {
   int i;
   for (i = 0; i < n; i++)
     printf("%d ", a[i]);
@@ -25,8 +23,7 @@ void ispisi(int a[], int n)
    pozicije j. Element na poziciji j se brise i na njegovo mesto se 
    upisuje element na poziciji j+1, a u skladu sa tim svi ostali
    elementi posle njega u nizu se pomeraju. */
-void pomeri_za_jedno_mesto(int a[], int n, int j)
-{
+void pomeri_za_jedno_mesto(int a[], int n, int j) {
   int i;
   for (i = j; i < n; i++)
     a[i] = a[i + 1];
@@ -35,10 +32,9 @@ void pomeri_za_jedno_mesto(int a[], int n, int j)
 /* Funkcija brise sve elemente niza koji nisu deljivi svojim
    indeksom. Povratna vrednost funkcije je broj elemenata
    rezultujuceg niza. */
-int brisanje(int niz[], int n)
-{
+int brisanje(int niz[], int n) {
   int i;
-  
+
   /* Potrebno je krenuti od poslednjeg elementa niza i petljom ici
      ka pocetku niza (element na poziciji 0 se ne razmatra).
      Proverava se da li je element potrebno obrisati i ako jeste
@@ -49,40 +45,34 @@ int brisanje(int niz[], int n)
      Problem se moze resiti i koriscenjem pomocnog niza (uraditi za 
      vezbu). To resenje je efikasnije, ali trosi vise resursa. */
   for (i = n - 1; i > 0; i--)
-  {
-    if (niz[i] % i != 0) 
-    {
+    if (niz[i] % i != 0) {
       pomeri_za_jedno_mesto(niz, n, i);
       /* Nakon brisanja elementa, smanjuje se i dimenzija niza. */
       n--;
     }
-  }
-  
+
   return n;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, niz[MAKS];
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   ucitaj(niz, n);
 
-  /* Iz niza se brisu odgovarajuci elementi. */
+  /* Brisanje trazenih elemenata. */
   n = brisanje(niz, n);
 
-  /* Ispis novog niza. */
+  /* Ispis rezultujuceg niza. */
   printf("Novi niz:\n");
   ispisi(niz, n);
 

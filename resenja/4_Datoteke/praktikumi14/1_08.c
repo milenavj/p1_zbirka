@@ -21,7 +21,7 @@ void rotiraj_za_1(char* s, int n){
   s[n-1] = c;
 }
 
-int main(){
+int main() {
   
   char s[MAXS];
   int n, i;

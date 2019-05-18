@@ -1,10 +1,10 @@
 #include <stdio.h>
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int x, proizvod;
 
-  /* Indikator koji oznacava da li je korisnik uneo bar jedan 
+  /* Indikator koji oznacava da li je korisnik uneo bar jedan
      broj. */
   int unet_bar_jedan = 0;
 
@@ -16,11 +16,9 @@ int main()
   proizvod = 1;
 
   printf("Unesite brojeve:");
-  
   /* Petlja ciji je uslov uvek ispunjen. */
   while (1) {
-    
-    /* Ucitava se jedan broj. */
+    /* Ucitavanje jednog broja. */
     scanf("%d", &x);
 
     /* Ako je uneta nula, petlja se prekida naredbom break. */
@@ -28,18 +26,18 @@ int main()
       break;
 
     /* Ako petlja nije prekinuta, znaci da je unet bar jedan broj.
-       Iz tog razloga se vrednost indikatora za unete brojeve 
+       Iz tog razloga se vrednost indikatora za unete brojeve
        postavlja na 1. */
     unet_bar_jedan = 1;
 
-    /* Proverava se da li je broj x pozitivan. */
-    if(x > 0){
+    /* Provera da li je broj x pozitivan. */
+    if (x > 0) {
       /* Ako jeste, znaci da je unet bar jedan pozitivan broj i iz
          tog razloga se vrednost odgovarajuceg indikatora postavlja
          na 1. */
       unet_pozitivan = 1;
-      
-      /* Azurira se vrednost proizvoda pozitivnih brojeva. */
+
+      /* Azuriranje vrednosti proizvoda pozitivnih brojeva. */
       proizvod = proizvod * x;
     }
   }

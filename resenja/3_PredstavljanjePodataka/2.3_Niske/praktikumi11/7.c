@@ -43,7 +43,7 @@ int samoglasnik_na_kraju(char s[]){
 }
 
 
-int main(){
+int main() {
 	char s[MAX_DUZINA+1];
 
 	/* Ucitavamo nisku */	

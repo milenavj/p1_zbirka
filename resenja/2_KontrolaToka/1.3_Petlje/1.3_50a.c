@@ -1,17 +1,16 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracije potrebnih promenljivih. */
+int main() {
+  /* Deklaracija potrebnih promenljivih. */
   unsigned int n, i, j;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
   /* Ispis tablice mnozenja dimenzije n*n. */
   for (i = 1; i <= n; i++) {
-    for (j = 1; j <= n; j++){
+    for (j = 1; j <= n; j++) {
       /* Vrednost svakog polja je proizvod vrste i kolone. */
       printf("%3d ", i * j);
     }

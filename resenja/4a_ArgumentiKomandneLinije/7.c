@@ -1,35 +1,32 @@
 #include <stdio.h>
 
-int main(int argc, char* argv[])
-{
-  /* Deklaracije potrebnih promenljivih. */
-  int i, j, indikator = 0;
-  
+int main(int argc, char *argv[]) {
+  /* Deklaracija potrebnih promenljivih. */
+  int i, j, prikazi_poruku = 0;
+
   /* Prolazi se kroz sve argumente komandne linije. */
-  for(i=1; i < argc; i++)
-  {
+  for (i = 1; i < argc; i++) {
     /* Ukoliko argument pocinje karakterom '-', znaci da se navode
        opcije. */
-    if(argv[i][0] == '-')
-    {
+    if (argv[i][0] == '-') {
       /* Ukoliko je u pitanju prvi niz opcija, ispisuje se
-         odgovarajuca poruka i indikator se postavlja na 1. */
-      if(!indikator)
-      {
+         odgovarajuca poruka i vrednost promenljive prikazi_poruku
+         se postavlja na 1. */
+      if (!prikazi_poruku) {
         printf("Opcije su: ");
-        indikator = 1;
+        prikazi_poruku = 1;
       }
-      
-      /* Ispisuju se sve opcije, tj. svi karakteri argumenta argv[i]
-         koji se nalaze nakon '-'. */
-      for(j=1; argv[i][j]; j++)
+
+      /* Ispisuju se sve opcije, tj. svi karakteri argumenta
+         argv[i] koji se nalaze nakon '-'. */
+      for (j = 1; argv[i][j]; j++)
         printf("%c ", argv[i][j]);
     }
   }
-  
-  /* Ukoliko indikator nakon petlje ima vrednost 0, znaci da nije
-     navedena nijedna opcija. */
-  if(!indikator)
+
+  /* Ukoliko je vrednost promenljive prikazi_poruku nakon petlje 0,
+     znaci da nije navedena nijedna opcija. */
+  if (!prikazi_poruku)
     printf("Medju argumentima nema opcija.\n");
   else
     printf("\n");

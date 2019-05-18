@@ -7,59 +7,54 @@
 #define MAKS_EMAIL 51
 #define MAKS_OSOBA 50
 
-typedef struct 
-{
+typedef struct {
   char ime[MAKS_IME];
   char prezime[MAKS_PREZIME];
   char email[MAKS_EMAIL];
 } Osoba;
 
-/* I nacin:
-   Funkcija proverava da li se prosledjeni email zavrsava sa
-   "gmail.com" koriscenjem funkcije strtok. */
-int gmail(char email[])
-{
+/* I nacin: Funkcija proverava da li se prosledjeni email zavrsava
+   sa "gmail.com" koriscenjem funkcije strtok. */
+int gmail(char email[]) {
   /* Funkcija strtok "deli" nisku u podniske tako sto ih razdvaja
-     na mestu na kom se nalazi prosledjeni delimiter (u ovom slucaju
-     je to "@"). 
-     Na primer, ukoliko je email="pera.peric@gmail.com", funkcija
-     deli ovu nisku na "pera.peric" i "gmail.com". */
+     na mestu na kom se nalazi prosledjeni delimiter (u ovom
+     slucaju je to "@"). Na primer, ukoliko je
+     email="pera.peric@gmail.com", funkcija deli ovu nisku na
+     "pera.peric" i "gmail.com". */
   char *deo = strtok(email, "@");
-  
+
   /* Kada se funkcija sledeci put pozove i pri tom pozivu se kao
-     prvi argument navede NULL, tada funkcija vraca sledeci token u nizu,
-     a to je u ovom slucaju "gmail.com". */
+     prvi argument navede NULL, tada funkcija vraca sledeci token u 
+     nizu, a to je u ovom slucaju "gmail.com". */
   deo = strtok(NULL, "");
 
-  /* Ako se email zavrsava na "gmail.com", funkcija vraca 1, a 
-     u suprotnom 0. */
+  /* Ako se email zavrsava na "gmail.com", funkcija vraca 1, a u
+     suprotnom 0. */
   return strcmp(deo, "gmail.com") == 0;
 }
 
 // /* II nacin:
-//    Funkcija proverava da li se prosledjeni email zavrsava sa
-//    "gmail.com" koriscenjem funkcije strchr. */
+// Funkcija proverava da li se prosledjeni email zavrsava sa
+// "gmail.com" koriscenjem funkcije strchr. */
 // int gmail2(char email[])
 // {
-//   /* Pronalazi se pokazivac na znak @. */
-//   char* desni_deo = strchr(email, '@');
-//   
-//   /* Poredi se niska koja pocinje jedan karakter posle @ sa
-//      niskom "gmail.com". */
-//   return strcmp(desni_deo+1, "gmail.com") == 0;
+// /* Pronalazi se pokazivac na znak @. */
+// char* desni_deo = strchr(email, '@');
+// 
+// /* Poredi se niska koja pocinje jedan karakter posle @ sa
+// niskom "gmail.com". */
+// return strcmp(desni_deo+1, "gmail.com") == 0;
 // }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
-  int n, i, indikator;
+  int n, i, postoji_gmail_adresa = 0;
   Osoba osobe[MAKS_OSOBA];
 
   /* Ucitavanje broja osoba i provera ispravnosti ulaza. */
   printf("Unesite broj osoba: ");
   scanf("%d", &n);
-  if (n < 0 || n >= MAKS_OSOBA) 
-  {
+  if (n < 0 || n > MAKS_OSOBA) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
@@ -70,26 +65,23 @@ int main()
     scanf("%s%s%s", osobe[i].ime, osobe[i].prezime, osobe[i].email);
 
   /* Ispis rezultata. */
-  for (i = 0; i < n; i++)
-  {
-    if (gmail(osobe[i].email))
-    {
-      if(!indikator)
-      {
+  for (i = 0; i < n; i++) {
+    if (gmail(osobe[i].email)) {
+      if (!postoji_gmail_adresa) {
         /* U ovu granu ce se uci samo kada se naidje na prvog
            vlasnika gmail naloga. */
         printf("Vlasnici gmail naloga su:\n");
-        indikator = 1;
+        postoji_gmail_adresa = 1;
       }
       printf("%s %s\n", osobe[i].ime, osobe[i].prezime);
     }
   }
-  
+
   /* Ukoliko se nije naislo ni na jednog vlasnika gmail naloga,
-     promenljiva indikator ce ostati 0 i u tom slucaju se ispsuje
-     odgovarajuca poruka. */
-  if(!indikator)
+     promenljiva postoji_gmail_adresa ce ostati 0 i u tom slucaju
+     se ispsuje odgovarajuca poruka. */
+  if (!postoji_gmail_adresa)
     printf("Nema vlasnika gmail naloga.\n");
-  
+
   return 0;
 }

@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija celobrojne promenljive. */
   int n;
 
-  /* Ucitava se vrednost celog broja. */
+  /* Ucitavanje vrednosti celog broja. */
   printf("Unesite ceo broj: ");
   scanf("%d", &n);
   

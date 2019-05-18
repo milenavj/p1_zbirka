@@ -3,47 +3,41 @@
 
 #define MAKS 100
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int brojevi[MAKS];
   int n, i, k, indikator;
 
-  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &brojevi[i]);
 
-  /* Ucitava se broj k i proverava se njegova ispravnost. */
+  /* Ucitavanje broja k i provera ispravnosti ulaza. */
   printf("Unesite broj k: ");
   scanf("%d", &k);
-  if (k == 0) 
-  {
+  if (k == 0) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Promenljiva koja cuva informaciju o tome da li je u nizu
-     postojao element koji je deljiv brojem k. Inicijalna vrednost
+  /* Promenljiva koja cuva informaciju o tome da li u nizu
+     postoji element koji je deljiv brojem k. Inicijalna vrednost
      je 0. */
   indikator = 0;
 
   /* Ukoliko je element niza deljiv brojem k, indikator se
      postavlja na 1 i ispisuje se indeks tog elementa. */
-  for (i = 0; i < n; i++) 
-  {
-    if (brojevi[i] % k == 0) 
-    {
+  for (i = 0; i < n; i++) {
+    if (brojevi[i] % k == 0) {
       indikator = 1;
       printf("%d ", i);
     }

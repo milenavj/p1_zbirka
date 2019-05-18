@@ -37,7 +37,7 @@ int armstrong(int x) {
 	int original = x; 
  
 	while(x) {
-      /* Za svaku izdvojenu cifru racuna se stepen i dodaje na ukupnu sumu. */
+      /* Za svaku izdvojenu cifru Racunanje stepen i dodaje na ukupnu sumu. */
 		suma += stepen(x % 10, i);
 		x /= 10;
 	}

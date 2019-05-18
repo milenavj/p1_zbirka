@@ -3,74 +3,64 @@
 
 #define MAKS 50
 
-/* Funkcija koja od niza a formira dva niza: niz parnih elemenata
+/* Funkcija od niza a formira dva niza: niz parnih elemenata
    niza a i niz neparnih elemenata niza a. Duzine rezultujucih
    nizova se upisuju na adrese np i nn. */
-void par_nepar(int a[], int n, int parni[], int *np, 
-               int neparni[], int *nn)
-{
+void par_nepar(int a[], int n, int parni[], int *np,
+               int neparni[], int *nn) {
   int i, j, k;
 
-  /* Promenljiva i je brojac u originalnom nizu i on se uvecava u 
-     svakoj iteraciji.
-     Promenljiva j je projac za niz parnih brojeva i on treba da se
-     uveca svaki put kada se naidje na novi element ovog niza. 
-     Promenljiva k je brojac za niz neparnih brojeva i on treba da
-     se uveca sveki put kada se naidje na novi element ovog niza. */
-  for (i = 0, j = 0, k = 0; i < n; i++) 
-  {
-    if (a[i] % 2 == 0) 
-    {
+  /* Promenljiva i je brojac u originalnom nizu i on se uvecava u
+     svakoj iteraciji. Promenljiva j je projac za niz parnih
+     brojeva i on treba da se uveca svaki put kada se naidje na
+     novi element ovog niza. Promenljiva k je brojac za niz
+     neparnih brojeva i on treba da se uveca sveki put kada se
+     naidje na novi element ovog niza. */
+  for (i = 0, j = 0, k = 0; i < n; i++) {
+    if (a[i] % 2 == 0) {
       parni[j] = a[i];
       j++;
-    } 
-    else 
-    {
+    } else {
       neparni[k] = a[i];
       k++;
     }
   }
 
-  /* Na kraju petlje, u promenljivoj j se nalazi podatak o broju 
+  /* Na kraju petlje, u promenljivoj j se nalazi podatak o broju
      elementa niza parni[], a u promenljivoj k podatak o broju
-     elementa niza neparni[]. Ove vrednosti se upisuju na adrese
-     np i nn. */
+     elementa niza neparni[]. Ove vrednosti se upisuju na adrese np 
+     i nn. */
   *np = j;
   *nn = k;
 }
 
-void ispisi(int niz[], int n)
-{
+/* Funkcija ispisuje elemente niza. */
+void ispisi(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
     printf("%d ", niz[i]);
   printf("\n");
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
-  int n, n1, n2;
+  int n, n1, n2, i;
   int a[MAKS], parni[MAKS], neparni[MAKS];
-  int i;
-  
-  /* Ucitava se dimenzija niza. */
+
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite broj elemenata niza: ");
   scanf("%d", &n);
-
-  /* Vrsi se provera ispravnosti ulaza. */
-  if (n < 0 || n > MAKS) 
-  {
+  if (n < 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 
-  /* Nizovi parni[] i neparni[] se popunjavaju odgovarajucim
+  /* Popunjavanje rezultujucih nizova odgovarajucim
      vrednostima. */
   par_nepar(a, n, parni, &n1, neparni, &n2);
 

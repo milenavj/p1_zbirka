@@ -14,7 +14,7 @@ float razlomljeni_deo(float x){
   return x - (int)x;
 }
 
-int main(){
+int main() {
   float n;
   
   /* Unos broja. */

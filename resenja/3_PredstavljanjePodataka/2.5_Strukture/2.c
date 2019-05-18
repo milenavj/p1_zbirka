@@ -5,22 +5,19 @@
 #define MAKS_VOCKI 50
 
 /* Struktura koja opisuje vocku. */
-typedef struct 
-{
+typedef struct {
   char ime[MAKS_IME];
   float vitamin;
 } Vocka;
 
-/* Funkcija ucitava podatke o vockama u niz struktura.  
-   Kao povratnu vrednost vraca broj ucitanih vocki. */
-int ucitaj(Vocka niz[])
-{
-  int i=0;
+/* Funkcija ucitava podatke o vockama u niz struktura. Kao
+   povratnu vrednost vraca broj ucitanih vocki. */
+int ucitaj(Vocka niz[]) {
+  int i = 0;
   char ime[MAKS_IME];
-  
+
   /* Vocke se ucitavaju sve dok se ne unese rec "KRAJ". */
-  do 
-  {
+  do {
     printf("Unesite ime vocke i njenu kolicinu vitamina C: ");
 
     /* Ucitavanje imena vocke. */
@@ -35,32 +32,30 @@ int ucitaj(Vocka niz[])
     i++;
   }
   while (i < MAKS_VOCKI);
-  
+
   return i;
 }
 
-/* Funkcija pronalazi vocku sa najvise C vitamina. */
-Vocka vocka_sa_najvise_vitamina(Vocka niz[], int n)
-{
-  /* Pronalazak pozicije vocke sa najvise vitamina c. */
+/* Funkcija pronalazi vocku sa najvise vitamina C. */
+Vocka vocka_sa_najvise_vitamina(Vocka niz[], int n) {
+  /* Pronalazak pozicije vocke sa najvise vitamina C. */
   int maks_i = 0, i;
   for (i = 1; i < n; i++)
     if (niz[i].vitamin > niz[maks_i].vitamin)
       maks_i = i;
-    
+
   /* Kao povratna vrednost se vraca vocka na poziciji maks_i. */
   return niz[maks_i];
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   Vocka vocke[MAKS_VOCKI], najzdravija;
   int n;
 
   /* Ucitavanje ulaza. */
   n = ucitaj(vocke);
-  
+
   /* Ispis rezultata. */
   najzdravija = vocka_sa_najvise_vitamina(vocke, n);
   printf("Voce sa najvise C vitamina je: %s\n", najzdravija.ime);

@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main()
-{
+int main() {
   /* I nacin ucitavanja ulaza: koriscenjem funkcije getchar()
      Funkcija getchar cita jedan karakter sa ulaza i vraca njegov
      ASCII kod. Napomena: beline su takodje karakteri i nece
@@ -44,10 +43,10 @@ int main()
     return -1;
   }
 
-  /* Racuna se zbir ASCII kodova. */
+  /* Racunanje zbira ASCII kodova. */
   int zbir = c1 + c2 + c3;
 
-  /* Racuna se vrednost prve cifre. */
+  /* Racunanje vrednosti prve cifre. */
   int vrednost_prve_cifre = c1 - '0';
 
   /* Ispis rezultata. */

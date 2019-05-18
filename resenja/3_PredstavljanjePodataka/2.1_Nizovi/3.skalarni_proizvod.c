@@ -3,24 +3,21 @@
 
 #define MAKS 100
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS];
   int b[MAKS];
   int n, i, skalarni_proizvod;
 
-  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju vektora: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se koordinate vektora. */
+  /* Ucitavanje koordinata vektora. */
   printf("Unesite koordinate vektora a: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
@@ -28,7 +25,7 @@ int main()
   for (i = 0; i < n; i++)
     scanf("%d", &b[i]);
 
-  /* Izracunava se skalarni proizvod po zadatoj formuli. */
+  /* Racunanje skalarnog proizvoda po zadatoj formuli. */
   skalarni_proizvod = 0;
   for (i = 0; i < n; i++)
     skalarni_proizvod += a[i] * b[i];

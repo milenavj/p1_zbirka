@@ -4,30 +4,27 @@
 #define MAKS 100
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(int niz[], int n)
-{
-  int i;  
+void ucitaj(int niz[], int n) {
+  int i;
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &niz[i]);
 }
 
-/* Resenje pod a. */
-int podniz_uzastopnih(int a[], int n, int b[], int m)
-{
+/* a) */
+int podniz_uzastopnih(int a[], int n, int b[], int m) {
   int i, j;
 
-  /* Prolaze se elementi prvog niza. Svaki element prvog niza moze
+  /* Obilaze se elementi prvog niza. Svaki element prvog niza moze
      biti pocetak podniza, odnosno pocetak drugog niza. */
-  for (i = 0; i + m - 1 < n; i++) 
-  {
+  for (i = 0; i + m - 1 < n; i++) {
     /* Prolaze se elementi drugog niza. Za svaki element niza b
        proverava se da li je jednak odgovarajucem elementu niza a.
-       Za niz a razmatra se da li podniz pocinje od pozicije i. Tako 
-       0-ti element niza b je na poziciji i, 1. element je na
-       poziciji i+1, 2. na poziciji i+2, ..., j-ti na poziciji
-       i+j. Ako uslov nije ispunjen, petlja se prekida i proverava
-       se da li na sledecoj poziciji u nizu a pocinje podniz. */
+       Za niz a razmatra se da li podniz pocinje od pozicije i.
+       Tako 0-ti element niza b je na poziciji i, 1. element je na
+       poziciji i+1, 2. na poziciji i+2, ..., j-ti na poziciji i+j.
+       Ako uslov nije ispunjen, petlja se prekida i proverava se da
+       li na sledecoj poziciji u nizu a pocinje podniz. */
     for (j = 0; j < m; j++)
       if (a[i + j] != b[j])
         break;
@@ -45,58 +42,51 @@ int podniz_uzastopnih(int a[], int n, int b[], int m)
   return 0;
 }
 
-/* Resenje pod b. */
-int podniz(int a[], int n, int b[], int m)
-{
+/* b) */
+int podniz(int a[], int n, int b[], int m) {
   int i, j;
 
-  /* Petljom se prolaze elementi niza a. */
-  for (i = 0, j = 0; i < n && j < m; i++)
-  {
+  /* Obilaze se elementi niza a. */
+  for (i = 0, j = 0; i < n && j < m; i++) {
     /* Svaki put kada se naidje na element niza b, brojac za niz b
        se uvecava i proverava se da li se sledeci element niza b
        nalazi u nizu a. */
     if (a[i] == b[j])
       j++;
   }
-  
+
   /* Ukoliko se pronadju svi elementi niza b u nizu a, onda je
      brojac za niz b jednak dimenziji niza b. U tom slucaju se
      vraca vrednost 1, odnosno da niz jeste podniz. */
   return j == m;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, a[MAKS];
   int m, b[MAKS];
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi prvog niza. */
+  /* Ucitavanje elemenata prvog niza. */
   ucitaj(a, n);
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &m);
-  if (m <= 0 || m > MAKS) 
-  {
+  if (m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi drugog niza. */
-  ucitaj(b, m);  
+  /* Ucitavanje elemenata drugog niza. */
+  ucitaj(b, m);
 
   /* a) */
   if (podniz_uzastopnih(a, n, b, m))
@@ -104,7 +94,7 @@ int main()
            "prvog niza.\n");
   else
     printf("Elementi drugog niza ne cine uzastopni podniz "
-         "prvog niza.\n");
+           "prvog niza.\n");
 
   /* b) */
   if (podniz(a, n, b, m))

@@ -2,11 +2,9 @@
 
 /* Funkcija vraca karakter koji se u abecedi nalazi k mesta pre
    datog karaktera c. */
-char sifra(char c, int k)
-{
+char sifra(char c, int k) {
   /* Provera da li je karakter malo slovo. */
-  if (c >= 'a' && c <= 'z') 
-  {
+  if (c >= 'a' && c <= 'z') {
     /* Ako karakter koji je k pozicija pre datog karaktera ispada
        iz opsega malih slova. */
     if (c - k < 'a')
@@ -19,9 +17,7 @@ char sifra(char c, int k)
       /* U suprotnom, karakter c-k ne ispada iz opsega malih slova, 
          te je dovoljno njega vratiti. */
       return c - k;
-  } 
-  else if (c >= 'A' && c <= 'Z') 
-  {
+  } else if (c >= 'A' && c <= 'Z') {
     /* Postupak se ponavlja i za velika slova. */
     if (c - k < 'A')
       return 'Z' - (k - (c - 'A') - 1);
@@ -33,18 +29,17 @@ char sifra(char c, int k)
   return c;
 }
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int k;
   char c;
 
-  /* Ucitava se vrednost k. */
+  /* Ucitavanje vrednosti k. */
   printf("Unesite broj k: ");
   scanf("%d", &k);
 
-  /* Ucitavaju se karakteri sve do kraja ulaza i ispisuje se
-     njihova sifra. */
+  /* Ucitavanje karaktera sve do kraja ulaza i ispis njihove
+     sifre. */
   printf("Unesite tekst (CTRL + D za prekid): ");
   while ((c = getchar()) != EOF)
     putchar(sifra(c, k));

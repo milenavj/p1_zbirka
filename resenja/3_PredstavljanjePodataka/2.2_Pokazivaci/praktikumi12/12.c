@@ -33,7 +33,7 @@ void min_max(float a[], int n, float* min, float* max){
 	}
 }
 
-int main(){
+int main() {
 	int i, n;
 	float a[MAX], min, max;
 

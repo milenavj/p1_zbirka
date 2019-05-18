@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   unsigned int n;
   int i, j;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
@@ -15,13 +14,13 @@ int main()
 
   /* Brojac i odredjuje koji red slike se trenutno ispisuje. */
   for (i = 0; i < n; i++) {
-    /* Prvo se ispisuju * koje prethode karakterima -. */
+    /* Ispis zvezdica koje prethode karakterima -. */
     for (j = 0; j < n - i; j++)
       printf("*");
-    /* Potom se ispisuju karakteri -. */
+    /* Ispis karaktera -. */
     for (j = 0; j < 2 * i; j++)
       printf("-");
-    /* Potom se ispisuju * koje su nakon karaktera -. */
+    /* Ispis zvezdica koje su nakon karaktera -. */
     for (j = 0; j < n - i; j++)
       printf("*");
     printf("\n");
@@ -31,13 +30,13 @@ int main()
      trougla vec ispisan (poslednji red gornjeg trougla), potrebno
      je naciniti jednu iteraciju manje. */
   for (i = n - 2; i >= 0; i--) {
-    /* Prvo se ispisuju * koje prethode karakterima -. */
+    /* Ispis zvezdica koje prethode karakterima -. */
     for (j = 0; j < n - i; j++)
       printf("*");
-    /* Potom se ispisuju karakteri -. */
+    /* Ispis karaktera -. */
     for (j = 0; j < 2 * i; j++)
       printf("-");
-    /* Potom se ispisuju * koje su nakon karaktera -. */
+    /* Ispis zvezdica koje su nakon karaktera -. */
     for (j = 0; j < n - i; j++)
       printf("*");
     printf("\n");

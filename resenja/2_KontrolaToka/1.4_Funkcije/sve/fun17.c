@@ -3,8 +3,7 @@
 
 /* Funkcija proverava da li su cifre broja naizmenicno parne i
    neparne. Ako je uslov ispunjen vraca 1, u suprotnom vraca 0. */
-int par_nepar(int x)
-{
+int par_nepar(int x) {
   int prethodna_cifra, tekuca_cifra;
   x = abs(x);
 
@@ -13,8 +12,7 @@ int par_nepar(int x)
   prethodna_cifra = x % 10;
   x /= 10;
 
-  while (x) 
-  {
+  while (x) {
     tekuca_cifra = x % 10;
 
     /* Ukoliko su uzastopne cifre iste parnosti, uslov nije
@@ -32,17 +30,15 @@ int par_nepar(int x)
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebne promenljive. */
   int n;
-  
-  /* Ucitava se vrednost broja n. */
+
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* U zavisnosti od povratne vrednosti napisane funkcije, vrsi
-     se ispis odgovarajuce poruke. */
+  /* Ispis odgovarajuce poruke. */
   if (par_nepar(n))
     printf("Broj ispunjava uslov.\n");
   else

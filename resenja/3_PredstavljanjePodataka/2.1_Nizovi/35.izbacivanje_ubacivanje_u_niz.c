@@ -4,38 +4,33 @@
 #define MAKS 2000
 
 /* Funkcija ispisuje elemente niza dimenzije n. */
-void ispis(int niz[], int n)
-{
+void ispis(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
     printf("%d ", niz[i]);
   printf("\n");
 }
 
-/* Funkcija ubacuje element x na kraj niza. Vraca novu dimenziju
+/* Funkcija ubacuje element x na kraj niza i vraca novu dimenziju
    niza. */
-int ubaci_na_kraj(int niz[], int n, int x)
-{
-  if(n == MAKS)
-  {
+int ubaci_na_kraj(int niz[], int n, int x) {
+  if (n == MAKS) {
     printf("Greska: prekoracen je maksimalan broj elemenata niza.");
     exit(EXIT_FAILURE);
   }
-  
+
   niz[n] = x;
   return n + 1;
 }
 
-/* Funkcija ubacuje element x na pocetak niza. Vraca novu dimenziju
+/* Funkcija ubacuje element x na pocetak niza i vraca novu dimenziju
    niza. */
-int ubaci_na_pocetak(int niz[], int n, int x)
-{
-  if(n == MAKS)
-  {
+int ubaci_na_pocetak(int niz[], int n, int x) {
+  if (n == MAKS) {
     printf("Greska: prekoracen je maksimalan broj elemenata niza.");
     exit(EXIT_FAILURE);
   }
-  
+
   int i;
   /* Prvo se svi elementi niza pomere za jednu poziciju u desno da
      bi se oslobodio prostor za prvi element niza. Poslednji
@@ -53,20 +48,17 @@ int ubaci_na_pocetak(int niz[], int n, int x)
   return n + 1;
 }
 
-/* Funkcija ubacuje element x na neku poziciju u nizu. Vraca
-   novu dimenziju niza. */
-int ubaci_na_poziciju(int niz[], int n, int x, int pozicija)
-{
-  if(n == MAKS)
-  {
+/* Funkcija ubacuje element x na neku poziciju u nizu i vraca novu
+   dimenziju niza. */
+int ubaci_na_poziciju(int niz[], int n, int x, int pozicija) {
+  if (n == MAKS) {
     printf("Greska: prekoracen je maksimalan broj elemenata niza.");
     exit(EXIT_FAILURE);
   }
-  
+
   int i;
   /* Prvo se svi elementi niza od pozicije do kraja pomere za jedno 
-     mesto u desno da bi se oslobodio prostor za novi element niza. 
-   */
+     mesto u desno da bi se oslobodio prostor za novi element niza. */
   for (i = n; i > pozicija; i--)
     niz[i] = niz[i - 1];
 
@@ -76,16 +68,13 @@ int ubaci_na_poziciju(int niz[], int n, int x, int pozicija)
   return n + 1;
 }
 
-/* Funkcija brise prvi element niza. Vraca novu dimenziju
-   niza. */
-int brisi_prvog(int niz[], int n)
-{
-  if(n == 0)
-  {
+/* Funkcija brise prvi element niza i vraca novu dimenziju niza. */
+int brisi_prvog(int niz[], int n) {
+  if (n == 0) {
     printf("Greska: nije moguce brisanje iz praznog niza.\n");
     exit(EXIT_FAILURE);
   }
-  
+
   int i;
   /* Svi elementi niza pomeraju se za jedno mesto u levo. */
   for (i = 0; i < n - 1; i++)
@@ -94,27 +83,22 @@ int brisi_prvog(int niz[], int n)
   return n - 1;
 }
 
-/* Funkcija brise poslednji element niza. Vraca novu
-   dimenziju niza. */
-int brisi_poslednjeg(int niz[], int n)
-{
-  if(n == 0)
-  {
+/* Funkcija brise poslednji element niza i vraca novu dimenziju
+   niza. */
+int brisi_poslednjeg(int niz[], int n) {
+  if (n == 0) {
     printf("Greska: nije moguce brisanje iz praznog niza.\n");
     exit(EXIT_FAILURE);
   }
-  
+
   /* Dovoljno je smanjiti dimenziju niza, elemente niza nije
      potrebno brisati. */
   return n - 1;
 }
 
-/* Funkcija brise element x. Pretpostavlja se da element
-   ima samo jedno pojavljivanje (za vezbu napisati funkciju koja
-   brise sva pojavljivanja, ako ih ima vise). Vraca novu dimenziju
-   niza. */
-int brisi_element(int niz[], int n, int x)
-{
+/* Funkcija brise element x i vraca novu dimenziju niza. 
+   Pretpostavlja se da element ima samo jedno pojavljivanje. */
+int brisi_element(int niz[], int n, int x) {
   int i, j;
 
   /* Prvo treba pronaci poziciju elementa u nizu. */
@@ -137,12 +121,10 @@ int brisi_element(int niz[], int n, int x)
   return n - 1;
 }
 
-int main()
-{
+int main() {
   int n, niz[MAKS], i, klijent, pozicija;
 
-  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite trenutni broj klijenata: ");
   scanf("%d", &n);
   if (n <= 0 || n > MAKS) {
@@ -150,13 +132,13 @@ int main()
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   printf("Unesite niz sa rednim brojevima klijenata: ");
   for (i = 0; i < n; i++)
     scanf("%d", &niz[i]);
 
   /* Ubacivanje klijenta na kraj. */
-  printf("Unesite klijenta kojeg treba ubaciti u niz: ");
+  printf("Unesite broj klijenta kojeg treba ubaciti u niz: ");
   scanf("%d", &klijent);
   n = ubaci_na_kraj(niz, n, klijent);
   printf("Niz nakon ubacivanja klijenta:\n");

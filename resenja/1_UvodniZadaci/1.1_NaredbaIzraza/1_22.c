@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   float r, obim, povrsina;
 
-  /* Ucitava se poluprecnik kruga. */
+  /* Ucitavanje poluprecnika kruga. */
   printf("Unesite poluprecnik: ");
   scanf("%f", &r);
 
-  /* Racunaju se obim i povrsina.
+  /* Racunanje obima i povrsine.
      M_PI je konstanta koja se nalazi u zaglavlju math.h
      i njena vrednost odgovara pribliznoj vrednosti broja pi. */
   obim = 2 * r * M_PI;

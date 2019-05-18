@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracije i inicijalizacije. */
+int main() {
+  /* Deklaracije i inicijalizacije potrebnih promenljivih. */
   char c;
   int broj_velikih = 0, broj_malih = 0;
   int broj_cifara = 0, suma_cifara = 0, broj_belina = 0;
@@ -18,8 +17,7 @@ int main()
     else if (c >= '0' && c <= '9') {
       broj_cifara++;
       suma_cifara = suma_cifara + c - '0';
-    } 
-    else if (c == '\t' || c == '\n' || c == ' ')
+    } else if (c == '\t' || c == '\n' || c == ' ')
       broj_belina++;
   }
 

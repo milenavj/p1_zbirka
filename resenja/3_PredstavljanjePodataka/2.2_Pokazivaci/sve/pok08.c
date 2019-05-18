@@ -3,9 +3,8 @@
 
 #define MAKS 50
 
-/* Funkcija koja racuna najmanji i najveci element niza a. */
-void min_max(float a[], int n, float *najmanji, float *najveci)
-{
+/* Funkcija racuna najmanji i najveci element niza a duzine n. */
+void min_max(float a[], int n, float *najmanji, float *najveci) {
   int i;
 
   /* Vrednosti minimuma i maksimuma se inicijalizuju na vrednost
@@ -15,42 +14,37 @@ void min_max(float a[], int n, float *najmanji, float *najveci)
 
   /* U petlji se prolazi kroz ostale clanove niza i po potrebi se
      vrsi azuriranje najmanje i najvece vrednosti. */
-  for (i = 1; i < n; i++) 
-  {
+  for (i = 1; i < n; i++) {
     if (a[i] > *najveci)
       *najveci = a[i];
 
     if (a[i] < *najmanji)
       *najmanji = a[i];
   }
-  
+
   /* Na kraju petlje, na adresama najmanji i najveci se nalaze
      trazene vrednosti. */
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int i, n;
   float a[MAKS], min, max;
 
-  /* Ucitava se dimenzija niza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite broj elemenata niza: ");
   scanf("%d", &n);
-
-  /* Vrsi se provera ispravnosti ulaza. */
-  if (n < 0 || n > MAKS)
-  {
+  if (n < 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   printf("Unesite elemente niza:\n");
   for (i = 0; i < n; i++)
     scanf("%f", &a[i]);
 
-  /* Racunaju se vrednosti najmanjeg i najveceg elementa. */
+  /* Racunanje vrednosti najmanjeg i najveceg elementa. */
   min_max(a, n, &min, &max);
 
   /* Ispis rezultata. */

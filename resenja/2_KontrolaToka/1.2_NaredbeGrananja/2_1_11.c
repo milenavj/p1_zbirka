@@ -1,12 +1,11 @@
 #include <stdio.h>
 #include <ctype.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int c1, c2, c3;
 
-  /* Ucitava se sifra artikla. */
+  /* Ucitavanje sifre artikla. */
   printf("Unesite sifru: ");
   c1 = getchar();
   c2 = getchar();

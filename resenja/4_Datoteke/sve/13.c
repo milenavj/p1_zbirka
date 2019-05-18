@@ -6,19 +6,16 @@
 #define MAKS_REC 201
 
 /* Funkcija ispisuje prosledjenu poruku o gresci na standardni
-   izlaz za greske i izlazi iz programa. */
-void greska(char* poruka)
-{
-  fprintf(stderr, "%s", poruka);
+   izlaz za greske i prekida izvrsavanje programa. */
+void greska(char *poruka) {
+  fprintf(stderr, "%s\n", poruka);
   exit(EXIT_FAILURE);
 }
 
-/* Funkcija proverava da li je prosledjena rec palindrom.
-   Pri proveri se ignorise razlika izmedju malih i velikih slova. */
-int palindrom(char rec[])
-{
-  int n = strlen(rec);
-  int i;
+/* Funkcija proverava da li je prosledjena rec palindrom. Pri
+   proveri se ignorise razlika izmedju malih i velikih slova. */
+int palindrom(char rec[]) {
+  int i, n = strlen(rec);
 
   for (i = 0; i < n / 2; i++)
     if (tolower(rec[i]) != tolower(rec[n - i - 1]))
@@ -27,35 +24,30 @@ int palindrom(char rec[])
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   FILE *ulaz, *izlaz;
   char rec[MAKS_REC];
 
-  /* Ulazna datoteka se otvara za citanje i proverava se da li je
-     otvaranje proslo uspesno. */ 
+  /* Otvaranje ulazne datoteke za citanje i provera uspeha. */
   ulaz = fopen("razno.txt", "r");
   if (ulaz == NULL)
-    greska("Greska: neuspesno otvaranje ulazne datoteke.\n");
+    greska("Greska: neuspesno otvaranje ulazne datoteke.");
 
-  /* Izlazna datoteka se otvara za pisanje i proverava se da li je
-     otvaranje proslo uspesno. */ 
+  /* Otvaranje izlazne datoteke za pisanje i provera uspeha. */
   izlaz = fopen("palindromi.txt", "w");
   if (izlaz == NULL)
-    greska("Greska: neuspesno otvaranje izlazne datoteke.\n");
+    greska("Greska: neuspesno otvaranje izlazne datoteke.");
 
   /* Iz datoteke se cita rec po rec i u izlaznu datoteku se upisuju
      reci koje su palindromi. */
-  while (fscanf(ulaz, "%s", rec) != EOF) 
-  {
+  while (fscanf(ulaz, "%s", rec) != EOF)
     if (palindrom(rec))
       fprintf(izlaz, "%s ", rec);
-  }
 
-  /* Zatvaraju se datoteke. */  
+  /* Zatvaranje datoteka. */
   fclose(ulaz);
   fclose(izlaz);
-  
+
   return 0;
 }

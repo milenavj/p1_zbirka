@@ -1,19 +1,18 @@
-#include<stdio.h>
+#include <stdio.h>
 #include<stdlib.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int k, l, m, n;
 
-  /* Ucitavaju se vrednosti pozicija na tabli. */
+  /* Ucitavanje vrednosti pozicija na tabli. */
   printf("Unesite (k,l): ");
   scanf("%d%d", &k, &l);
 
   printf("Unesite (m,n): ");
   scanf("%d%d", &m, &n);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (k < 1 || k > 8 || l < 1 || l > 8 || 
       m < 1 || m > 8 || n < 1 || n > 8) {
     printf("Greska: neispravna pozicija.\n");
@@ -25,7 +24,7 @@ int main()
     return -1;
   }
 
-  /* Proverava se da li su (k,l) i (m,n) iste boje. Polja su iste
+  /* Provera da li su (k,l) i (m,n) iste boje. Polja su iste
      boje ako su: 1) oba reda parna i obe kolone parne ILI 2) oba
      reda neparna i obe kolone neparne. */
   if (((k % 2 == m % 2) && (l % 2 == n % 2))
@@ -34,7 +33,7 @@ int main()
   else
     printf("Polja su razlicite boje.\n");
 
-  /* Proverava se da li kraljica sa (k,l) napada polje (m,n).
+  /* Provera da li kraljica sa (k,l) napada polje (m,n).
      Kraljica napada polje u sledecim situacijama: 
      1) Ako se nalaze u istom redu (k==m) 
      2) Ako se nalaze u istoj koloni (l==n) 
@@ -51,7 +50,7 @@ int main()
            k, l, m, n);
   }
 
-  /* Proverava se da li konj sa (k, l) napada polje (m, n). Postoji 
+  /* Provera da li konj sa (k, l) napada polje (m, n). Postoji 
      8 mogucih vrednosti za polja koja konj napada. Vrsi se
      provera da li je (m,n) jednako nekom od tih polja. */
   if ((abs(k-m) == 2 &&  abs(n-l) == 1) || (abs(n-l) == 2 && abs(m-k) == 1))

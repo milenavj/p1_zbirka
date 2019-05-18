@@ -3,11 +3,9 @@
 
 #define MAKS 10
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(int a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
@@ -15,8 +13,7 @@ void ucitaj(int a[][MAKS], int n)
 }
 
 /* Funkcija racuna sumu elemenata kolone j. */
-int suma_kolone(int a[][MAKS], int n, int j)
-{
+int suma_kolone(int a[][MAKS], int n, int j) {
   int suma = 0, i;
 
   for (i = 0; i < n; i++)
@@ -27,17 +24,14 @@ int suma_kolone(int a[][MAKS], int n, int j)
 
 /* Funkcija proverava da li su sume kolona uredjene rastuce i vraca 
    jedinicu ako jesu, a nulu inace. */
-int uredjene_sume(int a[][MAKS], int n)
-{
-  int prethodna_suma, trenutna_suma;
-  int j;
+int uredjene_sume(int a[][MAKS], int n) {
+  int prethodna_suma, trenutna_suma, j;
 
   /* Prva suma se inicijalizuje na sumu prve kolone. */
   prethodna_suma = suma_kolone(a, n, 0);
 
-  for (j = 1; j < n; j++) 
-  {
-    /* Racuna se suma trenutne kolone. */
+  for (j = 1; j < n; j++) {
+    /* Racunanje sume trenutne kolone. */
     trenutna_suma = suma_kolone(a, n, j);
 
     /* Ukoliko je ta suma manja ili jednaka prethodnoj, poredak
@@ -53,8 +47,7 @@ int uredjene_sume(int a[][MAKS], int n)
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
@@ -62,8 +55,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

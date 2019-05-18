@@ -10,7 +10,7 @@ void greska(){
 	exit(EXIT_FAILURE);
 }
 
-int main(){
+int main() {
 	char ime[MAX_NAZIV];
 	char rec[MAX_REC], prva_rec[MAX_REC];
 

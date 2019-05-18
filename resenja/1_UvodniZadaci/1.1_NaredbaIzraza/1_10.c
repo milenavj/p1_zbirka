@@ -1,8 +1,7 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija neoznacenog broja. */
+int main() {
+  /* Deklaracija potrebne promenljive. */
   unsigned int x;
 
   /* Promenljive koje cuvaju cifre treba da budu najmanjeg
@@ -10,11 +9,11 @@ int main()
      jednocifrenih celih brojeva. Zbog toga se koristi tip char. */
   char cifra_jedinice, cifra_desetice, cifra_stotine;
 
-  /* Ucitava se trocifren broj. */
+  /* Ucitavanje trocifrenog broja. */
   printf("Unesite trocifreni broj: ");
   scanf("%u", &x);
 
-  /* Izdvajaju se cifre jedinice, desetice i stotine. */
+  /* Izdvajanje cifara jedinice, desetice i stotine. */
   cifra_jedinice = x % 10;
   cifra_desetice = (x / 10) % 10;
   cifra_stotine = x / 100;

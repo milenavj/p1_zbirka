@@ -17,11 +17,11 @@ int zbir_delilaca(int x){
   return zbir;
 }
 
-int main(){
+int main() {
 
 	int k, i;
 	
-	/* Ucitava se broj k. */
+	/* Ucitavanje broj k. */
 	printf("Unesite broj k:");
 	scanf("%d", &k);
 	

@@ -1,14 +1,12 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#include <math.h>
 
 /* Funkcija racuna vrednost e^x kao parcijalnu sumu reda
    suma(x^n/n!), gde indeks n ide od od 0 do beskonacno, pri cemu
    se sumiranje vrsi dok je razlika sabiraka u redu po apsolutnoj
    vrednosti manja od eps. */
-double e_na_x(double x, double eps)
-{
-  double s = 1;
-  double clan = 1;
+double e_na_x(double x, double eps) {
+  double s = 1, clan = 1;
   int n = 1;
 
   /* Parcijalnu suma se formira tako sto se u svakoj iteraciji
@@ -24,8 +22,7 @@ double e_na_x(double x, double eps)
 
      Sumiranje se sprovodi sve dok je sabirak po apsolutnoj
      vrednosti veci od trazene tacnosti eps. */
-  do 
-  {
+  do {
     clan = (clan * x) / n;
     s += clan;
     n++;
@@ -34,12 +31,11 @@ double e_na_x(double x, double eps)
   return s;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   double x, eps;
-  
-  /* Ucitavavaju se vrednosti x i eps. */
+
+  /* Ucitavanje vrednosti x i eps. */
   printf("Unesite broj x: ");
   scanf("%lf", &x);
   printf("Unesite eps: ");

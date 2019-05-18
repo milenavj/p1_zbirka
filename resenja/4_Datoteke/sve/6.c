@@ -2,34 +2,31 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
-  FILE * ulaz;
+  FILE *ulaz;
   int c, broj_malih = 0;
 
-  /* Datoteka podaci.txt se otvara za citanje i proverava se da li je
-     otvaranje proslo uspesno. */
+  /* Otvaranje datoteke podaci.txt za citanje i provera uspeha. */ 
   ulaz = fopen("podaci.txt", "r");
-  if (ulaz == NULL) 
+  if (ulaz == NULL)
   {
     fprintf(stderr, "Greska: neuspesno otvaranje datoteke "
-                    "podaci.txt.\n");
+            "podaci.txt.\n");
     exit(EXIT_FAILURE);
   }
 
   /* Cita se karakter po karakter i prebrojavaju se mala slova. */
-  while ((c = fgetc(ulaz)) != EOF) 
-  {
+  while ((c = fgetc(ulaz)) != EOF)
     if (islower(c))
       broj_malih++;
-  }
 
-  /* Ispis rezultata. */ 
+  /* Ispis rezultata. */
   printf("Broj malih slova je: %d\n", broj_malih);
-
-  /* Zatvara se datoteka.*/ 
+  
+  /* Zatvaranje datoteke. */
   fclose(ulaz);
 
   return 0;
+
 }

@@ -2,16 +2,15 @@
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, m, i;
 
-  /* Ucitavaju se vrednosti granica intervala. */
+  /* Ucitavanje vrednosti granica intervala. */
   printf("Unesite granice intervala: ");
   scanf("%d%d", &n, &m);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (m < n) {
     printf("Greska: pogresan unos granica.\n");
     return -1;
@@ -19,9 +18,9 @@ int main()
 
   /* Inicijalizacija brojaca na levu granicu intervala. */
   i = n;
-  
-  /* Ispisuju se sve vrednosti brojaca izmedju leve i desne
-     granice intervala, ukljucujuci i same granice. */
+
+  /* Ispisuju se sve vrednosti brojaca izmedju leve i desne granice 
+     intervala, ukljucujuci i same granice. */
   while (i <= m) {
     printf("%d ", i);
     i++;

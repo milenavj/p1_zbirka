@@ -21,10 +21,10 @@ void romb(int n){
   
 }
 
-int main(){
+int main() {
   int n;
   
-  /* Ucitava se velicina romba. */
+  /* Ucitavanje velicina romba. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
   

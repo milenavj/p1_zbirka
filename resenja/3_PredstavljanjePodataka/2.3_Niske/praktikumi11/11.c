@@ -48,7 +48,7 @@ int heksa_broj(char s[]){
    return v;
 }
 
-int main(){
+int main() {
   char s[MAX];
 
   /*Ucitavamo nisku*/

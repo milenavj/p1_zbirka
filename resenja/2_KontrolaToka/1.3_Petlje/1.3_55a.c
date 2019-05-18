@@ -1,20 +1,19 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   unsigned int n, i, j;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
   /* Brojac i odredjuje koji red slike se trenutno ispisuje. */
   for (i = 0; i < n; i++) {
-    /* Prvo se ispisuju beline koje prethode karakterima *. */
+    /* Ispis belina koje prethode zvezdicama. */
     for (j = 0; j < n - i - 1; j++)
       printf(" ");
-    /* Posle belina se ispisuje potreban broj karaktera *. */
+    /* Ispis potrebnog broja zvezdica. */
     for (j = 0; j < 2 * i + 1; j++)
       printf("*");
     printf("\n");

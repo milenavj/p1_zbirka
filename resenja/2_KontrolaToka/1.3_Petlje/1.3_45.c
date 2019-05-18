@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int n, i;
   double razlomak;
 
-  /* Ucitava se vrednost broja n.  */
+  /* Ucitavanje vrednosti broja n.  */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */  
+  /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;

@@ -2,22 +2,20 @@
 
 /* Funkcija broji koliko puta se realan broj x javlja u nizu unetih
    brojeva. */
-int prebrojavanje(float x)
-{
+int prebrojavanje(float x) {
   float y;
   int broj_pojavljivanja = 0;
 
-  /* Brojevi se ucitavaju sve do unosa broja nula. 
-     Svaki put kada se unese broj koji je jednak broju x,
-     brojac pojavljivanja se uveca za 1. */
+  /* Brojevi se ucitavaju sve do unosa broja nula. Svaki put kada
+     se unese broj koji je jednak broju x, brojac pojavljivanja se
+     uveca za 1. */
   printf("Unesite brojeve:\n");
-  while(1)
-  {
+  while (1) {
     scanf("%f", &y);
-    
-    if(y == 0)
+
+    if (y == 0)
       break;
-    
+
     if (x == y)
       broj_pojavljivanja++;
   }
@@ -25,20 +23,18 @@ int prebrojavanje(float x)
   return broj_pojavljivanja;
 }
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   float x;
   int rezultat;
 
-  /* Ucitava se vrednost broja x. */
+  /* Ucitavanje vrednosti broja x. */
   printf("Unesite broj x: ");
   scanf("%f", &x);
 
-  /* Poziva se napisana funkcija i u promenljivoj rezultat se
-     cuva njena povratna vrednost. */
+  /* Ucitavanje brojeva i racunanje rezultata. */
   rezultat = prebrojavanje(x);
-  
+
   /* Ispis rezultata. */
   printf("Broj pojavljivanja broja %.2f: %d\n", x, rezultat);
 

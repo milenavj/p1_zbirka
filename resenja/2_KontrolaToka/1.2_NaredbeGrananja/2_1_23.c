@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int dan;
 
-  /* Ucitava se redni broj dana u nedelji. */
+  /* Ucitavanje rednog broja dana u nedelji. */
   printf("Unesite broj: ");
   scanf("%d", &dan);
 

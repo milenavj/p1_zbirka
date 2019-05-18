@@ -37,7 +37,7 @@ void par_nepar(int a[], int n, int parni[], int* pn, int neparni[], int* nn){
   
 }
 
-int main(){
+int main() {
   int n, i, j, pn, nn;
   int a[MAX], parni[MAX], neparni[MAX];
   

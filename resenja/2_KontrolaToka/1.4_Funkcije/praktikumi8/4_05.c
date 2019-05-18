@@ -28,10 +28,10 @@ void grafikon_h(int a, int b, int c, int d)
   
 }
 
-int main(){
+int main() {
   int a,b,c,d;
   
-  /* Ucitavaju se vrednosti a,b,c,d. */
+  /* Ucitavanje vrednosti a,b,c,d. */
   printf("Unesite vrednosti: ");
   scanf("%d%d%d%d", &a, &b, &c, &d);
   

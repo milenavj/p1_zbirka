@@ -1,53 +1,53 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 #define BROJ_CIFARA 10
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int x, x_original, cifra, i;
+  
+  /* Svaki element niza brojaci predstavlja brojac za jednu od
+    cifara: brojac[0] predstavlja broj nula u zapisu broja x
+    brojac[1] predstavlja broj jedinica u zapisu broja x ...
+    brojac[9] predstavlja broj devetki u zapisu broja x.
+    Brojace je potrebno inicijalizovati na pocetku. */
+  /* I nacin: */
   int brojaci[BROJ_CIFARA];
+  for(i=0; i<BROJ_CIFARA; i++)
+    brojaci[i] = 0;
 
-  /* Ucitava se ceo broj sa standardnog ulaza. */
+  /* II nacin: Inicijalizacija pri samoj deklaraciji. 
+    Na ovaj nacin su svi elementi niza brojaci inicijalizovani na
+    nule. 
+    int brojaci[BROJ_CIFARA] = {0}; */
+  
+  /* Ucitavanje celog broja. */
   printf("Unesite ceo broj:\n");
   scanf("%d", &x);
 
-  /* Cuva se njegova x_originalna vrednost zbog finalnog ispisa. */
+  /* Cuvanje pocetne vrednosti zbog finalnog ispisa. */
   x_original = x;
   x = abs(x);
 
-  /* Svaki element niza brojaci predstavlja brojac za jednu od
-     cifara: brojac[0] predstavlja broj nula u zapisu broja x
-     brojac[1] predstavlja broj jedinica u zapisu broja x ...
-     brojac[9] predstavlja broj devetki u zapisu broja x. */
-
-  /* Brojaci se na pocetku inicijalizuju nulama. */
-  for (i = 0; i < BROJ_CIFARA; i++)
-    brojaci[i] = 0;
-
-  /* Sve dok ima cifara u zapisu broja x */
+  /* Obrada cifara. */
   do {
-    /* Izdvaja se krajnja desna cifara. */
+    /* Izdvajanje krajnje desne cifre. */
     cifra = x % 10;
 
-    /* Uvecava se njen broj pojavljivanja. */
+    /* Uvecavanje broja pojavljivanja izdvojene cifre. */
     brojaci[cifra]++;
 
-    /* Prelazi se na analiziranje sledece cifre. */
+    /* Prelazak na analizu sledece cifre. */
     x /= 10;
   } while (x);
 
-  /* Ispisuju se informacije o ciframa koje se nalaze u zapisu
-     broja x. */
-  for (i = 0; i < BROJ_CIFARA; i++) 
-  {
-    if (brojaci[i]) 
-    {
+  /* Ispis informacija o ciframa koje se nalaze u zapisu broja x. */
+  for (i = 0; i < BROJ_CIFARA; i++)
+    if (brojaci[i]) {
       printf("U zapisu broja %d, cifra %d se pojaviljuje %d puta\n",
              x_original, i, brojaci[i]);
     }
-  }
 
   exit(EXIT_SUCCESS);
 }

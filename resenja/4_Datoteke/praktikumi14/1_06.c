@@ -12,7 +12,7 @@ typedef struct st{
   float prosek;
 }STUDENT;
 
-int main(){
+int main() {
   
   FILE *ulaz;
   STUDENT studenti[MAXS];

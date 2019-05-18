@@ -5,37 +5,34 @@
 
 #define MAKS_NISKA 8
 
-/* Funkcija racuna dekadnu vrednost jedne heksadekadne cifre.
-   Ako je c broj, vrednost se dobija oduzimanjem '0'.
-   Ako je c slovo, vrednost se dobija oduzimanjem 'A' i dodavanjem
-   10 (npr. vrednost karaktera 'B' je 10 + 'B' - 'A' = 11). */
-int vrednost_heksa_cifre(char c)
-{
-  if(isdigit(c))
+/* Funkcija racuna dekadnu vrednost jedne heksadekadne cifre. Ako
+   je c broj, vrednost se dobija oduzimanjem '0'. Ako je c slovo,
+   vrednost se dobija oduzimanjem 'A' i dodavanjem 10 (npr.
+   vrednost karaktera 'B' je 10 + 'B' - 'A' = 11). */
+int vrednost_heksa_cifre(char c) {
+  if (isdigit(c))
     return c - '0';
   else
     return 10 + toupper(c) - 'A';
 }
 
 /* Funkcija racuna dekadnu vrednost heksadekadnog broja. */
-int dekadna_vrednost(char s[])
-{
+int dekadna_vrednost(char s[]) {
   int i, tezina_pozicije = 1, rezultat = 0;
   int n = strlen(s);
 
   /* Vrsi se prolazak kroz nisku sa desna na levo. Heksadekadna
      cifra najvece tezine se nalazi na poziciji n-1, a ona najvece
      tezine se nalazi na poziciji 2 (jer su prva dva karaktera 0x).
-     
+
      U svakoj iteraciji, na rezultat se dodaje vrednost tekuce
-     cifre, pomnozena sa vrednoscu tezine njene pozicije.
-     Na primer, za s = "0x1a8e", n=6
-     i = 5, rezultat += vrednost('e')*1 => rezultat += 11*1
-     i = 4, rezultat += vrednost('8')*16 => rezultat += 8*16
-     i = 3, rezultat += vrednost('a')*256 => rezultat += 10*256
-     i = 2, rezultat += vrednost('1')*4096 => rezultat += 1*4096 */
-  for (i = n - 1; i >= 2; i--)
-  {
+     cifre pomnozena sa vrednoscu tezine njene pozicije. Na
+     primer, za s = "0x1a8e", n=6 i = 5, rezultat +=
+     vrednost('e')*1 => rezultat += 11*1 i = 4, rezultat +=
+     vrednost('8')*16 => rezultat += 8*16 i = 3, rezultat +=
+     vrednost('a')*256 => rezultat += 10*256 i = 2, rezultat +=
+     vrednost('1')*4096 => rezultat += 1*4096 */
+  for (i = n - 1; i >= 2; i--) {
     rezultat += tezina_pozicije * vrednost_heksa_cifre(s[i]);
     tezina_pozicije *= 16;
   }
@@ -43,12 +40,11 @@ int dekadna_vrednost(char s[])
   return rezultat;
 }
 
-int main()
-{
-  /* Deklaracija niske. */
+int main() {
+  /* Deklaracija potrebne promenljive. */
   char s[MAKS_NISKA];
 
-  /* Ucitava se niska. */
+  /* Ucitavanje niske. */
   printf("Unesite nisku: ");
   scanf("%s", s);
 

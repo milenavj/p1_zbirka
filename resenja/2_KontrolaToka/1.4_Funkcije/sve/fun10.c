@@ -2,8 +2,7 @@
 #include <stdlib.h>
 
 /* Funkcija racuna aritmeticku sredinu cifara datog celog broja. */
-float aritmeticka_sredina(int x)
-{
+float aritmeticka_sredina(int x) {
   /* Aritmeticka sredina broja 0 je 0. */
   if (x == 0)
     return 0;
@@ -19,8 +18,7 @@ float aritmeticka_sredina(int x)
   /* Dok god ima neobradjenih cifara, na zbir se dodaje poslednja
      cifra, brojac cifara se uvecava za 1 i sa broja x se uklanja
      poslednja cifra. */
-  while (x) 
-  {
+  while (x) {
     zbir_cifara += x % 10;
     broj_cifara++;
     x /= 10;
@@ -31,12 +29,11 @@ float aritmeticka_sredina(int x)
   return (float) zbir_cifara / broj_cifara;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebne promenljive. */
   int x;
 
-  /* Ucitava se vrednost broja x. */
+  /* Ucitavanje vrednosti broja x. */
   printf("Unesite broj: ");
   scanf("%d", &x);
 

@@ -1,19 +1,17 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
-  float a, b;
-  float obim, povrsina;
+  float a, b, obim, povrsina;
 
-  /* Ucitavaju se duzine stranica pravougaonika. */
+  /* Ucitavanje duzina stranica pravougaonika. */
   printf("Unesite duzine stranica pravougaonika: ");
   scanf("%f%f", &a, &b);
 
-  /* Izracunava se obim pravougaonika. */
+  /* Racunanje obima pravougaonika. */
   obim = 2 * (a + b);
 
-  /* Izracunava se povrsina pravougaonika. */
+  /* Racunanje povrsine pravougaonika. */
   povrsina = a * b;
 
   /* Ispis rezultata na dve decimale. */

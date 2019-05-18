@@ -2,8 +2,7 @@
 #include <math.h>
 
 /* Funkcija vraca razlomljeni deo prosledjenog broja. */
-float razlomljeni_deo(float x)
-{
+float razlomljeni_deo(float x) {
   /* Napomena: Funkcija fabs racuna apsolutnu vrednost realnog
      broja i njena deklaracija se nalazi u zaglavlju math.h.
      Funkcija abs racuna apsolutnu vrednost celog broja i njena
@@ -15,12 +14,11 @@ float razlomljeni_deo(float x)
   return x - (int) x;
 }
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracija potrebne promenljive. */
   float n;
 
-  /* Ucitava se ulazna vrednost. */
+  /* Ucitavanje ulazne vrednosti. */
   printf("Unesite broj:");
   scanf("%f", &n);
 

@@ -21,7 +21,7 @@ void kopiraj_n(char t[], char s[], int n){
 }
 
 
-int main(){
+int main() {
 	int n;
 	char s[MAX_DUZINA+1], t[MAX_DUZINA+1];
 

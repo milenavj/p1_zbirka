@@ -21,7 +21,7 @@ void dupliranje(char t[], char s[]){
 }
 
 
-int main(){
+int main() {
 	int n;
 	char s[MAX_DUZINA+1], t[2*MAX_DUZINA+1];
 

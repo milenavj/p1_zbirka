@@ -16,7 +16,7 @@ int min(int x, int y, int z){
   return min;
 }
 
-int main(){
+int main() {
   int x,y,z;
 	
   /* Unose se tri broja. */

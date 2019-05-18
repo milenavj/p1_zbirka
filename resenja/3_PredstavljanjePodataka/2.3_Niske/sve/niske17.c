@@ -6,29 +6,27 @@
 
 /* Funkcija proverava da li je prosledjeni karakter ispravna
    heksadekadna cifra. */
-int heksa_cifra(char c)
-{
+int heksa_cifra(char c) {
   c = toupper(c);
-  
-  /* Cifra je ispravna ako je cifra ili ako je neko od slova:
-     A, B, C, D, E ili F. */
+
+  /* Cifra je ispravna ako je cifra ili ako je neko od slova: A, B, 
+     C, D, E ili F. */
   return isdigit(c) || (c >= 'A' && c <= 'F');
 }
 
 /* Funkcija proverava da li prosledjena niska s predstavlja
    ispravan heksadekadni broj. */
-int heksadekadni_broj(char s[])
-{
+int heksadekadni_broj(char s[]) {
   int i;
 
   /* Svaki heksadekasni broj pocinje sa 0x ili 0X. */
   if (s[0] != '0' || toupper(s[1]) != 'X')
     return 0;
 
-  /* Za svaki karakter niske s se proverava da li predstavlja 
+  /* Za svaki karakter niske s se proverava da li predstavlja
      ispravnu heksadekadnu cifru. Ako se naidje na neku cifru koja
-     ne zadovoljava taj uslov, onda se kao povratna vrednost
-     vraca nula. */
+     ne zadovoljava taj uslov, onda se kao povratna vrednost vraca
+     nula. */
   for (i = 2; s[i]; i++)
     if (!heksa_cifra(s[i]))
       return 0;
@@ -38,12 +36,11 @@ int heksadekadni_broj(char s[])
   return 1;
 }
 
-int main()
-{
-  /* Deklaracija niske. */
+int main() {
+  /* Deklaracija potrebne promenljive. */
   char s[MAKS_NISKA];
 
-  /* Ucitava se niska. */
+  /* Ucitavanje niske. */
   printf("Unesite nisku: ");
   scanf("%s", s);
 

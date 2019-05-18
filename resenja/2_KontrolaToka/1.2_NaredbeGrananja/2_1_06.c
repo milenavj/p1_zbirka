@@ -1,24 +1,23 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int sati, minuti;
   int preostali_sati, preostali_minuti;
 
-  /* Ucitavaju se podaci o vremenu. Napomena: Vreme se zadaje u
+  /* Ucitavanje podataka o vremenu. Napomena: Vreme se zadaje u
      formatu sat:minut. Iz tog razloga je i odgovarajuci format u
      funkciji scanf %d:%d. */
   printf("Unesite vreme: ");
   scanf("%d:%d", &sati, &minuti);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (sati > 24 || sati < 0 || minuti > 59 || minuti < 0) {
     printf("Greska: neispravan unos vremena.\n");
     return -1;
   }
 
-  /* Racuna se preostalo vreme. */
+  /* Racunanje preostalog vremena. */
   preostali_sati = 24 - sati - 1;
   preostali_minuti = 60 - minuti;
 

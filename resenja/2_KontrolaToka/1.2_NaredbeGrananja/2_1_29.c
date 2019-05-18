@@ -1,16 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int dan, mesec, godina;
   int prethodni_dan, prethodni_mesec, prethodni_godina;
 
-  /* Ucitava se datum. */
+  /* Ucitavanje datuma. */
   printf("Unesite datum: ");
   scanf("%d.%d.%d.", &dan, &mesec, &godina);
 
-  /* Racunaju se dan, mesec i godina prethodnog dana. */
+  /* Racunanje dana, meseca i godine prethodnog dana. */
   prethodni_dan = dan - 1;
   prethodni_mesec = mesec;
   prethodni_godina = godina;

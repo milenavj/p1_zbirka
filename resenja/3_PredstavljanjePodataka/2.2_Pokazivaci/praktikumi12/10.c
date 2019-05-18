@@ -26,7 +26,7 @@ void interpunkcija(int* br_tacaka, int* br_zareza){
 
 }
 
-int main(){
+int main() {
   int br_tacaka, br_zareza;
   
   printf("Unesite tekst: \n");

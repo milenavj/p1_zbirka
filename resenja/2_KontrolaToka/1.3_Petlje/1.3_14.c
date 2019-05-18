@@ -1,23 +1,21 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  int n, broj;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  int n, broj, i;
   int suma = 0;
-  int i;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */
+  /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Ucitava se n brojeva i izracunava se trazena suma. */
+  /* Ucitavanje n brojeva i racunanje trazene sume. */
   printf("Unesite brojeve: ");
   for (i = 0; i < n; i++) {
     scanf("%d", &broj);

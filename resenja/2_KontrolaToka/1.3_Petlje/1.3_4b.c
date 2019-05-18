@@ -2,27 +2,25 @@
 
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, m, i;
 
-  /* Ucitavaju se vrednosti granica intervala. */
+  /* Ucitavanje vrednosti granica intervala. */
   printf("Unesite granice intervala: ");
   scanf("%d%d", &n, &m);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (m < n) {
     printf("Greska: pogresan unos granica.\n");
     return -1;
   }
 
-  /* Naredba i=n se izvrsava jednom, pre prve iteracije. 
-     Uslov petlje i<=m se proverava pre svake iteracije. 
-     Naredba i++ se izvrsava nakon svake iteracije. */
-  for (i = n; i <= m; i++){
+  /* Naredba i=n se izvrsava jednom, pre prve iteracije. Uslov
+     petlje i<=m se proverava pre svake iteracije. Naredba i++ se
+     izvrsava nakon svake iteracije. */
+  for (i = n; i <= m; i++)
     printf("%d ", i);
-  }
 
   printf("\n");
 

@@ -3,11 +3,9 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije m*n. */
-void ucitaj(int a[][MAKS], int m, int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int m, int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < m; i++)
     for (j = 0; j < n; j++)
@@ -17,15 +15,12 @@ void ucitaj(int a[][MAKS], int m, int n)
 /* Funkcija proverava da li je matrica b podmatrica matrice a i
    vraca jedinicu ukoliko jeste, a nulu inace. */
 int podmatrica(int a[][MAKS], int m, int n,
-               int b[][MAKS], int k, int t)
-{
+               int b[][MAKS], int k, int t) {
   int i, j, x, y;
   int jeste_podmatrica;
 
-  for (i = 0; i <= m - k; i++) 
-  {
-    for (j = 0; j <= n - t; j++) 
-    {
+  for (i = 0; i <= m - k; i++) {
+    for (j = 0; j <= n - t; j++) {
       /* Za svaku poziciju (i,j) se proverava da li je podmatrica
          dimenzije k*t ciji je gornji levi ugao a[i][j] jednaka
          matrici b. */
@@ -39,23 +34,19 @@ int podmatrica(int a[][MAKS], int m, int n,
         return 1;
     }
   }
-
+  
   return 0;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS], b[MAKS][MAKS];
-  int m, n;
-  int k, t;
+  int m, n, k, t;
 
-  /* Ucitavanje dimenzija prve matrice i provera ispravnosti 
-     ulaza. */
+  /* Ucitavanje dimenzije matrice A i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice A: ");
   scanf("%d%d", &m, &n);
-  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) 
-  {
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
@@ -63,12 +54,10 @@ int main()
   /* Ucitavanje elemenata prve matrice. */
   ucitaj(a, m, n);
 
-  /* Ucitavanje dimenzija druge matrice i provera ispravnosti
-     ulaza. */
+  /* Ucitavanje dimenzije matrice B i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice B: ");
   scanf("%d%d", &k, &t);
-  if (k <= 0 || k > MAKS || t <= 0 || t > MAKS) 
-  {
+  if (k <= 0 || k > MAKS || t <= 0 || t > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

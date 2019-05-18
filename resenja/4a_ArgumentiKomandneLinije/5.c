@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include <string.h>
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
   /* Deklaracija potrebnih promenljivih. */
-  int i, br = 0;
-  
-  /* Prebrojavaju se argumenti koji sadrze karakter @. */
+  int i, brojac = 0;
+
+  /* Prebrojavanje argumenata koji sadrze karakter @. */
   for (i = 1; i < argc; i++)
     if (strchr(argv[i], '@') != NULL)
-      br++;
+      brojac++;
 
   /* Ispis rezultata. */
-  printf("%d\n", br);
+  printf("%d\n", brojac);
 
   return 0;
 }

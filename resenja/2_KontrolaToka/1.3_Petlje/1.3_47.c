@@ -1,22 +1,21 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int n, i;
   double clan, proizvod = 1;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */  
+  /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Racuna se trazeni proizvod. */
+  /* Racunanje trazenog proizvoda. */
   clan = 1;
   for (i = 2; i <= n; i++) {
     clan = clan / i;

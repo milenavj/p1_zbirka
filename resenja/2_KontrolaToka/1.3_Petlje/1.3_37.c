@@ -1,32 +1,31 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
-  /* Deklaracija i inicijalizacija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije i inicijalizacije potrebnih promenljivih. */
   int n, i;
   int broj_Z = 0, broj_i = 0, broj_m = 0, broj_a = 0;
   char novi_red, c;
 
-  /* Ucitava se broj karaktera. */
+  /* Ucitavanje broja karaktera. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */  
+  /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Ucitavaju se karakteri. */
+  /* Ucitavanje karaktera. */
   for (i = 1; i <= n; i++) {
     printf("Unestite %d. karakter: ", i);
-    
+
     /* Prvo se cita belina koja se nalazi nakon prethodnog unosa,
        pa tek posle procitane beline se cita uneti karakter. */
     scanf("%c%c", &novi_red, &c);
 
-    /* Obradjuje se ucitani karakter. */
+    /* Obrada ucitanog karaktera. */
     switch (c) {
     case 'Z':
       broj_Z++;

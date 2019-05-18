@@ -1,6 +1,6 @@
 /*
   Za svaki automobil poznati su marka, model i cena. Iz datoteke cije
-  se ime zadaje sa standardnog ulaza ucitava se broj automobila a potom
+  se ime zadaje sa standardnog ulaza Ucitavanje broj automobila a potom
   i podaci za svaki automobil. Program treba da:
   a) izracuna prosecnu cenu po marki kola
   b) za maksimalnu cenu koju je kupac spreman da plati, a koja se zadaje

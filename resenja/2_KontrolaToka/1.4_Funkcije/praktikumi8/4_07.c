@@ -17,7 +17,7 @@ int postoji_prestupna(int g1, int g2){
   return 0;
 }
 
-int main(){
+int main() {
   
   int g1, g2;
   

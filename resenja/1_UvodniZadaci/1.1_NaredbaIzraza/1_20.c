@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
-  float a11, a12, a21, a22;
-  float determinanta;
+  float a11, a12, a21, a22, determinanta;
 
-  /* Ucitavaju se elementi matrice. */
+  /* Ucitavanje elemenata matrice. */
   printf("Unesite brojeve: ");
   scanf("%f%f%f%f", &a11, &a12, &a21, &a22);
 
-  /* Izracunava se determinanta matrice. */
+  /* Racunanje determinante matrice. */
   determinanta = a11*a22 - a12*a21;
   
   /* Ispis rezultata na cetiri decimale. */

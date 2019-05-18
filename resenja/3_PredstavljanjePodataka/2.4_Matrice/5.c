@@ -3,24 +3,20 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(int a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
       scanf("%d", &a[i][j]);
 }
 
-/* Relacija je refleksivna ukoliko je za svako i, a[i][i] = 1.
+/* Relacija je refleksivna ukoliko je za svako i a[i][i] = 1.
    Funkcija proverava da li je relacija zadata matricom a
    refleksivna i vraca 1 ukoliko jeste, a 0 inace. */
-int refleksivna(int a[][MAKS], int n)
-{
+int refleksivna(int a[][MAKS], int n) {
   int i;
-
   for (i = 0; i < n; i++)
     if (a[i][i] != 1)
       return 0;
@@ -31,10 +27,8 @@ int refleksivna(int a[][MAKS], int n)
 /* Relacija je simetricna ukoliko za svaki par i, j vazi da je
    a[i][j] = a[j][i]. Funkcija proverava da li je relacija zadata
    matricom a simetricna i vraca 1 ukoliko jeste, a 0 inace. */
-int simetricna(int a[][MAKS], int n)
-{
+int simetricna(int a[][MAKS], int n) {
   int i, j;
-
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
       if (a[i][j] != a[j][i])
@@ -47,10 +41,8 @@ int simetricna(int a[][MAKS], int n)
    ako je a[i][j] = 1 i a[j][k] = 1, onda je i a[i][k] = 1.
    Funkcija proverava da li je relacija zadata matricom a
    tranzitivna i vraca 1 ukoliko jeste, a 0 inace. */
-int tranzitivna(int a[][MAKS], int n)
-{
+int tranzitivna(int a[][MAKS], int n) {
   int i, j, k;
-
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
       for (k = 0; k < n; k++)
@@ -61,19 +53,17 @@ int tranzitivna(int a[][MAKS], int n)
 }
 
 /* Relacija je relacija ekvivalencije ukoliko je refleksivna,
-   tranzitivna i simetricna. Funkcija proverava da li je relacija
+   simetricna i tranzitivna. Funkcija proverava da li je relacija
    zadata matricom a relacija ekvivalencije i vraca 1 ukoliko
    jeste, a 0 inace. */
-int ekvivalencija(int a[][MAKS], int n)
-{
+int ekvivalencija(int a[][MAKS], int n) {
   if (refleksivna(a, n) && simetricna(a, n) && tranzitivna(a, n))
     return 1;
 
   return 0;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
@@ -81,8 +71,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

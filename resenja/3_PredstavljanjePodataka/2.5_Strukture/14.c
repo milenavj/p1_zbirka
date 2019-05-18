@@ -5,51 +5,42 @@
 #define BROJ_OCENA 9
 #define MAKS_DJAKA 30
 
-typedef struct 
-{
+typedef struct {
   char ime[MAKS_IME];
   int ocena[BROJ_OCENA];
-} 
-Djak;
+} Djak;
 
 /* Funkcija proverava ispravnost date ocene. */
-void provera_ocene(int ocena)
-{
-  if (ocena < 1 || ocena > 5) 
-  {
+void provera_ocene(int ocena) {
+  if (ocena < 1 || ocena > 5) {
     printf("Greska: neispravna ocena.\n");
     exit(EXIT_FAILURE);
   }
 }
 
 /* Funkcija ucitava podatke o djacima u niz. */
-int ucitaj(Djak niz[])
-{
-  int i,j;
-  
-  while (i < MAKS_DJAKA) 
-  {
+int ucitaj(Djak niz[]) {
+  int i = 0, j;
+
+  while (i < MAKS_DJAKA) {
     printf("Unesite podatke o djaku: ");
     /* Ucitavanje imena. */
-    if(scanf("%s", niz[i].ime) == EOF)
-        break;
-    
+    if (scanf("%s", niz[i].ime) == EOF)
+      break;
+
     /* Ucitavanje ocena. */
-    for (j = 0; j < BROJ_OCENA; j++) 
-    {
+    for (j = 0; j < BROJ_OCENA; j++) {
       scanf("%d", &niz[i].ocena[j]);
       provera_ocene(niz[i].ocena[j]);
     }
-
     i++;
   }
-  
+
   return i;
 }
 
 /* Funkcija racuna prosecnu ocenu datog djaka. */
-float prosecna_ocena(const Djak* djak)
-{
+float prosecna_ocena(const Djak *djak) {
   int j;
   float suma = 0;
   for (j = 0; j < BROJ_OCENA; j++)
@@ -58,17 +49,16 @@ float prosecna_ocena(const Djak* djak)
   return suma / BROJ_OCENA;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   Djak niz[MAKS_DJAKA];
-  int i = 0, n, j;
+  int i, j, n;
   float prosek;
 
   /* Ucitavanje podataka o djacima. */
   n = ucitaj(niz);
 
-  /* Ispisivanje imena nedovoljnih ucenika. */
+  /* Ispis imena nedovoljnih ucenika. */
   printf("\n\nNEDOVOLJNI: ");
   for (i = 0; i < n; i++)
     for (j = 0; j < 9; j++)
@@ -78,10 +68,9 @@ int main()
       }
   printf("\n");
 
-  /* Ispisivanje imena odlicnih ucenika. */
+  /* Ispis imena odlicnih ucenika. */
   printf("ODLICNI: ");
-  for (i = 0; i < n; i++) 
-  {
+  for (i = 0; i < n; i++) {
     prosek = prosecna_ocena(&niz[i]);
     if (prosek >= 4.5)
       printf("%s ", niz[i].ime);

@@ -1,16 +1,14 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int dan, mesec;
 
-  /* Ucitava se vrednost datuma koji je zadat u formatu: 
-     dan.mesec. */
+  /* Ucitavanje datuma koji je zadat u formatu: dan.mesec. */
   printf("Unesite dan i mesec");
   scanf("%d.%d.", &dan, &mesec);
 
-  /* Odredjuje se godisnje doba. */
+  /* Racunanje godisnjeg doba. */
   switch (mesec) {
   case 1:
   case 2:

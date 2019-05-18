@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-int main(){
+int main() {
   
   FILE* in;
   int c, broj_malih=0;

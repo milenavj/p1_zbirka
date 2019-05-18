@@ -1,18 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  unsigned int duzina, sirina, visina;
-  unsigned int cena;
-  float povrsina_za_krecenje;
-  float ukupna_cena;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  unsigned int duzina, sirina, visina, cena;
+  float povrsina_za_krecenje, ukupna_cena;
 
-  /* Ucitavaju se vrednosti duzine, sirine i visine sobe. */
+  /* Ucitavanje vrednosti duzine, sirine i visine sobe. */
   printf("Unesite dimenzije sobe: ");
   scanf("%u%u%u", &duzina, &sirina, &visina);
 
-  /* Ucitava se cena krecenja */
+  /* Ucitavanje vrednosti cene krecenja. */
   printf("Unesite cenu po m2: ");
   scanf("%u", &cena);
 
@@ -22,7 +19,7 @@ int main()
                                 2 * duzina * visina +
                                 2 * sirina * visina);
   
-  /* Racuna se ukupna cena. */
+  /* Racunanje ukupne cene. */
   ukupna_cena = povrsina_za_krecenje * cena;
 
   /* Ispis rezultata. */

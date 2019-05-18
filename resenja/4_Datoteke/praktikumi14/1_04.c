@@ -46,7 +46,7 @@ int brojLinija(FILE* in, char* s){
   return broj_linija;
 }
 
-int main(){
+int main() {
   
   FILE* in;
   char s[MAXS];

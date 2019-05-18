@@ -7,7 +7,7 @@ void greska(){
 	exit(EXIT_FAILURE);
 }
 
-int main(){
+int main() {
 
 FILE* ulaz;
 float A[MAX_DIM][MAX_DIM];

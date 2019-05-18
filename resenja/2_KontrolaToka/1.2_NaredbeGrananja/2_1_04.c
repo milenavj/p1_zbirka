@@ -1,15 +1,14 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a, b, c, suma;
 
-  /* Ucitavaju se ulazne vrednosti. */
+  /* Ucitavanje ulaznih vrednosti. */
   printf("Unesite tri cela broja:");
   scanf("%d%d%d", &a, &b, &c);
 
-  /* Pocetna vrednost sume se postavlja na 0. */
+  /* Inicijalizovanje sume na nulu. */
   suma = 0;
 
   /* Na sumu se dodaju vrednosti onih brojeva cija je vrednost

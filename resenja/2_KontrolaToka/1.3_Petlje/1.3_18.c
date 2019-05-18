@@ -1,13 +1,10 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracije i inicijalizacije potrebnih promenljivih. */
-  int x;
-  int broj_brojeva = 0;
-  int suma = 0;
+int main() {
+  /* Deklaracija i inicijalizacije potrebnih promenljivih. */
+  int x, broj_brojeva = 0, suma = 0;
 
-  /* Brojevi se ucitavaju u petlji sve do unosa broja 0. */
+  /* Ucitavanje brojeva sve do unosa broja 0. */
   printf("Unesite brojeve: ");
   while (1) {
     scanf("%d", &x);
@@ -15,21 +12,20 @@ int main()
     if (x == 0)
       break;
 
-    /* Procitani broj se dodaje na sumu. */
+    /* Dodavanje ucitanog broja na sumu. */
     suma += x;
 
-    /* Uvecava se broj ucitanih brojeva. */
+    /* Uvecavanje broja ucitanih brojeva. */
     broj_brojeva++;
   }
 
-  /* Ispis rezultata.
-     Napomena: primetiti da su i suma i broj_brojeva celi brojevi
-     i da je neophodno bar jednu od te dve vrednosti pretvoriti
+  /* Ispis rezultata. Napomena: i suma i broj_brojeva su celi
+     brojevi neophodno je bar jednu od te dve vrednosti pretvoriti
      u realan broj kako deljenje ne bi bilo celobrojno. */
   if (broj_brojeva == 0)
     printf("Nisu uneti brojevi.\n");
   else
-    printf("Aritmeticka sredina: %.4f\n", 
+    printf("Aritmeticka sredina: %.4f\n",
            (double) suma / broj_brojeva);
 
   return 0;

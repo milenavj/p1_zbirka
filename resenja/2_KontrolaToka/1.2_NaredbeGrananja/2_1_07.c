@@ -1,17 +1,15 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebne promenljive. */
   unsigned int x;
 
-  /* Ucitava se vrednost godine. */
+  /* Ucitavanje vrednosti godine. */
   printf("Unesite godinu:");
   scanf("%u", &x);
 
-  /* Proverava se da li je godina prestupna ili ne i ispisuje se
-     odgovarajuca poruka. Godina je prestupna ukoliko vazi jedan od
-     narednih uslova:
+  /* Provera da li je godina prestupna i ispis odgovarajuce poruke.
+     Godina je prestupna ukoliko vazi jedan od narednih uslova:
      1. da je deljiva sa 4, a nije sa 100 
      2. da je deljiva sa 400. */
   if ((x % 4 == 0 && x % 100 != 0) || x % 400 == 0)

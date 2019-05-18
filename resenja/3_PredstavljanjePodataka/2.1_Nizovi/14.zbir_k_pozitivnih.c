@@ -4,17 +4,15 @@
 #define MAKS 100
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(float a[], int n)
-{
-  int i;  
+void ucitaj(float a[], int n) {
+  int i;
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%f", &a[i]);
 }
 
-/* Funckija racuna zbir prvih k pozitivnih elemenata niza. */
-float zbir_pozitivnih(float a[], int n, int k)
-{
+/* Funkcija racuna zbir prvih k pozitivnih elemenata niza. */
+float zbir_pozitivnih(float a[], int n, int k) {
   int i;
   float zbir = 0;
 
@@ -32,30 +30,26 @@ float zbir_pozitivnih(float a[], int n, int k)
   return zbir;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int n, k;
   float a[MAKS];
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   ucitaj(a, n);
 
-  /* Ucitava se broj k i vrsi se provera ispravnosti ulaza. */
+  /* Ucitavanje broja k i provera ispravnosti ulaza. */
   printf("Unesite vrednost k: ");
   scanf("%d", &k);
-  if (k < 0 || k > n) 
-  {
+  if (k < 0 || k > n) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

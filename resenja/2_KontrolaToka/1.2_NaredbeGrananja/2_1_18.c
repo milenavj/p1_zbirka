@@ -1,12 +1,11 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   float xa, ya, xb, yb, xc, yc;
   float k, n;
 
-  /* Ucitavaju se koordinate tacaka A, B i C. */
+  /* Ucitavanje koordinata tacaka A, B i C. */
   printf("Unesite koordinate tacke A: ");
   scanf("%f%f", &xa, &ya);
 
@@ -24,7 +23,7 @@ int main()
     return 0;
   }
 
-  /* Odredjuju se koeficijent pravca k i odsecak na y osi n, prave
+  /* Odredjivanje koeficijenta pravca k i odsecka na y osi n, prave
      y = k*x + n koja prolazi kroz tacke A i B. Napomena: u
      slucaju kada je xb jednako xa, ova prava je paralelna sa y
      osom i k ima vrednost beskonacno, a n ima vrednost 0, tj.
@@ -34,14 +33,14 @@ int main()
   if (xb != xa) {
     k = (yb - ya) / (xb - xa);
     n = ya - k * xa;
-    /* Proverava se da li tacka C pripada pravoj y=k*x + n na
+    /* Provera da li tacka C pripada pravoj y=k*x + n na
        kojoj se vec nalaze tacke A i B. */
     if (yc == k * xc + n)
       printf("Tacke se nalaze na istoj pravoj.\n");
     else
       printf("Tacke se ne nalaze na istoj pravoj.\n");
   } else {
-    /* Proverava se da li se i tacka C nalazi na pravoj x = xb. */
+    /* Provera da li se i tacka C nalazi na pravoj x = xb. */
     if (xc == xb)
       printf("Tacke se nalaze na istoj pravoj.\n");
     else

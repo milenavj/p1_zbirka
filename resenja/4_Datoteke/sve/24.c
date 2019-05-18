@@ -9,82 +9,76 @@
 typedef struct {
   char puno_ime[MAKS_PUNO_IME];
   int ocene[MAKS_OCENA];
-  int br_ocena;
+  int broj_ocena;
   float prosek;
 } Student;
 
 /* Funkcija ispisuje prosledjenu poruku o gresci na standardni
-   izlaz za greske i izlazi iz programa. */
-void greska(char* poruka)
-{
-  fprintf(stderr, "%s", poruka);
+   izlaz za greske i prekida izvrsavanje programa. */
+void greska(char *poruka) {
+  fprintf(stderr, "%s\n", poruka);
   exit(EXIT_FAILURE);
 }
 
-int main(int argc, char **argv)
-{
+int main(int argc, char **argv) {
   /* Deklaracije potrebnih promenljivih. */
   FILE *ulaz;
   char ime[MAKS_PUNO_IME], prezime[MAKS_PUNO_IME];
   int i = 0, j, ocena, suma_ocena;
-  Student s, maks_s;
+  Student student, maks_student;
   float maks_prosek;
 
-  /* Proverava se broj argumenata. */
+  /* Provera broja argumenata komandne linije. */
   if (argc != 2)
-    greska("Greska: neispravan poziv.\n");
+    greska("Greska: neispravan poziv.");
 
-  /* Ulazna datoteka se otvara za citanje i proverava se da li je
-     otvaranje proslo uspesno. */  
+  /* Otvaranje ulazne datoteke za citanje i provera uspeha. */
   ulaz = fopen(argv[1], "r");
   if (ulaz == NULL)
-    greska("Greska: neuspesno otvaranje ulazne datoteke.\n");
+    greska("Greska: neuspesno otvaranje ulazne datoteke.");
 
   /* Iz datoteke se ucitavaju podaci o studentima sve dok se ne
-     dodje do kraja ulaza. */
-  while (fscanf(ulaz, "%s%s", ime, prezime) != EOF) 
-  {
+     dodje do kraja datoteke. */
+  while (fscanf(ulaz, "%s%s", ime, prezime) != EOF) {
     /* Od imena i prezimena se formira puno ime. */
-    strcpy(s.puno_ime, ime);
-    strcat(s.puno_ime, " ");
-    strcat(s.puno_ime, prezime);
-    
-    /* Ucitavaju se ocene sve dok se ne ucita broj 0. */
+    strcpy(student.puno_ime, ime);
+    strcat(student.puno_ime, " ");
+    strcat(student.puno_ime, prezime);
+
+    /* Ucitavanje ocena sve dok se ne ucita broj 0. */
     j = 0;
     suma_ocena = 0;
-    while(1)
-    {
+    while (1) {
       fscanf(ulaz, "%d", &ocena);
-      if(ocena == 0)
+      if (ocena == 0)
         break;
-      
-      s.ocene[j] = ocena;
+
+      student.ocene[j] = ocena;
       suma_ocena += ocena;
       j++;
     }
-    
-    /* Racuna se prosek ocena. */
-    s.br_ocena = j;
-    s.prosek = (float) suma_ocena / j;
-    
+
+    /* Racunanje proseka ocena. */
+    student.broj_ocena = j;
+    student.prosek = (float) suma_ocena / j;
+
     /* Ukoliko je u pitanju student ciji je prosek veci od trenutno
-       najveceg proseka, pamte se njegovi podaci i azurira se 
+       najveceg proseka, pamte se njegovi podaci i azurira se
        vrednost najveceg proseka. */
-    if(s.prosek > maks_prosek)
-    {
-      maks_prosek = s.prosek;
-      maks_s = s;
+    if (student.prosek > maks_prosek) {
+      maks_prosek = student.prosek;
+      maks_student = student;
     }
   }
-  
-  /* Ispis podataka o studentu sa najvecim prosekom. */
-  printf("%s ", maks_s.puno_ime);
-  for(i=0; i<maks_s.br_ocena; i++)
-    printf("%d ", maks_s.ocene[i]);
-  printf("%.2f\n", maks_s.prosek);
 
-  /* Zatvara se datoteka. */ 
+  /* Ispis podataka o studentu sa najvecim prosekom. */
+  printf("%s ", maks_student.puno_ime);
+  for (i = 0; i < maks_student.broj_ocena; i++)
+    printf("%d ", maks_student.ocene[i]);
+  printf("%.2f\n", maks_student.prosek);
+
+  /* Zatvaranje datoteke. */
   fclose(ulaz);
-  
+
   return 0;
 }

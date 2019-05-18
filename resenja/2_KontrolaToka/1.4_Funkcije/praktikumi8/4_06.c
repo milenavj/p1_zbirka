@@ -50,7 +50,7 @@ void grafikon_v(int a, int b, int c, int d){
   }
 }
 
-int main(){
+int main() {
   int a,b,c,d;
   
   /* Ucitavanje vrednosti cetiri broja. */

@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
-  float a, b, c;
-  float D;
+  float a, b, c, D;
 
-  /* Ucitavaju se koeficijenti kvadratne jednacine. */
+  /* Ucitavanje koeficijenata kvadratne jednacine. */
   printf("Unesite koeficijente A, B i C:");
   scanf("%f%f%f", &a, &b, &c);
 
-  /* Racunaju se resenja jednacine u zavisnosti od vrednosti
-     koeficijenata a, b i c i ispisuje se odgovarajuci rezultat. */
+  /* Racunanje resenja jednacine u zavisnosti od vrednosti
+     koeficijenata a, b i c i ispis rezultata. */
   if (a == 0) {
     if (b == 0) {
       if (c == 0) {
@@ -28,7 +26,7 @@ int main()
              -c / b);
     }
   } else {
-    /* Slucaj a != 0: racuna se diskriminanta. */
+    /* Slucaj a != 0: Racunanje diskriminanta. */
     D = b * b - 4 * a * c;
 
     /* U zavisnosti od vrednosti diskriminante, ispisuje se

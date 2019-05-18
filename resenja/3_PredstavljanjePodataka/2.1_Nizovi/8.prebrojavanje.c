@@ -9,14 +9,11 @@
    (ima vrednost 10 ili 26).
    Karakter c oznacava prvi karakter za datu kategoriju
    ('a' za mala slova, 'A' za velika i '0' za cifre). */
-void ispisi(int niz[], int n, char c)
-{
+void ispisi(int niz[], int n, char c) {
   int i;
   for (i = 0; i < n; i++) 
-  {
     if (niz[i] != 0)
       printf("Karakter %c se pojavljuje %d puta\n", c + i, niz[i]);
-  }
 }
 
 /* Funkcija inicijalizuje niz postavljajuci vrednosti svih
@@ -38,12 +35,12 @@ int main()
   /* Deklaracije pomocnih promenljivih. */
   int c;
   
-  /* Brojaci se na pocetku inicijalizuju nulama. */
+  /* Inicijalizacije brojaca nulama. */
   inicijalizuj(cifre, BROJ_CIFARA);
   inicijalizuj(mala_slova, DUZINA_ALFABETA);
   inicijalizuj(velika_slova, DUZINA_ALFABETA);
   
-  /* Ucitavaju se karakteri sve do kraja ulaza. */
+  /* Ucitavanje karaktera sve do kraja ulaza. */
   while ((c = getchar()) != EOF) 
   {
     if (c >= 'A' && c <= 'Z') 
@@ -69,7 +66,7 @@ int main()
     }  
   }
 
-  /* Ispisuju se trazene informacije. */
+  /* Ispis trazenih informacija. */
   ispisi(cifre, BROJ_CIFARA, '0');
   ispisi(mala_slova, DUZINA_ALFABETA, 'a');
   ispisi(velika_slova, DUZINA_ALFABETA, 'A');

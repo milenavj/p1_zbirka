@@ -7,7 +7,7 @@ int je_stepen(unsigned x, unsigned n)
    int i=1;
    int s=n;
    
-   /* Racuna se stepen broja n sve dok je on manji od x. */
+   /* Racunanje stepen broja n sve dok je on manji od x. */
    while(s<x)
    {
       s=s*n;

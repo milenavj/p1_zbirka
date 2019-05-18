@@ -1,22 +1,20 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   unsigned int n;
   int i, j;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 
-  /* Prva petlja oznacava broj 'serija' koje ce se ispisati.
-     Na primer, za n=5, prva serija je 1 2 3 4 5, druga serija je
-     2 3 4 i treca serija je 3.
-     Kako se u svakoj sledecoj seriji broj brojeva smanjuje za 2,
-     do 0 karaktera u seriji se dolazi posle n/2 koraka, ali
-     zaokruzeno navise (5/2 = 2.5 --> 3), a to je isto sto i
-     celobrojno (n+1)/2. */
+  /* Prva petlja oznacava broj 'serija' koje ce se ispisati. Na
+     primer, za n=5, prva serija je 1 2 3 4 5, druga serija je 2 3
+     4 i treca serija je 3. Kako se u svakoj sledecoj seriji broj
+     brojeva smanjuje za 2, do 0 karaktera u seriji se dolazi posle 
+     n/2 koraka, ali zaokruzeno navise (5/2 = 2.5 --> 3), a to je
+     isto sto i celobrojno (n+1)/2. */
   for (i = 1; i <= (n + 1) / 2; i++) {
     /* U svakoj seriji se ispisuju brojevi izmedju i i n-i+1. */
     for (j = i; j <= n + 1 - i; j++)

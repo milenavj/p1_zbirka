@@ -4,17 +4,15 @@
 #define MAKS 600
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(int a[], int n)
-{
-  int i;  
+void ucitaj(int a[], int n) {
+  int i;
   printf("Unesite elemente niza a: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 }
 
 /* Funkcija ispisuje elemente niza dimenzije n. */
-void ispisi(int niz[], int n)
-{
+void ispisi(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
     printf("%d ", niz[i]);
@@ -23,8 +21,7 @@ void ispisi(int niz[], int n)
 
 /* Funkcija proverava da li niz a dimenzije n sadrzi zadatu
    vrednost x. Pretraga se vrsi od prosledjene pozicije. */
-int sadrzi(int niz[], int n, int od_pozicije, int x)
-{
+int sadrzi(int niz[], int n, int od_pozicije, int x) {
   int i;
   for (i = od_pozicije; i < n; i++)
     if (niz[i] == x)
@@ -35,54 +32,46 @@ int sadrzi(int niz[], int n, int od_pozicije, int x)
 
 /* Funkcija formira niz b tako sto u njega ubacuje sve elemente
    niza a koji se u tom nizu pojavljuju bar dva puta. */
-int duplikati(int a[], int n, int b[])
-{
+int duplikati(int a[], int n, int b[]) {
   /* Promenljiva j je brojac elemenata rezultujuceg niza. */
   int i, j = 0;
 
-  /* Obilazi se element po element niza a. 
-     Trenutni element je duplikat ukoliko se javlja jos neki put u
-     nizu a. Dovoljno je gledati da li se nalazi iza tekuceg 
-     elementa jer ako se nalazi ispred, onda je on vec obradjen 
-     (i duplikat je detektovan). 
-     Element a[i] se dodaje u niz duplikata ako vazi:
-     1. a[i] je duplikat
-     2. a[i] se ne nalazi u nizu duplikata 
+  /* Obilazi se element po element niza a. Trenutni element je
+     duplikat ukoliko se javlja jos neki put u nizu a. Dovoljno je
+     gledati da li se nalazi iza tekuceg elementa jer ako se
+     nalazi ispred, onda je on vec obradjen (i duplikat je
+     detektovan). Element a[i] se dodaje u niz duplikata ako vazi:
+     1. a[i] je duplikat 
+     2. a[i] se ne nalazi u nizu duplikata
      Provera sadrzi(a, n, i+1, a[i]) proverava prvi uslov. 
      Provera !sadrzi(b, j, 0, a[i]) proverava drugi uslov. */
-  for (i = 0; i < n; i++) 
-  {
-    if (sadrzi(a, n, i+1, a[i]) && !sadrzi(b, j, 0, a[i])) 
-    {
+  for (i = 0; i < n; i++)
+    if (sadrzi(a, n, i + 1, a[i]) && !sadrzi(b, j, 0, a[i])) {
       b[j] = a[i];
       j++;
     }
-  }
-  
+
   /* Povratna vrednost funkcije je duzina niza b. */
   return j;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS], b[MAKS];
   int n_a, n_b;
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite broj n: ");
   scanf("%d", &n_a);
-  if (n_a <= 0 || n_a > MAKS) 
-  {
+  if (n_a <= 0 || n_a > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se podaci o slicicama. */
+  /* Ucitavanje podataka o slicicama. */
   ucitaj(a, n_a);
 
-  /* Niz b se popunjava duplikatima iz a. */
+  /* Popunjavanje niza b duplikatima niza a. */
   n_b = duplikati(a, n_a, b);
 
   /* Ispis rezultata. */

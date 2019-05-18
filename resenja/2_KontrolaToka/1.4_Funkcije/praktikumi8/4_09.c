@@ -25,7 +25,7 @@ int znak(int broj){
   return broj<0?-1:1;
 }
 
-int main(){
+int main() {
 
   int broj;
   

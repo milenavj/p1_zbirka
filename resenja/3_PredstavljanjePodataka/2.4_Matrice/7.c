@@ -3,11 +3,9 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(int a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
@@ -16,8 +14,7 @@ void ucitaj(int a[][MAKS], int n)
 
 /* Funkcija proverava da li je matrica donje trougaona i vraca
    jedinicu ukoliko jeste, a nulu inace. */
-int donje_trougaona(int a[][MAKS], int n)
-{
+int donje_trougaona(int a[][MAKS], int n) {
   int i, j;
 
   /* Prolazi se kroz sve elemente iznad glavne dijagonale i ukoliko 
@@ -28,13 +25,12 @@ int donje_trougaona(int a[][MAKS], int n)
       if (a[i][j] != 0)
         return 0;
 
-  /* Ukoliko su svi elementi iznad glavne dijagonale nule, matrica 
+  /* Ukoliko su svi elementi iznad glavne dijagonale nule, matrica
      jeste donje trougaona. */
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
@@ -42,8 +38,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

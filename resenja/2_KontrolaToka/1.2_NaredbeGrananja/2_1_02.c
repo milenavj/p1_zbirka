@@ -1,15 +1,14 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   float x, apsolutno_x;
 
-  /* Ucitava se vrednost broja. */
+  /* Ucitavanje vrednosti broja. */
   printf("Unesite jedan realan broj:");
   scanf("%f", &x);
 
-  /* Racuna se apsolutna vrednost unetog broja. */
+  /* Racunanje apsolutne vrednosti unetog broja. */
   apsolutno_x = x;
   if (x < 0)
     apsolutno_x = -x;

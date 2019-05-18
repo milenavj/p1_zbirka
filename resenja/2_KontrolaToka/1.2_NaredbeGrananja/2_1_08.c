@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija karakterske promenljive. */
   char c;
 
-  /* Ucitava se jedan karakter. */
+  /* Ucitavanje jednog karaktera. */
   printf("Unesite karakter: ");
   scanf("%c", &c);
 

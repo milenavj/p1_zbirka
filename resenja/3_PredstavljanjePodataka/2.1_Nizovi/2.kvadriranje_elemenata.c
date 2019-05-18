@@ -3,23 +3,20 @@
 
 #define MAKS 100
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   float brojevi[MAKS];
   int n, i;
 
-  /* Ucitava se dimenzija niza i vrsi se provera ispravnosti
-     ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   printf("Unesite elemente niza:\n");
   for (i = 0; i < n; i++)
     scanf("%f", &brojevi[i]);
@@ -30,7 +27,7 @@ int main()
     if (brojevi[i] < 0)
       brojevi[i] *= brojevi[i];
 
-  /* Ispisuje se novodobijeni niz. */
+  /* Ispis novodobijenog niza. */
   for (i = 0; i < n; i++)
     printf("%g ", brojevi[i]);
   printf("\n");

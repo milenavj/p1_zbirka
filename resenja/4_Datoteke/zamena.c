@@ -9,7 +9,7 @@ void greska(){
 	exit(EXIT_FAILURE);
 }
 
-int main(){
+int main() {
 	char ime1[MAX_NAZIV], ime2[MAX_NAZIV];
 	char c;
 	

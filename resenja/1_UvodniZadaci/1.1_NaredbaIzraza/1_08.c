@@ -1,12 +1,10 @@
-#include<stdio.h>
+#include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
-  int x, y;
-  int p;
+  int x, y, p;
 
-  /* Ucitavaju se vrednosti x i y. */
+  /* Ucitavanje vrednosti x i y. */
   printf("Unesite vrednosti x i y: ");
   scanf("%d%d", &x, &y);
 

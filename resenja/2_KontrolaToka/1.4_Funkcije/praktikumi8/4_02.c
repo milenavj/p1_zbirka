@@ -6,7 +6,7 @@ unsigned int apsolutna_vrednost(int x){
   return (unsigned)(x<0?-x:x);
 }
 
-int main(){
+int main() {
 	int n;
 
 	/* Unos broja. */

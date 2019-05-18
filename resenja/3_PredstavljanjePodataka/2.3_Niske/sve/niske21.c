@@ -4,51 +4,49 @@
 #define MAKS_NISKA 21
 
 /* Funkcija vraca adresu prvog pojavljivanja karaktera c u niski s
-   ili NULL ukoliko se c ne pojavljuje u s. 
-   
-   Trazeni rezultat moze se dobiti koriscenjem funkcije strchr
-   cija se deklaracija nalazi u zaglavlju string.h. 
-   Funkcija strchr_klon predstavlja jednu mogucu implementaciju
-   ove funkcije. */
-char* strchr_klon(char s[], char c)
-{
+   ili NULL ukoliko se c ne pojavljuje u s.
+
+   Trazeni rezultat moze se dobiti koriscenjem funkcije strchr cija 
+   se deklaracija nalazi u zaglavlju string.h. Funkcija
+   strchr_klon predstavlja jednu mogucu implementaciju ove
+   funkcije. */
+char *strchr_klon(char s[], char c) {
   int i;
-  
-  /* Za svaki karakter se proverava da li je jednak karakteru c. 
-     Ako se naidje na takav karakter, kao povratna vrednost funkcije
-     se vraca njegova adresa (&s[i]). */
-  for(i=0; s[i]; i++)
-    if(s[i] == c)
+
+  /* Za svaki karakter se proverava da li je jednak karakteru c.
+     Ako se naidje na takav karakter, kao povratna vrednost
+     funkcije se vraca njegova adresa (&s[i]). */
+  for (i = 0; s[i]; i++)
+    if (s[i] == c)
       return &s[i];
-    
+
   /* Ako je petlja zavrsena, znaci da nije pronadjen karakter koji
-     je jednak karakteru c i kao povratna vrednost funkcije se vraca
-     NULL pokazivac kao oznaka da se c ne nalazi u s. */
+     je jednak karakteru c i kao povratna vrednost funkcije se
+     vraca NULL pokazivac kao oznaka da se c ne nalazi u s. */
   return NULL;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   char s[MAKS_NISKA];
   char c;
-  
-  /* Ucitava se niska s. */
+
+  /* Ucitavanje niske s. */
   printf("Unesite nisku s: ");
   scanf("%s", s);
-  
-  /* Preskace se novi red koji je unet nakon niske s i 
-     ucitava se karakter c. */
+
+  /* Preskace se novi red koji je unet nakon niske s i ucitava se
+     karakter c. */
   getchar();
   printf("Unesite karakter c: ");
   scanf("%c", &c);
-  
+
   /* Racunanje i ispis rezultata. */
-  char* p = strchr_klon(s, c);
-  if(p == NULL)
+  char *p = strchr_klon(s, c);
+  if (p == NULL)
     printf("Pozicija: -1\n");
   else
-    printf("Pozicija: %ld\n", p-s);
-  
+    printf("Pozicija: %ld\n", p - s);
+
   exit(EXIT_SUCCESS);
 }

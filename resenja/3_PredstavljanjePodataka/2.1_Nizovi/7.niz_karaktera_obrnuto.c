@@ -3,27 +3,25 @@
 
 #define MAKS 100
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   char karakteri[MAKS];
   char c;
   int i, n;
 
-  /* Ucitava se karakter po karakter sa standardnog ulaza sve dok 
-     se ne unese * ili se ne prekoraci maksimalni broj karaktera. */
-  for (i = 0; i < MAKS; i++) 
-  {  
+  /* Ucitavanje karaktera sve do unosa zvezdice ili do prekoracenja
+     maksimalnog broja karaktera. */
+  for (i = 0; i < MAKS; i++) {
     printf("Unesite karakter: ");
     scanf("%c", &c);
-    /* Cita se znak za novi red nakon unetog karaktera. */
+    /* Citanje znaka za novi red nakon unetog karaktera. */
     getchar();
 
     /* Ukoliko je unet karakter * izlazi se iz petlje. */
     if (c == '*')
       break;
 
-    /* Procitani karakter se smesta u niz. */
+    /* Smestanje procitanog karaktera u niz. */
     karakteri[i] = c;
   }
 
@@ -31,7 +29,7 @@ int main()
   n = i;
 
   /* Ispis karaktera u obrnutom redosledu. */
-  for (i = n-1; i >= 0; i--)
+  for (i = n - 1; i >= 0; i--)
     printf("%c ", karakteri[i]);
   printf("\n");
 

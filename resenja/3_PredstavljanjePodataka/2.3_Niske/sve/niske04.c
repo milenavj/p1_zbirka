@@ -6,8 +6,7 @@
 #define MAKS_NISKA 21
 
 /* Funkcija proverava da li je karakter c samoglasnik. */
-int samoglasnik(char c)
-{
+int samoglasnik(char c) {
   /* Karakter se pretvara u veliko slovo kako bi se izbegle posebne
      provere za mala i velika slova. */
   c = toupper(c);
@@ -20,8 +19,7 @@ int samoglasnik(char c)
 }
 
 /* Funkcija proverava da li se niska s zavrsava samoglasnikom. */
-int samoglasnik_na_kraju(char s[])
-{
+int samoglasnik_na_kraju(char s[]) {
   /* Funkcija strlen racuna duzinu date niske. Njena deklaracija se 
      nalazi u zaglavlju string.h. */
   int duzina = strlen(s);
@@ -34,12 +32,11 @@ int samoglasnik_na_kraju(char s[])
   return samoglasnik(s[duzina - 1]);
 }
 
-int main()
-{
-  /* Deklaracija niske. */
+int main() {
+  /* Deklaracija potrebne promenljive. */
   char s[MAKS_NISKA];
 
-  /* Ucitava se niska. */
+  /* Ucitavanje niske. */
   printf("Unesite nisku: ");
   scanf("%s", s);
 

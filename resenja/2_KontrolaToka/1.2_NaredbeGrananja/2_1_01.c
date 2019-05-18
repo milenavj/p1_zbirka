@@ -1,23 +1,22 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a, b, c, najmanji;
 
-  /* Ucitavaju se ulazne vrednosti. */
+  /* Ucitavanje ulaznih vrednosti. */
   printf("Unesite tri cela broja: ");
   scanf("%d%d%d", &a, &b, &c);
 
-  /* Najmanji broj se inicijalizuje na vrednost prvog broja. */
+  /* Inicijalizovanje najmanjeg broja na vrednost prvog broja. */
   najmanji = a;
 
-  /* Ako je vrednost drugog broja manji od vrednosti tekuceg
-     minimuma, vrednost minimuma se azurira. */
+  /* Azuriranje vrednosti minimuma u slucaju da je vrednost drugog
+     broja manji od vrednosti tekuceg minimuma. */
   if (b < najmanji)
     najmanji = b;
 
-  /* Postupak se ponavlja za treci broj. */
+  /* Ponavljanje postupka za treci broj. */
   if (c < najmanji)
     najmanji = c;
 

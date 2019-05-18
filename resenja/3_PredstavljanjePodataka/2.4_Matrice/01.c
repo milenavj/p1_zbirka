@@ -3,18 +3,15 @@
 
 #define MAKS 50
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
-  int m, n;
-  int i, j;
+  int i, j, m, n;
 
-  /* Ucitavanje dimenzija matrice i provera ispravnosti ulaza. */
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenzije matrice: ");
   scanf("%d%d", &m, &n);
-  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) 
-  {
+  if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
@@ -26,8 +23,7 @@ int main()
       scanf("%d", &a[i][j]);
 
   /* Ispis elemenata matrice. */
-  for (i = 0; i < m; i++) 
-  {
+  for (i = 0; i < m; i++) {
     for (j = 0; j < n; j++)
       printf("%d ", a[i][j]);
     printf("\n");

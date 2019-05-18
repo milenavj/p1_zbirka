@@ -4,17 +4,15 @@
 #define MAKS 100
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(int a[], int n)
-{
-  int i;  
+void ucitaj(int a[], int n) {
+  int i;
   printf("Unesite elemente niza: ");
   for (i = 0; i < n; i++)
     scanf("%d", &a[i]);
 }
 
 /* Funkcija ispisuje elemente niza dimenzije n. */
-void ispisi(int niz[], int n)
-{
+void ispisi(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
     printf("%d ", niz[i]);
@@ -22,19 +20,16 @@ void ispisi(int niz[], int n)
 }
 
 /* Funkcija brise sve neparne elemente niza. */
-int obrisi_neparne(int a[], int n)
-{
+int obrisi_neparne(int a[], int n) {
   int i, j;
-  /* Promenljiva j predstavlja brojac prve slobodne pozicije na koju
-     se moze upisati element niza koji treba da ostane u nizu. Kada 
-     se naidje na element koji je paran, on se kopira na mesto a[j] 
-     i poveca se vrednost brojaca j. Ukoliko se naidje na element
-     koji je neparan, njega treba preskociti. */
-  for (i = 0, j = 0; i < n; i++) 
-  {
+  /* Promenljiva j predstavlja brojac prve slobodne pozicije na
+     koju se moze upisati element niza koji treba da ostane u nizu. 
+     Kada se naidje na element koji je paran, on se kopira na
+     mesto a[j] i poveca se vrednost brojaca j. Ukoliko se naidje
+     na element koji je neparan, njega treba preskociti. */
+  for (i = 0, j = 0; i < n; i++) {
     /* Ako je tekuci element niza a paran. */
-    if (a[i] % 2 == 0) 
-    {
+    if (a[i] % 2 == 0) {
       /* Premesta se na poziciju j. */
       a[j] = a[i];
 
@@ -44,34 +39,31 @@ int obrisi_neparne(int a[], int n)
     /* Ako je tekuci element niza a neparan, sa njim nista ne treba 
        raditi. */
   }
-  
+
   /* Rezultujuci niz ima j elemenata. */
   return j;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS];
   int n;
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavaju se elementi niza. */
+  /* Ucitavanje elemenata niza. */
   ucitaj(a, n);
 
-  /* Brisu se neparni elementi. */
+  /* Brisanje neparnih elemenata niza. */
   n = obrisi_neparne(a, n);
 
-  /* Ispisuju se elementi modifikovanog niza a. */
+  /* Ispis elemenata izmenjenog niza a. */
   ispisi(a, n);
 
   exit(EXIT_SUCCESS);

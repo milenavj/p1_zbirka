@@ -1,18 +1,16 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   int n, d, i;
-  int x, y;
-  int broj_parova = 0;
+  int x, y, broj_parova = 0;
 
-  /* Ucitavaju se vrednosti n i d. */
+  /* Ucitavanje vrednosti n i d. */
   printf("Unesite brojeve n i d: ");
   scanf("%d %d", &n, &d);
 
-  /* Vrsi se provera ispravnosti ulaza. */  
+  /* Provera ispravnosti ulaza. */
   if (n <= 1 || d < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
@@ -26,7 +24,7 @@ int main()
   for (i = 1; i < n; i++) {
     scanf("%d", &y);
 
-    /* Provera se da li su brojevi na rastojanju d. */
+    /* Provera da li su brojevi na rastojanju d. */
     if (abs(y - x) == d)
       broj_parova++;
 

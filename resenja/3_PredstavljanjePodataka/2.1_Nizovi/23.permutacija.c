@@ -4,30 +4,24 @@
 #define MAKS 100
 
 /* Funkcija ucitava elemente niza dimenzije n. */
-void ucitaj(int niz[], int n)
-{
+void ucitaj(int niz[], int n) {
   int i;
-  
-  /* Ucitavaju se elementi niza. */
   printf("Unesite elemente niza: ");
-  for (i = 0; i < n; i++)
-  {
+  for (i = 0; i < n; i++) {
     scanf("%d", &niz[i]);
-    
-    /* Niz moze sadrzati elemente koji nisu u opsegu od 1 do n.
-       U tom slucaju taj niz nije permutacija. */
-    if (niz[i] <= 0 || niz[i] > n)
-    {
+
+    /* Niz moze sadrzati elemente koji nisu u opsegu od 1 do n. U
+       tom slucaju taj niz nije permutacija. */
+    if (niz[i] <= 0 || niz[i] > n) {
       printf("Uneti niz nije permutacija.\n");
       exit(EXIT_SUCCESS);
     }
   }
 }
 
-/* Funkcija prebrojava koliko puta se pojavljuje svaki element
-   niza a. */
-void brojanje(int a[], int b[], int n)
-{
+/* Funkcija prebrojava koliko puta se pojavljuje svaki element niza 
+   a. */
+void brojanje(int a[], int b[], int n) {
   int i;
 
   /* Niz b se inicijalizuje nulama jer se za svaki element postavi
@@ -35,7 +29,7 @@ void brojanje(int a[], int b[], int n)
   for (i = 1; i <= n; i++)
     b[i] = 0;
 
-  /* Peljom se prolazi kroz niz a i za svaki element a[i] uvecava
+  /* Petljom se prolazi kroz niz a i za svaki element a[i] uvecava
      se broj njegovog pojavljivanja u nizu b. Na primer, ako je
      a[3] = 7, onda treba uvecati broj pojavljivanja broja 7, a to
      je b[7]++, sto se krace moze zapisati kao b[a[3]]++.
@@ -46,51 +40,45 @@ void brojanje(int a[], int b[], int n)
 }
 
 /* Funkcija proverava da li je niz a permutacija. */
-int permutacija(int a[], int n)
-{
-   /* Niz b moze imati index MAKS (jer niz b se posmatra od 1 do
+int permutacija(int a[], int n) {
+  /* Niz b moze imati index MAKS (jer niz b se posmatra od 1 do
      MAKS), pa zato njegova dimenzija mora biti za jedan veca. */
   int b[MAKS + 1];
   int i;
-  
-  /* Racuna se broj pojavljivanja svakog broja niza a. */
+
+  /* Racunanje broja pojavljivanja svakog broja niza a. */
   brojanje(a, b, n);
-  
+
   /* Ukoliko se svaki element niza a javlja tacno jednom u nizu a,
      onda niz a jeste permutacija. Ovo svojstvo se proverava
      koriscenjem dobijenog niza b. */
   for (i = 1; i <= n; i++)
-  {
     if (b[i] != 1)
       return 0;
-  }
-  
+
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a[MAKS], n;
 
-  /* Ucitava se dimenzija niza i vrsi se provera 
-     ispravnosti ulaza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite dimenziju niza: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }
-  
-  /* Ucitavaju se elementi niza a. */
+
+  /* Ucitavanje elemenata niza a. */
   ucitaj(a, n);
 
-  /* Ispis rezultta. */
-  if(permutacija(a, n))
+  /* Ispis rezultata. */
+  if (permutacija(a, n))
     printf("Uneti niz je permutacija.\n");
   else
     printf("Uneti niz nije permutacija.\n");
-  
+
   exit(EXIT_SUCCESS);
 }

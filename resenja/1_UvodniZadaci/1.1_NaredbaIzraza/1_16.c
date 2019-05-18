@@ -1,15 +1,14 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   float in, cm;
 
-  /* Ucitava se realna vrednost koja predstavlja broj inca. */
+  /* Ucitavanje realnog broja koji predstavlja broj inca. */
   printf("Unesite broj inca: ");
   scanf("%f", &in);
 
-  /* Izracunava se rezultat (1 in = 2.54 cm) */
+  /* Racunanje rezultata (1 in = 2.54 cm) */
   cm = in * 2.54;
 
   /* Ispis rezultata (na dve decimale). */

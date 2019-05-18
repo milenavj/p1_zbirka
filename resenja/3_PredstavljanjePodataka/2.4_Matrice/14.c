@@ -3,11 +3,9 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(int a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
@@ -15,8 +13,7 @@ void ucitaj(int a[][MAKS], int n)
 }
 
 /* Funkcija racuna sumu kolone j. */
-int suma_kolone(int a[][MAKS], int n, int j)
-{
+int suma_kolone(int a[][MAKS], int n, int j) {
   int i, suma = 0;
 
   for (i = 0; i < n; i++)
@@ -26,8 +23,7 @@ int suma_kolone(int a[][MAKS], int n, int j)
 }
 
 /* Funkcija racuna sumu i-te vrste. */
-int suma_vrste(int a[][MAKS], int n, int i)
-{
+int suma_vrste(int a[][MAKS], int n, int i) {
   int j, suma = 0;
 
   for (j = 0; j < n; j++)
@@ -36,10 +32,9 @@ int suma_vrste(int a[][MAKS], int n, int i)
   return suma;
 }
 
-/* Funkcija proverava da li elementi matrice predstavljaju magicni 
+/* Funkcija proverava da li elementi matrice predstavljaju magicni
    kvadrat. */
-int magicni_kvadrat(int a[][MAKS], int n)
-{
+int magicni_kvadrat(int a[][MAKS], int n) {
   /* Da bi matrica bila magicni kvadrat, sume svih vrsta i kolona
      treba da budu jednke. Suma se zato inicijalizuje na sumu prve
      kolone. */
@@ -65,8 +60,7 @@ int magicni_kvadrat(int a[][MAKS], int n)
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
@@ -74,8 +68,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

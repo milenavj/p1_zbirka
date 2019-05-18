@@ -1,7 +1,6 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int x;
   float reciprocno_x;
@@ -10,7 +9,7 @@ int main()
   printf("Unesite jedan ceo broj:");
   scanf("%d", &x);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. Napomena: za
+  /* Proveravanje ispravnosti ulaznih podataka. Napomena: za
      razliku od izlaza iz programa sa kodom 0 (return 0;) koji
      sluzi kao indikator da se program zavrsio uspesno, izlaz iz
      programa sa izlaznim kodom koji se razlikuje od nule sluzi
@@ -21,7 +20,7 @@ int main()
     return -1;
   }
 
-  /* Racuna se reciprocna vrednost. */
+  /* Racunanje reciprocne vrednosti. */
   reciprocno_x = 1.0 / x;
 
   /* Ispis rezultata. */

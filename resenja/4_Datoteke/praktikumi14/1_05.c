@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-int main(){
+int main() {
   
   FILE* in;
   float broj, max_broj;

@@ -3,11 +3,9 @@
 
 #define MAKS 200
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(int a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
@@ -15,8 +13,7 @@ void ucitaj(int a[][MAKS], int n)
 }
 
 /* Funkcija racuna skalarni proizvod i-te i j-te vrste matrice. */
-int skalarni_proizvod(int a[][MAKS], int n, int i, int j)
-{
+int skalarni_proizvod(int a[][MAKS], int n, int i, int j) {
   int suma = 0, k;
 
   for (k = 0; k < n; k++)
@@ -27,20 +24,17 @@ int skalarni_proizvod(int a[][MAKS], int n, int i, int j)
 
 /* Matrica je ortonormirana ukoliko je skalarni proizvod svakog
    para razlicitih vrsta jednak nuli, a skalarni proizvod svake
-   vrste same sa sobom jednak jedinici. Funkcija proverava da li
-   je matrica ortorormirana i vraca jedinicu ukoliko jeste, a nulu
+   vrste same sa sobom jednak jedinici. Funkcija proverava da li je 
+   matrica ortorormirana i vraca jedinicu ukoliko jeste, a nulu
    inace. */
-int ortonormirana(int a[][MAKS], int n)
-{
+int ortonormirana(int a[][MAKS], int n) {
   int i, j;
 
   /* Za svaki par vrsta se racuna skalarni proizvod i proverava da
      li je uslov ispunjen. Ukoliko nije, kao povratna vrednost
      funkcije se vraca nula. */
-  for (i = 0; i < n; i++) 
-  {
-    for (j = i; j < n; j++) 
-    {
+  for (i = 0; i < n; i++)
+    for (j = i; j < n; j++) {
       /* Provera za slucaj kada se racuna skalarni proizvod vrste
          same sa sobom. */
       if (i == j && skalarni_proizvod(a, n, i, i) != 1)
@@ -50,15 +44,13 @@ int ortonormirana(int a[][MAKS], int n)
       if (i != j && skalarni_proizvod(a, n, i, j) != 0)
         return 0;
     }
-  }
 
   /* Ako je izvrsavanje stiglo do kraja petlje, znaci da je uslov
      ispunjen za sve vrste, tj. da je matrica ortonormirana. */
   return 1;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
@@ -66,8 +58,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

@@ -1,27 +1,26 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int dan, mesec, godina, dozvoljeni_broj_dana;
 
-  /* Ucitava se datum. */
+  /* Ucitavanje datuma. */
   printf("Unesite datum: ");
   scanf("%d.%d.%d", &dan, &mesec, &godina);
 
-  /* Vrsi se provera korektnosti vrednosti unete godine. */
+  /* Provera korektnosti vrednosti unete godine. */
   if (godina < 0) {
     printf("Datum nije korektan.\n");
     return 0;
   }
 
-  /* Vrsi se provera korektnosti vrednosti unetog meseca. */
+  /* Provera korektnosti vrednosti unetog meseca. */
   if (mesec < 1 || mesec > 12) {
     printf("Datum nije korektan.\n");
     return 0;
   }
 
-  /* Vrsi se provera korektnosti vrednosti unetog dana. */
+  /* Provera korektnosti vrednosti unetog dana. */
   switch (mesec) {
   case 1:
   case 3:

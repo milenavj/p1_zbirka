@@ -1,8 +1,7 @@
-#include<stdio.h>
+#include <stdio.h>
 
 /* Funkcija proverava da li je godina prestupna. */
-int prestupna(int godina)
-{
+int prestupna(int godina) {
   if ((godina % 100 != 0 && godina % 4 == 0) || godina % 400 == 0)
     return 1;
   else
@@ -10,8 +9,7 @@ int prestupna(int godina)
 }
 
 /* Funkcija odredjuje broj dana u datom mesecu. */
-int broj_dana(int mesec, int godina)
-{
+int broj_dana(int mesec, int godina) {
   switch (mesec) {
   case 1:
   case 3:
@@ -37,8 +35,7 @@ int broj_dana(int mesec, int godina)
 
 /* Funkcija proverava da li je datum ispravan. Ako je datum
    ispravan funkcija vraca 1, inace vraca 0. */
-int ispravan(int dan, int mesec, int godina)
-{
+int ispravan(int dan, int mesec, int godina) {
   /* Ako je godina negativna, datum nije ispravan. */
   if (godina < 0)
     return 0;
@@ -56,8 +53,7 @@ int ispravan(int dan, int mesec, int godina)
 }
 
 /* Funkcija racuna sledeci dan. */
-void sledeci_dan(int dan, int mesec, int godina)
-{
+void sledeci_dan(int dan, int mesec, int godina) {
   /* Za kraj godine, odnosno za datum 31.12. sledeci datum je 1.1.
      i godina se uvecava za jedan. */
   if (mesec == 12 && dan == 31)
@@ -78,23 +74,21 @@ void sledeci_dan(int dan, int mesec, int godina)
     printf("%d.%d.%d.\n", dan + 1, mesec, godina);
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int dan, mesec, godina;
 
-  /* Ucitavaju se vrednosti dana, meseca i godine. */
+  /* Ucitavanje vrednosti dana, meseca i godine. */
   printf("Unesite datum:");
   scanf("%d.%d.%d.", &dan, &mesec, &godina);
 
-  /* Vrsi se provera ispravnosti datuma. */
-  if (!ispravan(dan, mesec, godina))
-  {
+  /* Provera ispravnosti datuma. */
+  if (!ispravan(dan, mesec, godina)) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Poziva se funkcija za ispis sledeceg dana. */
+  /* Poziv funkcije za ispis sledeceg dana. */
   printf("Datum sledeceg dana je:");
   sledeci_dan(dan, mesec, godina);
 

@@ -1,15 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  int n, n_abs;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  int n, n_abs, rezultat;
   char jedinica, desetica, stotina, hiljada;
   int najveca, najmanja, stepen_najvece, stepen_najmanje;
-  int rezultat;
 
-  /* Ucitava se broj vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 
@@ -17,20 +15,20 @@ int main()
      se apsolutna vrednost broja n. */
   n_abs = abs(n);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (n_abs < 1000 || n_abs > 9999) {
     printf("Greska: niste uneli cetvorocifreni broj.\n");
     return -1;
   }
 
-  /* Izdvajaju se cifre broja n. */
+  /* Izdvajanje cifara broja n. */
   jedinica = n_abs % 10;
   desetica = (n_abs / 10) % 10;
   stotina = (n_abs / 100) % 10;
   hiljada = n_abs / 1000;
 
   /* Po algoritmu za trazenje najvece/najmanje cifre (koji je 
-     prikazan u zadatku 2.1.11) racunaju se najveca i najmanja
+     prikazan u zadatku 2.1.11) Racunanje najveca i najmanja
      cifra broja n, kao i pozicija na kojoj se one nalaze. 
      Radi lakseg izracunavanja, pozicija se pamti kao stepen broja
      10. Na primer, pozicija cifre jedinica je 1, cifre desetica 

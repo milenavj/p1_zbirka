@@ -1,17 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
   float x, Fx;
   int k;
 
-  /* Ucitavaju se vrednosti x i k. */
+  /* Ucitavanje vrednosti x i k. */
   printf("Unesite redom x i k: ");
   scanf("%f %d", &x, &k);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (k < 1 || k > 3) {
     printf("Greska: nedozvoljena vrednost za k.\n");
     return 0;

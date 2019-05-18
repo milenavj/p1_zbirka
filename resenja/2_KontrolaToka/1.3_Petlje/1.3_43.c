@@ -1,14 +1,12 @@
 #include <stdio.h>
 #include <math.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int i;
-  float suma;
-  float x, eps, clan;
+  float suma, x, eps, clan;
 
-  /* Ucitavaju se vrednosti x i eps. */
+  /* Ucitavanje vrednosti x i eps. */
   printf("Unesite x: ");
   scanf("%f", &x);
 
@@ -25,8 +23,8 @@ int main()
   while (fabs(clan) > eps) {
     suma += clan;
 
-    /* U svakoj iteraciji se racuna novi clan i mnozi se sa -1.
-       Na taj nacin se postize da je vrednost clana naizmenicno
+    /* U svakoj iteraciji se racuna novi clan i mnozi se sa -1. Na
+       taj nacin se postize da je vrednost clana naizmenicno
        pozitivna i negativna. */
     clan = clan * x / i;
     clan *= -1;
@@ -35,7 +33,7 @@ int main()
   }
 
   /* Ispis rezultata. */
-  printf("S=%f\n", suma);
+  printf("S = %f\n", suma);
 
   return 0;
 }

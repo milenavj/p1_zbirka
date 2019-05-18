@@ -2,61 +2,55 @@
 #include <stdlib.h>
 
 #define MAKS_STUDENATA 100
-    
-typedef struct
-{
+
+typedef struct {
   char korisnicko_ime[8];
   float prosek;
 } Student;
 
-int main()
-{
+
+int main() {
   /* Deklaracije potrebnih promenljivih. */
-  FILE * ulaz;
+  FILE *ulaz;
   Student studenti[MAKS_STUDENATA];
   int ocena1, ocena2, ocena3, ocena4, ocena5, zbir_ocena;
   int i = 0, n;
-  float maks_prosek = 0;
-  
-  /* Ulazna datoteka se otvara za citanje i proverava se da li je
-     otvaranje proslo uspesno. */  
+  float maksimalni_prosek = 0;
+
+  /* Otvaranje ulazne datoteke za citanje i provera uspeha. */     
   ulaz = fopen("studenti.txt", "r");
-  if (ulaz == NULL)
-  {
+  if (ulaz == NULL) {
     fprintf(stderr, "Greska: neuspesno otvaranje "
-                    "ulazne datoteke.\n");
+            "ulazne datoteke.\n");
     exit(EXIT_FAILURE);
-  }  
+  }
 
   /* Citaju se podaci o studentima sve dok se ne dodje do kraja
-     ulaza. */
+     datoteke. */
   while (fscanf(ulaz, "%s%d%d%d%d%d", studenti[i].korisnicko_ime,
-              &ocena1, &ocena2, &ocena3, &ocena4, &ocena5) != EOF)
-  {
-    /* Racuna se prosek trenutnog studenta. */
+          &ocena1, &ocena2, &ocena3, &ocena4, &ocena5) != EOF) {
+    /* Racunanje proseka trenutnog studenta. */
     zbir_ocena = ocena1 + ocena2 + ocena3 + ocena4 + ocena5;
     studenti[i].prosek = zbir_ocena / 5.0;
-    
-    /* Azurira se maksimalni prosek. */
-    if (studenti[i].prosek > maks_prosek) 
-      maks_prosek = studenti[i].prosek;
-    
-    /* Prelazi se na sledeceg studenta. */
+
+    /* Azuriranje maksimalnog proseka. */
+    if (studenti[i].prosek > maksimalni_prosek)
+      maksimalni_prosek = studenti[i].prosek;
+
+    /* Prelazak na sledeceg studenta. */
     i++;
   }
-  
+
   /* Promenljiva n cuva ukupan broj studenata. */
-  n=i;
-  
+  n = i;
+
   /* Ispis svih studenata sa maksimalnim prosekom. */
-  for(i=0; i<n; i++)
-  {
-    if(studenti[i].prosek == maks_prosek)
+  for (i = 0; i < n; i++)
+    if (studenti[i].prosek == maksimalni_prosek)
       printf("korisnicko ime: %s, prosek ocena: %.2f\n",
              studenti[i].korisnicko_ime, studenti[i].prosek);
-  }
- 
-  /* Zatvara se datoteka. */ 
+
+  /* Zatvaranje datoteke. */
   fclose(ulaz);
 
   return 0;

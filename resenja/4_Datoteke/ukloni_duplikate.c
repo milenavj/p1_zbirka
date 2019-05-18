@@ -13,7 +13,7 @@ void greska(){
 	exit(EXIT_FAILURE);
 }
 
-int main(){
+int main() {
 
   char ime[MAX_IME];
   char niz_reci[MAX_RECI][MAX_DUZINA];

@@ -1,38 +1,37 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int n, i;
   int x, x_kopija, broj_cifara;
   int najveci_broj_cifara, rezultat;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%d", &n);
-  
-  /* Vrsi se provera ispravnosti ulaza. */
+
+  /* Provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
-  
+
   /* Ako nema unetih brojeva, ispisuje se odgovarajuca poruka. */
   if (n == 0) {
     printf("Nisu uneti brojevi.\n");
     return 0;
   }
 
-  /* Maksimalan broj cifara se postavlja na 0 jer svaki broj ima
-     vise od 0 cifara. */
+  /* Postavljanje maksimalnog broja cifara na 0. Ovo je ispravnosti
+     jer svaki broj ima vise od 0 cifara. */
   najveci_broj_cifara = 0;
 
   printf("Unesite n brojeva: ");
   for (i = 0; i < n; i++) {
     scanf("%d", &x);
 
-    /* Racuna se broj cifara unetog broja x. */
+    /* Racunanje broja cifara unetog broja x. */
     x_kopija = abs(x);
     broj_cifara = 0;
     do {

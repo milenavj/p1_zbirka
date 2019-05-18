@@ -3,11 +3,9 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(int a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(int a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
@@ -16,8 +14,7 @@ void ucitaj(int a[][MAKS], int n)
 
 /* Funkcija proverava da li je kolona j sortirana rastuce i vraca
    jedinicu ukoliko jeste, a nulu inace. */
-int sortirana_kolona(int a[][MAKS], int n, int j)
-{
+int sortirana_kolona(int a[][MAKS], int n, int j) {
   int i;
 
   for (i = 0; i < n - 1; i++)
@@ -29,8 +26,7 @@ int sortirana_kolona(int a[][MAKS], int n, int j)
 
 /* Funkcija proverava da li je svaka kolona matrice sortirana
    rastuce i vraca jedinicu ukoliko jeste, a nulu inace. */
-int sortirani_po_kolonama(int a[][MAKS], int n)
-{
+int sortirani_po_kolonama(int a[][MAKS], int n) {
   int j;
 
   for (j = 0; j < n; j++)
@@ -42,8 +38,7 @@ int sortirani_po_kolonama(int a[][MAKS], int n)
 
 /* Funkcija proverava da li je i-ta vrsta sortirana rastuce i vraca
    jedinicu ukoliko jeste, a nulu inace. */
-int sortirana_vrsta(int a[][MAKS], int n, int i)
-{
+int sortirana_vrsta(int a[][MAKS], int n, int i) {
   int j;
 
   for (j = 0; j < n - 1; j++)
@@ -55,8 +50,7 @@ int sortirana_vrsta(int a[][MAKS], int n, int i)
 
 /* Funkcija proverava da li je svaka vrsta matrice sortirana
    rastuce i vraca jedinicu ukoliko jeste, a nulu inace. */
-int sortirani_po_vrstama(int a[][MAKS], int n)
-{
+int sortirani_po_vrstama(int a[][MAKS], int n) {
   int i;
 
   for (i = 0; i < n; i++)
@@ -68,8 +62,7 @@ int sortirani_po_vrstama(int a[][MAKS], int n)
 
 /* Funkcija proverava da li je glavna dijagonala matrice sortirana
    rastuce i vraca jedinicu ukoliko jeste, a nulu inace. */
-int sortirana_glavna(int a[][MAKS], int n)
-{
+int sortirana_glavna(int a[][MAKS], int n) {
   int i;
 
   for (i = 0; i < n - 1; i++)
@@ -81,8 +74,7 @@ int sortirana_glavna(int a[][MAKS], int n)
 
 /* Funkcija proverava da li je sporedna dijagonala matrice
    sortirana rastuce i vraca jedinicu ukoliko jeste, a nulu inace. */
-int sortirana_sporedna(int a[][MAKS], int n)
-{
+int sortirana_sporedna(int a[][MAKS], int n) {
   int i;
 
   for (i = 0; i < n - 1; i++)
@@ -94,13 +86,11 @@ int sortirana_sporedna(int a[][MAKS], int n)
 
 /* Funkcija proverava da li su obe dijagonale matrice sortirane
    rastuce i vraca jedinicu ukoliko jesu, a nulu inace. */
-int sortirani_po_dijagonalama(int a[][MAKS], int n)
-{
+int sortirani_po_dijagonalama(int a[][MAKS], int n) {
   return sortirana_glavna(a, n) && sortirana_sporedna(a, n);
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   int a[MAKS][MAKS];
   int n;
@@ -108,8 +98,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

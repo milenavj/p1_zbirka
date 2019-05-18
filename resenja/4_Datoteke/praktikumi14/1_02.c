@@ -2,7 +2,7 @@
 
 #include<stdio.h>
 
-int main(){
+int main() {
   
   FILE *in, *out;
   int c;

@@ -2,52 +2,47 @@
 #include <stdlib.h>
 #include <math.h>
 
-/* Funkcija uklanja cifru sa pozicije p iz broja n. 
-   Cifra jedinica ima poziciju 1, desetica 2, itd.*/
-int ukloni(int n, int p)
-{
+/* Funkcija uklanja cifru sa pozicije p iz broja n. Cifra jedinica
+   ima poziciju 1, desetica 2, itd. */
+int ukloni(int n, int p) {
   int znak, tezina_pozicije, levi_deo, desni_deo;
-  
-  /* Pamti se znak broja. */
+
+  /* Racunanje znaka broja n. */
   znak = n < 0 ? 1 : -1;
-  
-  /* Uzima se apsolutna vrednost. */
+
+  /* Racunanje apsolutne vrednosti broja n. */
   n = abs(n);
-  
-  /* Racuna se tezina prosledjene pozicije. */
-  tezina_pozicije = pow(10, p-1);
-  
+
+  /* Racunanje tezina prosledjene pozicije. */
+  tezina_pozicije = pow(10, p - 1);
+
   /* Broj se deli na dva dela - deo levo od cifre koja se izbacuje
      i deo desno od cifre koja se izbacuje. */
-  levi_deo = n/(10*tezina_pozicije);
-  desni_deo = n%tezina_pozicije;
-  
+  levi_deo = n / (10 * tezina_pozicije);
+  desni_deo = n % tezina_pozicije;
+
   /* Povratna vrednost funkcije se dobija spajanjem levog i desnog
      dela i mnozenjem sa znakom pocetnog broja. */
-  return znak * (levi_deo*10 + desni_deo);
+  return znak * (levi_deo * 10 + desni_deo);
 }
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int broj, p;
 
-  /* Ucitava se vrednost pozicije. */
+  /* Ucitavanje vrednosti pozicije. */
   printf("Unesite poziciju: ");
   scanf("%d", &p);
-  
-  /* Vrsi se provera ispravnosti ulaza. */
-  if(p <= 0)
-  {
+
+  /* Provera ispravnosti ulaza. */
+  if (p <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
-  
-  /* Ucitavaju se brojevi dok se ne unese nula i za svaki
-     ucitani broj se ispisuje broj koji se dobije uklanjanjem
-     cifre koja se nalazi na poziciji p. */
-  while (1) 
-  {
+
+  /* Ucitavanje brojeva dok se ne unese nula i ispis brojeva
+     dobijenih izbacivanjem cifre na poziciji p. */
+  while (1) {
     printf("Unesite broj: ");
     scanf("%d", &broj);
 

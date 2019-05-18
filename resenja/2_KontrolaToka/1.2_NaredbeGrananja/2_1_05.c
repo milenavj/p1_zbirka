@@ -1,23 +1,21 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  int a, b, c;
-  int najjeftiniji;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  int a, b, c, najjeftiniji;
   int cena_bez_popusta, cena_sa_popustom;
 
-  /* Ucitavaju se vrednosti cena. */
+  /* Ucitavanje vrednosti cena. */
   printf("Unesite tri cene: ");
   scanf("%d%d%d", &a, &b, &c);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (a <= 0 || b <= 0 || c <= 0) {
     printf("Greska: neispravan unos cene.");
     return -1;
   }
 
-  /* Racuna se vrednost najjeftinijeg artikla. */
+  /* Racunanje vrednosti najjeftinijeg artikla. */
   najjeftiniji = a;
 
   if (b < najjeftiniji)
@@ -26,7 +24,7 @@ int main()
   if (c < najjeftiniji)
     najjeftiniji = c;
 
-  /* Racunaju se cene sa i bez popusta. */
+  /* Racunanje cene sa i bez popusta. */
   cena_bez_popusta = a + b + c;
   cena_sa_popustom = cena_bez_popusta - najjeftiniji + 1;
 

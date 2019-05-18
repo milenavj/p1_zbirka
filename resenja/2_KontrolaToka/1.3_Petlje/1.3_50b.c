@@ -1,11 +1,10 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracije potrebnih promenljivih. */
+int main() {
+  /* Deklaracija potrebnih promenljivih. */
   unsigned int n, i, j;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj n: ");
   scanf("%u", &n);
 

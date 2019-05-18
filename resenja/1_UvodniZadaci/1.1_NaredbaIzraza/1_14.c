@@ -1,12 +1,11 @@
 #include <stdio.h>
 
-int main()
-{
-  /* Deklaracija potrebnih promenljivih. */
-  unsigned int broj, novibroj;
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  unsigned int broj, novi_broj;
   unsigned int levo, desno;
   
-  /* Ucitava se neoznacen ceo broj. */
+  /* Ucitavanje neoznacenog celog broja. */
   printf("Unesite broj: ");
   scanf("%u", &broj);
 
@@ -21,10 +20,10 @@ int main()
   
   /* Rezultat se dobija spajanjem levog i desnog dela.
      U datom primeru: 12*10 + 4 = 124. */
-  novibroj = levo*10 + desno;
+  novi_broj = levo*10 + desno;
   
   /* Ispis rezultata. */
-  printf("Rezultat je: %u\n", novibroj);
+  printf("Rezultat je: %u\n", novi_broj);
 
   return 0;
 }

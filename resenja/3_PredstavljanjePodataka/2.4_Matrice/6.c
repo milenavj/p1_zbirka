@@ -3,11 +3,9 @@
 
 #define MAKS 50
 
-/* Funkcija ucitava elemente matrice dimenzije n*n. */
-void ucitaj(float a[][MAKS], int n)
-{
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(float a[][MAKS], int n) {
   int i, j;
-
   printf("Unesite elemente matrice:\n");
   for (i = 0; i < n; i++)
     for (j = 0; j < n; j++)
@@ -15,8 +13,7 @@ void ucitaj(float a[][MAKS], int n)
 }
 
 /* Funkcija racuna trag matrice. */
-float trag(float a[][MAKS], int n)
-{
+float trag(float a[][MAKS], int n) {
   float suma = 0;
   int i;
 
@@ -28,8 +25,7 @@ float trag(float a[][MAKS], int n)
 
 /* Funkcija racuna sumu elemenata koji se nalaze na sporednoj
    dijagonali matrice. */
-float suma_sporedna(float a[][MAKS], int n)
-{
+float suma_sporedna(float a[][MAKS], int n) {
   float suma = 0;
   int i;
 
@@ -41,8 +37,7 @@ float suma_sporedna(float a[][MAKS], int n)
 
 /* Funckija racuna sumu elemenata koji se nalaze iznad glavne
    dijagonale matrice. */
-float suma_iznad(float a[][MAKS], int n)
-{
+float suma_iznad(float a[][MAKS], int n) {
   float suma = 0;
   int i, j;
 
@@ -53,10 +48,9 @@ float suma_iznad(float a[][MAKS], int n)
   return suma;
 }
 
-/* Funkcija racuna sumu elemenara koji se nalaze ispod sporedne
+/* Funkcija racuna sumu elemenata koji se nalaze ispod sporedne
    dijagonale matrice. */
-float suma_ispod(float a[][MAKS], int n)
-{
+float suma_ispod(float a[][MAKS], int n) {
   float suma = 0;
   int i, j;
 
@@ -67,8 +61,7 @@ float suma_ispod(float a[][MAKS], int n)
   return suma;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije potrebnih promenljivih. */
   float a[MAKS][MAKS];
   int n;
@@ -76,8 +69,7 @@ int main()
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   printf("Unesite dimenziju matrice: ");
   scanf("%d", &n);
-  if (n <= 0 || n > MAKS) 
-  {
+  if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
   }

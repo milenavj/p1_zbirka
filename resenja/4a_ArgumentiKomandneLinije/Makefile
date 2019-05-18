@@ -19,4 +19,5 @@ clean:
 	rm -rf *.o *~ $(EXECUTABLES)
 
 beauty:
-	indent -fc1 -fca -kr --no-tabs --line-length68 -i2 *.c 
+	indent -fc1 -fca -kr -br -ce -cdw -brf -brs -di1 --no-tabs --line-length68 -i2 *.c
+	sed -rzi 's;#include<;#include\ <;g' *.c

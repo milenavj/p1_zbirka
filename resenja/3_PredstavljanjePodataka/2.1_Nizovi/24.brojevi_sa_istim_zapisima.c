@@ -5,20 +5,18 @@
 
 /* Funkcija inicijalizuje niz postavljajuci vrednosti svih
    elemenata na nulu. */
-void inicijalizuj(int niz[], int n)
-{
+void inicijalizuj(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
     niz[i] = 0;
 }
 
 /* Funkcija izdvaja cifru po cifru broja i uvecava odgovarajuci
-   element niza koji odgovara brojacu za tu cifru. Na primer,
-   za broj=1123, po zavrsetku ove funkcije niz[1] ce imati vrednost
-   2 jer se cifra 1 pojavljuje 2 puta, niz[2] i niz[3] ce imati
+   element niza koji odgovara brojacu za tu cifru. Na primer, za
+   broj=1123, po zavrsetku ove funkcije niz[1] ce imati vrednost 2
+   jer se cifra 1 pojavljuje 2 puta, niz[2] i niz[3] ce imati
    vrednost 1, a svi ostali elementi niza ce imati vrednost 0. */
-void analiza_cifara(int broj, int niz[])
-{
+void analiza_cifara(int broj, int niz[]) {
   int c;
 
   /* Inicijalizacija svih brojaca na nule. */
@@ -29,18 +27,16 @@ void analiza_cifara(int broj, int niz[])
     c = broj % 10;
     niz[c]++;
     broj /= 10;
-  }
-  while (broj);
+  } while (broj);
 }
 
-int main()
-{
-  /* Niz cifrex predstavlja brojace za cifre broja x. Niz cifrey
-     predstavlja brojace za cifre broja y. */
-  int cifrex[BROJ_CIFARA], cifrey[BROJ_CIFARA];
+int main() {
+  /* Niz cifre_broja_x predstavlja brojace za cifre broja x. 
+     Niz cifre_broja_y predstavlja brojace za cifre broja y. */
+  int cifre_broja_x[BROJ_CIFARA], cifre_broja_y[BROJ_CIFARA];
   int x, y, i, indikator;
 
-  /* Ucitavaju se brojevi x i y. */
+  /* Ucitavanje brojeva x i y. */
   printf("Unesite dva broja: ");
   scanf("%d%d", &x, &y);
 
@@ -51,8 +47,8 @@ int main()
   y = abs(y);
 
   /* Popunjavaju se nizovi sa brojacima cifara. */
-  analiza_cifara(x, cifrex);
-  analiza_cifara(y, cifrey);
+  analiza_cifara(x, cifre_broja_x);
+  analiza_cifara(y, cifre_broja_y);
 
   /* Promenljiva indikator sluzi za pracenje da li su oba broja
      sastavljena od istih cifara. */
@@ -64,7 +60,7 @@ int main()
        ne zapisuju istim ciframa. Zato se vrednost indikatora moze
        postaviti na 0 i prekinuti dalje uporedjivanje broja
        pojavljivanja. */
-    if (cifrey[i] != cifrex[i]) {
+    if (cifre_broja_y[i] != cifre_broja_x[i]) {
       indikator = 0;
       break;
     }
@@ -78,7 +74,6 @@ int main()
     printf("Brojevi se zapisuju istim ciframa.\n");
   else
     printf("Brojevi se ne zapisuju istim ciframa.\n");
-
 
   exit(EXIT_SUCCESS);
 }

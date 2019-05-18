@@ -1,21 +1,20 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int k, broj;
 
-  /* Ucitava se trazena pozicija. */
+  /* Ucitavanje trazene pozicije. */
   printf("Unesite k: ");
   scanf("%d", &k);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (k < 1 || k > 189) {
     printf("Greska: neispravan unos pozicije.\n");
     return -1;
   }
 
-  /* Racuna se rezultat. */
+  /* Racunanje rezultata. */
   if (k < 10) {
     /* I slucaj: trazi se jednocifreni broj. */
     printf("Na %d-toj poziciji je broj %d.\n", k, k);

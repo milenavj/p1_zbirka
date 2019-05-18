@@ -1,15 +1,14 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
   int a, b, max;
   
-  /* Ucitavaju se dve celobrojne vrednosti. */
+  /* Ucitavanje dve celobrojne vrednosti. */
   printf("Unesite dva cela broja: ");
   scanf("%d%d", &a, &b);
 
-  /* Racuna se maksimum koriscenjem ternarnog operatora uslova. */
+  /* Racunanje maksimuma koriscenjem ternarnog operatora. */
   max = (a > b) ? a : b;
 
   /* Ispis rezultata. */

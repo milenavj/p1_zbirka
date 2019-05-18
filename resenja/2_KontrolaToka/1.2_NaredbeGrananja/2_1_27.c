@@ -1,34 +1,30 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
-  int godina;
-  int mesec;
-  int prestupna;
+  int godina, mesec, prestupna;
 
-  /* Ucitava se vrednost godine. */
+  /* Ucitavanje vrednosti godine. */
   printf("Unesite godinu: ");
   scanf("%d", &godina);
 
-  /* Vrsi se provera ispravnosti ulaznih podataka. */
+  /* Provera ispravnosti ulaznih podataka. */
   if (godina < 0) {
     printf("Greska: neispravan unos godine.\n");
     return -1;
   }
 
-  /* Vrsi se provera da li je godina prestupna, zbog februara */
+  /* Provera da li je godina prestupna, zbog februara */
   if ((godina % 4 == 0 && godina % 100 != 0) || godina % 400 == 0)
     prestupna = 1;
   else
     prestupna = 0;
 
-  /* Ucitava se redni broj meseca. */
+  /* Ucitavanje rednog broja meseca. */
   printf("Unesite redni broj meseca: ");
   scanf("%d", &mesec);
 
-  /* U zavisnosti od vrednosti meseca, ispisuje se odgovarajuci
-     rezultat. */
+  /* Ispis rezultata u zavisnosti od vrednosti meseca. */
   switch (mesec) {
   case 1:
     printf("Januar, 31 dan\n");

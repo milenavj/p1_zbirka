@@ -1,33 +1,32 @@
 #include <stdio.h>
 
-int main()
-{
+int main() {
   /* Deklaracija potrebnih promenljivih. */
-  int n, suma, pom_n;
+  int n, suma, n_kopija;
 
-  /* Ucitava se vrednost broja n. */
+  /* Ucitavanje vrednosti broja n. */
   printf("Unesite broj: ");
   scanf("%d", &n);
 
-  /* Vrsi se provera ispravnosti ulaza. */
+  /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
     return -1;
   }
 
-  /* Pravi se kopija originalnog broja, da bi originalna vrednost
-     n ostala nepromenjena. */
-  pom_n = n;
+  /* Pravljenje kopije originalnog broja, da bi originalna vrednost n 
+     ostala nepromenjena. */
+  n_kopija = n;
 
-  /*Inicijalizacija sume cifara. */
+  /* Inicijalizacija sume cifara. */
   suma = 0;
-  
-  /* Racuna se suma cifara. */
-  while (pom_n != 0) {
-    /* Na sumu se dodaje poslednja cifra broja. */
-    suma += pom_n % 10;
-    /* Sa broja se skida poslednja cifra. */
-    pom_n /= 10;
+
+  /* Racunanje sume cifara. */
+  while (n_kopija != 0) {
+    /* Dodavanje poslednje cifre na sumu. */
+    suma += n_kopija % 10;
+    /* Uklanjanje poslednje cifre. */
+    n_kopija /= 10;
   }
 
   /* Ispis rezultata. */
