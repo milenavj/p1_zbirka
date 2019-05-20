@@ -1085,7 +1085,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{8}#
-#\izlaz{Unesite elemente niza:}\ulaz{1 2 3 4 5 6 7 8}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1 2 3 4 5 6 7 8}#
 #\izlaz{Duzina najduze serije je 1.}#
 \end{upotreba}
 \end{miditest}
@@ -1211,7 +1212,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
-#\izlaz{Unesite elemente niza:}\ulaz{1 5 4 3 2}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1 5 4 3 2}#
 #\izlaz{Uneti niz je permutacija.}#
 \end{upotreba}
 \end{miditest}
@@ -1219,7 +1221,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{6}#
-#\izlaz{Unesite elemente niza:}\ulaz{2 3 3 1 1 5}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{2 3 3 1 1 5}#
 #\izlaz{Uneti niz nije permutacija.}#
 \end{upotreba}
 \end{miditest}
@@ -1228,7 +1231,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{1}#
-#\izlaz{Unesite elemente niza:}\ulaz{1}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{1}#
 #\izlaz{Uneti niz je permutacija.}#
 \end{upotreba}
 \end{miditest}
@@ -1314,12 +1318,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{6}#
-#\izlaz{Unesite elemente niza:}\ulaz{7 -3 11 783 26 -19}#
+#\izlaz{Unesite elemente niza:}#
+#\ulaz{7 -3 11 783 26 -19}#
 #\izlaz{Elementi niza nakon obrtanja:}#
-#\izlaz{-17 28 785	13 -1 9}#
+#\izlaz{-17	28 785	13	-1	9}#
 #\izlaz{Elementi niza nakon rotiranja za 1 mesto ulevo:}#
 #\izlaz{28 785 13 -1 9 -17}#
-#\izlaz{Unesite jedan pozitivan ceo broj:}\ulaz{3}#
+#\izlaz{Unesite jedan pozitivan ceo broj:}#
+#\ulaz{3}#
 #\izlaz{Elementi niza nakon rotiranja za 3 mesto ulevo:}#
 #\izlaz{-1 9 -17 28	785	13}#
 \end{upotreba}
@@ -1327,7 +1333,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza:}\ulaz{252}#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{252}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -1354,8 +1361,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju nizova:}\ulaz{5}#
-#\izlaz{Unesite elemente niza a:}\ulaz{2 -5 11 4 8}#
-#\izlaz{Unesite elemente niza b:}\ulaz{3 3 9 -1 17}#
+#\izlaz{Unesite elemente niza a:}#
+#\ulaz{2 -5 11 4 8}#
+#\izlaz{Unesite elemente niza b:}#
+#\ulaz{3 3 9 -1 17}#
 #\izlaz{Rezultujuci niz:}#
 #\izlaz{2 3 -5 3 11 9 4 -1 8 17}#
 \end{upotreba}
@@ -1485,7 +1494,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{10}#
-#\izlaz{Unesite elemente niza:}#
 #\ulaz{-2 8 11 53 59 20 17 -8 3 14}#
 #\izlaz{Rezultujuci niz:}#
 #\izlaz{14 142 -6 -278 28 34 33 -69 -9 9}#
@@ -1495,7 +1503,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{10}#
-#\izlaz{Unesite elemente niza:}#
 #\ulaz{9 142 -9 -278 -69 33 34 28 -6 14}#
 #\izlaz{Rezultujuci niz:}#
 #\izlaz{-2 8 14 -8 20 59 17 53 3 11}#
@@ -1589,8 +1596,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
-#\izlaz{Unesite elemente niza:}#
-#\ulaz{8 9 15 12}#
+#\izlaz{Unesite elemente niza:}\ulaz{8 9 15 12}#
 #\izlaz{8 12}#
 \end{upotreba}
 \end{miditest}
@@ -1598,8 +1604,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{6}#
-#\izlaz{Unesite elemente niza:}#
-#\ulaz{21 5 3 22 19 188}#
+#\izlaz{Unesite elemente niza:}\ulaz{21 5 3 22 19 188}#
 #\izlaz{22 188}#
 \end{upotreba}
 \end{miditest}
@@ -1644,7 +1649,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza:}\ulaz{9}#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{9}#
 #\izlaz{Unesite elemente niza a:}#
 #\ulaz{173 -25 23 7 17 25 34 61 -4612}#
 #\izlaz{-25 7 25 61 -4612}#
@@ -1653,7 +1659,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza:}\ulaz{0}#
+#\izlaz{Unesite dimenziju niza:}#
+#\ulaz{0}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -1804,17 +1811,23 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite trenutni broj klijenata:}\ulaz{8}#
-#\izlaz{Unesite niz sa rednim brojevima klijenata:}\ulaz{2 5 -2 16 33 19 8 11}#
-#\izlaz{Unesite klijenta kojeg treba ubaciti u niz: }\ulaz{35}#
+#\izlaz{Unesite trenutni broj klijenata:}#
+#\ulaz{8}#
+#\izlaz{Unesite niz sa rednim brojevima klijenata:}#  
+#\ulaz{2 5 -2 16 33 19 8 11}#
+#\izlaz{Unesite klijenta kojeg treba ubaciti u niz: }#
+#\ulaz{35}#
 #\izlaz{Niz nakon ubacivanja klijenta: 2 5 -2 16 33 19 8 11 35}#
-#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz: }\ulaz{36}#
+#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz: }#
+#\ulaz{36}#
 #\izlaz{Niz nakon ubacivanja klijenta: 36 2 5 -2 16 33 19 8 11 35}#
-#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz i njegovu poziciju: }\ulaz{-6 2}#
+#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz i njegovu poziciju: }#
+#\ulaz{-6 2}#
 #\izlaz{Niz nakon ubacivanja klijenta: 36 2 -6 5 -2 16 33 19 8 11 35}#  
 #\izlaz{Niz nakon odlaska klijenta: 2 -6 5 -2 16 33 19 8 11 35}#  
 #\izlaz{Niz nakon odlaska poslednjeg klijenta: 2 -6 5 -2 16 33 19 8 11}#
-#\izlaz{Unesite redni broj klijenta koji je napustio red: }\ulaz{-2}#
+#\izlaz{Unesite redni broj klijenta koji je napustio red: }#
+#\ulaz{-2}#
 #\izlaz{Niz nakon odlaska klijenta: 2 -6 5 16 33 19 8 11}#
 \end{upotreba}
 \end{maxitest}

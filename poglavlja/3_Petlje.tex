@@ -414,7 +414,7 @@ zatim izračunava i ispisuje ukupan prihod, ukupan rashod i zaradu, odnosno gubi
 tokom godine. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj t:}\ulaz{7}#
@@ -424,8 +424,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Rashod: -240}#
 #\izlaz{Zarada: 1834}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj t:}\ulaz{5}#
@@ -435,25 +435,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Rashod: -237}#
 #\izlaz{Gubitak: 237}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj t:}\ulaz{-6}#
-#\izlaz{Greska: neispravan unos.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{0}#
-#\izlaz{Nema evidentiranih transakcija.}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{5}
 #\naslovInt#
 #\izlaz{Unesite broj t:}\ulaz{2}#
 #\izlaz{Unesite transakcije:}#
@@ -462,7 +446,23 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Rashod: -120}#
 #\izlaz{Zarada: 0}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
+
+\begin{minitest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite broj t:}\ulaz{-6}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\izlaz{Unesite broj n:}\ulaz{0}#
+#\izlaz{Nema evidentiranih}#
+#\izlaz{transakcija.}#
+\end{upotreba}
+\end{minitest}
 
 \linkresenje{PET_12}
 \end{Exercise}
@@ -655,28 +655,32 @@ Napisati program koji učitava cele brojeve sve do unosa broja nula, a zatim
 izračunava i ispisuje aritmetičku sredinu unetih brojeva
 na četiri decimale.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{8 5 6 3 0}#
-#\izlaz{Aritmeticka sredina: 5.5000}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{8 5 6 3 0}#
+#\izlaz{Aritmeticka sredina:}#
+#\izlaz{5.5000}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite brojeve:}\ulaz{0}#
 #\izlaz{Nisu uneti brojevi.}#
 \end{upotreba}
-\end{miditest}
-
-\begin{maxitest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{762 -12 800 2010 -356 899 -101 0}#
-#\izlaz{Aritmeticka sredina: 571.7143}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{762 -12 800 2010}#
+#\ulaz{-356 899 -101 0}#
+#\izlaz{Aritmeticka sredina:}#
+#\izlaz{571.7143}#
 \end{upotreba}
-\end{maxitest}
+\end{minitest}
 
 \linkresenje{PET_18}
 \end{Exercise}
@@ -688,33 +692,36 @@ na četiri decimale.
 
 
 \begin{Exercise}[label=PET_19] 
-U prodavnici se nalaze artikali čije su cene pozitivni realni
+U prodavnici se nalaze artikli čije su cene pozitivni realni
 brojevi. Napisati program koji učitava cene artikala sve do unosa broja nula i
 izračunava i ispisuje prosečnu vrednost cena u radnji.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite cene:}\ulaz{8 5.2 6.11 3 0}#
+#\izlaz{Unesite cene:}#
+#\ulaz{8 5.2 6.11 3 0}#
 #\izlaz{Prosecna cena: 5.5775}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite cene:}\ulaz{6.32 -9}#
-#\izlaz{Greska: neispravan unos cene.}#
+#\izlaz{Unesite cene:}#
+#\ulaz{6.32 -9}#
+#\izlaz{Greska: neispravan unos}#
+#\izlaz{cene.}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite cene:}\ulaz{0}#
+#\izlaz{Unesite cene:}#
+#\ulaz{0}#
 #\izlaz{Nisu unete cene.}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{PET_19}
 \end{Exercise}
 \ifresenja
@@ -779,7 +786,7 @@ brojevi. Napisati program koji učitava $n$, a potom i cenu svakog od
 $n$ artikala i određuje i ispisuje najmanju cenu.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj artikla:}\ulaz{6}#
@@ -787,24 +794,24 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{12 3.4 90 100.53 53.2 12.8}#
 #\izlaz{Najmanja cena: 3.400000}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj artikla:}\ulaz{3}#
 #\izlaz{Unesite cene artikala:}#
 #\ulaz{4 -8 92}#
-#\izlaz{Greska: neispravan unos cene.}#
+#\izlaz{Greska: neispravan unos}#
+#\izlaz{cene.}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj artikla:}\ulaz{-9}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 
 \linkresenje{PET_21}
 \end{Exercise}
@@ -1004,43 +1011,48 @@ naučnike zanima razlika između najveće i najmanje nadmorske
 visine. Napisati program koji učitava cele brojeve koji predstavljaju nadmorske visine 
 sve do unosa broja nula i ispisuje razliku najveće i najmanje nadmorske visine.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{8 6 5 2 11 7 0}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{8 6 5 2 11 7 0}#
 #\izlaz{Razlika: 9}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{8 -1 8 6 0}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{8 -1 8 6 0}#
 #\izlaz{Razlika: 9}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{0}#
-#\izlaz{Nisu unete nadmorske visine.}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{0}#
+#\izlaz{Nisu unete nadmorske}#
+#\izlaz{visine.}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+
+\begin{minitest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{-500 0}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{-500 0}#
 #\izlaz{Razlika: 0}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{5}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{-500 -300 -5000 0}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{-500 -300 -5000 0}#
 #\izlaz{Razlika: 4700}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 
 \linkresenje{PET_25}
 \end{Exercise}
@@ -1141,35 +1153,27 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati program koji učitava jedan ceo broj i zatim formira i ispisuje broj 
 koji se dobija izbacivanjem svake druge cifre polaznog broja, idući sa desna na levo.
  
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{21854}#
 #\izlaz{Rezultat: 284}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{18}#
-#\izlaz{Rezultat: 8}#
+#\izlaz{Unesite broj:}\ulaz{-18}#
+#\izlaz{Rezultat: -8}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{1}#
 #\izlaz{Rezultat: 1}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj:}\ulaz{-67123}#
-#\izlaz{Rezultat: -613}#
-\end{upotreba}
-\end{miditest}
+\end{minitest}
 
 \linkresenje{PET_28}
 \end{Exercise}
@@ -1311,41 +1315,32 @@ Napisati program koji za uneti početni član niza $a_0$ (pozitivan ceo
 broj) štampa niz brojeva sve do onog člana niza koji je jednak $1$. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite prvi clan:}\ulaz{56}#
-#\izlaz{56 28 14 7 11 17 26 13 20 10}#
-#\izlaz{5 8 4 2 1}#
+#\izlaz{56 28 14 7 11 17 26 13}#
+#\izlaz{20 10 5 8 4 2 1}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite prvi clan:}\ulaz{-48}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite prvi clan:}\ulaz{67}#
-#\izlaz{67 101 152 76 38 19 29 44 22 11}#
-#\izlaz{17 26 13 20 10 5 8 4 2 1}#
+#\izlaz{67 101 152 76 38 19 29}#
+#\izlaz{44 22 11 17 26 13 20 10}#
+#\izlaz{5 8 4 2 1}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite prvi clan:}\ulaz{33}#
-#\izlaz{33 50 25 38 19 29 44 22}#
-#\izlaz{11 17 26 13 20 10 5 8 4 2 1}#
-\end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{PET_32}
 \end{Exercise}
-
 \ifresenja
 \begin{Answer}[ref=PET_32]
 \includecode{resenja/2_KontrolaToka/1.3_Petlje/1.3_32.c}
@@ -1473,50 +1468,39 @@ belina i zbir unetih cifara.
  karakterima. Ne praviti razliku između malih i velikih slova.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n karaktera:}\ulaz{uAbao}#
+#\izlaz{Unesite n karaktera:}#
+#\ulaz{uAbao}#
 #\izlaz{Samoglasnik a: 2}#
 #\izlaz{Samoglasnik e: 0}#
 #\izlaz{Samoglasnik i: 0}#
 #\izlaz{Samoglasnik o: 1}#
 #\izlaz{Samoglasnik u: 1}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{7}#
-#\izlaz{Unesite n karaktera:}\ulaz{jk+EEae}#
+#\izlaz{Unesite n karaktera:}#
+#\ulaz{jk+EEae}#
 #\izlaz{Samoglasnik a: 1}#
 #\izlaz{Samoglasnik e: 3}#
 #\izlaz{Samoglasnik i: 0}#
 #\izlaz{Samoglasnik o: 0}#
 #\izlaz{Samoglasnik u: 0}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{5}#
-#\izlaz{Unesite n karaktera:}\ulaz{UuUuU}#
-#\izlaz{Samoglasnik a: 0}#
-#\izlaz{Samoglasnik e: 0}#
-#\izlaz{Samoglasnik i: 0}#
-#\izlaz{Samoglasnik o: 0}#
-#\izlaz{Samoglasnik u: 5}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{-7}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 
 \linkresenje{PET_36}
 \end{Exercise}
@@ -1592,35 +1576,27 @@ vrednost sume kubova brojeva od $1$ do $n$, odnosno $s = 1+2^3+3^3+
 \ldots +n^3$. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{14}#
 #\izlaz{Suma kubova: 11025}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{25}#
 #\izlaz{Suma kubova: 105625}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{0}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-5}#
-#\izlaz{Greska: neispravan unos.}#
-\end{upotreba}
-\end{miditest}
+\end{minitest}
 
 \linkresenje{PET_38}
 \end{Exercise}
@@ -1636,7 +1612,7 @@ kubova, $s = 1+2^3+3^3+ \ldots +k^3$, za svaku vrednost $k = 1,
 \ldots, n$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{5}#
@@ -1646,8 +1622,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{k=4, suma=100}#
 #\izlaz{k=5, suma=225}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{8}#
@@ -1660,22 +1636,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{k=7, suma=784}#
 #\izlaz{k=8, suma=1296}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{0}#
-#\izlaz{Greska: neispravan unos.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{-5}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 
 \linkresenje{PET_39}
 \end{Exercise}
@@ -2123,33 +2091,23 @@ tražene tablice. \napomena{Pretpostaviti da je unos ispravan.}
 \begin{enumerate}
 \item Napisati program koji za unetu vrednost $n$ ispisuje tablicu množenja. 
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{1}#
 #\izlaz{1}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{2}#
 #\izlaz{1 \ \ 2}#
 #\izlaz{2 \ \ 4}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{1 \ \ 2 \ \ 3 }#
-#\izlaz{2 \ \ 4 \ \ 6 }#
-#\izlaz{3 \ \ 6 \ \ 9}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{4}#
 #\izlaz{1 \ \ 2 \ \ 3 \ \ 4 }#
@@ -2157,7 +2115,7 @@ tražene tablice. \napomena{Pretpostaviti da je unos ispravan.}
 #\izlaz{3 \ \ 6 \ \ 9 \ \ 12}#
 #\izlaz{4 \ \ 8 \ \ 12 \ 16}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 
 %\linkresenje{1.3_50a}
 
@@ -2218,33 +2176,23 @@ koordinata $j$ po koloni, pa je zato koordinata tačke koja je ispod
 tačke $(0,0)$ jednaka $(1, 0)$, a koordinata tačke koja je desno od
 tačke $(0,0)$ jednaka $(0,1)$.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{1}#
 #\izlaz{(0,0)}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{2}#
 #\izlaz{(0,0) (0,1)}#
 #\izlaz{(1,0)}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{3}#
-#\izlaz{(0,0) (0,1) (0,2)}#
-#\izlaz{(1,0) (1,1)}#
-#\izlaz{(2,0)}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{4}#
 #\izlaz{(0,0) (0,1) (0,2) (0,3)}#
@@ -2252,7 +2200,7 @@ tačke $(0,0)$ jednaka $(0,1)$.
 #\izlaz{(2,0) (2,1)}#
 #\izlaz{(3,0)}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 %\linkresenje{1.3_50d}
 \end{enumerate}
 \end{Exercise}
@@ -2920,7 +2868,7 @@ korektan.
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{1}
+\begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{3}#
 #\izlaz{\ \ *}#

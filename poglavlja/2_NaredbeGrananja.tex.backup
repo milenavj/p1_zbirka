@@ -936,16 +936,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite redom x i k:}#
-#\ulaz{2.31 2}#
+#\izlaz{Unesite redom x i k:}\ulaz{2.31 2}#
 #\izlaz{F(2.31, 2)=2557.52}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite redom x i k:}#
-#\ulaz{2.31 0}#
+#\izlaz{Unesite redom x i k:}\ulaz{2.31 0}#
 #\izlaz{Greska: nedozvoljena}#
 #\izlaz{vrednost za k.}#
 \end{upotreba}
@@ -953,8 +951,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite redom x i k:}#
-#\ulaz{12 1}#
+#\izlaz{Unesite redom x i k:}\ulaz{12 1}#
 #\izlaz{F(12, 1)=-1726.31}#
 \end{upotreba}
 \end{minitest}
@@ -985,8 +982,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj: }\ulaz{8}#
-#\izlaz{Greska: neispravan unos}#
-#\izlaz{dana.}#
+#\izlaz{Greska: neispravan unos dana.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -1131,31 +1127,39 @@ Napisati program koji za uneti datum u formatu \textit{dan.mesec.} ispisuje godi
 Napisati program koji za unetu godinu i mesec ispisuje naziv meseca kao i koliko dana ima u tom mesecu te godine.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite godinu:}\ulaz{2018}#
 #\izlaz{Unesite mesec:}\ulaz{1}#
 #\izlaz{Januar, 31 dan}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite godinu:}\ulaz{2000}#
 #\izlaz{Unesite mesec:}\ulaz{2}#
 #\izlaz{Februar, 29 dana}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
 #\izlaz{Unesite godinu:}\ulaz{2018}#
 #\izlaz{Unesite mesec:}\ulaz{13}#
-#\izlaz{Greska: neispravan unos}#
-#\izlaz{meseca.}#
+#\izlaz{Greska: neispravan unos meseca.}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite godinu:}\ulaz{1998}#
+#\izlaz{Unesite mesec:}\ulaz{2}#
+#\izlaz{Februar, 28 dana}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{KT_NG_27}
 \end{Exercise}
@@ -1196,33 +1200,35 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=KT_NG_29] 
  Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum prethodnog dana. 
  
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite datum:}#
-#\ulaz{30.4.2008.}#
-#\izlaz{Prethodni datum:}#
-#\izlaz{29.4.2008.}#
+#\izlaz{Unesite datum:}\ulaz{30.4.2008.}#
+#\izlaz{Prethodni datum: 29.4.2008.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite datum:}#
-#\ulaz{1.12.2005.}#
-#\izlaz{Prethodni datum:}#
-#\izlaz{30.11.2005.}#
+#\izlaz{Unesite datum:}\ulaz{1.12.2005.}#
+#\izlaz{Prethodni datum: 30.11.2005.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite datum:}#
-#\ulaz{1.1.2019.}#
-#\izlaz{Prethodni datum:}#
-#\izlaz{31.12.2018.}#
+#\izlaz{Unesite datum:}\ulaz{1.1.2019.}#
+#\izlaz{Prethodni datum: 31.12.2018.}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{10.12.2015.}#
+#\izlaz{Prethodni datum: 9.11.2015.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{KT_NG_29}
 \end{Exercise}
@@ -1236,33 +1242,35 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=KT_NG_30] 
  Napisati program koji za korektno unet datum u formatu \textit{dan.mesec.godina.} ispisuje datum narednog dana. 
  
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite datum:}#
-#\ulaz{30.4.2008.}#
-#\izlaz{Naredni datum:}#
-#\izlaz{1.5.2008.}#
+#\izlaz{Unesite datum:}\ulaz{30.4.2008.}#
+#\izlaz{Naredni datum: 1.5.2008.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite datum:}#
-#\ulaz{1.12.2005.}#
-#\izlaz{Naredni datum:}#
-#\izlaz{2.12.2005.}#
+#\izlaz{Unesite datum:}\ulaz{1.12.2005.}#
+#\izlaz{Naredni datum: 2.12.2005.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+
+\begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite datum:}#
-#\ulaz{31.12.2008.}#
-#\izlaz{Naredni datum:}#
-#\izlaz{1.1.2009.}#
+#\izlaz{Unesite datum:}\ulaz{31.12.2008.}#
+#\izlaz{Naredni datum: 1.1.2009.}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\izlaz{Unesite datum:}\ulaz{5.5.2005.}#
+#\izlaz{Naredni datum: 6.5.2005.}#
+\end{upotreba}
+\end{miditest}
 
 \linkresenje{KT_NG_30}
 \end{Exercise}
