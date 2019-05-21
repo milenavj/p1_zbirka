@@ -42,39 +42,33 @@
 Napisati program koji ispisuje zbir celobrojnih argumenata komandne linije. 
 \uputstvo{Koristiti funkciju \kckod{atoi}}.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
-#\poziv{./a.out 5 ana 9 -2 11 aca 4 +2}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out 5 ana 9 -2 11 4 +2}#
 #\naslovIzlaz#
-#\izlaz{Zbir celobrojnih argumenata: 29}#
+#\izlaz{Zbir celobrojnih argumenata:}#
+#\izlaz{29}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
-#\poziv{./a.out a1 b1 c1 d1 1a 1b 1c 1d}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out a1 b1 1a 1b}#
 #\naslovIzlaz#
-#\izlaz{Zbir celobrojnih argumenata: 0}#
+#\izlaz{Zbir celobrojnih argumenata:}#
+#\izlaz{0}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\poziv{./a.out 33 1 @matf 44 22.56}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out 33 1 @matf 44 22.56}#
 #\naslovIzlaz#
-#\izlaz{Zbir celobrojnih argumenata: 78}#
+#\izlaz{Zbir celobrojnih argumenata:}#
+#\izlaz{78}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-
-#\naslovIzlaz#
-#\izlaz{Zbir celobrojnih argumenata: 0}#
-\end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p2.6_01}
 \end{Exercise}
 \ifresenja
@@ -126,41 +120,37 @@ Napisati program koji ispisuje zbir celobrojnih argumenata komandne linije.
 \begin{Exercise}[label=p2.6_02] 
 Napisati program koji ispisuje argumente komandne linije koji počinju karakterom \textit{@}.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
-#\poziv{./a.out @marija @milena \#zvezda}#
+#\naslovPokretanje#
+#\argumenti{./a.out @ana @aca \#zvezda}#
 
 #\naslovIzlaz#
 #\izlaz{Argumenti koji pocinju sa @:}#
-#\izlaz{@marija @milena}#
+#\izlaz{@ana @aca}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
-#\poziv{./a.out bundeva pomorandza}#
+#\naslovPokretanje#
+#\argumenti{./a.out bundeva pomorandza}#
 
 #\naslovIzlaz#
-#\izlaz{Nema argumenata koji pocinju sa @.}#
+#\izlaz{Nema argumenata koji}#
+#\izlaz{pocinju sa @.}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\poziv{./a.out sanke @zapad zujanje}#
+#\naslovPokretanje#
+#\argumenti{./a.out sanke @zapad zujanje}#
 
 #\naslovIzlaz#
 #\izlaz{Argumenti koji pocinju sa @:}#
 #\izlaz{@zapad}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
+\end{minitest}
 
-#\naslovIzlaz#
-#\izlaz{Nema argumenata koji pocinju sa @.}#
-\end{upotreba}
-\end{miditest}
 \linkresenje{p2.6_02}
 \end{Exercise}
 \ifresenja
@@ -173,39 +163,30 @@ Napisati program koji ispisuje argumente komandne linije koji počinju karaktero
 \begin{Exercise}[label=p2.6_03] 
 Napisati program koji ispisuje broj argumenata komandne linije koji sadrže karakter \textit{@}.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
-#\poziv{./a.out pera@gmail.com www.math.rs}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out pera@gmail.com @}#
 #\naslovIzlaz#
-#\izlaz{1}#
+#\izlaz{2}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
-#\poziv{./a.out math.rs pera@math.rs }#
-
+#\naslovPokretanje#
+#\argumenti{./a.out japan caj}#
 #\naslovIzlaz#
-#\izlaz{1}#
+#\izlaz{0}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\poziv{./a.out japan caj}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out}#
 #\naslovIzlaz#
 #\izlaz{0}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
-
-#\naslovIzlaz#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
+\end{minitest}
 
 
 \linkresenje{p2.6_03}
@@ -223,16 +204,16 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
  
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out ulaz.txt izlaz.txt ulaz.txt}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out ulaz.txt izlaz.txt ulaz.txt}#
 #\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
-#\poziv{./a.out srce pik tref tref}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out srce pik tref tref}#
 #\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
 \end{upotreba}
@@ -240,16 +221,16 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out Riba ribi grize rep.}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out Riba ribi grize rep.}#
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
-#\poziv{./a.out}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out}#
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
 \end{upotreba}
@@ -270,16 +251,16 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
  
 \begin{miditest}
 \begin{upotreba}{1}
-#\poziv{./a.out -rf in.txt}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out -rf in.txt}#
 #\naslovIzlaz#
 #\izlaz{Opcije su: r f}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
-#\poziv{./a.out}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out}#
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema opcija.}#
 \end{upotreba}
@@ -287,16 +268,16 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 
 \begin{miditest}
 \begin{upotreba}{3}
-#\poziv{./a.out ulaz.txt}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out ulaz.txt}#
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema opcija.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
-#\poziv{./a.out in.txt -l -n 10 -fi out.txt}#
-
+#\naslovPokretanje#
+#\argumenti{./a.out in.txt -l -n 10 -fi out.txt}#
 #\naslovIzlaz#
 #\izlaz{Opcije su: l n f i}#
 \end{upotreba}
