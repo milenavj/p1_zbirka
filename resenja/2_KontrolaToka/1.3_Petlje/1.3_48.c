@@ -12,7 +12,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n < 5 || n % 2 == 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje trazene sume. */

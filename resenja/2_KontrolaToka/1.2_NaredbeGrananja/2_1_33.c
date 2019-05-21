@@ -16,12 +16,12 @@ int main() {
   if (k < 1 || k > 8 || l < 1 || l > 8 || 
       m < 1 || m > 8 || n < 1 || n > 8) {
     printf("Greska: neispravna pozicija.\n");
-    return -1;
+    return 1;
   }
   
   if(k == m && l == n){
     printf("Greska: pozicije moraju biti razlicite.\n");
-    return -1;
+    return 1;
   }
 
   /* Provera da li su (k,l) i (m,n) iste boje. Polja su iste

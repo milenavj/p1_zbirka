@@ -13,7 +13,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Kako je korisnik nakon unosa broja n uneo oznaku za novi red,

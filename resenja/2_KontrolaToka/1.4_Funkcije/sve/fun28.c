@@ -176,7 +176,7 @@ int main() {
   if (!ispravan(dan1, mesec1, godina1)
       || !ispravan(dan2, mesec2, godina2)) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ispis rezultata. */

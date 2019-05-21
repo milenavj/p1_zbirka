@@ -37,7 +37,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (p <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ucitavanje brojeva dok se ne unese nula i ispis brojeva

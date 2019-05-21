@@ -14,7 +14,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje vrednosti zadatog izraza. Krece se od 

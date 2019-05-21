@@ -13,7 +13,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 1 || d < 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   printf("Unesite n brojeva: ");

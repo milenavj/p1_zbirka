@@ -12,7 +12,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (m < n) {
     printf("Greska: pogresan unos granica.\n");
-    return -1;
+    return 1;
   }
 
   /* Inicijalizacija brojaca na levu granicu intervala. */

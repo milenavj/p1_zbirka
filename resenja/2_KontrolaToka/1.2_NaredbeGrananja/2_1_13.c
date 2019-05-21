@@ -13,7 +13,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (n < 100 || n > 999) {
     printf("Greska: niste uneli pozitivan trocifreni broj.\n");
-    return -1;
+    return 1;
   }
 
   /* Izdvajanje cifara broja n. */

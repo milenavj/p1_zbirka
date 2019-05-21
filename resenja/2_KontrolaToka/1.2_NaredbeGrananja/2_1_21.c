@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (k < 1 || k > 189) {
     printf("Greska: neispravan unos pozicije.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje rezultata. */

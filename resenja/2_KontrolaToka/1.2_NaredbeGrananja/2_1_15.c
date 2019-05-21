@@ -18,7 +18,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (n_abs < 1000 || n_abs > 9999) {
     printf("Greska: niste uneli cetvorocifreni broj.\n");
-    return -1;
+    return 1;
   }
 
   /* Izdvajanje cifara broja n. */

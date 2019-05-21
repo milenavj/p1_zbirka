@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (m < n) {
     printf("Greska: pogresan unos granica.\n");
-    return -1;
+    return 1;
   }
 
   /* a) I nacin: koriscenjem while petlje. */

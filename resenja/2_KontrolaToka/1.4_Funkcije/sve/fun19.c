@@ -35,7 +35,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ispis svih srecnih brojeva koji su manji ili jednaki n. */

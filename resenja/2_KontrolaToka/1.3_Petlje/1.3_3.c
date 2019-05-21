@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: pogresan unos broja n.\n");
-    return -1;
+    return 1;
   }
 
   /* Inicijalizacija brojaca. */

@@ -12,7 +12,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 0 || x == 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Inicijalizacija vrednosti sume na 0, a vrednosti x^i na x. */

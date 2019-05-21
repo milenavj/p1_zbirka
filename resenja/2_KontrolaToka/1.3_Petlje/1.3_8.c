@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* I nacin: Za svaki broj iz intervala [2, n-1] se proverava da

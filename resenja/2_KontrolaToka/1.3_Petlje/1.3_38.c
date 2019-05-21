@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje sume kubova svih brojeva iz intervala [1,n]. */

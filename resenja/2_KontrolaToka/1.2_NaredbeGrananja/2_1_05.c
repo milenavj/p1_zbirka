@@ -12,7 +12,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (a <= 0 || b <= 0 || c <= 0) {
     printf("Greska: neispravan unos cene.");
-    return -1;
+    return 1;
   }
 
   /* Racunanje vrednosti najjeftinijeg artikla. */

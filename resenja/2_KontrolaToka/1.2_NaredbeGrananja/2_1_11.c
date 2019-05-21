@@ -20,18 +20,18 @@ int main() {
      iz programa. */
   if (!islower(c1) && !isupper(c1) && !isdigit(c1)) {
     printf("Greska: %c je neispravan karakter.\n", c1);
-    return -1;
+    return 1;
   }
 
   /* Postupak se ponavlja za druga dva karaktera. */
   if (!islower(c2) && !isupper(c2) && !isdigit(c2)) {
     printf("Greska: %c je neispravan karakter.\n", c2);
-    return -1;
+    return 1;
   }
 
   if (!islower(c3) && !isupper(c3) && !isdigit(c3)) {
     printf("Greska: %c je neispravan karakter.\n", c3);
-    return -1;
+    return 1;
   }
 
   /* Funkcija tolower(c) radi sledece: ako je c veliko slovo, kao

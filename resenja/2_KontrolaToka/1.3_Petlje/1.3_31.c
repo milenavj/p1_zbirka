@@ -12,7 +12,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ako je n=0, F[0] = 0, slicno ako je n=1 F[1] = 1. */

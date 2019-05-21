@@ -40,7 +40,7 @@ int main() {
      = 4. */
   if (c1 < '0' || c1 > '9') {
     printf("Greska: prvi karakter nije cifra.");
-    return -1;
+    return 1;
   }
 
   /* Racunanje zbira ASCII kodova. */

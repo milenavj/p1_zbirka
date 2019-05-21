@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (a_n <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Dok se ne dodje do clana koji je 1, stampa se vrednost

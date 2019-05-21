@@ -15,12 +15,12 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n < 0) {
     printf("Greska: neispravan unos..\n");
-    return -1;
+    return 1;
   }
 
   if (n >= 22) {
     printf("Pri racunanju %d! ce doci do prekoracenja.\n", n);
-    return -1;
+    return 1;
   }
 
   /* Tekuca vrednost uzima vrednosti n, n-1, n-2, ..., 2. Na

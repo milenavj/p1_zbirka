@@ -31,7 +31,7 @@ int main() {
   /* Provera ispravnosti ulaza i ispis rezultata. */
   if (a < 0 || b < 0 || c < 0 || d < 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   } else
     grafikon_h(a, b, c, d);
 

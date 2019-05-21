@@ -36,7 +36,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (k <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ispis zbira delilaca za svaki broj od 1 do k. */

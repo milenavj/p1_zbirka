@@ -85,7 +85,7 @@ int main() {
   /* Provera ispravnosti datuma. */
   if (!ispravan(dan, mesec, godina)) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Poziv funkcije za ispis sledeceg dana. */

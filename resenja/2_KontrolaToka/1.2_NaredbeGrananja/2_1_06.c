@@ -14,7 +14,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (sati > 24 || sati < 0 || minuti > 59 || minuti < 0) {
     printf("Greska: neispravan unos vremena.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje preostalog vremena. */

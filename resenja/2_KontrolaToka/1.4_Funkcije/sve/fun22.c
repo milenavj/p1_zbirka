@@ -23,7 +23,7 @@ int main() {
   scanf("%f%f", &a, &b);
   if (b >= a) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ucitavanje broja n i provera ispravnosti ulaza. */
@@ -31,7 +31,7 @@ int main() {
   scanf("%d", &n);
   if (n <= 1) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Ispis rezultata. */

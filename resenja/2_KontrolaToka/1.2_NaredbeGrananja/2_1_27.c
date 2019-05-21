@@ -11,7 +11,7 @@ int main() {
   /* Provera ispravnosti ulaznih podataka. */
   if (godina < 0) {
     printf("Greska: neispravan unos godine.\n");
-    return -1;
+    return 1;
   }
 
   /* Provera da li je godina prestupna, zbog februara */
@@ -67,7 +67,7 @@ int main() {
     break;
   default:
     printf("Greska: neispravan unos meseca.\n");
-    return -1;
+    return 1;
   }
 
   return 0;

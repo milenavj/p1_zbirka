@@ -33,7 +33,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (c < 0 || c > 9) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje i ispis rezultata. */

@@ -16,7 +16,7 @@ int main() {
     /* Provera ispravnosti ulaza. */
     if (cena < 0) {
       printf("Greska: neispravan unos cene.\n");
-      return -1;
+      return 1;
     }
 
     /* Uvecavanje sume za vrednost unete cene. */

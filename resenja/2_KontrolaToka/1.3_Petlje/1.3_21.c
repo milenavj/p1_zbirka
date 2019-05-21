@@ -12,7 +12,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (n <= 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   printf("Unesite cene artikala:");
@@ -22,7 +22,7 @@ int main() {
   scanf("%f", &cena);
   if (cena <= 0) {
     printf("Greska: neispravan unos cene.\n");
-    return -1;
+    return 1;
   }
   min_cena = cena;
 
@@ -32,7 +32,7 @@ int main() {
 
     if (cena <= 0) {
       printf("Greska: neispravan unos cene.\n");
-      return -1;
+      return 1;
     }
 
     if (cena < min_cena)

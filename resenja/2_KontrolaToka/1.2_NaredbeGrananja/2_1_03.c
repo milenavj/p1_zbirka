@@ -17,7 +17,7 @@ int main() {
      greske. */
   if (x == 0) {
     printf("Greska: nedozvoljeno je deljenje nulom.\n");
-    return -1;
+    return 1;
   }
 
   /* Racunanje reciprocne vrednosti. */

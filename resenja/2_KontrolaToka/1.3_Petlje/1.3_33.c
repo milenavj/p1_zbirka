@@ -13,7 +13,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (format < 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   }
 
   /* duzina/sirina = 1/sqrt(2) 

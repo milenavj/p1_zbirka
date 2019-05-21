@@ -13,7 +13,7 @@ int main() {
   /* Provera ispravnosti ulaza. */
   if (t < 0) {
     printf("Greska: neispravan unos.\n");
-    return -1;
+    return 1;
   } else if (t == 0) {
     printf("Nema evidentiranih transakcija.");
     return 0;
