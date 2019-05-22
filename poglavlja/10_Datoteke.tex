@@ -152,16 +152,19 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite ime prve datoteke:}#
-#\ulaz{prva.dat}#
+#\ulaz{kilometraze.txt}#
 #\izlaz{Unesite ime druge datoteke:}#
-#\ulaz{druga.dat}#
+#\ulaz{sifra.txt}#
 
-#\naslovDat{prva.dat}#
-#\datoteka{abc.123.[]}#
-#\datoteka{567.ABC.{}}#
+#\naslovDat{kilometraze.txt}#
+#\datoteka{Beograd - Nis 230km}#
+#\datoteka{Uzice - Cacak 56.3km}#
+#\datoteka{Subotica - Ruma 139km}#
 
-#\naslovDat{druga.dat}#
-#\datoteka{111200022220002111222}
+#\naslovDat{sifra.txt}#
+#\datoteka{111111122211120001121111122}#
+#\datoteka{211111200201121111111122211}#
+#\datoteka{11200011}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -410,7 +413,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\argumenti{./a.out primer2.dat}#
 
 #\naslovDat{primer2.dat}#
-#\datoteka{(7+8 }#
+#\datoteka{(7+8}#
 #\datoteka{nisu(}#
 #\datoteka{uparene}#
 
@@ -441,14 +444,14 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_x4]         
 Napisati program koji prebrojava slova i cifre u datoteci.
 \begin{description}
-\item{a)} Napisati funkciju \kckod{int unesi\_skup(char s[], FILE* f)}
+\item{a)} Napisati funkciju \kckod{int unesi\_skup(char s[], FILE *f)}
   kojom se unosi skup elemenata iz datoteke \kckod{f}. Skup se predstavlja kao
   niz karaktera, pri čemu su dozvoljeni elementi skupa mala i
   velika slova abecede, kao i cifre.  Unos se prekida kada se naiđe
   na znak za novi red ili nedozvoljeni karakter za skup.
   Funkcija vraća broj elemenata skupa koji su uspešno učitani.
 \item{b)} Napisati funkciju
-  \kckod{void prebroj(char s[], int *br\_slova, int *br\_cifara)} kojom se
+  \kckod{void prebroj(char s[], int n, int *br\_slova, int *br\_cifara)} kojom se
   određuje broj slovnih elemenata skupa (velikih ili malih slova)
   kao i broj cifara u skupu.
 Napisati program koji koristeći prethodne funkcije prebrojava cifre i slova u datoteci 
@@ -535,7 +538,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_x4}
 \end{Exercise}
 \begin{Answer}[ref=p3_x4]
-%\includecode{resenja/4_Datoteke/sve/9.c}
+\includecode{resenja/4_Datoteke/sve/9.c}
 \end{Answer}
 
 
@@ -670,7 +673,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Ana i melem su}#
 #\datoteka{primeri palindroma.}#
 
-#\naslovDat{palindromi.txt: }#
+#\naslovDat{palindromi.txt:}#
 #\datoteka{Ana i melem}
 \end{upotreba}
 \end{minitest}
@@ -681,7 +684,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{kuk Oko kapAk pero radar}#
 #\datoteka{caj}#
 
-#\naslovDat{palindromi.txt: }#
+#\naslovDat{palindromi.txt:}#
 #\datoteka{neven kuk Oko}#
 #\datoteka{kapAk radar}#
 \end{upotreba}
@@ -691,7 +694,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovDat{razno.txt}#
 #\datoteka{ovde nema palindroma}#
 
-#\naslovDat{palindromi.txt: }#
+#\naslovDat{palindromi.txt:}#
 \end{upotreba}
 \end{minitest}
 
@@ -723,7 +726,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Petar Filip Jovana Ana}#
 #\datoteka{Petar Ivan Nikola Filip}#
 
-#\naslovDat{bez\_duplikata.txt: }#
+#\naslovDat{bez\_duplikata.txt:}#
 #\datoteka{Ana Milos Marko Petar}#
 #\datoteka{Filip Jovana Ivan Nikola}#
 \end{upotreba}
@@ -742,7 +745,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Nis Ruma}#
 #\datoteka{Ruma Sombor}#
 
-#\naslovDat{bez\_duplikata.txt: }#
+#\naslovDat{bez\_duplikata.txt:}#
 #\datoteka{Sombor Nis Beograd}#
 #\datoteka{Indjija Ruma}#
 \end{upotreba}
@@ -817,7 +820,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 % #\naslovDat{ulaz.txt}#
 % #\datoteka{ima jos dugackih reci: predskazanje,}#
 % #\datoteka{potom}#
-% #\datoteka{nelogicnosti, zanemarivati, }#
+% #\datoteka{nelogicnosti, zanemarivati,}#
 % #\datoteka{odugovlaciti, a ima}#
 % #\datoteka{i i malih reci koje su kratke}#
 % #\datoteka{predosecaj}#
@@ -867,7 +870,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovPokretanje#
-#\argumenti{./a.out in.dat 5}#
+#\argumenti{./a.out ulaz.txt 5}#
 
 #\naslovDat{ulaz.txt}#
 #\datoteka{4}#
@@ -880,7 +883,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovPokretanje#
-#\argumenti{./a.out in.txt}#
+#\argumenti{./a.out ulaz.txt}#
 
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
@@ -960,8 +963,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{upotreba}{2}
 #\naslovDat{matrice.txt}#
 #\datoteka{2 2}#
-#\datoteka{1  1  }#
-#\datoteka{-2  2 }#
+#\datoteka{1  1 }#
+#\datoteka{-2  2}#
 
 #\naslovIzlaz#
 #\izlaz{(0, 0, 1)}#
@@ -1024,8 +1027,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{upotreba}{3}
 #\naslovDat{matrice.txt}#
 #\datoteka{2 2}#
-#\datoteka{1  1  }#
-#\datoteka{-2  2 }#
+#\datoteka{1  1 }#
+#\datoteka{-2  2}#
 
 #\naslovIzlaz#
 \end{upotreba}
@@ -1568,7 +1571,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\poziv{./a.out input.txt output.txt}#
 
 #\naslovInt#
-#\izlaz{Unesite broj n:} \ulaz{2}#
+#\izlaz{Unesite broj n:}\ulaz{2}#
 
 #\naslovDat{input.txt}#
 #\datoteka{sto}#
@@ -1586,7 +1589,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\poziv{./a.out input.txt output.txt}#
 
 #\naslovInt#
-#\izlaz{Unesite broj n:} \ulaz{3}#
+#\izlaz{Unesite broj n:}\ulaz{3}#
 
 #\naslovDat{input.txt}#
 #\datoteka{red}#
@@ -1681,7 +1684,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\poziv{./a.out -m}#
 
 #\naslovInt#
-#\izlaz{Unesite recenice: }#
+#\izlaz{Unesite recenice:}#
 #\ulaz{programiranje u C-u je zanimljivo}#
 #\ulaz{Volim programiranje!}#
 #\ulaz{Kada porastem bicu programer!}#
@@ -1697,7 +1700,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\poziv{./a.out -V}#
 
 #\naslovInt#
-#\izlaz{Unesite recenice: }#
+#\izlaz{Unesite recenice:}#
 #\ulaz{programiranje u C-u je zanimljivo}#
 #\ulaz{Volim programiranje!}#
 #\ulaz{Kada porastem bicu programer!}#
@@ -1743,13 +1746,14 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 \begin{upotreba}{1}
 #\naslovPokretanje#
 #\argumenti{./a.out ulaz.txt izlaz.txt}#
+
 #\naslovDat{ulaz.txt}#
 #\datoteka{danas vezbamo}#
 #\datoteka{programiranje}#
 #\datoteka{ovo je primer kad su}#
 #\datoteka{datoteke iste}#
 
-#\naslovDat{izlaz.txt: }#
+#\naslovDat{izlaz.txt:}#
 #\datoteka{danas vezbamo}#
 #\datoteka{programiranje}#
 #\datoteka{ovo je primer kad su}#
@@ -1763,6 +1767,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 \begin{upotreba}{2}
 #\naslovPokretanje#
 #\argumenti{./a.out u1.dat u2.dat}#
+
 #\naslovDat{u1.dat}#
 #\datoteka{danas vezbamo}#
 #\datoteka{analizu}#
@@ -1783,6 +1788,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 \begin{upotreba}{3}
 #\naslovPokretanje#
 #\argumenti{./a.out prva.dat druga.dat}#
+
 #\naslovDat{prva.dat}#
 #\datoteka{ovo je primer}#
 #\datoteka{kada su}#
@@ -1790,7 +1796,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 #\datoteka{razlicite duzine}#
 
 #\naslovDat{druga.dat}#
-#\datoteka{kada su }#
+#\datoteka{kada su}#
 #\datoteka{programiranje}#
 #\datoteka{datoteke}#
 #\datoteka{razlicite}#
