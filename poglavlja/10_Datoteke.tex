@@ -61,12 +61,14 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovDat{ulaz.txt}#
-#\datoteka{abcdefghi}#
-#\datoteka{123456789}#
+#\datoteka{Ova datoteka}#
+#\datoteka{sadrzi tekst}#
+#\datoteka{u vise}#
+#\datoteka{linija.}#
 
 #\naslovDat{izlaz.txt}#
-#\datoteka{adg}#
-#\datoteka{147}#
+#\datoteka{O te}#
+#\datoteka{diet sli.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -202,11 +204,9 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_iv3] 
 Sa standarnog ulaza učitavaju se imena dve datoteke i
 jedan karakter koji označava opciju. 
-Napisati program koji prepisuje sadržaj prve datoteke u drugu na sledeći način:
-\begin{itemize}
-\item ukoliko je zadata opcija \kckod{u}, sva mala slova zamenjuje velikim
-\item ukoliko je zadata opcija \kckod{l}, sva velika slova zamenjuje malim
-\end{itemize}
+Napisati program koji prepisuje sadržaj prve datoteke u drugu tako što u slučaju da je
+navedena opcija \kckod{u}, sva mala slova zamenjuje velikim slovima, a u slučaju da je
+navedena opcija \kckod{l}, sva velika slova zamenjuje malim slovima. 
 Pretpostaviti da je maksimalna dužina naziva datoteka $20$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
@@ -364,7 +364,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Cena sendvica je 120}#
 
 #\naslovIzlaz#
-#\izlaz{0}#
+#\izlaz{Najcesce cifre: 0}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -377,7 +377,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{1 22 333.444 }#
 
 #\naslovIzlaz#
-#\izlaz{3 4}#
+#\izlaz{Najcesce cifre: 3 4}#
 \end{upotreba}
 \end{minitest}
 \linkresenje{p3_id14}
@@ -391,9 +391,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 Napisati program koji u datoteci čije je ime dato kao argument komandne linije proverava da li su zagrade pravilno uparene.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
-#\poziv{./a.out zagrade.txt}#
+#\naslovPokretanje#
+#\argumenti{./a.out zagrade.txt}#
 
 #\naslovDat{zagrade.txt}#
 #\datoteka{ab( cd) ..}#
@@ -402,10 +403,11 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovIzlaz#
 #\izlaz{Zagrade jesu uparene.}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
-#\poziv{./a.out primer2.dat}#
+#\naslovPokretanje#
+#\argumenti{./a.out primer2.dat}#
 
 #\naslovDat{primer2.dat}#
 #\datoteka{(7+8 }#
@@ -415,11 +417,11 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovIzlaz#
 #\izlaz{Zagrade nisu uparene.}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\poziv{./a.out primer3.dat}#
+#\naslovPokretanje#
+#\argumenti{./a.out primer3.dat}#
 
 #\naslovDat{primer3.dat}#
 #\datoteka{)) 7 + 6 ((}#
@@ -427,15 +429,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovIzlaz#
 #\izlaz{Zagrade nisu uparene.}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out}#
+\end{minitest}
 
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan poziv.}#
-\end{upotreba}
-\end{miditest}
 \linkresenje{p3_x2}
 \end{Exercise}
 \begin{Answer}[ref=p3_x2]
@@ -468,11 +463,11 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\argumenti{./a.out skup.txt}#
 
 #\naslovDat{skup.txt}#
-#\datoteka{abc56ighj9012hjFGHH  }#
+#\datoteka{OvoJeSkupKaraktera.123}#
 
 #\naslovIzlaz#
-#\izlaz{broj slova: 13}#
-#\izlaz{broj cifara: 6}#
+#\izlaz{Broj slova: 18}#
+#\izlaz{Broj cifara: 0}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -484,8 +479,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{ovdeimamo\$dolar}#
 
 #\naslovIzlaz#
-#\izlaz{broj slova: 9}#
-#\izlaz{broj cifara: 0}#
+#\izlaz{Broj slova: 9}#
+#\izlaz{Broj cifara: 0}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -494,12 +489,12 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\argumenti{./a.out skup3.txt}#
 
 #\naslovDat{skup3.txt}#
-#\datoteka{broJ3}#
-#\datoteka{ broj5}#
+#\datoteka{broj3}#
+#\datoteka{broj5}#
 
 #\naslovIzlaz#
-#\izlaz{broj slova: 4}#
-#\izlaz{broj cifara: 1}#
+#\izlaz{Broj slova: 4}#
+#\izlaz{Broj cifara: 1}#
 \end{upotreba}
 \end{minitest}
 
@@ -512,8 +507,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{11.2.2019.}#
 
 #\naslovIzlaz#
-#\izlaz{broj slova: 0}#
-#\izlaz{broj cifara: 2}#
+#\izlaz{Broj slova: 0}#
+#\izlaz{Broj cifara: 2}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -558,7 +553,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite rec: }\ulaz{abcde}#
+#\izlaz{Unesite rec:}\ulaz{abcde}#
 
 #\naslovDat{rotacije.txt}#
 #\datoteka{abcde}#
@@ -571,7 +566,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite rec: }\ulaz{1234}#
+#\izlaz{Unesite rec:}\ulaz{1234}#
 
 #\naslovDat{rotacije.txt}#
 #\datoteka{1234}#
@@ -583,7 +578,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite rec: }\ulaz{a=3*x+5;}#
+#\izlaz{Unesite rec:}\ulaz{a=3*x+5;}#
 
 #\naslovDat{rotacije.txt}#
 #\datoteka{a=3*x+5;}#
@@ -710,81 +705,61 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_iv5]         
 U datoteci čije se ime zadaje sa standardnog ulaza nalazi
 se broj $n$ ($n\leq 256$), a zatim i $n$ reči. 
-Napisati program koji učitava reči iz datoteke u niz i:
-  \begin{enumerate}
-  \item ispisuje ga na standardni izlaz 
-  \item iz niza uklanja sve duplikate i upisuje transformisani niz u datoteku $rez.txt$ 
-  \end{enumerate}
+Napisati program koji učitava reči iz datoteke u niz i iz niza uklanja sve duplikate 
+i upisuje izmenjeni niz u datoteku $bez\_duplikata.txt$ 
 Pretpostaviti da je maksimalna dužina naziva datoteke $20$ karaktera, 
 a maksimalna dužina jedne reči u datoteci $50$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke:}\ulaz{dat1.txt}#
+#\izlaz{Unesite ime datoteke:}#
+#\ulaz{imena.txt}#
 
-#\naslovDat{dat1.txt}#
-#\datoteka{12 sunce kisa oblacno mraz oblacno}#
-#\datoteka{mraz oblacno oblacno sveze mecava}#
-#\datoteka{mecava mecava}#
+#\naslovDat{imena.txt}#
+#\datoteka{12}#
+#\datoteka{Ana Milos Ana Marko}#
+#\datoteka{Petar Filip Jovana Ana}#
+#\datoteka{Petar Ivan Nikola Filip}#
 
-#\naslovIzlaz#
-#\izlaz{sunce kisa oblacno mraz oblacno mraz}#
-#\izlaz{oblacno oblacno sveze mecava mecava mecava}#
-
-#\naslovDat{rez.txt: }#
-#\datoteka{sunce kisa oblacno mraz sveze mecava}#
+#\naslovDat{bez\_duplikata.txt: }#
+#\datoteka{Ana Milos Marko Petar}#
+#\datoteka{Filip Jovana Ivan Nikola}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke:}\ulaz{dat2.txt}#
+#\izlaz{Unesite ime datoteke:}#
+#\ulaz{gradovi.txt}#
 
-#\naslovDat{dat2.txt}#
-#\datoteka{14}#
-#\datoteka{so secer supa so ljuto secer kiselo slatko}#
-#\datoteka{ljuto}#
-#\datoteka{paprika, ljuta paprika, ljuto dete}#
+#\naslovDat{gradovi.txt}#
+#\datoteka{10}#
+#\datoteka{Sombor Beograd}#
+#\datoteka{Nis Beograd}#
+#\datoteka{Beograd Indjija}#
+#\datoteka{Nis Ruma}#
+#\datoteka{Ruma Sombor}#
 
-#\naslovIzlaz#
-#\izlaz{so secer supa so ljuto secer kiselo slatko}#
-#\izlaz{ljuto paprika, ljuta paprika, ljuto dete}#
-
-#\naslovDat{rez.txt: }#
-#\datoteka{so secer supa ljuto kiselo slatko}#
-#\datoteka{paprika, ljuta dete}#
+#\naslovDat{bez\_duplikata.txt: }#
+#\datoteka{Sombor Nis Beograd}#
+#\datoteka{Indjija Ruma}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite ime datoteke:}\ulaz{dat3.txt}#
+#\izlaz{Unesite ime datoteke:}#
+#\ulaz{gradovi.txt}#
 
-#\naslovDat{dat3.txt}#
-#\datoteka{4 abc 1234 (5+3)*12.4 11-k}#
-
-#\naslovIzlaz#
-#\izlaz{abc 1234 (5+3)*12.4 11-k}#
-
-#\naslovDat{rez.txt: }#
-#\datoteka{abc 1234 (5+3)*12.4 11-k}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
-#\izlaz{Unesite ime datoteke:}\ulaz{dat4.txt}#
-
-#\naslovDat{dat4.txt ne postoji}#
+#\naslovDat{gradovi.txt ne postoji}#
 
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neuspesno otvaranje}#
 #\izlaz{ulazne datoteke.}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{p3_iv5}
 \end{Exercise}
 \begin{Answer}[ref=p3_iv5]
@@ -876,58 +851,41 @@ koliko $k$-tocifrenih brojeva postoji u datoteci, pri čemu se
 pozitivan ceo broj $k$ zadaje kao drugi argument komandne linije.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
-\begin{miditest}
+\begin{minitest}
 \begin{upotreba}{1}
-#\poziv{./a.out ulaz.txt 2}#
+#\naslovPokretanje#
+#\argumenti{./a.out ulaz.txt 2}#
 
 #\naslovDat{ulaz.txt}#
 #\datoteka{6}#
-#\datoteka{15}#
-#\datoteka{193}#
-#\datoteka{-27}#
-#\datoteka{9790}#
-#\datoteka{35}#
-#\datoteka{1}#
+#\datoteka{15 193 -27 9790 35 1}#
 
 #\naslovIzlaz#
 #\izlaz{Broj 2-cifrenih brojeva: 3}#
 \end{upotreba}
-\end{miditest}
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{2}
-#\poziv{./a.out in.dat 5}#
+#\naslovPokretanje#
+#\argumenti{./a.out in.dat 5}#
 
 #\naslovDat{ulaz.txt}#
 #\datoteka{4}#
-#\datoteka{15}#
-#\datoteka{193}#
-#\datoteka{-27}#
-#\datoteka{9790}#
+#\datoteka{15 193 -27 9790}#
 
 #\naslovIzlaz#
 #\izlaz{Broj 5-cifrenih brojeva: 0}#
 \end{upotreba}
-\end{miditest}
-
-\begin{miditest}
+\end{minitest}
+\begin{minitest}
 \begin{upotreba}{3}
-#\poziv{./a.out in.txt 3}#
-
-#\naslovDat{in.txt ne postoji}#
-
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neuspesno otvaranje}#
-#\izlaz{ulazne datoteke.}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\poziv{./a.out in.txt}#
+#\naslovPokretanje#
+#\argumenti{./a.out in.txt}#
 
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
-\end{miditest}
+\end{minitest}
 \linkresenje{v3_03}
 \end{Exercise}
 \begin{Answer}[ref=v3_03]
@@ -1058,7 +1016,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{9 3 5 2}#
 
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravna dimenzija.}#
+#\izlaz{Greska: neispravna}#
+#\izlaz{dimenzija.}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -1292,7 +1251,9 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{mn13208 7 7 9 6 10}#
 
 #\naslovIzlaz#
-#\izlaz{korisnicko ime: mr15007, prosek ocena: 10.00}#
+#\izlaz{Studenti sa najvecim prosekom:}#
+#\izlaz{Korisnicko ime: mr15007}#
+#\izlaz{Prosek ocena: 10.00}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1304,10 +1265,12 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{ml17084 9 8 8 8 8}#
 
 #\naslovIzlaz#
-#\izlaz{korisnicko ime: mr16156,}#
-#\izlaz{prosek ocena: 9.6}#
-#\izlaz{korisnicko ime: mi17234,}#
-#\izlaz{prosek ocena: 9.6}#
+#\izlaz{Studenti sa najvecim prosekom:}#
+#\izlaz{Korisnicko ime: mr16156}#
+#\izlaz{Prosek ocena: 9.6}#
+#\izlaz{}#
+#\izlaz{Korisnicko ime: mi17234}#
+#\izlaz{Prosek ocena: 9.6}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p3_06}
@@ -1343,7 +1306,7 @@ traženom formatu može iskoristiti funkcija \kckod{strcat}.}
 #\datoteka{Jana Peric 10 10 9 9 8 8 7 0}#
 
 #\naslovIzlaz#
-#\izlaz{Jelena Jankovic 10 10 10 0 10.00}#
+#\izlaz{Jelena Jankovic 10 10 10 10.00}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1438,7 +1401,7 @@ i podatke za svaki automobil i zatim:
 \item ispisuje prosečnu cenu po marki kola 
 \item za maksimalnu cenu koju je kupac spreman da plati, a koja se
 zadaje kao argument komandne linije, ispisuje automobile u tom cenovnom
-rangu zajedno sa prosečnom cenom odgovarajuće marke
+rangu
 \end{enumerate}
 Pretpostaviti da se model i marka sastoje od jedne reči i
 da svaka od njih sadrži najviše 30 karaktera kao i da se u datoteci
@@ -1469,9 +1432,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\izlaz{renault 4266.67 3}#
 #\izlaz{dacia 6600.00 2}#
 #\izlaz{fiat 4595.00 2}#
-#\izlaz{Kola u vasem cenovnom rangu:}#
-#\izlaz{renault twingo 4266.67}#
-#\izlaz{renault clio 4266.67}#
+#\izlaz{}#
+#\izlaz{Kola u Vasem cenovnom rangu:}#
+#\izlaz{renault twingo 2900}#
+#\izlaz{renault clio 3650}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -1670,28 +1634,30 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{ulaz.txt}#
-#\datoteka{abcde abcde}#
-#\datoteka{abcde aab}#
-#\datoteka{abcde abcde abcde}#
-#\datoteka{abcde abcde Aab}#
-#\datoteka{abcde abcde ab}#
-#\datoteka{abcde abcde abcde abcde}#
+#\datoteka{/home/korisnik/imena.txt}#
+#\datoteka{/home/korisnik/a.out}#
+#\datoteka{/home/cv.pdf}#
+#\datoteka{/home/korisnik/ulaz.txt}#
+#\datoteka{/home/rezultati.xlsx}#
+#\datoteka{/var/log/apache2/error.log}#
 
 #\naslovInt#
-#\izlaz{Unesite nisku s:}\ulaz{ab}#
-#\izlaz{Broj linija: 3}#
+#\izlaz{Unesite nisku s:}\ulaz{.txt}#
+#\izlaz{Broj linija: 2}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovDat{ulaz.txt}#
-#\datoteka{abcde abcde}#
-#\datoteka{abcde}#
-#\datoteka{abcde abcde AB}#
+#\datoteka{/var/log/apache2/error.log}#
+#\datoteka{/var/log/dpkg.log}#
+#\datoteka{moj\_log.log}#
+#\datoteka{/home/korisnik.login}#
+#\datoteka{/home/korisnik.log.txt}#
 
 #\naslovInt#
-#\izlaz{Unesite nisku s:}\ulaz{ab}#
-#\izlaz{Broj linija: 0}#
+#\izlaz{Unesite nisku s:}\ulaz{.log}#
+#\izlaz{Broj linija: 3}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p3_04}

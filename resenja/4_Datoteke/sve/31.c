@@ -44,6 +44,7 @@ int main(int argc, char *argv[]) {
 
   /* Citanje linija sa standardnog ulaza i ispis odgovarajucih 
      linija u izlaznu datoteku. */
+  printf("Unesite recenice: \n");
   while (fgets(linija, MAKS_LINIJA, stdin) != NULL) {
     if ((ispis_mala_slova && islower(linija[0])) ||
         (ispis_velika_slova && isupper(linija[0])) || 

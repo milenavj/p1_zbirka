@@ -22,19 +22,18 @@ int main() {
     exit(EXIT_FAILURE);
   }
 
-  /* Iz ulazne datoteke se citaju karakteri i svaki treci karakter
-     se upisuje u izlaznu datoteku. */
+  /* Citanje karaktera iz ulazne datoteke. */
   while ((c = fgetc(ulaz)) != EOF){
-    /* Procitani karakter se upisuje u izlaznu datoteku. */
+    /* Upisivanje procitanog karaktera u izlaznu datoteku. */
     fputc(c, izlaz);
 
-    /* Naredna dva karaktera se preskacu. */
+    /* Preskakanje naredna dva karaktera. */
     fgetc(ulaz);
     fgetc(ulaz);
     
     /* Ovakvo resenje ce raditi i u slucaju kada broj karaktera u
-       datoteci nije deljiv sa 3, jer kada se dodje do kraja 
-       datoteke, svaki sledeci poziv funkcije fgetc vraca EOF. */
+       datoteci nije deljiv sa 3 jer kada se dodje do kraja 
+       datoteke svaki sledeci poziv funkcije fgetc vraca EOF. */
   }
 
   /* Zatvaranje otvorenih datoteka. */

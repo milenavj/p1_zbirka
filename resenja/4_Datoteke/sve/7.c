@@ -11,7 +11,7 @@ int main() {
   char c;
   char ime_datoteke[MAKS_IME];
   int brojaci[BROJ_CIFARA];
-  int i, maks_i;
+  int i, maks;
 
   /* Ucitavanje imena ulazne datoteke. */
   printf("Unesite ime datoteke: ");
@@ -30,23 +30,25 @@ int main() {
   for (i = 0; i < BROJ_CIFARA; i++)
     brojaci[i] = 0;
 
-  /* Iz datoteke se cita karakter po karakter i za svaku procitanu
-     cifru se uvecava odgovarajuci brojac. */
+  /* Citanje karaktera i uvecavanje odgovarajucih brojaca. */
   while ((c = fgetc(ulaz)) != EOF) {
     if (isdigit(c))
       brojaci[c - '0']++;
   }
 
-  /* Pronalazi se cifra koja se najvise puta pojavljuje u datoteci. 
-   */
-  maks_i = 0;
+  /* Pronalazak cifre koja se najvise puta pojavljuje u datoteci. */
+  maks = brojaci[0];
   for (i = 1; i < BROJ_CIFARA; i++)
-    if (brojaci[maks_i] < brojaci[i])
-      maks_i = i;
+    if (brojaci[i] > maks)
+      maks = brojaci[i];
 
   /* Ispis rezultata. */
-  printf("%d\n", maks_i);
-
+  printf("Najcesce cifre: ");
+  for (i = 0; i < BROJ_CIFARA; i++)
+    if (brojaci[i] == maks)
+      printf("%d ", brojaci[i]);
+  printf("\n");
+    
   /* Zatvaranje datoteke. */
   fclose(ulaz);
 

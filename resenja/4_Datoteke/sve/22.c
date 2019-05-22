@@ -30,17 +30,17 @@ int main(int argc, char *argv[]) {
   if (ulaz == NULL)
     greska("Greska: neuspesno otvaranje ulazne datoteke.");
 
-  /* Iz datoteke se citaju podaci o pravougaonicima. */
+  /* Citanje podataka o pravougaonicima. */
   while (fscanf(ulaz, "%u%u%s", &p.a, &p.b, p.ime) == 3) {
-    /* Vrsi se provera ispravnosti duzina stranica. */
+    /* Provera ispravnosti duzina stranica. */
     if (p.a == 0 || p.b == 0)
       greska("Greska: duzina stranice ne moze biti 0.");
 
-    if (p.a == p.b) {
-      /* Ako je u pitanju kvadrat, njegovo ime se ispisuje na
-         standardni izlaz. */
+    /* U slucaju da je ucitan kvardat, njegovo ime se ispisuje na
+       standardni izlaz. */
+    if (p.a == p.b)
       printf("%s ", p.ime);
-    } else {
+    else {
       /* Ako je u pitanju pravougaonik, njegova povrsina se poredi
          sa maksimalnom. */
       if (p.a * p.b > maksimalna_povrsina)

@@ -34,15 +34,12 @@ int main() {
   if (n < 0 || n > MAKS_BROJ_RECI)
     greska("Greska: neispravna vrednost broja reci.");
 
-  /* Ucitavanje rec po rec iz datoteke, smesta se u niz i ispisuje
-     se na standardni izlaz. */
-  for (i = 0; i < n; i++) {
+  /* Ucitavanje reci u niz. */
+  for (i = 0; i < n; i++)
     fscanf(ulaz, "%s", niz_reci[i]);
-    printf("%s ", niz_reci[i]);
-  }
 
   /* Otvaranje izlazne datoteke za pisanje i provera uspeha. */
-  izlaz = fopen("rez.txt", "w");
+  izlaz = fopen("bez_duplikata.txt", "w");
   if (izlaz == NULL)
     greska("Greska: neuspesno otvaranje izlazne datoteke.");
 
@@ -60,9 +57,9 @@ int main() {
         break;
       }
 
-    /* Ako indikator ima vrednost 0, to znaci da se doslo do prvog
-       pojavljivanja reci i da je treba upisati u izlaznu datoteku. 
-     */
+    /* Ako indikator ima vrednost 0, znaci da je u pitanju prvo
+       pojavljivanje reci i da je treba upisati u izlaznu
+       datoteku. */
     if (!indikator)
       fprintf(izlaz, "%s\n", niz_reci[i]);
   }

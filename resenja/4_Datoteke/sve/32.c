@@ -28,30 +28,31 @@ int main(int argc, char **argv) {
   if (ulaz1 == NULL || ulaz2 == NULL)
     greska("Greska: neuspesno otvaranje datoteke.");
 
-  /* Iz obe datoteke se cita prva linija. */
+  /* Citanje prve linije iz obe datoteke. */
   d1 = fgets(linija1, MAKS_LINIJA, ulaz1);
   d2 = fgets(linija2, MAKS_LINIJA, ulaz2);
 
-  /* Dok god se ne dodje do kraja jedne od datoteka citaju se
-     preostale linije. */
+  /* Citanje preostalih linija dok se ne dodje do kraja bar jedne
+     datoteke. */
   while (d1 != NULL && d2 != NULL) {
-    /* Vrsi se poredjenje ucitanih linija. */
+    /* Poredjenje ucitanih linija. */
     if (strcmp(linija1, linija2) != 0)
       printf("%d ", i);
 
-    /* Prelazi se na sledece linije. */
+    /* Prelazak na sledece linije. */
     d1 = fgets(linija1, MAKS_LINIJA, ulaz1);
     d2 = fgets(linija2, MAKS_LINIJA, ulaz2);
 
     i++;
   }
 
-  /* Iz prethodne petlje je moglo da se izadje u 3 slucaja: 1.
-     Doslo se do kraja prve datoteke. 2. Doslo se do kraja druge
-     datoteke. 3. Doslo se do kraja obeju datoteka. U slucaju da se
-     desio treci slucaj, nijedna od naredne dve petlje se nece
-     izvrsiti. U prvom slucaju ce se izvrsiti samo prva petlja, a u 
-     drugom slucaju druga. */
+  /* Iz prethodne petlje je moglo da se izadje u 3 slucaja: 
+     1. Doslo se do kraja prve datoteke. 
+     2. Doslo se do kraja druge datoteke. 
+     3. Doslo se do kraja obeju datoteka. 
+     U slucaju da se desio treci slucaj, nijedna od naredne dve 
+     petlje se nece izvrsiti. U prvom slucaju ce se izvrsiti samo
+     prva petlja, a u drugom slucaju druga. */
 
   /* Ispis preostalih rednih brojeva linija prve datoteke. */
   while (d1 != NULL) {

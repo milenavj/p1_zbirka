@@ -90,16 +90,13 @@ void ispisi_informacije(Info info[], int n) {
 
 /* Funkcija ispisuje podatke o automobilima cija je cena manja ili
    jednaka budzetu kojim korisnik raspolaze. */
-void ispisi_kandidate(Automobil a[], int automobili_n, float budzet,
-                      Info info[], int n) {
-  int i, pozicija;
+void ispisi_kandidate(Automobil a[], int automobili_n, 
+                      float budzet) {
+  int i;
   printf("Kola u Vasem cenovnom rangu:\n");
   for (i = 0; i < automobili_n; i++)
-    if (a[i].cena < budzet) {
-      pozicija = sadrzi(info, n, a[i].marka);
-      printf("%s %s %.2f\n", a[i].marka, a[i].model,
-             info[pozicija].prosecna_cena);
-    }
+    if (a[i].cena < budzet)
+      printf("%s %s %g\n", a[i].marka, a[i].model, a[i].cena);
 }
 
 int main(int argc, char *argv[]) {
@@ -138,7 +135,7 @@ int main(int argc, char *argv[]) {
 
   /* Ispis podataka o automobilima cija je cena manja ili
      jednaka granici koju je korisnik uneo. */
-  ispisi_kandidate(automobili, automobili_n, budzet, info, info_n);
+  ispisi_kandidate(automobili, automobili_n, budzet);
 
   /* Zatvaranje datoteke. */
   fclose(ulaz);

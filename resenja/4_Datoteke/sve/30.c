@@ -12,19 +12,18 @@ int broj_linija(FILE *ulaz, char *s) {
   int brojac = 0, duzina_linije;
   int duzina_s = strlen(s);
 
-  /* Iz datoteke se cita linija po linija, sve dok se ne dodje do
-     kraja datoteke. */
+  /* Citanje linija iz datoteke sve do kraja datoteke. */
   while (fgets(linija, MAKS_LINIJA, ulaz) != NULL) {
     /* Racunanje duzine procitane linije. */
     duzina_linije = strlen(linija);
 
-    /* Sklanja se znak za novi red sa kraja linije. */
+    /* Uklanjanje znaka za novi red sa kraja linije. */
     if (linija[duzina_linije - 1] == '\n') {
       linija[duzina_linije - 1] = '\0';
       duzina_linije--;
     }
 
-    /* Poredi se kraj linije sa niskom s. Kraj linije se moze
+    /* Poredjenje kraja linije sa niskom s. Kraj linije se moze
        dobiti tako sto se izvrsi 'pomeranje' u desno do kraja
        linije, a zatim 'pomeranje' u levo onoliko mesta koliko je
        dugacka niska s. 
@@ -39,8 +38,6 @@ int broj_linija(FILE *ulaz, char *s) {
       brojac++;
   }
 
-  /* Kao povratna vrednost se vraca broj linija koje se zavrsavaju
-     niskom s. */
   return brojac;
 }
 

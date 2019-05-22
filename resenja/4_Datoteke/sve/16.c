@@ -58,7 +58,7 @@ int main(int argc, char *argv[]) {
   if (ulaz == NULL)
     greska("Greska: neuspesno otvaranje ulazne datoteke.");
 
-  /* Cita se broj k i vrsi se provera ispravnosti. */
+  /* Citanje broja k i provera ispravnosti. */
   k = atoi(argv[2]);
   if (k <= 0)
     greska("Greska: neispravna vrednost broja k.");

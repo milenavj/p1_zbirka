@@ -16,7 +16,7 @@ int main() {
     exit(EXIT_FAILURE);
   }
 
-  /* Cita se karakter po karakter i prebrojavaju se mala slova. */
+  /* Citanje karaktera i prebrojavanje malih slova. */
   while ((c = fgetc(ulaz)) != EOF)
     if (islower(c))
       broj_malih++;

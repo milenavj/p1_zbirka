@@ -22,8 +22,7 @@ int main(int argc, char *argv[]) {
     greska("Greska: neispravan poziv.");
 
   /* Otvaranje datoteke cije se ime zadaje kao prvi argument
-     komandne linije i provera da li je otvaranje proslo
-     uspesno. */
+     komandne linije i provera uspeha. */
   ulaz = fopen(argv[1], "r");
   if (ulaz == NULL)
     greska("Greska: neuspesno otvaranje ulazne datoteke.");
@@ -39,8 +38,7 @@ int main(int argc, char *argv[]) {
      Kada dodje do kraja datoteke, kao povratnu vrednost vraca
      NULL. */
   while (fgets(linija, MAKS_LINIJA, ulaz) != NULL) {
-    /* Na standardni izlaz se ispisuju sve linije iz datoteke cija
-       je duzina veca od k. */
+    /* Ispis svih linija cija je duzina veca od k. */
     if (strlen(linija) > k)
       printf("%s", linija);
   }

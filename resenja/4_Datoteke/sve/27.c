@@ -32,8 +32,8 @@ int main(int argc, char *argv[]) {
     duzina = strlen(linija);
 
     if (duzina > maks_duzina ||
-        (duzina == maks_duzina
-         && strcmp(linija, najduza_linija) < 0)) {
+        (duzina == maks_duzina && 
+         strcmp(linija, najduza_linija) < 0)) {
       strcpy(najduza_linija, linija);
       maks_duzina = duzina;
     }

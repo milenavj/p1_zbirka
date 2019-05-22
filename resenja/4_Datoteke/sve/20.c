@@ -42,7 +42,7 @@ int main() {
   if (n < 0 || n > MAKS_TACAKA)
     greska("Greska: neispravan broj tacaka.");
 
-  /* Iz datoteke se cita tacka po tacka. */
+  /* Citanje tacaka iz datoteke. */
   for (i = 0; i < n; i++) {
     fscanf(ulaz, "%d%d", &tacka.x, &tacka.y);
 
@@ -52,9 +52,7 @@ int main() {
     /* Upisivanje izracunatog rastojanja u datoteku. */
     fprintf(izlaz, "%.2lf\n", rastojanje);
 
-    /* Ukoliko je tekuce rastojanje  od trenutno najveceg
-       rastojanja, azuriraju se vrednosti maksimanog rastojanja
-       i odgovarajuce tacke. */
+    /* Azuriranje maksimalnog rastojanja i odgovarajuce tacke. */
     if (rastojanje > maks_r) {
       maks_r = rastojanje;
       maks_t = tacka;

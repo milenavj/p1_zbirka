@@ -23,7 +23,7 @@ int main() {
 
   /* Otvaranje datoteke rotacije.txt za pisanje i provera uspeha. */
   izlaz = fopen("rotacije.txt", "w");
-  if (izlaz == NULL){
+  if (izlaz == NULL) {
     fprintf(stderr, "Greska: neuspesno otvaranje datoteke.");
     exit(EXIT_FAILURE);
   }
@@ -37,7 +37,7 @@ int main() {
 
   /* U petlji se uneta rec rotira za 1 i upisuje u datoteku.
      Postupak se ponavlja n puta. */
-  for (i = 0; i < n; i++){
+  for (i = 0; i < n; i++) {
     fprintf(izlaz, "%s\n", s);
     rotiraj_za_1(s, n);
   }

@@ -6,7 +6,7 @@ int main() {
   int c;
 
   /* Promenljive ulaz i izlaz predstavljaju pokazivace na ugradjenu
-     strukturu FILE. Unutar ove strukture nalaze se polja neophodna
+     strukturu FILE. Unutar ove strukture se nalaze polja neophodna
      za rad sa datotekama. */
   FILE *ulaz, *izlaz;
 
@@ -18,9 +18,9 @@ int main() {
      povratnu vrednost vraca NULL. */
   ulaz = fopen("ulaz.txt", "r");
   if (ulaz == NULL) {
-    /* Funkcija fprintf vrsi ispis u fajl. Funkcionise isto kao i
-       funkcija printf - razlika je sto se kao prvi argument
-       prosledjuje fajl u koji se ispisuje izlaz.
+    /* Funkcija fprintf vrsi ispis u datoteku. Funkcionise isto kao
+       i funkcija printf - razlika je sto se kao prvi argument
+       prosledjuje datoteka u koju se ispisuje izlaz.
 
        Ukoliko je izlaz potrebno ispisati na standardni izlaz za
        greske, kao prvi argument se navodi stderr. */

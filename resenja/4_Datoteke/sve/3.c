@@ -24,9 +24,9 @@ int main() {
   if (izlaz == NULL)
     greska("Greska: neuspesno otvaranje datoteke sifra.txt.");
 
-  /* U petlji se cita karakter po karakter. */
+  /* Citanje karaktera iz ulazne datoteke. */
   while ((c = fgetc(ulaz)) != EOF) {
-    /* Procitani karakter se sifruje na trazeni nacin. */
+    /* Sifrovanje procitanog karaktera na trazeni nacin. */
     if (islower(c)) {
       c = toupper(c);
       if (c == 'A')
@@ -41,7 +41,7 @@ int main() {
         c = c - 1;
     }
 
-    /* Izmenjeni karakter se upisuje u izlaznu datoteku. */
+    /* Upisivanje izmenjenog karaktera u izlaznu datoteku. */
     fputc(c, izlaz);
   }
 

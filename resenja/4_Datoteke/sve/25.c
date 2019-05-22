@@ -68,8 +68,8 @@ int main(int argc, char *argv[]) {
   if (izlaz == NULL)
     greska("Greska: neuspesno otvaranje izlazne datoteke.");
 
-  /* Ucitavanje zadata opcija i postavlja se vrednost odgovarajuceg
-     indikatora. */
+  /* Ucitavanje zadate opcije i postavljanje vrednosti
+     odgovarajuceg indikatora. */
   if (strcmp(argv[3], "-x") == 0)
     opcija_x = 1;
   else if (strcmp(argv[3], "-y") == 0)
@@ -88,7 +88,7 @@ int main(int argc, char *argv[]) {
     /* Racunanje reciprocnog razlomka. */
     r = reciprocni(&razlomci[i]);
 
-    /* U zavisnosti od unetih opcija, vrsi se odgovarajuci ispis. */
+    /* Ispis rezultata u zavisnosti od navedenih opcija. */
     if (opcija_x)
       fprintf(izlaz, "%d/%d ", r.brojilac, r.imenilac);
     if (opcija_y)

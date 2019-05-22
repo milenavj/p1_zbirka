@@ -8,7 +8,6 @@ typedef struct {
   float prosek;
 } Student;
 
-
 int main() {
   /* Deklaracije potrebnih promenljivih. */
   FILE *ulaz;
@@ -25,7 +24,7 @@ int main() {
     exit(EXIT_FAILURE);
   }
 
-  /* Citaju se podaci o studentima sve dok se ne dodje do kraja
+  /* Citanje podataka o studentima sve dok se ne dodje do kraja
      datoteke. */
   while (fscanf(ulaz, "%s%d%d%d%d%d", studenti[i].korisnicko_ime,
           &ocena1, &ocena2, &ocena3, &ocena4, &ocena5) != EOF) {
@@ -45,9 +44,10 @@ int main() {
   n = i;
 
   /* Ispis svih studenata sa maksimalnim prosekom. */
+  printf("Studenti sa najvecim prosekom:\n");
   for (i = 0; i < n; i++)
     if (studenti[i].prosek == maksimalni_prosek)
-      printf("korisnicko ime: %s, prosek ocena: %.2f\n",
+      printf("Korisnicko ime: %s\nProsek ocena: %.2f\n\n",
              studenti[i].korisnicko_ime, studenti[i].prosek);
 
   /* Zatvaranje datoteke. */

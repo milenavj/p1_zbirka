@@ -21,12 +21,12 @@ int main() {
   if (ulaz == NULL)
     greska("Greska: neuspesno otvaranje ulazne datoteke.");
 
-  /* Ucitavanje dimenzije matrice i provera ispravnosti. */
+  /* Ucitavanje dimenzija matrice i provera ispravnosti. */
   fscanf(ulaz, "%d%d", &n, &m);
   if (n <= 0 || n > MAKS_DIM || m <= 0 || m > MAKS_DIM)
     greska("Greska: neispravne dimenzije matrice.");
 
-  /* Ucitavanje vrednosti matrice. */
+  /* Ucitavanje elemenata matrice. */
   for (i = 0; i < n; i++)
     for (j = 0; j < m; j++)
       fscanf(ulaz, "%f", &a[i][j]);
@@ -34,7 +34,7 @@ int main() {
   /* Za svaku poziciju (i,j) vrsi se provera trazenog uslova. */
   for (i = 0; i < n; i++) {
     for (j = 0; j < m; j++) {
-      /* Za poziciju (i,j) Racunanje suma suseda. Ona se moze
+      /* Za poziciju (i,j) racuna se suma suseda. Ona se moze
          dobiti kao suma podmatrice 3*3 ciji je gornji levi ugao
          (i-1, j-1), a donji desni (i+1, j+1). Pri racunanju ove
          sume treba voditi racuna da se ne izadje iz granica

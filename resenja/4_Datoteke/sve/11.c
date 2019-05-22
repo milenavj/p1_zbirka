@@ -68,11 +68,9 @@ int main() {
   if (k < 0)
     greska("Greska: neispravan unos broja k.");
 
-  /* Iz datoteke se cita rec po rec, sve dok se ne dodje do kraja
-     datoteke. */
+  /* Citanje reci iz ulazne datoteke sve do kraja datoteke. */
   while (fscanf(ulaz, "%s", rec) != EOF) {
-    /* Procitana rec se rotira za k mesta i upisuje u izlaznu
-       datoteku. */
+    /* Rotiranje procitane reci i upisivanje u izlaznu datoteku. */
     rotiraj(rec, k, rezultat);
     fprintf(izlaz, "%s ", rezultat);
   }
