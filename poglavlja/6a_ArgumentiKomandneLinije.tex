@@ -11,7 +11,7 @@
 #\poziv{./a.out d1.txt 10 13.5 d2.txt}#
 
 #\naslovIzlaz#
-#\izlaz{Broj argumenata je 5:}#
+#\izlaz{Broj argumenata je 5.}#
 #\izlaz{0: ./a.out}#
 #\izlaz{1: d1.txt}#
 #\izlaz{2: 10}#
@@ -24,7 +24,7 @@
 #\poziv{./a.out}#
 
 #\naslovIzlaz#
-#\izlaz{Broj argumenata je 1:}#
+#\izlaz{Broj argumenata je 1.}#
 #\izlaz{0: ./a.out}#
 \end{upotreba}
 \end{miditest}
@@ -46,6 +46,7 @@ Napisati program koji ispisuje zbir celobrojnih argumenata komandne linije.
 \begin{upotreba}{1}
 #\naslovPokretanje#
 #\argumenti{./a.out 5 ana 9 -2 11 4 +2}#
+
 #\naslovIzlaz#
 #\izlaz{Zbir celobrojnih argumenata:}#
 #\izlaz{29}#
@@ -55,6 +56,7 @@ Napisati program koji ispisuje zbir celobrojnih argumenata komandne linije.
 \begin{upotreba}{2}
 #\naslovPokretanje#
 #\argumenti{./a.out a1 b1 1a 1b}#
+
 #\naslovIzlaz#
 #\izlaz{Zbir celobrojnih argumenata:}#
 #\izlaz{0}#
@@ -64,6 +66,7 @@ Napisati program koji ispisuje zbir celobrojnih argumenata komandne linije.
 \begin{upotreba}{3}
 #\naslovPokretanje#
 #\argumenti{./a.out 33 1 @matf 44 22.56}#
+
 #\naslovIzlaz#
 #\izlaz{Zbir celobrojnih argumenata:}#
 #\izlaz{78}#
@@ -133,21 +136,21 @@ Napisati program koji ispisuje argumente komandne linije koji počinju karaktero
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovPokretanje#
-#\argumenti{./a.out bundeva pomorandza}#
-
-#\naslovIzlaz#
-#\izlaz{Nema argumenata koji}#
-#\izlaz{pocinju sa @.}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\naslovPokretanje#
 #\argumenti{./a.out sanke @zapad zujanje}#
 
 #\naslovIzlaz#
 #\izlaz{Argumenti koji pocinju sa @:}#
 #\izlaz{@zapad}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovPokretanje#
+#\argumenti{./a.out bundeva pomorandza}#
+
+#\naslovIzlaz#
+#\izlaz{Nema argumenata koji}#
+#\izlaz{pocinju sa @.}#
 \end{upotreba}
 \end{minitest}
 
@@ -167,14 +170,16 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{1}
 #\naslovPokretanje#
 #\argumenti{./a.out pera@gmail.com @}#
+
 #\naslovIzlaz#
-#\izlaz{2}#
+#\izlaz{Rezultat: 2}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovPokretanje#
 #\argumenti{./a.out japan caj}#
+
 #\naslovIzlaz#
 #\izlaz{0}#
 \end{upotreba}
@@ -183,8 +188,9 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{3}
 #\naslovPokretanje#
 #\argumenti{./a.out}#
+
 #\naslovIzlaz#
-#\izlaz{0}#
+#\izlaz{Rezultat: 0}#
 \end{upotreba}
 \end{minitest}
 
@@ -206,6 +212,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{1}
 #\naslovPokretanje#
 #\argumenti{./a.out ulaz.txt izlaz.txt ulaz.txt}#
+
 #\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
 \end{upotreba}
@@ -214,6 +221,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{2}
 #\naslovPokretanje#
 #\argumenti{./a.out srce pik tref tref}#
+
 #\naslovIzlaz#
 #\izlaz{Medju argumentima ima istih.}#
 \end{upotreba}
@@ -223,6 +231,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{3}
 #\naslovPokretanje#
 #\argumenti{./a.out Riba ribi grize rep.}#
+
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
 \end{upotreba}
@@ -231,6 +240,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{4}
 #\naslovPokretanje#
 #\argumenti{./a.out}#
+
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema istih.}#
 \end{upotreba}
@@ -253,6 +263,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{1}
 #\naslovPokretanje#
 #\argumenti{./a.out -rf in.txt}#
+
 #\naslovIzlaz#
 #\izlaz{Opcije su: r f}#
 \end{upotreba}
@@ -261,6 +272,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{2}
 #\naslovPokretanje#
 #\argumenti{./a.out}#
+
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema opcija.}#
 \end{upotreba}
@@ -270,6 +282,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{3}
 #\naslovPokretanje#
 #\argumenti{./a.out ulaz.txt}#
+
 #\naslovIzlaz#
 #\izlaz{Medju argumentima nema opcija.}#
 \end{upotreba}
@@ -278,6 +291,7 @@ Napisati program koji ispisuje broj argumenata komandne linije koji sadrže kara
 \begin{upotreba}{4}
 #\naslovPokretanje#
 #\argumenti{./a.out in.txt -l -n 10 -fi out.txt}#
+
 #\naslovIzlaz#
 #\izlaz{Opcije su: l n f i}#
 \end{upotreba}

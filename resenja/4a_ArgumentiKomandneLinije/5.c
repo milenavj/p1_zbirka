@@ -11,7 +11,7 @@ int main(int argc, char *argv[]) {
       brojac++;
 
   /* Ispis rezultata. */
-  printf("%d\n", brojac);
+  printf("Rezultat: %d\n", brojac);
 
   return 0;
 }

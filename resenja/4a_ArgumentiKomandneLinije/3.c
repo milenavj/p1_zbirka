@@ -16,7 +16,7 @@ int main(int argc, char *argv[]) {
   n = abs(n);
 
   /* Ispis rezultata. */
-  for (i = (-1) * n; i <= n; i++)
+  for (i = -n; i <= n; i++)
     printf("%d ", i);
   printf("\n");
 
