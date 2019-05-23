@@ -14,8 +14,8 @@ typedef struct {
 void ucitaj(Dete niz[], int n) {
   char blanko;
   int i;
-  printf("Unesite podatke za svako dete, pol, broj godina i "
-         "ocenu:\n");
+  printf("Unesite podatke za svako dete (pol, broj godina i "
+         "ocenu):\n");
   for (i = 0; i < n; i++) {
     scanf("%c%c%d%d", &blanko, &niz[i].pol, &niz[i].broj_godina,
           &niz[i].ocena);
@@ -44,7 +44,7 @@ int main() {
   int suma, broj_dece;
 
   /* Ucitavanje broja dece i provera ispravnosti ulaza. */
-  printf("Unesite broj dece: ");
+  printf("Unesite broj dece u grupi: ");
   scanf("%d", &n);
   if (n <= 0 || n > MAKS_DECE) {
     printf("Greska: neispravan unos.\n");
@@ -55,10 +55,10 @@ int main() {
   ucitaj(niz, n);
 
   /* Ucitavanje trazenih podataka. */
-  printf("Unesite pol i broj godina: ");
+  printf("Unesite pol i broj godina za statistiku: ");
   scanf("%c%c%d", &blanko, &pol, &broj_godina);
 
-  /* Ispitivanje ispravnosti unetih podataka. */
+  /* Provera ispravnosti unetih podataka. */
   if (pol != 'm' && pol != 'z') {
     printf("Greska: neispravan pol.\n");
     exit(EXIT_FAILURE);
@@ -68,7 +68,7 @@ int main() {
     exit(EXIT_FAILURE);
   }
 
-  /* Racunanje prosecna ocena dece ciji se pol i broj godina
+  /* Racunanje prosecne ocene dece ciji se pol i broj godina
      poklapaju sa unetim. */
   suma = 0;
   broj_dece = 0;

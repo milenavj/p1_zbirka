@@ -17,6 +17,7 @@ double rastojanje(const Tacka *a, const Tacka *b) {
 int ucitaj_poligon(Tacka poligon[], int maks_temena) {
   int i = 0;
 
+  printf("Unesite temena poligona:\n");
   while (scanf("%d%d", &poligon[i].x, &poligon[i].y) != EOF) {
     i++;
     if (i >= maks_temena)
@@ -67,14 +68,14 @@ double povrsina_trougla(const Tacka *A, const Tacka *B,
 
 /* Funkcija racuna povrsinu poligona. */
 double povrsina_poligona(Tacka *poligon, int n) {
-  double P = 0;
+  double povrsina = 0;
   int i;
 
   for (i = 1; i < n - 1; i++)
-    P += povrsina_trougla(&poligon[0], &poligon[i],
+    povrsina += povrsina_trougla(&poligon[0], &poligon[i],
                           &poligon[i + 1]);
 
-  return P;
+  return povrsina;
 }
 
 int main() {
@@ -83,7 +84,7 @@ int main() {
   Tacka poligon[MAKS_TEMENA];
 
   /* Ucitavanje maksimalnog broja tacaka i provera ispravnosti. */
-  printf("Uneti maksimalan broj temena poligona: ");
+  printf("Unesite maksimalan broj temena poligona: ");
   scanf("%d", &maks_temena);
   if (maks_temena < 3 || maks_temena > MAKS_TEMENA) {
     printf("Greska: neispravan unos.\n");

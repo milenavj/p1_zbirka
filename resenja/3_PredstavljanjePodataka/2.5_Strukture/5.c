@@ -85,9 +85,9 @@ int main() {
   }
 
   /* Ispis rezultata. */
-  printf("Suma svih razlomaka je %d/%d.\n", suma.brojilac,
+  printf("Suma svih razlomaka: %d/%d\n", suma.brojilac,
          suma.imenilac);
-  printf("Proizvod svih razlomaka je %d/%d.\n", proizvod.brojilac,
+  printf("Proizvod svih razlomaka: %d/%d\n", proizvod.brojilac,
          proizvod.imenilac);
 
   return 0;

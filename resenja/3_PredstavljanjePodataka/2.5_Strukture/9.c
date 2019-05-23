@@ -52,7 +52,7 @@ int main() {
   }
 
   /* Ucitavanje lopti u niz. */
-  printf("Unesite dalje poluprecnike i boje lopti "
+  printf("Unesite poluprecnike i boje lopti "
          "(1-plava, 2-zuta, 3-crvena, 4-zelena):\n");
   for (i = 0; i < n; i++) {
     printf("%d. lopta: ", i + 1);

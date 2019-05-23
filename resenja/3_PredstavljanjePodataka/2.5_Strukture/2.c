@@ -14,24 +14,15 @@ typedef struct {
    povratnu vrednost vraca broj ucitanih vocki. */
 int ucitaj(Vocka niz[]) {
   int i = 0;
-  char ime[MAKS_IME];
 
-  /* Vocke se ucitavaju sve dok se ne unese rec "KRAJ". */
+  /* Ucitavanje vocki do kraja ulaza ili do popunjavanja niza. */
   do {
     printf("Unesite ime vocke i njenu kolicinu vitamina C: ");
-
-    /* Ucitavanje imena vocke. */
-    scanf("%s", ime);
-    if (strcmp(ime, "KRAJ") == 0)
+    if(scanf("%s%f", niz[i].ime, &niz[i].vitamin) == EOF)
       break;
-    strcpy(niz[i].ime, ime);
-
-    /* Ucitavanje kolicine vitamina C. */
-    scanf("%f", &niz[i].vitamin);
-
+   
     i++;
-  }
-  while (i < MAKS_VOCKI);
+  } while (i < MAKS_VOCKI);
 
   return i;
 }
@@ -58,7 +49,7 @@ int main() {
 
   /* Ispis rezultata. */
   najzdravija = vocka_sa_najvise_vitamina(vocke, n);
-  printf("Voce sa najvise C vitamina je: %s\n", najzdravija.ime);
+  printf("Voce sa najvise vitamina C je: %s\n", najzdravija.ime);
 
   return 0;
 }

@@ -19,7 +19,7 @@ typedef struct {
 /* Funkcija ucitava jedan artikal i proverava ispravnost ucitanih
    podataka. */
 void ucitaj_artikal(Artikal *a) {
-  printf("Unesite artikal, naziv, kolicinu i cenu: ");
+  printf("Unesite artikal (naziv, kolicinu i cenu): ");
   scanf("%s%d%f", a->naziv, &a->kolicina, &a->cena);
 
   if (a->kolicina <= 0) {

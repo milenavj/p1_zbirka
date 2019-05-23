@@ -61,7 +61,7 @@ int main() {
   /* Ispis imena nedovoljnih ucenika. */
   printf("\n\nNEDOVOLJNI: ");
   for (i = 0; i < n; i++)
-    for (j = 0; j < 9; j++)
+    for (j = 0; j < BROJ_OCENA; j++)
       if (niz[i].ocena[j] == 1) {
         printf("%s ", niz[i].ime);
         break;

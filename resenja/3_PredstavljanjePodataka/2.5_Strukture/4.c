@@ -16,6 +16,7 @@ int ucitaj(ParReci recnik[]) {
 
   /* Ucitavanje parovi reci sa standardnog ulaza sve do kraja
      ulaza. */
+  printf("Unesite reci i njihove prevode:\n");
   while (scanf("%s %s", sr, en) != EOF) {
     if (i == MAKS_BROJ_RECI)
       break;
@@ -60,20 +61,20 @@ int main() {
   char rec[MAKS_REC], prevod[MAKS_REC];
   char c;
 
-  /* Ucitavanje parovi reci u recnik. */
+  /* Ucitavanje parova reci u recnik. */
   n = ucitaj(recnik);
 
-  /* Ucitavanje recenica i ispisuje se njen prevod. */
+  /* Ucitavanje recenice i ispis njenog prevoda. */
   printf("Unesite recenicu za prevod: \n");
   do {
-    /* Ucitavanje rec po rec date recenice i pronalazi se njen
+    /* Ucitava se rec po rec date recenice i pronalazi se njen
        prevod. */
     scanf("%s", rec);
     pronadji_prevod(recnik, n, rec, prevod);
     printf("%s ", prevod);
 
     /* Ukoliko je karakter iza reci znak za novi red, onda se
-       prekida sa unosom, a ako nije Ucitavanje sledeca rec. */
+       prekida sa unosom, a ako nije ucitava se sledeca rec. */
     c = getchar();
   } while (c != '\n');
 

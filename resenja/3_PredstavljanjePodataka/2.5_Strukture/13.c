@@ -60,7 +60,7 @@ int main() {
   }
 
   /* Ucitavanje podataka o osobama. */
-  printf("Unesite podatke o osobama, ime, prezime i email.\n");
+  printf("Unesite podatke o osobama (ime, prezime i imejl adresu):\n");
   for (i = 0; i < n; i++)
     scanf("%s%s%s", osobe[i].ime, osobe[i].prezime, osobe[i].email);
 

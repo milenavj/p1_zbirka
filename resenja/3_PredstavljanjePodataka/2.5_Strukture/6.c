@@ -13,6 +13,7 @@ typedef struct {
    prodavnicama. */
 void ucitaj(Artikal niz[], int n) {
   int i;
+  printf("Unesite podatke o cenama:\n");
   for (i = 0; i < n; i++) {
     scanf("%s%lf", niz[i].naziv_prodavnice, &niz[i].cena_artikla);
     if (niz[i].cena_artikla <= 0) {

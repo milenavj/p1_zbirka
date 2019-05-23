@@ -78,6 +78,7 @@ void ispis(const Polinom *p) {
   for (i = 0; i <= p->stepen; i++)
     if (p->koef[i] != 0) {
       ispis_prvog_monoma(p->koef[i], i);
+      i++;
       break;
     }
 

@@ -101,7 +101,7 @@ int main() {
 
   /* Pronalazak polovine maksimalne vrednosti. */
   maks = najveca_vrednost(izrazi, n);
-  printf("Maksimalna vrednost izraza:%d\n", maks);
+  printf("Maksimalna vrednost izraza: %d\n", maks);
   polovina = maks / 2.0;
 
   /* Ispis rezultata. */

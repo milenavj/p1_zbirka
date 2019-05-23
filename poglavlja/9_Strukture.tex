@@ -13,8 +13,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite realni i imaginarni deo prvog broja: }\ulaz{1 2}#
-#\izlaz{Unesite realni i imaginarni deo drugog broja: }\ulaz{-2 3}#
+#\izlaz{Unesite realni i imaginarni deo prvog broja:}\ulaz{1 2}#
+#\izlaz{Unesite realni i imaginarni deo drugog broja:}\ulaz{-2 3}#
 #\izlaz{Zbir: -1.00+5.00*i}#
 #\izlaz{Razlika: 3.00-1.00*i}#
 #\izlaz{Proizvod: -8.00-1.00*i}#
@@ -40,21 +40,21 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj razlomaka: }\ulaz{5}#
+#\izlaz{Unesite broj razlomaka:}\ulaz{5}#
 #\izlaz{Unesite razlomke:}#
 #\ulaz{1 2}#
 #\ulaz{7 8}#
 #\ulaz{3 4}#
 #\ulaz{5 6}#
 #\ulaz{2 9}#
-#\izlaz{Suma svih razlomaka je 229/72.}#
-#\izlaz{Proizvod svih razlomaka je 35/576.}#
+#\izlaz{Suma svih razlomaka: 229/72.}#
+#\izlaz{Proizvod svih razlomaka: 35/576}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj razlomaka: }\ulaz{10}#
+#\izlaz{Unesite broj razlomaka:}\ulaz{10}#
 #\izlaz{Unesite razlomke:}#
 #\ulaz{4 3}#
 #\ulaz{12 25}#
@@ -66,8 +66,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{-24 50}#
 #\ulaz{7 18}#
 #\ulaz{-7 19}#
-#\izlaz{Suma svih razlomaka je 6089/1368.}#
-#\izlaz{Proizvod svih razlomaka je 1568/577125.}#
+#\izlaz{Suma svih razlomaka: 6089/1368}#
+#\izlaz{Proizvod svih razlomaka: 1568/577125}#
 \end{upotreba}
 \end{miditest}
 
@@ -87,7 +87,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  količinu vitamina C u miligramima (realan broj). Napisati funkcije:
 \begin{enumerate}
   \item \kckod{int ucitaj(Vocka niz[])} koja učitava voćke sa standardnog ulaza
-     sve do unosa reči KRAJ i kao povratnu vrednost vraća broj učitanih voćki;
+     sve do kraja ulaza i kao povratnu vrednost vraća broj učitanih voćki;
   \item \kckod{Vocka vocka\_sa\_najvise\_vitamina(Vocka niz[], int n)}
      koja pronalazi voćku koja ima najviše vitamina C.
 \end{enumerate}
@@ -98,13 +98,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{jabuka 4.6}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{limun 83.5}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{kivi 71}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{banana 8.7}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{pomorandza 70.8}#
-#\izlaz{Unesite ime voćke i njenu količinu vitamina C: }\ulaz{KRAJ}#
-#\izlaz{Voce sa najvise C vitamina je: limun}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C:}\ulaz{jabuka 4.6}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C:}\ulaz{limun 83.5}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C:}\ulaz{kivi 71}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C:}\ulaz{banana 8.7}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C:}\ulaz{pomorandza 70.8}#
+#\izlaz{Unesite ime voćke i njenu količinu vitamina C:}\ulaz{}#
+#\izlaz{Voce sa najvise vitamina C je: limun}#
 \end{upotreba}
 \end{maxitest}
 
@@ -183,6 +183,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
+#\izlaz{Unesite reci i njihove prevode:}#
 #\ulaz{zima winter}#
 #\ulaz{godina year}#
 #\ulaz{sreca happiness}#
@@ -196,6 +197,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
+#\izlaz{Unesite reci i njihove prevode:}#
+#\ulaz{je is}#
 #\ulaz{zima winter}#
 #\ulaz{pas dog}#
 #\ulaz{sreca happiness}#
@@ -204,7 +207,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{covek man}#
 #\izlaz{Unesite recenicu za prevod: }#
 #\ulaz{pas je covekov najbolji prijatelj}#
-#\izlaz{dog is ******* best friend}#
+#\izlaz{dog is ******* ******** friend}#
 \end{upotreba}
 \end{miditest}
 
@@ -233,13 +236,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj prodavnica: }\ulaz{5}#
+#\izlaz{Unesite broj prodavnica:}\ulaz{5}#
+#\izlaz{Unesite podatke o cenama:}#
 #\ulaz{idea 58.9}#
 #\ulaz{maxi 58.2}#
 #\ulaz{roda 55.1}#
 #\ulaz{tempo 54.5}#
 #\ulaz{interex 57.99}#
-#\izlaz{Unesite zeljenu cenu: }\ulaz{57.0}#
+#\izlaz{Unesite zeljenu cenu:}\ulaz{57.0}#
 #\izlaz{Povoljne prodavnice su:}#
 #\izlaz{roda}#
 #\izlaz{tempo}#
@@ -248,12 +252,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj prodavnica: }\ulaz{4}#
+#\izlaz{Unesite broj prodavnica:}\ulaz{4}#
+#\izlaz{Unesite podatke o cenama:}#
 #\ulaz{dm 43.2}#
 #\ulaz{lily 45.99}#
 #\ulaz{benu\_apoteke 43.99}#
 #\ulaz{sephora 50.99}#
-#\izlaz{Unesite zeljenu cenu: }\ulaz{47.00}#
+#\izlaz{Unesite zeljenu cenu:}\ulaz{47.00}#
 #\izlaz{Povoljne prodavnice su:}#
 #\izlaz{dm}#
 #\izlaz{lily}#
@@ -271,7 +276,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.7] 
-Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. Za svako obdanište poznat je spisak koji sadrži broj dece u grupi, a zatim i ocene koje je svako dete dalo o radu obdaništa. Definisati strukturu \kckod{Dete} koja sadrži polja pol (\kckod{m} ili
+Statistički zavod Srbije istražuje kako rade obdaništa u Srbiji. 
+Za svako obdanište poznat je spisak koji sadrži broj dece u grupi, 
+a zatim i ocene koje je svako dete dalo o radu obdaništa. 
+Definisati strukturu \kckod{Dete} koja sadrži polja pol (\kckod{m} ili
 \kckod{z}), broj godina (od $3$ do $6$) i ocenu koju je dete dalo radu obdaništa (od $1$ do $5$). 
 Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu i za 
 zadati pol i uzrast deteta i ispisuje korisniku na tri decimale prosečnu ocenu
@@ -282,7 +290,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj dece u grupi: }\ulaz{5}#
+#\izlaz{Unesite broj dece u grupi:}\ulaz{5}#
 #\izlaz{Unesite podatke za svako dete (pol,}#
 #\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 5}#
@@ -290,14 +298,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{m 4 2}#
 #\ulaz{m 5 4}#
 #\ulaz{m 3 4}#
-#\izlaz{Unesite pol i broj godina za statistiku: }\ulaz{m 3}#
+#\izlaz{Unesite pol i broj godina za}#
+#\izlaz{statistiku:}\ulaz{m 3}#
 #\izlaz{Prosecna ocena je: 4.500.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj dece u grupi: }\ulaz{10}#
+#\izlaz{Unesite broj dece u grupi:}\ulaz{10}#
 #\izlaz{Unesite podatke za svako dete (pol,}#
 #\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 5}#
@@ -310,7 +319,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{z 4 4}#
 #\ulaz{z 4 5}#
 #\ulaz{m 6 3}#
-#\izlaz{Unesite pol i broj godina za statistiku: }\ulaz{z 4}#
+#\izlaz{Unesite pol i broj godina za }#
+#\izlaz{statistiku:}\ulaz{z 4}#
 #\izlaz{Prosecna ocena je: 4.200.}#
 \end{upotreba}
 \end{miditest}
@@ -318,7 +328,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj dece u grupi: }\ulaz{15}#
+#\izlaz{Unesite broj dece u grupi:}\ulaz{15}#
 #\izlaz{Unesite podatke za svako dete (pol,}# 
 #\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 2}#
@@ -329,12 +339,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj dece u grupi: }\ulaz{2}#
+#\izlaz{Unesite broj dece u grupi:}\ulaz{2}#
 #\izlaz{Unesite podatke za svako dete (pol,}# 
 #\izlaz{broj godina i ocenu):}#
 #\ulaz{m 3 2}#
 #\ulaz{z 3 5}#
-#\izlaz{Unesite pol i broj godina za statistiku: }\ulaz{h 5}#
+#\izlaz{Unesite pol i broj godina za}#
+#\izlaz{statistiku:}\ulaz{h 5}#
 #\izlaz{Greska: neispravan pol.}#
 \end{upotreba}
 \end{miditest}
@@ -362,14 +373,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj studenata: }\ulaz{5}#
+#\izlaz{Unesite broj studenata:}\ulaz{5}#
 #\izlaz{Unesite podatke o studentima:}#
-#\izlaz{0. student: }\ulaz{Kocic Marija R 9.14}#
-#\izlaz{1. student: }\ulaz{Tanja Mratinkovic R 7.88}#
-#\izlaz{2. student: }\ulaz{Mihailo Simic N 8.44}#
-#\izlaz{3. student: }\ulaz{Milena Medar I 9.14}#
-#\izlaz{4. student: }\ulaz{Ljubica Mihic N 9.00}#
-#\izlaz{Unesite smer: }\ulaz{R}#
+#\izlaz{0. student:}\ulaz{Kocic Marija R 9.14}#
+#\izlaz{1. student:}\ulaz{Tanja Mratinkovic R 7.88}#
+#\izlaz{2. student:}\ulaz{Mihailo Simic N 8.44}#
+#\izlaz{3. student:}\ulaz{Milena Medar I 9.14}#
+#\izlaz{4. student:}\ulaz{Ljubica Mihic N 9.00}#
+#\izlaz{Unesite smer:}\ulaz{R}#
 #\izlaz{Studenti sa R smera:}#
 #\izlaz{Kocic Marija}#
 #\izlaz{Tanja Mratinkovic}#
@@ -382,10 +393,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj studenata: }\ulaz{4}#
+#\izlaz{Unesite broj studenata:}\ulaz{4}#
 #\izlaz{Unesite podatke o studentima:}#
-#\izlaz{0. student: }\ulaz{Djordje Lazarevic N 9.05}#
-#\izlaz{1. student: }\ulaz{Minja Peric W 7.70}#
+#\izlaz{0. student:}\ulaz{Djordje Lazarevic N 9.05}#
+#\izlaz{1. student:}\ulaz{Minja Peric W 7.70}#
 #\izlaz{Greska: neispravan unos smera.}#
 \end{upotreba}
 \end{miditest}
@@ -479,9 +490,9 @@ zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj osoba: }\ulaz{3}#
-#\izlaz{Unesite podatke o osobama:}#
-#\izlaz{ime, prezime i email.}#
+#\izlaz{Unesite broj osoba:}\ulaz{3}#
+#\izlaz{Unesite podatke o osobama }#
+#\izlaz{(ime, prezime i imejl adresu):}#
 #\ulaz{Dusko Dugousko dusko@yahoo.com}#
 #\ulaz{Pink Panter panter@gmail.com}#
 #\ulaz{Pera Detlic pd@gmail.com}#
@@ -493,9 +504,9 @@ zadata i sadrži samo jedno pojavljivanje znaka \kckod{@}.}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj osoba: }\ulaz{3}#
-#\izlaz{Unesite podatke o osobama:}#
-#\izlaz{ime, prezime i email.}#
+#\izlaz{Unesite broj osoba:}\ulaz{3}#
+#\izlaz{Unesite podatke o osobama }#
+#\izlaz{(ime, prezime i imejl adresu):}#
 #\ulaz{Homer Simpson homer@yahoo.com}#
 #\ulaz{Mardz Simpson mardz@matf.bg.ac.rs}#
 #\izlaz{Nema vlasnika gmail naloga.}#
@@ -527,22 +538,22 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj potrosackih korpi: }\ulaz{3}#
+#\izlaz{Unesite broj potrosackih korpi:}\ulaz{3}#
 #\izlaz{Unesite podatke o korpi: }#
-#\izlaz{Broj artikala: }\ulaz{4}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{jabuke 10 22.4}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{dezodorans 1 120.99}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{C\_supa 3 36.56}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{sunka 1 230.99}#
+#\izlaz{Broj artikala:}\ulaz{4}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{jabuke 10 22.4}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{dezodorans 1 120.99}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{C\_supa 3 36.56}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{sunka 1 230.99}#
 #\izlaz{Unesite podatke o korpi: }#
-#\izlaz{Broj artikala: }\ulaz{2}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{Jafa\_keks 55.78}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{Najlepse\_zelje 62.99}#
+#\izlaz{Broj artikala:}\ulaz{2}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{Jafa\_keks 1 55.78}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{Najlepse\_zelje 1 62.99}#
 #\izlaz{Unesite podatke o korpi: }#
-#\izlaz{Broj artikala: }\ulaz{3}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{prasak\_za\_ves 1 1199.99}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{omeksivac 1 279.99}#
-#\izlaz{Unesite artikal, naziv, kolicinu i cenu: }\ulaz{protiv\_kamenca 1 699.99}#
+#\izlaz{Broj artikala:}\ulaz{3}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{prasak\_za\_ves 1 1199.99}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{omeksivac 1 279.99}#
+#\izlaz{Unesite artikal (naziv, kolicinu i cenu):}\ulaz{protiv\_kamenca 1 699.99}#
 #\izlaz{\ }#
 #\izlaz{Korpa 0:}#
 #\izlaz{\ \ \ \ \ \ \ \ jabuke 10 22.40}#
@@ -553,10 +564,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{\ \ \ \ \ \ \ \ ukupno: 685.66}#
 #\izlaz{\ }#
 #\izlaz{Korpa 1:}#
-#\izlaz{\ \ \ \ \ \ \ \ Jafa\_keks 55 0.78}#
-#\izlaz{\ \ \ \ \ \ \ \ Najlepse\_zelje 62 0.99}#
+#\izlaz{\ \ \ \ \ \ \ \ Jafa\_keks 1 55.78}#
+#\izlaz{\ \ \ \ \ \ \ \ Najlepse\_zelje 1 62.99}#
 #\izlaz{------------------------}#
-#\izlaz{\ \ \ \ \ \ \ \ ukupno: 104.28}#
+#\izlaz{\ \ \ \ \ \ \ \ ukupno: 118.77}#
 #\izlaz{\ }#
 #\izlaz{Korpa 2:}#
 #\izlaz{\ \ \ \ \ \ \ \ prasak\_za\_ves 1 1199.99}#
@@ -565,7 +576,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{------------------------}#
 #\izlaz{\ \ \ \ \ \ \ \ ukupno: 2179.97}#
 #\izlaz{\ }#
-#\izlaz{Prosecna cena potrosacke korpe: 989.97}#
+#\izlaz{Prosecna cena potrosacke korpe: 994.80}#
 
 \end{upotreba}
 \end{maxitest}
@@ -663,13 +674,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj lopti: }\ulaz{4}#
-#\izlaz{Unesite dalje poluprecnike i boje lopti}# 
+#\izlaz{Unesite broj lopti:}\ulaz{4}#
+#\izlaz{Unesite poluprecnike i boje lopti}# 
 #\izlaz{(1-plava, 2-zuta, 3-crvena, 4-zelena):}#
-#\izlaz{1.lopta: }\ulaz{4 1}#
-#\izlaz{2.lopta: }\ulaz{1 3}#
-#\izlaz{3.lopta: }\ulaz{2 3}#
-#\izlaz{4.lopta: }\ulaz{10 4}#
+#\izlaz{1.lopta:}\ulaz{4 1}#
+#\izlaz{2.lopta:}\ulaz{1 3}#
+#\izlaz{3.lopta:}\ulaz{2 3}#
+#\izlaz{4.lopta:}\ulaz{10 4}#
 #\izlaz{Ukupna zapremina: 4494.57}#
 #\izlaz{Broj crvenih lopti: 2}#
 \end{upotreba}
@@ -677,17 +688,17 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj lopti: }\ulaz{8}#
-#\izlaz{Unesite dalje poluprecnike i boje lopti}# 
+#\izlaz{Unesite broj lopti:}\ulaz{8}#
+#\izlaz{Unesite poluprecnike i boje lopti}# 
 #\izlaz{(1-plava, 2-zuta, 3-crvena, 4-zelena):}#
-#\izlaz{1. lopta: }\izlaz{2 1}#
-#\izlaz{2. lopta: }\izlaz{30 3}#
-#\izlaz{3. lopta: }\izlaz{7 3}#
-#\izlaz{4. lopta: }\izlaz{4 1}#  
-#\izlaz{5. lopta: }\izlaz{5 2}#
-#\izlaz{6. lopta: }\izlaz{6 2}#
-#\izlaz{7. lopta: }\izlaz{12 3}#
-#\izlaz{8. lopta: }\izlaz{14 2}#
+#\izlaz{1. lopta:}\ulaz{2 1}#
+#\izlaz{2. lopta:}\ulaz{30 3}#
+#\izlaz{3. lopta:}\ulaz{7 3}#
+#\izlaz{4. lopta:}\ulaz{4 1}#  
+#\izlaz{5. lopta:}\ulaz{5 2}#
+#\izlaz{6. lopta:}\ulaz{6 2}#
+#\izlaz{7. lopta:}\ulaz{12 3}#
+#\izlaz{8. lopta:}\ulaz{14 2}#
 #\izlaz{Ukupna zapremina: 134996.34}#
 #\izlaz{Ukupno crvenih lopti: 3}#
 \end{upotreba}
@@ -696,11 +707,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj lopti: }\ulaz{8}#
-#\izlaz{Unesite dalje poluprecnike i boje lopti}# 
+#\izlaz{Unesite broj lopti:}\ulaz{8}#
+#\izlaz{Unesite poluprecnike i boje lopti}# 
 #\izlaz{(1-plava, 2-zuta, 3-crvena, 4-zelena):}#
-#\izlaz{1. lopta: }\izlaz{1 2}#
-#\izlaz{2. lopta: }\izlaz{2 10}#
+#\izlaz{1. lopta:}\ulaz{1 2}#
+#\izlaz{2. lopta:}\ulaz{2 10}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -725,21 +736,23 @@ obima i dužine stranica.
 \item Definisati funkciju \kckod{double rastojanje(const Tacka *A, const Tacka *B)}
   koja izračunava rastojanje između dve tačke.
 
-\item Definisati funkciju \kckod{int ucitaj\_poligon(Tacka *poligon, int n)} koja učitava maksimalno $n$ puta po dve
+\item Definisati funkciju \kckod{int ucitaj\_poligon(Tacka poligon[], int n)} koja učitava maksimalno $n$ puta po dve
   vrednosti tipa \kckod{double} (koje predstavljaju koordinate temena
   poligona) i upisuje ih u zadati niz tačaka. Funkcija vraća broj
   uspešno učitanih tačaka.
 
-\item Definisati funkciju \kckod{double obim(Tacka *poligon, int n)} koja izračunava obim poligona sa $n$ temena u zadatom nizu.
+\item Definisati funkciju \kckod{double obim\_poligona(Tacka poligon[], int n)} koja izračunava obim poligona sa $n$ temena u zadatom nizu.
   \uputstvo{Prilikom računanja obima ne zaboraviti stranicu koja spaja
     poslednje i prvo teme.}.
 
-\item Definisati funkciju \kckod{double maksimalna\_stranica(Tacka *poligon, int n)} koja izračunava dužinu najduže stranice
+\item Definisati funkciju \kckod{double maksimalna\_stranica(Tacka poligon[], int n)} koja izračunava dužinu najduže stranice
   poligona sa $n$ temena u zadatom nizu.
 
-\item Napisati funkciju \kckod{double povrsina\_trougla(const Tacka *A, const Tacka *B, const Tacka *C)} za računanje površine trougla.
+\item Napisati funkciju \kckod{double povrsina\_trougla(const Tacka *A, const Tacka *B, const Tacka *C)} 
+koja izračunava površinu trougla čija su temena \kckod{A}, \kckod{B} i \kckod{C}.
 
-\item Napisati funkciju \kckod{double povrsina(Tacka *poligon, int n)} za računanje površine konveksnog poligona. \uputstvo{Zadatak se može rešiti podelom poligona na trouglove i korišćenjem funkcije \kckod{povrsina\_trougla}}.
+\item Napisati funkciju \kckod{double povrsina\_poligona(Tacka poligon[], int n)} 
+koja izračunava površinu konveksnog poligona. \uputstvo{Zadatak se može rešiti podelom poligona na trouglove i korišćenjem funkcije \kckod{povrsina\_trougla}}.
 \end{enumerate}
 Napisati program koji učitava poligon sa maksimalno $n$ temena
   i za učitani poligon ispisuje na tri decimale
@@ -751,7 +764,8 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite maksimalan broj temena poligona: }\ulaz{10}#
+#\izlaz{Unesite maksimalan broj temena poligona:}\ulaz{10}#
+#\izlaz{Unesite temena poligona:}#
 #\ulaz{0 0}#
 #\ulaz{0 6}#
 #\ulaz{3 3}#
@@ -763,7 +777,8 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite maksimalan broj temena poligona: }\ulaz{10}#
+#\izlaz{Unesite maksimalan broj temena poligona:}\ulaz{10}#
+#\izlaz{Unesite temena poligona:}#
 #\ulaz{0 0}#
 #\ulaz{12 0}#
 #\ulaz{13 2}#
@@ -783,7 +798,7 @@ Napisati program koji učitava poligon sa maksimalno $n$ temena
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite maksimalan broj temena poligona: }\ulaz{4}#
+#\izlaz{Unesite maksimalan broj temena poligona:}\ulaz{4}#
 #\ulaz{0 0}#
 #\izlaz{Greska: poligon mora imati bar tri tacke.}#
 \end{upotreba}
@@ -824,7 +839,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj izraza: }\ulaz{4}#
+#\izlaz{Unesite broj izraza:}\ulaz{4}#
 #\izlaz{Unesite izraze u prefiksnoj notaciji:}#
 #\ulaz{+ 10 4}#
 #\ulaz{- 9 2}#
@@ -840,7 +855,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj izraza: }\ulaz{10}#
+#\izlaz{Unesite broj izraza:}\ulaz{10}#
 #\izlaz{Unesite izraze u prefiksnoj notaciji:}#
 #\ulaz{+ 10 2}#
 #\ulaz{- -678 34}#
@@ -869,7 +884,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj izraza: }\ulaz{3}#
+#\izlaz{Unesite broj izraza:}\ulaz{3}#
 #\izlaz{Unesite izraze u prefiksnoj notaciji:}#
 #\ulaz{* 1 2}#
 #\ulaz{/ 3 0}#
@@ -908,10 +923,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite stepen: }\ulaz{3}#
+#\izlaz{Unesite stepen:}\ulaz{3}#
 #\izlaz{Unesite koeficijente polinoma:}#
 #\ulaz{1 0 3 1}#
-#\izlaz{Unesite stepen: }\ulaz{4}#
+#\izlaz{Unesite stepen:}\ulaz{4}#
 #\izlaz{Unesite koeficijente polinoma:}#
 #\ulaz{7 9 4 0 4}#
 #\izlaz{Unesite stepen:}#
@@ -924,13 +939,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite stepen: }\ulaz{3}#
+#\izlaz{Unesite stepen:}\ulaz{3}#
 #\izlaz{Unesite koeficijente polinoma:}#
 #\ulaz{1 0 -4 1}#
-#\izlaz{Unesite stepen: }\ulaz{2}#
+#\izlaz{Unesite stepen:}\ulaz{2}#
 #\izlaz{Unesite koeficijente polinoma:}#
 #\ulaz{1 2 -3}#
-#\izlaz{Unesite stepen: }\ulaz{1}#
+#\izlaz{Unesite stepen:}\ulaz{1}#
 #\izlaz{Unesite koeficijente polinoma:}#
 #\ulaz{0 -1}#
 #\izlaz{Unesite stepen: }#
