@@ -78,12 +78,12 @@ int main() {
   ucitaj(a, n);
 
   /* Ispis rezultata. */
-  printf("Trag je %.2f.\n", trag(a, n));
-  printf("Suma na sporednoj dijagonali je %.2f.\n",
+  printf("Trag: %.2f\n", trag(a, n));
+  printf("Suma na sporednoj dijagonali: %.2f\n",
          suma_sporedna(a, n));
-  printf("Suma iznad glavne dijagonale je %.2f.\n",
+  printf("Suma iznad glavne dijagonale: %.2f\n",
          suma_iznad(a, n));
-  printf("Suma ispod sporedne dijagonale je %.2f.\n",
+  printf("Suma ispod sporedne dijagonale: %.2f\n",
          suma_ispod(a, n));
 
   return 0;

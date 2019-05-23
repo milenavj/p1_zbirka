@@ -10,7 +10,7 @@ int main() {
   int i, j, m, n, suma = 0;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice: ");
+  printf("Unesite dimenziju matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");

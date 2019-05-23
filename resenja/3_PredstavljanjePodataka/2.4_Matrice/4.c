@@ -19,7 +19,7 @@ int main() {
   int k, t;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice: ");
+  printf("Unesite dimenziju matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
@@ -35,7 +35,7 @@ int main() {
     for (j = 0; j < n; j++) {
       suma_suseda = 0;
 
-      /* Vrsi se racunanje sume elemenata podmatrice velicine 3*3
+      /* Racunanje sume elemenata podmatrice velicine 3*3
          ciji je centralni element a[i][j]. Pri racunanju ove sume
          vodi se racuna da se ne izadje iz okvira matice a. */
       for (k = i - 1; k <= i + 1; k++)

@@ -15,6 +15,7 @@ void ucitaj(int a[][MAKS], int m, int n) {
 /* Funkcija ispisuje elemente matrice dimenzije mxn. */
 void ispisi(int a[][MAKS], int m, int n) {
   int i, j;
+  printf("Matrica je:\n");
   for (i = 0; i < m; i++) {
     for (j = 0; j < n; j++)
       printf("%d ", a[i][j]);
@@ -28,7 +29,7 @@ int main() {
   int m, n;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice: ");
+  printf("Unesite dimenziju matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");

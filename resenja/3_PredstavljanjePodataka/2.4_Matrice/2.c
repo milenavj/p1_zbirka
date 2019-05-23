@@ -36,7 +36,7 @@ int main() {
   int m, n;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice: ");
+  printf("Unesite dimenziju matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
@@ -50,6 +50,7 @@ int main() {
   transponovana(a, m, n, t);
 
   /* Ispis rezultata. */
+  printf("Transponovana matrica je:\n");
   ispisi(t, n, m);
 
   return 0;

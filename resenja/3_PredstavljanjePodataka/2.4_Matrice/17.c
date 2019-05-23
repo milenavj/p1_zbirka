@@ -15,13 +15,11 @@ void ucitaj(double a[][MAKS], int m, int n) {
 int main() {
   /* Deklaracije potrebnih promenljivih. */
   double a[MAKS][MAKS];
-  int m, n, k, i, j;
-
-  int indeks_kolone;
+  int m, n, k, i, j, indeks_kolone;
   double maks_kolone, min_vrste;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice: ");
+  printf("Unesite dimenziju matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");

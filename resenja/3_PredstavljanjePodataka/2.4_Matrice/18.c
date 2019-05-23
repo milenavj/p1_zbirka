@@ -19,7 +19,7 @@ int main() {
   int gornja_granica, donja_granica, leva_granica, desna_granica;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice: ");
+  printf("Unesite dimenziju matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
@@ -61,7 +61,8 @@ int main() {
   /* Promenljive i i j su indeksi elementa koji se ispisuje. */
   i = 0;
   j = 0;
-
+  
+  printf("Ispis je:\n");
   for (brojac = 0; brojac < m * n; brojac++) {
     printf("%d ", a[i][j]);
 
@@ -130,6 +131,7 @@ int main() {
       }
     }
   }
+  printf("\n");
 
   return 0;
 }

@@ -42,6 +42,7 @@ int main() {
      (0,3) (1,2) (2,1) (3,0) 
      Za k-ti ispis vazi da indeksi vrsta imaju vrednosti od nula do
      k, a indeksi kolona od k do nula. */
+  printf("Ispis je:\n");
   for (k = 0; k < n; k++) {
     /* Indeks kolone se inicijalizuje na k, a indeks vrste na 0. */
     j = k;

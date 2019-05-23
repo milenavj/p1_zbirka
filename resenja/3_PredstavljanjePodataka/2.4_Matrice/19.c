@@ -44,7 +44,7 @@ int main() {
   int m, n, k, t;
 
   /* Ucitavanje dimenzije matrice A i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice A: ");
+  printf("Unesite dimenziju matrice A: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
@@ -55,7 +55,7 @@ int main() {
   ucitaj(a, m, n);
 
   /* Ucitavanje dimenzije matrice B i provera ispravnosti ulaza. */
-  printf("Unesite dimenzije matrice B: ");
+  printf("Unesite dimenziju matrice B: ");
   scanf("%d%d", &k, &t);
   if (k <= 0 || k > MAKS || t <= 0 || t > MAKS) {
     printf("Greska: neispravan unos.\n");
