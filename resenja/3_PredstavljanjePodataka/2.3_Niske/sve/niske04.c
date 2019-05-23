@@ -28,7 +28,7 @@ int samoglasnik_na_kraju(char s[]) {
   if (duzina == 0)
     return 0;
 
-  /* Proverava se da li je poslednji karakter niske samoglasnik. */
+  /* Provera da li je poslednji karakter niske samoglasnik. */
   return samoglasnik(s[duzina - 1]);
 }
 

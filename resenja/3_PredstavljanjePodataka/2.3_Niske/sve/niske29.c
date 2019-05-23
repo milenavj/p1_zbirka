@@ -58,7 +58,7 @@ int main() {
 
   /* Racunanje i ispis rezultata. */
   sifruj(s, rezultat);
-  printf("%s\n", rezultat);
+  printf("Rezultat: %s\n", rezultat);
 
   exit(EXIT_SUCCESS);
 }

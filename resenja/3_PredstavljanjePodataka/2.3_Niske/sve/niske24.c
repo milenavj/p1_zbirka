@@ -57,9 +57,12 @@ int main() {
 
   /* Ucitavanje linija i ispis rednih brojeva linija koje sadrze
      rec "program". */
+  printf("Unesite pet linija:\n");
   for (i = 1; i <= 5; i++) {
     ucitaj_liniju(linija, MAKS_NISKA);
     if (strstr_klon(linija, "program") != NULL) {
+      if(!bar_jedna)
+        printf("Rezultat: ");
       printf("%d ", i);
       bar_jedna = 1;
     }

@@ -51,6 +51,8 @@ int main() {
   /* II nacin: Koriscenjem funkcije strcmp cija se deklaracija
      nalazi u zaglavlju string.g: rezultat = strcmp(s, t); */
 
+  /* Ispis rezultata. */
+  printf("Rezultat:\n");
   if (rezultat == 0)
     printf("%s\n", s);
   else if (rezultat < 0)

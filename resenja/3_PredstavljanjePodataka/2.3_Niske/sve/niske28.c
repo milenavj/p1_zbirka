@@ -33,7 +33,7 @@ int main() {
 
   /* Racunanje i ispis rezultata. */
   sifruj(s);
-  printf("%s\n", s);
+  printf("Rezultat: %s\n", s);
 
   exit(EXIT_SUCCESS);
 }

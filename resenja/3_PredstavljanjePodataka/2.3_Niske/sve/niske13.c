@@ -43,7 +43,7 @@ int main() {
      strncpy(t,s,n); */
 
   /* Ispis rezultata. */
-  printf("%s\n", t);
+  printf("Rezultujuca niska: %s\n", t);
 
   exit(EXIT_SUCCESS);
 }

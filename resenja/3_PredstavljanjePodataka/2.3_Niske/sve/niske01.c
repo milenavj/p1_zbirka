@@ -26,9 +26,13 @@ void konvertuj(char s[]) {
   }
 
   /* II nacin: Uslov u petlji moze krace da se zapise sa s[i] jer
-     ASCII kod terminirajuce nule ima vrednost 0. for (i = 0; s[i];
-     i++) { if (islower(s[i])) s[i] = toupper(s[i]); else if
-     (isupper(s[i])) s[i] = tolower(s[i]); } */
+     ASCII kod terminirajuce nule ima vrednost 0. 
+     for (i = 0; s[i]; i++) { 
+       if (islower(s[i])) 
+         s[i] = toupper(s[i]); 
+       else if(isupper(s[i])) 
+         s[i] = tolower(s[i]); 
+     } */
 }
 
 int main() {
@@ -45,7 +49,7 @@ int main() {
   konvertuj(s);
 
   /* Ispis rezultata. */
-  printf("%s\n", s);
+  printf("Konvertovana niska: %s\n", s);
 
   exit(EXIT_SUCCESS);
 }

@@ -32,11 +32,9 @@ int main() {
   char s[MAKS_NISKA];
   int k;
 
-  /* Ucitavanje niske i vrednost k. */
-  printf("Unesite nisku: ");
-  scanf("%s", s);
-  printf("Unesite k: ");
-  scanf("%d", &k);
+  /* Ucitavanje niske i vrednosti broja k. */
+  printf("Unesite nisku i broj k: ");
+  scanf("%s%d", s, &k);
 
   /* Provera ispravnosti ulaza. */
   if (k < 0) {
@@ -46,7 +44,7 @@ int main() {
 
   /* Racunanje i ispis rezultata. */
   rotiraj(s, k);
-  printf("%s\n", s);
+  printf("Rezultat: %s\n", s);
 
   exit(EXIT_SUCCESS);
 }

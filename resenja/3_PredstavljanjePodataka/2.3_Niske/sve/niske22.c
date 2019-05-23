@@ -41,7 +41,7 @@ int main() {
   scanf("%s", s);
 
   /* Racunanje i ispis rezultata. */
-  printf("%d\n", strspn_klon(t, s));
+  printf("Rezultat: %d\n", strspn_klon(t, s));
 
   exit(EXIT_SUCCESS);
 }

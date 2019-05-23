@@ -85,7 +85,7 @@ int main() {
 
   /* Ispis rezultata. */
   if (ucitana_bar_jedna)
-    printf("%s\n", rezultujuca_recenica);
+    printf("Rezultujuca recenica:\n%s\n", rezultujuca_recenica);
   else
     printf("Nije uneta nijedna recenica. ");
 

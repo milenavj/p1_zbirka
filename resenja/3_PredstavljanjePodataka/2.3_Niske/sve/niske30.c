@@ -55,7 +55,7 @@ int main() {
 
   /* Racunanje i ispis rezultata. */
   formiraj(s, rezultat, c1, c2);
-  printf("%s\n", rezultat);
+  printf("Rezultat: %s\n", rezultat);
 
   exit(EXIT_SUCCESS);
 }

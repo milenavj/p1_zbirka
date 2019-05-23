@@ -34,6 +34,7 @@ int main() {
      linija. Ukoliko se unese linija koja je duza od trenutno
      najduze, vrsi se azuriranje duzine najduze linije, kao i same
      linije. */
+  printf("Unesite tekst:\n");
   while ((duzina = ucitaj_liniju(linija, MAKS_LINIJA)) > 0)
     if (duzina_najduze < duzina) {
       duzina_najduze = duzina;
@@ -44,7 +45,8 @@ int main() {
   if (duzina_najduze == 0)
     printf("Nije uneta nijedna linija.\n");
   else
-    printf("%s\n%d\n", najduza_linija, duzina_najduze);
+    printf("Najduza linija:\n%s\nDuzina: %d\n", najduza_linija, 
+           duzina_najduze);
 
   exit(EXIT_SUCCESS);
 }

@@ -58,7 +58,7 @@ int main() {
   broj_u_nisku(n, s);
 
   /* Ispis rezultata. */
-  printf("%s\n", s);
+  printf("Rezultat: %s\n", s);
 
   exit(EXIT_SUCCESS);
 }

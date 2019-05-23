@@ -21,14 +21,14 @@ int main() {
   char c;
 
   /* Ucitavanje niske i karaktera. */
-  printf("Unesite nisku:");
+  printf("Unesite nisku: ");
   scanf("%s", s);
   getchar();
-  printf("Unesite karakter:");
+  printf("Unesite karakter: ");
   c = getchar();
 
   /* I nacin: */
-  printf("%d\n", pozicija(s, c));
+  printf("Pozicija: %d\n", pozicija(s, c));
 
   /* II nacin: Funkcija strchr(s,c) je funkcija koja vraca adresu
      prvog pojavljivanja karaktera c u niski s, ako se c pojavljuje 
@@ -55,7 +55,7 @@ int main() {
 
      char *p = strchr(s, c); 
      if (p != NULL) 
-       printf("%d\n", p - s);
+       printf("Pozicija: %d\n", p - s);
      else 
        printf("-1\n"); */
 

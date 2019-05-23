@@ -38,7 +38,7 @@ int main() {
 
   /* Ispis rezultata. */
   ukloni_slova(s);
-  printf("%s\n", s);
+  printf("Rezultat: %s\n", s);
 
   exit(EXIT_SUCCESS);
 }

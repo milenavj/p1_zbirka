@@ -47,7 +47,7 @@ int main() {
   strcat(t, s);
 
   /* Ispis rezultata. */
-  printf("%s\n", t);
+  printf("Rezultujuca niska: %s\n", t);
 
   exit(EXIT_SUCCESS);
 }

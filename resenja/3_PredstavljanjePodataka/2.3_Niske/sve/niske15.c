@@ -46,10 +46,11 @@ int main() {
   char s[MAKS_NISKA];
 
   /* Broj se ucitava kao niska. */
+  printf("Unesite nisku: ");
   scanf("%s", s);
 
   /* Ispis rezultata. */
-  printf("%d\n", formiraj_broj(s));
+  printf("Rezultat: %d\n", formiraj_broj(s));
 
   /* II nacin: Koriscenjem funkcije atoi. Deklaracija ove funkcije
      se nalazi u zaglavlju stdlib.h.

@@ -55,7 +55,7 @@ int main() {
 
   /* Ispis rezultata. */
   ukloni(s);
-  printf("%s\n", s);
+  printf("Izmenjena niska:\n%s\n", s);
 
   exit(EXIT_SUCCESS);
 }

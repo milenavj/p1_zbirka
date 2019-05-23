@@ -26,12 +26,12 @@ int dekadna_vrednost(char s[]) {
      tezine se nalazi na poziciji 2 (jer su prva dva karaktera 0x).
 
      U svakoj iteraciji, na rezultat se dodaje vrednost tekuce
-     cifre pomnozena sa vrednoscu tezine njene pozicije. Na
-     primer, za s = "0x1a8e", n=6 i = 5, rezultat +=
-     vrednost('e')*1 => rezultat += 11*1 i = 4, rezultat +=
-     vrednost('8')*16 => rezultat += 8*16 i = 3, rezultat +=
-     vrednost('a')*256 => rezultat += 10*256 i = 2, rezultat +=
-     vrednost('1')*4096 => rezultat += 1*4096 */
+     cifre pomnozena sa vrednoscu tezine njene pozicije. 
+     Na primer, za s = "0x1a8e", n=6 
+     i = 5, rezultat += vrednost('e')*1 => rezultat += 11*1 
+     i = 4, rezultat += vrednost('8')*16 => rezultat += 8*16 
+     i = 3, rezultat += vrednost('a')*256 => rezultat += 10*256 
+     i = 2, rezultat += vrednost('1')*4096 => rezultat += 1*4096 */
   for (i = n - 1; i >= 2; i--) {
     rezultat += tezina_pozicije * vrednost_heksa_cifre(s[i]);
     tezina_pozicije *= 16;
@@ -49,7 +49,7 @@ int main() {
   scanf("%s", s);
 
   /* Ispis rezultata. */
-  printf("%d\n", dekadna_vrednost(s));
+  printf("Rezultat: %d\n", dekadna_vrednost(s));
 
   exit(EXIT_SUCCESS);
 }
