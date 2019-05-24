@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
     char opcija;
     char zanr[MAKS_DUZINA], tmp_pesma[MAKS_DUZINA], tmp_zanr[MAKS_DUZINA];
 
-    /* Proverava broja argumenata. */
+    /* Proverava broja argumenata komandne linije. */
     if (argc != 2){
         greska();
     }
@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
     /* Ako je opcija ispravno zadata, cuva se u promenljivoj opcija. */
     opcija = argv[1][1];
 
-    /* Otvara se datoteke za citanje i proverava se uspesnosti otvaranja. */
+    /* Otvaranje datoteke za citanje i proverava uspesnosti otvaranja. */
     ulaz = fopen("pesme.txt", "r");
     if(ulaz==NULL) {
         greska();
@@ -90,7 +90,7 @@ int main(int argc, char *argv[]) {
             greska();
     }
     
-    /* Zatvara se datoteka. */
+    /* Zatvaranje datoteke. */
     fclose(ulaz);
 
     exit(EXIT_SUCCESS);
