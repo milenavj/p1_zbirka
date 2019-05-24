@@ -38,7 +38,7 @@ int main() {
   scanf("%d", &x);
 
   /* Ispis rezultata. */
-  printf("%.3f\n", aritmeticka_sredina(x));
+  printf("Aritmeticka sredina: %.3f\n", aritmeticka_sredina(x));
 
   return 0;
 }
