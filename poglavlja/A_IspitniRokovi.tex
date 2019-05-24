@@ -3,8 +3,8 @@
 
 \section{Opšta grupa}
 
-% grupa A
-\subsection{Programiranje 1, praktični deo,  26.1.2019.}
+% I rok
+\subsection{Praktični deo ispita,  januar 2019.}
 
 \begin{Exercise}[label=A_o_1_1] 
 Napisati program koji učitava četvorocifrene brojeve do unosa broja $0$, a zatim ispisuje one brojeve kojima je cifra desetica najveća cifra u zapisu. Ukoliko nema takvih brojeva među unetima, ispisati broj $0$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške.\\
@@ -85,7 +85,6 @@ Napisati program koji pomaže korisniku  da ''šifruje'' svoju elektronsku adres
 \includecode{resenja/A_IspitniRokovi/rok_o_26.01.2019/2.c}
 \end{Answer}
 \fi
-
 
 \begin{Exercise}[label=A_o_1_3] 
 Definisati strukturu \textit{Hemijski\_element} koja sadrži naziv elementa (nisku dužine najviše 20 karaktera), oznaku elementa (nisku dužine najviše 2 karaktera) i broj neutrona (ceo broj). Napisati program koji učitava podatke o hemijskim elementima do unosa reči \textbf{kraj}, a potom još jedan naziv elementa i na standardni izlaz ispisuje oznaku i broj neutrona tog elementa. Ukoliko element nije pronađen među učitanim podacima, ispisati -1. \\
@@ -229,12 +228,245 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 \end{Answer}
 
 
+% II rok
+\subsection{Praktični deo ispita,  februar 2019.}
+
+\begin{Exercise}[label=A_o_2_1] 
+\item Napisati program koji učitava pozitivan četvorocifren broj $n$, a zatim na standardni izlaz ispisuje zbir onih cifara broja $n$ koje su po vrednosti veće od aritmetičke sredine svih cifara broja $n$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{1234}#
+#\naslovIzlaz#
+#\izlaz{7}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{6745}#
+#\naslovIzlaz#
+#\izlaz{13}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{100}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{-1234}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{A_o_2_1}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_o_2_1]
+\includecode{resenja/A_IspitniRokovi/rok_o_09.02.2019/1.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=A_o_2_2] 
+Napisati program koji učitava nisku $s$ parne dužine od najviše 20 karaktera i na standardni izlaz ispisuje nisku koja se dobija nadovezivanjem karaktera prve polovine niske $s$ na drugu polovinu niske $s$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{Beograde}#
+#\naslovIzlaz#
+#\izlaz{radeBeog}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{matematika}#
+#\naslovIzlaz#
+#\izlaz{atikamatem}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{1234}#
+#\naslovIzlaz#
+#\izlaz{3412}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{abc1234}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{A_o_2_2}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_o_2_2]
+\includecode{resenja/A_IspitniRokovi/rok_o_09.02.2019/2.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=A_o_2_3] 
+Napisati program koji čita sadržaj datoteke \textit{ulaz.txt} i ispisuje na standardni izlaz sve niske datoteke koje predstavljaju cele brojeve. U slučaju greške, ispisati -1 na standardni izlaz za greške. \\ 
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\poziv{./a.out}#
+#\naslovDat{ulaz.txt}#
+#\ulaz{123 ab1 2ab -23}#
+#\naslovIzlaz#
+#\izlaz{123 -23}#
+\end{upotreba}
+\end{minitest}
+\begin{minitestt}
+\begin{upotreba}{2}
+#\naslovInt#
+#\poziv{./a.out}#
+#\naslovDat{ulaz.txt}#
+#\ulaz{145as 25gf 265 478 65 -96}#
+#\naslovIzlaz#
+#\izlaz{265 478 65 -96}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\poziv{./a.out}#
+#\naslovDat{ulaz.txt}#
+#\ulaz{Ovde nema brojeva}#
+#\naslovIzlaz#
+#\izlaz{}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\poziv{./a.out}#
+#\naslovDat{ulaz.txt ne postoji!}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{minitest}
+
+\linkresenje{A_o_2_3}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_o_2_3]
+\includecode{resenja/A_IspitniRokovi/rok_o_09.02.2019/3.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=A_o_2_4] 
+\item Napisati program koji sa standardnog ulaza učitava podatke o osvajačima takmičenja. Za svako takmičenje se redom zadaju godina takmičenja (pozitivan ceo broj) i ime osvajača (niska od najviše $30$ karaktera bez belina). Program treba da ispiše:
+\begin{itemize}
+\item ako je navedena opcija -y kao prvi argument komandne linije, ime osvajača takmičenja za godinu koja se navodi kao drugi argument
+ \item ako je navedena opcija -w kao prvi argument komandne linije, sve godine u kojima je takmičar čije se ime navodi kao drugi argument komande linije osvajao takmičenje.
+\end{itemize}
+
+U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
+
+\napomena{Podrazumevati da su ulazni podaci o takmičenjima ispravni. Broj osvajača nije unapred poznat.}\\
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\poziv{./a.out -y 2016}#
+#\naslovUlaz#
+#\ulaz{2011 ManUtd}#
+#\ulaz{2012 ManCity}#
+#\ulaz{2013 ManUtd}#
+#\ulaz{2014 ManCity}# 
+#\ulaz{2015 Chelsea}#
+#\ulaz{2016 Leicester}#
+#\ulaz{2017 Chelsea}#
+#\ulaz{2018 ManCity}#
+#\naslovIzlaz#
+#\izlaz{Leicester}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\poziv{./a.out -w RealMadrid}#
+#\naslovUlaz#
+#\ulaz{2011 Barcelona}#
+#\ulaz{2012 Chelsea}#
+#\ulaz{2013 BayernMunich}#
+#\ulaz{2014 RealMadrid}#
+#\ulaz{2015 Barcelona}#
+#\ulaz{2016 RealMadrid}#
+#\ulaz{2017 RealMadrid}#
+#\ulaz{2018 RealMadrid}#
+#\naslovIzlaz#
+#\izlaz{2014 2016 2017 2018}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\poziv{./a.out -s 2001}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\poziv{./a.out -x}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{5}
+#\naslovInt#
+#\poziv{./a.out -s 2012 2000}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{6}
+#\naslovInt#
+#\poziv{./a.out -y 2005 -w RealMadrid}#
+#\naslovIzlazZaGreske#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{A_o_2_4}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_o_2_4]
+\includecode{resenja/A_IspitniRokovi/rok_o_09.02.2019/4.c}
+\end{Answer}
 
 
 \section{I smer}
 
-
-\subsection{Programiranje 1, praktični deo,  9.2.2019.}
+\subsection{Praktični deo ispita,  xx.xx.2019.}
 
 
 
