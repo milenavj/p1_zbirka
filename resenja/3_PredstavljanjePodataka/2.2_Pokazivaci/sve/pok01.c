@@ -17,13 +17,13 @@
 
 /* Argumenti funkcije uredi, promenljive pa i pb, takodje su
    lokalne promenljive za ovu funkciju i prestaju da postoje kada
-   se funkcija zavrsi. Njima prosledjujemo adrese promenljivih a i
-   b koje zelimo da razmenimo u slucaju da je a>b.
+   se funkcija zavrsi. Razlika je u tome sto su one adrese 
+   promenljivih a i b koje zelimo da razmenimo u slucaju da je a>b.
 
-   Promenljivoj a pristupamo preko pokazivacke promenljive pa sa
-   *pa i slicno, promenljivoj b pristupamo sa *pb.
+   Promenljivoj a se pristupa preko pokazivacke promenljive pa sa
+   *pa i slicno, promenljivoj b sa *pb.
 
-   Vrednosti promenljivih *pa i *pb razmenjujemo kao i vrednosti
+   Vrednosti promenljivih *pa i *pb se razmenjuju kao i vrednosti
    bilo koje dve celobrojne promenljive. */
 void uredi(int *pa, int *pb) {
   int pom;
@@ -42,12 +42,13 @@ int main() {
   printf("Unesite dva broja:");
   scanf("%d%d", &a, &b);
 
-  /* Neispravan nacin: uredi_pogresno(a, b); printf("Uredjene
-     promenljive: %d, %d\n", a, b); */
+  /* Neispravan nacin: 
+     uredi_pogresno(a, b); 
+     printf("Uredjene promenljive: %d, %d\n", a, b); */
 
   /* Funkcija uredi kao argumente prima dve pokazivacke promenljive 
-     (int*,int*). Zbog toga joj je u pozivu funkcije neophodno
-     proslediti adrese promenljivih koje zelimo da uredimo rastuce, 
+     (int*,int*). Zbog toga je u pozivu funkcije neophodno
+     proslediti adrese promenljivih koje zelimo da uredimo rastuce:
      &a i &b. */
   uredi(&a, &b);
   printf("Uredjene promenljive: %d, %d\n", a, b);

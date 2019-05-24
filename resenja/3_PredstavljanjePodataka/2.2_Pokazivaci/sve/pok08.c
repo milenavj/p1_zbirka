@@ -4,7 +4,7 @@
 #define MAKS 50
 
 /* Funkcija racuna najmanji i najveci element niza a duzine n. */
-void min_max(float a[], int n, float *najmanji, float *najveci) {
+void min_maks(float a[], int n, float *najmanji, float *najveci) {
   int i;
 
   /* Vrednosti minimuma i maksimuma se inicijalizuju na vrednost
@@ -29,7 +29,7 @@ void min_max(float a[], int n, float *najmanji, float *najveci) {
 int main() {
   /* Deklaracija potrebnih promenljivih. */
   int i, n;
-  float a[MAKS], min, max;
+  float a[MAKS], min, maks;
 
   /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite broj elemenata niza: ");
@@ -45,11 +45,11 @@ int main() {
     scanf("%f", &a[i]);
 
   /* Racunanje vrednosti najmanjeg i najveceg elementa. */
-  min_max(a, n, &min, &max);
+  min_maks(a, n, &min, &maks);
 
   /* Ispis rezultata. */
   printf("Najmanji: %.3f\n", min);
-  printf("Najveci: %.3f\n", max);
+  printf("Najveci: %.3f\n", maks);
 
   exit(EXIT_SUCCESS);
 }

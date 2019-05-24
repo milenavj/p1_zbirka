@@ -1,12 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Funkcija koja ucitava karakter po karakter sa ulaza i prebrojava
+/* Funkcija ucitava karakter po karakter sa ulaza i prebrojava
    koliko puta se pojavio karakter '.' i koliko puta se pojavio
-   karakter ','. Ucitavanje se zaustavlja kada se dodje do kraja
-   ulaza (EOF-a). */
+   karakter ','. */
 void interpunkcija(int *br_tacaka, int *br_zareza) {
-  /* Deklaracije i inicijalizacije pomocnih promenljivih. */
   int tacke = 0, zarezi = 0;
   char c;
 

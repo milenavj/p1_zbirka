@@ -4,7 +4,7 @@
 #define MIN_RGB 0
 #define MAKS_RGB 255
 
-/* Funkcija koja vrsi konverziju boje iz rgb formata u cmy format.
+/* Funkcija vrsi konverziju boje iz rgb formata u cmy format.
    Kako se pomocu naredbe return ne moze vratiti vise od jedne
    vrednosti, neophodno je da se promenljive cije se vrednosti
    racunaju prenesu preko pokazivaca. */
@@ -14,8 +14,7 @@ void rgb_u_cmy(int r, int g, int b, float *c, float *m, float *y) {
   *y = 1 - b / 255.0;
 }
 
-/* Funkcija koja proverava da li je vrednost boje u ispravnom
-   opsegu. */
+/* Funkcija proverava da li je vrednost boje u ispravnom opsegu. */
 int ispravna_rgb_vrednost(int boja) {
   if (boja < MIN_RGB || boja > MAKS_RGB)
     return 0;
@@ -42,7 +41,7 @@ int main() {
      prosledjuju vrednosti brojeva r, g, i b, kao i adrese na koje
      treba da se upisu izracunate c, m, y vrednosti. */
   rgb_u_cmy(r, g, b, &c, &m, &y);
-  printf("cmy: (%.2f,%.2f,%.2f)\n", c, m, y);
+  printf("cmy: (%.2f, %.2f, %.2f)\n", c, m, y);
 
   exit(EXIT_SUCCESS);
 }

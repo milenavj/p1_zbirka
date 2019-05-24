@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Funkcija koja racuna kolicnik i ostatak pri deljenju a sa b.
+/* Funkcija racuna kolicnik i ostatak pri deljenju a sa b.
    Ukoliko su ove vrednosti uspesno izracunate, funkcija vraca 1, a 
    inace vraca nulu. */
 int kolicnik_ostatak(int a, int b, int *pkolicnik, int *postatak) {
