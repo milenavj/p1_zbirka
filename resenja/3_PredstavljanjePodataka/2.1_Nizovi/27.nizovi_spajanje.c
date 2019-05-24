@@ -57,6 +57,7 @@ int main() {
   spoji(a, b, n, c);
 
   /* Ispis elemenata rezultujuceg niza. */
+  printf("Rezultujuci niz:\n");
   ispisi(c, 2 * n);
 
   exit(EXIT_SUCCESS);

@@ -48,10 +48,11 @@ void ucitaj(int a[], int n) {
    se paralelno radi pretraga maksimalnog elementa i prebrojavanje
    parnih elemenata koji mu prethode.
 
-   Ovo moze da se uradi sa dva brojaca parnih elemenata: 1.
-   broj_parnih - brojac koji cuva broj parnih koji prethode
-   trenutnom maksimumu. 2. broj_parnih_izmedju - brojac koji cuva
-   broj parnih elemenata koji se nalaze iza trenutnog maksimuma
+   Ovo moze da se uradi sa dva brojaca parnih elemenata: 
+   1. broj_parnih - brojac koji cuva broj parnih koji prethode
+   trenutnom maksimumu. 
+   2. broj_parnih_izmedju - brojac koji cuva broj parnih elemenata
+   koji se nalaze iza trenutnog maksimuma
 
    Svaki put kada se maksimum azurira, na broj parnih se doda broj 
    parnih koji se prebrojao izmedju dva azuriranja, a
@@ -96,7 +97,7 @@ int main() {
   /* I nacin: printf("%d\n", prebrojavanje(a, n)); */
 
   /* II nacin: jedinim prolaskom kroz niz: */
-  printf("%d\n", prebrojavanje_jednim_prolazom(a, n));
+  printf("Rezultat: %d\n", prebrojavanje_jednim_prolazom(a, n));
 
   exit(EXIT_SUCCESS);
 }

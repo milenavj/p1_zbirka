@@ -63,6 +63,7 @@ int main() {
   n = brisanje(a, n);
 
   /* Ispis rezultujuceg niza. */
+  printf("Rezultujuci niz:\n");
   ispisi(a, n);
 
   exit(EXIT_SUCCESS);

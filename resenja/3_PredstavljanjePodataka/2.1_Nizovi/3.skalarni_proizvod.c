@@ -5,8 +5,7 @@
 
 int main() {
   /* Deklaracija potrebnih promenljivih. */
-  int a[MAKS];
-  int b[MAKS];
+  int a[MAKS], b[MAKS];
   int n, i, skalarni_proizvod;
 
   /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */

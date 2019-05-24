@@ -73,7 +73,7 @@ int main() {
   n = brisanje(niz, n);
 
   /* Ispis rezultujuceg niza. */
-  printf("Novi niz:\n");
+  printf("Rezultujuci niz:\n");
   ispisi(niz, n);
 
   exit(EXIT_SUCCESS);

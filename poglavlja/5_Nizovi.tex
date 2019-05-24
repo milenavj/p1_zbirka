@@ -68,6 +68,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{6}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{12.34 -6 1 8 32.4 -16}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{12.34 36 1 8 32.4 256}#
 \end{upotreba}
 \end{miditest}
@@ -77,6 +78,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{9}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{-8.25 6 17 2 -1.5 1 -7 2.65 -125.2}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{68.0625 6 17 2 2.25 1 49 2.65 15675.04}#
 \end{upotreba}
 \end{miditest}
@@ -87,6 +89,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{9.53 5 1 4.89}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{9.53 5 1 4.89}#
 \end{upotreba}
 \end{miditest}
@@ -179,7 +182,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}\ulaz{10 14 86 20}#
 #\izlaz{Unesite broj k:}\ulaz{5}#
-#\izlaz{0 3}#
+#\izlaz{Rezultat: 0 3}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -199,7 +202,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{6}#
 #\izlaz{Unesite elemente niza:}\ulaz{8 9 11 -4 8 11}#
 #\izlaz{Unesite broj k:}\ulaz{2}#
-#\izlaz{0 3 4}#
+#\izlaz{Rezultat: 0 3 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -363,18 +366,25 @@ barem jednom.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\ulaz{123 abcabcabc 123}#
-#\izlaz{Karakter 1 se pojavljuje 2 puta}#
-#\izlaz{Karakter 2 se pojavljuje 2 puta}#
-#\izlaz{Karakter 3 se pojavljuje 2 puta}#
-#\izlaz{Karakter a se pojavljuje 3 puta}#
-#\izlaz{Karakter b se pojavljuje 3 puta}#
-#\izlaz{Karakter c se pojavljuje 3 puta}#
+#\izlaz{Unesite tekst:}#
+#\ulaz{Mis je dobio grip.}#
+#\izlaz{Karakter b se pojavljuje 1 puta}#
+#\izlaz{Karakter d se pojavljuje 1 puta}#
+#\izlaz{Karakter e se pojavljuje 1 puta}#
+#\izlaz{Karakter g se pojavljuje 1 puta}#
+#\izlaz{Karakter i se pojavljuje 3 puta}#
+#\izlaz{Karakter j se pojavljuje 1 puta}#
+#\izlaz{Karakter o se pojavljuje 2 puta}#
+#\izlaz{Karakter p se pojavljuje 1 puta}#
+#\izlaz{Karakter r se pojavljuje 1 puta}#
+#\izlaz{Karakter s se pojavljuje 1 puta}#
+#\izlaz{Karakter M se pojavljuje 1 puta}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
+#\izlaz{Unesite tekst:}#
 #\ulaz{Programiranje 1 je zanimljivo!!}#
 #\izlaz{Karakter 1 se pojavljuje 1 puta}#
 #\izlaz{Karakter a se pojavljuje 3 puta}#
@@ -522,7 +532,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}\ulaz{11 2 4 9}#
-#\izlaz{2}#
+#\izlaz{Rezultat: 2}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -530,7 +540,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{7}#
 #\izlaz{Unesite elemente niza:}\ulaz{7 2 1 14 65 2 8}#
-#\izlaz{4}#
+#\izlaz{Rezultat: 4}#
 \end{upotreba}
 \end{miditest}
 
@@ -539,7 +549,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}\ulaz{25 18 29 30 14}#
-#\izlaz{0}#
+#\izlaz{Rezultat: 0}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -573,7 +583,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}\ulaz{11 2 4 9}#
-#\izlaz{0}#
+#\izlaz{Rezultat: 0}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -581,7 +591,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{7}#
 #\izlaz{Unesite elemente niza:}\ulaz{7 2 1 14 65 2 8}#
-#\izlaz{2}#
+#\izlaz{Rezultat: 2}#
 \end{upotreba}
 \end{miditest}
 
@@ -590,7 +600,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}\ulaz{25 18 29 30 14}#
-#\izlaz{1}#
+#\izlaz{Rezultat: 1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -645,7 +655,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{7}#
 #\izlaz{Unesite elemente niza:}\ulaz{-2 5 9 11 6 -3 -4}#
 #\izlaz{Unesite vrednosti za i i j:}\ulaz{2 5}#
-#\izlaz{Zbir: 23}#
+#\izlaz{Zbir je: 23}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -654,7 +664,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}\ulaz{9 5 7 6}#
 #\izlaz{Unesite vrednosti za i i j:}\ulaz{2 2}#
-#\izlaz{Zbir: 7}#
+#\izlaz{Zbir je: 7}#
 \end{upotreba}
 \end{miditest}
   
@@ -705,7 +715,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{-35.11 5.29 -1.98 12.1 12.2 -3.33 -4.17}#
 #\izlaz{Unesite vrednost k:}\ulaz{15}# 
-#\izlaz{Zbir: 29.59}#
+#\izlaz{Zbir je: 29.59}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -742,6 +752,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}\ulaz{8 -2 11 19 4}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{8 19 11 -2 4}#
 \end{upotreba}
 \end{miditest}
@@ -751,6 +762,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{10}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{46 -2 51 8 -5 66 2 8 3 14}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{46 -2 51 8 66 -5 2 8 3 14}#
 \end{upotreba}
 \end{miditest}
@@ -1393,6 +1405,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju nizova:}\ulaz{3}#
 #\izlaz{Unesite elemente niza a:}\ulaz{4 -8 32}#
 #\izlaz{Unesite elemente niza b:}\ulaz{5 2 11}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{5 2 11 4 -8 32}#
 \end{upotreba}
 \end{miditest}
@@ -1402,6 +1415,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju nizova:}\ulaz{4}#
 #\izlaz{Unesite elemente niza a:}\ulaz{1 0 -1 0}#
 #\izlaz{Unesite elemente niza b:}\ulaz{5 5 5 3}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{5 5 5 3 1 0 -1 0}#
 \end{upotreba}
 \end{miditest}
@@ -1440,6 +1454,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{2 11 28 40 63}#
 #\izlaz{Unesite elemente sortiranog niza:}#
 #\ulaz{-19 -5 5 11 52}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{-19 -5 2 5 11 11 28 40 52 63}#
 \end{upotreba}
 \end{miditest}
@@ -1451,6 +1466,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\ulaz{-2 4 8}#
 #\izlaz{Unesite elemente sortiranog niza:}#
 #\ulaz{6 15 19}#
+#\izlaz{Rezultujuci niz:}#
 #\izlaz{-2 4 6 8 15 19}#
 \end{upotreba}
 \end{miditest}
@@ -1529,7 +1545,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}\ulaz{11 5 6 48 8}#
-#\izlaz{6 48 8}#
+#\izlaz{Rezultujuci niz: 6 48 8}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1537,7 +1553,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}\ulaz{11 5 19 21}#
-#\izlaz{21}#
+#\izlaz{Rezultujuci niz: 21}#
 \end{upotreba}
 \end{miditest}
 
@@ -1546,24 +1562,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}\ulaz{12 18 9 31 7}#
-#\izlaz{12 18 9}#
+#\izlaz{Rezultujuci niz: 12 18 9}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite dimenziju niza:}\ulaz{3}#
-#\izlaz{Unesite elemente niza:}\ulaz{-31 11 -19}#
-#\izlaz{}#
-\end{upotreba}
-\end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{5}
-#\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{5}#
 #\izlaz{Unesite elemente niza:}\ulaz{-2 15 -11 8 7}#
-#\izlaz{15 8}#
+#\izlaz{Rezultujuci niz: 15 8}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p.izbacivanje_prostih_elemenata}
@@ -1591,7 +1598,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{8 9 15 12}#
-#\izlaz{8 12}#
+#\izlaz{Rezultujuci niz: 8 12}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1600,7 +1607,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{6}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{21 5 3 22 19 188}#
-#\izlaz{22 188}#
+#\izlaz{Rezultujuci niz: 22 188}#
 \end{upotreba}
 \end{miditest}
 
@@ -1609,7 +1616,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite dimenziju niza:}\ulaz{4}#
 #\izlaz{Unesite elemente niza:}\ulaz{133 129 121 101}#
-#\izlaz{}#
+#\izlaz{Rezultujuci niz:}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1618,7 +1625,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{8}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{15 -22 -23 13 18 46 14 -31}#
-#\izlaz{-22 18 46 14}#
+#\izlaz{Rezultujuci niz: -22 18 46 14}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{p.izbacivanje_elemenata}
@@ -1647,7 +1654,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{9}#
 #\izlaz{Unesite elemente niza a:}#
 #\ulaz{173 -25 23 7 17 25 34 61 -4612}#
-#\izlaz{-25 7 25 61 -4612}#
+#\izlaz{Rezultujuci niz: -25 7 25 61 -4612}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1684,8 +1691,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{10}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{4 2 1 6 7 8 10 2 16 3}#
-#\izlaz{Novi niz:}#  
-#\izlaz{4 2 6 16}#
+#\izlaz{Rezultujuci niz: 4 2 6 16}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1694,8 +1700,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Unesite dimenziju niza:}\ulaz{10}#
 #\izlaz{Unesite elemente niza:}#
 #\ulaz{-8 5 10 6 7 10 8 2 16 27}#
-#\izlaz{Novi niz:}#  
-#\izlaz{-8 5 10 6 10 16 27}#
+#\izlaz{Rezultujuci niz: -8 5 10 6 10 16 27}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{deljivi_indeksom}
@@ -1806,15 +1811,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite trenutni broj klijenata:}\ulaz{8}#
 #\izlaz{Unesite niz sa rednim brojevima klijenata:}\ulaz{2 5 -2 16 33 19 8 11}#
-#\izlaz{Unesite klijenta kojeg treba ubaciti u niz: }\ulaz{35}#
+#\izlaz{Unesite klijenta kojeg treba ubaciti u niz:}\ulaz{35}#
 #\izlaz{Niz nakon ubacivanja klijenta: 2 5 -2 16 33 19 8 11 35}#
-#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz: }\ulaz{36}#
+#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz:}\ulaz{36}#
 #\izlaz{Niz nakon ubacivanja klijenta: 36 2 5 -2 16 33 19 8 11 35}#
-#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz i njegovu poziciju: }\ulaz{-6 2}#
+#\izlaz{Unesite prioritetnog klijenta kojeg treba ubaciti u niz i njegovu poziciju:}\ulaz{-6 2}#
 #\izlaz{Niz nakon ubacivanja klijenta: 36 2 -6 5 -2 16 33 19 8 11 35}#  
 #\izlaz{Niz nakon odlaska klijenta: 2 -6 5 -2 16 33 19 8 11 35}#  
 #\izlaz{Niz nakon odlaska poslednjeg klijenta: 2 -6 5 -2 16 33 19 8 11}#
-#\izlaz{Unesite redni broj klijenta koji je napustio red: }\ulaz{-2}#
+#\izlaz{Unesite redni broj klijenta koji je napustio red:}\ulaz{-2}#
 #\izlaz{Niz nakon odlaska klijenta: 2 -6 5 16 33 19 8 11}#
 \end{upotreba}
 \end{maxitest}

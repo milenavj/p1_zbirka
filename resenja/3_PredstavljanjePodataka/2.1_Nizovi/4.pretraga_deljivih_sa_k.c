@@ -30,15 +30,17 @@ int main() {
   }
 
   /* Promenljiva koja cuva informaciju o tome da li u nizu
-     postoji element koji je deljiv brojem k. Inicijalna vrednost
-     je 0. */
+     postoji element koji je deljiv brojem k. */
   indikator = 0;
 
   /* Ukoliko je element niza deljiv brojem k, indikator se
      postavlja na 1 i ispisuje se indeks tog elementa. */
   for (i = 0; i < n; i++) {
     if (brojevi[i] % k == 0) {
-      indikator = 1;
+      if(!indikator) {
+        printf("Rezultat: ");
+        indikator = 1;
+      }
       printf("%d ", i);
     }
   }
@@ -47,6 +49,8 @@ int main() {
      element u nizu koji je deljiv brojem k. */
   if (indikator == 0)
     printf("U nizu nema elemenata koji su deljivi brojem %d.\n", k);
+  else
+    printf("\n");
 
   exit(EXIT_SUCCESS);
 }

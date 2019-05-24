@@ -68,6 +68,7 @@ int main() {
   razmeni_min_max(brojevi, n);
 
   /* Ispis rezultata. */
+  printf("Rezultujuci niz:\n");
   ispisi(brojevi, n);
 
   exit(EXIT_SUCCESS);

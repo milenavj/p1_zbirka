@@ -43,7 +43,7 @@ int main() {
   ucitaj(a, n);
 
   /* Ispis rezultata. */
-  printf("%d\n", prebrojavanje(a, n));
+  printf("Rezultat: %d\n", prebrojavanje(a, n));
 
   exit(EXIT_SUCCESS);
 }

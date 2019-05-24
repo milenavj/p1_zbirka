@@ -78,6 +78,7 @@ int main() {
 
   /* Ispis elemenata niza c cija dimenzija je zbir dimenzija nizova 
      a i b. */
+  printf("Rezultujuci niz:\n");
   ispisi(c, 2 * n);
 
   exit(EXIT_SUCCESS);

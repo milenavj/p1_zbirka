@@ -19,13 +19,12 @@ float zbir_pozitivnih(float a[], int n, int k) {
   /* Obilazi se element po element niza. Postupak se zavrsava
      ukoliko se dodje do kraja niza ili ukoliko se sabere k
      pozitivnih elemenata. */
-  for (i = 0; i < n && k > 0; i++) {
+  for (i = 0; i < n && k > 0; i++)
     if (a[i] >= 0) {
       zbir += a[i];
       /* Umanjuje se brojac pozitivnih elemenata. */
       k--;
     }
-  }
 
   return zbir;
 }

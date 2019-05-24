@@ -18,15 +18,13 @@ void ispisi(int niz[], int n, char c) {
 
 /* Funkcija inicijalizuje niz postavljajuci vrednosti svih
    elemenata na nulu. */
-void inicijalizuj(int niz[], int n)
-{
+void inicijalizuj(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
     niz[i] = 0;
 }
 
-int main()
-{
+int main() {
   /* Deklaracije nizova brojaca za cifre, mala i velika slova. */
   int cifre[BROJ_CIFARA];
   int mala_slova[DUZINA_ALFABETA];
@@ -41,25 +39,20 @@ int main()
   inicijalizuj(velika_slova, DUZINA_ALFABETA);
   
   /* Ucitavanje karaktera sve do kraja ulaza. */
-  while ((c = getchar()) != EOF) 
-  {
-    if (c >= 'A' && c <= 'Z') 
-    {
+  printf("Unesite tekst:\n");
+  while ((c = getchar()) != EOF) {
+    if (c >= 'A' && c <= 'Z') {
       /* Ako je procitani karakter veliko slovo uvecava se broj
        pojavljivanja odgovarajuceg velikog slova. Indeks velikog
        slova u nizu se odredjuje oduzimanjem slova A. 
        Na taj nacin slovo 'A' ce imati indeks 0, slovo 'B' indeks
        1, itd.*/
       velika_slova[c - 'A']++;
-    } 
-    else if (c >= 'a' && c <= 'z') 
-    {
+    } else if (c >= 'a' && c <= 'z') {
     /* Ako je procitani karakter malo slovo uvecava se broj
        pojavljivanja odgovarajuceg malog slova. */
       mala_slova[c - 'a']++;
-    }
-    else if (c >= '0' && c <= '9')
-    {
+    } else if (c >= '0' && c <= '9') {
     /* Ako je procitani karakter cifra uvecava se broj
        pojavljivanja odgovarajuce cifre. */
       cifre[c - '0']++;

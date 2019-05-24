@@ -28,6 +28,7 @@ int main() {
       brojevi[i] *= brojevi[i];
 
   /* Ispis novodobijenog niza. */
+  printf("Rezultujuci niz: ");
   for (i = 0; i < n; i++)
     printf("%g ", brojevi[i]);
   printf("\n");

@@ -64,6 +64,7 @@ int main() {
   n = obrisi_neparne(a, n);
 
   /* Ispis elemenata izmenjenog niza a. */
+  printf("Rezultujuci niz:\n");
   ispisi(a, n);
 
   exit(EXIT_SUCCESS);

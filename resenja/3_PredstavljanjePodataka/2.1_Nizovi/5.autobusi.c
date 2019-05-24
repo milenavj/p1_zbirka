@@ -10,11 +10,9 @@ int main() {
   int n, niz[MAKS], i;
   int k, t, m;
 
-  /* Ucitavanje dimenzije niza. */
+  /* Ucitavanje dimenzije niza i provera ispravnosti ulaza. */
   printf("Unesite broj autobusa: ");
   scanf("%d", &n);
-
-  /* Provera ispravnosti ulaza. */
   if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
     exit(EXIT_FAILURE);
@@ -41,7 +39,7 @@ int main() {
     niz[i] += m;
 
   /* Ispis rezultata. */
-  printf("Vreme putovanja nakon izmena:");
+  printf("Vreme putovanja nakon izmena: ");
   for (i = 1; i <= n; i++)
     printf("%d ", niz[i]);
   printf("\n");

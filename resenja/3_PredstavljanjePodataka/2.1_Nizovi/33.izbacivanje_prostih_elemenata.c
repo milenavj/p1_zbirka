@@ -83,6 +83,7 @@ int main() {
   n_b = obrisi_proste(a, n_a, b);
 
   /* Ispis elemenata niza b. */
+  printf("Rezultujuci niz:\n");
   ispisi(b, n_b);
 
   exit(EXIT_SUCCESS);
