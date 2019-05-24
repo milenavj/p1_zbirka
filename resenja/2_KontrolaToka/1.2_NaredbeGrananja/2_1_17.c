@@ -16,11 +16,10 @@ int main() {
   if ((xa >= 0 && ya >= 0 && xb >= 0 && yb >= 0) ||
       (xa <= 0 && ya >= 0 && xb <= 0 && yb >= 0) ||
       (xa >= 0 && ya <= 0 && xb >= 0 && yb <= 0) ||
-      (xa <= 0 && ya <= 0 && xb <= 0 && yb <= 0)) {
+      (xa <= 0 && ya <= 0 && xb <= 0 && yb <= 0))
     printf("Tacke se nalaze u istom kvadrantu.\n");
-  } else {
+  else
     printf("Tacke se ne nalaze u istom kvadrantu.\n");
-  }
 
   return 0;
 }
