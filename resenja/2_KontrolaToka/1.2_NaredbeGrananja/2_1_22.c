@@ -28,7 +28,7 @@ int main() {
      rezultuje ispisom na onaj broj decimala koliko sam broj ima.
      Dakle, broj 1 ce se ispisati kao 1, broj 2.33 kao 2.33, broj
      0.9999 kao 0.9999. */
-  printf("F(%g,%d)=%.2f\n", x, k, Fx);
+  printf("F(%g, %d) = %.2f\n", x, k, Fx);
 
   return 0;
 }

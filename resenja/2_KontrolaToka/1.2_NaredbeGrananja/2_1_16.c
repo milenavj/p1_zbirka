@@ -27,11 +27,11 @@ int main() {
   hiljada = n / 1000;
 
   /* Ispis rezultata. */
-  if (hiljada <= stotina && stotina <= desetica
-      && desetica <= jedinica)
+  if (hiljada <= stotina && stotina <= desetica &&
+      desetica <= jedinica)
     printf("Cifre su uredjene neopadajuce. \n");
-  else if (hiljada >= stotina && stotina >= desetica
-           && desetica >= jedinica)
+  else if (hiljada >= stotina && stotina >= desetica &&
+           desetica >= jedinica)
     printf("Cifre su uredjene nerastuce. \n");
   else
     printf("Cifre nisu uredjene.\n");

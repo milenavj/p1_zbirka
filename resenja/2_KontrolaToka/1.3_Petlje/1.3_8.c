@@ -14,6 +14,7 @@ int main() {
     return 1;
   }
 
+  printf("Pravi delioci:\n");
   /* I nacin: Za svaki broj iz intervala [2, n-1] se proverava da
      li deli broj n (tj. da li je ostatak pri deljenju sa n jednak
      nuli). Ako je uslov ispunjen, taj broj se ispisuje. 
@@ -30,12 +31,13 @@ int main() {
     /* Ako i deli n, treba razlikovati dva slucaja. */
     if (n % i == 0) {
       if (i == n / i) {
-        /* I slucaj: kada je i koren broja, npr. 4 za 16, ispisuje
-           se samo broj i. */
+        /* I slucaj: kada je i koren broja, ispisuje se samo broj i,
+           npr. za n = 16, i = 4, ispisuje se samo 4. */
         printf("%d ", i);
       } else {
-        /* II slucaj: u suprotnom, ispisuje se taj broj i broj n / 
-           i, npr. 2 za 16, ispisuju se i 2 i 8. */
+        /* II slucaj: kada i nije koren broja, ispisuje se i broj  
+           i i broj n/i, npr. za n = 16, i = 2 ispisuju se i 2 i 8.
+           */
         printf("%d %d ", i, n / i);
       }
     }

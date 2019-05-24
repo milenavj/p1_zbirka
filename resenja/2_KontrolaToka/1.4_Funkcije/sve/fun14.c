@@ -49,7 +49,7 @@ int main() {
     if (broj == 0)
       break;
 
-    printf("%d\n", ukloni(broj, p));
+    printf("Novi broj: %d\n", ukloni(broj, p));
   }
 
   return 0;

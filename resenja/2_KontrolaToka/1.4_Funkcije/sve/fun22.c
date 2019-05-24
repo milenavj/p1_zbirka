@@ -35,6 +35,7 @@ int main() {
   }
 
   /* Ispis rezultata. */
+  printf("Rezultat:\n");
   ispis(a, b, n);
 
   return 0;

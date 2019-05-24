@@ -55,7 +55,7 @@ int main() {
     if (n == 0)
       break;
 
-    printf("%d\n", rotacija(n));
+    printf("Novi broj: %d\n", rotacija(n));
   }
 
   return 0;

@@ -44,7 +44,7 @@ int main() {
   c2 = tolower(c2);
   c3 = tolower(c3);
 
-  printf("%c%c%c\n", c1, c2, c3);
+  printf("Rezultat: %c%c%c\n", c1, c2, c3);
 
   return 0;
 }

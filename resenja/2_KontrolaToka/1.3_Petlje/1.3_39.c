@@ -19,7 +19,7 @@ int main() {
   suma_kubova = 0;
   for (i = 1; i <= n; i++) {
     suma_kubova += i * i * i;
-    printf("k = %d, suma = %d", i, suma_kubova);
+    printf("[k = %d] Suma kubova: %d\n", i, suma_kubova);
   }
 
   return 0;

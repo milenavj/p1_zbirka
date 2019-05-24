@@ -9,7 +9,7 @@ int main() {
   printf("Unesite jedan ceo broj:");
   scanf("%d", &x);
 
-  /* Proveravanje ispravnosti ulaznih podataka. Napomena: za
+  /* Provera ispravnosti ulaznih podataka. Napomena: za
      razliku od izlaza iz programa sa kodom 0 (return 0;) koji
      sluzi kao indikator da se program zavrsio uspesno, izlaz iz
      programa sa izlaznim kodom koji se razlikuje od nule sluzi
