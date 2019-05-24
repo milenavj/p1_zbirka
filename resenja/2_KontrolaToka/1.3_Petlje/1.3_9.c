@@ -22,7 +22,7 @@ int main() {
     n = n / 10;
 
   /* Ispis rezultata. */
-  printf("%d\n", n);
+  printf("Rezultat: %d\n", n);
 
   return 0;
 }

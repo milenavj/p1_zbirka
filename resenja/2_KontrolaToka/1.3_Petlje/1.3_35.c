@@ -9,6 +9,7 @@ int main() {
   /* Petlja se zavrsava kada korisnik zada konstantu oznaku za kraj
      ulaza (konstanta EOF cija je vrednost -1). Ova konstanta se
      zadaje kombinacijom tastera CTRL+D. */
+  printf("Unesite tekst:\n");
   while ((c = getchar()) != EOF) {
     if (c >= 'A' && c <= 'Z')
       broj_velikih++;
@@ -22,9 +23,9 @@ int main() {
   }
 
   /* Ispis rezultata. */
-  printf("velika: %d, mala: %d\n", broj_velikih, broj_malih);
-  printf("cifre: %d, beline: %d\n", broj_cifara, broj_belina);
-  printf("suma cifara: %d\n", suma_cifara);
+  printf("Velika slova: %d\nMala slova: %d\n", broj_velikih, broj_malih);
+  printf("Cifre: %d\nBeline: %d\n", broj_cifara, broj_belina);
+  printf("Suma cifara: %d\n", suma_cifara);
 
   return 0;
 }

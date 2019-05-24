@@ -25,7 +25,7 @@ int main() {
   }
 
   /* Ispis rezultata. */
-  printf("Suma je %d.\n", suma);
+  printf("Suma: %d\n", suma);
 
   return 0;
 }

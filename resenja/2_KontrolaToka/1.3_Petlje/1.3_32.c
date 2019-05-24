@@ -17,6 +17,7 @@ int main() {
   /* Dok se ne dodje do clana koji je 1, stampa se vrednost
      trenutnog clana i vrsi se izracunavanje narednog, po zadatoj
      formuli. */
+  printf("Clanovi niza su:\n");
   while (a_n != 1) {
     printf("%d ", a_n);
 

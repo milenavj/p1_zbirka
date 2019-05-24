@@ -61,7 +61,7 @@ int main() {
   rezultat += (n / 10) * pozicija;
 
   /* Ispis rezultata. */
-  printf("%d\n", rezultat);
+  printf("Rezultat: %d\n", rezultat);
 
   return 0;
 }

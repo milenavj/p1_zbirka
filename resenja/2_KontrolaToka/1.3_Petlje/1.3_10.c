@@ -21,6 +21,7 @@ int main() {
 
   /* U petlji se obradjuje cifra po cifra broja, dok god ima
      neobradjenih cifara u broju. */
+  printf("Rezultat: ");
   while (x != 0) {
     /* Ispis poslednje cifre broja x. */
     printf("%d ", x % 10);

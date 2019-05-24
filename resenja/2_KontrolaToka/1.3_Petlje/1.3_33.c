@@ -38,7 +38,7 @@ int main() {
   }
 
   /* Ispis rezultata. Napomena: duzina i sirina su celi brojevi. */
-  printf("%d %d\n", (int) duzina, (int) sirina);
+  printf("Dimenzije papira: %d %d\n", (int) duzina, (int) sirina);
 
   return 0;
 }
