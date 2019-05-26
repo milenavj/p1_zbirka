@@ -24,7 +24,7 @@ int main() {
 
   /* Ispis rezultata. */
   printf("Moler treba da okreci %.2f m2\n", povrsina_za_krecenje);
-  printf("Cena krecenja je %.2f\n", ukupna_cena);
+  printf("Cena krecenja: %.2f\n", ukupna_cena);
 
   return 0;
 }

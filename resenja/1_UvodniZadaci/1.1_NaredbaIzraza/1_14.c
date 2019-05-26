@@ -23,7 +23,7 @@ int main() {
   novi_broj = levo*10 + desno;
   
   /* Ispis rezultata. */
-  printf("Rezultat je: %u\n", novi_broj);
+  printf("Rezultat: %u\n", novi_broj);
 
   return 0;
 }

@@ -25,9 +25,9 @@ int main() {
   rezultat_c = (a > 0 && a <= 100 && b > 0 && b <= 100);
 
   /* Ispis rezultata. */
-  printf("a) rezultat=%d\n", rezultat_a);
-  printf("b) rezultat=%d\n", rezultat_b);
-  printf("c) rezultat=%d\n", rezultat_c);
+  printf("a) Rezultat: %d\n", rezultat_a);
+  printf("b) Rezultat: %d\n", rezultat_b);
+  printf("c) Rezultat: %d\n", rezultat_c);
 
   return 0;
 }

@@ -33,7 +33,7 @@ int main() {
   /* II nacin: duzina_minut = (duzina % 3600) / 60; */
   
   /* Ispis rezultata. */
-  printf("Duzina trajanja leta je %u h i %u min\n", duzina_sat,
+  printf("Duzina trajanja leta: %u h i %u min\n", duzina_sat,
          duzina_minut);
 
   return 0;

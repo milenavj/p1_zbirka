@@ -12,7 +12,7 @@ int main() {
   max = (a > b) ? a : b;
 
   /* Ispis rezultata. */
-  printf("Maksimum je %d\n", max);
+  printf("Maksimum: %d\n", max);
 
   return 0;
 }

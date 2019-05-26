@@ -27,7 +27,7 @@ int main() {
   novibroj = levi * 100000 + m * 1000 + desni;
 
   /* Ispis rezultata. */
-  printf("Novi broj je %u\n", novibroj);
+  printf("Rezultat: %u\n", novibroj);
 
   return 0;
 }

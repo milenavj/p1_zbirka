@@ -12,7 +12,7 @@ int main() {
   kusur = iznos - kolicina * cena;
 
   /* Ispis vrednosti kusura. */
-  printf("Kusur je %u dinara.\n", kusur);
+  printf("Kusur: %u dinara\n", kusur);
 
   return 0;
 }

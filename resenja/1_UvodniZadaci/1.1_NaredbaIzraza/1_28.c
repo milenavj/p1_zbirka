@@ -26,7 +26,7 @@ int main() {
          c * (unsigned int) pow(10, p) + desno;
 
   /* Ispis rezultata. */
-  printf("Rezultat je: %u\n", novo_x);
+  printf("Rezultat: %u\n", novo_x);
 
   return 0;
 }

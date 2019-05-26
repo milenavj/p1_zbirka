@@ -17,7 +17,7 @@ int main() {
   rezultat = (min + 0.5) / (1 + max * max);
 
   /* Ispis rezultata. */
-  printf("Rezultat je %.2f\n", rezultat);
+  printf("Rezultat: %.2f\n", rezultat);
 
   return 0;
 }

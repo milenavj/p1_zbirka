@@ -111,7 +111,7 @@ Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate 
 #\naslovInt#
 #\izlaz{Unesite cenu prvog artikla:}\ulaz{173}#
 #\izlaz{Unesite cenu drugog artikla:}\ulaz{2024}#
-#\izlaz{Ukupna cena iznosi 2197}#
+#\izlaz{Ukupna cena: 2197}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -119,7 +119,7 @@ Napisati program koji pomaže kasirki da izračuna ukupan račun ako su poznate 
 #\naslovInt#
 #\izlaz{Unesite cenu prvog artikla:}\ulaz{384}#
 #\izlaz{Unesite cenu drugog artikla:}\ulaz{555}#
-#\izlaz{Ukupna cena iznosi 939}#
+#\izlaz{Ukupna cena: 939}#
 \end{upotreba}
 \end{miditest}
 
@@ -179,7 +179,7 @@ ispiše vrednost kusura. Sve ulazne vrednosti su pozitivni celi brojevi.
 #\naslovInt#
 #\izlaz{Unesite cenu, kolicinu i iznos:}#
 #\ulaz{132 2 500}#
-#\izlaz{Kusur je 236 dinara.}#
+#\izlaz{Kusur: 236 dinara}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -187,7 +187,7 @@ ispiše vrednost kusura. Sve ulazne vrednosti su pozitivni celi brojevi.
 #\naslovInt#
 #\izlaz{Unesite cenu, kolicinu i iznos:}#
 #\ulaz{59 6 2000}#
-#\izlaz{Kusur je 1646 dinara.}#
+#\izlaz{Kusur: 1646 dinara}#
 \end{upotreba}
 \end{miditest}
 
@@ -209,7 +209,7 @@ Napisati program koji za uneta vremena poletanja i sletanja aviona ispisuje duž
 #\naslovInt#
 #\izlaz{Unesite vreme poletanja:}\ulaz{8 5}#
 #\izlaz{Unesite vreme sletanja:}\ulaz{12 41}#
-#\izlaz{Duzina trajanja leta je 4 h i 36 min}#
+#\izlaz{Duzina trajanja leta: 4 h i 36 min}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -217,7 +217,7 @@ Napisati program koji za uneta vremena poletanja i sletanja aviona ispisuje duž
 #\naslovInt#
 #\izlaz{Unesite vreme poletanja:}\ulaz{13 20}#
 #\izlaz{Unesite vreme sletanja:}\ulaz{18 45}#
-#\izlaz{Duzina trajanja leta je 5 h i 25 min}#
+#\izlaz{Duzina trajanja leta: 5 h i 25 min}#
 \end{upotreba}
 \end{miditest}
 
@@ -300,14 +300,18 @@ desetica i stotina. \napomena{Pretpostaviti da je unos ispravan.}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite trocifreni broj:}\ulaz{697}#
-#\izlaz{jedinica 7, desetica 9, stotina 6}#
+#\izlaz{Cifra jedinica: 7}#
+#\izlaz{Cifra desetica: 9}#
+#\izlaz{Cifra stotina: 6}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite trocifreni broj:}\ulaz{504}#
-#\izlaz{jedinica 4, desetica 0, stotina 5}#
+#\izlaz{Cifra jedinica: 4}#
+#\izlaz{Cifra desetica: 0}#
+#\izlaz{Cifra stotina: 5}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{UZ_NI_10}
@@ -421,14 +425,14 @@ Napisati program koji ispisuje broj koji se dobija izbacivanjem cifre desetica u
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{1349}#
-#\izlaz{Rezultat je: 139}#
+#\izlaz{Rezultat: 139}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite broj:}\ulaz{825}#
-#\izlaz{Rezultat je: 85}#
+#\izlaz{Rezultat: 85}#
 \end{upotreba}
 \end{miditest}
 
@@ -451,7 +455,7 @@ dobijen umetanjem broja $m$ između cifre stotina i cifre hiljada broja $n$.
 #\naslovInt#
 #\izlaz{Unesite pozitivan ceo broj:}\ulaz{12345}#
 #\izlaz{Unesite pozitivan dvocifreni broj:}\ulaz{67}#
-#\izlaz{Novi broj je 1267345}#
+#\izlaz{Rezultat: 1267345}#
 \end{upotreba}
 \end{miditest}  
 \begin{miditest}
@@ -459,7 +463,7 @@ dobijen umetanjem broja $m$ između cifre stotina i cifre hiljada broja $n$.
 #\naslovInt#
 #\izlaz{Unesite pozitivan ceo broj:}\ulaz{50000000}#
 #\izlaz{Unesite pozitivan dvocifreni broj:}\ulaz{12}#
-#\izlaz{Novi broj je 705044704}#
+#\izlaz{Rezultat: 705044704}#
 \end{upotreba}
 \end{miditest}   
 
@@ -832,7 +836,7 @@ Sve realne vrednosti ispisati zaokružene na dve decimale.
 #\izlaz{Unesite dimenzije sobe:}\ulaz{4 4 3}#
 #\izlaz{Unesite cenu po m2:}\ulaz{500}#
 #\izlaz{Moler treba da okreci 51.20 m2}#
-#\izlaz{Cena krecenja je 25600.00}#
+#\izlaz{Cena krecenja: 25600.00}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -841,7 +845,7 @@ Sve realne vrednosti ispisati zaokružene na dve decimale.
 #\izlaz{Unesite dimenzije sobe:}\ulaz{13 17 3}#
 #\izlaz{Unesite cenu po m2:}\ulaz{475}#
 #\izlaz{Moler treba da okreci 320.80 m2}#
-#\izlaz{Cena krecenja je 152380.00}#
+#\izlaz{Cena krecenja: 152380.00}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{UZ_NI_27}
@@ -862,14 +866,14 @@ Napisati program koji za unete pozitivne cele brojeve $x$, $p$ i $c$ ispisuje br
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite redom x, p i c:}\ulaz{140 1 2}#
-#\izlaz{Rezultat je: 1420}#
+#\izlaz{Rezultat: 1420}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite redom x, p i c:}\ulaz{12345 2 9}#
-#\izlaz{Rezultat je: 123945}#
+#\izlaz{Rezultat: 123945}#
 \end{upotreba}
 \end{miditest}
 
@@ -895,18 +899,18 @@ U suprotnom, promenljivoj $rezultat$ dodeliti vrednost 0. Ispisati vrednost prom
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{4 8}#
-#\izlaz{a) rezultat=1}#
-#\izlaz{b) rezultat=1}#
-#\izlaz{c) rezultat=1}#
+#\izlaz{a) Rezultat: 1}#
+#\izlaz{b) Rezultat: 1}#
+#\izlaz{c) Rezultat: 1}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{3 -11}#
-#\izlaz{a) rezultat=1}#
-#\izlaz{b) rezultat=0}#
-#\izlaz{c) rezultat=0}#
+#\izlaz{a) Rezultat: 1}#
+#\izlaz{b) Rezultat: 0}#
+#\izlaz{c) Rezultat: 0}#
 \end{upotreba}
 \end{miditest}
 
@@ -926,14 +930,14 @@ Napisati program koji za uneta dva cela broja ispisuje njihov maksimum.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{19 256}#
-#\izlaz{Maksimum je 256}#
+#\izlaz{Maksimum: 256}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{-39 57}#
-#\izlaz{Maksimum je 57}#
+#\izlaz{Maksimum: 57}#
 \end{upotreba}
 \end{miditest}
 
@@ -953,14 +957,14 @@ Napisati program koji za uneta dva cela broja ispisuje njihov minimum.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{4 8}#
-#\izlaz{Minimum je 4}#
+#\izlaz{Minimum: 4}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\izlaz{Unesite dva cela broja:}\ulaz{-3 -110}#
-#\izlaz{Minimum je -110}#
+#\izlaz{Minimum: -110}#
 \end{upotreba}
 \end{miditest}
 
@@ -982,14 +986,14 @@ $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$ zaokruženu na dve decimale.
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva realna broja:}\ulaz{5.7 11.2}#
-#\izlaz{Rezultat je: 0.05}#
+#\izlaz{Rezultat: 0.05}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
 #\izlaz{Unesite dva realna broja:}\ulaz{-9.34 8.99}#
-#\izlaz{Rezultat je: -0.11}#
+#\izlaz{Rezultat: -0.11}#
 \end{upotreba}
 \end{miditest}
 
