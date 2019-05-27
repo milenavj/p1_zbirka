@@ -4,10 +4,9 @@
 % ---------------------------------------------------------------jednostavni zadaci sa ne-kvadratnim matricama
 
 \begin{Exercise}[label=mat.01]
-Napisati program koji učitava i zatim ispisuje vrednosti učitane matrice. Pretpostaviti
-da je maksimalna dimenzija matrice $50 \times 50$, a da se sa ulaza najpre učitavaju 
-dva cela broja $m$ i $n$, a potom i elementi matrice celih brojeva dimenzije 
-$m \times n$. 
+Napisati program koji učitava i zatim ispisuje elemente učitane matrice. Sa ulaza se najpre učitavaju 
+dva cela broja $m$ i $n$, a potom i elementi matrice celih brojeva dimenzije $m \times n$. Pretpostaviti
+da je maksimalna dimenzija matrice $50 \times 50$. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{minitest}
@@ -117,11 +116,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati funkcije za rad sa celobrojnim matricama:
 \begin{enumerate}
   \item \kckod{void ucitaj(int a[][MAKS], int n, int m)} 
-      kojom se učitavaju vrednosti matrice celih brojeva $a$ dimenzije $m \times n$,  
+      kojom se učitavaju elementi matrice celih brojeva $a$ dimenzije $m \times n$,  
   \item \kckod{void ispisi(int a[][MAKS], int n, int m)} 
-      kojom se ispisuju vrednosti matrice $a$ dimenzije $m \times n$.
+      kojom se ispisuju elementi matrice $a$ dimenzije $m \times n$.
 \end{enumerate}
-Napisati program koji najpre učitava, a zatim i ispisuje vrednosti
+Napisati program koji najpre učitava, a zatim i ispisuje elemente 
 učitane matrice.
 Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
@@ -243,7 +242,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=mat.3] 
 Napisati funkciju \kckod{void razmeni(int a[][MAKS], int m, int n,
   int k, int t)} u kojoj se razmenjuju elemeti $k$--te i $t$--te vrste
-matrice $a$ dimezije $m \times n$. Napisati program koji za učitanu matricu celih brojeva,
+matrice $a$ dimezije $m \times n$. Napisati program koji za učitanu matricu celih brojeva 
 i dva cela broja $k$ i $t$ ispisuje matricu dobijenu razmenjivanjem
 $k$--te i $t$--te vrste ulazne matrice.  
 Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.  
@@ -524,7 +523,7 @@ Data je kvadratna matrica dimenzije $n \times n$.
   \item Napisati funkciju \kckod{float trag(float a[][MAKS], int n)}
     koja računa trag matrice, odnosno zbir elemenata na glavnoj
     dijagonali matrice.
-  \item Napisati funckciju \kckod{float suma\_sporedna(float a[][MAKS],
+  \item Napisati funkciju \kckod{float suma\_sporedna(float a[][MAKS],
     int n)} koja računa zbir elemenata na sporednoj dijagonali
     matrice.
   \item Napisati funkciju \kckod{float suma\_iznad(float a[][MAKS], int n)}
@@ -1010,7 +1009,7 @@ Kvadratna matrica je \emph{magični kvadrat} ako je suma elemenata
 u svakoj koloni i svakoj vrsti jednaka. Napisati program koji
 proverava da li je data celobrojna kvadratna matrica magični kvadrat i
 ispisuje odgovarajuću poruku na standardni izlaz. Pretpostaviti 
-da je maksimalna dimenzija matrice je $50 \times 50$.
+da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{miditest}
@@ -1117,7 +1116,7 @@ proizvod matrica $a$ i $b$.  Dimenzija matrice $a$ je $n \times m$, a
 dimenzija matrice $b$ je $k \times t$. Napisati program koji ispisuje
 proizvod učitanih matrica. Pretpostaviti da je maksimalna dimenzija
 matrica $50 \times 50$. Ukoliko množenje matrica nije moguće ili je
-došlo do greške prilikom unosa podataka ispisati odgovarajuću
+došlo do greške prilikom unosa podataka, ispisati odgovarajuću
 poruku o grešci.
 
 \begin{miditest}
@@ -1291,7 +1290,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Matrica $a$ se sadrži u matrici $b$ ukoliko postoji podmatrica matrice
 $b$ identična matrici $a$.  Napisati program koji za dve učitane
 matrice celih brojeva proverava da li se druga matrica sadrži u prvoj
-učitanoj matrici. Maksimalna dimenzija obe matrice je $50\times 50$.
+učitanoj matrici. Maksimalna dimenzija matrica je $50\times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}

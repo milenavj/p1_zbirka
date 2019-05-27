@@ -9,7 +9,7 @@ Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje:
 \item elemente niza koji se nalaze na parnim pozicijama.
 \item parne elemente niza.
 \end{enumerate}
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -59,7 +59,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=p.kvadriranje_elemenata]
 Napisati program koji učitava dimenziju niza, elemente niza i zatim
 menja uneti niz tako što kvadrira sve negativne elemente niza.
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -171,9 +171,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=p.pretraga_deljivih_sa_k] 
-Napisati program koji učitava dimenziju niza, elemente niza i 
-ceo broj $k$ i ispisuje indekse elemenata koji su
-deljivi sa $k$. Maksimalan broj elemenata niza je $100$.
+Napisati program koji učitava dimenziju niza, elemente niza, a potom i ceo broj $k$ i ispisuje indekse elemenata koji su
+deljivi sa $k$. Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -234,7 +233,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
   Napisati program koji učitava broj autobusa $n$, $n$ celih brojeva
   koji označavaju vreme putovanja tih autobusa i vrednosti $k$, $t$ i $m$
   i ispisuje vreme putovanja svih autobusa nakon unetih izmena.
-  Maksimalan broj autobusa je $200$.
+  Maksimalni broj autobusa je $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -312,9 +311,9 @@ svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja
 
 
 \begin{Exercise}[label=p.niz_karaktera_obrnuto] 
- Napisati program koji učitava karaktere sve do unosa karaktera \textit{*} i
- ispisuje ih u redosledu suprotnom od redosleda čitanja.
- Maksimalan broj karaktera je $500$.
+ Napisati program koji učitava karaktere sve do unosa karaktera \textit{*}, a zatim ih 
+ ispisuje u redosledu suprotnom od redosleda čitanja.
+ Maksimalni broj karaktera je $500$.
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -356,7 +355,7 @@ svake od cifara u zapisu tog broja. \uputstvo{Za evidenciju broja
 
 \begin{Exercise}[label=v.prebrojavanje] 
 Napisati program koji učitava karaktere sve do
-kraja ulaza i izračunava koliko se puta u unetom tekstu pojavila svaka
+kraja ulaza, a potom i izračunava koliko se puta u unetom tekstu pojavila svaka
 od cifara, svako malo slovo i svako veliko slovo. Ispisati broj
 pojavljivanja samo za karaktere koji su se u unetom tekstu pojavili
 barem jednom. 
@@ -431,7 +430,7 @@ velikih slova.
 \begin{maxitest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\ulaz{Mihailo Petrovic Alas (6 Maj 1868 - 8 Jun 1943)}#
+#\ulaz{Mihailo Petrovic Alas (6 maj 1868 - 8 jun 1943)}#
 #\izlaz{ a:4  b:0  c:1  d:0  e:1  f:0  g:0  h:1  i:3  j:2  k:0  l:2  m:2}#
 #\izlaz{ n:1  o:2  p:1  q:0  r:1  s:1  t:1  u:1  v:1  w:0  x:0  y:0  z:0}#
 \end{upotreba}
@@ -460,11 +459,8 @@ velikih slova.
 %-----------------------------------------------------------------------------------
 
 \begin{Exercise}[label=v.nizovi_funkcije_intro] 
-Takmičari na Beogradskom maratonu su označeni rednim brojevima počevši
-od $0$, a vreme za koje su istrčali maraton je izraženo u minutima. Ovi
-podaci zadati su nizom celih brojeva, pri čemu indeks niza označava
-redni broj takmičara, a vrednosti u nizu označavaju vreme
-trčanja. Napisati sledeće funkcije za obradu navedenih podataka:
+Takmičari na Beogradskom maratonu su označeni rednim
+brojevima počevši od 0. Vremena za koja su takmičari istrčali maraton izražena u minutima se zadaju nizom celih brojeva u kojem indeks elementa niza označava redni broj takmičara. Napisati sledeće funkcije za obradu navedenih podataka:
 \begin{enumerate}
 \item \kckod{void ucitaj(int a[], int n)} koja
   učitava elemente niza $a$ dimenzije $n$.
@@ -485,7 +481,7 @@ trčanja. Napisati sledeće funkcije za obradu navedenih podataka:
 Napisati program koji učitava podatke o rezultatima takmičara na maratonu i ispisuje
 učitane podatke, ukupno, prosečno i maksimalno vreme trčanja, kao i redni broj pobednika
 maratona. 
-Maksimalan broj takmičara je $1000$.
+Maksimalni broj takmičara je $1000$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -522,9 +518,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=p.broj_manjih_od_poslednjeg] 
  Napisati funkciju koja izračunava broj elemenata celobrojnog niza koji su
  manji od poslednjeg elementa niza. 
- Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje broj
+ Napisati program koji učitava dimenziju niza i elemente niza, a zatim ispisuje broj
  elemenata koji zadovoljavaju pomenuti uslov.
- Maksimalan broj elemenata niza je $100$.
+ Maksimalni broj elemenata niza je $100$.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -575,9 +571,9 @@ Pogledajte zadatak \ref{v.nizovi_funkcije_intro}.
 \begin{Exercise}[label=p.broj_manjih_od_maksimuma] 
  Napisati funkciju koja izračunava broj parnih elemenata celobrojnog niza
  koji prethode maksimalnom elementu niza.
- Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje broj
+ Napisati program koji učitava dimenziju niza i elemente niza, a zatim ispisuje broj
  elemenata koji zadovoljavaju pomenuti uslov.
- Maksimalan broj elemenata niza je $100$.
+ Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -629,7 +625,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  $i$ do pozicije $j$.
  Napisati program koji učitava dimenziju niza, elemente niza i vrednosti $i$ i $j$ 
  i zatim ispisuje zbir u datom opsegu.
- Maksimalan broj elemenata niza je $100$.
+ Maksimalni broj elemenata niza je $100$.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
  
 \begin{miditest}
@@ -684,9 +680,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  Napisati funkciju \kckod{float zbir\_pozitivnih(float a[], int n, int
    k)} koja izračunava zbir prvih $k$ pozitivnih elemenata realnog
  niza $a$ dužine $n$. 
- Napisati program koji učitava dimenziju niza, elemente niza i broj $k$ i 
+ Napisati program koji učitava dimenziju niza, elemente niza i broj $k$, a 
  zatim ispisuje zbir prvih $k$ pozitivnih elemenata niza.
- Maksimalan broj elemenata niza je $100$.
+ Maksimalni broj elemenata niza je $100$.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -743,10 +739,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=p.razmena_min_max]
   Napisati funkciju koja menja niz tako što razmenjuje mesta najmanjem i najvećem elementu niza.
-  Ukoliko se neki od njih javlja više puta, u obzir uzeti prvo pojavljivanje.
-  Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje
+  Ukoliko se neki od ovih elemenata javlja više puta, uzeti u obzir prvo pojavljivanje.
+  Napisati program koji učitava dimenziju niza, elemente niza, a zatim ispisuje
   izmenjeni niz. 
-  Maksimalan broj elemenata niza je $100$. 
+  Maksimalni broj elemenata niza je $100$. 
   U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -799,10 +795,10 @@ Napisati program koji vrši pretragu niza nadmorskih visina.
   kojoj se nalazi element koji ima nadmorsku visinu $m$ ili $-1$
   ukoliko element nije u nizu.
 \end{enumerate}
-Program učitava podatke o nadmorskim visinama i ceo broj $m$ i ispisuje da li 
+Program učitava podatke o nadmorskim visinama i ceo broj $m$, a zatim ispisuje da li 
 u nizu postoji podatak o unetoj nadmorskoj visini. Ukoliko postoji, ispisuje i poziciju
 prvog i poslednjeg pojavljivanja vrednosti $m$ u nizu. Pozicije se broje od $0$.
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -844,8 +840,8 @@ drugarima.
 Napisati funkciju \kckod{int duplikati(int a[], int n, int b[])} koja od niza $a$ dimenzije $n$
 formira niz b koji sadrzi sve elemente niza $a$ koji se pojavljuju bar dva puta u nizu. Funkcija
 kao povratnu vrednost vraća dimenziju niza $b$.
-Napisati program koji učitava Markove sličice i ispisuje sve duplikate.
-Maksimalan broj elemenata niza je $600$.
+Napisati program koji učitava brojeve Markovih sličica i ispisuje sve duplikate.
+Maksimalni broj elemenata niza je $600$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -895,11 +891,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=palindrom]
 Palindrom je tekst koji se isto čita i sa leve i sa desne
-strane. Napisati funkciju koja proverava da li elementi niza karaktera
-čine palindrom (zanemariti velika/mala slova). 
-Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje da li je
-uneti niz karaktera palindrom. 
-Maksimalan broj elemenata niza je $200$.
+strane. Napisati funkciju koja proverava da li je tekst zadat nizom karaktera palindrom (zanemariti razliku između malih i velikih slova). 
+Napisati program koji učitava dužinu niza i niz karaktera, a zatim ispisuje da li je
+uneti tekst palindrom. 
+Maksimalni broj elemenata niza je $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -955,9 +950,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=neopadajuce]
   Napisati funkciju koja proverava da li su elementi celobrojnog niza
   uređeni neopadajuće. 
-  Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje
+  Napisati program koji učitava dimenziju niza, elemente niza, a zatim ispisuje
   da li je pomenuti uslov ispunjen. 
-  Maksimalan broj elemenata niza je $300$.
+  Maksimalni broj elemenata niza je $300$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1004,9 +999,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=najduzi_neopadajuci]
-Svaki indeks niza označava jedan dan u mesecu, a elementi celobrojnog
-niza predstavljaju broj artikala koji se prodao tog dana. 
-Napisati funkciju koja računa najduži uzastopnu seriju dana za koju važi da broj
+U celobrojnom nizu se čuvaju informacije o prodaji artikala jedne prodavnice. Svaki indeks niza označava jedan dan u mesecu, a elementi niza predstavljaju broj artikala koji se prodao tog dana. 
+Napisati funkciju koja računa najdužu uzastopnu seriju dana za koju važi da broj
 prodatih artikala nije opao.
 Napisati program koji učitava broj dana u mesecu, broj prodatih artikala 
 za svaki dan u mesecu i zatim ispisuje dužinu izračunate serije.
@@ -1071,9 +1065,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=uzastopni_jednaki] 
 Napisati funkciju koja određuje dužinu najduže serije jednakih
 uzastopnih elemenata u datom nizu brojeva. 
-Napisati program koji učitava dimenziju niza, elemente niza i zatim ispisuje
+Napisati program koji učitava dimenziju niza i elemente niza, a zatim ispisuje
 dužinu najduže serije jednakih elemenata niza.
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1121,16 +1115,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=podniz] 
-Napisati funkciju koja određuje da li se jedan niz javlja kao podniz
-uzastopnih elemenata drugog niza. Zadatak rešiti na dva načina:
+Napisati funkciju koja određuje da li se jedan niz javlja kao podniz drugog niza. 
 \begin{enumerate}
-\item Tako da elementi jednog niza moraju da budu uzastopni u drugom nizu.
-\item Tako da elementi jednog niza ne moraju da budu uzastopni u drugom nizu, ali je redosled
-  pojavljivanja isti.
+\item Niz $b$ je podniz niza $a$ ako su elementi niza $b$ uzastopni elementi niza $a$. 
+\item Niz $b$ je podniz niza $a$ ako je redosled pojavljivanja elemenata niza $b$ u nizu $a$ isti i ne nužno uzastopan. 
 \end{enumerate}
-Napisati program koji učitava dimenzije i elemente dva niza i zatim ispisuje
-  da li je neki od pomenutih uslova ispunjen.
-Maksimalan broj elemenata niza je $100$.
+Napisati program koji učitava dimenzije i elemente dvaju nizova, a zatim ispisuje da li je drugi niz podniz prvog niza. 
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1218,7 +1209,7 @@ ako sadrži sve brojeve od $1$ do $n$.
 \end{enumerate}
 Napisati program koji učitava dimenziju niza i
 elemente niza i ispisuje da li je uneti niz permutacija. 
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1264,9 +1255,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
- Napisati program koji učitava dva cela broja $x$ i $y$ i 
+ Napisati program koji učitava dva cela broja i 
  proverava da li se uneti brojevi zapisuju pomoću istih
- cifara. \uputstvo{Zadatak rešiti korišćenjem nizova.}.
+ cifara. \uputstvo{Zadatak rešiti korišćenjem nizova.}
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1311,17 +1302,17 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 % Pravljenje novih nizova, transformacija nizova
 %-----------------------------------------------------------------------------------
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
-Napisati sledeće funkcije koje vrše transformacije celobrojnog niza:
+Napisati program koji vrši transformacije niza.
 \begin{enumerate}
 \item Napisati funkciju koja obrće elemente niza.     
 \item Napisati funkciju koja rotira niz ciklično za jedno mesto ulevo.
 \item Napisati funkciju koja rotira niz ciklično za $k$ mesta ulevo.
 \end{enumerate}
-Napisati program koji učitava dimenziju niza, elemente niza i pozitivan ceo broj $k$
-i ispisuje niz koji se dobije nakon obrtanja početnog niza, niz koji se dobije
-rotiranjem tog niza za jedno mesto ulevo i niz koji se dobije dodatnim rotiranjem tog niza
+Program učitava dimenziju niza, elemente niza i pozitivan ceo broj $k$, a zatim 
+ispisuje niz koji se dobija nakon obrtanja početnog niza, niz koji se dobija
+rotiranjem tako dobijenog niza za jedno mesto ulevo i niz koji se dobija rotiranjem novodobijenog niza 
 za $k$ mesta ulevo. 
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1359,9 +1350,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati funkciju \kckod{void ukrsti(int a[], int b[], int n, int c[])} 
 koja formira niz $c$ koji se dobija naizmeničnim raspoređivanjem elemenata nizova $a$ i $b$, 
 tj.~$c = [a_0, b_0, a_1, b_1, \ldots, a_{n-1}, b_{n-1}]$. 
-Napisati program koji učitava dimenziju i elemente dva niza i ispisuje niz koji se dobija
+Napisati program koji učitava dimenziju i elemente dvaju nizova i ispisuje niz koji se dobija
 ukrštanjem unetih nizova. 
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1396,9 +1387,9 @@ Napisati funkciju \kckod{void spoji(int a[], int b[], int n, int c[])} koja od
 nizova $a$ i $b$ dimenzije $n$ formira niz $c$ čija prva polovina odgovara
 elemetima niza $b$, a druga polovina elementima niza $a$, 
 tj.~$c = [b_0, b_1, \ldots, b_{n-1}, a_0, a_1, \ldots, a_{n-1}]$.
-Napisati program koji učitava dimenziju i elemente dva niza i ispisuje niz koji se dobija
+Napisati program koji učitava dimenziju i elemente dvaju nizova i ispisuje niz koji se dobija
 spajanjem unetih nizova na pomenuti način.
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1444,8 +1435,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  od nizova $a$ i $b$ dimenzije $n$ koji su uređeni neopadajuće po vrednosti
  formira niz $c$ koji je uređen na isti način.
  Napisati program koji učitava dimenziju i elemente uređenih nizova $a$ i $b$ i
- ispisuje niz koji se dobije spajanjem ovih nizova na pomenuti način.
-Maksimalan broj elemenata niza je $100$.
+ ispisuje niz koji se dobija spajanjem ovih nizova na pomenuti način.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1495,7 +1486,7 @@ Napisati funkciju \kckod{void promeni\_redosled(int a[], int n)} koja menja redo
 niza $a$ dimenzije $n$ tako da se parni elementi niza nalaze na početku niza, a neparni na kraju. 
 Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji je izmenjen na
 pomenuti način. 
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \napomena{Nije dozvoljeno koristiti pomoćne nizove.}
 
@@ -1537,10 +1528,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=p.izbacivanje_prostih_elemenata] 
 Napisati funkciju koja iz datog niza briše sve elemente koji su prosti brojevi. 
 Funkcija kao povratnu vrednost treba da vrati broj elemenata niza nakon brisanja. 
-Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobije 
-brisanjem pomenutih elemenata. Zadatak rešiti uz korišćenje pomoćnog niza.
-Maksimalan broj elemenata niza je $100$.
+Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobija 
+brisanjem pomenutih elemenata. 
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{Zadatak rešiti uz korišćenje pomoćnog niza.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1588,11 +1580,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=p.izbacivanje_elemenata]
 Napisati funkciju koja iz datog niza briše sve neparne elemente. Funkcija kao povratnu vrednost treba
 da vrati broj elemenata niza nakon brisanja. 
-Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobije 
+Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobija 
 brisanjem neparnih elemenata.
-Zadatak rešiti bez korišćenja pomoćnog niza.
-Maksimalan broj elemenata niza je $100$.
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{Zadatak rešiti bez korišćenja pomoćnog niza.}
  
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1643,12 +1635,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=v.brisanje_elemenata]
 Napisati funkciju koja iz datog niza briše sve elemente koji nisu
 deljivi svojom poslednjom cifrom. Izuzetak su elementi čija je poslednja
-cifra nula i koje zbog toga treba zadržati. Funkcija kao povratnu vrednost treba
+cifra nula. Funkcija kao povratnu vrednost treba
 da vrati broj elemenata niza nakon brisanja. 
-Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobije 
-brisanjem pomenutih elemenata. Zadatak rešiti bez korišćenja pomoćnog niza.
-Maksimalan broj elemenata niza je $100$.
+Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobija  
+brisanjem pomenutih elemenata. 
+Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{Zadatak rešiti bez korišćenja pomoćnog niza.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1682,12 +1675,12 @@ Pogledajte zadatke \ref{p.izbacivanje_prostih_elemenata} i \ref{p.izbacivanje_el
 Napisati funkciju koja iz datog niza briše sve brojeve koji nisu deljivi svojim indeksom.
 Ne razmatrati da li je u novom nizu, nakon brisanja i pomeranja, element deljiv svojim indeksom.
 Funkcija kao povratnu vrednost treba da vrati broj elemenata niza nakon brisanja. 
-Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobije 
-brisanjem pomenutih elemenata. Zadatak rešiti bez korišćenja pomoćnog niza.
-Maksimalan broj elemenata niza je $700$. 
+Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koji se dobija 
+brisanjem pomenutih elemenata. 
+Maksimalni broj elemenata niza je $700$. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \napomena{Nulti element niza treba zadržati jer nije dozvoljeno
-  deljenje nulom.}
+  deljenje nulom. Zadatak rešiti bez korišćenja pomoćnog niza.}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1726,7 +1719,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Korišćenjem nizova moguće je predstaviti skupove podataka. Napisati
 program koji demonstrira osnovne operacije nad skupovima (uniju,
 presek i razliku). Pomoću dva niza predstaviti dva skupa celih
-brojeva. Maksimalan broj elemenata niza je $500$.
+brojeva, a zatim ispisati njihovu uniju, presek i razliku. Maksimalni broj elemenata niza je $500$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
   
 \begin{miditest}
@@ -1781,32 +1774,23 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=izbacivanje_ubacivanje_u_niz] 
-Prilikom ulaska u banku klijent dobija redni broj, a u nizu se čuva
-redosled opsluživanja klijenata. Tako, prvi klijent u nizu će biti
-prvi uslužen, a klijent koji je poslednji došao se nalazi na kraju
-niza. Redni brojevi se izdaju počevši od $1$ svakog radnog dana, ali
-se niz za redosled stalno menja. Dodatno, postoje specijalni klijenti
-(npr. oni koji podižu stambeni kredit) koji mogu dobiti i negativan 
-redni broj da bi se razlikovali
-od uobičajenih usluga koje banka omogućava. Pomozite radniku
-obezbeđenja da lakše prati redosled opsluživanja klijenata.
+Da bi opsluživanje klijenata bilo efikasno i udobno, prilikom ulaska u banku svaki klijent dobija redni broj opslužiavanja. Redni brojevi se čuvaju
+u nizu, počinju od vrednosti $1$ i iznova se generišu svakog radnog dana.  Postoje i specijalni klijenti (npr. oni koji podižu stambeni kredit) koji mogu dobiti i negativni redni broj da bi se razlikovali od uobičajenih klijenata. Pomozite radniku obezbeđenja da lakše prati redosled opsluživanja klijenata.
 \begin{enumerate}
-\item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
-  $x$ na kraj niza.
-\item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
-  $x$ na početak niza (lica sa posebnim potrebama, trudnice, stara
-  lica i ostale ugrožene kategorije).
-\item Napisati funkciju koja ubacuje datog klijenta sa rednim brojem
-  $x$ na datu poziciju $k$ (manje prioritetna lica, recimo službena
-  lica ili roditelji sa decom, poziciju $k$ bira radnik obezbeđenja).
-\item Napisati funkciju koja izbacuje prvi element niza (usluženi
-  klijent).
-\item Napisati funkciju koja izbacuje poslednji element niza (klijent
-  je odustao jer je shvatio da ima mnogo klijenata ispred njega).
-\item Napisati funkciju koja izbacuje element sa date pozicije $k$
-  (klijent je odustao jer je dugo čekao).
+\item Napisati funkciju koja ubacuje redni broj klijenta $x$ na kraj niza (klijenta koji je poslednji došao).
+\item Napisati funkciju koja ubacuje redni broj klijenta
+  $x$ na početak niza (klijenta koji će biti prvi uslužen, na primer, lica sa posebnim potrebama, trudnice ili stara lica).
+\item Napisati funkciju koja ubacuje redni broj klijenta
+  $x$ na poziciju $k$ koju bira radnik obezbeđenja (manje prioritetna lica, recimo službena
+  lica ili roditelji sa decom).
+\item Napisati funkciju koja izbacuje prvi redni broj iz niza (redni broj usluženog
+  klijenta).
+\item Napisati funkciju koja izbacuje poslednji redni broj iz niza (redni broj klijenta
+  koji je odustao jer je shvatio da ima mnogo klijenata ispred njega).
+\item Napisati funkciju koja izbacuje redni broj iz niza sa pozicije $k$
+  (redni broj klijenta koji je odustao jer je dugo čekao).
 \end{enumerate}
-Napisati program koji testira rad funkcija. Maksimalan broj klijenata
+Napisati program koji testira rad navedenih funkcija. Maksimalni broj klijenata
 u jednom danu je $2000$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
