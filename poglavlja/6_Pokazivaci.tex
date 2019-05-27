@@ -1,12 +1,13 @@
 
 \section{Pokazivači}
 
-
+\skrati{1}
 \begin{Exercise}[label=POK_01] 
 Napisati funkciju \kckod{void uredi(int *pa, int *pb)} koja uređuje svoja dva celobrojna argumenta tako da se
 u prvom nalazi manja vrednost, a u drugom veća. 
 Napisati program koji učitava dva cela broja i ispisuje uređene brojeve. 
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -33,14 +34,16 @@ Napisati program koji učitava dva cela broja i ispisuje uređene brojeve.
  
 \begin{Exercise}[label=POK_02] 
   Napisati funkciju \kckod{void rgb\_u\_cmy(int r, int g, int b, float *c, float *m, float *y)} koja datu boju u \textit{rgb} 
-  formatu konvertuje u boju u \textit{cmy} formatu po sledećim formulama:\\
-  $$c = 1 - r / 255$$
-  $$m = 1 - g / 255$$
-  $$y = 1 - b / 255$$
-  Napisati program koji učitava boju u \textit{rgb} formatu i ispisuje vrednosti unete boje u \textit{cmy} formatu.
-  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
-  \napomena{Vrednosti boja u \textit{rgb} formatu su u opsegu $[0,255]$.}\\
+  formatu konvertuje u boju u \textit{cmy} formatu po sledećim formulama:
+\skrati{1}
+\begin{eqnarray*}
+  c &=& 1 - r / 255,\;\;\;  m = 1 - g / 255, \;\;\; y = 1 - b / 255 
+\end{eqnarray*}
+\skrati{1}
+Napisati program koji učitava boju u \textit{rgb} formatu i ispisuje vrednosti unete boje u \textit{cmy} formatu. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{Vrednosti boja u \textit{rgb} formatu su u opsegu $[0,255]$.}\\
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -56,6 +59,7 @@ Napisati program koji učitava dva cela broja i ispisuje uređene brojeve.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -80,6 +84,7 @@ Napisati program koji učitava dva cela broja i ispisuje uređene brojeve.
  \fi
 
  
+\skrati{2}
 \begin{Exercise}[label=POK_03] 
 Napisati funkciju \kckod{int presek(float k1, float n1, float k2, float n2, float *px, float *py)} 
 koja za dve prave date svojim koeficijentima
@@ -89,6 +94,7 @@ tačku preseka (ako su paralelne). Napisati program
 koji učitava podatke o pravama i ukoliko prave imaju presek, ispisuje
 koordinate tačke preseka, a ako nemaju, ispisuje odgovarajuću poruku.
    
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -115,6 +121,7 @@ koordinate tačke preseka, a ako nemaju, ispisuje odgovarajuću poruku.
  \fi
 
  
+\skrati{2}
 \begin{Exercise}[label=POK_04] 
 Napisati funkciju koja za dva cela broja izračunava njihov količnik i ostatak pri deljenju. 
 Funkcija treba da vrati jedinicu ukoliko je uspešno izračunala vrednosti, 
@@ -122,6 +129,7 @@ a nulu ukoliko deljenje nije moguće. Napisati program koji učitava dva cela br
 ispisuje njihov količnik i ostatak pri deljenju. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -157,6 +165,7 @@ Pogledajte zadatke \ref{POK_02} i \ref{POK_03}.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=POK_05] 
 Napisati funkciju koja za dužinu trajanja filma koja je data u sekundama, 
 određuje ukupno trajanje filma u satima, minutama i sekundama. 

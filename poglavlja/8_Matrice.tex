@@ -9,6 +9,7 @@ dva cela broja $m$ i $n$, a potom i elementi matrice celih brojeva dimenzije $m 
 da je maksimalna dimenzija matrice $50 \times 50$. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{1}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -61,6 +62,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{1}
 \begin{Exercise}[label=mat.001]
 Napisati program koji za učitanu celobrojnu matricu dimenzije $m \times n$
 izračunava njenu Ekulidsku normu. Pretpostaviti
@@ -68,6 +70,7 @@ da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \uputstvo{Euklidska norma matrice je kvadratni koren sume kvadrata svih elemenata matrice.}
 
+\skrati{1}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -112,9 +115,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{1}
 \begin{Exercise}[label=mat.1] 
 Napisati funkcije za rad sa celobrojnim matricama:
+\skrati{1}
 \begin{enumerate}
+\setlength\itemsep{1em}
   \item \kckod{void ucitaj(int a[][MAKS], int n, int m)} 
       kojom se učitavaju elementi matrice celih brojeva $a$ dimenzije $m \times n$,  
   \item \kckod{void ispisi(int a[][MAKS], int n, int m)} 
@@ -125,6 +131,7 @@ učitane matrice.
 Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{1}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -177,6 +184,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{1}
 \begin{Exercise}[label=mat.2] 
 Napisati funkciju \kckod{void transponovana(int a[][MAKS], int m, int
   n, int b[][MAKS])} koja određuje matricu $b$ koja je dobijena
@@ -239,6 +247,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{1}
 \begin{Exercise}[label=mat.3] 
 Napisati funkciju \kckod{void razmeni(int a[][MAKS], int m, int n,
   int k, int t)} u kojoj se razmenjuju elemeti $k$--te i $t$--te vrste
@@ -248,6 +257,7 @@ $k$--te i $t$--te vrste ulazne matrice.
 Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.  
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
+\skrati{1}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -311,34 +321,18 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{1}
 \begin{Exercise}[label=mat.4] 
 Napisati program koji za učitanu matricu celih brojeva ispisuje
 indekse onih elemenata matrice koji su jednaki zbiru svih svojih
 susednih elemenata. Pretpostaviti da je maksimalna dimenzija
 matrice $50 \times 50$.  
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-
 \uputstvo{Broj susednih elemenata matrice zavisi od položaja elementa u 
 matrici. Na slici \ref{fig:susedi} su slovom \kckod{s} obeleženi 
 susedni elementi matrice za elemente \kckod{a}, \kckod{b} i \kckod{c}.}
-\begin{figure}
-\begin{center}
-\begin{minipage}{35mm}
-\begin{verbatim}
-- - - - - - s b s -
-- s s s - - s s s -
-- s a s - - - - - -
-- s s s - - - - - -
-- - - - - - - - s s
-- - - - - - - - s c
-\end{verbatim}
-\end{minipage}
-\end{center}
-\caption{Susedni elementi u matrici.}
-\label{fig:susedi}
-\end{figure}
 
+\skrati{2}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -387,7 +381,24 @@ susedni elementi matrice za elemente \kckod{a}, \kckod{b} i \kckod{c}.}
 \end{Answer}
 \fi
 
+\begin{figure}[h!]
+\begin{center}
+\begin{minipage}{35mm}
+\begin{verbatim}
+- - - - - - s b s -
+- s s s - - s s s -
+- s a s - - - - - -
+- s s s - - - - - -
+- - - - - - - - s s
+- - - - - - - - s c
+\end{verbatim}
+\end{minipage}
+\end{center}
+\caption{Susedni elementi u matrici.}
+\label{fig:susedi}
+\end{figure}
 
+\skrati{4}
 \begin{Exercise}[label=mat.20] 
 Napisati funkciju koja formira niz $b_0, b_1, \ldots, b_n$ od matrice
 tako što element niza $b_i$ izračunava kao srednju vrednost elemenata
@@ -396,6 +407,7 @@ ispisuje dobijeni niz.
 Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
+\skrati{2}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -442,12 +454,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 % ---------------------------------------------------------------jednostavni zadaci sa kvadratnim matricama
 
+\skrati{2}
 \begin{Exercise}[label=mat.5] 
 Relacija se može predstaviti kvadratnom matricom nula i jedinica na
 sledeći način: element $i$ je u relaciji sa elementom $j$ ukoliko se u
 preseku $i$--te vrste i $j$--te kolone nalazi jedinica, a nije u
 relaciji ukoliko se tu nalazi nula. Napisati funkcije:
+\skrati{2}
 \begin{enumerate}
+\setlength\itemsep{0em}
   \item \kckod{int refleksivna(int a[][MAKS], int
     n)} kojom se za relaciju zadatom matricom $a$ dimenzije
     $n \times n$ ispituje da li je refleksivna;
@@ -467,6 +482,7 @@ Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$ i
 da matrica za vrednosti elemenata može imati samo nule i jedinice.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -517,6 +533,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=mat.6]
 Data je kvadratna matrica dimenzije $n \times n$.
 \begin{enumerate} 
@@ -871,12 +888,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=mat.12] 
 Napisati program koji za učitanu celobrojnu kvadratnu matricu ispituje da li su
 zbirovi elemenata njenih kolona uređeni u strogo rastućem poretku.  
 Pretpostaviti da je maksimalna dimenzija matrice $10 \times 10$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -901,6 +920,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -934,7 +954,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{2}
 \begin{Exercise}[label=mat.13] 
 Matrica je \emph{ortonormirana} ako je vrednost skalarnog proizvod svakog para
 različitih vrsta jednak nuli, a vrednost skalarnog proizvoda vrste sa samom sobom
@@ -946,6 +966,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
   a_n)$ i $b = (b_1, b_2, \ldots, b_n)$ je $a_1\cdot b_1 + a_2\cdot
   b_2 + \ldots + a_n\cdot b_n$.}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -970,6 +991,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1004,6 +1026,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=mat.14] 
 Kvadratna matrica je \emph{magični kvadrat} ako je suma elemenata
 u svakoj koloni i svakoj vrsti jednaka. Napisati program koji
@@ -1191,6 +1214,7 @@ poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[difficulty=1, label=mat.17] 
 Element matrice naziva se \emph{sedlo} ako je istovremeno najmanji u
 svojoj vrsti, a najveći u svojoj koloni. Napisati program koji
@@ -1198,6 +1222,7 @@ ispisuje indekse i vrednosti onih elemenata matrice realnih brojeva
 koji su sedlo. Maksimalna dimenzija matrice je $50\times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1239,6 +1264,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[difficulty=1, label=mat.18] 
 Napisati program koji ispisuje elemente matrice celih brojeva u
 spriralnom redosledu počevši od gornjeg levog ugla krećući se u smeru
@@ -1246,6 +1272,7 @@ kazaljke na satu. Maksimalna dimenzija matrice je
 $50\times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1286,6 +1313,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[difficulty=1, label=mat.19] 
 Matrica $a$ se sadrži u matrici $b$ ukoliko postoji podmatrica matrice
 $b$ identična matrici $a$.  Napisati program koji za dve učitane
