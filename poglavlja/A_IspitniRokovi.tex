@@ -214,7 +214,7 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 \begin{upotreba}{5}
 #\naslovInt#
 #\poziv{./a.out }#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -232,7 +232,7 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 \subsection{Praktični deo ispita,  februar 2019.}
 
 \begin{Exercise}[label=A_o_2_1] 
-\item Napisati program koji učitava pozitivan četvorocifren broj $n$, a zatim na standardni izlaz ispisuje zbir onih cifara broja $n$ koje su po vrednosti veće od aritmetičke sredine svih cifara broja $n$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
+Napisati program koji učitava pozitivan četvorocifren broj $n$, a zatim na standardni izlaz ispisuje zbir onih cifara broja $n$ koje su po vrednosti veće od aritmetičke sredine svih cifara broja $n$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -255,7 +255,7 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 \begin{upotreba}{3}
 #\naslovInt#
 #\ulaz{100}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -263,7 +263,7 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 \begin{upotreba}{4}
 #\naslovInt#
 #\ulaz{-1234}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -311,7 +311,7 @@ Napisati program koji učitava nisku $s$ parne dužine od najviše 20 karaktera 
 #\naslovInt#
 #\naslovUlaz#
 #\ulaz{abc1234}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -338,7 +338,7 @@ Napisati program koji čita sadržaj datoteke \textit{ulaz.txt} i ispisuje na st
 #\izlaz{123 -23}#
 \end{upotreba}
 \end{minitest}
-\begin{minitestt}
+\begin{minitest}
 \begin{upotreba}{2}
 #\naslovInt#
 #\poziv{./a.out}#
@@ -363,7 +363,7 @@ Napisati program koji čita sadržaj datoteke \textit{ulaz.txt} i ispisuje na st
 #\naslovInt#
 #\poziv{./a.out}#
 #\naslovDat{ulaz.txt ne postoji!}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{minitest}
@@ -378,7 +378,7 @@ Napisati program koji čita sadržaj datoteke \textit{ulaz.txt} i ispisuje na st
 \fi
 
 \begin{Exercise}[label=A_o_2_4] 
-\item Napisati program koji sa standardnog ulaza učitava podatke o osvajačima takmičenja. Za svako takmičenje se redom zadaju godina takmičenja (pozitivan ceo broj) i ime osvajača (niska od najviše $30$ karaktera bez belina). Program treba da ispiše:
+Napisati program koji sa standardnog ulaza učitava podatke o osvajačima takmičenja. Za svako takmičenje se redom zadaju godina takmičenja (pozitivan ceo broj) i ime osvajača (niska od najviše $30$ karaktera bez belina). Program treba da ispiše:
 \begin{itemize}
 \item ako je navedena opcija -y kao prvi argument komandne linije, ime osvajača takmičenja za godinu koja se navodi kao drugi argument
  \item ako je navedena opcija -w kao prvi argument komandne linije, sve godine u kojima je takmičar čije se ime navodi kao drugi argument komande linije osvajao takmičenje.
@@ -426,7 +426,7 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 \begin{upotreba}{3}
 #\naslovInt#
 #\poziv{./a.out -s 2001}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -434,7 +434,7 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 \begin{upotreba}{4}
 #\naslovInt#
 #\poziv{./a.out -x}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -442,7 +442,7 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 \begin{upotreba}{5}
 #\naslovInt#
 #\poziv{./a.out -s 2012 2000}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -450,7 +450,7 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 \begin{upotreba}{6}
 #\naslovInt#
 #\poziv{./a.out -y 2005 -w RealMadrid}#
-#\naslovIzlazZaGreske#
+#\naslovIzlazZaGresku#
 #\izlaz{-1}#
 \end{upotreba}
 \end{miditest}
@@ -466,8 +466,225 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 
 \section{I smer}
 
-\subsection{Praktični deo ispita,  xx.xx.2019.}
+% III rok
+\subsection{Praktični deo ispita,  januar 2019.}
 
+\begin{Exercise}[label=A_i_1_1] 
+Napisati program koji učitava cele trocifrene brojeve sve do kraja ulaza i na standardni izlaz ispisuje one čije su cifre uređene strogo rastuće (cifre se čitaju sa leva na desno). U slučaju greške, ispisati $-1$ i prekinuti izvršavanje programa. \\
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{-532 236 100 -555 546}#
+#\naslovIzlaz#
+#\izlaz{236}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\ulaz{123 -123 321 -321}#
+#\naslovIzlaz#
+#\izlaz{123 -123}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\ulaz{258 695 -1234}#
+#\naslovIzlaz#
+#\izlaz{258 -1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\ulaz{14}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{A_i_1_1}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_i_1_1]
+\includecode{resenja/A_IspitniRokovi/rok_i_januar/1.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=A_i_1_2] 
+Napisati program koji sa standardnog ulaza učitava reč $s$ maksimalne dužine 20 karaktera (bez belina), a zatim karakter koji predstavlja način modifikacije učitane niske:
+ \begin{itemize}
+\item ukoliko je učitan karakter $m$, sve karaktere reči $s$ koji su mala slova, pretvoriti u odgovarajuća velika 
+\item ukoliko je učitan karakter $v$, sve karaktere reči $s$ koji su velika slova, pretvoriti u odgovarajuća mala
+\item ukolko je učitan karakter $o$, ne menjati karaktere reči $s$
+ \end{itemize}
+Na standardni izlaz ispisati nisku nakon modifikacije. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti program. 
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{sreca m}#
+#\naslovIzlaz#
+#\izlaz{SRECA}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{IspiT v}#
+#\naslovIzlaz#
+#\izlaz{ISPIT}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{Rec o}#
+#\naslovIzlaz#
+#\izlaz{Rec}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\naslovUlaz#
+#\ulaz{PROgram x}#
+#\naslovIzlazZaGresku#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{A_i_1_2}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_i_1_2]
+\includecode{resenja/A_IspitniRokovi/rok_i_januar/2.c}
+\end{Answer}
+\fi
+
+
+\begin{Exercise}[label=A_i_1_3] 
+Napisati program za praćenje rezultata automobilske trke. Na takmičenju učestvuje $n$ ($n\geq 3$) takmičara u $m$ ($m\geq 2$) trka. Program prvo učitava broj takmičara i trka, a zatim se za svakog od $n$ takmičara vreme u sekundama u svakoj od $m$ trka. Pretpostaviti da neće biti više od $100$ takmičara i $100$ trka. Vremena čuvati u matrici dimenzije $n \times m$ tako da element ($i$, $j$) predstavlja vreme koje je takmičar $i$ postigao u $j$-toj trci. Na standardni izlaz ispisati redne brojeve takmičara (brojeći ih od 0) koji su pobedili u trkama (bili najbrži), redom za svaku trku. Pretpostaviti da neće biti više takmičara sa istim prolaznim vremenom po trci. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti program. \\
+\begin{minitest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\poziv{./a.out}#
+#\ulaz{3 3}#
+#\ulaz{192.9 87.8 109.102}#
+#\ulaz{181.2 92.1 102.4}#
+#\ulaz{151.1 87.9 118.9}#
+#\naslovIzlaz#
+#\izlaz{2 0 1}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\poziv{./a.out}#
+#\ulaz{3 4}#
+#\ulaz{51.3 184.94 121.7 99.51}#
+#\ulaz{50.9 182.71 119.2 99.2}#
+#\ulaz{51.2 192.11 122.9 100.1}#
+#\naslovIzlaz#
+#\izlaz{1 1 1 1}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\poziv{./a.out}#
+#\ulaz{4 3}#
+#\ulaz{113.5 145.2 -14.5}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\poziv{./a.out}#
+#\ulaz{4 -3}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{minitest}
+
+\linkresenje{A_i_1_3}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_i_1_3]
+\includecode{resenja/A_IspitniRokovi/rok_i_januar/3.c}
+\end{Answer}
+\fi
+
+\begin{Exercise}[label=A_i_1_4] 
+Definisati strukturu sa nazivom $Kutija$ koja sadrži dužinu, širinu i visinu kutije u centimetrima (pozitivni celi brojevi). Napisati program koji učitava pozitivan ceo broj $n$ ($n \leq 100$), a zatim i podatke o $n$ kutija. Nakon toga, program treba da ispiše zapreminu kutije u koju se može smestiti svaka od preostalih $n-1$ kutija pojedinačno. Pretpostaviti da neće biti više takvih kutija, a ukoliko takva kutija ne postoji, ispisati $0$. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. \\ 
+
+\napomena{Da bi jedna kutija (sa celobrojnim dimenzijama) stala u drugu, svaka od dimenzija te kutije (dužina, širina i visina redom) mora biti manja barem 1 centimetar od odgovarajućih dimenzija druge kutije. Prilikom smeštanja jedne kutije u drugu nema obrtanja kutije.}\\
+
+\begin{miditest}
+\begin{upotreba}{1}
+#\naslovInt#
+#\poziv{./a.out}#
+#\naslovUlaz#
+#\ulaz{4}#
+#\ulaz{15 2 9}#
+#\ulaz{185 27 12}#
+#\ulaz{16 21 10}# 
+#\ulaz{120 12 3}#
+#\naslovIzlaz#
+#\izlaz{59940}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
+#\poziv{./a.out}#
+#\naslovUlaz#
+#\ulaz{3}#
+#\ulaz{9 18 2}#
+#\ulaz{21 5 3}#
+#\ulaz{3 15 5}#
+#\naslovIzlaz#
+#\izlaz{0}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3}
+#\naslovInt#
+#\poziv{./a.out}#
+#\ulaz{-3}#
+#\naslovIzlaz#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{4}
+#\naslovInt#
+#\poziv{./a.out}#
+#\ulaz{3}#
+#\ulaz{1 2 3}#
+#\ulaz{8 9 -5}#
+#\naslovIzlazZaGresku#
+#\izlaz{-1}#
+\end{upotreba}
+\end{miditest}
+
+\linkresenje{A_i_1_4}
+\end{Exercise}
+
+\ifresenja
+\begin{Answer}[ref=A_i_1_4]
+\includecode{resenja/A_IspitniRokovi/rok_i_januar/4.c}
+\end{Answer}
 
 
 \section{Rešenja}
