@@ -19,7 +19,7 @@ int main() {
   int gornja_granica, donja_granica, leva_granica, desna_granica;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenziju matrice: ");
+  printf("Unesite broj vrsta i broj kolona matrice: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");

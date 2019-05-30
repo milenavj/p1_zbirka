@@ -19,7 +19,7 @@ int main() {
   float gornji_trougao = 0, donji_trougao = 0;
 
   /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
-  printf("Unesite dimenziju matrice: ");
+  printf("Unesite broj vrsta matrice: ");
   scanf("%d", &n);
   if (n <= 0 || n > MAKS) {
     printf("Greska: neispravan unos.\n");
