@@ -43,7 +43,6 @@ int main() {
             /* Transformacija nije definisana pa se ispisuje poruka o gresci i prekida izvrsavanje programa. */
             printf("-1\n");
             exit(EXIT_FAILURE);
-            
     }
     
     /* Ispis rezultata. */

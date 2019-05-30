@@ -1,8 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+int main(){
     /* Deklaracija potrebnih promenljivih. */
     int x, abs_x;
     int cifra_jedinica, cifra_desetica, cifra_stotina;
@@ -25,8 +24,8 @@ int main()
         cifra_stotina = abs_x / 100;
 
 
-        /* Provera da li su cifre broja uredjene rastuce. */
-        if (cifra_jedinica > cifra_desetica && cifra_desetica > cifra_stotina){
+        /* Provera da li je cifra desetica jednaka aritmetickoj sredini cifara stotine i jedinice. */
+        if (cifra_desetica == (cifra_jedinica + cifra_stotina)/2.0){
             printf("%d ", x);
         }
     }
