@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Funkcija ispisuje odgovarajucu poruku na standardni izlaz za greske i prekida izvrsavanje programa. */
+/* Funkcija ispisuje odgovarajucu poruku na standardni izlaz za
+   greske i prekida izvrsavanje programa. */
 void greska() {
   fprintf(stderr, "-1\n");
   exit(EXIT_FAILURE);
@@ -27,9 +28,12 @@ int main() {
   cifra_hiljada = n / 1000;
 
   /* Izracunavanje aritmeticke sredine cifara. */
-  aritmeticka_sredina = (cifra_hiljada + cifra_desetica + cifra_jedinica + cifra_stotina) / 4.0;
+  aritmeticka_sredina =
+      (cifra_hiljada + cifra_desetica + cifra_jedinica +
+       cifra_stotina) / 4.0;
 
-  /* Izracunavanje sume onih cifara koje su vece od aritmeticke sredine. */
+  /* Izracunavanje sume onih cifara koje su vece od aritmeticke
+     sredine. */
   suma_cifara = 0;
 
   if (cifra_jedinica > aritmeticka_sredina)

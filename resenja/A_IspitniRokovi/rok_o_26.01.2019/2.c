@@ -4,41 +4,42 @@
 
 #define MAKS_DUZINA 101
 
-int main()
-{
-    /* Deklaracija potrebnih promenljivih. */
-    char email[MAKS_DUZINA];
-    char sifrovani_email[MAKS_DUZINA];
-    char *at_pozicija;
+int main() {
+  /* Deklaracija potrebnih promenljivih. */
+  char email[MAKS_DUZINA];
+  char sifrovani_email[MAKS_DUZINA];
+  char *at_pozicija;
 
-    /* Ucitavanje elektronske adrese. */
-    scanf("%s", email);
+  /* Ucitavanje elektronske adrese. */
+  scanf("%s", email);
 
-    /* Odredjivanje pozicije @ karaktera. */
-    at_pozicija = strchr(email, '@');
+  /* Odredjivanje pozicije @ karaktera. */
+  at_pozicija = strchr(email, '@');
 
-    /* Ukoliko elektronska adresa ne sadrzi @ karakter, ispisuje se trazena poruka. */
-    if (at_pozicija == NULL)
-    {
-        fprintf(stderr, "-1\n");
-        exit(EXIT_FAILURE);
-    }
-    
-    /* Sifrovana adresa inicijalno sadrzi samo terminirajucu nulu. */
-    sifrovani_email[0] = '\0';
+  /* Ukoliko elektronska adresa ne sadrzi @ karakter, ispisuje se
+     trazena poruka. */
+  if (at_pozicija == NULL) {
+    fprintf(stderr, "-1\n");
+    exit(EXIT_FAILURE);
+  }
 
-    /* U sifrovanu adresu se kopira deo originalne adrese koji prethodi @ karakteru. */
-    *at_pozicija = '\0';
-    strcpy(sifrovani_email, email);
-    
-    /* Zatim se sifrovana adresa nadovezuje sa [AT] zamenom. */
-    strcat(sifrovani_email, "[AT]");
-    
-    /* Na kraju se sifrovana adresa nadovezuje sa delom originalne adrese koji se nalazi posle @ karaktera. */
-    strcat(sifrovani_email, at_pozicija + 1);
+  /* Sifrovana adresa inicijalno sadrzi samo terminirajucu nulu. */
+  sifrovani_email[0] = '\0';
 
-    /* Ispis rezultata. */
-    printf("%s\n", sifrovani_email);
+  /* U sifrovanu adresu se kopira deo originalne adrese koji
+     prethodi @ karakteru. */
+  *at_pozicija = '\0';
+  strcpy(sifrovani_email, email);
 
-    exit(EXIT_SUCCESS);
+  /* Zatim se sifrovana adresa nadovezuje sa [AT] zamenom. */
+  strcat(sifrovani_email, "[AT]");
+
+  /* Na kraju se sifrovana adresa nadovezuje sa delom originalne
+     adrese koji se nalazi posle @ karaktera. */
+  strcat(sifrovani_email, at_pozicija + 1);
+
+  /* Ispis rezultata. */
+  printf("%s\n", sifrovani_email);
+
+  exit(EXIT_SUCCESS);
 }

@@ -4,6 +4,7 @@
 #define MAKS_REC 21
 #define MAKS_BROJ_RECI 100
 
+/* Struktura koja opisuje par reci. */
 typedef struct {
   char sr[MAKS_REC];
   char en[MAKS_REC];

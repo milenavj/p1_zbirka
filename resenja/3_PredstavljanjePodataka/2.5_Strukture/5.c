@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+/* Struktura koja opisuje razlomak. */
 typedef struct {
   int brojilac;
   int imenilac;

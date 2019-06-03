@@ -5,6 +5,7 @@
 #define MAKS_STEPEN 10
 #define MAKS_POLINOMA 100
 
+/* Struktura koja opisuje polinom. */
 typedef struct {
   int stepen;
   float koef[MAKS_STEPEN + 1];

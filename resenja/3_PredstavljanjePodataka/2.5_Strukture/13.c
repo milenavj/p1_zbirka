@@ -7,6 +7,7 @@
 #define MAKS_EMAIL 51
 #define MAKS_OSOBA 50
 
+/* Struktura koja opisuje osobu. */
 typedef struct {
   char ime[MAKS_IME];
   char prezime[MAKS_PREZIME];

@@ -10,8 +10,8 @@ int main() {
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 
-  /* Da bi program radio ispravno i za negativne brojeve, uzima se
-     apsolutna vrednost broja n. */
+  /* Da bi program radio ispravno i za negativne brojeve, koristi
+    se apsolutna vrednost broja n. */
   n = abs(n);
 
   /* Provera ispravnosti ulaznih podataka. */
@@ -38,7 +38,7 @@ int main() {
   if (hiljada > najveca_cifra)
     najveca_cifra = hiljada;
 
-  /* Ispis rezultata */
+  /* Ispis rezultata. */
   printf("Najveca cifra je: %d\n", najveca_cifra);
 
   return 0;

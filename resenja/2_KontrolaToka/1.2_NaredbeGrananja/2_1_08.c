@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-  /* Deklaracija karakterske promenljive. */
+  /* Deklaracija potrebne promenljive. */
   char c;
 
   /* Ucitavanje jednog karaktera. */

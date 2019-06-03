@@ -4,6 +4,7 @@
 
 #define MAKS_TEMENA 1000
 
+/* Struktura koja opisuje tacku. */
 typedef struct {
   int x, y;
 } Tacka;

@@ -5,6 +5,7 @@
 #define BROJ_OCENA 9
 #define MAKS_DJAKA 30
 
+/* Struktura koja opisuje djaka. */
 typedef struct {
   char ime[MAKS_IME];
   int ocena[BROJ_OCENA];

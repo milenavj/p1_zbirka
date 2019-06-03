@@ -4,41 +4,43 @@
 #define MAX 31
 
 int main() {
-    /* Deklaracija potrebnih promenljivih. */
-    char s[MAX];
-    int i, max_duzina, trenutna_duzina;
-    
-    /* Ucitavanje niske. */
-    scanf("%s", s);
+  /* Deklaracija potrebnih promenljivih. */
+  char s[MAX];
+  int i, max_duzina, trenutna_duzina;
 
-    /* Odredjivanje najduze podniske karaktera koji su uredjeni rastuce. */
-    max_duzina = 1;
-    trenutna_duzina = 1;
+  /* Ucitavanje niske. */
+  scanf("%s", s);
 
-    for(i=1; s[i]; i++) {
-        /* Ako je ASCII kod tekuceg karaktera veci od ASCII koda prethodnog karaktera, 
-        podniska je rastuca pa se njena trenutna duzina uvecava. */
-        if(s[i-1] < s[i]) {
-            trenutna_duzina++;
-        }
-        else {
-            /* Ako se naislo na par karaktera koji nisu uredjeni rastuce, 
-            azurira se, po potrebi, maksimalna duzina trazene podniske i resetuje se trenutna duzina. */
-            if(max_duzina < trenutna_duzina) {
-                max_duzina = trenutna_duzina;
-            }
-            
-            trenutna_duzina = 1;
-        }
-    }
+  /* Odredjivanje najduze podniske karaktera koji su uredjeni
+     rastuce. */
+  max_duzina = 1;
+  trenutna_duzina = 1;
 
-    /* Postupak azuriranja maksimalne duzine se, po potrebi, vrsi i kada se stigne do kraja niske. */
-	if(max_duzina < trenutna_duzina) {
+  for (i = 1; s[i]; i++) {
+    /* Ako je ASCII kod tekuceg karaktera veci od ASCII koda
+       prethodnog karaktera, podniska je rastuca pa se njena
+       trenutna duzina uvecava. */
+    if (s[i - 1] < s[i]) {
+      trenutna_duzina++;
+    } else {
+      /* Ako se naislo na par karaktera koji nisu uredjeni rastuce, 
+         azurira se, po potrebi, maksimalna duzina trazene podniske 
+         i resetuje se trenutna duzina. */
+      if (max_duzina < trenutna_duzina) {
         max_duzina = trenutna_duzina;
+      }
+      trenutna_duzina = 1;
     }
-    
-    /* Ispis rezultata. */    
-    printf("%d\n", max_duzina);
-    
-    exit(EXIT_SUCCESS);
+  }
+
+  /* Postupak azuriranja maksimalne duzine se, po potrebi, vrsi i
+     kada se stigne do kraja niske. */
+  if (max_duzina < trenutna_duzina) {
+    max_duzina = trenutna_duzina;
+  }
+
+  /* Ispis rezultata. */
+  printf("%d\n", max_duzina);
+
+  exit(EXIT_SUCCESS);
 }

@@ -39,11 +39,12 @@ int main() {
      vraca c. Dakle, tolower('A') je 'a', a tolower('6') = '6',...
 
      Slicno, samo obrnuto, radi i funkcija toupper(c). Deklaracije 
-     ovih funkcija se takodje nalaze u zaglavlju ctype.h. */
+     ovih funkcija se, takodje, nalaze u zaglavlju ctype.h. */
   c1 = tolower(c1);
   c2 = tolower(c2);
   c3 = tolower(c3);
 
+  /* Ispis rezultata. */
   printf("Rezultat: %c%c%c\n", c1, c2, c3);
 
   return 0;

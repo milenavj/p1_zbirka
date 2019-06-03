@@ -4,6 +4,7 @@
 
 #define MAKS 50
 
+/* Struktura koja opisuje loptu. */
 typedef struct {
   int poluprecnik;
   enum { plava, zuta, crvena, zelena } boja;

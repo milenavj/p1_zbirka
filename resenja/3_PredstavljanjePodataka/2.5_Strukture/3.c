@@ -6,6 +6,7 @@
 #define DONJA_GRANICA 3
 #define GORNJA_GRANICA 8
 
+/* Struktura koja opisuje grad. */
 typedef struct {
   char ime_grada[MAKS_IME];
   float temperatura;

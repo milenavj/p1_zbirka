@@ -4,6 +4,7 @@
 #define BROJ_SIFRI 100
 #define BROJ_KARAKTERA 5000
 
+/* Struktura koja opisuje sifru. */
 typedef struct {
   int b;
   char smer;

@@ -4,6 +4,7 @@
 #define MAKS_PODATAKA 50
 #define MAKS_NAZIV 21
 
+/* Struktura koja opisuje artikal. */
 typedef struct {
   char naziv_prodavnice[MAKS_NAZIV];
   double cena_artikla;

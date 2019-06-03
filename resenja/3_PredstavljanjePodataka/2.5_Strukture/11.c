@@ -4,6 +4,7 @@
 #define MAKS_STUDENATA 2000
 #define MAKS_NISKA 31
 
+/* Struktura koja opisuje studenta. */
 typedef struct Student {
   char ime[MAKS_NISKA];
   char prezime[MAKS_NISKA];

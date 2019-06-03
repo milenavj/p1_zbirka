@@ -1,9 +1,11 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+
 #define MAX 21
 
-/* Funkcija ispisuje odgovarajucu poruku na standardni izlaz za greske i prekida izvrsavanje programa. */
+/* Funkcija ispisuje odgovarajucu poruku na standardni izlaz za
+   greske i prekida izvrsavanje programa. */
 void greska() {
   fprintf(stderr, "-1\n");
   exit(EXIT_FAILURE);

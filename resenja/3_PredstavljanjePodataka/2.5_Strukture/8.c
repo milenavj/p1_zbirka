@@ -3,6 +3,7 @@
 
 #define MAKS 1000
 
+/* Struktura koja opisuje izraz. */
 typedef struct {
   char o;
   int x;

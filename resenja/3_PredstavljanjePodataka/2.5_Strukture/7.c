@@ -3,6 +3,7 @@
 
 #define MAKS_DECE 200
 
+/* Struktura koja opisuje dete. */
 typedef struct {
   char pol;
   int broj_godina;

@@ -5,12 +5,14 @@
 #define MAKS_KORPI 100
 #define MAKS_NAZIV 31
 
+/* Struktura koja opisuje artikal. */
 typedef struct {
   char naziv[MAKS_NAZIV];
   int kolicina;
   float cena;
 } Artikal;
 
+/* Struktura koja opisuje korpu. */
 typedef struct {
   int broj_artikala;
   Artikal artikli[MAKS_ARTIKALA];
