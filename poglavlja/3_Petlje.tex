@@ -1,3 +1,4 @@
+\skrati{1}
 \section{Petlje}
 
 %--------------------------------------------------------------------
@@ -7,13 +8,11 @@
 %--------------------------------------------------------------------
 
 
-%\skrati{1}
-
-
+\skrati{2}
 \begin{Exercise}[label=PET_01] 
 Napisati program koji pet puta ispisuje tekst \kckod{Mi volimo da programiramo}.  
 
-\skrati{1}
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -25,6 +24,7 @@ Napisati program koji pet puta ispisuje tekst \kckod{Mi volimo da programiramo}.
 \end{upotreba}
 \end{miditest}
 
+\skrati{1}
 \linkresenje{PET_01}
 \end{Exercise}
 \ifresenja
@@ -118,6 +118,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{1}
 \begin{Exercise}[label=PET_04] 
 Napisati program koji učitava dva cela broja $n$ i $m$ $(n \leq m)$ i ispisuje sve
 cele brojeve iz intervala $[n,m]$. Pri rešavanju zadatka: 
@@ -167,6 +168,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  faktorijel. 
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{1}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -211,6 +214,8 @@ Napisati program koji učitava realan broj $x$ i ceo nenegativan broj
 $n$ i izračunava $n$-ti stepen broja $x$, tj.~$x^n$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  
+\skrati{1}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -253,6 +258,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati program koji učitava realan broj $x$ i ceo broj
 $n$ i izračunava $n$-ti stepen broja $x$. 
  
+\skrati{1}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -282,6 +289,8 @@ broja. Napisati program za uneti pozitivan ceo broj $n$
 ispisuje sve njegove prave delioce.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
+\skrati{1}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -309,6 +318,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati program koji za uneti ceo broj ispisuje broj dobijen
 uklanjanjem svih nula sa desne strane unetog broja.
  
+\skrati{1}
+
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -469,14 +480,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{minitest}
-\begin{minitest}
+\begin{maxitest}
 \begin{upotreba}{5}
 #\naslovInt#
 #\izlaz{Unesite broj n:}\ulaz{0}#
-#\izlaz{Nema evidentiranih}#
-#\izlaz{transakcija.}#
+#\izlaz{Nema evidentiranih transakcija.}#
 \end{upotreba}
-\end{minitest}
+\end{maxitest}
 
 \linkresenje{PET_12}
 \end{Exercise}
@@ -505,18 +515,18 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{-4}#
-#\izlaz{Greska: neispravan unos.}#
+#\izlaz{Unesite broj n:}\ulaz{4}#
+#\izlaz{Unesite n brojeva:}#
+#\ulaz{5 8 13 17}#
+#\izlaz{Zbir neparnih i negativnih: 0}#
 \end{upotreba}
 \end{miditest}
 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj n:}\ulaz{4}#
-#\izlaz{Unesite n brojeva:}#
-#\ulaz{5 8 13 17}#
-#\izlaz{Zbir neparnih i negativnih: 0}#
+#\izlaz{Unesite broj n:}\ulaz{-4}#
+#\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -600,7 +610,8 @@ pozitivni.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{0}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{0}#
 #\izlaz{Nije unet nijedan broj.}#
 \end{upotreba}
 \end{miditest}
@@ -616,7 +627,8 @@ pozitivni.
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite brojeve:}\ulaz{1 0}#
+#\izlaz{Unesite brojeve:}#
+#\ulaz{1 0}#
 #\izlaz{Proizvod pozitivnih brojeva je 1.}#
 \end{upotreba}
 \end{miditest}
@@ -753,6 +765,7 @@ brojeva, a zatim određuje i ispisuje koliko puta je prilikom unosa došlo
 do promene znaka.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -801,7 +814,7 @@ U prodavnici se nalazi $n$ artikala čije su cene pozitivni realni
 brojevi. Napisati program koji učitava $n$, a potom i cenu svakog od
 $n$ artikala i određuje i ispisuje najmanju cenu.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-\vspace*{-3mm}
+\skrati{3}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -851,7 +864,7 @@ nenegativan broj $n$ i $n$ pozitivnih realnih brojeva.
 Ispisati koliko artikala ima cenu čija je vrednost manja ili jednaka $m$. 
 \napomena{Pretpostaviti da je unos ispravan.}
 
-\vspace*{-3mm}
+\skrati{3}
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -893,6 +906,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{enumerate}
 \item Broj sa najvećom cifrom desetica. Ukoliko ima više takvih, ispisati prvi.
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -912,6 +926,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -929,8 +944,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \item Broj sa najvećim brojem cifara. Ukoliko ima više takvih, ispisati prvi.
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -986,6 +1003,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \skrati{2}
 \item Broj sa najvećom vodećom cifrom. Vodeća cifra je cifra najveće težine u zapisu broja. Ukoliko ima više takvih, ispisati prvi.
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#

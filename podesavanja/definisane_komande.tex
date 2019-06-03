@@ -339,6 +339,10 @@ backgroundcolor=\color{white},   % choose the background color; you must add \us
 }
 \captionsetup[lstlisting]{format=listing, font={small,tt}}
 
+\newenvironment{miniminitest}
+{\begin{minipage}[t]{30mm}} 
+{\end{minipage}}
+
 \newenvironment{minitest}
 {\begin{minipage}[t]{40mm}} 
 {\end{minipage}}
@@ -363,7 +367,7 @@ backgroundcolor=\color{white},   % choose the background color; you must add \us
 
 \renewcommand{\AnswerHeader}{{\textbf{
 \AnswerName \ExerciseHeaderNB \ExerciseHeaderTitle
-\medskip}}}
+}}}
 
 
 \RecustomVerbatimCommand{\VerbatimInput}{VerbatimInput}%

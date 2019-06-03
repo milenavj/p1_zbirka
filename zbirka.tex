@@ -19,9 +19,11 @@
 \elektronskaverzijatrue
 %\elektronskaverzijafalse
 
+\RequirePackage{luatex85}
+
 \ifstampanaverzija
 \documentclass[pdftex,b5paper,twoside]{book}
-\setlength{\textheight}{190mm}
+\setlength{\textheight}{200mm}
 \setlength{\topmargin}{0mm}
 \fi
 
@@ -53,8 +55,8 @@
 \input{podesavanja/hyphenation.tex}
 
 \newif\ifpdf
-%\pdffalse       %postaviti na false za izbacivanje linkova na resenja
-\pdftrue %postaviti na true da bi bili prisutni linkovi na resenja
+\pdffalse       %postaviti na false za izbacivanje linkova na resenja
+%\pdftrue %postaviti na true da bi bili prisutni linkovi na resenja
 
 %za ukljucivanje resenja u materijal
 \newif\ifresenja
@@ -86,7 +88,6 @@
 \input{poglavlja/P1_predgovor.tex}
 
 \def\chaptername{}
-
 \input{poglavlja/1_UvodniPrimeri.tex}
 \input{poglavlja/2_NaredbeGrananja.tex}
 \input{poglavlja/3_Petlje.tex}
@@ -99,7 +100,7 @@
 \input{poglavlja/6a_ArgumentiKomandneLinije.tex}
 \input{poglavlja/10_Datoteke.tex}
 %\input{poglavlja/11_RazniZadaci.tex}
-%\input{poglavlja/A_IspitniRokovi.tex}
+\input{poglavlja/A_IspitniRokovi.tex}
 
 \iffalse
 \ifelektronskaverzija

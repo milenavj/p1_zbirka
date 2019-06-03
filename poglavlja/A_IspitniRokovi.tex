@@ -7,34 +7,32 @@
 \subsection{Praktični deo ispita,  januar 2019.}
 
 \begin{Exercise}[label=A_o_1_1] 
-Napisati program koji učitava četvorocifrene brojeve do unosa broja $0$, a zatim ispisuje one brojeve kojima je cifra desetica najveća cifra u zapisu. Ukoliko nema takvih brojeva među unetima, ispisati broj $0$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške.\\
+Napisati program koji učitava četvorocifrene brojeve do unosa broja $0$, a zatim ispisuje one brojeve kojima je cifra desetica najveća cifra u zapisu. Ukoliko nema takvih brojeva među unetima, ispisati broj $0$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške.
 
 \begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{9523 -8542 3232 -9999 -1121 1576 0}#
 #\naslovIzlaz#
 #\izlaz{3232 -9999 -1121 1576}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
-#\naslovUlaz#
-#\ulaz{9876 2258 -4579 4689 -5567 6630 1200 5204 0}#
-#\naslovIzlaz#
-#\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{4596 1234 9631 -120 0}#
 #\naslovIzlazZaGresku#
 #\izlaz{4596 -1}#
-\end{upotreba}
+\end{test}
+\end{miditest}
+
+\begin{miditest}
+\begin{test}{2}
+#\naslovUlaz#
+#\ulaz{9876 2258 -4579 4689 -5567 6630 1200 5204 0}#
+#\naslovIzlaz#
+#\izlaz{0}#
+\end{test}
 \end{miditest}
 
 \linkresenje{A_o_1_1}
@@ -47,33 +45,31 @@ Napisati program koji učitava četvorocifrene brojeve do unosa broja $0$, a zat
 \fi
 
 \begin{Exercise}[label=A_o_1_2] 
-Napisati program koji pomaže korisniku  da ''šifruje'' svoju elektronsku adresu kako ne bi dobijao nepoželjne poruke. ''Šifrovanje'' adrese se vrši tako što se znak @ zameni sa $[AT]$. Elektronska adresa se učitava kao niska maksimalne dužine 100 karaktera sa standardnog ulaza,  a šifrovana adresa se ispisuje na standardni izlaz. U slučaju da elektronska adresa nije ispravno zadata ispisati $-1$ na standardni izlaz za greške. \\
+Napisati program koji pomaže korisniku  da ''šifruje'' svoju elektronsku adresu kako ne bi dobijao nepoželjne poruke. ''Šifrovanje'' adrese se vrši tako što se znak @ zameni sa $[AT]$. Elektronska adresa se učitava kao niska maksimalne dužine 100 karaktera sa standardnog ulaza,  a šifrovana adresa se ispisuje na standardni izlaz. U slučaju da elektronska adresa nije ispravno zadata ispisati $-1$ na standardni izlaz za greške. 
+
 \begin{minitest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{korisnik@gmail.com}#
 #\naslovIzlaz#
 #\izlaz{korisnik[AT]gmail.com}#
-\end{upotreba}
+\end{test}
 \end{minitest}
 \begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{student@matf.bg.ac.rs}#
 #\naslovIzlaz#
 #\izlaz{student[AT]matf.bg.ac.rs}#
-\end{upotreba}
+\end{test}
 \end{minitest}
 \begin{minitest}
-\begin{upotreba}{3}
-#\naslovInt#
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{pogresnaadresayahoo.com}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
+\end{test}
 \end{minitest}
 
 
@@ -88,10 +84,10 @@ Napisati program koji pomaže korisniku  da ''šifruje'' svoju elektronsku adres
 
 \begin{Exercise}[label=A_o_1_3] 
 Definisati strukturu \textit{Hemijski\_element} koja sadrži naziv elementa (nisku dužine najviše 20 karaktera), oznaku elementa (nisku dužine najviše 2 karaktera) i broj neutrona (ceo broj). Napisati program koji učitava podatke o hemijskim elementima do unosa reči \textbf{kraj}, a potom još jedan naziv elementa i na standardni izlaz ispisuje oznaku i broj neutrona tog elementa. Ukoliko element nije pronađen među učitanim podacima, ispisati -1. \\
-\napomena{Pretpostaviti da neće biti uneto više od 120 elemenata, kao i da su podaci o hemijskim elementima ispravno zadati.} \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\napomena{Pretpostaviti da neće biti uneto više od 120 elemenata, kao i da su podaci o hemijskim elementima ispravno zadati.} 
+
+\begin{minitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{kalcijum Ca 20}#
 #\ulaz{cink Zn 35}#
@@ -100,11 +96,10 @@ Definisati strukturu \textit{Hemijski\_element} koja sadrži naziv elementa (nis
 #\ulaz{fosfor}#
 #\naslovIzlaz#
 #\izlaz{P 16}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{minitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{nikl Ni 31}#
 #\ulaz{bor B 6}#
@@ -114,11 +109,10 @@ Definisati strukturu \textit{Hemijski\_element} koja sadrži naziv elementa (nis
 #\ulaz{hrom}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{minitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{litijum Li 4}#
 #\ulaz{ugljenik C 6}#
@@ -130,8 +124,8 @@ Definisati strukturu \textit{Hemijski\_element} koja sadrži naziv elementa (nis
 #\ulaz{ugljenik}#
 #\naslovIzlaz#
 #\izlaz{C 6}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{minitest}
 
 \linkresenje{A_o_1_3}
 \end{Exercise}
@@ -150,11 +144,10 @@ U datoteci \textit{pesme.txt} dat je ceo broj $n$ koji označava broj pesama, a 
 \item ukoliko je zadata opcija \textbf{-z}, učitava se sa standardnog ulaza niska koja predstavlja žanr pesme i na standardni izlaz ispisuju nazivi svih pesama odabranog žanra.
 \end{itemize}
 
-Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
+Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. 
 
 \begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{test}{1}
 #\poziv{./a.out -p}#
 #\naslovDat{pesme.txt}#
 #\datoteka{7}#
@@ -171,13 +164,12 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 #\izlaz{StairwayToHeaven}#
 #\izlaz{SoWhat}#
 #\izlaz{Smooth}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
- #\poziv{./a.out -z}#
- #\naslovDat{pesme.txt}#
+\begin{test}{2}
+#\poziv{./a.out -z}#
+#\naslovDat{pesme.txt}#
 #\datoteka{7}#
 #\datoteka{BohemianRhapsody rock}#
 #\datoteka{RollingInTheDeep pop}#
@@ -192,32 +184,30 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 #\izlaz{RollingInTheDeep}#
 #\izlaz{BeatIt}#
 #\izlaz{Smooth}#
-\end{upotreba}
-\end{miditest}\\
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miditest}
+
+\begin{minitest}
+\begin{test}{3}
 #\poziv{./a.out -x}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{minitest}
+\begin{test}{4}
 #\poziv{./a.out -p -z }#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{5}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{minitest}
+\begin{test}{5}
 #\poziv{./a.out }#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{minitest}
 
 \linkresenje{A_o_1_4}
 \end{Exercise}
@@ -232,41 +222,40 @@ Prilikom odabira pesama za ispis, zanemariti veličinu slova. U slučaju greške
 \subsection{Praktični deo ispita,  februar 2019.}
 
 \begin{Exercise}[label=A_o_2_1] 
-Napisati program koji učitava pozitivan četvorocifren broj $n$, a zatim na standardni izlaz ispisuje zbir onih cifara broja $n$ koje su po vrednosti veće od aritmetičke sredine svih cifara broja $n$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
+Napisati program koji učitava pozitivan četvorocifren broj $n$, a zatim na standardni izlaz ispisuje zbir onih cifara broja $n$ koje su po vrednosti veće od aritmetičke sredine svih cifara broja $n$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. 
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{1234}#
 #\naslovIzlaz#
 #\izlaz{7}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{2}
+#\naslovUlaz#
 #\ulaz{6745}#
 #\naslovIzlaz#
 #\izlaz{13}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
+#\naslovUlaz#
 #\ulaz{100}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
+#\naslovUlaz#
 #\ulaz{-1234}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_o_2_1}
 \end{Exercise}
@@ -278,43 +267,40 @@ Napisati program koji učitava pozitivan četvorocifren broj $n$, a zatim na sta
 \fi
 
 \begin{Exercise}[label=A_o_2_2] 
-Napisati program koji učitava nisku $s$ parne dužine od najviše 20 karaktera i na standardni izlaz ispisuje nisku koja se dobija nadovezivanjem karaktera prve polovine niske $s$ na drugu polovinu niske $s$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+Napisati program koji učitava nisku $s$ parne dužine od najviše 20 karaktera i na standardni izlaz ispisuje nisku koja se dobija nadovezivanjem karaktera prve polovine niske $s$ na drugu polovinu niske $s$. U slučaju greške, ispisati $-1$ na standardni izlaz za greške. 
+
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{Beograde}#
 #\naslovIzlaz#
 #\izlaz{radeBeog}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{matematika}#
 #\naslovIzlaz#
 #\izlaz{atikamatem}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{1234}#
 #\naslovIzlaz#
 #\izlaz{3412}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{abc1234}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_o_2_2}
 \end{Exercise}
@@ -327,45 +313,47 @@ Napisati program koji učitava nisku $s$ parne dužine od najviše 20 karaktera 
 
 
 \begin{Exercise}[label=A_o_2_3] 
-Napisati program koji čita sadržaj datoteke \textit{ulaz.txt} i ispisuje na standardni izlaz sve niske datoteke koje predstavljaju cele brojeve. U slučaju greške, ispisati -1 na standardni izlaz za greške. \\ 
+Napisati program koji čita sadržaj datoteke \textit{ulaz.txt} i ispisuje na standardni izlaz sve niske datoteke koje predstavljaju cele brojeve. U slučaju greške, ispisati -1 na standardni izlaz za greške. 
+
 \begin{minitest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{test}{1}
+
 #\poziv{./a.out}#
 #\naslovDat{ulaz.txt}#
 #\ulaz{123 ab1 2ab -23}#
 #\naslovIzlaz#
 #\izlaz{123 -23}#
-\end{upotreba}
+\end{test}
 \end{minitest}
 \begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
+\begin{test}{2}
+
 #\poziv{./a.out}#
 #\naslovDat{ulaz.txt}#
 #\ulaz{145as 25gf 265 478 65 -96}#
 #\naslovIzlaz#
 #\izlaz{265 478 65 -96}#
-\end{upotreba}
+\end{test}
 \end{minitest}
 \begin{minitest}
-\begin{upotreba}{3}
-#\naslovInt#
+\begin{test}{3}
+
 #\poziv{./a.out}#
 #\naslovDat{ulaz.txt}#
 #\ulaz{Ovde nema brojeva}#
 #\naslovIzlaz#
 #\izlaz{}#
-\end{upotreba}
+\end{test}
 \end{minitest}
+
 \begin{minitest}
-\begin{upotreba}{4}
-#\naslovInt#
+\begin{test}{4}
+
 #\poziv{./a.out}#
 #\naslovDat{ulaz.txt ne postoji!}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
+\end{test}
 \end{minitest}
 
 \linkresenje{A_o_2_3}
@@ -383,14 +371,12 @@ Napisati program koji sa standardnog ulaza učitava podatke o osvajačima takmi�
 \item ako je navedena opcija -y kao prvi argument komandne linije, ime osvajača takmičenja za godinu koja se navodi kao drugi argument
  \item ako je navedena opcija -w kao prvi argument komandne linije, sve godine u kojima je takmičar čije se ime navodi kao drugi argument komande linije osvajao takmičenje.
 \end{itemize}
+U slučaju greške, ispisati $-1$ na standardni izlaz za greške. 
 
-U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
-
-\napomena{Podrazumevati da su ulazni podaci o takmičenjima ispravni. Broj osvajača nije unapred poznat.}\\
+\napomena{Podrazumevati da su ulazni podaci o takmičenjima ispravni. Broj osvajača nije unapred poznat.}
 
 \begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{test}{1}
 #\poziv{./a.out -y 2016}#
 #\naslovUlaz#
 #\ulaz{2011 ManUtd}#
@@ -403,11 +389,10 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 #\ulaz{2018 ManCity}#
 #\naslovIzlaz#
 #\izlaz{Leicester}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\begin{test}{2}
 #\poziv{./a.out -w RealMadrid}#
 #\naslovUlaz#
 #\ulaz{2011 Barcelona}#
@@ -420,39 +405,41 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 #\ulaz{2018 RealMadrid}#
 #\naslovIzlaz#
 #\izlaz{2014 2016 2017 2018}#
-\end{upotreba}
+\end{test}
 \end{miditest}
+
 \begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\begin{test}{3}
+
 #\poziv{./a.out -s 2001}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\begin{test}{4}
+
 #\poziv{./a.out -x}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
+\end{test}
 \end{miditest}
+
 \begin{miditest}
-\begin{upotreba}{5}
-#\naslovInt#
+\begin{test}{5}
+
 #\poziv{./a.out -s 2012 2000}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 \begin{miditest}
-\begin{upotreba}{6}
-#\naslovInt#
+\begin{test}{6}
+
 #\poziv{./a.out -y 2005 -w RealMadrid}#
 #\naslovIzlazZaGresku#
 #\izlaz{-1}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 
 \linkresenje{A_o_2_4}
@@ -470,41 +457,40 @@ U slučaju greške, ispisati $-1$ na standardni izlaz za greške. \\
 \subsection{Praktični deo ispita,  januar 2019.}
 
 \begin{Exercise}[label=A_i_1_1] 
-Napisati program koji učitava cele trocifrene brojeve sve do kraja ulaza i na standardni izlaz ispisuje one čije su cifre uređene strogo rastuće (cifre se čitaju sa leva na desno). U slučaju greške, ispisati $-1$ i prekinuti izvršavanje programa. \\
+Napisati program koji učitava cele trocifrene brojeve sve do kraja ulaza i na standardni izlaz ispisuje one čije su cifre uređene strogo rastuće (cifre se čitaju sa leva na desno). U slučaju greške, ispisati $-1$ i prekinuti izvršavanje programa. 
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{minitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{-532 236 100 -555 546}#
 #\naslovIzlaz#
 #\izlaz{236}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{miniminitest}
+\begin{test}{2}
+#\naslovUlaz#
 #\ulaz{123 -123 321 -321}#
 #\naslovIzlaz#
 #\izlaz{123 -123}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
+#\naslovUlaz#
 #\ulaz{258 695 -1234}#
 #\naslovIzlaz#
 #\izlaz{258 -1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
+#\naslovUlaz#
 #\ulaz{14}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_1_1}
 \end{Exercise}
@@ -523,42 +509,39 @@ Napisati program koji sa standardnog ulaza učitava reč $s$ maksimalne dužine 
 \item ukolko je učitan karakter $o$, ne menjati karaktere reči $s$
  \end{itemize}
 Na standardni izlaz ispisati nisku nakon modifikacije. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{sreca m}#
 #\naslovIzlaz#
 #\izlaz{SRECA}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{IspiT v}#
 #\naslovIzlaz#
 #\izlaz{ISPIT}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{Rec o}#
 #\naslovIzlaz#
 #\izlaz{Rec}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{PROgram x}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_1_2}
 \end{Exercise}
@@ -571,10 +554,10 @@ Na standardni izlaz ispisati nisku nakon modifikacije. U slučaju greške, ispis
 
 
 \begin{Exercise}[label=A_i_1_3] 
-Napisati program za praćenje rezultata automobilske trke. Na takmičenju učestvuje $n$ ($n\geq 3$) takmičara u $m$ ($m\geq 2$) trka. Program prvo učitava broj takmičara i trka, a zatim za svakog od $n$ takmičara vreme u sekundama u svakoj od $m$ trka. Pretpostaviti da neće biti više od $100$ takmičara i $100$ trka. Vremena čuvati u matrici dimenzije $n \times m$ tako da element ($i$, $j$) predstavlja vreme koje je takmičar $i$ postigao u $j$-toj trci. Na standardni izlaz ispisati redne brojeve takmičara (brojeći ih od 0) koji su pobedili u trkama (bili najbrži), redom za svaku trku. Pretpostaviti da neće biti više takmičara sa istim prolaznim vremenom po trci. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. \\
-\begin{minitest}
-\begin{upotreba}{1}
-#\naslovInt#
+Napisati program za praćenje rezultata automobilske trke. Na takmičenju učestvuje $n$ ($n\geq 3$) takmičara u $m$ ($m\geq 2$) trka. Program prvo učitava broj takmičara i trka, a zatim za svakog od $n$ takmičara vreme u sekundama u svakoj od $m$ trka. Pretpostaviti da neće biti više od $100$ takmičara i $100$ trka. Vremena čuvati u matrici dimenzije $n \times m$ tako da element ($i$, $j$) predstavlja vreme koje je takmičar $i$ postigao u $j$-toj trci. Na standardni izlaz ispisati redne brojeve takmičara (brojeći ih od 0) koji su pobedili u trkama (bili najbrži), redom za svaku trku. Pretpostaviti da neće biti više takmičara sa istim prolaznim vremenom po trci. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. 
+
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{3 3}#
 #\ulaz{192.9 87.8 109.102}#
@@ -582,11 +565,10 @@ Napisati program za praćenje rezultata automobilske trke. Na takmičenju učest
 #\ulaz{151.1 87.9 118.9}#
 #\naslovIzlaz#
 #\izlaz{2 0 1}#
-\end{upotreba}
-\end{minitest}
+\end{test}
+\end{miniminitest}
 \begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{3 4}#
 #\ulaz{51.3 184.94 121.7 99.51}#
@@ -594,27 +576,25 @@ Napisati program za praćenje rezultata automobilske trke. Na takmičenju učest
 #\ulaz{51.2 192.11 122.9 100.1}#
 #\naslovIzlaz#
 #\izlaz{1 1 1 1}#
-\end{upotreba}
+\end{test}
 \end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\naslovInt#
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{4 3}#
 #\ulaz{113.5 145.2 -14.5}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{4 -3}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{minitest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_1_3}
 \end{Exercise}
@@ -626,13 +606,12 @@ Napisati program za praćenje rezultata automobilske trke. Na takmičenju učest
 \fi
 
 \begin{Exercise}[label=A_i_1_4] 
-Definisati strukturu sa nazivom $Kutija$ koja sadrži dužinu, širinu i visinu kutije u centimetrima (pozitivni celi brojevi). Napisati program koji učitava pozitivan ceo broj $n$ ($n \leq 100$), a zatim i podatke o $n$ kutija. Nakon toga, program treba da ispiše zapreminu kutije u koju se može smestiti svaka od preostalih $n-1$ kutija pojedinačno. Pretpostaviti da neće biti više takvih kutija, a ukoliko takva kutija ne postoji, ispisati $0$. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. \\ 
+Definisati strukturu sa nazivom $Kutija$ koja sadrži dužinu, širinu i visinu kutije u centimetrima (pozitivni celi brojevi). Napisati program koji učitava pozitivan ceo broj $n$ ($n \leq 100$), a zatim i podatke o $n$ kutija. Nakon toga, program treba da ispiše zapreminu kutije u koju se može smestiti svaka od preostalih $n-1$ kutija pojedinačno. Pretpostaviti da neće biti više takvih kutija, a ukoliko takva kutija ne postoji, ispisati $0$. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa.  
 
-\napomena{Da bi jedna kutija (sa celobrojnim dimenzijama) stala u drugu, svaka od dimenzija te kutije (dužina, širina i visina redom) mora biti manja barem 1 centimetar od odgovarajućih dimenzija druge kutije. Prilikom smeštanja jedne kutije u drugu nema obrtanja kutije.}\\
+\napomena{Da bi jedna kutija (sa celobrojnim dimenzijama) stala u drugu, svaka od dimenzija te kutije (dužina, širina i visina redom) mora biti manja barem 1 centimetar od odgovarajućih dimenzija druge kutije. Prilikom smeštanja jedne kutije u drugu nema obrtanja kutije.}
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{4}#
 #\ulaz{15 2 9}#
@@ -641,11 +620,10 @@ Definisati strukturu sa nazivom $Kutija$ koja sadrži dužinu, širinu i visinu 
 #\ulaz{120 12 3}#
 #\naslovIzlaz#
 #\izlaz{59940}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{3}#
 #\ulaz{9 18 2}#
@@ -653,28 +631,26 @@ Definisati strukturu sa nazivom $Kutija$ koja sadrži dužinu, širinu i visinu 
 #\ulaz{3 15 5}#
 #\naslovIzlaz#
 #\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{-3}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{3}#
 #\ulaz{1 2 3}#
 #\ulaz{8 9 -5}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_1_4}
 \end{Exercise}
@@ -690,44 +666,40 @@ Definisati strukturu sa nazivom $Kutija$ koja sadrži dužinu, širinu i visinu 
 
 \begin{Exercise}[label=A_i_2_1] 
 Napisati program koji učitava cele trocifrene brojeve sve do kraja ulaza i na standardni izlaz ispisuje one brojeve čija je cifra desetica jednaka aritmetičkoj sredini cifara stotina i jedinica. 
-U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. \\
+U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. 
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{minitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{543 236 100 -555 546}#
 #\naslovIzlaz#
 #\izlaz{543 -555}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{miniminitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{402 -402 103 -103}#
 #\naslovIzlaz#
 #\izlaz{}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{-1234}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{14}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_2_1}
 \end{Exercise}
@@ -739,43 +711,40 @@ U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje p
 \fi
 
 \begin{Exercise}[label=A_i_2_2] 
-Sa standardnog ulaza se učitava niska $s$ maksimalne dužine $30$ karaktera. Napisati program koji na standardni izlaz ispisuje dužinu najduže podniske niske $s$ čiji su karakteri uređeni strogo rastuće po ASCII kodovima čitajući sa leva na desno.  \\
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+Sa standardnog ulaza se učitava niska $s$ maksimalne dužine $30$ karaktera. Napisati program koji na standardni izlaz ispisuje dužinu najduže podniske niske $s$ čiji su karakteri uređeni strogo rastuće po ASCII kodovima čitajući sa leva na desno.  
+
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{stolica}#
 #\naslovIzlaz#
 #\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{a12bcABc}#
 #\naslovIzlaz#
 #\izlaz{4}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{PPPPPPPP}#
 #\naslovIzlaz#
 #\izlaz{1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{abcdefw}#
 #\naslovIzlaz#
 #\izlaz{7}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_2_2}
 \end{Exercise}
@@ -788,10 +757,10 @@ Sa standardnog ulaza se učitava niska $s$ maksimalne dužine $30$ karaktera. Na
 
 
 \begin{Exercise}[label=A_i_2_3] 
-Sa standardnog ulaza se učitava neparan prirodan broj $n$ ($n\leq101$), a zatim $n^{2}$ celih brojeva koje treba sačuvati u odgovarajućoj kvadratnoj matrici. Proveriti da li je suma elemenata na glavnoj dijagonali matrice neparna, i ako jeste, na standardni izlaz ispisati vrednost maksimalnog elementa glavne dijagonale. Ako to nije slučaj, ispisati vrednost minimalnog elementa glavne dijagonale. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. \\
-\begin{minitest}
-\begin{upotreba}{1}
-#\naslovInt#
+Sa standardnog ulaza se učitava neparan prirodan broj $n$ ($n\leq101$), a zatim $n^{2}$ celih brojeva koje treba sačuvati u odgovarajućoj kvadratnoj matrici. Proveriti da li je suma elemenata na glavnoj dijagonali matrice neparna, i ako jeste, na standardni izlaz ispisati vrednost maksimalnog elementa glavne dijagonale. Ako to nije slučaj, ispisati vrednost minimalnog elementa glavne dijagonale. U slučaju greške, ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa. 
+
+\begin{miniminitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{3 }#
 #\ulaz{15 6 7}#
@@ -799,11 +768,10 @@ Sa standardnog ulaza se učitava neparan prirodan broj $n$ ($n\leq101$), a zatim
 #\ulaz{3 2 6}#
 #\naslovIzlaz#
 #\izlaz{15}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{5}#
 #\ulaz{12 6 7 1 2}#
@@ -813,26 +781,24 @@ Sa standardnog ulaza se učitava neparan prirodan broj $n$ ($n\leq101$), a zatim
 #\ulaz{12 6 7 1 2}#
 #\naslovIzlaz#
 #\izlaz{-4}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{4}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{miniminitest}
+\begin{miniminitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{-7}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{minitest}
+\end{test}
+\end{miniminitest}
 
 \linkresenje{A_i_2_3}
 \end{Exercise}
@@ -845,11 +811,10 @@ Sa standardnog ulaza se učitava neparan prirodan broj $n$ ($n\leq101$), a zatim
 
 \begin{Exercise}[label=A_i_2_4] 
 Definisati strukturu sa nazivom $Student$ koja sadrži podatke o studentu: indeks studenta (pozitivan ceo broj), broj poena ostvaren na ispitu (nenegativan realan broj dvostruke tačnosti iz intervala $[0,100]$ ) i oznaku učionice u kojoj je student polagao ispit (niska iz skupa "704", "718", "rlab" i "bim").  Napisati program koji sa standardnog ulaza učitava prirodan broj $n$, a zatim podatke o $n$ studenata koji su polagali ispit iz Programiranja 1, redom, indeks, broj poena i oznaku učionice. Nakon podataka o studentima se učitava oznaka učionice za koju treba ispisati broj studenata iz te učionice koji su položili ispit. Oznaka učionice se zadaje kao niska od najviše $10$ karaktera.  Pretpostaviti da su podaci o studentima ispravni i da neće biti više od $100$ studenata. U slučaju greške ispisati $-1$ na standardni izlaz i prekinuti izvršavanje programa.  
-Student je položio ispit ako je na istom ostvario bar 51 poen. \\ 
+Student je položio ispit ako je na istom ostvario bar 51 poen.  
 
-\begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{minitest}
+\begin{test}{1}
 #\naslovUlaz#
 #\ulaz{9}#
 #\ulaz{20180001 98 704}#
@@ -864,11 +829,10 @@ Student je položio ispit ako je na istom ostvario bar 51 poen. \\
 #\ulaz{704}#
 #\naslovIzlaz#
 #\izlaz{2}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{2}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{minitest}
+\begin{test}{2}
 #\naslovUlaz#
 #\ulaz{7}#
 #\ulaz{20180003 73 718}#
@@ -881,11 +845,10 @@ Student je položio ispit ako je na istom ostvario bar 51 poen. \\
 #\ulaz{rlab}#
 #\naslovIzlaz#
 #\izlaz{1}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
+\end{test}
+\end{minitest}
+\begin{minitest}
+\begin{test}{3}
 #\naslovUlaz#
 #\ulaz{4}#
 #\ulaz{20180001 98 704}#
@@ -895,17 +858,17 @@ Student je položio ispit ako je na istom ostvario bar 51 poen. \\
 #\ulaz{bim}#
 #\naslovIzlaz#
 #\izlaz{0}#
-\end{upotreba}
-\end{miditest}
-\begin{miditest}
-\begin{upotreba}{4}
-#\naslovInt#
+\end{test}
+\end{minitest}
+
+\begin{minitest}
+\begin{test}{4}
 #\naslovUlaz#
 #\ulaz{-4}#
 #\naslovIzlaz#
 #\izlaz{-1}#
-\end{upotreba}
-\end{miditest}
+\end{test}
+\end{minitest}
 
 \linkresenje{A_i_2_4}
 \end{Exercise}
