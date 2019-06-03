@@ -1429,6 +1429,31 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \skrati{2}
 \begin{minitest}
 \begin{upotreba}{1}
+#\poziv{./a.out 5000}#
+
+#\naslovInt#
+#\izlaz{Unesite naziv datoteke:}#
+#\ulaz{dat1.txt}#
+
+#\naslovDat{dat1.txt ne postoji}#
+
+#\naslovIzlazZaGresku#
+#\izlaz{Greska: neuspesno otvaranje}#
+#\izlaz{ulazne datoteke.}#
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{2}
+#\poziv{./a.out}#
+
+#\naslovIzlazZaGresku#
+#\izlaz{Greska: neispravan poziv.}#
+\end{upotreba}
+\end{minitest}
+
+
+\begin{minitest}
+\begin{upotreba}{3}
 #\poziv{./a.out 4000}#
 
 #\naslovInt#
@@ -1457,29 +1482,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\izlaz{renault clio 3650}#
 \end{upotreba}
 \end{minitest}
-\begin{minitest}
-\begin{upotreba}{2}
-#\poziv{./a.out 5000}#
 
-#\naslovInt#
-#\izlaz{Unesite naziv datoteke:}#
-#\ulaz{dat1.txt}#
-
-#\naslovDat{dat1.txt ne postoji}#
-
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neuspesno otvaranje}#
-#\izlaz{ulazne datoteke.}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\poziv{./a.out}#
-
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan poziv.}#
-\end{upotreba}
-\end{minitest}
 \linkresenje{v3_06}
 \end{Exercise}
 \begin{Answer}[ref=v3_06]
