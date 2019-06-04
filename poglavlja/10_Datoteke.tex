@@ -286,7 +286,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Exercise}
 \begin{Answer}[ref=p3_iv3]
 %\includecode{resenja/4_Datoteke/sve/4.c}
-
 Pogledajte zadatke \ref{p3_id17} i \ref{p3_id16}.
 \end{Answer}
 
@@ -330,7 +329,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Exercise}
 \begin{Answer}[ref=p3_01]
 %\includecode{resenja/4_Datoteke/sve/6.c}
-
 Pogledajte zadatke \ref{p3_id17} i \ref{p3_id16}.
 \end{Answer}
 
@@ -705,7 +703,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Exercise}
 \begin{Answer}[ref=p3_id20]
 %\includecode{resenja/4_Datoteke/sve/13.c}
-
 Pogledajte zadatke \ref{p3_id18} i \ref{palindrom}.
 \end{Answer}
 
@@ -1042,7 +1039,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Exercise}
 \begin{Answer}[ref=p3_x6]
 %\includecode{resenja/4_Datoteke/sve/19.c}
-
 Pogledajte zadatak \ref{p3_iv4}.
 \end{Answer}
 
@@ -1178,7 +1174,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \linkresenje{p3_x5}
 \end{Exercise}
 \begin{Answer}[ref=p3_x5]
- 
 Pogledajte zadatak \ref{p3_07}.
 \end{Answer}
 
@@ -1366,7 +1361,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{19 3}#
 #\datoteka{-2 7}#
 #\datoteka{97 90}#
-
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{1 (nastavak)}
 #\naslovDat{d2.txt}#
 #\datoteka{5/1}#
 #\datoteka{3/19}#
@@ -1377,6 +1375,16 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovPokretanje#
+#\argumenti{./a.out ulaz.txt izlaz.txt}#
+
+#\naslovIzlazZaGresku#
+#\izlaz{Greska: neispravan poziv.}#
+\end{upotreba}
+\end{minitest}
+
+\begin{minitest}
+\begin{upotreba}{3}
+#\naslovPokretanje#
 #\argumenti{./a.out d1.txt d2.txt -y}#
 
 #\naslovDat{d1.txt}#
@@ -1385,21 +1393,15 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{19 3}#
 #\datoteka{-2 7}#
 #\datoteka{97 90}#
-
+\end{upotreba}
+\end{minitest}
+\begin{minitest}
+\begin{upotreba}{3 (nastavak)}
 #\naslovDat{d2.txt}#
 #\datoteka{5.000000}#
 #\datoteka{0.157894}#
 #\datoteka{-3.500000}#
 #\datoteka{0.927835}#
-\end{upotreba}
-\end{minitest}
-\begin{minitest}
-\begin{upotreba}{3}
-#\naslovPokretanje#
-#\argumenti{./a.out ulaz.txt izlaz.txt}#
-
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
 \end{minitest}
 \linkresenje{v3_05}
@@ -1427,7 +1429,7 @@ nalaze podaci za najviše 100 automobila.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \skrati{2}
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out 5000}#
 
@@ -1441,18 +1443,18 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\izlaz{Greska: neuspesno otvaranje}#
 #\izlaz{ulazne datoteke.}#
 \end{upotreba}
-\end{minitest}
-\begin{minitest}
+\end{miditest}
+\begin{miditest}
 \begin{upotreba}{2}
 #\poziv{./a.out}#
 
 #\naslovIzlazZaGresku#
 #\izlaz{Greska: neispravan poziv.}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
 
 
-\begin{minitest}
+\begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out 4000}#
 
@@ -1467,6 +1469,10 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{renault clio 3650}#
 #\datoteka{dacia logan 5400}#
 #\datoteka{dacia sandero 7800}#
+\end{upotreba}
+\end{miditest}
+\begin{miditest}
+\begin{upotreba}{3 (nastavak)}
 #\datoteka{fiat bravo 4900}#
 #\datoteka{fiat linea 4290}#
 
@@ -1481,7 +1487,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\izlaz{renault twingo 2900}#
 #\izlaz{renault clio 3650}#
 \end{upotreba}
-\end{minitest}
+\end{miditest}
 
 \linkresenje{v3_06}
 \end{Exercise}
@@ -1688,6 +1694,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Answer}
 
 
+\skrati{2}
 \begin{Exercise}[label=p3_09] 
  Napisati program koji linije koje se učitavaju sa standardnog ulaza sve do kraja ulaza 
  prepisuje u datoteku $izlaz.txt$ i to, ako je prilikom pokretanja zadata opcija 
@@ -1697,6 +1704,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
  Pretpostaviti da je maksimalna dužina linije $80$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out -m}#
@@ -1730,6 +1738,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out -k}#
@@ -1753,6 +1762,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Answer}
 
 
+\skrati{3}
 \begin{Exercise}[label=p3_iv10]         
 Napisati program koji poredi dve datoteke i ispisuje redni broj linija u
 kojima se datoteke razlikuju. Imena datoteka se zadaju kao argumenti
@@ -1760,6 +1770,7 @@ komandne linije. Pretpostaviti da je maksimalna dužina
 linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
+\skrati{3}
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovPokretanje#
