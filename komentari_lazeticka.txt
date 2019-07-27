@@ -1,0 +1,279 @@
+Drage devojke, 
+Pogledala sam - pazljivo koliko mi je vreme dopustilo - vas tekst i opsti utisak mi je da 
+ste uradile veliki i dobar posao. Korisno stivo koje ce biti od velike pomoci studentima.
+Dobro je, npr. sto se zadaci - ne samo po tehnici vec i po formulaciji - uvode postupno,
+ - prvo rutinski pa tekstualni; sto se uvode uopstenja prethodnih zadataka 
+ - kako se uvode kontrolne strukture, funkcije, datoteke, i sl.
+Ima dosta zanimljivih zadataka ali vise o tome - u recenziji.
+
+Ovde uglavnom neka zapazanja koja mozda mogu da budu korisna u finalizaciji teksta.
+
+Predgovor: sekvenciranje, selekcija i iteracija - bolje reci sekvenca, selekcija, iteracija, 
+ili sve glagolske imenice - sekvenciranje, selektovanje, iteriranje (mada sekvenciranje ima po malo rezervisano znacenje)
+U Predgovoru treba pomenuti da je rec o programskom jeziku C.
+
+
+Sadrzaj: umesto Predstavljenj podataka - mozda Napredni tipovi podataka (kao sto je receno u Predgovoru).
+Predstavljanje podataka obicno  znaci predstavljenje u racunaru...
+Dodatak sadrži primere ispitnih rokova iz jedne akademske godine.  - dodati i ostale ili prethodne rokove
+zadacima davali svoje doprinose različiti asistenti koji su držali vežbe iz ovog kursa u prethodnih desetak godina - moda i duze
+korišćni za početno testiranje (koje prethodi ocenjivanju)  - korisceni; zar nije slucaj da kompletno testiranje (ne samo "pocetno") prethodi ocenjivanju?
+Proverite da li se uz Dobrodosli koristi prilog - vrlo, veoma i sl (osim kolokvijalno)?
+
+---------------------------------------
+---------------------------------------
+Zadatak 1.1.7 
+A primer 8  20
+		 10 5 ?
+		 Zasto se u resenju vremena svode na sekunde? Ako se i sekunde podrazumevaju u formulaciji zadatka, treba ih ukljciti i u resenje
+
+
+ODGOVOR: Propust je u resenju, nije bilo potrebno racunati u sekundama. 
+IZMENA: Prepravljeno resenje tako da se vreme pretvara u minute i na osnovu dobijenih minta se racuna krajnji rezultat.
+
+---------------------------------------		 
+---------------------------------------		 
+težinu avionskog tereta zraženu u funtama - izrazenu	
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------		 
+Zadatak 1.1.25 - naspramna temane?
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------		 
+U resenjima za 1.1.23 i 1.1.24 mozda napomenuti  da se podsete obrazaca za racunanje povrsine trougla preko stranica
+
+IZMENA: Uz oba zadatka dodat je obrazac:
+Za računanje površine jednakostraničnog trougla može se iskoristiti obrazac $P = \frac{a^2\cdot \sqrt{3}}{4}$ pri čemu je $a$ dužina stranice.
+
+Za računanje površine trougla može se koristiti obrazac P = $\sqrt{S\cdot(S-a)\cdot(S-b)\cdot(S-c)}$ pri čemu su $a$, $b$ i $c$ dužine stranica, a $S$ je poluobim.
+
+---------------------------------------
+---------------------------------------
+Zadatak 1.3.9 Da li je dobro reci "proizvod karaktera koji su cifre"? Da li bi mogao da se izracuna proizvod karaktera koji nisu cifre i koliki bi on bio? 
+To ne odgovara onome sto se ocekuje kada su karakteri cifre?
+
+ODGOVOR: Ovde je bio cilj da u zadatku se vezba da se prepoznaju cifre medju ucitanim karakterima i da te karaktere pretvore u cifre.
+IZMENA: Napisati program koji učitava tri karaktera. Ispitati da li među unetim karakterima ima cifara i ako je tako
+odrediti proizvod tih cifara. 
+
+---------------------------------------
+---------------------------------------
+Zadatak 1.5.8: Napisati program za uneti pozitivan ceo broj n ispisuje  program koji za uneti...
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
+Tekst zadatka 1.5.18 je necitak
+
+STARA VERZIJA: Napisati program koji učitava pozitivan ceo broj n, potom
+n realnih brojeva, a zatim određuje i ispisuje koliko puta je prilikom unosa došlo
+do promene znaka. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o
+grešci.
+
+IZMENA: Tekst zadatka sada glasi:
+Napisati program koji učitava pozitivan ceo broj n, a potom
+n realnih brojeva. Ispisati koliko puta je prilikom unosa došlo
+do promene znaka. Promena znaka je kada se nakon pozitivnog broja unese negativan broj ili obrnuto, kada se nakon negativnog broja unese pozitivan broj. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o
+grešci.
+
+---------------------------------------
+---------------------------------------
+Zadatak 1.5.20 "program koji pomaže Nikoli da brzo odredi broj atikala" - sta znaci brzo? mozda dodati i "takvih artikala"? Jer broj artikala ima unet.
+A u resenju - pozivanje na resenje 1.5.18 nije ocigledno
+
+
+IZMENA: Novi tekst:
+Nikola želi da obraduje baku i da joj kupi jedan poklon
+u radnji. On na raspolaganju ima m dinara. U radnji se nalazi n artikala i za-
+nima ga koliko ima artikala u radnji čija cena je manja ili jednaka m. Napisati
+program koji pomaže Nikoli da odredi broj takvih atikala. Program učitava realan
+nenegativan broj m, ceo nenegativan broj n i n pozitivnih realnih brojeva. Ispi-
+sati koliko artikala ima cenu čija je vrednost manja ili jednaka m. Napomena:
+Pretpostaviti da je unos ispravan.
+
+Dodato resenje.
+
+---------------------------------------
+---------------------------------------
+Zadatak 1.5.47 - dva puta ponovljena formulacija "Napisati program(e) koji za unetu..." - mozda pod (a), (b), ... moze samo "tablicu mnozenja", "tablicu sastavljenu od ..."
+i sl.
+
+DANIJELA: izmenjeno kako je profesorka napisala, proveriti jos jednom da li je ovako dobro (nisam sigurna za gramatiku)
+IZMENA: Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje
+(\napomena{Pretpostaviti da je unos ispravan.})
+
+
+\begin{enumerate}
+\item tablicu množenja. 
+
+\item sve brojeve od 1 do $n^2$ pri čemu se ispisuje po $n$ brojeva u jednoj vrsti.
+
+\item tablicu brojeva tako 
+da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta 
+dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
+
+\item pravougli ,,trougao'' sačinjen od ,,koordinata'' svojih
+tačaka. ,,Koordinata'' tačke je oblika $(i,j)$ pri čemu $i,\ j = 0,
+\ldots, n$. Prav ugao se nalazi u gornjem levom uglu slike i njegova
+koordinata je $(0, 0)$. Koordinata $i$ se uvećava po vrsti, a
+koordinata $j$ po koloni, pa je zato koordinata tačke koja je ispod
+tačke $(0,0)$ jednaka $(1, 0)$, a koordinata tačke koja je desno od
+tačke $(0,0)$ jednaka $(0,1)$.
+
+---------------------------------------
+---------------------------------------
+1.5.55 - stranica umesto strana
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
+1.5.59 "završavajući sa svakim n-tim" - nije jasno (primer objasnjava ali formulacija nije precizna pa je mozda bolje izostaviti)
+
+DANIJELA: Nisam sigurna koliko ovo moze da se popravi, malo sam prepravila tekst, ali ako mislite da je bolje zadatak mozemo obrisati.
+
+STARA VERZIJA: Napisati program koji učitava pozitivan ceo broj n i
+ispisuje sve brojeve od 1 do n, zatim svaki drugi broj od 1 do n, zatim svaki treći
+broj od 1 do n itd., završavajući sa svakim n-tim (tj. samo sa 1). Napomena:
+Pretpostaviti da je unos ispravan.
+
+NOVA VERZIJA: Napisati program koji učitava pozitivan ceo broj $n$ i ispisuje $n$ redova.
+U prvom redu ispisuje sve
+brojeve od $1$ do $n$, u drugom redu svaki drugi broj od $1$ do $n$, u trećem redu ispisuje
+svaki treći broj od $1$ do $n$ itd. Na kraju, u $n$-tom redu ispisuje $1$.
+\napomena{Pretpostaviti da je unos ispravan.}
+
+---------------------------------------
+---------------------------------------
+Resenja za petlje nisam gledala
+
+---------------------------------------
+---------------------------------------
+1.7.4 - Napisati program koji učitava dva neoznačena broja i ispisuje da li vrednost prvog broja odgovara vrednosti nekog stepena drugog broja.
+- da li vrednost prvog broja odgovara vrednosti nekog stepena drugog broja (i kog)...
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
+1.7.5 određuje najvećeg zajedničkog delioca 
+- određuje najveći zajednički delilac
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
+U resenju zadatka 1.7.19 "Dok god u broju x ima vise od 2 cifre, vrednost broja x se zamenjuje sa zbirom njegovih cifara. "
+vise od 1 cifre? vrednos broja x se zamenjuje zbirom (bez "sa", to primeniti dosledno i na drugim mestima)
+
+TODO
+---------------------------------------
+---------------------------------------
+U zadatku 1.3.12 kazete "Broj je Armstrongov ako je jednak zbiru kubova svojih cifara.  "
+U zadatku 1.7.20 kazzete "Prirodan broj a je Armstrongov ako je jednak sumi n-tih stepena svojih cifara, pri čemu je n broj cifara broja a"
+
+TODO
+---------------------------------------
+---------------------------------------
+Zadatak 1.7.21 grcko epsilon zameniti sa epsilon
+
+1.7.23 u abecedi - u engleskoj abecedi ?
+
+1.7.26 Napisati program koji učitava tri cela broja i ispisuje koliko dana je proteklo od Nove godine
+... tri cela broja (dan, mesec, godina) i ispisuje ...
+1.7.27 - slicno i jos "krja godine" - kraja
+
+Resenja nisam gledala================
+==============================================================
+Predstavljanje podataka
+
+2.1.9 "slova engleskog alfabeta " - na drugom mestu "abeceda" ... ujednaciti
+2.1.10 "vratiti onog sa najmanjim indeksom. " - rednim brojem
+2.1.16 - funkcije treba formulisati opstije, tako da budu nezavisne od "nadmorskih visina" - to treba pomenuti tek u programu.
+2.1.17 "niz b koji sadrzi sve elemente niza a koji se pojavljuju bar dva puta u nizu." - sve razlicite elemente niza a koji se ...
+
+Zadatak 2.1.22 Napisati funkciju koja određuje da li se jedan niz javlja kao podniz drugog niza. 
+(a) Niz b je podniz niza a ako su elementi niza b uzastopni elementi niza a. 
+(b) Niz b je podniz niza a ako je redosled pojavljivanja elemenata niza b u nizu a isti i ne nužno uzastopan.
+
+Predlog:
+Zadatak 2.1.22 Napisati funkciju koja određuje da li se jedan niz javlja kao (uastopni) podniz drugog niza. 
+(a) Niz b je uzastopni podniz niza a ako su elementi niza b uzastopni elementi niza a. 
+(b) Niz b je podniz niza a ako je redosled pojavljivanja elemenata niza b u nizu a isti i ne nužno uzastopan.
+
+2.1.13 Napisati funkciju void brojanje(int a[], int b[], int n) koja na osnovu celobrojnog niza a dimenzije n formira niz b 
+formira niz b dimenzije n 
+
+2.1.26 Maksimalni broj elemenata niza je 100 
+niza a i b 
+slicno za 27,28, (34)
+Resenja nisam gledala
+
+2.3.3 koja za dve prave  - razne prave
+
+2.3.5 trajanje filma u satima, minutama i sekundama - minutima
+
+2.3.7 Pokazivači np i nn redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata
+- malo preciznije (pokazivac sadrzi broj?)
+
+Resenja nisam gledala
+Zadatak 2.5.7 Napisatifunkciju int podniska(char s[], char t[]) koja proverava da li je niska t podniska niske s
+- ranije je razlikovan slucaj uzastopnog podniza od podniza - da li ovde treba nesto naglasiti u tom smislu?
+
+2.5.10 - pravilo se ne primenjuje na nisku dobijenu uklanjanjem? Na primer u "approval" uklanja se drugo p ali ne i prvo p?
+2.5.12 pri čemu između svaka dva kopiranja umeće crtica.  - pri cemu se izmedju...
+2.5.28,29 - engleske abecede
+resenja -
+
+2.7.2 - izracunava i stampa sa 3 decimale
+
+Uz 2.7.4 Napisati program koji za učitanu matricu celih brojeva2 2Pod pojmom učitati matricu ili za datu matricu uvek se podrazumeva da se prvo unose dimenzije matrice, a potom i sama matrica.
+
+- "ucitana matrica" se javlja jos u 2.7.2
+2.7.7 Napisati funkciju koja formira niz b0,b1,...,bn 
+- precizirati: od matrice sa nxm (mada je onda niz b0,b1,...,bn-1
+
+2.7.8. pod a,b i c: kojom se za relaciju zadatom matricom a  - ... relaciju zadatu ...
+2.7.9 pod c i d: sumu elememenata  - elemenata
+resenja -
+
+celzijus / Celzijus
+
+2.9.6 informacije o svakom detetu i za zadati pol i uzrast deteta i ispisuje korisniku na tri decimale prosečnu ocenu 
+-preformulisati
+
+2.9.7 smer O?
+
+Zadatak 2.9.12 Napisati program za predstavljanje poligona i izračunavanje njegovog obima i dužine stranica. 
+- mozda je prirodnije ...izračunavanje dužine njegovih stranica i obima. 
+tacka (d) zavrsava se sa ..
+
+2.9.13, 2.9.14 - predlozila bih da se i ovde zada deklaracija funkcija koje se traze - kao i u prethodnim zadacima sa strukturama
+Malo precizirati. 
+
+3.1.7 Opcije su karakteri argumenata koji počinju karaktera -.
+- karakterom -
+
+Zadatak 3.3.11  Napisati program koji učitava reči iz datoteke (rec je niz karaktera imedju blanko simbola)...
+3.3.26 standarni izlaz - standardni ...
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+	 
+
