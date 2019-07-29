@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-/* Funkcija vraca karakter koji se u abecedi nalazi k mesta pre
+/* Funkcija vraca karakter koji se u engelskoj abecedi nalazi k mesta pre
    datog karaktera c. */
 char sifra(char c, int k) {
   /* Provera da li je karakter malo slovo. */

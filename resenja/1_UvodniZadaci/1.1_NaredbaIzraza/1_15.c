@@ -22,7 +22,7 @@ int main() {
   
   /* Srednji deo rezultata je broj m.
      U navedenom primeru, rezultat se dobija nadovezivanjem 
-     brojeva 12, 67 i 345. Ovo se radi mnozenjem delova sa
+     brojeva 12, 67 i 345. Ovo se radi mnozenjem delova
      odgovarajucim stepenom broja 10 i njihovim sabiranjem. */
   novibroj = levi * 100000 + m * 1000 + desni;
 

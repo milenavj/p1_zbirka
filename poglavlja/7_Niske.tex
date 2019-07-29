@@ -249,7 +249,7 @@ Pretpostaviti da niska može da ima najviše 20 karaktera.
 
 
 \begin{Exercise}[label=NIS_07] 
- Napisati funkciju \kckod{int podniska(char s[], char t[])} koja proverava da li je niska $t$ podniska niske $s$. 
+ Napisati funkciju \kckod{int podniska(char s[], char t[])} koja proverava da li je niska $t$ uzastopna podniska niske $s$. 
  Napisati program koji učitava dve niske maksimalne dužine 10 karaktera i ispisuje da li je druga niska podniska prve.
  
 \begin{minitest}
@@ -361,8 +361,8 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera ispisuje
 
 \begin{Exercise}[label=NIS_10] 
  Napisati funkciju \kckod{void ukloni(char *s)} koja iz niske uklanja
- sva slova iza kojih neposredno sledi slovo koje je u abecedi nakon
- njih, pri čemu se veličina slova zanemaruje. 
+ sva slova iza kojih neposredno sledi slovo koje je u engelskoj abecedi nakon
+ njih, pri čemu se veličina slova zanemaruje. Pravilo se ne primenjuje na nisku dobijenu uklanjanjem.
  Napisati program koji učitava liniju teksta koja ima najviše 100 karaktera
  i ispisuje liniju koja se dobije nakon uklanjanja pomenutih karaktera.
  
@@ -444,7 +444,7 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera ispisuje
 
 
 \begin{Exercise}[label=NIS_12]  Napisati program koji za unetu reč maksimalne dužine 20 karaktera i pozitivan broj $n$ 
-manji od $10$, formira rezultujuću reč tako što unetu reč kopira $n$ puta pri čemu između svaka dva kopiranja umeće crtica. 
+manji od $10$, formira rezultujuću reč tako što unetu reč kopira $n$ puta pri čemu se između svaka dva kopiranja umeće crtica. 
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{minitest}
@@ -1124,7 +1124,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[label=NIS_28] 
 Napisati program koji šifuje unetu nisku tako što svako slovo zamenjuje 
-sledećim slovom abecede (slova ’z' i 'Z' zamenjuje, redom, sa 'a' i ’A’),
+sledećim slovom engelske abecede (slova ’z' i 'Z' zamenjuje, redom, sa 'a' i ’A’),
 a ostale karaktere ostavlja nepromenjene. Ispisati nisku dobijenu na ovaj nacin. 
 Pretpostaviti da uneta niska nije duža od 20 karaktera.
 
@@ -1161,7 +1161,7 @@ Pretpostaviti da uneta niska nije duža od 20 karaktera.
 
 \begin{Exercise}[label=NIS_29] 
 Napisati funkciju \kckod{void sifruj(char rec[], char sifra[])} koja na osnovu date 
-reči formira šifru tako što se svako slovo u reči zameni sa naredna tri slova u abecedi. 
+reči formira šifru tako što se svako slovo u reči zameni sa naredna tri slova engleske abecede. 
 Napisati program koji testira napisanu funkciju za reč maksimalne dužine 20 karaktera. 
 
 \begin{minitest}

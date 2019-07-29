@@ -34,14 +34,9 @@ IZMENA: Prepravljeno resenje tako da se vreme pretvara u minute i na osnovu dobi
 ---------------------------------------		 
 ---------------------------------------		 
 težinu avionskog tereta zraženu u funtama - izrazenu	
-
-IZMENA: ispravljeno
-
----------------------------------------
----------------------------------------		 
 Zadatak 1.1.25 - naspramna temane?
 
-IZMENA: ispravljeno
+IZMENA: ispravljeno na oba mesta
 
 ---------------------------------------
 ---------------------------------------		 
@@ -136,7 +131,7 @@ IZMENA: ispravljeno
 ---------------------------------------
 1.5.59 "završavajući sa svakim n-tim" - nije jasno (primer objasnjava ali formulacija nije precizna pa je mozda bolje izostaviti)
 
-DANIJELA: Nisam sigurna koliko ovo moze da se popravi, malo sam prepravila tekst, ali ako mislite da je bolje zadatak mozemo obrisati.
+DANIJELA: Nisam sigurna koliko ovo moze da se popravi, malo sam prepravila tekst, ali ako mislite da i dalje nije dobro, zadatak mozemo obrisati.
 
 STARA VERZIJA: Napisati program koji učitava pozitivan ceo broj n i
 ispisuje sve brojeve od 1 do n, zatim svaki drugi broj od 1 do n, zatim svaki treći
@@ -157,47 +152,112 @@ Resenja za petlje nisam gledala
 ---------------------------------------
 1.7.4 - Napisati program koji učitava dva neoznačena broja i ispisuje da li vrednost prvog broja odgovara vrednosti nekog stepena drugog broja.
 - da li vrednost prvog broja odgovara vrednosti nekog stepena drugog broja (i kog)...
-
-IZMENA: ispravljeno
-
----------------------------------------
----------------------------------------
 1.7.5 određuje najvećeg zajedničkog delioca 
 - određuje najveći zajednički delilac
 
-IZMENA: ispravljeno
+IZMENA: ispravljeno u oba zadatka
 
 ---------------------------------------
 ---------------------------------------
 U resenju zadatka 1.7.19 "Dok god u broju x ima vise od 2 cifre, vrednost broja x se zamenjuje sa zbirom njegovih cifara. "
 vise od 1 cifre? vrednos broja x se zamenjuje zbirom (bez "sa", to primeniti dosledno i na drugim mestima)
 
-TODO
+TODO (stigla do strane 65 u ovoj proveri)
 ---------------------------------------
 ---------------------------------------
 U zadatku 1.3.12 kazete "Broj je Armstrongov ako je jednak zbiru kubova svojih cifara.  "
 U zadatku 1.7.20 kazzete "Prirodan broj a je Armstrongov ako je jednak sumi n-tih stepena svojih cifara, pri čemu je n broj cifara broja a"
 
-TODO
+DANIJELA, KOMENTAR: Druga definicija je tacna. I prva je tacna, ali za trocifren broj. Zadatak 1.3.12 je pre petlji tako da tu jos uvek ne mogu da odrede broj cifara broja. Tako da sam napravila izmenu u zadatku 1.3.12:
+(da li je dovoljno ili treba precizirati?)
+
+IZMENA: Trocifreni broj je Armstrongov ako je jednak zbiru kubova svojih cifara.
 ---------------------------------------
 ---------------------------------------
 Zadatak 1.7.21 grcko epsilon zameniti sa epsilon
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 1.7.23 u abecedi - u engleskoj abecedi ?
 
+DANIJELA: (ovo se odnosi i na neke komentare posle) sta je vise u duhu naseg jezika: alfabet ili abceda? Alfabet je valjda rec grckog porekla (alfa, beta ...), pa odatle ime, a abeceda (a, b, c, d) valjda visse odgovara uz engelski?
+
+IZMENA: svuda gde se pojavljuje stavljeno "engleska abeceda"
+
+---------------------------------------
+---------------------------------------
 1.7.26 Napisati program koji učitava tri cela broja i ispisuje koliko dana je proteklo od Nove godine
 ... tri cela broja (dan, mesec, godina) i ispisuje ...
 1.7.27 - slicno i jos "krja godine" - kraja
 
-Resenja nisam gledala================
-==============================================================
+IZMENA: ispravljeno u oba zadatka
+
+---------------------------------------
+---------------------------------------
+
+Resenja nisam gledala
+
+=================================================================================================================
 Predstavljanje podataka
 
+---------------------------------------
+---------------------------------------
 2.1.9 "slova engleskog alfabeta " - na drugom mestu "abeceda" ... ujednaciti
+
+IZMENA: svuda gde se pojavljuje stavljeno "engleska abeceda"
+
+---------------------------------------
+---------------------------------------
 2.1.10 "vratiti onog sa najmanjim indeksom. " - rednim brojem
+
+IZMENA: ispravljeno 
+
+---------------------------------------
+---------------------------------------
 2.1.16 - funkcije treba formulisati opstije, tako da budu nezavisne od "nadmorskih visina" - to treba pomenuti tek u programu.
+
+STARA VERZIJA: Napisati program koji vrši pretragu niza nadmorskih visina.
+(a) Napisati funkciju koja proverava da li niz sadrži zadatu nadmorsku visinu
+m. Povratna vrednost funkcije je 1 ako je vrednost sadržana u nizu ili 0
+ako nije.
+(b) Napisati funkciju koja vraća vrednost prve pozicije na kojoj se nalazi ele-
+ment koji ima nadmorsku visinu m ili −1 ukoliko element nije u nizu.
+(c) Napisati funkciju koja vraća vrednost poslednje pozicije na kojoj se nalazi
+element koji ima nadmorsku visinu m ili −1 ukoliko element nije u nizu.
+Program učitava podatke o nadmorskim visinama i ceo broj m, a zatim ispisuje
+da li u nizu postoji podatak o unetoj nadmorskoj visini. Ukoliko postoji, ispisuje i
+poziciju prvog i poslednjeg pojavljivanja vrednosti m u nizu. Pozicije se broje od
+0. Maksimalni broj elemenata niza je 100. U slučaju neispravnog unosa, ispisati
+odgovarajuću poruku o grešci.
+
+IZMENA: Napisati program koji vrši pretragu niza nadmorskih visina.
+\begin{enumerate}
+\item Napisati funkciju koja proverava da li niz sadrži zadati broj
+  $m$. Povratna vrednost funkcije je $1$ ako je
+  vrednost sadržana u nizu ili $0$ ako nije.
+\item Napisati funkciju koja vraća vrednost prve pozicije na kojoj se
+  nalazi element koji ima vrednost $m$ ili $-1$ ukoliko
+  element nije u nizu.
+\item Napisati funkciju koja vraća vrednost poslednje pozicije na
+  kojoj se nalazi element koji ima vrednost $m$ ili $-1$
+  ukoliko element nije u nizu.
+\end{enumerate}
+Program učitava podatke o nadmorskim visinama i ceo broj $m$, a zatim ispisuje da li 
+u nizu postoji podatak o unetoj nadmorskoj visini. Ukoliko postoji, ispisuje i poziciju
+prvog i poslednjeg pojavljivanja vrednosti $m$ u nizu. Pozicije se broje od $0$.
+Maksimalni broj elemenata niza je $100$.
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+
+---------------------------------------
+---------------------------------------
 2.1.17 "niz b koji sadrzi sve elemente niza a koji se pojavljuju bar dva puta u nizu." - sve razlicite elemente niza a koji se ...
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 Zadatak 2.1.22 Napisati funkciju koja određuje da li se jedan niz javlja kao podniz drugog niza. 
 (a) Niz b je podniz niza a ako su elementi niza b uzastopni elementi niza a. 
 (b) Niz b je podniz niza a ako je redosled pojavljivanja elemenata niza b u nizu a isti i ne nužno uzastopan.
@@ -207,61 +267,139 @@ Zadatak 2.1.22 Napisati funkciju koja određuje da li se jedan niz javlja kao (u
 (a) Niz b je uzastopni podniz niza a ako su elementi niza b uzastopni elementi niza a. 
 (b) Niz b je podniz niza a ako je redosled pojavljivanja elemenata niza b u nizu a isti i ne nužno uzastopan.
 
+IZMENA: izmenjeno
+
+---------------------------------------
+---------------------------------------
 2.1.13 Napisati funkciju void brojanje(int a[], int b[], int n) koja na osnovu celobrojnog niza a dimenzije n formira niz b 
 formira niz b dimenzije n 
 
+IZMENA: izmenjeno
+
+---------------------------------------
+---------------------------------------
 2.1.26 Maksimalni broj elemenata niza je 100 
 niza a i b 
 slicno za 27,28, (34)
-Resenja nisam gledala
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
+Resenja nisam gledala
+---------------------------------------
+---------------------------------------
 2.3.3 koja za dve prave  - razne prave
 
 2.3.5 trajanje filma u satima, minutama i sekundama - minutima
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 2.3.7 Pokazivači np i nn redom treba da sadrže broj elemenata niza parnih tj. niza neparnih elemenata
 - malo preciznije (pokazivac sadrzi broj?)
 
+DANIJELA: komentar odlican. E sad, nisam sigurna sta bi za studente bila najbolja formulacija. Ispod je kako sam ja prepravila, ali mozda neko ima bolje resenje? Ja nesto nisam htela u tekst da dodajem "na adresi..." jer se bojim da ih to adresa ne zbuni, ali mi se i moje trenutno resenje ne svidja preterano.
+
+IZMENA:  Vrednosti na koje pokazuju pokazivači $np$ i $nn$ redom treba da budu broj elemenata niza parnih tj. niza neparnih elemenata. 
+
+---------------------------------------
+---------------------------------------
 Resenja nisam gledala
+---------------------------------------
+---------------------------------------
 Zadatak 2.5.7 Napisatifunkciju int podniska(char s[], char t[]) koja proverava da li je niska t podniska niske s
 - ranije je razlikovan slucaj uzastopnog podniza od podniza - da li ovde treba nesto naglasiti u tom smislu?
 
+IZMENA: dodato uzastopna podniska
+
+---------------------------------------
+---------------------------------------
 2.5.10 - pravilo se ne primenjuje na nisku dobijenu uklanjanjem? Na primer u "approval" uklanja se drugo p ali ne i prvo p?
+
+IZMENA: Da, tako je. Dodata potrebna recenica, tj. pojasnjenje.
+
+---------------------------------------
+---------------------------------------
 2.5.12 pri čemu između svaka dva kopiranja umeće crtica.  - pri cemu se izmedju...
 2.5.28,29 - engleske abecede
 resenja -
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 2.7.2 - izracunava i stampa sa 3 decimale
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 Uz 2.7.4 Napisati program koji za učitanu matricu celih brojeva2 2Pod pojmom učitati matricu ili za datu matricu uvek se podrazumeva da se prvo unose dimenzije matrice, a potom i sama matrica.
 
 - "ucitana matrica" se javlja jos u 2.7.2
+
+IZMENA: futnota premestena u yadataka 2.7.2
+
+---------------------------------------
+---------------------------------------
 2.7.7 Napisati funkciju koja formira niz b0,b1,...,bn 
 - precizirati: od matrice sa nxm (mada je onda niz b0,b1,...,bn-1
-
 2.7.8. pod a,b i c: kojom se za relaciju zadatom matricom a  - ... relaciju zadatu ...
 2.7.9 pod c i d: sumu elememenata  - elemenata
 resenja -
 
+IZMENA: ispravljeno (da, ide do bn-1)
+
+---------------------------------------
+---------------------------------------
 celzijus / Celzijus
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 2.9.6 informacije o svakom detetu i za zadati pol i uzrast deteta i ispisuje korisniku na tri decimale prosečnu ocenu 
 -preformulisati
 
+NOVA VERZIJA: Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu. Za 
+zadati pol i uzrast deteta i ispisati na tri decimale prosečnu ocenu
+koje je obdanište dobilo od dece sa unetim polom i brojem godina.
+
+---------------------------------------
+---------------------------------------
 2.9.7 smer O?
 
+IZMENA: Stavljeno M. Verovatno se mislilo na opsti smer, ali to kod nas ne postoji.
+
+---------------------------------------
+---------------------------------------
 Zadatak 2.9.12 Napisati program za predstavljanje poligona i izračunavanje njegovog obima i dužine stranica. 
 - mozda je prirodnije ...izračunavanje dužine njegovih stranica i obima. 
 tacka (d) zavrsava se sa ..
 
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
 2.9.13, 2.9.14 - predlozila bih da se i ovde zada deklaracija funkcija koje se traze - kao i u prethodnim zadacima sa strukturama
 Malo precizirati. 
 
+TODO
+
+---------------------------------------
+---------------------------------------
 3.1.7 Opcije su karakteri argumenata koji počinju karaktera -.
 - karakterom -
-
 Zadatak 3.3.11  Napisati program koji učitava reči iz datoteke (rec je niz karaktera imedju blanko simbola)...
 3.3.26 standarni izlaz - standardni ...
+
+IZMENA: ispravljeno
+
+---------------------------------------
+---------------------------------------
+
 
 
 

@@ -124,7 +124,7 @@ Napisati funkcije:
   \item \kckod{void ucitaj(Grad gradovi[], int n)} koja učitava sa standardnog ulaza podatke
   o $n$ gradova.  
   \item \kckod{void ispisi(Grad gradovi[], int n)} koja ispisuje podatke
-  o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni Celzijusa. 
+  o gradovima koji imaju idealnu temperaturu za klizanje: od $3$ do $8$ stepeni celzijusa. 
 \end{enumerate}
 Napisati program koji učitava imena $n$ gradova i njihove prosečne temperature, a zatim ispisuje imena gradova sa idealnom temperaturom za klizanje.
 Pretpostaviti da je maksimalan broj gradova $50$ i da je maksimalna dužina imena grada $20$ karaktera.
@@ -282,8 +282,8 @@ Za svako obdanište poznat je spisak koji sadrži broj dece u grupi,
 a zatim i ocene koje je svako dete dalo o radu obdaništa. 
 Definisati strukturu \kckod{Dete} koja sadrži polja pol (\kckod{m} ili
 \kckod{z}), broj godina (od $3$ do $6$) i ocenu koju je dete dalo radu obdaništa (od $1$ do $5$). 
-Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu i za 
-zadati pol i uzrast deteta i ispisuje korisniku na tri decimale prosečnu ocenu
+Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu. Za 
+zadati pol i uzrast deteta i ispisati na tri decimale prosečnu ocenu
 koje je obdanište dobilo od dece sa unetim polom i brojem godina.
 Pretpostaviti da je maksimalan broj dece u obdaništu $200$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
@@ -363,7 +363,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=struc.11] 
 Definisati strukturu kojom se opisuje student. Student se opisuje svojim
 imenom i prezimenom, smerom
-(R, I, V, N, T, O) i prosečnom ocenom. Napisati program koji učitava
+(R, I, V, N, T, M) i prosečnom ocenom. Napisati program koji učitava
 podatke o $n$ studenata, a zatim i informaciju o smeru i ispisuje imena i
 prezimena onih studenta koji su sa datog smera, kao i podatke studenta koji ima najveći prosek. 
 Ako ima više takvih studenata ispisati podatke o svima. 
@@ -731,8 +731,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=struc.10] 
-Napisati program za predstavljanje poligona i izračunavanje njegovog
-obima i dužine stranica.
+Napisati program za predstavljanje poligona i izračunavanje
+dužine njegovih stranica i obima.
 \begin{enumerate}
 \item Definisati strukturu \kckod{Tacka} kojom se opisuje
   tačka Dekartovske ravni čije su $x$ i $y$ koordinate podaci tipa
@@ -748,7 +748,7 @@ obima i dužine stranica.
 
 \item Definisati funkciju \kckod{double obim\_poligona(Tacka poligon[], int n)} koja izračunava obim poligona sa $n$ temena u zadatom nizu.
   \uputstvo{Prilikom računanja obima ne zaboraviti stranicu koja spaja
-    poslednje i prvo teme.}.
+    poslednje i prvo teme.}
 
 \item Definisati funkciju \kckod{double maksimalna\_stranica(Tacka poligon[], int n)} koja izračunava dužinu najduže stranice
   poligona sa $n$ temena u zadatom nizu.

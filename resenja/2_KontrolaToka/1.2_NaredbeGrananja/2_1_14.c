@@ -31,7 +31,7 @@ int main() {
   proizvod_parnih = 1;
 
   /* Za svaku cifru se vrsi provera da li je parna i ukoliko jeste
-     tekuci rezultat se mnozi sa tekucom cifrom. */
+     tekuci rezultat se mnozi tekucom cifrom. */
   if (jedinica % 2 == 0) {
     proizvod_parnih = proizvod_parnih * jedinica;
     broj_parnih++;

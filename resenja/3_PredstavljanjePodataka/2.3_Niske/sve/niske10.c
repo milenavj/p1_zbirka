@@ -28,12 +28,12 @@ int treba_zadrzati(char c1, char c2) {
   c1 = toupper(c1);
   c2 = toupper(c2);
 
-  /* c1 se zadrzava ako se c2 ne nalazi iza njega u abecedi. */
+  /* c1 se zadrzava ako se c2 ne nalazi iza njega u engleskoj abecedi. */
   return c2 <= c1;
 }
 
 /* Funkcija uklanja sva slova za koja vazi da se neposredno nakon
-   njih nalazi slovo koje je u abecedi iza njih. */
+   njih nalazi slovo koje je u engleskoj abecedi iza njih. */
 void ukloni(char s[]) {
   int i, j;
   for (i = 0, j = 0; s[i]; i++) {

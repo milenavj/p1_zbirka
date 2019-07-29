@@ -2,7 +2,7 @@
 #include <stdlib.h>
 
 #define BROJ_CIFARA 10
-#define DUZINA_ALFABETA 26
+#define DUZINA_ABECEDE 26
 
 /* Pomocna funkcija za ispis elemenata niza.
    Vrednost n oznacava broj elemenata niza 
@@ -27,16 +27,16 @@ void inicijalizuj(int niz[], int n) {
 int main() {
   /* Deklaracije nizova brojaca za cifre, mala i velika slova. */
   int cifre[BROJ_CIFARA];
-  int mala_slova[DUZINA_ALFABETA];
-  int velika_slova[DUZINA_ALFABETA];
+  int mala_slova[DUZINA_ABECEDE];
+  int velika_slova[DUZINA_ABECEDE];
   
   /* Deklaracije pomocnih promenljivih. */
   int c;
   
   /* Inicijalizacije brojaca nulama. */
   inicijalizuj(cifre, BROJ_CIFARA);
-  inicijalizuj(mala_slova, DUZINA_ALFABETA);
-  inicijalizuj(velika_slova, DUZINA_ALFABETA);
+  inicijalizuj(mala_slova, DUZINA_ABECEDE);
+  inicijalizuj(velika_slova, DUZINA_ABECEDE);
   
   /* Ucitavanje karaktera sve do kraja ulaza. */
   printf("Unesite tekst:\n");
@@ -61,8 +61,8 @@ int main() {
 
   /* Ispis trazenih informacija. */
   ispisi(cifre, BROJ_CIFARA, '0');
-  ispisi(mala_slova, DUZINA_ALFABETA, 'a');
-  ispisi(velika_slova, DUZINA_ALFABETA, 'A');
+  ispisi(mala_slova, DUZINA_ABECEDE, 'a');
+  ispisi(velika_slova, DUZINA_ABECEDE, 'A');
 
   exit(EXIT_SUCCESS);
 }

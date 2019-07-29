@@ -425,7 +425,7 @@ barem jednom.
 \begin{Exercise}[label=brojanje_slova] 
 Napisati program koji učitava jednu liniju teksta i
 ispisuje koliko puta se pojavilo svako od slova
-engleskog alfabeta u unetom tekstu. Ne praviti razliku između malih i
+engleske abecede u unetom tekstu. Ne praviti razliku između malih i
 velikih slova.
 
 \begin{maxitest}
@@ -487,7 +487,7 @@ brojevima počevši od 0. Vremena za koja su takmičari istrčali maraton izraž
 \item \kckod{int pozicija\_minimum(int a[], int n)}
   koja vraća redni broj pobednika Beogradskog maratona, tj. onog
   takmičara koji je najkraće trčao. U slučaju da ima više takvih
-  takmičara, vratiti onog sa najmanjim indeksom.
+  takmičara, vratiti onog sa najmanjim rednim brojem.
 \end{enumerate}
 Napisati program koji učitava podatke o rezultatima takmičara na maratonu i ispisuje
 učitane podatke, ukupno, prosečno i maksimalno vreme trčanja, kao i redni broj pobednika
@@ -795,14 +795,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=v.nizovi_funkcije_razno] 
 Napisati program koji vrši pretragu niza nadmorskih visina.
 \begin{enumerate}
-\item Napisati funkciju koja proverava da li niz sadrži zadatu
-  nadmorsku visinu $m$. Povratna vrednost funkcije je $1$ ako je
+\item Napisati funkciju koja proverava da li niz sadrži zadati broj
+  $m$. Povratna vrednost funkcije je $1$ ako je
   vrednost sadržana u nizu ili $0$ ako nije.
 \item Napisati funkciju koja vraća vrednost prve pozicije na kojoj se
-  nalazi element koji ima nadmorsku visinu $m$ ili $-1$ ukoliko
+  nalazi element koji ima vrednost $m$ ili $-1$ ukoliko
   element nije u nizu.
 \item Napisati funkciju koja vraća vrednost poslednje pozicije na
-  kojoj se nalazi element koji ima nadmorsku visinu $m$ ili $-1$
+  kojoj se nalazi element koji ima vrednost $m$ ili $-1$
   ukoliko element nije u nizu.
 \end{enumerate}
 Program učitava podatke o nadmorskim visinama i ceo broj $m$, a zatim ispisuje da li 
@@ -848,7 +848,7 @@ Marko skuplja sličice za Svetsko prvenstvo u fudbalu. Marko je
 primetio da mu se neke sličice ponavljaju i rešio je da ih razmeni sa
 drugarima. 
 Napisati funkciju \kckod{int duplikati(int a[], int n, int b[])} koja od niza $a$ dimenzije $n$
-formira niz b koji sadrzi sve elemente niza $a$ koji se pojavljuju bar dva puta u nizu. Funkcija
+formira niz b koji sadrzi sve razlčite elemente niza $a$ koji se pojavljuju bar dva puta u nizu. Funkcija
 kao povratnu vrednost vraća dimenziju niza $b$.
 Napisati program koji učitava brojeve Markovih sličica i ispisuje sve duplikate.
 Maksimalni broj elemenata niza je $600$.
@@ -1125,9 +1125,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \begin{Exercise}[label=podniz] 
-Napisati funkciju koja određuje da li se jedan niz javlja kao podniz drugog niza. 
+Napisati funkciju koja određuje da li se jedan niz javlja kao (uzastopni) podniz drugog niza. 
 \begin{enumerate}
-\item Niz $b$ je podniz niza $a$ ako su elementi niza $b$ uzastopni elementi niza $a$. 
+\item Niz $b$ je uzastopni podniz niza $a$ ako su elementi niza $b$ uzastopni elementi niza $a$. 
 \item Niz $b$ je podniz niza $a$ ako je redosled pojavljivanja elemenata niza $b$ u nizu $a$ isti i ne nužno uzastopan. 
 \end{enumerate}
 Napisati program koji učitava dimenzije i elemente dvaju nizova, a zatim ispisuje da li je drugi niz podniz prvog niza. 
@@ -1210,7 +1210,7 @@ ako sadrži sve brojeve od $1$ do $n$.
 \begin{enumerate}
 \setlength\itemsep{0em}
 \item Napisati funkciju \kckod{void brojanje(int a[], int b[], int n)}
-  koja na osnovu celobrojnog niza $a$ dimenzije $n$ formira niz $b$
+  koja na osnovu celobrojnog niza $a$ dimenzije $n$ formira niz $b$ dimenzije  $n$
   tako što $i$-ti element niza $b$ odgovara broju pojavljivanja
   vrednosti $i$ u nizu $a$.
 \item Napisati funkciju \kckod{int permutacija(int a[], int n)} koja
@@ -1363,7 +1363,7 @@ koja formira niz $c$ koji se dobija naizmeničnim raspoređivanjem elemenata niz
 tj.~$c = [a_0, b_0, a_1, b_1, \ldots, a_{n-1}, b_{n-1}]$. 
 Napisati program koji učitava dimenziju i elemente dvaju nizova i ispisuje niz koji se dobija
 ukrštanjem unetih nizova. 
-Maksimalni broj elemenata niza je $100$.
+Maksimalni broj elemenata niza $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1400,7 +1400,7 @@ elemetima niza $b$, a druga polovina elementima niza $a$,
 tj.~$c = [b_0, b_1, \ldots, b_{n-1}, a_0, a_1, \ldots, a_{n-1}]$.
 Napisati program koji učitava dimenziju i elemente dvaju nizova i ispisuje niz koji se dobija
 spajanjem unetih nizova na pomenuti način.
-Maksimalni broj elemenata niza je $100$.
+Maksimalni broj elemenata niza $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1447,7 +1447,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  formira niz $c$ koji je uređen na isti način.
  Napisati program koji učitava dimenziju i elemente uređenih nizova $a$ i $b$ i
  ispisuje niz koji se dobija spajanjem ovih nizova na pomenuti način.
-Maksimalni broj elemenata niza je $100$.
+Maksimalni broj elemenata niza $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
 \begin{miditest}
@@ -1729,7 +1729,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Korišćenjem nizova moguće je predstaviti skupove podataka. Napisati
 program koji demonstrira osnovne operacije nad skupovima (uniju,
 presek i razliku). Pomoću dva niza predstaviti dva skupa celih
-brojeva, a zatim ispisati njihovu uniju, presek i razliku. Maksimalni broj elemenata niza je $500$.
+brojeva, a zatim ispisati njihovu uniju, presek i razliku. Maksimalni broj elemenata dva uneta niza je $500$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
   
 \begin{miditest}

@@ -21,7 +21,7 @@ char sledeci(char c) {
 /* Funkcija od niske s formira rezultujucu nisku koja se dobija na
    sledeci nacin: 
    1. ako je s[i] slovo, onda se u rezultujucu nisku upisuju naredna
-   tri slova alfabeta (kada se stigne do kraja alfabeta, ide se u 
+   tri slova engelske abecede (kada se stigne do kraja engleske abecede, ide se u 
    krug, tj. nakon slova z sledi slovo a)
    2. ako s[i] nije slovo, s[i] se samo prepisuje u rezultat. */
 void sifruj(char s[], char rezultat[]) {

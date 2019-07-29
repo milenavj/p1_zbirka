@@ -13,7 +13,7 @@ int zbir_cifara(int x) {
 /* Funkcija vraca 1 ako je broj srecan, a 0 u suprotnom. */
 int srecan(int x) {
   /* Dok god u broju x ima vise od 2 cifre, vrednost broja x se
-     zamenjuje sa zbirom njegovih cifara. 
+     zamenjuje zbirom njegovih cifara. 
      Na primer, za pocetno x = 7698, nakon prve iteracije x postaje
      7+6+9+8 = 30, nakon druge iteracije x postaje 3 + 0 = 3 i
      zatim se izlazi iz petlje. */

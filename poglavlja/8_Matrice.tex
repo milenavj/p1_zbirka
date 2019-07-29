@@ -67,8 +67,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \skrati{1}
 \begin{Exercise}[label=mat.001]
-Napisati program koji za učitanu celobrojnu matricu dimenzije $m \times n$
-izračunava njenu Ekulidsku normu. Pretpostaviti
+Napisati program koji za učitanu celobrojnu matricu\footnote{Pod pojmom \emph{učitati matricu} ili \emph{za
+    datu matricu} uvek se podrazumeva da se prvo unose dimenzije
+  matrice, a potom i sama matrica.} dimenzije $m \times n$
+izračunava i štampa na tri decimale njenu Ekulidsku normu. Pretpostaviti
 da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \uputstvo{Euklidska norma matrice je kvadratni koren sume kvadrata svih elemenata matrice.}
@@ -198,9 +200,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati funkciju \kckod{void transponovana(int a[][MAKS], int m, int
   n, int b[][MAKS])} koja određuje matricu $b$ koja je dobijena
 transponovanjem matrice $a$. Napisati program koji za učitanu matricu
-celih brojeva\footnote{Pod pojmom \emph{učitati matricu} ili \emph{za
-    datu matricu} uvek se podrazumeva da se prvo unose dimenzije
-  matrice, a potom i sama matrica.} ispisuje odgvarajuću
+celih brojeva ispisuje odgvarajuću
 transponovanu matricu.  Pretpostaviti da je maksimalna dimenzija
 matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
@@ -418,7 +418,7 @@ susedni elementi matrice za elemente \kckod{a}, \kckod{b} i \kckod{c}.}
 
 \skrati{4}
 \begin{Exercise}[label=mat.20] 
-Napisati funkciju koja formira niz $b_0, b_1, \ldots, b_n$ od matrice
+Napisati funkciju koja formira niz $b_0, b_1, \ldots, b_{n-1}$ od matrice $n \times m$
 tako što element niza $b_i$ izračunava kao srednju vrednost elemenata
 $i$-te vrste matrice.  Napisati program koji za učitanu matricu celih brojeva
 ispisuje dobijeni niz.  
@@ -485,16 +485,16 @@ relaciji ukoliko se tu nalazi nula. Napisati funkcije:
 \begin{enumerate}
 \setlength\itemsep{0em}
   \item \kckod{int refleksivna(int a[][MAKS], int
-    n)} kojom se za relaciju zadatom matricom $a$ dimenzije
+    n)} kojom se za relaciju zadatu matricom $a$ dimenzije
     $n \times n$ ispituje da li je refleksivna;
   \item \kckod{int simetricna(int a[][MAKS], int n)}
-    kojom se za relaciju zadatom matricom $a$ dimenzije
+    kojom se za relaciju zadatu matricom $a$ dimenzije
     $n \times n$ ispituje da li je simetrična;
   \item \kckod{int tranzitivna(int a[][MAKS], int n)}
-    kojom se za relaciju zadatom matricom $a$ ispituje dimenzije
+    kojom se za relaciju zadatu matricom $a$ ispituje dimenzije
     $n \times n$ da li je tranzitivna;
   \item \kckod{int ekvivalencija(int a[][MAKS], int
-    n)} kojom se za relaciju koja je zadata matricom $a$ dimenzije
+    n)} kojom se za relaciju zadatu matricom $a$ dimenzije
     $n \times n$ ispituje da li je relacija ekvivalencije. 
 \end{enumerate}
 Napisati program koji za učitanu dimenziju $n$ i kvadratnu matricu dimenzije $n\times
@@ -565,9 +565,9 @@ Data je kvadratna matrica dimenzije $n \times n$.
     int n)} koja računa zbir elemenata na sporednoj dijagonali
     matrice.
   \item Napisati funkciju \kckod{float suma\_iznad(float a[][MAKS], int n)}
-    koja određuje sumu elememenata iznad glavne dijagonale.
+    koja određuje sumu elemenata iznad glavne dijagonale.
   \item Napisati funkciju \kckod{float suma\_ispod(float a[][MAKS], int n)}
-    koja određuje sumu elememenata ispod sporedne dijagonale matrice.
+    koja određuje sumu elemenata ispod sporedne dijagonale matrice.
 \end{enumerate}
 Napisati program koji
 za učitanu matricu realnih brojeva ispisuje na tri decimale trag
