@@ -46,7 +46,7 @@ int main() {
   x = abs(x);
   y = abs(y);
 
-  /* Popunjavaju se nizovi sa brojacima cifara. */
+  /* Popunjavaju se nizovi brojacima cifara. */
   analiza_cifara(x, cifre_broja_x);
   analiza_cifara(y, cifre_broja_y);
 

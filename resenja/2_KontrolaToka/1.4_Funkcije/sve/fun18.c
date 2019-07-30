@@ -37,7 +37,7 @@ int rotacija(int n) {
   n_bez_prve_cifre = n % tezina_pozicije;
 
   /* Rezultat se dobija nadovezivanjem prve cifre na kraj i
-     mnozenjem sa znakom pocetnog broja. */
+     mnozenjem znakom pocetnog broja. */
   return znak * (n_bez_prve_cifre * 10 + prva_cifra);
 }
 

@@ -26,7 +26,7 @@ int dekadna_vrednost(char s[]) {
      tezine se nalazi na poziciji 2 (jer su prva dva karaktera 0x).
 
      U svakoj iteraciji, na rezultat se dodaje vrednost tekuce
-     cifre pomnozena sa vrednoscu tezine njene pozicije. 
+     cifre pomnozene vrednoscu tezine njene pozicije. 
      Na primer, za s = "0x1a8e", n=6 
      i = 5, rezultat += vrednost('e')*1 => rezultat += 11*1 
      i = 4, rezultat += vrednost('8')*16 => rezultat += 8*16 

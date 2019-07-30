@@ -28,7 +28,7 @@ A primer 8  20
 		 Zasto se u resenju vremena svode na sekunde? Ako se i sekunde podrazumevaju u formulaciji zadatka, treba ih ukljciti i u resenje
 
 
-ODGOVOR: Propust je u resenju, nije bilo potrebno racunati u sekundama. 
+KOMENTAR: Propust je u resenju, nije bilo potrebno racunati u sekundama. 
 IZMENA: Prepravljeno resenje tako da se vreme pretvara u minute i na osnovu dobijenih minta se racuna krajnji rezultat.
 
 ---------------------------------------		 
@@ -162,7 +162,8 @@ IZMENA: ispravljeno u oba zadatka
 U resenju zadatka 1.7.19 "Dok god u broju x ima vise od 2 cifre, vrednost broja x se zamenjuje sa zbirom njegovih cifara. "
 vise od 1 cifre? vrednos broja x se zamenjuje zbirom (bez "sa", to primeniti dosledno i na drugim mestima)
 
-TODO (stigla do strane 65 u ovoj proveri)
+IZMENA: Promenjeno na nekoliko mesta
+
 ---------------------------------------
 ---------------------------------------
 U zadatku 1.3.12 kazete "Broj je Armstrongov ako je jednak zbiru kubova svojih cifara.  "
@@ -386,7 +387,7 @@ IZMENA: ispravljeno
 2.9.13, 2.9.14 - predlozila bih da se i ovde zada deklaracija funkcija koje se traze - kao i u prethodnim zadacima sa strukturama
 Malo precizirati. 
 
-TODO
+IZMENA: dodati potpisi funkcija u oba zadatka
 
 ---------------------------------------
 ---------------------------------------

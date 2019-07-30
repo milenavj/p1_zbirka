@@ -36,7 +36,7 @@ int main() {
   /* Petlja se izvrsava dok god broj ima bar tri cifre. */
   while (n > 99) {
     /* Provera da li c2 treba da se nadje u rezultatu. Ako
-       treba, rezultat se uvecava za vrednost cifre pomnozenu sa
+       treba, rezultat se uvecava za vrednost cifre pomnozene
        vrednoscu tezine njene pozicije u rezultatu i tezina
        pozicije se mnozi sa 10. */
     if (c2 != c1 + c3) {

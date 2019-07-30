@@ -824,12 +824,12 @@ nad celim brojevima koji se sastoji od dva celobrojna operanda i
 numeričke operacije (sabiranje, oduzimanje, množenje ili celobrojno
 deljenje). 
 \begin{enumerate}
-\item Napisati funkciju koja ispituje da li je dati izraz korektno
+\item Napisati funkciju \kckod{int korektan\_izraz(const Izraz *izraz)} koja ispituje da li je dati izraz korektno
   zadat i vraća jedinicu ako jeste, a nulu inače. Podrazumeva se da je
   izraz korektno zadat ako je operacija $+$, $-$, $*$ ili $/$ i
   u slučaju deljenja drugi operand je različit od $0$.
-\item Napisati funkciju koja za dati izraz određuje vrednost izraza.
-\item Napisati funkciju koja učitava izraze. Funkcija treba da
+\item Napisati funkciju \kckod{int vrednost(const Izraz *izraz)} koja za dati izraz određuje vrednost izraza.
+\item Napisati funkciju \kckod{void ucitaj(Izraz izrazi[], int n)} koja učitava izraze. Funkcija treba da
   učita sa standardnog ulaza $n$ izraza koji su zadati prefiksno --- prvo
   operacija, a potom dva operanda.
 \end{enumerate}
@@ -910,15 +910,15 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Definisati strukturu kojom se opisuje polinom. Polinom je dat svojim
 stepenom i realnim koeficijentima. 
 \begin{enumerate}
-\item Napisati funkciju koja sa standardnog ulaza učitava polinome sve do 
+\item Napisati funkciju \kckod{int ucitaj(Polinom niz[])} koja sa standardnog ulaza učitava polinome sve do 
       kraja ulaza. Polinomi su zadati stepenom i koeficijentima počevši od slobodnog člana. Funkcija kao 
       povratnu vrednost vraća broj učitanih polinoma.
-\item Napisati funkciju koja ispisuje polinom stepena $n$ sa koeficijentima $k_0$, $k_1$, ..., $k_n$ u obliku \kckod{$k_0 \pm
+\item Napisati funkciju \kckod{void ispis(const Polinom *p)} koja ispisuje polinom stepena $n$ sa koeficijentima $k_0$, $k_1$, ..., $k_n$ u obliku \kckod{$k_0 \pm
   k_1*x \pm k_2*x$\^{}$2 \pm k_3*x$\^{}$3 \pm \ldots \pm
   k_n*x$\^{}$n$}.  Na mesto znaka $\pm$ zapisati odgovarajući znak, $+$ ili $-$,
   u zavisnosti od znaka odgovarajućeg koeficijenta. Koeficijente ispisivati na dve decimale. Koeficijente koji su jednaki
   $0$ ne ispisivati.  
-\item Napisati funkciju koja za dati polinom određuje njegov integral.
+\item Napisati funkciju \kckod{void integral(const Polinom *p, Polinom *tekuci\_integral)} koja za dati polinom \kckod{p} određuje njegov integral \kckod{tekuci\_integral}.
 \end{enumerate}
 Napisati program koji učitava polinome do kraja ulaza i za svaki učitani polinom
   određuje i ispisuje njegov integral.  

@@ -19,7 +19,7 @@ int main() {
   rezultat = 1;
 
   /* Vrednost n-tog stepena broja x se dobija tako sto se tekuca
-     vrednost rezultata n puta pomnozi sa brojem x. 
+     vrednost rezultata n puta pomnozi brojem x. 
      (rezultat = x * x * ... * x) = x^n */
   for (i = 0; i < n; i++)
     rezultat = rezultat * x;

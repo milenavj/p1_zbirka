@@ -33,7 +33,7 @@ int main() {
     /* Izdvajanje poslednje cifre. */
     cifra = x % 10;
 
-    /* Rezultat se uvecava za vrednost cifre pomnozene sa vrednoscu
+    /* Rezultat se uvecava za vrednost cifre pomnozene vrednoscu
        tezine njene pozicije u broju. */
     rezultat += cifra * pozicija;
 

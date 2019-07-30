@@ -62,7 +62,7 @@ int od_nove_godine(int dan, int mesec, int godina) {
     suma_dana += broj_dana(mesec, godina);
 
   /* Na kraju se dodaje koliko je dana proteklo u datom mesecu, a
-     to je zadato sa promenljivom dan. */
+     to je zadato promenljivom dan. */
   return suma_dana + dan;
 }
 

@@ -22,7 +22,7 @@ int ukloni(int n, int p) {
   desni_deo = n % tezina_pozicije;
 
   /* Povratna vrednost funkcije se dobija spajanjem levog i desnog
-     dela i mnozenjem sa znakom pocetnog broja. */
+     dela i mnozenjem znakom pocetnog broja. */
   return znak * (levi_deo * 10 + desni_deo);
 }
 

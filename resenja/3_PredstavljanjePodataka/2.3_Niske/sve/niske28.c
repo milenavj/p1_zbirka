@@ -5,7 +5,7 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija svako slovo niske s menja sa slovom koje se u ASCII
+/* Funkcija svako slovo niske s menja slovom koje se u ASCII
    tablici nalazi neposredno iza njega. Specijalan slucaj je slovo
    z koje treba da se zameni slovom a. Ostali karakteri ostaju
    nepromenjeni. */

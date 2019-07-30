@@ -25,7 +25,7 @@ void ispisi(int niz[], int n) {
 void promeni_redosled(int niz[], int n) {
   int i = 0, j = n - 1, pom;
 
-  /* Krece se sa pocetka niza (po brojacu i) i sa kraja niza (po
+  /* Krece se od pocetka niza (po brojacu i) i od kraja niza (po
      brojacu j) i svaki put kada se naidje na elemente koji po
      parnosti ne odgovaraju delu niza u kome treba da budu,
      zamene se njihove vrednosti. */

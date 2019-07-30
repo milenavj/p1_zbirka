@@ -22,7 +22,7 @@ int main() {
     scanf("%f", &brojevi[i]);
 
   /* Ukoliko je i-ti element niza brojevi[i] negativan broj,
-     kvadrira se tako sto se pomnozi sa samim sobom. */
+     kvadrira se tako sto se pomnozi samim sobom. */
   for (i = 0; i < n; i++)
     if (brojevi[i] < 0)
       brojevi[i] *= brojevi[i];

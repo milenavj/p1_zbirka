@@ -22,7 +22,7 @@ int nzd(int a, int b) {
 }
 
 /* Funkcija vraca razlomak koji se dobija deljenjem imenioca i
-   brojioca sa njihovim najvecim zajednickim deliocem. */
+   brojioca njihovim najvecim zajednickim deliocem. */
 void uprosti(Razlomak *r) {
   int nzd_razlomka = nzd(r->brojilac, r->imenilac);
   r->brojilac /= nzd_razlomka;
