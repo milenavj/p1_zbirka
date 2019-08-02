@@ -8,17 +8,57 @@ Ima dosta zanimljivih zadataka ali vise o tome - u recenziji.
 
 Ovde uglavnom neka zapazanja koja mozda mogu da budu korisna u finalizaciji teksta.
 
+---------------------------------------
+---------------------------------------		 
 Predgovor: sekvenciranje, selekcija i iteracija - bolje reci sekvenca, selekcija, iteracija, 
 ili sve glagolske imenice - sekvenciranje, selektovanje, iteriranje (mada sekvenciranje ima po malo rezervisano znacenje)
+
+IZMENA: Izmenjeno u "sekvenca, selekcija i iteracija"
+---------------------------------------
+---------------------------------------		 
+
 U Predgovoru treba pomenuti da je rec o programskom jeziku C.
 
+IZMENA: Dodata je ova recenica:
+"Sva rešenja su data u programskom jeziku C, ali se većina zadataka može koristiti za vežbanje proizvoljnog imperativnog programskog jezika."
+---------------------------------------
+---------------------------------------		 
 
 Sadrzaj: umesto Predstavljenj podataka - mozda Napredni tipovi podataka (kao sto je receno u Predgovoru).
 Predstavljanje podataka obicno  znaci predstavljenje u racunaru...
+
+IZMENA: Izmenjeno u "Napredni tipovi podataka".
+
+---------------------------------------
+---------------------------------------		 
 Dodatak sadrži primere ispitnih rokova iz jedne akademske godine.  - dodati i ostale ili prethodne rokove
+
+IZMENA: 
+MILENA: Doneti odluku koje rokove dodajemo, napraviti odgovarajucu izmenu, gore je opisati
+---------------------------------------
+---------------------------------------		 
 zadacima davali svoje doprinose različiti asistenti koji su držali vežbe iz ovog kursa u prethodnih desetak godina - moda i duze
+
+IZMENA: Recenica je preformulisana na sledeci nacin:
+"Autori velikog broja zadataka ove zbirke su ujedno i autori same zbirke, ali postoje 
+i zadaci za koje se ne može tačno utvrditi ko je originalni autor jer su zadacima 
+davali svoje doprinose različiti asistenti koji su držali vežbe iz ovog kursa 
+tokom prethodnih godina."
+
+MILENA: Namucila sam se sa prethodnom preformulacijom, proveriti da li je ok.
+
+---------------------------------------
+---------------------------------------		 
 korišćni za početno testiranje (koje prethodi ocenjivanju)  - korisceni; zar nije slucaj da kompletno testiranje (ne samo "pocetno") prethodi ocenjivanju?
+
+IZMENA: Stamparska greska je uklonjena, a zagrada je sklonjena da ne zbunjuje, tj preformulisana je recenica na sledeci nacin:
+Test primeri koji su navedeni uz ispitne zadatke u dodatku su oni koji su korišćeni u okviru testiranja i ocenjivanja studentskih radova na ispitima.
+
+---------------------------------------
+---------------------------------------		 
 Proverite da li se uz Dobrodosli koristi prilog - vrlo, veoma i sl (osim kolokvijalno)?
+
+IZMENA: Izbrisana je rec "vrlo"
 
 ---------------------------------------
 ---------------------------------------
@@ -103,7 +143,6 @@ DANIJELA: izmenjeno kako je profesorka napisala, proveriti jos jednom da li je o
 IZMENA: Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje
 (\napomena{Pretpostaviti da je unos ispravan.})
 
-
 \begin{enumerate}
 \item tablicu množenja. 
 
@@ -120,6 +159,26 @@ koordinata je $(0, 0)$. Koordinata $i$ se uvećava po vrsti, a
 koordinata $j$ po koloni, pa je zato koordinata tačke koja je ispod
 tačke $(0,0)$ jednaka $(1, 0)$, a koordinata tačke koja je desno od
 tačke $(0,0)$ jednaka $(0,1)$.
+
+MILENA: Uh, meni se ovo nikako ne svidja, a posebno mi se ne svidja napomena u sred recenice kao i nastavak recenice nakon toga. Pogledaj da li ti je ok ono sto sam ja preformulisala. To je u skladu sa ostalim zadacima u okolini. Ponavlja se rec Ispisati, ali mi se cini da drugacije ne moze da bude gramaticki ispravno, posebno sto neke stavke sadrze vise recenica:
+
+Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje odgovarajuće brojeve.
+(\napomena{Pretpostaviti da je unos ispravan.})
+\begin{enumerate}
+\item Ispisati tablicu množenja. 
+\item Ispisati sve brojeve od 1 do $n^2$ (po $n$ brojeva u jednoj vrsti).
+\item Ispisati tablicu brojeva tako 
+da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta 
+dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
+\item Ispisati pravougli ,,trougao'' sačinjen od ,,koordinata'' svojih
+tačaka. ,,Koordinata'' tačke je oblika $(i,j)$ pri čemu $i,\ j = 0,
+\ldots, n$. Prav ugao se nalazi u gornjem levom uglu slike i njegova
+koordinata je $(0, 0)$. Koordinata $i$ se uvećava po vrsti, a
+koordinata $j$ po koloni, pa je zato koordinata tačke koja je ispod
+tačke $(0,0)$ jednaka $(1, 0)$, a koordinata tačke koja je desno od
+tačke $(0,0)$ jednaka $(0,1)$.
+\end{enumerate}
+
 
 ---------------------------------------
 ---------------------------------------
@@ -142,6 +201,14 @@ NOVA VERZIJA: Napisati program koji učitava pozitivan ceo broj $n$ i ispisuje $
 U prvom redu ispisuje sve
 brojeve od $1$ do $n$, u drugom redu svaki drugi broj od $1$ do $n$, u trećem redu ispisuje
 svaki treći broj od $1$ do $n$ itd. Na kraju, u $n$-tom redu ispisuje $1$.
+\napomena{Pretpostaviti da je unos ispravan.}
+
+MILENA: Evo i moje verzije, unela sam direktno u zbirku:
+Napisati program koji učitava pozitivan ceo broj $n$ i ispisuje izabrane brojeve u $n$ redova.
+U prvom redu, program ispisuje sve brojeve iz intervala $[1, n]$. 
+U drugom redu, program ispisuje svaki drugi broj iz ovog intervala. 
+U trećem redu, program ispisuje svaki treći broj iz ovog intervala, i tako redom. 
+Na kraju, u $n$-tom redu, program ispisuje samo broj $1$.
 \napomena{Pretpostaviti da je unos ispravan.}
 
 ---------------------------------------
@@ -171,6 +238,7 @@ U zadatku 1.7.20 kazzete "Prirodan broj a je Armstrongov ako je jednak sumi n-ti
 
 DANIJELA, KOMENTAR: Druga definicija je tacna. I prva je tacna, ali za trocifren broj. Zadatak 1.3.12 je pre petlji tako da tu jos uvek ne mogu da odrede broj cifara broja. Tako da sam napravila izmenu u zadatku 1.3.12:
 (da li je dovoljno ili treba precizirati?)
+MILENA: Meni je ovakva izmena sasvim ok.
 
 IZMENA: Trocifreni broj je Armstrongov ako je jednak zbiru kubova svojih cifara.
 ---------------------------------------
@@ -184,6 +252,7 @@ IZMENA: ispravljeno
 1.7.23 u abecedi - u engleskoj abecedi ?
 
 DANIJELA: (ovo se odnosi i na neke komentare posle) sta je vise u duhu naseg jezika: alfabet ili abceda? Alfabet je valjda rec grckog porekla (alfa, beta ...), pa odatle ime, a abeceda (a, b, c, d) valjda visse odgovara uz engelski?
+MILENA: Meni ovo deluje kao prava odluka. 
 
 IZMENA: svuda gde se pojavljuje stavljeno "engleska abeceda"
 
@@ -302,6 +371,9 @@ IZMENA: ispravljeno
 - malo preciznije (pokazivac sadrzi broj?)
 
 DANIJELA: komentar odlican. E sad, nisam sigurna sta bi za studente bila najbolja formulacija. Ispod je kako sam ja prepravila, ali mozda neko ima bolje resenje? Ja nesto nisam htela u tekst da dodajem "na adresi..." jer se bojim da ih to adresa ne zbuni, ali mi se i moje trenutno resenje ne svidja preterano.
+MILENA: Preformulisala samo ovako: 
+Vrednost na koju pokazuje pokazivač $np$ treba da bude jednaka broju elemenata niza \kckod{parni}, a vrednost na koju pokazuje pokazivač $nn$ treba da bude jednaka broju elemenata niza \kckod{neparni}. 
+Ne insistiram, samo predlazem, ok mi je i da ostane ovako kako je Danijela napisala.
 
 IZMENA:  Vrednosti na koje pokazuju pokazivači $np$ i $nn$ redom treba da budu broj elemenata niza parnih tj. niza neparnih elemenata. 
 

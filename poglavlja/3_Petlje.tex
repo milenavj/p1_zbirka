@@ -2142,12 +2142,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %--------------------------------------------------------------------
 %--------------------------------------------------------------------
 \begin{Exercise}[label=PET_50] 
-Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje
+Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje odgovarajuće brojeve.
 (\napomena{Pretpostaviti da je unos ispravan.})
 
-
 \begin{enumerate}
-\item tablicu množenja. 
+\item Ispisati tablicu množenja. 
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -2177,8 +2176,7 @@ Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje
 
 %\linkresenje{1.3_50a}
 
-
-\item sve brojeve od 1 do $n^2$ pri čemu se ispisuje po $n$ brojeva u jednoj vrsti.
+\item Ispisati sve brojeve od 1 do $n^2$ (po $n$ brojeva u jednoj vrsti).
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -2200,7 +2198,7 @@ Napisati program koji za unetu pozitivnu celobrojnu vrednost $n$ ispisuje
 \end{upotreba}
 \end{miditest}
 
-\item tablicu brojeva tako 
+\item Ispisati tablicu brojeva tako 
 da su u prvoj vrsti svi brojevi od $1$ do $n$, a svaka naredna vrsta 
 dobija se rotiranjem prethodne vrste za jedno mesto u levo. 
 
@@ -2225,7 +2223,7 @@ dobija se rotiranjem prethodne vrste za jedno mesto u levo.
 \end{miditest}
 
 
-\item pravougli ,,trougao'' sačinjen od ,,koordinata'' svojih
+\item Ispisati pravougli ,,trougao'' sačinjen od ,,koordinata'' svojih
 tačaka. ,,Koordinata'' tačke je oblika $(i,j)$ pri čemu $i,\ j = 0,
 \ldots, n$. Prav ugao se nalazi u gornjem levom uglu slike i njegova
 koordinata je $(0, 0)$. Koordinata $i$ se uvećava po vrsti, a
@@ -2990,10 +2988,11 @@ se završava kada nije moguće ispisati ni jedan broj.
 
 
 \begin{Exercise}[difficulty=1, label=PET_62] 
-Napisati program koji učitava pozitivan ceo broj $n$ i ispisuje $n$ redova.
-U prvom redu ispisuje sve
-brojeve od $1$ do $n$, u drugom redu svaki drugi broj od $1$ do $n$, u trećem redu ispisuje
-svaki treći broj od $1$ do $n$ itd. Na kraju, u $n$-tom redu ispisuje $1$.
+Napisati program koji učitava pozitivan ceo broj $n$ i ispisuje izabrane brojeve u $n$ redova.
+U prvom redu, program ispisuje sve brojeve iz intervala $[1, n]$. 
+U drugom redu, program ispisuje svaki drugi broj iz ovog intervala. 
+U trećem redu, program ispisuje svaki treći broj iz ovog intervala, i tako redom. 
+Na kraju, u $n$-tom redu, program ispisuje samo broj $1$.
 \napomena{Pretpostaviti da je unos ispravan.}
 
 \begin{miditest}
