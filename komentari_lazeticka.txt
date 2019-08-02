@@ -73,7 +73,7 @@ IZMENA: Prepravljeno resenje tako da se vreme pretvara u minute i na osnovu dobi
 
 ---------------------------------------		 
 ---------------------------------------		 
-težinu avionskog tereta zraženu u funtama - izrazenu	
+Zadatak 1.1.18 težinu avionskog tereta zraženu u funtama - izrazenu	
 Zadatak 1.1.25 - naspramna temane?
 
 IZMENA: ispravljeno na oba mesta
@@ -85,7 +85,7 @@ U resenjima za 1.1.23 i 1.1.24 mozda napomenuti  da se podsete obrazaca za racun
 IZMENA: Uz oba zadatka dodat je obrazac:
 Za računanje površine jednakostraničnog trougla može se iskoristiti obrazac $P = \frac{a^2\cdot \sqrt{3}}{4}$ pri čemu je $a$ dužina stranice.
 
-Za računanje površine trougla može se koristiti obrazac P = $\sqrt{S\cdot(S-a)\cdot(S-b)\cdot(S-c)}$ pri čemu su $a$, $b$ i $c$ dužine stranica, a $S$ je poluobim.
+Za računanje površine trougla može se koristiti \textit{Heronov} obrazac P = $\sqrt{S\cdot(S-a)\cdot(S-b)\cdot(S-c)}$, pri čemu su $a$, $b$ i $c$ dužine stranica, a $S$ je poluobim.
 
 ---------------------------------------
 ---------------------------------------
@@ -96,7 +96,7 @@ ODGOVOR: Ovde je bio cilj da u zadatku se vezba da se prepoznaju cifre medju uci
 IZMENA: Napisati program koji učitava tri karaktera. Ispitati da li među unetim karakterima ima cifara i ako je tako
 odrediti proizvod tih cifara. 
 
----------------------------------------
+---------------------------------------		
 ---------------------------------------
 Zadatak 1.5.8: Napisati program za uneti pozitivan ceo broj n ispisuje  program koji za uneti...
 
@@ -112,9 +112,11 @@ do promene znaka. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o
 grešci.
 
 IZMENA: Tekst zadatka sada glasi:
-Napisati program koji učitava pozitivan ceo broj n, a potom
-n realnih brojeva. Ispisati koliko puta je prilikom unosa došlo
-do promene znaka. Promena znaka je kada se nakon pozitivnog broja unese negativan broj ili obrnuto, kada se nakon negativnog broja unese pozitivan broj. U slučaju neispravnog unosa, ispisati odgovarajuću poruku o
+Napisati program koji učitava pozitivan ceo broj $n$, a potom
+i $n$ realnih brojeva. Program ispisuje koliko puta je prilikom unosa došlo
+do \textit{promene znaka}. Promena znaka je kada se nakon pozitivnog broja 
+unese negativan broj ili kada se nakon negativnog broja unese pozitivan broj. 
+U slučaju neispravnog unosa, ispisati odgovarajuću poruku o
 grešci.
 
 ---------------------------------------
@@ -236,16 +238,14 @@ IZMENA: Promenjeno na nekoliko mesta
 U zadatku 1.3.12 kazete "Broj je Armstrongov ako je jednak zbiru kubova svojih cifara.  "
 U zadatku 1.7.20 kazzete "Prirodan broj a je Armstrongov ako je jednak sumi n-tih stepena svojih cifara, pri čemu je n broj cifara broja a"
 
-DANIJELA, KOMENTAR: Druga definicija je tacna. I prva je tacna, ali za trocifren broj. Zadatak 1.3.12 je pre petlji tako da tu jos uvek ne mogu da odrede broj cifara broja. Tako da sam napravila izmenu u zadatku 1.3.12:
-(da li je dovoljno ili treba precizirati?)
-MILENA: Meni je ovakva izmena sasvim ok.
+KOMENTAR: Druga definicija je tacna. I prva je tacna, ali samo za trocifren broj. Zadatak 1.3.12 je pre petlji tako da tu jos uvek ne mogu da odrede broj cifara broja. Tako da sam napravila izmenu u zadatku 1.3.12:
 
 IZMENA: Trocifreni broj je Armstrongov ako je jednak zbiru kubova svojih cifara.
 ---------------------------------------
 ---------------------------------------
 Zadatak 1.7.21 grcko epsilon zameniti sa epsilon
 
-IZMENA: ispravljeno
+IZMENA: ispravljeno, zamenjeno sa eps, kao u funkciji
 
 ---------------------------------------
 ---------------------------------------
@@ -436,9 +436,9 @@ IZMENA: ispravljeno
 2.9.6 informacije o svakom detetu i za zadati pol i uzrast deteta i ispisuje korisniku na tri decimale prosečnu ocenu 
 -preformulisati
 
-NOVA VERZIJA: Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu. Za 
-zadati pol i uzrast deteta i ispisati na tri decimale prosečnu ocenu
-koje je obdanište dobilo od dece sa unetim polom i brojem godina.
+NOVA VERZIJA: 
+Napisati program koji učitava broj dece u grupi, a zatim i informacije o svakom detetu. 
+Ispisati, na tri decimale, prosečnu ocenu koje je obdanište dobilo od dece sa unetim polom i brojem godina.
 
 ---------------------------------------
 ---------------------------------------
