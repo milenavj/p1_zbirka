@@ -32,7 +32,7 @@ int main() {
 
     /* Racunanje vodece cifre ucitanog broja x. */
     x_kopija = abs(x);
-    while (x_kopija > 10) {
+    while (x_kopija >= 10) {
       x_kopija = x_kopija / 10;
     }
     vodeca_cifra = x_kopija;

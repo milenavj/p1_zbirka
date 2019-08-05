@@ -4,7 +4,7 @@
 /* Funkcija proverava da li se neka cifra nalazi u zapisu celog
    broja i ako se nalazi vraca odgovarajucu poziciju (tj. njenu
    tezinu koja je neki stepen broja 10), a u suprotnom vraca -1. Na 
-   primer, za broj = 1234 i cifra = 2, funckija vraca 100. */
+   primer, za broj = 1234 i cifra = 2, funkcija vraca 100. */
 int pozicija_cifre(int broj, int cifra) {
   int tezina_pozicije = 1;
 
@@ -28,7 +28,7 @@ int pozicija_cifre(int broj, int cifra) {
 int izbaci_cifru(int broj, int pozicija) {
   int levi_deo = broj / (pozicija * 10);
   int desni_deo = broj % pozicija;
-  return levi_deo * 10 + desni_deo;
+  return levi_deo * pozicija + desni_deo;
 }
 
 /* Funkcija proverava da li su dva cela broja napisana pomocu istih 

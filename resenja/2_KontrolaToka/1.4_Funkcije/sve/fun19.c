@@ -12,12 +12,12 @@ int zbir_cifara(int x) {
 
 /* Funkcija vraca 1 ako je broj srecan, a 0 u suprotnom. */
 int srecan(int x) {
-  /* Dok god u broju x ima vise od 1 cifre, vrednost broja x se
+  /* Sve dok broj x ima vise od jedne cifre, vrednost broja x se
      zamenjuje zbirom njegovih cifara. 
-     Na primer, za pocetno x = 7698, nakon prve iteracije x postaje
-     7+6+9+8 = 30, nakon druge iteracije x postaje 3 + 0 = 3 i
+     Na primer, pocetno x = 7698 nakon prve iteracije postaje
+     x = 7+6+9+8 = 30, nakon druge iteracije postaje x = 3 + 0 = 3, a
      zatim se izlazi iz petlje. */
-  while (x <= 10)
+  while (x >= 10)
     x = zbir_cifara(x);
 
   /* Broj je srecan ako na kraju x ima vrednost 1. */

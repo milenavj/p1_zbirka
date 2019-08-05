@@ -59,7 +59,7 @@ int od_nove_godine(int dan, int mesec, int godina) {
   /* Za sve mesece pre datog datuma dodaje se broj dana za dati
      mesec. */
   for (i = 1; i < mesec; i++)
-    suma_dana += broj_dana(mesec, godina);
+    suma_dana += broj_dana(i, godina);
 
   /* Na kraju se dodaje koliko je dana proteklo u datom mesecu, a
      to je zadato promenljivom dan. */
@@ -73,7 +73,7 @@ int do_kraja_godine(int dan, int mesec, int godina) {
   /* Za sve mesece posle datog datuma dodaje se broj dana za dati
      mesec. */
   for (i = mesec + 1; i <= 12; i++)
-    suma_dana += broj_dana(mesec, godina);
+    suma_dana += broj_dana(i, godina);
 
   /* Na kraju se dodaje koliko je dana je ostalo u datom mesecu. */
   return suma_dana + broj_dana(mesec, godina) - dan;
@@ -111,8 +111,8 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
   int pom, i;
   int suma_dana = 0;
 
-  /* Provera koji od datuma je ranije i ukoliko je to potrebno,
-     razmenjuju se tako da broj 1 ide uz prvi datum. */
+  /* Provera koji od datuma je ranije. Ukoliko je potrebno, razmenjuju
+    se vrednosti promenljivih tako da broj 1 ide uz raniji datum. */
   if (!prethodi(dan1, mesec1, godina1, dan2, mesec2, godina2)) {
     pom = dan1;
     dan1 = dan2;

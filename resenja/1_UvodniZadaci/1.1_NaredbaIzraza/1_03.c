@@ -29,8 +29,8 @@ int main() {
   printf("%d / %d = %d\n", x, y, x / y);
 
   /* Operator % izracunava ostatak pri celobrojnom deljenju dve
-     celobrojne promenljive.
-     Da bi se odstampao karakter %, u naredbi printf se pise %%. */
+     celobrojne promenljive ili izraza.
+     Da bi se odstampao karakter %, u pozivu funkcije printf se pise %%. */
   printf("%d %% %d = %d\n", x, y, x % y);
 
   return 0;

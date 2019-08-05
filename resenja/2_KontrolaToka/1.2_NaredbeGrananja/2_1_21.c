@@ -32,7 +32,7 @@ int main() {
     /* Odredjivanje odgovarajuceg broja: Kada bi niz izgledao
        10111213...9899, za dato k, broj bi se dobio kao 9 + k/2 + 1 
        za neparne vrednosti k, odnosno 9 + k/2 za parne (dodaje se
-       vrednost detet jer je prvi broj u nizu desetka.) Na primer:
+       vrednost deset jer je prvi broj u nizu desetka.) Na primer:
        k=1, broj = 9 + 1/2 + 1 = 9 + 0 + 1 = 10 k=2, broj = 9 + 2/2 
        = 10 k=3, broj = 9 + 3/2 + 1 = 9 + 1 + 1 = 11 k=4, broj = 9
        + 4/2 = 11 ... Posto ovde postoji i 9 pozicija ispred,

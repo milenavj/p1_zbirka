@@ -19,7 +19,7 @@ int main() {
   poletanje = poletanje_sat * 60 + poletanje_minut;
   sletanje = sletanje_sat * 60 + sletanje_minut;
 
-  /* Racunanje razlike u sekundama izmedju sletanja i poletanja. */
+  /* Racunanje razlike u minutima izmedju sletanja i poletanja. */
   duzina = sletanje - poletanje;
 
   /* Pretvaranje razlike u minutama u razliku u satima i minutima.

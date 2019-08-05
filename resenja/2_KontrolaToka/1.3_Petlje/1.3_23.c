@@ -23,7 +23,7 @@ int main() {
     return 0;
   }
 
-  /* Postavljanje maksimalnog broja cifara na 0. Ovo je ispravnosti
+  /* Postavljanje maksimalnog broja cifara na 0. Ovo je ispravno
      jer svaki broj ima vise od 0 cifara. */
   najveci_broj_cifara = 0;
 

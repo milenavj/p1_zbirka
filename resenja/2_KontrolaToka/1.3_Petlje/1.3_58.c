@@ -15,9 +15,9 @@ int main() {
     /* Brojac j oznacava koja kolona se trenutno ispisuje. Za
        svaki kvadrat se racuna duzina bez poslednje ivice. Kvadrat
        je sastavljen od (m-1) zvezdice i (m-1) praznine (praznine
-       se nalaze izmedju zvezdica). Znaci ukupna duzina je 2*(m-1)
+       se nalaze izmedju zvezdica). Znaci, ukupna duzina je 2*(m-1)
        karakter, a kako ima n kvadrata plus jedna kolona za
-       najdesniju ivicu, duzina je n*2*(m-1) + 1. */
+       krajnje desnu ivicu, duzina je n*2*(m-1) + 1. */
     for (j = 0; j <= n * 2 * (m - 1); j++)
       /* Provera da li se ispisuje prvi ili poslednji red. */
       if (i == 1 || i == m)

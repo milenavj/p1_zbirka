@@ -21,7 +21,7 @@ int main() {
   /* Ucitavanje granica intervala i provera ispravnosti ulaza. */
   printf("Unesite dva realna broja:");
   scanf("%f%f", &a, &b);
-  if (b >= a) {
+  if (b <= a) {
     printf("Greska: neispravan unos.\n");
     return 1;
   }
