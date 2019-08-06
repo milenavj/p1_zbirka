@@ -26,7 +26,7 @@ void rotiraj(char *rec, int k, char *rezultat) {
   k = k % n;
 
   /* Karakteri koji se u pocetnoj reci nalaze na pozicijama od 0 do
-     k, u rezultujucoj reci treba da budu na pozicijama od n-k do 
+     k-1, u rezultujucoj reci treba da budu na pozicijama od n-k do 
      n-1. */
   for (i = 0; i < k; i++)
     rezultat[n - k + i] = rec[i];

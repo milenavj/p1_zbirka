@@ -11,8 +11,8 @@ void greska(char *poruka) {
   exit(EXIT_FAILURE);
 }
 
-/* Funkcija ucitava karaktere iz datoteke i smesta ih u skup s. */
-int ucitaj_skup(char s[], FILE *f) {
+/* Funkcija ucitava karaktere iz datoteke i smesta ih u niz s. */
+int ucitaj_karaktere(char s[], FILE *f) {
   char c;
   int n = 0;
   
@@ -30,7 +30,7 @@ int ucitaj_skup(char s[], FILE *f) {
   return n;
 }
 
-/* Funkcija racuna koliko slova i koliko cifara se nalazi u skupu
+/* Funkcija racuna koliko slova i koliko cifara se nalazi u nizu
    s.*/
 void prebroj(char s[], int n, int *broj_slova, int *broj_cifara) {
   int i;
@@ -49,7 +49,7 @@ void prebroj(char s[], int n, int *broj_slova, int *broj_cifara) {
 int main(int argc, char* argv[]) {
   /* Deklaracije potrebnih promenljivih. */
   FILE* ulaz;
-  char skup[MAKS_ELEMENATA];
+  char karakteri[MAKS_ELEMENATA];
   int broj_elemenata, broj_slova, broj_cifara;
 
   /* Provera broja argumenata komandne linije. */
@@ -61,11 +61,11 @@ int main(int argc, char* argv[]) {
   if (ulaz == NULL)
     greska("Greska: neuspesno otvaranje datoteke.");
   
-  /* Ucitavanje elemenata skupa. */
-  broj_elemenata = ucitaj_skup(skup, ulaz);
+  /* Ucitavanje karaktera datoteke. */
+  broj_elemenata = ucitaj_karaktere(karakteri, ulaz);
   
   /* Racunanje i ispis rezultata. */
-  prebroj(skup, broj_elemenata, &broj_slova, &broj_cifara);
+  prebroj(karakteri, broj_elemenata, &broj_slova, &broj_cifara);
   printf("Broj slova: %d\n", broj_slova);
   printf("Broj cifara: %d\n", broj_cifara);
   

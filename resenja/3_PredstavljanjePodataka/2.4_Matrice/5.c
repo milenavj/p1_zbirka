@@ -30,7 +30,7 @@ int refleksivna(int a[][MAKS], int n) {
 int simetricna(int a[][MAKS], int n) {
   int i, j;
   for (i = 0; i < n; i++)
-    for (j = 0; j < n; j++)
+    for (j = i + 1; j < n; j++)
       if (a[i][j] != a[j][i])
         return 0;
 

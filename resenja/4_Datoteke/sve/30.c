@@ -29,7 +29,7 @@ int broj_linija(FILE *ulaz, char *s) {
        dugacka niska s. 
        Na primer, ako je linija "abcdefghijk", a niska s "ab", 
        onda sa: linija + duzina_linije se vrsi pomeranje na karakter 
-       iza karaktera 'k', a sa: 
+       iza karaktera 'k' (odnosno null-terminator), a sa: 
        linija + duzina_linije - duzina_s 
        na karakter 'j'. Ukoliko se funkcija strcmp pozove sa: 
        strcmp(linija + duzina_linije - duzina_s, s), 

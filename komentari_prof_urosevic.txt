@@ -25,11 +25,13 @@ U resenju je predlozena nesto efikasnija pretraga prostih brojeva.
 Da li ovaj komentar treba uvaziti?
 
 
--->
+-----
 Zadatak 1.7.21:
 Komentar na tekst zadatka glasi:
 Da li se sabira dok je razlika manja od epsilon ili se prekida kada razlika postane manja od epsilon.
 U resenju zadatka stoji "Nije u skladu sa postavkom.".
+Ako moze neko da pogleda, nisam sigurna da lepo pratim zapazanje.
+-----
 
 
 Zadatak 1.7.22:
@@ -56,8 +58,46 @@ Predlozeno je koriscenje Hornerove sheme za racunanje dekadne vrednosti broja.
 Da li modifikovati kod?
 
 Zadatak 2.7.6:
+U resenju zadatka uz kod 
+    /* Racunanje sume elemenata podmatrice velicine 3*3
+    ciji je centralni element a[i][j]. Pri racunanju ove sume
+    vodi se racuna da se ne izadje iz okvira matice a. */
+    for (k = i - 1; k <= i + 1; k++)
+        for (t = j - 1; t <= j + 1; t++)
+            if (k >= 0 && k < m && t >= 0 && t < n)
+                suma_suseda += a[k][t];
+
+stoji komentar "sta ako je i = 0 ili i = m-1? slicno za j?"
+
+Uslov k>=0 && k<m pokriva slucajeve za i. Slicno za j i uslov t>=0 && t<n.
+Proveriti da nisam napravila previd ili pogresno interpretirala zapazanje.
 
 
+Zadatak 2.9.2:
+U resenju zadatka je predlozeno da se umesto promenljive "nzd_razlomka" uvede promenljiva 
+"skrati". Meni je licno prvi izbor prirodniji. 
+Da li uvaziti ovaj komentar?
+
+
+Zadatak 2.9.14:
+Komentar na resenje zadatka, u delu sa integracijom je: 
+Da li stepen polinoma p moze biti MAKS_STEPEN? Ako moze onda trebe niz sa koeficejntima da ima MAKS_STEPEN+2 elemenata.
+
+Posto provera kaze da stepen polinoma moze biti MAKS_STEPEN (niz[i].stepen > MAKS_STEPEN || niz[i].stepen < 0) 
+ja sam ovo modifikovala, ali ne znam da li je potrebno dodatno pojasnjenje zasto je sada u strukturi polinom niz sa 
+koeficijentima duzine MAKS_STEPEN + 2. Deluje malo neprirodno. 
+
+
+Zadatak 3.3.9:
+Ovaj zadatak je preformulisan iz razloga sto je koriscen termin skup koji podrazumeva
+da nema repeticije elemenata. Da li je ovako smisleno i precizno? Nisam menjala argumente komandne
+linije u test primerima. 
+
+
+Zadatak 3.3.16:
+U tekstu zadatka stoji napomena da treba pojasniti sta su susedni elementi. 
+Mi smo ovo vizuelno predstavile u zadatku 2.7.6. Da li lepse ponoviti pojasnjenj ili 
+staviti referencu na ovaj zadatak?
 
 
 

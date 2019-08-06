@@ -24,8 +24,8 @@ int main() {
   /* Deklaracije potrebnih promenljivih. */
   FILE *ulaz, *izlaz;
   int n, i;
-  Tacka tacka, maks_t;
-  double rastojanje, maks_r = -1;
+  Tacka tacka, maks_tacka;
+  double rastojanje, maks_rastojanje = -1;
 
   /* Otvaranje ulazne datoteke za citanje i provera uspeha. */
   ulaz = fopen("tacke.txt", "r");
@@ -53,14 +53,14 @@ int main() {
     fprintf(izlaz, "%.2lf\n", rastojanje);
 
     /* Azuriranje maksimalnog rastojanja i odgovarajuce tacke. */
-    if (rastojanje > maks_r) {
-      maks_r = rastojanje;
-      maks_t = tacka;
+    if (rastojanje > maks_rastojanje) {
+      maks_rastojanje = rastojanje;
+      maks_tacka = tacka;
     }
   }
 
   /* Ispis rezultata. */
-  printf("Najudaljenija tacka: (%d, %d)\n", maks_t.x, maks_t.y);
+  printf("Najudaljenija tacka: (%d, %d)\n", maks_tacka.x, maks_tacka.y);
 
   /* Zatvaranje datoteke. */
   fclose(ulaz);

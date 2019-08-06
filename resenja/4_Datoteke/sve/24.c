@@ -4,7 +4,6 @@
 
 #define MAKS_PUNO_IME 101
 #define MAKS_OCENA 10
-#define MAKS_STUDENATA 100
 
 typedef struct {
   char puno_ime[MAKS_PUNO_IME];

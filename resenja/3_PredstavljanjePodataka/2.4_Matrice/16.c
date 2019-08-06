@@ -43,8 +43,8 @@ int main() {
   int a[MAKS][MAKS], b[MAKS][MAKS], c[MAKS][MAKS];
   int m, n, k, t;
 
-  /* Ucitavanje dimenzija matrice A i provera ispravnosti ulaza. */
-  printf("Unesite broj vrsta i broj kolona matrice A: ");
+  /* Ucitavanje dimenzija matrice a i provera ispravnosti ulaza. */
+  printf("Unesite broj vrsta i broj kolona matrice a: ");
   scanf("%d%d", &m, &n);
   if (n <= 0 || n > MAKS || m <= 0 || m > MAKS) {
     printf("Greska: neispravan unos.\n");
@@ -54,8 +54,8 @@ int main() {
   /* Ucitavanje elemenata prve matrice. */
   ucitaj(a, m, n);
 
-  /* Ucitavanje dimenzija matrice B i provera ispravnosti ulaza. */
-  printf("Unesite broj vrsta i broj kolona matrice B: ");
+  /* Ucitavanje dimenzija matrice b i provera ispravnosti ulaza. */
+  printf("Unesite broj vrsta i broj kolona matrice b: ");
   scanf("%d%d", &k, &t);
   if (k <= 0 || k > MAKS || t <= 0 || t > MAKS) {
     printf("Greska: neispravan unos.\n");

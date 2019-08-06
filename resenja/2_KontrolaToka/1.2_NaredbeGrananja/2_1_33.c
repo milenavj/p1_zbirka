@@ -38,9 +38,9 @@ int main() {
      1) Ako se nalaze u istom redu (k==m) 
      2) Ako se nalaze u istoj koloni (l==n) 
      3) Ako se nalaze na istoj dijagonali. Dijagonala moze biti:
-        a) paralelna glavnoj dijagonali (abs(k-l) == abs(m-n)) 
+        a) paralelna glavnoj dijagonali (k-l == m-n) 
         b) paralelna sporednoj dijagonali (k+l == m+n) */
-  if ((k == m) || (l == n) || (abs(k - l) == abs(m - n)) 
+  if ((k == m) || (l == n) || (k - l == m - n) 
       || (k + l == m + n)){
     printf("Kraljica sa (%d, %d) ugrozava (%d, %d).\n", 
            k, l, m, n);

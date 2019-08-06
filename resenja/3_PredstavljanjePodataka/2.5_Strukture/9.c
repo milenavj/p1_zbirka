@@ -7,7 +7,7 @@
 /* Struktura koja opisuje loptu. */
 typedef struct {
   int poluprecnik;
-  enum { plava, zuta, crvena, zelena } boja;
+  enum { plava = 1, zuta, crvena, zelena } boja;
 } Lopta;
 
 /* Funkcija racuna zapreminu lopte. */

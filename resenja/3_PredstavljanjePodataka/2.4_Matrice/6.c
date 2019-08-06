@@ -35,7 +35,7 @@ float suma_sporedna(float a[][MAKS], int n) {
   return suma;
 }
 
-/* Funckija racuna sumu elemenata koji se nalaze iznad glavne
+/* Funkcija racuna sumu elemenata koji se nalaze iznad glavne
    dijagonale matrice. */
 float suma_iznad(float a[][MAKS], int n) {
   float suma = 0;
@@ -55,7 +55,7 @@ float suma_ispod(float a[][MAKS], int n) {
   int i, j;
 
   for (i = 0; i < n; i++)
-    for (j = n - i - 1; j > i; j--)
+    for (j = n - i; j < n; j++)
       suma += a[i][j];
 
   return suma;

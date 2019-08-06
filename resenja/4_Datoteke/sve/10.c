@@ -4,7 +4,7 @@
 
 #define MAKS_NISKA 21
 
-/* Funkcija rotira nisku s duzine n za jedno mesto u desno. */
+/* Funkcija rotira nisku s duzine n za jedno mesto u levo. */
 void rotiraj_za_1(char *s, int n) {
   int i;
   char c = s[0];

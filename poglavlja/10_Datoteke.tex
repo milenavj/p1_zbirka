@@ -446,20 +446,18 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_x4]         
 Napisati program koji prebrojava slova i cifre u datoteci.
 \begin{description}
-\item{(a)} Napisati funkciju \kckod{int unesi\_skup(char s[], FILE *f)}
-  kojom se unosi skup elemenata iz datoteke \kckod{f}. Skup se predstavlja kao
-  niz karaktera, pri čemu su dozvoljeni elementi skupa mala i
-  velika slova engleske abecede, kao i cifre.  Unos se prekida kada se naiđe
-  na znak za novi red ili nedozvoljeni karakter za skup.
-  Funkcija vraća broj elemenata skupa koji su uspešno učitani.
+\item{(a)} Napisati funkciju \kckod{int ucitaj\_karaktere(char s[], FILE *f)}
+  kojom se učitavaju karakteri iz datoteke \kckod{f} u niz karaktera \kckod{s}. Dozvoljeni karakteri za učitavanje su mala i
+  velika slova engleske abecede, kao i cifre.  Učitavanje se prekida kada se naiđe
+  na znak za novi red ili nedozvoljeni karakter. Funkcija vraća broj elemenata niza uspešno učitanih karaktera.
 \item{(b)} Napisati funkciju
-  \kckod{void prebroj(char s[], int n, int *br\_slova, int *br\_cifara)} kojom se
-  određuje broj slovnih elemenata skupa (velikih ili malih slova)
-  kao i broj cifara u skupu.
+  \kckod{void prebroj(char s[], int n, int *broj\_slova, int *broj\_cifara)} kojom se
+  određuje broj slovnih elemenata niza karaktera (velikih ili malih slova)
+  kao i broj cifara.
 \end{description}
 Napisati program koji koristeći prethodne funkcije prebrojava cifre i slova u datoteci 
 čije se ime zadaje kao argument komandne linije, a zatim ispisuje dobijene vrednosti na standardni izlaz.
-Pretpostaviti da je maksimalni broj elemenata skupa $1000$.
+Pretpostaviti da je maksimalni broj karaktera datoteke $1000$.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{minitest}
@@ -666,7 +664,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{Exercise}[label=p3_id20]         
 Napisati program koji iz datoteke $razno.txt$ u datoteku $palindromi.txt$ prepisuje sve palindrome. Reč je palindrom ako se isto čita sa leve i desne strane bez obzira na veličinu slova. Pretpostaviti da je maksimalna dužina reči $200$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
-\uputstvo{}
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -1053,7 +1050,7 @@ Pogledajte zadatak \ref{p3_iv4}.
  za svaku tačku njene $x$ i $y$ koordinate. 
  Napisati program koji u datoteku $rastojanja.txt$ upisuje rastojanje svake 
  od učitanih tačaka od koordinatnog početka, 
- a na standardni izlaz koordinate tačke koja je od njega najudaljenija. 
+ a na standardni izlaz koordinate tačke koja je od njega najudaljenija. Ukoliko ima više takvih tačaka, ispisati koordinate prve.
  Koristiti strukturu \kckod{Tacka} sa poljima \kckod{x} i \kckod{y}, 
  kao i funkciju kojom se računa rastojanje tačke od koordinatnog početka. 
  Pretpostaviti da je maksimalan broj tačaka u datoteci $50$.
@@ -1294,8 +1291,7 @@ Za svakog studenta dato je ime, prezime i niz ocena koji se završava nulom.
 Svi podaci su razdvojeni razmacima. Napisati program koji učitava podatke o studentima i
 na standardni izlaz ispisuje podatke za studenta sa najvećim prosekom (prosek ispisati na $2$ decimale).
 Ukoliko ima više takvih studenata, ispisati informacije o prvom studentu.
-Pretpostaviti da je maksimalni broj studenta $100$, maksimalni broj ocena $10$ i
-maksimalna dužina punog imena $100$ karaktera. 
+Pretpostaviti da je maksimalni broj ocena $10$ i maksimalna dužina punog imena $100$ karaktera. 
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 \uputstvo{Ime i prezime studenta se mogu pročitati pomoću
 specifikatora $\%s$ a potom se za kreiranje niske \kckod{puno\_ime} u 
