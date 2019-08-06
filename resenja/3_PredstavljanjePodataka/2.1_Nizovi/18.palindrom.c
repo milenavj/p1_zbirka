@@ -14,15 +14,15 @@ void ucitaj(char niz[], int n) {
 
 /* Funkcija proverava da li je niz karaktera palindrom. */
 int je_palindrom(char niz[], int n) {
-  int i;
-  /* U petlji se porede niz[0] i niz[n-1], zatim niz[1] i niz[n-2]
-     itd. Ako se naidje na par koji se razlikuje - niz nije
-     palindrom. */
-  for (i = 0; i < n / 2; i++)
-    if (tolower(niz[i]) != tolower(niz[n - 1 - i]))
+  int i, j;
+  /* U petlji se porede elementi niz[0] i niz[n-1], zatim niz[1] i niz[n-2]
+     itd. Ako se naidje na par elemenata koji se razlikuju, moze se zakljuciti da
+     niz nije palindrom. */
+  for (i = 0, j = n-1; i < j; i++, j--)
+    if (tolower(niz[i]) != tolower(niz[j]))
       return 0;
 
-  /* Izvrsila se cela petlja, pa se moze zakljuciti da je niz
+  /* Izvrsila se cela petlja pa se moze zakljuciti da je niz
      palindrom. */
   return 1;
 }

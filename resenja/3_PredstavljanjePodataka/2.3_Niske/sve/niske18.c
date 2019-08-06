@@ -6,8 +6,8 @@
 #define MAKS_NISKA 8
 
 /* Funkcija racuna dekadnu vrednost jedne heksadekadne cifre. Ako
-   je c broj, vrednost se dobija oduzimanjem '0'. Ako je c slovo,
-   vrednost se dobija oduzimanjem 'A' i dodavanjem 10 (npr.
+   je c dekadna cifra, vrednost se dobija oduzimanjem '0'. Ako je c 
+   veliko slovo, vrednost se dobija oduzimanjem 'A' i dodavanjem 10 (npr.
    vrednost karaktera 'B' je 10 + 'B' - 'A' = 11). */
 int vrednost_heksa_cifre(char c) {
   if (isdigit(c))
@@ -22,7 +22,7 @@ int dekadna_vrednost(char s[]) {
   int n = strlen(s);
 
   /* Vrsi se prolazak kroz nisku sa desna na levo. Heksadekadna
-     cifra najvece tezine se nalazi na poziciji n-1, a ona najvece
+     cifra najvece tezine se nalazi na poziciji n-1, a cifra najmanje
      tezine se nalazi na poziciji 2 (jer su prva dva karaktera 0x).
 
      U svakoj iteraciji, na rezultat se dodaje vrednost tekuce

@@ -1,0 +1,63 @@
+Zadatak 1.3.30: 
+
+Predlog je da se izraz u resenju
+((k % 2 == m % 2) && (l % 2 == n % 2)) || ((k % 2 != m % 2) && (l % 2 != n % 2))
+zameni izrazom
+(k+l) %2 == (m+n) % 2
+
+Predlozeni izraz je uistinu jednostavniji, ali je, rekla bih, za studente lakse da isprate 
+logiku prvog izraza. 
+Da li predlog prof Urosevica uvaziti, staviti pod komentar kao moguci drugi nacin zapisa ili zanemariti?
+
+
+Zamoljeni smo da proverimo i uslov pripadanja dijagonali koja je paralelna glavnoj dijagonali. 
+Umesto abs(k-l) == abs(m-n) bih rekla da treba da stoji k-l == m-n. 
+Da li je ovaj novi uslov u redu za sve?
+
+
+Zadatak 1.5.58:
+
+Predlozen je nesto drugaciji nacin zapisa petlje u resenju. Meni se licno vise dopada nase resenje jer 
+ga prati pitka logika. Pitanje je da li komentar treba uvaziti i izmeniti kod. 
+
+Zadatak 1.7.8:
+U resenju je predlozena nesto efikasnija pretraga prostih brojeva. 
+Da li ovaj komentar treba uvaziti?
+
+
+-->
+Zadatak 1.7.21:
+Komentar na tekst zadatka glasi:
+Da li se sabira dok je razlika manja od epsilon ili se prekida kada razlika postane manja od epsilon.
+U resenju zadatka stoji "Nije u skladu sa postavkom.".
+
+
+Zadatak 1.7.22:
+Komentar u resenju zadatka glasi: 
+"Zasto se ne ispisuje i vrednost i-a? Vrednosti sinusa za sebe nemaju nekog smisla." 
+Komentar na racun smisla ne razumem bas najbolje, a i sam zadatak me je, moram priznati vise puta iznenadio. :) 
+Mislim da je i-a zapis za "i=a". 
+Ova vrednost bi na osnovu naseg koda trebala da se ispisuje. Medjutim, prvi test primer uistinu 
+ispisuje samo 9 umesto 10 vrednosti. 
+
+Zadatak 2.5.14:
+U resenju je predlozeno da se dodele 
+t[j] = s[i];
+t[j + 1] = s[i];
+
+zamene sa 
+t[j+1]=t[j]=s[i];
+
+Meni se cini da je nas polazni zapis jednostavniji za ispratiti. 
+Da li uvaziti komentar ili zadrzati polazni zapis?
+
+Zadatak 2.5.18:
+Predlozeno je koriscenje Hornerove sheme za racunanje dekadne vrednosti broja.
+Da li modifikovati kod?
+
+Zadatak 2.7.6:
+
+
+
+
+

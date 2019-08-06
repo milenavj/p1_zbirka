@@ -72,20 +72,16 @@ int main() {
     unija[n_unija] = a[i];
     n_unija++;
 
-    /* Ukoliko se element a[i] nalazi u nizu b i ne postoji u nizu
-       presek, dodaje se presek i povecava se brojac elemenata u
-       nizu presek. */
-    if (postoji(b, n_b, a[i]) == 1
-        && postoji(presek, n_presek, a[i]) == 0) {
+    /* Ukoliko se element a[i] nalazi u nizu b dodaje se nizu presek i 
+      povecava se brojac elemenata u nizu presek. */
+    if (postoji(b, n_b, a[i]) == 1) {
       presek[n_presek] = a[i];
       n_presek++;
     }
 
-    /* Ukoliko element a[i] ne postoji u nizu b i ne postoji u nizu 
-       razlika, dodaje se u razliku i povecava se brojac elemenata
-       u nizu razlika. */
-    if (postoji(b, n_b, a[i]) == 0
-        && postoji(razlika, n_razlika, a[i]) == 0) {
+    /* Ukoliko element a[i] ne postoji u nizu b dodaje se nizu razlika i 
+      povecava se brojac elemenata u nizu razlika. */
+    if (postoji(b, n_b, a[i]) == 0) {
       razlika[n_razlika] = a[i];
       n_razlika++;
     }

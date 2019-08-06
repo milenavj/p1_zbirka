@@ -362,7 +362,7 @@ Napisati program koji za učitanu nisku maksimalne dužine 20 karaktera ispisuje
 
 \begin{Exercise}[label=NIS_10] 
  Napisati funkciju \kckod{void ukloni(char *s)} koja iz niske uklanja
- sva slova iza kojih neposredno sledi slovo koje je u engelskoj abecedi nakon
+ sva slova iza kojih sledi slovo koje je u engelskoj abecedi nakon
  njih, pri čemu se veličina slova zanemaruje. Pravilo se ne primenjuje na nisku dobijenu uklanjanjem.
  Napisati program koji učitava liniju teksta koja ima najviše 100 karaktera
  i ispisuje liniju koja se dobije nakon uklanjanja pomenutih karaktera.
@@ -1162,7 +1162,7 @@ Pretpostaviti da uneta niska nije duža od 20 karaktera.
 
 \begin{Exercise}[label=NIS_29] 
 Napisati funkciju \kckod{void sifruj(char rec[], char sifra[])} koja na osnovu date 
-reči formira šifru tako što se svako slovo u reči zameni sa naredna tri slova engleske abecede. 
+reči formira šifru tako što se svako slovo u reči zameni sa naredna tri slova engleske abecede (nakon slova 'z' tj. 'Z' sledi slovo 'a' tj. 'A'). 
 Napisati program koji testira napisanu funkciju za reč maksimalne dužine 20 karaktera. 
 
 \begin{minitest}
@@ -1247,15 +1247,14 @@ Napisati program za rad sa brojevima zapisanim u različitim brojevnim sistemima
 \begin{enumerate}
 \setlength\itemsep{0em}
 \item Napisati funkciju \kckod{unsigned int u\_dekadni\_sistem(char broj[], unsigned int osnova)} koja
-određuje dekadnu vrednost zapisa datog neoznačenog broja $broj$ u datoj osnovi. 
+određuje dekadnu vrednost zapisa datog neoznačenog broja $broj$ u datoj osnovi $osnova$. 
 \item Napisati funkciju \kckod{void iz\_dekadnog\_sistema(unsigned int broj, unsigned int osnova, char rezultat[])} 
-koja datu dekadnu vrednost $broj$ zapisuje u datoj osnovi $osnovi$ i smešta rezultat u nisku $rezultat$. 
+koja datu dekadnu vrednost $broj$ zapisuje u datoj osnovi $osnova$ i smešta rezultat u nisku $rezultat$. 
 Pretpostaviti da je $0 < osnova \leq 16$.  
 \end{enumerate}
 
-Napisati program koji učitava broj $n$ i osnove $o_1$ i $o_2$ i ispisuje dekadnu vrednost broja $n$ u osnovi $o_1$, kao i
-vrednost koja se dobije kada se ta dekadna vrednost zapiše u osnovi $o_2$.
-Pretpostaviti da je ulaz ispravan i da će svi brojevi biti u opsegu tipa \kckod{unsigned}. 
+Napisati program koji učitava broj $n$ koji se zadaje kao niska cifara i osnove $o_1$ i $o_2$ i ispisuje dekadnu vrednost broja $n$ u osnovi $o_1$, kao i zapis tako dobijene dekadne vrednosti u osnovi $o_2$.
+Pretpostaviti da je maksimalna dužina zapisa broj $20$ karaktera i  da će svi brojevi biti ispravno zadati tj. u opsegu tipa \kckod{unsigned}. 
 
 \begin{miditest}
 \begin{upotreba}{1}
@@ -1270,7 +1269,7 @@ Pretpostaviti da je ulaz ispravan i da će svi brojevi biti u opsegu tipa \kckod
 #\naslovInt#
 #\izlaz{Unesite n, o1 i o2:}\ulaz{1067 8 3}#
 #\izlaz{Dekadna vrednost broja 1067: 567}#
-#\izlaz{Vrednost broja 567 u osnovi 3: 210000}#
+#\izlaz{Zapis broja 567 u osnovi 3: 210000}#
 \end{upotreba}
 \end{miditest}
 
@@ -1279,7 +1278,7 @@ Pretpostaviti da je ulaz ispravan i da će svi brojevi biti u opsegu tipa \kckod
 #\naslovInt#
 #\izlaz{Unesite n, o1 i o2:}\ulaz{1010111001010 2 3}#
 #\izlaz{Dekadna vrednost broja 1010111001010: 5578}#
-#\izlaz{Vrednost broja 5578 u osnovi 3: 21122121}#
+#\izlaz{Zapis broja 5578 u osnovi 3: 21122121}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1287,7 +1286,7 @@ Pretpostaviti da je ulaz ispravan i da će svi brojevi biti u opsegu tipa \kckod
 #\naslovInt#
 #\izlaz{Unesite n, o1 i o2:}\ulaz{111 3 5}#
 #\izlaz{Dekadna vrednost broja 111: 13}#
-#\izlaz{Vrednost broja 13 u osnovi 5: 23}#
+#\izlaz{Zapis broja 13 u osnovi 5: 23}#
 \end{upotreba}
 \end{miditest}
 \linkresenje{NIS_31}

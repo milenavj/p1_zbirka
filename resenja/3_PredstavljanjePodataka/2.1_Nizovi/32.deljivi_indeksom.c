@@ -25,7 +25,7 @@ void ispisi(int a[], int n) {
    elementi posle njega u nizu se pomeraju. */
 void pomeri_za_jedno_mesto(int a[], int n, int j) {
   int i;
-  for (i = j; i < n; i++)
+  for (i = j; i < n - 1; i++)
     a[i] = a[i + 1];
 }
 
