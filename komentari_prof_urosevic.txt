@@ -1,3 +1,4 @@
+-----------------------------------------------------------------
 Zadatak 1.3.30: 
 
 Predlog je da se izraz u resenju
@@ -9,21 +10,38 @@ Predlozeni izraz je uistinu jednostavniji, ali je, rekla bih, za studente lakse 
 logiku prvog izraza. 
 Da li predlog prof Urosevica uvaziti, staviti pod komentar kao moguci drugi nacin zapisa ili zanemariti?
 
+MILENA: Mislim da je idealno resenje staviti pod komentar kao mogci drugi nacin zapisa. Svakako ne bih zanemarila. 
+
 
 Zamoljeni smo da proverimo i uslov pripadanja dijagonali koja je paralelna glavnoj dijagonali. 
 Umesto abs(k-l) == abs(m-n) bih rekla da treba da stoji k-l == m-n. 
 Da li je ovaj novi uslov u redu za sve?
 
+MILENA: Koliko vidim, meni deluje ok.
+  1 2 3 4 5 6 7 8
+1 * - * - * - * -
+2 - * - * - * - * 
+3 * - * - * - * -
+4 - * - * - * - *
+5 * - * - * - * -
+6 - * - * - * - *
+7 * - * - * - * -
+8 - * - * - * - *
 
+-----------------------------------------------------------------
 Zadatak 1.5.58:
 
 Predlozen je nesto drugaciji nacin zapisa petlje u resenju. Meni se licno vise dopada nase resenje jer 
 ga prati pitka logika. Pitanje je da li komentar treba uvaziti i izmeniti kod. 
 
+MILENA: Ja bih i ovde ipak ispa na to da nije lepo zanemariti komentar, ali bih isto kao i prosli put, to stavila kao alternativu i pod komentarom. 
+
+-----------------------------------------------------------------
 Zadatak 1.7.8:
 U resenju je predlozena nesto efikasnija pretraga prostih brojeva. 
 Da li ovaj komentar treba uvaziti?
 
+MILENA: Sustina ovog zadatka je da oni nauce razliku izmedju dva zadatka: prvih n brojeva koji nesto zadovoljavaju i svi brojevi manji on n koji nesto zadovoljavaju. Da je u pitanju bilo sta drugo, a ne prost broj, onda bi ovo resenje bilo ok. Ipak, posto je u pitanju prost broj, deluje mi da i ovaj komentar treba uvaziti ali dodavanjem komentara na tu temu. Dakle, da se nakon petlje, ili pored k++ stavi komentar oblika: Zbog prirode prostih brojeva, moze se krenuti i od broja tri i vrsiti uvecavanje za dva, kako bi se preskocila provera parnih brojeva. 
 
 -----
 Zadatak 1.7.21:
@@ -31,9 +49,20 @@ Komentar na tekst zadatka glasi:
 Da li se sabira dok je razlika manja od epsilon ili se prekida kada razlika postane manja od epsilon.
 U resenju zadatka stoji "Nije u skladu sa postavkom.".
 Ako moze neko da pogleda, nisam sigurna da lepo pratim zapazanje.
+
+MILENA:
+Pretpostavljam da u tekstu treba da stoji ovo:
+Sumiranje se sprovodi sve dok je sabirak po apsolutnoj vrednosti veci od trazene tacnosti eps. 
+To je, zapravo, komentar koji stoji uz deo objasnjenja resenja (ali ne stoji uz komentar na funkciju, pa i tu, kao i u postavci, treba ispraviti!). 
+
+Druga opcija je da resenje prilagodimo tekstu zadatka, ali u tom slucaju tekst zadatka nije dobar i trebalo bi preformulisati 
+ili ovako:
+pri čemu se sumiranje vrši dok je razlika sabiraka u redu po apsolutnoj vrednosti veća od \kckod{eps}.
+ili
+pri čemu se sumiranje prekida kada je razlika sabiraka u redu po apsolutnoj vrednosti manja od \kckod{eps}.
 -----
 
-
+-----------------------------------------------------------------
 Zadatak 1.7.22:
 Komentar u resenju zadatka glasi: 
 "Zasto se ne ispisuje i vrednost i-a? Vrednosti sinusa za sebe nemaju nekog smisla." 
@@ -41,6 +70,13 @@ Komentar na racun smisla ne razumem bas najbolje, a i sam zadatak me je, moram p
 Mislim da je i-a zapis za "i=a". 
 Ova vrednost bi na osnovu naseg koda trebala da se ispisuje. Medjutim, prvi test primer uistinu 
 ispisuje samo 9 umesto 10 vrednosti. 
+
+
+MILENA: Slazem se u potpunosti da vrednosti sinusa u nekim tackama ako se ne zna koje su tacke u pitanju, zapravo i nema mnogo smisla. 
+Takodje, treba dodati i stampanje u tacki b. Problem je sto i+=korak preskoci b, verovatno zbog nekog nagomilavanja greske, i onda zbog toga se ta poslednja vrednost ne odstmpa. Dakle, trebalo bi dodati to poslednje stampanje nakon petlje, uz proveru da li je potrebno (jer ocigledno nekada jeste, nekada nije potrebno).
+-----------------------------------------------------------------
+
+
 
 Zadatak 2.5.14:
 U resenju je predlozeno da se dodele 
@@ -53,9 +89,21 @@ t[j+1]=t[j]=s[i];
 Meni se cini da je nas polazni zapis jednostavniji za ispratiti. 
 Da li uvaziti komentar ili zadrzati polazni zapis?
 
+MILENA: Ponovo bih dodala samo u komentaru ispod 
+Prethodne dodele se mogu krace zapisati na sledeci nacin:
+t[j+1]=t[j]=s[i];
+Slazem se da je nas polazni zapis laksi i bolji, ali treba uvaziti komentare prof Urosevica, cini mi se da je ovako najbezbolnije. 
+
+
+-----------------------------------------------------------------
+
 Zadatak 2.5.18:
 Predlozeno je koriscenje Hornerove sheme za racunanje dekadne vrednosti broja.
 Da li modifikovati kod?
+
+MILENA: Meni se cini da treba, ili barem staviti oba resenja, jedno da je pod komentarom. Hornerova shema se uvodi vec u 2.5.15 pa bi bilo prirodno da se to sada iskoristi i ovde. 
+-----------------------------------------------------------------
+
 
 Zadatak 2.7.6:
 U resenju zadatka uz kod 
@@ -72,11 +120,25 @@ stoji komentar "sta ako je i = 0 ili i = m-1? slicno za j?"
 Uslov k>=0 && k<m pokriva slucajeve za i. Slicno za j i uslov t>=0 && t<n.
 Proveriti da nisam napravila previd ili pogresno interpretirala zapazanje.
 
+MILENA: Meni to deluje ok, mozda ga samo treba jos malo prokomentarisati gore. Npr ovako nekako
+    /* Racunanje sume elemenata podmatrice velicine 3*3
+    ciji je centralni element a[i][j]. Pri racunanju ove sume
+    vodi se racuna da se ne izadje iz okvira matice a. Preciznije,  
+    ukoliko su sracunate neodgovarajuce vrednosti za indekse k i t (npr
+    kada je i=0 ili kada je i=m-1), te vrednosti zahvaljuci uslovu
+    k >= 0 && k < m && t >= 0 && t < n nece uci u sumu. */
+
+-----------------------------------------------------------------
+
 
 Zadatak 2.9.2:
 U resenju zadatka je predlozeno da se umesto promenljive "nzd_razlomka" uvede promenljiva 
 "skrati". Meni je licno prvi izbor prirodniji. 
 Da li uvaziti ovaj komentar?
+
+MILENA: Meni se cini da je to komentar na ime funkcije, tj na uprosti, a ne na ime nzd_razlomka?
+Tj, cini mi se da je prof Urosevic hteo da funkciju uprosti preimenujemo u funkciju skrati. Meni je to sasvim ok, razlomci se skracuju.
+-----------------------------------------------------------------
 
 
 Zadatak 2.9.14:
@@ -87,17 +149,35 @@ Posto provera kaze da stepen polinoma moze biti MAKS_STEPEN (niz[i].stepen > MAK
 ja sam ovo modifikovala, ali ne znam da li je potrebno dodatno pojasnjenje zasto je sada u strukturi polinom niz sa 
 koeficijentima duzine MAKS_STEPEN + 2. Deluje malo neprirodno. 
 
+MILENA: Cini mi se da je vazno dodati na tom mestu komentar zasto je plus 2. 
+Tj, komentar treba da stoji odmah kod strukture. 
+-----------------------------------------------------------------
+
 
 Zadatak 3.3.9:
 Ovaj zadatak je preformulisan iz razloga sto je koriscen termin skup koji podrazumeva
 da nema repeticije elemenata. Da li je ovako smisleno i precizno? Nisam menjala argumente komandne
-linije u test primerima. 
+linije u test primerima.
 
+MILENA: Zadatak je lepo preformulisan.
+Jedini problem koji vidim sa zadatkom je sto se prilikom ucitavanja karaktera ne proverava da li je n<MAKS_ELEMENATA.
+
+-----------------------------------------------------------------
 
 Zadatak 3.3.16:
 U tekstu zadatka stoji napomena da treba pojasniti sta su susedni elementi. 
 Mi smo ovo vizuelno predstavile u zadatku 2.7.6. Da li lepse ponoviti pojasnjenj ili 
 staviti referencu na ovaj zadatak?
+
+MILENA: 
+Meni se cini da treba staviti neko kratko objasnjenje u zadatak 2.7.6 i tek onda se pozvati na to uputstvo u zadatku 3.3.16. Ovako se u 2.7.6 samo poziva na sliku, pa bi mogli i odavde isto da se samo pozovemo na tu sliku, ali mi se ipak cini da to nije dovoljno. 
+
+Npr ovako: 
+Elementi matrice m susedni elementu m[i][j] su svi elementi matrice ciji se indeksi, po apsolutnoj vrednosti, razlikuju najvise za jedan. Element matrice moze imati najvise osam suseda: m[i-1][j-1], m[i-1][j], m[i-1][j+1],m[i][j-1], m[i][j+1], m[i+1][j-1], m[i+1][j] i m[i+1][j+1]. U zavisnosti od polozaja u matrici, element matrice moze imati i tri ili pet suseda. Na slici 2.1 su
+slovom s obeleženi susedni elementi matrice za elemente a, b i c.
+
+Usput, u tekstovima 3.3.16 i 3.3.17 matrice se zovu A dok se u resenju koristi malo a. Da li je to ok? U 2.7.19 je to, cini mi se, uskladjivano?
+-----------------------------------------------------------------
 
 
 
