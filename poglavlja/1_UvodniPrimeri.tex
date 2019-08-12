@@ -15,10 +15,10 @@
 Napisati program koji na standardni izlaz ispisuje poruku \kckod{Zdravo svima!}.
 
 \begin{miditest}
-\begin{upotreba}{1}
-#\naslovInt#
+\begin{test}{1}
+#\naslovIzlaz#
 #\izlaz{Zdravo svima!}#
-\end{upotreba}
+\end{test}
 \end{miditest}
 
 \linkresenje{UZ_NI_01}
@@ -162,6 +162,7 @@ Obe ulazne vrednosti su pozitivni celi brojevi.
 \begin{Answer}[ref=UZ_NI_05]
 Pogledajte zadatak \ref{UZ_NI_03}. Zbog pretpostavke da su cene artikala pozitivni celi brojevi, 
 tip promenljivih za cene treba da bude \kckod{unsigned int}.
+\sstrana
 \end{Answer}
 \fi
 
@@ -474,6 +475,7 @@ dobijen umetanjem broja $m$ između cifre stotina i cifre hiljada broja $n$.
 \ifresenja
 \begin{Answer}[ref=UZ_NI_15]
 \includecode{resenja/1_UvodniZadaci/1.1_NaredbaIzraza/1_15.c}
+\sstrana
 \end{Answer}
 \fi
 
@@ -597,7 +599,7 @@ Napisati program koji za unete realne vrednosti $a_{11}$, $a_{12}$, $a_{21}$, $a
   a_{21} & a_{22} \\
  \end{bmatrix}
 \]
-Pri ispisu vrednost zaokružiti na $4$ decimale.
+Pri ispisu vrednost zaokružiti na četiri decimale.
 
 \begin{minitest}
 \begin{upotreba}{1}
@@ -628,6 +630,7 @@ Pri ispisu vrednost zaokružiti na $4$ decimale.
 \ifresenja
 \begin{Answer}[ref=UZ_NI_20]
 \includecode{resenja/1_UvodniZadaci/1.1_NaredbaIzraza/1_20.c}
+\sstrana
 \end{Answer}
 \fi
 
@@ -766,6 +769,7 @@ koordinatama naspramnih temena (gornje levo i donje desno teme). Napisati progra
 ispisuje njegov obim i površinu zaokružene na dve decimale. 
 \napomena{Pretpostaviti da je unos ispravan.}
 
+\skrati{3}
 \begin{maxitest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -889,13 +893,14 @@ Napisati program koji za unete pozitivne cele brojeve $x$, $p$ i $c$ ispisuje br
 \begin{Exercise}[label=UZ_NI_29]
 Napisati program koji za uneta dva cela broja $a$ i $b$ dodeljuje promenljivoj $rezultat$ vrednost 1
 ako važi uslov:
-\begin{description}
+\begin{description}[itemsep=0pt]
 \item{(a)} $a$ i $b$ su različiti brojevi
 \item{(b)} $a$ i $b$ su parni brojevi
 \item{(c)} $a$ i $b$ su pozitivni brojevi, ne veći od 100
 \end{description} 
 U suprotnom, promenljivoj $rezultat$ dodeliti vrednost 0. Ispisati vrednost promenljive $rezultat$. 
 
+\skrati{1}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -927,6 +932,7 @@ U suprotnom, promenljivoj $rezultat$ dodeliti vrednost 0. Ispisati vrednost prom
 \begin{Exercise}[label=UZ_NI_30]
 Napisati program koji za uneta dva cela broja ispisuje njihov maksimum. 
 
+\skrati{1}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -954,6 +960,7 @@ Napisati program koji za uneta dva cela broja ispisuje njihov maksimum.
 \begin{Exercise}[label=UZ_NI_31]
 Napisati program koji za uneta dva cela broja ispisuje njihov minimum. 
 
+\skrati{1}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -982,6 +989,7 @@ Pogledajte zadatak \ref{UZ_NI_30}
 Napisati program koji za zadate realne vrednosti $x$ i $y$ ispisuje vrednost sledećeg izraza
 $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$ zaokruženu na dve decimale. 
 
+\skrati{1}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1007,6 +1015,7 @@ $$rez = \frac{\min(x, y) + 0.5}{1 + \max^2(x, y)}$$ zaokruženu na dve decimale.
 
 
 \ifresenja
+\sstrana
 \section{Rešenja}
 \shipoutAnswer
 \fi
