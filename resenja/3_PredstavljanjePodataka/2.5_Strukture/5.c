@@ -23,7 +23,7 @@ int nzd(int a, int b) {
 
 /* Funkcija vraca razlomak koji se dobija deljenjem imenioca i
    brojioca njihovim najvecim zajednickim deliocem. */
-void uprosti(Razlomak *r) {
+void skrati(Razlomak *r) {
   int nzd_razlomka = nzd(r->brojilac, r->imenilac);
   r->brojilac /= nzd_razlomka;
   r->imenilac /= nzd_razlomka;
@@ -36,7 +36,7 @@ Razlomak saberi(const Razlomak *a, const Razlomak *b) {
   c.brojilac = a->brojilac * b->imenilac + 
                b->brojilac * a->imenilac;
   c.imenilac = a->imenilac * b->imenilac;
-  uprosti(&c);
+  skrati(&c);
 
   return c;
 }
@@ -47,7 +47,7 @@ Razlomak pomnozi(const Razlomak *a, const Razlomak *b) {
 
   c.brojilac = a->brojilac * b->brojilac;
   c.imenilac = a->imenilac * b->imenilac;
-  uprosti(&c);
+  skrati(&c);
 
   return c;
 }

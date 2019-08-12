@@ -18,6 +18,8 @@ void dupliranje(char t[], char s[]) {
   for (i = 0, j = 0; s[i] != '\0'; i++, j += 2) {
     t[j] = s[i];
     t[j + 1] = s[i];
+    
+    /* Kraci nacin: t[j] = t[j + 1] = s[i]; */
   }
 
   /* Upisuje se terminirajuca nula na kraj rezultujuce niske. */

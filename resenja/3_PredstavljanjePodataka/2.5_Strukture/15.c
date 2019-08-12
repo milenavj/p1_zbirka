@@ -5,7 +5,9 @@
 #define MAKS_STEPEN 10
 #define MAKS_POLINOMA 100
 
-/* Struktura koja opisuje polinom. */
+/* Struktura koja opisuje polinom. Polinom stepena MAKS_STEPEN 
+   moze imati najvise MAKS_STEPEN+1 koeficijenata, a njegov
+   integral onda moze imati najvise MAKS_STEPEN+2 koeficijenata. */
 typedef struct {
   int stepen;
   float koef[MAKS_STEPEN + 2];

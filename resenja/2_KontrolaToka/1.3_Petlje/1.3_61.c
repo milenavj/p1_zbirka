@@ -20,6 +20,18 @@ int main() {
     for (j = i; j <= n + 1 - i; j++)
       printf("%d ", j);
   }
+  
+  /* II nacin: */
+//   int levo = 1, desno = n-1;
+//   while (levo <= desno) {
+//     /* Ispis jedne serije. */
+//     for (j = levo; j <= desno; j++)
+//       printf(" %d", j);
+//     
+//     /* Pomeranje leve i desne granice. */
+//     levo++;
+//     desno--;
+//   }
 
   return 0;
 }

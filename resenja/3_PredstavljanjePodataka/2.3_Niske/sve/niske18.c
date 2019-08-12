@@ -36,6 +36,10 @@ int dekadna_vrednost(char s[]) {
     rezultat += tezina_pozicije * vrednost_heksa_cifre(s[i]);
     tezina_pozicije *= 16;
   }
+  
+  /* II nacin: Koriscenjem Hornerove seme.
+  for (i = 2; i < n; i++)
+    rezultat = rezultat * 16 + vrednost_heksa_cifre(s[i]); */
 
   return rezultat;
 }

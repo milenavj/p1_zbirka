@@ -16,9 +16,10 @@ int ucitaj_karaktere(char s[], FILE *f) {
   char c;
   int n = 0;
   
-  /* Citanje karaktera do kraja datoteke ili dok se ne dodje do
-     karaktera koji nije ni slovo ni cifra. */
-  while((c = fgetc(f)) != EOF) {
+  /* Citanje karaktera do kraja datoteke ili dok se ne ucita 
+     MAKS_ELEMENATA ili dok se ne dodje do karaktera koji nije ni
+     slovo ni cifra. */
+  while((c = fgetc(f)) != EOF && n < MAKS_ELEMENATA) {
     if(isalpha(c) || isdigit(c))
       s[n] = c;
     else

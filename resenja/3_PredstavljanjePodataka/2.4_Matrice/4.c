@@ -35,9 +35,13 @@ int main() {
     for (j = 0; j < n; j++) {
       suma_suseda = 0;
 
-      /* Racunanje sume elemenata podmatrice velicine 3*3
-         ciji je centralni element a[i][j]. Pri racunanju ove sume
-         vodi se racuna da se ne izadje iz okvira matice a. */
+      /* Racunanje sume elemenata podmatrice velicine 3*3 ciji je
+         centralni element a[i][j]. Pri racunanju ove sume vodi se
+         racuna da se ne izadje iz okvira matice a. Preciznije,  
+         ukoliko su sracunate neodgovarajuce vrednosti za indekse 
+         k i t (npr. kada je i=0 ili kada je i=m-1), te vrednosti
+         zahvaljuci uslovu k >= 0 && k < m && t >= 0 && t < n nece
+         uci u sumu. */
       for (k = i - 1; k <= i + 1; k++)
         for (t = j - 1; t <= j + 1; t++)
           if (k >= 0 && k < m && t >= 0 && t < n)

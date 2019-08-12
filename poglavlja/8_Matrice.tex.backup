@@ -67,10 +67,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \skrati{1}
 \begin{Exercise}[label=mat.001]
-Napisati program koji za učitanu celobrojnu matricu\footnote{Pod pojmom \emph{učitati matricu} ili \emph{za
-    datu matricu} uvek se podrazumeva da se prvo unose dimenzije
-  matrice, a potom i sama matrica.} dimenzije $m \times n$
-izračunava i štampa na tri decimale njenu Ekulidsku normu. Pretpostaviti
+Napisati program koji za učitanu celobrojnu matricu dimenzije $m \times n$
+izračunava njenu Ekulidsku normu. Pretpostaviti
 da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \uputstvo{Euklidska norma matrice je kvadratni koren sume kvadrata svih elemenata matrice.}
@@ -200,7 +198,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Napisati funkciju \kckod{void transponovana(int a[][MAKS], int m, int
   n, int b[][MAKS])} koja određuje matricu $b$ koja je dobijena
 transponovanjem matrice $a$. Napisati program koji za učitanu matricu
-celih brojeva ispisuje odgvarajuću
+celih brojeva\footnote{Pod pojmom \emph{učitati matricu} ili \emph{za
+    datu matricu} uvek se podrazumeva da se prvo unose dimenzije
+  matrice, a potom i sama matrica.} ispisuje odgvarajuću
 transponovanu matricu.  Pretpostaviti da je maksimalna dimenzija
 matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
@@ -343,12 +343,8 @@ indekse onih elemenata matrice koji su jednaki zbiru svih svojih
 susednih elemenata. Pretpostaviti da je maksimalna dimenzija
 matrice $50 \times 50$.  
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-\uputstvo{Elementi matrice m susedni elementu \kckod{m[i][j]} su svi elementi 
-matrice čiji se indeksi, po apsolutnoj vrednosti, razlikuju najviše za jedan. 
-Element matrice može imati najviše osam suseda: \kckod{m[i-1][j-1]}, \kckod{m[i-1][j]}, \kckod{m[i-1][j+1]}, 
-\kckod{m[i][j-1]}, \kckod{m[i][j+1]}, \kckod{m[i+1][j-1]}, \kckod{m[i+1][j]} i \kckod{m[i+1][j+1]}. 
-U zavisnosti od položaja u matrici, element matrice može imati i tri ili pet suseda. 
-Na slici \ref{fig:susedi} su slovom \kckod{s} obeleženi 
+\uputstvo{Broj susednih elemenata matrice zavisi od položaja elementa u 
+matrici. Na slici \ref{fig:susedi} su slovom \kckod{s} obeleženi 
 susedni elementi matrice za elemente \kckod{a}, \kckod{b} i \kckod{c}.}
 
 \skrati{2}
@@ -422,7 +418,7 @@ susedni elementi matrice za elemente \kckod{a}, \kckod{b} i \kckod{c}.}
 
 \skrati{4}
 \begin{Exercise}[label=mat.20] 
-Napisati funkciju koja formira niz $b_0, b_1, \ldots, b_{n-1}$ od matrice $n \times m$
+Napisati funkciju koja formira niz $b_0, b_1, \ldots, b_n$ od matrice
 tako što element niza $b_i$ izračunava kao srednju vrednost elemenata
 $i$-te vrste matrice.  Napisati program koji za učitanu matricu celih brojeva
 ispisuje dobijeni niz.  
@@ -489,16 +485,16 @@ relaciji ukoliko se tu nalazi nula. Napisati funkcije:
 \begin{enumerate}
 \setlength\itemsep{0em}
   \item \kckod{int refleksivna(int a[][MAKS], int
-    n)} kojom se za relaciju zadatu matricom $a$ dimenzije
+    n)} kojom se za relaciju zadatom matricom $a$ dimenzije
     $n \times n$ ispituje da li je refleksivna;
   \item \kckod{int simetricna(int a[][MAKS], int n)}
-    kojom se za relaciju zadatu matricom $a$ dimenzije
+    kojom se za relaciju zadatom matricom $a$ dimenzije
     $n \times n$ ispituje da li je simetrična;
   \item \kckod{int tranzitivna(int a[][MAKS], int n)}
-    kojom se za relaciju zadatu matricom $a$ ispituje dimenzije
+    kojom se za relaciju zadatom matricom $a$ ispituje dimenzije
     $n \times n$ da li je tranzitivna;
   \item \kckod{int ekvivalencija(int a[][MAKS], int
-    n)} kojom se za relaciju zadatu matricom $a$ dimenzije
+    n)} kojom se za relaciju koja je zadata matricom $a$ dimenzije
     $n \times n$ ispituje da li je relacija ekvivalencije. 
 \end{enumerate}
 Napisati program koji za učitanu dimenziju $n$ i kvadratnu matricu dimenzije $n\times
@@ -569,9 +565,9 @@ Data je kvadratna matrica dimenzije $n \times n$.
     int n)} koja računa zbir elemenata na sporednoj dijagonali
     matrice.
   \item Napisati funkciju \kckod{float suma\_iznad(float a[][MAKS], int n)}
-    koja određuje sumu elemenata iznad glavne dijagonale.
+    koja određuje sumu elememenata iznad glavne dijagonale.
   \item Napisati funkciju \kckod{float suma\_ispod(float a[][MAKS], int n)}
-    koja određuje sumu elemenata ispod sporedne dijagonale matrice.
+    koja određuje sumu elememenata ispod sporedne dijagonale matrice.
 \end{enumerate}
 Napisati program koji
 za učitanu matricu realnih brojeva ispisuje na tri decimale trag
@@ -592,7 +588,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Trag: 53.20}#
 #\izlaz{Suma na sporednoj dijagonali: 0.90}#
 #\izlaz{Suma iznad glavne dijagonale: 31.70}#
-#\izlaz{Suma ispod sporedne dijagonale: -7.28}#
+#\izlaz{Suma ispod sporedne dijagonale: -1.82}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -608,7 +604,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{Trag: 21.00}#
 #\izlaz{Suma na sporednoj dijagonali: 17.00}#
 #\izlaz{Suma iznad glavne dijagonale: 33.00}#
-#\izlaz{Suma ispod sporedne dijagonale: 31.00}#
+#\izlaz{Suma ispod sporedne dijagonale: 24.00}#
 \end{upotreba}
 \end{miditest}
 
@@ -791,8 +787,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 2 3 4}#
 #\ulaz{5 6 7 8}#
@@ -804,8 +799,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 2 3 4}#
 #\ulaz{5 6 7 8}#
@@ -818,8 +812,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice:}#
-#\ulaz{5 3}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice:}\ulaz{5 3}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 1 2}#
 #\ulaz{5 0 2}#
@@ -833,8 +826,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice:}#
-#\ulaz{-3 200}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice:}\ulaz{-3 200}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -1057,8 +1049,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \skrati{2}
 \begin{Exercise}[label=mat.14] 
-Kvadratna matrica je \emph{magični kvadrat} ako su sume elemenata
-u svim vrstama i kolonama jednake. Napisati program koji
+Kvadratna matrica je \emph{magični kvadrat} ako je suma elemenata
+u svakoj koloni i svakoj vrsti jednaka. Napisati program koji
 proverava da li je data celobrojna kvadratna matrica magični kvadrat i
 ispisuje odgovarajuću poruku na standardni izlaz. Pretpostaviti 
 da je maksimalna dimenzija matrice $50 \times 50$.
@@ -1174,14 +1166,12 @@ poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice a:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 2 8 9}#
 #\ulaz{-4 5 2 3}#
 #\ulaz{7 6 4 10}#
-#\izlaz{Unesite broj vrsta i broj kolona matrice b:}#
-#\ulaz{4 2}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice B:}\ulaz{4 2}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{11 5}#
 #\ulaz{6 7}#
@@ -1196,16 +1186,14 @@ poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice a:}#
-#\ulaz{5 2}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{5 2}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 7}#
 #\ulaz{9 0}#
 #\ulaz{-10 2}#
 #\ulaz{92 3}#
 #\ulaz{14 -8}#
-#\izlaz{Unesite broj vrsta i broj kolona matrice b:}#
-#\ulaz{2 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice B:}\ulaz{2 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{7 8 9 10}#
 #\ulaz{-11 2 34 78}#
@@ -1221,22 +1209,19 @@ poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice a:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 2 8 9}#
 #\ulaz{-4 5 2 3}#
 #\ulaz{7 6 4 10}#
-#\izlaz{Unesite broj vrsta i broj kolona matrice b:}#
-#\ulaz{5 2}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice B:}\ulaz{5 2}#
 #\izlaz{Mnozenje matrica nije moguce.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
 \begin{upotreba}{4}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice a:}#
-#\ulaz{-3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{-3 4}#
 #\izlaz{Greska: neispravan unos.}#
 \end{upotreba}
 \end{miditest}
@@ -1306,7 +1291,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \skrati{2}
 \begin{Exercise}[difficulty=1, label=mat.18] 
 Napisati program koji ispisuje elemente matrice celih brojeva u
-spiralnom redosledu počevši od gornjeg levog ugla krećući se u smeru
+spriralnom redosledu počevši od gornjeg levog ugla krećući se u smeru
 kazaljke na satu. Maksimalna dimenzija matrice je
 $50\times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
@@ -1329,9 +1314,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i}#
-#\izlaz{broj kolona matrice:}#
-#\ulaz{5 7}#
+#\izlaz{Unesite broj vrsta matrice:}\ulaz{5 7}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{7  -8  1 2 3 -54 87}#
 #\ulaz{90 11  0 5 4 9 18}#
@@ -1366,14 +1349,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice A:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 2 8 9}#
 #\ulaz{-4 5 2 3}#
 #\ulaz{7 6 4 10}#
-#\izlaz{Unesite broj vrsta i broj kolona matrice B:}#
-#\ulaz{2 2}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice B:}\ulaz{2 2}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{2 3}#
 #\ulaz{4 10}#
@@ -1383,14 +1364,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice A:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{1 2 8 9}#
 #\ulaz{-4 5 2 3}#
 #\ulaz{7 6 4 10}#
-#\izlaz{Unesite broj vrsta i broj kolona matrice B:}#
-#\ulaz{2 2}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice B:}\ulaz{2 2}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{2 8}#
 #\ulaz{6 4}#
@@ -1402,16 +1381,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
-#\izlaz{Unesite broj vrsta i broj kolona matrice A:}#
-#\ulaz{5 5}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice A:}\ulaz{5 5}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{7  -8  1 2 3}#
 #\ulaz{90 11  0 5 4}#
 #\ulaz{12 -9  14  23 8}#
 #\ulaz{80  6  88  17 62}#
 #\ulaz{-22 10 44  57 -200}#
-#\izlaz{Unesite broj vrsta i broj kolona matrice B:}#
-#\ulaz{3 4}#
+#\izlaz{Unesite broj vrsta i broj kolona matrice B:}\ulaz{3 4}#
 #\izlaz{Unesite elemente matrice:}#
 #\ulaz{90 11 0 5}#
 #\ulaz{12 -9 14 23}#

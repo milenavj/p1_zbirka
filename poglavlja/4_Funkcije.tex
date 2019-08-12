@@ -783,9 +783,8 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=FUN_21] 
 Napisati funkciju \kckod{double e\_na\_x(double x, double eps)} koja
 računa vrednost $e^x$ kao parcijalnu sumu reda
-$\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje vrši dok je
-razlika sabiraka u redu po apsolutnoj vrednosti manja od
-zadatog \kckod{eps}. Napisati program koji učitava dva realna broja $x$ i
+$\sum_{n=0}^{\infty}\frac{x^n}{n!}$, pri čemu se sumiranje sprovodi sve dok je sabirak
+po apsolutnoj vrednosti veći od date tačnosti \kckod{eps}. Napisati program koji učitava dva realna broja $x$ i
 $eps$ i ispisuje izračunatu vrednost $e^x$.
 
 \begin{miditest}

@@ -3,8 +3,8 @@
 
 /* Funkcija racuna vrednost e^x kao parcijalnu sumu reda
    suma(x^n/n!), gde indeks n ide od od 0 do beskonacno, pri cemu
-   se sumiranje vrsi dok je razlika sabiraka u redu po apsolutnoj
-   vrednosti manja od eps. */
+   se sumiranje sprovodi sve dok je sabirak po apsolutnoj vrednosti
+   veci od date tacnosti eps. */
 double e_na_x(double x, double eps) {
   double s = 1, clan = 1;
   int n = 1;
@@ -21,7 +21,7 @@ double e_na_x(double x, double eps) {
      promenljive s i clan se inicijalizuju na vrednost 1.
 
      Sumiranje se sprovodi sve dok je sabirak po apsolutnoj
-     vrednosti veci od trazene tacnosti eps. */
+     vrednosti veci od date tacnosti eps. */
   do {
     clan = (clan * x) / n;
     s += clan;

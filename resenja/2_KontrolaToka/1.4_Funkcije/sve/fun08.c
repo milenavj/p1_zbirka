@@ -43,6 +43,9 @@ void prvih_n_prostih(int n) {
 
     /* Prelazi se na sledeci broj. */
     k++;
+    /* Napomena: Zbog prirode prostih brojeva, moze se krenuti i od
+       broja tri i vrsiti uvecavanje za dva, kako bi se preskocila
+       provera parnih brojeva. */
   }
   printf("\n");
 }

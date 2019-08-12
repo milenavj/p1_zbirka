@@ -25,13 +25,19 @@ int main() {
   }
 
   /* Provera da li su (k,l) i (m,n) iste boje. Polja su iste
-     boje ako su: 1) oba reda parna i obe kolone parne ILI 2) oba
-     reda neparna i obe kolone neparne. */
+     boje ako su: 
+     1) oba reda parna i obe kolone parne ILI 
+     2) oba reda neparna i obe kolone neparne. */
   if (((k % 2 == m % 2) && (l % 2 == n % 2))
       || ((k % 2 != m % 2) && (l % 2 != n % 2)))
     printf("Polja su iste boje.\n");
   else
     printf("Polja su razlicite boje.\n");
+  /* II nacin:
+     if((k+l) % 2 == (m+n) % 2)
+       printf("Polja su iste boje.\n");
+     else
+       printf("Polja su razlicite boje.\n"); */
 
   /* Provera da li kraljica sa (k,l) napada polje (m,n).
      Kraljica napada polje u sledecim situacijama: 
@@ -41,7 +47,7 @@ int main() {
         a) paralelna glavnoj dijagonali (k-l == m-n) 
         b) paralelna sporednoj dijagonali (k+l == m+n) */
   if ((k == m) || (l == n) || (k - l == m - n) 
-      || (k + l == m + n)){
+      || (k + l == m + n)) {
     printf("Kraljica sa (%d, %d) ugrozava (%d, %d).\n", 
            k, l, m, n);
   }
