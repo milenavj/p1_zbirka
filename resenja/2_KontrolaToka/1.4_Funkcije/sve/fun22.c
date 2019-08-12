@@ -7,10 +7,21 @@ void ispis(float a, float b, int n) {
   double i;
   double korak = (b - a) / (n - 1);
 
-  for (i = a; i <= b; i += korak)
-    printf("%.4lf ", sin(i));
+  for (i = a; i <= b; i += korak, n--)
+    printf("sin(%.4lf) = %.4lf \n", i, sin(i));
 
-  printf("\n");
+  /* Zapis realnih brojeva u racunaru ne mora da bude precizan 
+     i sabiranje realnih brojeva moze, zbog akumuliranja greske 
+     da dovede do toga da iako je 
+     korak = (b - a) / (n - 1)
+     ne vazi da je
+     b = a + korak + korak + ... + korak
+     (gde se korak sabira n-1 put). Vrednost ovog zbira, u 
+     zavisnosti od konkretnih brojeva, moze da bude i malo veca 
+     i malo manja od b. Zbog toga, dodatno proveravamo da li 
+     treba da stampamo vrednost funkcije i u tacki b */
+  if(n != 0) 
+    printf("sin(%.4lf) = %.4lf \n", b, sin(b));
 }
 
 int main() {
