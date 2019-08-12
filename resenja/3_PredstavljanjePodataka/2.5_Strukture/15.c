@@ -13,7 +13,7 @@ typedef struct {
   float koef[MAKS_STEPEN + 2];
 } Polinom;
 
-/* Funkcija koja ucitava podatke o polinomima. */
+/* Funkcija ucitava podatke o polinomima. */
 int ucitaj(Polinom niz[]) {
   int i = 0, j;
 
@@ -40,7 +40,7 @@ int ucitaj(Polinom niz[]) {
 /* Prvi monom je specijalan jer se ispred njega ne vrsi eksplicitan 
    ispis znaka. Na primer, za polinom x + 3*x^2, prvi monom je x.
    Svakom sledecem monomu (u ovom slucaju samo 3*x^2) u ispisu
-   prethodi znak (+ ili -). Funkcija koja ispisuje prvi monom. */
+   prethodi znak (+ ili -). Funkcija ispisuje prvi monom. */
 void ispis_prvog_monoma(float koef, int stepen) {
   printf("%.2f", koef);
 
@@ -50,7 +50,7 @@ void ispis_prvog_monoma(float koef, int stepen) {
     printf("*x^%d ", stepen);
 }
 
-/* Funkcija koja ispisuje monom koji nije prvi. */
+/* Funkcija ispisuje monom koji nije prvi. */
 void ispis_monoma(float koef, int stepen) {
   /* Monomi ciji je koeficijent nula se ne ispisuju. */
   if (koef != 0) {
@@ -71,7 +71,7 @@ void ispis_monoma(float koef, int stepen) {
   }
 }
 
-/* Funkcija koja ispisuje ceo polinom p. */
+/* Funkcija ispisuje ceo polinom p. */
 void ispis(const Polinom *p) {
   int i;
 
@@ -94,7 +94,7 @@ void ispis(const Polinom *p) {
   printf("\n");
 }
 
-/* Funkcija koja racuna integral polinoma p. */
+/* Funkcija racuna integral polinoma p. */
 void integral(const Polinom *p, Polinom *tekuci_integral) {
   int i;
 

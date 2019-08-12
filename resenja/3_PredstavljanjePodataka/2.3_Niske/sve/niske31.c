@@ -15,7 +15,7 @@ unsigned vrednost_cifre(char c) {
     return c - 'A' + 10;
 }
 
-/* Funkcija koja racuna dekadnu vrednost neoznacenog broja zapisanog u
+/* Funkcija racuna dekadnu vrednost neoznacenog broja zapisanog u
    datoj osnovi. */
 unsigned int u_dekadni_sistem(char broj[], unsigned int osnova) {
   int i, n = strlen(broj);
@@ -29,7 +29,7 @@ unsigned int u_dekadni_sistem(char broj[], unsigned int osnova) {
   return rezultat;
 }
 
-/* Funkcija koja obrce nisku s. */
+/* Funkcija obrce nisku s. */
 void obrni(char s[]) {
   int i, j;
   int n = strlen(s);
@@ -51,7 +51,7 @@ char ostatak_u_char(int ostatak) {
     return 'A' + ostatak - 10;
 }
 
-/* Funkcija koja datu dekadnu vrednost broja prebacuje u broj u datoj
+/* Funkcija datu dekadnu vrednost broja prebacuje u broj u datoj
    osnovi. */
 void iz_dekadnog_sistema(unsigned int broj, unsigned int osnova,
                          char rezultat[]) {
