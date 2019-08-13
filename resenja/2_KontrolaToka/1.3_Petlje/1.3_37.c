@@ -1,10 +1,8 @@
 #include <stdio.h>
-#include <math.h>
 
 int main() {
   /* Deklaracije i inicijalizacije potrebnih promenljivih. */
-  int n, i;
-  int broj_Z = 0, broj_i = 0, broj_m = 0, broj_a = 0;
+  int n, i, broj_Z = 0, broj_i = 0, broj_m = 0, broj_a = 0;
   char novi_red, c;
 
   /* Ucitavanje broja karaktera. */
@@ -25,8 +23,7 @@ int main() {
        pa tek posle procitane beline se cita uneti karakter. */
     scanf("%c%c", &novi_red, &c);
 
-    /* Obrada ucitanog karaktera. */
-    switch (c) {
+    switch (c) { /* Obrada ucitanog karaktera. */
     case 'Z':
       broj_Z++;
       break;
