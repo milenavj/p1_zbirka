@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <math.h>
 
-/* Funkcija ispisuje vrednosti funckije sin(x) u n ravnomeno
+/* Funkcija ispisuje vrednosti funkcije sin(x) u n ravnomeno
    rasporedjenih tacaka na intervalu [a,b]. */
 void ispis(float a, float b, int n) {
   double i;
@@ -11,12 +11,12 @@ void ispis(float a, float b, int n) {
     printf("sin(%.4lf) = %.4lf \n", i, sin(i));
 
   /* Zapis realnih brojeva u racunaru ne mora da bude precizan 
-     i sabiranje realnih brojeva moze, zbog akumuliranja greske 
+     i sabiranje realnih brojeva moze, zbog akumuliranja greske, 
      da dovede do toga da iako je 
      korak = (b - a) / (n - 1)
      ne vazi da je
      b = a + korak + korak + ... + korak
-     (gde se korak sabira n-1 put). Vrednost ovog zbira, u 
+     (gde se korak sabira n-1 puta). Vrednost ovog zbira, u 
      zavisnosti od konkretnih brojeva, moze da bude i malo veca 
      i malo manja od b. Zbog toga, dodatno proveravamo da li 
      treba da stampamo vrednost funkcije i u tacki b */
