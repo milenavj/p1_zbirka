@@ -65,7 +65,6 @@ int main() {
       break;
     }
   }
-
   /* Ako je vrednost promenljive indikator ostala 1, to znaci da u
      petlji nije pronadjena cifra koja se ne pojavljuje isti broj
      puta u zapisima brojeva x i y. Zato se moze zakljuciti da se

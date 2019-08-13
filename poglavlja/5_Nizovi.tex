@@ -418,6 +418,7 @@ barem jednom.
 \ifresenja
 \begin{Answer}[ref=v.prebrojavanje]
 \includecode{resenja/3_PredstavljanjePodataka/2.1_Nizovi/8.prebrojavanje.c}
+\sstrana
 \end{Answer}
 \fi
 
@@ -1070,7 +1071,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{3}
 \begin{Exercise}[label=uzastopni_jednaki] 
 Napisati funkciju koja određuje dužinu najduže serije jednakih
 uzastopnih elemenata u datom nizu brojeva. 
@@ -1079,6 +1080,7 @@ dužinu najduže serije jednakih elemenata niza.
 Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1098,6 +1100,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1123,9 +1126,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=podniz] 
 Napisati funkciju koja određuje da li se jedan niz javlja kao (uzastopni) podniz drugog niza. 
-\begin{enumerate}
+\begin{enumerate}[itemsep=0pt]
 \item Niz $b$ je uzastopni podniz niza $a$ ako su elementi niza $b$ uzastopni elementi niza $a$. 
 \item Niz $b$ je podniz niza $a$ ako je redosled pojavljivanja elemenata niza $b$ u nizu $a$ isti i ne nužno uzastopan. 
 \end{enumerate}
@@ -1133,6 +1137,7 @@ Napisati program koji učitava dimenzije i elemente dvaju nizova, a zatim ispisu
 Maksimalni broj elemenata nizova $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1162,6 +1167,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}  
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1202,10 +1208,11 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %-----------------------------------------------------------------------------------
 % Permutacija
 %-----------------------------------------------------------------------------------
-
+\skrati{3}
 \begin{Exercise}[label=permutacija] 
 Za celobrojni niz $a$ dimenzije $n$ kažemo da je \textit{permutacija}
 ako sadrži sve brojeve od $1$ do $n$.
+\skrati{3}
 \begin{enumerate}
 \setlength\itemsep{0em}
 \item Napisati funkciju \kckod{void brojanje(int a[], int b[], int n)}
@@ -1222,6 +1229,7 @@ elemente niza i ispisuje da li je uneti niz permutacija.
 Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1239,6 +1247,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1264,11 +1273,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{3}
 \begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
  Napisati program koji učitava dva cela broja i 
  proverava da li se uneti brojevi zapisuju pomoću istih
  cifara. \uputstvo{Zadatak rešiti korišćenjem nizova.}
  
+\skrati{3} 
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1284,6 +1295,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{3} 
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1311,9 +1323,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %-----------------------------------------------------------------------------------
 % Pravljenje novih nizova, transformacija nizova
 %-----------------------------------------------------------------------------------
+\skrati{3} 
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
 Napisati program koji vrši transformacije niza.
-\begin{enumerate}
+\begin{enumerate}[itemsep=0pt]
 \item Napisati funkciju koja obrće elemente niza.     
 \item Napisati funkciju koja rotira niz ciklično za jedno mesto ulevo.
 \item Napisati funkciju koja rotira niz ciklično za $k$ mesta ulevo.
@@ -1325,6 +1338,7 @@ za $k$ mesta ulevo.
 Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1356,6 +1370,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{3}
 \begin{Exercise}[label=v.ukrstanje_nizova]
 Napisati funkciju \kckod{void ukrsti(int a[], int b[], int n, int c[])} 
 koja formira niz $c$ koji se dobija naizmeničnim raspoređivanjem elemenata nizova $a$ i $b$, 
@@ -1365,6 +1380,7 @@ ukrštanjem unetih nizova.
 Maksimalni broj elemenata niza $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1391,7 +1407,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{3}
 \begin{Exercise}[label=p.nizovi_spajanje] 
 Napisati funkciju \kckod{void spoji(int a[], int b[], int n, int c[])} koja od
 nizova $a$ i $b$ dimenzije $n$ formira niz $c$ čija prva polovina odgovara
@@ -1778,6 +1794,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \ifresenja
 \begin{Answer}[ref=p.unija_presek_razlika]
 \includecode{resenja/3_PredstavljanjePodataka/2.1_Nizovi/34.unija_presek_razlika.c}
+\sstrana
 \end{Answer}
 \fi
 
@@ -1831,6 +1848,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 
 \ifresenja
+\sstrana
 \section{Rešenja}
 \shipoutAnswer
 \fi
