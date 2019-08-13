@@ -1,3 +1,4 @@
+\sstrana
 \section{Datoteke}
 %% ----------- KARAKTER PO KARAKTER POCETAK ----------
 
@@ -1099,8 +1100,7 @@ Definisati strukturu kojom se opisuje trodimenzioni vektor sa celobrojnim koordi
 U datoteci $vektori.txt$ nalazi se nepoznati broj vektora. 
 Napisati program koji učitava vektore iz ove datoteke i na standardni izlaz ispisuje 
 koordinate vektora sa najvećom dužinom. 
-Dužina vektora se izračunava po formuli:
-$$|v|= \sqrt{x^2+y^2+z^2}$$
+Dužina vektora se izračunava po formuli: $|v|= \sqrt{x^2+y^2+z^2}$.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{minitest}
@@ -1451,6 +1451,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{miditest}
 
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{3}
 #\poziv{./a.out 4000}#
@@ -1499,12 +1500,14 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 % \subsection{Linija po linija}
 
+\skrati{3}
 \begin{Exercise}[label=p3_03] 
  Kao argumenti komandne linije zadaju se ime datoteke i ceo broj $k$. 
  Napisati program koji na  standardni izlaz ispisuje sve linije zadate datoteke čija je dužina veća od $k$. 
  Pretpostaviti da je maksimalna dužina linije $80$ karaktera.
  U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out test.txt 7}#
@@ -1537,6 +1540,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Answer}
 
 
+\skrati{3}
 \begin{Exercise}[label=v3_02] 
 Napisati program koji u datoteci čije se ime navodi kao argument komandne 
 linije određuje liniju maksimalne dužine i ispisuje je na standardni izlaz. 
@@ -1544,6 +1548,7 @@ Ukoliko ima više takvih linija, ispisati onu koja je leksikografski prva.
 Pretpostaviti da je maksimalna dužina linije $80$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out test.txt}#
@@ -1576,6 +1581,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Answer}
 
 
+\skrati{3}
 \begin{Exercise}[label=v3_04] 
 U datoteci čije se ime navodi kao prvi argument komandne
 linije navedena je reč $r$ i niz linija. Napisati
@@ -1588,6 +1594,7 @@ Ispis treba da bude u formatu \kckod{broj\_pojavljivanja:linija}.
 Pretpostaviti da je maksimalna dužina reči $100$ karaktera, a linije $500$ karaktera.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
  
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\poziv{./a.out input.txt output.txt}#
@@ -1688,6 +1695,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Exercise}
 \begin{Answer}[ref=p3_04]
 \includecode{resenja/4_Datoteke/sve/30.c}
+\skrati{3}
 \end{Answer}
 
 
@@ -1756,6 +1764,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{Exercise}
 \begin{Answer}[ref=p3_09]
 \includecode{resenja/4_Datoteke/sve/31.c}
+\skrati{3}
 \end{Answer}
 
 
@@ -1837,6 +1846,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 
 \linkresenje{p3_iv10}
 \end{Exercise}
+\skrati{3}
 \begin{Answer}[ref=p3_iv10]
 \includecode{resenja/4_Datoteke/sve/32.c}
 \end{Answer}
@@ -1844,10 +1854,9 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 
 % ---------- LINIJE KRAJ ----------
 
-
+\ifresenja
+\sstrana
 \section{Rešenja}
-
-
 \shipoutAnswer
-
+\fi
 
