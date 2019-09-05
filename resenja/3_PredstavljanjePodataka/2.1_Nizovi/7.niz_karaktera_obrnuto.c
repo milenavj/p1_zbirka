@@ -17,7 +17,7 @@ int main() {
     /* Citanje znaka za novi red nakon unetog karaktera. */
     getchar();
 
-    /* Ukoliko je unet karakter * izlazi se iz petlje. */
+    /* Ukoliko je unet karakter '*' izlazi se iz petlje. */
     if (c == '*')
       break;
 

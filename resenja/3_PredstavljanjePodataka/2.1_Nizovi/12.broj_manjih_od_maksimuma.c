@@ -13,8 +13,8 @@ void ucitaj(int a[], int n) {
 
 /* I nacin: Funkcija vraca poziciju najveceg elementa niza. 
    Prolazi se kroz niz i ako se naidje na element cija je
-   vrednost veca od trenutno najveceg (a[pozicija]), vrsi
-   se azuriranje pozicije trenutno najveceg. 
+   vrednost veca od trenutno najveceg elementa (a[pozicija]), 
+   vrsi se azuriranje pozicije trenutno najveceg. 
    int pozicija_najveceg(int a[], int n) {
      int i, pozicija = 0;
        for(i=1; i<n; i++)
@@ -31,7 +31,7 @@ void ucitaj(int a[], int n) {
      int broj_parnih = 0;
      for (i = 0; i < pozicija_maksimuma; i++) {
        if (a[i] % 2 == 0) {
-	 broj_parnih++;
+	      broj_parnih++;
        }
      }   
      return broj_parnih;
@@ -39,13 +39,13 @@ void ucitaj(int a[], int n) {
 */ 
 
 /* II nacin:
-   Zadatak se moze resiti i jednim prolaskom kroz niz. Ideja je da 
+   Zadatak se moze resiti i jednim prolazom kroz niz. Ideja je da 
    se paralelno radi pretraga maksimalnog elementa i prebrojavanje
    parnih elemenata koji mu prethode.
 
    Ovo moze da se uradi sa dva brojaca parnih elemenata: 
-   1. broj_parnih - brojac koji cuva broj parnih koji prethode
-   trenutnom maksimumu. 
+   1. broj_parnih - brojac koji cuva broj parnih elemenata 
+   koji prethode trenutnom maksimumu
    2. broj_parnih_izmedju - brojac koji cuva broj parnih elemenata
    koji se nalaze iza trenutnog maksimuma
 
@@ -91,7 +91,7 @@ int main() {
   /* Ispis rezultata. */
   /* I nacin: printf("%d\n", prebrojavanje(a, n)); */
 
-  /* II nacin: jedinim prolaskom kroz niz: */
+  /* II nacin: jednim prolazom kroz niz: */
   printf("Rezultat: %d\n", prebrojavanje_jednim_prolazom(a, n));
 
   exit(EXIT_SUCCESS);

@@ -26,7 +26,7 @@ int main() {
              -c / b);
     }
   } else {
-    /* Slucaj a != 0: Racunanje diskriminanta. */
+    /* Slucaj a != 0: Racunanje diskriminante. */
     D = b * b - 4 * a * c;
 
     /* U zavisnosti od vrednosti diskriminante, ispisuje se

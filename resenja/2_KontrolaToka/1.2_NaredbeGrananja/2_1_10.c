@@ -4,6 +4,7 @@ int main() {
   /* Deklaracija potrebnih promenljivih. */
   unsigned int broj_cifara = 0;
   unsigned int proizvod_cifara = 1;
+  int c1, c2, c3;
 
   /* I nacin ucitavanja ulaza: koriscenjem funkcije getchar()
      Funkcija getchar cita jedan karakter sa ulaza i vraca njegov
@@ -12,7 +13,6 @@ int main() {
      puta u ovom primeru. Posto je poznato da su drugi i cetvrti
      karakter blanko znaci, nema potrebe da se cuva povratna 
      vrednost tih poziva. */
-  int c1, c2, c3;
   printf("Unesite karaktere: ");
   c1 = getchar();
   getchar();

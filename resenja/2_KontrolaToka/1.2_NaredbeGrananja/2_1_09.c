@@ -2,6 +2,9 @@
 #include <ctype.h>
 
 int main() {
+  /* Deklaracija potrebnih promenljivih. */
+  int c1, c2, c3;
+
   /* I nacin ucitavanja ulaza: koriscenjem funkcije getchar()
      Funkcija getchar cita jedan karakter sa ulaza i vraca njegov
      ASCII kod. Napomena: beline su takodje karakteri i nece
@@ -9,7 +12,6 @@ int main() {
      puta u ovom primeru. Posto je poznato da su drugi i cetvrti
      karakter beline, nema potrebe da se cuva povratna vrednost tih 
      poziva. */
-  int c1, c2, c3;
   printf("Unesite karaktere: ");
   c1 = getchar();
   getchar();

@@ -59,7 +59,7 @@ int main() {
   /* Ucitavanje podataka o djacima. */
   n = ucitaj(niz);
 
-  /* Ispis imena nedovoljnih ucenika. */
+  /* Ispis imena nedovoljnih djaka. */
   printf("\n\nNEDOVOLJNI: ");
   for (i = 0; i < n; i++)
     for (j = 0; j < BROJ_OCENA; j++)
@@ -69,7 +69,7 @@ int main() {
       }
   printf("\n");
 
-  /* Ispis imena odlicnih ucenika. */
+  /* Ispis imena odlicnih djaka. */
   printf("ODLICNI: ");
   for (i = 0; i < n; i++) {
     prosek = prosecna_ocena(&niz[i]);

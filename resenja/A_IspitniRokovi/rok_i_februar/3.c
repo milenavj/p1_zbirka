@@ -3,7 +3,7 @@
 
 #define MAX 101
 
-/* Funkcija koja izracunava zbir elemenata na glavnoj dijagonali
+/* Funkcija izracunava zbir elemenata na glavnoj dijagonali
    kvadratne matrice dimenzije n. */
 int suma(int m[][MAX], int n) {
   int i, s = 0;
@@ -15,7 +15,7 @@ int suma(int m[][MAX], int n) {
   return s;
 }
 
-/* Funkcija koja izracunava vrednost najmanjeg elementa glavne
+/* Funkcija izracunava vrednost najmanjeg elementa glavne
    dijagonale kvadratne matrice dimenzije n. */
 int minimum(int m[][MAX], int n) {
   int i;
@@ -30,7 +30,7 @@ int minimum(int m[][MAX], int n) {
   return min;
 }
 
-/* Funkcija koja izracunava vrednost najveceg elementa glavne
+/* Funkcija izracunava vrednost najveceg elementa glavne
    dijagonale kavdratne matrice dimenzije n. */
 int maximum(int m[][MAX], int n) {
   int i;
@@ -49,7 +49,7 @@ int main() {
   /* Deklaracija potrebnih promenljivih. */
   int m[MAX][MAX], n, i, j;
 
-  /* Ucitavanje dimenzije matrice i provera ispravnosti unosa. */
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
   scanf("%d", &n);
   if (n <= 0 || n > MAX || n % 2 == 0) {
     printf("-1\n");

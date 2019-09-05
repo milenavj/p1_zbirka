@@ -5,6 +5,7 @@
 #define MAKS_PUNO_IME 101
 #define MAKS_OCENA 10
 
+/* Struktura koja opisuje studenta. */
 typedef struct {
   char puno_ime[MAKS_PUNO_IME];
   int ocene[MAKS_OCENA];

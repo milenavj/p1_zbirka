@@ -4,6 +4,7 @@
 
 #define MAKS_TACAKA 50
 
+/* Struktura koja opisuje tacku. */
 typedef struct {
   int x, y;
 } Tacka;

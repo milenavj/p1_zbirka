@@ -18,7 +18,7 @@ int main() {
   int i, n, broj_studenata;
   char ucionica[MAX_UCIONICA];
 
-  /* Ucitavanje broja studenata i provera ispravnosti unosa. */
+  /* Ucitavanje broja studenata i provera ispravnosti ulaza. */
   scanf("%d", &n);
   if (n <= 0 || n > MAX_BROJ_STUDENATA) {
     printf("-1\n");
@@ -31,7 +31,7 @@ int main() {
           studenti[i].ucionica);
   }
 
-  /* Ucitavanje oznake ucionice i provera ispravnosti unosa. */
+  /* Ucitavanje oznake ucionice i provera ispravnosti ulaza. */
   scanf("%s", ucionica);
   if (strcmp(ucionica, "704") && strcmp(ucionica, "718") &&
       strcmp(ucionica, "bim") && strcmp(ucionica, "rlab")) {

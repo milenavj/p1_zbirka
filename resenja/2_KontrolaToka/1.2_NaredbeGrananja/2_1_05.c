@@ -2,30 +2,30 @@
 
 int main() {
   /* Deklaracije potrebnih promenljivih. */
-  int a, b, c, najjeftiniji;
+  int cena1, cena2, cena3, najjeftiniji;
   int cena_bez_popusta, cena_sa_popustom;
 
   /* Ucitavanje vrednosti cena. */
   printf("Unesite tri cene: ");
-  scanf("%d%d%d", &a, &b, &c);
+  scanf("%d%d%d", &cena1, &cena2, &cena3);
 
   /* Provera ispravnosti ulaznih podataka. */
-  if (a <= 0 || b <= 0 || c <= 0) {
+  if (cena1 <= 0 || cena2 <= 0 || cena3 <= 0) {
     printf("Greska: neispravan unos cene.");
     return 1;
   }
 
   /* Racunanje vrednosti najjeftinijeg artikla. */
-  najjeftiniji = a;
+  najjeftiniji = cena1;
 
-  if (b < najjeftiniji)
-    najjeftiniji = b;
+  if (cena2 < najjeftiniji)
+    najjeftiniji = cena2;
 
-  if (c < najjeftiniji)
-    najjeftiniji = c;
+  if (cena3 < najjeftiniji)
+    najjeftiniji = cena3;
 
   /* Racunanje cene sa i bez popusta. */
-  cena_bez_popusta = a + b + c;
+  cena_bez_popusta = cena1 + cena2 + cena3;
   cena_sa_popustom = cena_bez_popusta - najjeftiniji + 1;
 
   /* Ispis rezultata. */

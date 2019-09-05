@@ -25,7 +25,7 @@ int main() {
     /* Prvo se ucitava naziv elementa. */
     scanf("%s", elementi[i].naziv);
 
-    /* Ako je u pitanju rec kraj, ucitavanje hemijskih elemenata se 
+    /* Ako je u pitanju rec "kraj", ucitavanje hemijskih elemenata se 
        prekida. */
     if (strcmp(elementi[i].naziv, "kraj") == 0) {
       break;

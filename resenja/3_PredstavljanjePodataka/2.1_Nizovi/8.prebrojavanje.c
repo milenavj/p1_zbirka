@@ -44,7 +44,7 @@ int main() {
     if (c >= 'A' && c <= 'Z') {
       /* Ako je procitani karakter veliko slovo uvecava se broj
        pojavljivanja odgovarajuceg velikog slova. Indeks velikog
-       slova u nizu se odredjuje oduzimanjem slova A. 
+       slova u nizu se odredjuje oduzimanjem slova 'A'. 
        Na taj nacin slovo 'A' ce imati indeks 0, slovo 'B' indeks
        1, itd.*/
       velika_slova[c - 'A']++;

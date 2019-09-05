@@ -5,6 +5,7 @@
 
 #define MAKS_RAZLOMAKA 100
 
+/* Struktura koja opisuje razlomak. */
 typedef struct {
   int brojilac;
   int imenilac;

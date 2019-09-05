@@ -7,8 +7,8 @@
 
 /* Funkcija racuna dekadnu vrednost jedne heksadekadne cifre. Ako
    je c dekadna cifra, vrednost se dobija oduzimanjem '0'. Ako je c 
-   veliko slovo, vrednost se dobija oduzimanjem 'A' i dodavanjem 10 (npr.
-   vrednost karaktera 'B' je 10 + 'B' - 'A' = 11). */
+   veliko slovo, vrednost se dobija oduzimanjem 'A' i dodavanjem 10 
+   (npr. vrednost karaktera 'B' je 10 + 'B' - 'A' = 11). */
 int vrednost_heksa_cifre(char c) {
   if (isdigit(c))
     return c - '0';

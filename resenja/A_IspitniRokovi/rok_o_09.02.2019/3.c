@@ -12,7 +12,7 @@ void greska() {
   exit(EXIT_FAILURE);
 }
 
-/* Funkcija koja proverava da li je niska s zapisana samo pomocu
+/* Funkcija proverava da li je niska s zapisana samo pomocu
    cifara. Povratna vrednost funkcije je 1 ako je uslov ispunjen,
    dok je u suprotnom 0. */
 int sve_cifre(const char *s) {

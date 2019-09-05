@@ -84,7 +84,7 @@ int main() {
   int maks_temena, n;
   Tacka poligon[MAKS_TEMENA];
 
-  /* Ucitavanje maksimalnog broja tacaka i provera ispravnosti. */
+  /* Ucitavanje maksimalnog broja temena i provera ispravnosti. */
   printf("Unesite maksimalan broj temena poligona: ");
   scanf("%d", &maks_temena);
   if (maks_temena < 3 || maks_temena > MAKS_TEMENA) {

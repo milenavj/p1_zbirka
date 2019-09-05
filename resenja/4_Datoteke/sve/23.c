@@ -3,6 +3,7 @@
 
 #define MAKS_STUDENATA 100
 
+/* Struktura koja opisuje studenta. */
 typedef struct {
   char korisnicko_ime[8];
   float prosek;

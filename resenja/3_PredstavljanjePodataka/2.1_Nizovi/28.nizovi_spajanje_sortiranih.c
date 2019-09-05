@@ -11,7 +11,7 @@ void ucitaj(int niz[], int n) {
     scanf("%d", &niz[i]);
 }
 
-/* Funkcija za ispis niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)

@@ -10,7 +10,7 @@ void ucitaj(int niz[], int n) {
     scanf("%d", &niz[i]);
 }
 
-/* Funkcija ispisuje elemente niza. */
+/* Funkcija ispisuje elemente niza dimenzije n. */
 void ispisi(int niz[], int n) {
   int i;
   for (i = 0; i < n; i++)
@@ -21,9 +21,9 @@ void ispisi(int niz[], int n) {
 /* Funkcija formira niz c ukrstanjem nizova a i b. */
 void ukrsti(int a[], int b[], int n, int c[]) {
   int i, j;
-  /* Formira se treci niz. Koriste se dva indeksa: - indeks i
+  /* Formira se treci niz. Koriste se dva indeksa: indeks i
      pomocu kojeg se pristupa elementima nizova a i b i koji treba
-     uvecati za 1 nakon svake iteracije - indeks j pomocu kojeg se
+     uvecati za 1 nakon svake iteracije i indeks j pomocu kojeg se
      pristupa elementima rezultujuceg niza c; s obzirom da se u
      svakoj iteraciji u niz c smestaju dva elementa, jedan iz niza
      a i jedan iz niza b, indeks j se uvecava za 2 nakon svake

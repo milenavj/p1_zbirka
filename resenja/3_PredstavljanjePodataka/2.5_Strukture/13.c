@@ -34,18 +34,17 @@ int gmail(char email[]) {
   return strcmp(deo, "gmail.com") == 0;
 }
 
-// /* II nacin:
-// Funkcija proverava da li se prosledjeni email zavrsava sa
-// "gmail.com" koriscenjem funkcije strchr. */
-// int gmail2(char email[])
-// {
-// /* Pronalazi se pokazivac na znak @. */
-// char* desni_deo = strchr(email, '@');
-// 
-// /* Poredi se niska koja pocinje jedan karakter posle @ sa
-// niskom "gmail.com". */
-// return strcmp(desni_deo+1, "gmail.com") == 0;
-// }
+/* II nacin:
+int gmail2(char email[])
+{
+  //Pronalazi se pokazivac na znak @. 
+  char* desni_deo = strchr(email, '@');
+
+  //Poredi se niska koja pocinje jedan karakter posle @ sa
+  //niskom "gmail.com". 
+  return strcmp(desni_deo+1, "gmail.com") == 0;
+} */
+
 
 int main() {
   /* Deklaracije potrebnih promenljivih. */

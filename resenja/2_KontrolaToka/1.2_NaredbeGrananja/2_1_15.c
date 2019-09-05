@@ -74,9 +74,8 @@ int main() {
      a najveca cifra je 9 i njen stepen je 1. Zamena mesta se vrsi
      tako sto se oduzme 9 i doda 1, a zatim oduzme 100 i doda 900. */
   rezultat = n_abs - najveca * stepen_najvece 
-                   + najmanja * stepen_najvece 
-                   - najmanja * stepen_najmanje 
-                   + najveca * stepen_najmanje;
+    + najmanja * stepen_najvece - najmanja * stepen_najmanje 
+    + najveca * stepen_najmanje;
   
   /* Ako je pocetni broj bio negativan i rezultat treba da bude
      negativan. */

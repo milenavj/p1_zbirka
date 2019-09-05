@@ -15,7 +15,7 @@ int main() {
   float aritmeticka_sredina;
   char suma_cifara;
 
-  /* Ucitavanje i provera ispravnosti unosa. */
+  /* Ucitavanje i provera ispravnosti ulaza. */
   scanf("%d", &n);
   if (n < 1000 || n > 9999) {
     greska();

@@ -5,6 +5,7 @@
 #define MAKS_IME 31
 #define MAKS_AUTOMOBILA 100
 
+/* Struktura koja opisuje automobil. */
 typedef struct {
   char marka[MAKS_IME];
   char model[MAKS_IME];

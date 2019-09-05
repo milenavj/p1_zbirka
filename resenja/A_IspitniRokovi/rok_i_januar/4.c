@@ -8,7 +8,7 @@ typedef struct {
   int sirina, duzina, visina;
 } Kutija;
 
-/* Funkcija koja proverava da li se u zadatu kutiju koja se nalazi
+/* Funkcija proverava da li se u zadatu kutiju koja se nalazi
    u nizu kutija na poziciji j mogu smestiti preostale kutije.
    Povratna vrednost funkcije je 1 ako kutije mogu da se smeste, a
    u suprotnom 0. */
@@ -34,14 +34,14 @@ int main() {
   Kutija kutije[MAX];
   int i, n;
 
-  /* Ucitavanje broja kutija i provera ispravnosti unosa. */
+  /* Ucitavanje broja kutija i provera ispravnosti ulaza. */
   scanf("%d", &n);
   if (n <= 0 || n > MAX) {
     printf("-1\n");
     exit(EXIT_FAILURE);
   }
 
-  /* Ucitavanje dimenzija kutija uz proveru ispravnosti unos. */
+  /* Ucitavanje dimenzija kutija uz proveru ispravnosti ulaza. */
   for (i = 0; i < n; i++) {
     scanf("%d%d%d", &kutije[i].sirina, &kutije[i].duzina,
           &kutije[i].visina);

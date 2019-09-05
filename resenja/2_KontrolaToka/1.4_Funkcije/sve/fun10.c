@@ -15,7 +15,7 @@ float aritmeticka_sredina(int x) {
      radio i za negativne brojeve. */
   x = abs(x);
 
-  /* Dok god ima neobradjenih cifara, na zbir se dodaje poslednja
+  /* Sve dok ima neobradjenih cifara, na zbir se dodaje poslednja
      cifra, brojac cifara se uvecava za 1 i sa broja x se uklanja
      poslednja cifra. */
   while (x) {

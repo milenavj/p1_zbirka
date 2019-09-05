@@ -24,7 +24,7 @@ void ucitaj(int niz[], int n) {
 void brojanje(int a[], int b[], int n) {
   int i;
 
-  /* Niz b se inicijalizuje nulama jer se za svaki element postavi
+  /* Niz b se inicijalizuje tako sto se za svaki element postavi
      da se poljavuljuje 0 puta u nizu a. */
   for (i = 1; i <= n; i++)
     b[i] = 0;

@@ -27,7 +27,7 @@ int formiraj_broj(char b[]) {
   }
 
   /* Prolazak kroz cifre broja i racunanje vrednosti broja
-     koriscenjem Hornerove seme. Vrednost trenutne cifre se dobija
+     koriscenjem Hornerove sheme. Vrednost trenutne cifre se dobija
      kada se od trenutnog karaktera (b[i]) oduzme karakter '0'.
      Ako se naidje na karakter koji nije cifra, petlja se prekida. 
      Na primer, za b="123abc", rezultat treba da bude 123. */

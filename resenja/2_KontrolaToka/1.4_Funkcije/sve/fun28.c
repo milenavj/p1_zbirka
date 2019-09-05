@@ -111,8 +111,8 @@ int broj_dana_izmedju(int dan1, int mesec1, int godina1, int dan2,
   int pom, i;
   int suma_dana = 0;
 
-  /* Provera koji od datuma je ranije. Ukoliko je potrebno, razmenjuju
-    se vrednosti promenljivih tako da broj 1 ide uz raniji datum. */
+  /* Provera koji od datuma je ranije. Ukoliko je potrebno, 
+    razmenjuju se vrednosti promenljivih tako da broj 1 ide uz raniji datum. */
   if (!prethodi(dan1, mesec1, godina1, dan2, mesec2, godina2)) {
     pom = dan1;
     dan1 = dan2;

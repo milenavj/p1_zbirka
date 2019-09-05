@@ -4,6 +4,7 @@
 
 #define MAKS_IME 5
 
+/* Struktura koja opisuje pravougaonik. */
 typedef struct {
   unsigned int a, b;
   char ime[MAKS_IME];
