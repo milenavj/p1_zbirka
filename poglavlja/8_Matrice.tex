@@ -139,6 +139,7 @@ Napisati program koji najpre učitava, a zatim i ispisuje elemente
 učitane matrice.
 Pretpostaviti da je maksimalna dimenzija matrice $50 \times 50$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
+\napomena{U ovom i u narednim zadacima, konstanta \kckod{MAKS} u prototipu funkcije označava maksimalni broj kolona date matrice i potrebno ju je definisati u rešenju direkivom \kckod{\#define}.}
 
 \skrati{1}
 \begin{minitest}
@@ -162,19 +163,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\naslovInt#
 #\izlaz{Unesite broj vrsta i}#
 #\izlaz{broj kolona matrice:}#
-#\ulaz{5 3}#
+#\ulaz{2 5}#
 #\izlaz{Unesite elemente matrice:}#
-#\ulaz{1 1 2}#
-#\ulaz{5 0 2}#
-#\ulaz{7 8 9}#
-#\ulaz{1 2 4}#
-#\ulaz{0 1 1}#
+#\ulaz{1 1 2 3 4}#
+#\ulaz{5 0 2 5 7}#
 #\izlaz{Matrica je:}#
-#\izlaz{1 1 2}#
-#\izlaz{5 0 2}#
-#\izlaz{7 8 9}#
-#\izlaz{1 2 4}#
-#\izlaz{0 1 1}#
+#\ulaz{1 1 2 3 4}#
+#\ulaz{5 0 2 5 7}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -1276,7 +1271,7 @@ poruku o grešci.
 \fi
 
 
-\skrati{3}
+%\skrati{3}
 \begin{Exercise}[difficulty=1, label=mat.17] 
 Element matrice naziva se \emph{sedlo} ako je istovremeno najmanji u
 svojoj vrsti, a najveći u svojoj koloni. Napisati program koji

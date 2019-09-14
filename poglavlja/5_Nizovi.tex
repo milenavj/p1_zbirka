@@ -469,6 +469,7 @@ velikih slova.
 % Funkcije
 %-----------------------------------------------------------------------------------
 
+\skrati{2}
 \begin{Exercise}[label=v.nizovi_funkcije_intro] 
 Takmičari na Beogradskom maratonu su označeni rednim
 brojevima počevši od 0. Vremena za koja su takmičari istrčali maraton izražena u minutima se zadaju nizom celih brojeva u kojem indeks elementa niza označava redni broj takmičara. Napisati sledeće funkcije za obradu navedenih podataka:
@@ -496,6 +497,7 @@ maratona.
 Maksimalni broj takmičara je $1000$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -527,6 +529,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=p.broj_manjih_od_poslednjeg] 
  Napisati funkciju koja izračunava broj elemenata celobrojnog niza koji su
  manji od poslednjeg elementa niza. 
@@ -535,6 +538,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
  Maksimalni broj elemenata niza je $100$.
  U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1222,7 +1226,7 @@ ako sadrži sve brojeve od $1$ do $n$.
 \item Napisati funkciju \kckod{int permutacija(int a[], int n)} koja
   proverava da li je zadati niz permutacija. Funkcija vraća vrednost
   $1$ ako je svojstvo ispunjeno, odnosno $0$ ako
-  nije. \uputstvo{Koristiti funkciju $brojanje$ iz tačke (a).}
+  nije. \uputstvo{Koristiti funkciju \kckod{brojanje}.}
 \end{enumerate}
 Napisati program koji učitava dimenziju niza i
 elemente niza i ispisuje da li je uneti niz permutacija. 
@@ -1277,7 +1281,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{Exercise}[label=p.brojevi_sa_istim_zapisima] 
  Napisati program koji učitava dva cela broja i 
  proverava da li se uneti brojevi zapisuju pomoću istih
- cifara. \uputstvo{Zadatak rešiti korišćenjem nizova.}
+ cifara. %\uputstvo{Zadatak rešiti korišćenjem nizova.}
  
 \skrati{3} 
 \begin{miditest}
@@ -1326,11 +1330,13 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \skrati{3} 
 \begin{Exercise}[label=v.nizovi_funkcije_pomeranja]
 Napisati program koji vrši transformacije niza.
+\skrati{2}
 \begin{enumerate}[itemsep=0pt]
 \item Napisati funkciju koja obrće elemente niza.     
 \item Napisati funkciju koja rotira niz ciklično za jedno mesto ulevo.
 \item Napisati funkciju koja rotira niz ciklično za $k$ mesta ulevo.
 \end{enumerate}
+\skrati{2}
 Program učitava dimenziju niza, elemente niza i pozitivan ceo broj $k$, a zatim 
 ispisuje niz koji se dobija nakon obrtanja početnog niza, niz koji se dobija
 rotiranjem tako dobijenog niza za jedno mesto ulevo i niz koji se dobija rotiranjem novodobijenog niza 
@@ -1418,6 +1424,7 @@ spajanjem unetih nizova na pomenuti način.
 Maksimalni broj elemenata niza $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1431,6 +1438,17 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovInt#
+#\izlaz{Unesite dimenziju nizova:}\ulaz{145}#
+#\izlaz{Greska: neispravan unos.}#
+\end{upotreba}
+\end{miditest}
+\linkresenje{p.nizovi_spajanje}
+\end{Exercise}
+
+\iffalse
+\begin{miditest}
+\begin{upotreba}{2}
+#\naslovInt#
 #\izlaz{Unesite dimenziju nizova:}\ulaz{4}#
 #\izlaz{Unesite elemente niza a:}\ulaz{1 0 -1 0}#
 #\izlaz{Unesite elemente niza b:}\ulaz{5 5 5 3}#
@@ -1438,16 +1456,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 #\izlaz{5 5 5 3 1 0 -1 0}#
 \end{upotreba}
 \end{miditest}
-
-\begin{miditest}
-\begin{upotreba}{3}
-#\naslovInt#
-#\izlaz{Unesite dimenziju nizova:}\ulaz{145}#
-#\izlaz{Greska: neispravan unos.}#
-\end{upotreba}
-\end{miditest}
-\linkresenje{p.nizovi_spajanje}
-\end{Exercise}
+\fi
 
 \ifresenja
 \begin{Answer}[ref=p.nizovi_spajanje]
@@ -1458,13 +1467,14 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 
 \begin{Exercise}[difficulty=1, label=p.nizovi_spajanje_sortiranih]
  Napisati funkciju \kckod{void spoji\_sortirano(int a[], int b[], int n, int c[])} koja
- od nizova $a$ i $b$ dimenzije $n$ koji su uređeni neopadajuće po vrednosti
+ od nizova $a$ i $b$ dimenzije $n$ koji su uređeni neopadajuće 
  formira niz $c$ koji je uređen na isti način.
  Napisati program koji učitava dimenziju i elemente uređenih nizova $a$ i $b$ i
  ispisuje niz koji se dobija spajanjem ovih nizova na pomenuti način.
 Maksimalni broj elemenata niza $a$ i $b$ je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1490,6 +1500,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1506,7 +1517,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{2}
 \begin{Exercise}[label=vp.bez_resenja_7]
 Napisati funkciju \kckod{void promeni\_redosled(int a[], int n)} koja menja redosled elementima
 niza $a$ dimenzije $n$ tako da se parni elementi niza nalaze na početku niza, a neparni na kraju. 
@@ -1514,8 +1525,9 @@ Napisati program koji učitava dimenziju niza i elemente niza i ispisuje niz koj
 pomenuti način. 
 Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
-\napomena{Nije dozvoljeno koristiti pomoćne nizove.}
+\napomena{Ne koristiti pomoćne nizove.}
 
+\skrati{3}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1551,6 +1563,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %-----------------------------------------------------------------------------------
 
 
+\skrati{3}
 \begin{Exercise}[label=p.izbacivanje_prostih_elemenata] 
 Napisati funkciju koja iz datog niza briše sve elemente koji su prosti brojevi. 
 Funkcija kao povratnu vrednost treba da vrati broj elemenata niza nakon brisanja. 
@@ -1560,6 +1573,7 @@ Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \napomena{Zadatak rešiti uz korišćenje pomoćnog niza.}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1577,6 +1591,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1602,7 +1617,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{3}
 \begin{Exercise}[label=p.izbacivanje_elemenata]
 Napisati funkciju koja iz datog niza briše sve neparne elemente. Funkcija kao povratnu vrednost treba
 da vrati broj elemenata niza nakon brisanja. 
@@ -1612,6 +1627,7 @@ Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \napomena{Zadatak rešiti bez korišćenja pomoćnog niza.}
  
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1631,6 +1647,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1658,6 +1675,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=v.brisanje_elemenata]
 Napisati funkciju koja iz datog niza briše sve elemente koji nisu
 deljivi svojom poslednjom cifrom. Izuzetak su elementi čija je poslednja
@@ -1669,6 +1687,7 @@ Maksimalni broj elemenata niza je $100$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
 \napomena{Zadatak rešiti bez korišćenja pomoćnog niza.}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1696,6 +1715,7 @@ Pogledajte zadatke \ref{p.izbacivanje_prostih_elemenata} i \ref{p.izbacivanje_el
 \fi
 
 
+\skrati{2}
 \begin{Exercise}[label=deljivi_indeksom]
 Napisati funkciju koja iz datog niza briše sve brojeve koji nisu deljivi svojim indeksom.
 Ne razmatrati da li je u novom nizu, nakon brisanja i pomeranja, element deljiv svojim indeksom.
@@ -1707,6 +1727,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \napomena{Nulti element niza treba zadržati jer nije dozvoljeno
   deljenje nulom. Zadatak rešiti bez korišćenja pomoćnog niza.}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1740,6 +1761,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 %-----------------------------------------------------------------------------------
 
 
+\skrati{2}
 \begin{Exercise}[label=p.unija_presek_razlika] 
 Korišćenjem nizova moguće je predstaviti skupove podataka. Napisati
 program koji demonstrira osnovne operacije nad skupovima (uniju,
@@ -1747,6 +1769,7 @@ presek i razliku). Pomoću dva niza predstaviti dva skupa celih
 brojeva, a zatim ispisati njihovu uniju, presek i razliku. Maksimalni broj elemenata dva uneta niza je $500$.
 U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
   
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovInt#
@@ -1772,6 +1795,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{upotreba}
 \end{miditest}
 
+\skrati{2}
 \begin{miditest}
 \begin{upotreba}{3}
 #\naslovInt#
@@ -1798,11 +1822,12 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Answer}
 \fi
 
-
+\skrati{2}
 \begin{Exercise}[label=izbacivanje_ubacivanje_u_niz] 
 Da bi opsluživanje klijenata bilo efikasno i udobno, prilikom ulaska u banku svaki klijent dobija redni broj opslužiavanja. Redni brojevi se čuvaju
 u nizu, počinju od vrednosti $1$ i iznova se generišu svakog radnog dana.  Postoje i specijalni klijenti (npr. oni koji podižu stambeni kredit) koji mogu dobiti i negativni redni broj da bi se razlikovali od uobičajenih klijenata. Pomozite radniku obezbeđenja da lakše prati redosled opsluživanja klijenata.
-\begin{enumerate}
+
+\begin{enumerate}[itemsep=0pt]
 \item Napisati funkciju koja ubacuje redni broj klijenta $x$ na kraj niza (klijenta koji je poslednji došao).
 \item Napisati funkciju koja ubacuje redni broj klijenta
   $x$ na početak niza (klijenta koji će biti prvi uslužen, na primer, lica sa posebnim potrebama, trudnice ili stara lica).
