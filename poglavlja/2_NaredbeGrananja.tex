@@ -1,9 +1,7 @@
-% \chapter{Kontrola toka}
 
 \sstrana
 \section{Grananja}
 
-% UVODNI PRIMERI
 
 \begin{Exercise}[label=KT_NG_01] 
 Napisati program koji ispisuje najmanji od tri uneta cela broja.
@@ -38,7 +36,7 @@ Napisati program koji ispisuje najmanji od tri uneta cela broja.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_01]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_01.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_01.c}
 \end{Answer}
 \fi
 
@@ -76,9 +74,10 @@ Napisati program koji za uneti realan broj ispisuje njegovu apsolutnu vrednost z
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_02]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_02.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_02.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_03] 
 Napisati program koji za uneti ceo broj ispisuje njegovu recipročnu vrednost zaokruženu na četiri decimale. 
@@ -119,9 +118,10 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_03]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_03.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_03.c}
 \end{Answer}
 \fi
+
 
 \begin{Exercise}[label=KT_NG_04] 
 Napisati program koji učitava tri cela broja i ispisuje zbir pozitivnih.
@@ -156,7 +156,7 @@ Napisati program koji učitava tri cela broja i ispisuje zbir pozitivnih.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_04]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_04.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_04.c}
 \end{Answer}
 \fi
 
@@ -204,7 +204,7 @@ zahvaljujući popustu. Cene artikala su pozitivni celi brojevi. U slučaju neisp
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_05]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_05.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_05.c}
 \end{Answer}
 \fi
 
@@ -248,7 +248,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_06]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_06.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_06.c}
 \end{Answer}
 \fi
 
@@ -283,11 +283,10 @@ Godina je neoznačen ceo broj.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_07]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_07.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_07.c}
 \end{Answer}
 \fi
 
-% KARAKTERI
 
 \begin{Exercise}[label=KT_NG_08] 
 Napisati program koji za učitani karakter ispisuje uneti karakter i njegov ASCII kod. 
@@ -335,53 +334,9 @@ Ukoliko je uneti karakter malo (veliko) slovo, ispisati i odgovarajuće veliko (
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_08]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_08.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_08.c}
 \end{Answer}
 \fi
-
-
-% \begin{Exercise}[label=KT_NG_09] 
-% Napisati program koji učitava tri karaktera od kojih prvi mora biti cifra i 
-% ispisuje zbir ASCII kodova svih unetih karaktera, pomnozen sa vrednoscu unete cifre. 
-% U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
-% \napomena{Karakteri koji se unose su razmaknuti belinama.}
-% 
-% \begin{miditest}
-% \begin{upotreba}{1}
-% #\naslovInt#
-% #\izlaz{Unesite karaktere:}\ulaz{1 A c}#
-% #\izlaz{Rezultat: 213}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{2}
-% #\naslovInt#
-% #\izlaz{Unesite karaktere:}\ulaz{2 a \_}#
-% #\izlaz{Rezultat: 484}#
-% \end{upotreba}
-% \end{miditest}
-% 
-% \begin{miditest}
-% \begin{upotreba}{3}
-% #\naslovInt#
-% #\izlaz{Unesite karaktere:}\ulaz{4 3 9}#
-% #\izlaz{Rezultat: 640}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{4}
-% #\naslovInt#
-% #\izlaz{Unesite karaktere:}\ulaz{B 6 (}#
-% #\izlaz{Greska: prvi karakter nije cifra.}#
-% \end{upotreba}
-% \end{miditest}
-% \linkresenje{KT_NG_09}
-% \end{Exercise}
-% \ifresenja
-%  \begin{Answer}[ref=KT_NG_09]
-% \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_09.c}
-% \end{Answer}
-% \fi
 
 
 \begin{Exercise}[label=KT_NG_10] 
@@ -424,7 +379,7 @@ Ukoliko među unetim karakterima nema cifara, program treba da ispiše odgovaraj
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_10]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_10.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_09.c}
 \end{Answer}
 \fi
 
@@ -468,13 +423,9 @@ U slučaju neispravnog unosa šifre, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_11]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_11.c}
-%Pogledajte zadatak \ref{UZ_NG_08}.
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_10.c}
 \end{Answer}
-\fi
-
-
-% CIFRE 
+\fi 
 
 
 \begin{Exercise}[label=KT_NG_12] 
@@ -515,7 +466,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_12]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_12.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_11.c}
 \end{Answer}
 \fi
 
@@ -564,7 +515,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_13]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_13.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_12.c}
 \end{Answer}
 \fi
 
@@ -607,7 +558,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_14]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_14.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_13.c}
 \end{Answer}
 \fi
 
@@ -653,7 +604,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_15]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_15.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_14.c}
 \end{Answer}
 \fi
 
@@ -697,12 +648,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_16]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_16.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_15.c}
 \end{Answer}
 \fi
-
-
-% MATEMATICKI + UGNJEZDENA GRANANJA
 
 
 \begin{Exercise}[label=KT_NG_17]
@@ -747,7 +695,7 @@ istom kvadrantu. Koordinate tačaka su realni brojevi jednostruke tačnosti.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_17]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_17.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_16.c}
 \end{Answer}
 \fi
 
@@ -817,7 +765,7 @@ nalaze na istoj pravoj. \\
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_18]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_18.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_17.c}
 \end{Answer}
 \fi
 
@@ -857,7 +805,7 @@ $[a_2, b_2]$ program treba da odredi:
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_19]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_19.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_18.c}
 \end{Answer}
 \fi
 
@@ -886,7 +834,7 @@ ispisuje ih zaokružene na dve decimale.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_20]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_20.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_19.c}
 \end{Answer}
 \fi
 
@@ -930,7 +878,7 @@ ispisuje ih zaokružene na dve decimale.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_21]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_21.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_20.c}
 \end{Answer}
 \fi
 
@@ -973,11 +921,9 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_22]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_22.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_21.c}
 \end{Answer}
 \fi
-
-%\subsection{Switch-case}
 
 
 \begin{Exercise}[label=KT_NG_23] 
@@ -1012,7 +958,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_23]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_23.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_22.c}
 \end{Answer}
 \fi
 
@@ -1055,7 +1001,7 @@ Napisati program koji za uneti karakter ispituje da li je samoglasnik ili ne.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_24]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_24.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_23.c}
 \end{Answer}
 \fi
 
@@ -1100,7 +1046,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_25]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_25.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_24.c}
 \end{Answer}
 \fi
 
@@ -1136,7 +1082,7 @@ Napisati program koji za uneti datum u formatu \textit{dan.mesec.} ispisuje godi
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_26]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_26.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_25.c}
 \end{Answer}
 \fi
 
@@ -1176,7 +1122,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_27]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_27.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_26.c}
 \end{Answer}
 \fi
 
@@ -1204,7 +1150,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_28]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_28.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_27.c}
 \end{Answer}
 \fi
 
@@ -1245,7 +1191,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_29]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_29.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_28.c}
 \end{Answer}
 \fi
 
@@ -1289,85 +1235,6 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 Pogledajte zadatak \ref{KT_NG_29}.
 \end{Answer}
 \fi
-
-
-% \begin{Exercise}[label=KT_NG_31]
-% Korisnik unosi tri cela broja $P$, $Q$ i $R$ i dva karaktera, $op1$ i $op2$. 
-% Ovi karakteri predstavljaju operacije nad unetim brojevima i imaju naredno značenje:
-% \begin{itemize}
-% \item karakter \textbf{k} predstavlja  logičku konjukciju
-% \item karakter \textbf{d} predstavlja  logičku disjunkciju
-% \item karakter \textbf{m} predstavlja  relaciju manje
-% \item karakter \textbf{v} predstavlja  relaciju veće
-% \end{itemize}
-% Program treba da sračuna vrednost izraza \kckod{P op1 Q op2 R} i da ga ispiše.
-% U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci. 
-% 
-% \begin{miditest}
-% \begin{upotreba}{1}
-% #\naslovInt#
-% #\izlaz{Unesite izraz:}\ulaz{0 k 1 m 2}#
-% #\izlaz{Vrednost izraza: 1}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{2}
-% #\naslovInt#
-% #\izlaz{Unesite izraz:}\ulaz{-3 d -1 k 0}#
-% #\izlaz{Vrednost izraza: 0}#
-% \end{upotreba}
-% \end{miditest}
-% 
-% \begin{miditest}
-% \begin{upotreba}{3}
-% #\naslovInt#
-% #\izlaz{Unesite izraz:}\ulaz{-3 k 1 d 0}#
-% #\izlaz{Vrednost izraza: 1}#
-% \end{upotreba}
-% \end{miditest}
-% \begin{miditest}
-% \begin{upotreba}{4}
-% #\naslovInt#
-% #\izlaz{Unesite izraz:}\ulaz{-3 m -1 m 100}#
-% #\izlaz{Vrednost izraza: 1}#
-% \end{upotreba}
-% \end{miditest}
-% 
-% \linkresenje{KT_NG_31}
-% \end{Exercise}
-% \ifresenja
-% \begin{Answer}[ref=KT_NG_31]
-%  
-% Rešenje je analogno rešenju zadatka \ref{KT_NG_25}.
-% \end{Answer}
-% \fi
-% 
-% 
-% \begin{Exercise}[difficulty=1, label=KT_NG_32] 
-% Program učitava jedan karakter i osam realnih brojeva koji predstavljaju 
-% koordinate četiri tačke: $A(x_1, y_1), B(x_2, y_2), C(x_3, y_3), D(x_4, y_4)$. Na osnovu unetog karaktera 
-% ispisuje se odgovarajuća poruka na standardni izlaz:
-% \begin{itemize}
-% \item ukoliko je uneti karakter $k$ - proverava da li su date tačke temena pravougaonika čije su stranice paralelne koordinatnim osama i 
-%     u slučaju da jesu, ispisuje vrednost obima datog pravougaonika. Možemo podrazumevati da će korisnik koordinate tačaka 
-%     unosi redom $A,B,C,D$, pri čemu $ABCD$ opisuje pravougaonik čije su stranice $AB,BC,CD,DA$, a dijagonale $AC$ i $BD$. 
-%     Na primer, tačke $(1,1),(2,1),(2,2),(1,2)$ čine pravougaonik čije su stranice paralelne koordinatnim osama i čiji je obim 4
-%     a tačke $(1,1),(2,2),(3,3),(4,4)$ ne čine pravougaonik. 
-% \item ukoliko je uneti karakter $h$ - proverava da li su unete tačke kolinearne i ukoliko jesu, ispisuje jednačinu prave kojoj pripadaju. 
-%     Na primer, tačke $(1,2),(2,3),(3,4),(4,5)$ su kolinearne i pripadaju pravoj $y=x+1$, 
-%     tačke $(1,1),(1,2),(1,3),(1,4)$ su kolinearne i pripadaju pravoj $x=1$,
-%     a tačke $(1,1),(2,1),(2,2),(1,2)$ nisu kolinearne.
-% \item ukoliko je uneti karakter $j$ - Kramerovim pravilom proverava da li je sistem jednačina
-% $x_1 * p + x_2 * q = x_4 - x_3,y_1 * p + y_2 * q = y_4 - y_3$
-%     određen, neodređen ili nema rešenja, i u slučaju da je određen ispisuje rešenja.
-% \end{itemize} 
-% \linkresenje{KT_NG_32}
-% \end{Exercise}
-% \ifresenja
-%  \begin{Answer}[ref=KT_NG_32]
-% \includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_32.c}
-% \end{Answer}
-% \fi
 
 
 \begin{Exercise}[difficulty=1, label=KT_NG_33]
@@ -1427,7 +1294,7 @@ U slučaju neispravnog unosa, ispisati odgovarajuću poruku o grešci.
 \end{Exercise}
 \ifresenja
  \begin{Answer}[ref=KT_NG_33]
-\includecode{resenja/2_KontrolaToka/1.2_NaredbeGrananja/2_1_33.c}
+\includecode{resenja/1_OsnovniElementiImperativnogProgramiranja/1.3_Grananja/grananja_30.c}
 \end{Answer}
 \fi
 
