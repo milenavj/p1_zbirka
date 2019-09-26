@@ -12,7 +12,7 @@ int main() {
   najmanji = a;
 
   /* Azuriranje vrednosti minimuma u slucaju da je vrednost drugog
-     broja manji od vrednosti tekuceg minimuma. */
+     broja manja od vrednosti tekuceg minimuma. */
   if (b < najmanji)
     najmanji = b;
 

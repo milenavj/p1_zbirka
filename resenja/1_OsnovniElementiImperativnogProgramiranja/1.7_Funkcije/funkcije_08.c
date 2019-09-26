@@ -32,7 +32,7 @@ void prvih_n_prostih(int n) {
   int broj_prostih = 0;
   int k = 2;
 
-  /* Petlja se izvrsava dok god se ne ispise n prostih brojeva. */
+  /* Petlja se izvrsava sve dok se ne ispise n prostih brojeva. */
   while (broj_prostih < n) {
     /* Ako se naidje na broj koji je prost, ispisuje se njegova
        vrednost i uvecava se brojac. */

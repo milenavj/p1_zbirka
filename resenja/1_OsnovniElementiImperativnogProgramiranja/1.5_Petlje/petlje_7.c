@@ -10,7 +10,7 @@ int main() {
   printf("Unesite redom brojeve x i n: ");
   scanf("%f %d", &x, &n);
 
-  /* Pamti se znak stepena i uzima se apsolutna vrednost stepena. */
+  /* Pamti se znak stepena i izracunava se apsolutna vrednost stepena. */
   znak = 1;
   if (n < 0) {
     znak = -1;

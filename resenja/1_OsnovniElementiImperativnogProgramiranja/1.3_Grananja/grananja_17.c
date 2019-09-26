@@ -23,10 +23,10 @@ int main() {
     return 0;
   }
 
-  /* Odredjivanje koeficijenta pravca k i odsecka na y osi n, prave
-     y = k*x + n koja prolazi kroz tacke A i B. Napomena: u
+  /* Odredjivanje koeficijenta pravca k i odsecka na y osi n prave
+     y = k*x + n koja prolazi kroz tacke A i B. Napomena: U
      slucaju kada je xb jednako xa, ova prava je paralelna sa y
-     osom i k ima vrednost beskonacno, a n ima vrednost 0, tj.
+     osom pa k ima vrednost beskonacno, a n vrednost 0, tj.
      jednacina prave je x = xa (sto je isto sto i x = xb). Da bi se 
      izbeglo deljenje nulom (xb-xa), ovaj slucaj se posebno
      obradjuje. */
@@ -47,11 +47,11 @@ int main() {
       printf("Tacke se ne nalaze na istoj pravoj.\n");
   }
 
-  /* II nacin: Tacke su kolinearne ako je: 
+  /* II nacin: Tacke su kolinearne ako je  
      |xa ya 1 | 
      |xb yb 1 | = 0 
      |xc yc 1 | 
-     odnosno, ako je: 
+     odnosno, ako je 
      xa*yb + ya*xc + xb*yc - ya*xb - xa*yc - yb*xc = 0
 
      if(xa*yb + ya*xc + xb*yc - ya*xb - xa*yc - yb*xc == 0)

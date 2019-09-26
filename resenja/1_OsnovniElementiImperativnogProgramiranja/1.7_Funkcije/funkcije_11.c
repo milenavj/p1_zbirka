@@ -4,7 +4,7 @@
 /* Funkcija ispituje da li se cifra c nalazi u zapisu celog broja
    x. Vraca 1 ako je uslov ispunjen i 0 u suprotnom. */
 int sadrzi(int x, int c) {
-  /* Uzima se apsolutna vrednost broja x. */
+  /* Izracunava se apsolutna vrednost broja x. */
   x = abs(x);
 
   /* Izdvaja se cifra po cifra broja x. Ako se naidje na cifru cija 

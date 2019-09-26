@@ -30,15 +30,15 @@ int main() {
 
   /* Formiranje rezultata. Prvi karakter rezultujuce niske se
      postavlja na terminirajucu nulu. Ovo se radi jer strcat
-     funkcionise tako sto krene od pocetka niske, ide do terminirajuce 
-     nule i zatim pocevsi od tog mesta nadovezuje nisku koja je
-     prosledjena kao drugi argument. Na ovaj nacin je obezbedjeno
-     da ce prvi poziv funkcije strcat krenuti da nadovezuje od
-     pocetka niske t. U petlji se na t nadovezuje prvo niska s, a
-     zatim niska "-". Ovo se ponavlja n-1 puta jer nakon poslednjeg 
-     nadovezivanja niske s ne treba da se nadje "-". Iz tog razloga 
-     se po zavrsetku petlje vrsi jos jedno nadovezivanje niske s,
-     ali ne i niske "-". */
+     funkcionise tako sto krene od pocetka niske, ide do 
+     terminirajuce nule i zatim pocevsi od tog mesta nadovezuje 
+     nisku koja je prosledjena kao drugi argument. Na ovaj nacin 
+     je obezbedjeno da ce prvi poziv funkcije strcat krenuti da 
+     nadovezuje od pocetka niske t. U petlji se na t nadovezuje prvo 
+     niska s, a zatim niska "-". Ovo se ponavlja n-1 puta jer nakon  
+     poslednjeg nadovezivanja niske s ne treba da se nadje "-". Iz   
+     tog razloga se po zavrsetku petlje vrsi jos jedno nadovezivanje
+     niske s, ali ne i niske "-". */
   t[0] = '\0';
   for (i = 0; i < n - 1; i++) {
     strcat(t, s);

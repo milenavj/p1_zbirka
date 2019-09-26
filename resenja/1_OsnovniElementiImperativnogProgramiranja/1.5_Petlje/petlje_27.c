@@ -8,7 +8,7 @@ int main() {
   printf("Unesite broj: ");
   scanf("%d", &x);
 
-  /* Racunanje apsolutne vrednosti unetog broja.  */
+  /* Racunanje apsolutne vrednosti unetog broja. */
   if (x < 0)
     x = -x;
 

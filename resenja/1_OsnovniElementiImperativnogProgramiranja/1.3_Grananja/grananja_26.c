@@ -14,7 +14,7 @@ int main() {
     return 1;
   }
 
-  /* Provera da li je godina prestupna, zbog februara */
+  /* Provera da li je godina prestupna, zbog februara. */
   if ((godina % 4 == 0 && godina % 100 != 0) || godina % 400 == 0)
     prestupna = 1;
   else

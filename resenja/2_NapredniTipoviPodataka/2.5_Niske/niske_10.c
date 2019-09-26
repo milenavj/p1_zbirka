@@ -17,7 +17,7 @@ void ucitaj_liniju(char s[], int n) {
 }
 
 /* Pomocna funkcija koja proverava da li karakter c1 treba zadrzati
-   ako vazi da se iza njega nalazi c2. */
+   ako vazi da se iza njega nalazi karakter c2. */
 int treba_zadrzati(char c1, char c2) {
   /* Ako neki od karaktera nije slovo, c1 se ne izbacuje. */
   if (!isalpha(c1) || !isalpha(c2))

@@ -28,10 +28,10 @@ int broj_linija(FILE *ulaz, char *s) {
        linije, a zatim 'pomeranje' u levo onoliko mesta koliko je
        dugacka niska s. 
        Na primer, ako je linija "abcdefghijk", a niska s "ab", 
-       onda sa: linija + duzina_linije se vrsi pomeranje na karakter 
-       iza karaktera 'k' (odnosno null-terminator), a sa: 
+       onda se sa linija + duzina_linije vrsi pomeranje na karakter 
+       iza karaktera 'k' (odnosno null-terminator), a sa 
        linija + duzina_linije - duzina_s 
-       na karakter 'j'. Ukoliko se funkcija strcmp pozove sa: 
+       na karakter 'j'. Ukoliko se funkcija strcmp pozove sa 
        strcmp(linija + duzina_linije - duzina_s, s), 
        vrsice se poredjenje niske "jk" i "ab", sto je i bio cilj. */
     if (strcmp(linija + duzina_linije - duzina_s, s) == 0)

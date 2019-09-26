@@ -9,7 +9,7 @@ int main() {
   printf("Unesite ceo broj:");
   scanf("%d", &x);
 
-  /* Uzima se apsolutna vrednost broja da bi izdvojene cifre bile
+  /* Izracunava se apsolutna vrednost broja da bi izdvojene cifre bile
      pozitivni brojevi. Na primer, 123%10 je 3, a -123%10 je -3. */
   x = abs(x);
 

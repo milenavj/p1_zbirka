@@ -6,7 +6,7 @@
 /* Funkcija vraca adresu prvog pojavljivanja karaktera c u niski s
    ili NULL ukoliko se c ne pojavljuje u s.
 
-   Trazeni rezultat moze se dobiti koriscenjem funkcije strchr cija 
+   Trazeni rezultat se moze dobiti koriscenjem funkcije strchr cija 
    se deklaracija nalazi u zaglavlju string.h. Funkcija
    strchr_klon predstavlja jednu mogucu implementaciju ove
    funkcije. */
@@ -21,8 +21,8 @@ char *strchr_klon(char s[], char c) {
       return &s[i];
 
   /* Ako je petlja zavrsena, znaci da nije pronadjen karakter koji
-     je jednak karakteru c i kao povratna vrednost funkcije se
-     vraca NULL pokazivac kao oznaka da se c ne nalazi u s. */
+     je jednak karakteru c pa se kao povratna vrednost funkcije
+     vraca NULL pokazivac. */
   return NULL;
 }
 

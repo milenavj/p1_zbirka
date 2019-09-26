@@ -10,8 +10,8 @@ int main() {
   printf("Unesite broj: ");
   scanf("%d", &x);
 
-  /* Ako je broj negativan, uzima se njegova apsolutna vrednost i
-     azurira se vrednost znaka broja. */
+  /* Ako je broj negativan, koristi se njegova apsolutna vrednost
+     i azurira se vrednost znaka broja. */
   if (x < 0) {
     x = abs(x);
     znak = -1;

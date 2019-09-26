@@ -29,7 +29,7 @@ int broj_pojavljivanja(char s[], char t[]) {
                porede "bc" i "ab". 
      ... 
      Za i = sn - st = 5 - 2 = 3, zove se strncmp("ab", "ab", 2) i 
-               na tajse porede "ab" i "ab". */
+               na taj nacin se porede "ab" i "ab". */
   for (i = 0; i <= sn - tn; i++)
     if (strncmp(s + i, t, tn) == 0)
       brojac++;

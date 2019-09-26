@@ -11,8 +11,8 @@ int main() {
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 
-  /* Da bi program radio ispravno i za negativne vrednosti, uzima
-     se apsolutna vrednost broja n. */
+  /* Da bi program radio ispravno i za negativne vrednosti, 
+     koristi se apsolutna vrednost broja n. */
   n_abs = abs(n);
 
   /* Provera ispravnosti ulaznih podataka. */
@@ -28,8 +28,8 @@ int main() {
   hiljada = n_abs / 1000;
 
   /* Po algoritmu za trazenje najvece/najmanje cifre (koji je 
-     prikazan u zadatku 2.1.11) Racunanje najveca i najmanja
-     cifra broja n, kao i pozicija na kojoj se one nalaze. 
+     prikazan u zadatku 2.1.11) pronalaze se najveca i najmanja
+     cifra broja n, kao i pozicije na kojoj se one nalaze. 
      Radi lakseg izracunavanja, pozicija se pamti kao stepen broja
      10. Na primer, pozicija cifre jedinica je 1, cifre desetica 
      10, itd... */

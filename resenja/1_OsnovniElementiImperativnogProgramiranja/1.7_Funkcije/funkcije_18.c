@@ -46,7 +46,7 @@ int main() {
   int n;
 
   /* Ucitavanje brojeva sve do unosa broja nula i ispis brojeva
-     dobijenih kao rezultat izvrsavanja funcije rotacija nad 
+     dobijenih kao rezultat izvrsavanja funkcije rotacija nad 
      unetim brojevima. */
   while (1) {
     printf("Unesite broj: ");

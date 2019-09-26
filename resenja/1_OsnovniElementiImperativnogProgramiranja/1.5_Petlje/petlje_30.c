@@ -37,7 +37,7 @@ int main() {
     duzina = nova_duzina;
   }
 
-  /* Ispis rezultata. Napomena: duzina i sirina su celi brojevi. */
+  /* Ispis rezultata. Napomena: Duzina i sirina su celi brojevi. */
   printf("Dimenzije papira: %d %d\n", (int) duzina, (int) sirina);
 
   return 0;

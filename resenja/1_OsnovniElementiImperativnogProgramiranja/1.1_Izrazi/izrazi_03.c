@@ -12,12 +12,12 @@ int main() {
   printf("Unesite vrednost broja y: ");
   scanf("%d", &y);
 
-  /* I nacin ispisa: dodela zbira x+y promenljivoj rezultat i 
+  /* I nacin ispisa: Dodela zbira x+y promenljivoj rezultat i 
      ispis vrednosti promenljive rezultat. */
   rezultat = x + y;
   printf("%d + %d = %d\n", x, y, rezultat);
 
-  /* II nacin ispisa: direktan ispis vrednosti izraza, bez njegovog 
+  /* II nacin ispisa: Direktan ispis vrednosti izraza, bez njegovog 
      dodeljivanja posebnoj promenljivoj. */
   printf("%d - %d = %d\n", x, y, x - y);
   printf("%d * %d = %d\n", x, y, x * y);

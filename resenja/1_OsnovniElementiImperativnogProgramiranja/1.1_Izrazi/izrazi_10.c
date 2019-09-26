@@ -19,7 +19,7 @@ int main() {
   cifra_stotina = x / 100;
 
   /* Ispis rezultata.
-     NAPOMENA: Kada se stampa numericka vrednost promenljive tipa
+     Napomena: Kada se stampa numericka vrednost promenljive tipa
      char koristi se %d. Kada se stampa karakter ciji je ASCII 
      kod jednak vrednosti te promenljive, tada se koristi %c.
      U ovom slucaju je potrebno stampati numericku vrednost. */

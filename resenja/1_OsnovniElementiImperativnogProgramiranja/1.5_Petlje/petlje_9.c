@@ -9,15 +9,14 @@ int main() {
   scanf("%d", &n);
 
   /* Slucaj kada broj n ima vrednost nula se posebno obradjuje.
-     Kada ovo ne bi bilo navedeno, petlja u nastavku bi se u ovom
-     slucaju izvrsavala beskonacno. */
+     U suprotnom bi se petlja u nastavku beskonacno izvrsavala. */
   if (n == 0) {
     printf("0\n");
     return 0;
   }
 
   /* Uklanjanje poslednje cifre broja se vrsi deljenjem broja sa 10.
-     Ovaj postupak se ponavlja dok god je poslednja cifra nula. */
+     Ovaj postupak se ponavlja sve dok je poslednja cifra nula. */
   while (n % 10 == 0)
     n = n / 10;
 

@@ -30,7 +30,7 @@ int main() {
   case 10:
   case 12:
     /* Dozvoljeni broj dana za januar, mart, maj, jul, avgust,
-       oktobar i decembar je 31 */
+       oktobar i decembar je 31. */
     dozvoljeni_broj_dana = 31;
     break;
   case 2:

@@ -91,7 +91,7 @@ int main() {
   /* Ispis rezultata. */
   /* I nacin: printf("%d\n", prebrojavanje(a, n)); */
 
-  /* II nacin: jednim prolazom kroz niz: */
+  /* II nacin: Jednim prolazom kroz niz. */
   printf("Rezultat: %d\n", prebrojavanje_jednim_prolazom(a, n));
 
   exit(EXIT_SUCCESS);

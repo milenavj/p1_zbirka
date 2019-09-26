@@ -6,9 +6,9 @@ int main() {
   int broj_velikih = 0, broj_malih = 0;
   int broj_cifara = 0, suma_cifara = 0, broj_belina = 0;
 
-  /* Petlja se zavrsava kada korisnik zada konstantu oznaku za kraj
-     ulaza (konstanta EOF cija je vrednost -1). Ova konstanta se
-     zadaje kombinacijom tastera CTRL+D. */
+  /* Petlja se zavrsava kada korisnik zada konstantu koja oznacava 
+     kraj ulaza (EOF konstantu). Ova konstanta se zadaje kombinacijom
+     tastera CTRL+D i ima vrednost -1. */
   printf("Unesite tekst:\n");
   while ((c = getchar()) != EOF) {
     if (c >= 'A' && c <= 'Z')

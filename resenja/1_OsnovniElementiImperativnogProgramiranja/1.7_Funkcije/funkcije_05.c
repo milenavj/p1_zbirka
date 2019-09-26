@@ -15,9 +15,9 @@ int euklid(int x, int y) {
      
      1. ostatak = x % y = 12 % 6 = 0 
      2. x postaje y => x = 6
-     3. y postaje ostatak => y = 0 => 
+     3. y postaje ostatak => y = 0  
      
-     procedura se zavrsava jer je y jednako 0, a rezultat je
+     Postupak se zavrsava kada y postane 0, a rezultat je
      poslednji ne-nula ostatak, tj. x. */
   while (y) {
     ostatak = x % y;

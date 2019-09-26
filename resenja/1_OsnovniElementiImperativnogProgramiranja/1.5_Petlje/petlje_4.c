@@ -14,7 +14,7 @@ int main() {
     return 1;
   }
 
-  /* a) I nacin: koriscenjem while petlje. */
+  /* a) I nacin: Koriscenjem while petlje. */
   /* Inicijalizacija brojaca na levu granicu intervala. */
   i = n;
 
@@ -25,7 +25,7 @@ int main() {
     i++;
   }
 
-  /* b) II nacin: koriscenjem for petlje.
+  /* b) II nacin: Koriscenjem for petlje.
 
      Naredba i=n se izvrsava jednom, pre prve iteracije. Uslov
      petlje i<=m se proverava pre svake iteracije. Naredba i++ se
@@ -35,7 +35,7 @@ int main() {
        printf("%d ", i); 
      } */
 
-  /* c) III nacin: koriscenjem do while petlje.
+  /* c) III nacin: Koriscenjem do while petlje.
 
      Uslov petlje se proverava na kraju svake iteracije. Zbog toga
      se do while petlja izvrsava bar jednom, cak i u slucaju da

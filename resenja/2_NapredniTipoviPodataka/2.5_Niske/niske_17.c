@@ -9,8 +9,8 @@
 int heksa_cifra(char c) {
   c = toupper(c);
 
-  /* Cifra je ispravna ako je cifra ili ako je neko od slova: A, B, 
-     C, D, E ili F. */
+  /* Karakter je ispravan ako je cifra ili ako je neko od slova:  
+     A, B, C, D, E ili F. */
   return isdigit(c) || (c >= 'A' && c <= 'F');
 }
 
@@ -24,14 +24,14 @@ int heksadekadni_broj(char s[]) {
     return 0;
 
   /* Za svaki karakter niske s se proverava da li predstavlja
-     ispravnu heksadekadnu cifru. Ako se naidje na neku cifru koja
+     ispravnu heksadekadnu cifru. Ako se naidje na karakter koji
      ne zadovoljava taj uslov, onda se kao povratna vrednost vraca
      nula. */
   for (i = 2; s[i]; i++)
     if (!heksa_cifra(s[i]))
       return 0;
 
-  /* Ako su sve cifre isravne heksadekadne cifre, onda je i s
+  /* Ako su svi karakteri isravne heksadekadne cifre, onda je i s
      ispravan heksadekadni broj i funkcija vraca jedninicu. */
   return 1;
 }

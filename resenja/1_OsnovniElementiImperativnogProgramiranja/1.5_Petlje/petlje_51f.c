@@ -10,7 +10,7 @@ int main() {
   scanf("%u", &n);
 
   /* Ucitavanje karaktera koji ce se koristiti za iscrtavanje.
-     Napomena: voditi racuna da treba preskociti novi red koji
+     Napomena: Voditi racuna da treba preskociti novi red koji
      korisnik zadaje nakon unosa broja n. */
   printf("Unesite karakter c: ");
   scanf("%c%c", &novi_red, &c);

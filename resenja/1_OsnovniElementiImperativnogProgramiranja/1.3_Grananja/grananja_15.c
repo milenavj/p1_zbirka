@@ -10,8 +10,8 @@ int main() {
   printf("Unesite cetvorocifreni broj: ");
   scanf("%d", &n);
 
-  /* Da bi program radio ispravno i za negativne vrednosti, uzima
-     se apsolutna vrednost broja n. */
+  /* Da bi program radio ispravno i za negativne vrednosti, 
+     koristi se apsolutna vrednost broja n. */
   n = abs(n);
 
   /* Provera ispravnosti ulaznih podataka. */

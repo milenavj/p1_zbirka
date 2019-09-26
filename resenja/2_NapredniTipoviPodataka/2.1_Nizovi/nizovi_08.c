@@ -4,11 +4,10 @@
 #define BROJ_CIFARA 10
 #define DUZINA_ABECEDE 26
 
-/* Pomocna funkcija za ispis elemenata niza.
-   Vrednost n oznacava broj elemenata niza 
-   (ima vrednost 10 ili 26).
-   Karakter c oznacava prvi karakter za datu kategoriju
-   ('a' za mala slova, 'A' za velika i '0' za cifre). */
+/* Pomocna funkcija za ispis elemenata niza. Vrednost n oznacava  
+   broj elemenata niza (moze imati vrednost 10 ili 26), a karakter
+   c oznacava prvi karakter za datu kategoriju ('a' za mala slova,
+   'A' za velika slova i '0' za cifre). */
 void ispisi(int niz[], int n, char c) {
   int i;
   for (i = 0; i < n; i++) 

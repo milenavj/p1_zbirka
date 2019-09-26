@@ -8,7 +8,7 @@ int je_stepen(unsigned int x, unsigned int n) {
   int i = 1;
   unsigned int s = n;
 
-  /* U svakoj iteraciji petlje, s se azurira tako da ima vrednost
+  /* U svakoj iteraciji petlje s se azurira tako da ima vrednost
      n^i. Postupak se ponavlja dok je s manji od x. */
   while (s < x) {
     s = s * n;
@@ -33,7 +33,7 @@ int main() {
   printf("Unesite dva broja: ");
   scanf("%u%u", &x, &n);
 
-  /* Poziv napisane funkcije. */
+  /* Poziv funkcije. */
   stepen = je_stepen(x, n);
 
   /* U zavisnosti od povratne vrednosti funkcije, vrsi se ispis

@@ -11,12 +11,12 @@ float aritmeticka_sredina(int x) {
   int zbir_cifara = 0;
   int broj_cifara = 0;
 
-  /* Uzima se apsolutna vrednost broja x kako bi program ispravno
-     radio i za negativne brojeve. */
+  /* Izracunava se apsolutna vrednost broja x kako bi program
+     ispravno radio i za negativne brojeve. */
   x = abs(x);
 
   /* Sve dok ima neobradjenih cifara, na zbir se dodaje poslednja
-     cifra, brojac cifara se uvecava za 1 i sa broja x se uklanja
+     cifra, brojac cifara se uvecava za 1 i iz broja x se uklanja
      poslednja cifra. */
   while (x) {
     zbir_cifara += x % 10;

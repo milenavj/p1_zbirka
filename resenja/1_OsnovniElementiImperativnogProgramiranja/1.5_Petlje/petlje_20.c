@@ -5,7 +5,7 @@ int main() {
   float cena, m;
   unsigned int n, i, broj_artikala = 0;
 
-  /* Ucitavanje vrednosti broja m. */
+  /* Ucitavanje vrednosti budzeta. */
   printf("Nikolin budzet: ");
   scanf("%f", &m);
 

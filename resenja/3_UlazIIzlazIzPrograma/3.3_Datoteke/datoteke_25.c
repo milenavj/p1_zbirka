@@ -30,13 +30,13 @@ int main(int argc, char *argv[]) {
   /* Racunanje vrednosti drugog argumenta komandne linije. */
   k = atoi(argv[2]);
 
-  /* Funkcija fgets cita jednu liniju iz datoteke. Prima tri
-     argumenta: 
+  /* Funkcija fgets cita jednu liniju iz datoteke. Njeni
+     argumenti su: 
      1. Niska u koju ce biti smestena procitana linija
      2. Maksimalna duzina linije 
      3. Datoteka iz koje se cita. 
-     Kada dodje do kraja datoteke, kao povratnu vrednost vraca
-     NULL. */
+     Kada dodje do kraja datoteke, kao povratnu vrednost
+     funkcija vraca NULL. */
   while (fgets(linija, MAKS_LINIJA, ulaz) != NULL) {
     /* Ispis svih linija cija je duzina veca od k. */
     if (strlen(linija) > k)

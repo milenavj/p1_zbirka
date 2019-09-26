@@ -20,7 +20,7 @@ int main() {
   pozicija = 1;
   rezultat = 0;
 
-  /* Izdvajanje cifre po cifre broja, dok god ima neobradjenih
+  /* Izdvajanje cifre po cifre broja sve dok ima neobradjenih
      cifara. */
   while (n > 0) {
     /* Izdvajanje poslednje cifre iz zapisa. U slucaju da je njena

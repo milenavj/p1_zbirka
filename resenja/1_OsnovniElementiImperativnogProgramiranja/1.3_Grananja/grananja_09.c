@@ -8,7 +8,7 @@ int main() {
 
   /* I nacin ucitavanja ulaza: koriscenjem funkcije getchar()
      Funkcija getchar cita jedan karakter sa ulaza i vraca njegov
-     ASCII kod. Napomena: razmaci su takodje karakteri i nece
+     ASCII kod. Napomena: Razmaci su takodje karakteri i nece
      automatski biti preskoceni. Iz tog razloga se getchar poziva 5 
      puta u ovom primeru. Posto je poznato da su drugi i cetvrti
      karakter blanko znaci, nema potrebe da se cuva povratna 

@@ -66,8 +66,8 @@ int main() {
       printf("%d ", i);
       bar_jedna = 1;
     }
-    /* II nacin: koriscenjem funkcije strstr cija se deklaracija
-       nalazi u zaglavlju string.h: 
+    /* II nacin: Koriscenjem funkcije strstr cija se deklaracija
+       nalazi u zaglavlju string.h.
        if(strstr(linija, "program") != NULL){ 
          printf("%d ", i); 
          bar_jedna = 1; 

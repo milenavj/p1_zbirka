@@ -24,11 +24,11 @@ int main() {
 
   printf("Unesite brojeve: ");
 
-  /* Prvi broj se ucitava pre petlje, zbog ispravne
+  /* Prvi broj se ucitava pre petlje zbog ispravne
      inicijalizacije. */
   scanf("%d", &x);
   /* Promenljiva najveca_desetica se postavlja na cifru desetica
-     ucitanog broja. Napomena: pri racunanju se uzima apsolutna
+     ucitanog broja. Napomena: Pri racunanju se koristi apsolutna
      vrednost broja jer je npr. (-123/10)= -12 i -12 % 10 = -2, a
      cifra desetica treba da bude 2. */
   najveca_desetica = (abs(x) / 10) % 10;

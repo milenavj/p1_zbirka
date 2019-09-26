@@ -9,12 +9,11 @@ int main() {
   printf("Unesite jedan ceo broj:");
   scanf("%d", &x);
 
-  /* Provera ispravnosti ulaznih podataka. Napomena: za
+  /* Provera ispravnosti ulaznih podataka. Napomena: Za
      razliku od izlaza iz programa sa kodom 0 (return 0;) koji
      sluzi kao indikator da se program zavrsio uspesno, izlaz iz
-     programa sa izlaznim kodom koji se razlikuje od nule sluzi
-     kao indikator da je pri izvrsavanju programa doslo do neke
-     greske. */
+     programa sa izlaznim kodom razlicitim od nule sluzi kao
+     indikator da je pri izvrsavanju programa doslo do neke greske. */
   if (x == 0) {
     printf("Greska: nedozvoljeno je deljenje nulom.\n");
     return 1;

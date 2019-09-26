@@ -4,7 +4,7 @@
 
 #define MAKS_NISKA 21
 
-/* Funckija pretvara sva slova niske s u velika slova. */
+/* Funkcija pretvara sva slova niske s u velika slova. */
 void u_velika_slova(char s[]) {
   int i;
   for (i = 0; s[i]; i++)

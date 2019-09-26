@@ -51,8 +51,8 @@ int main() {
   printf("Unesite nisku:\n");
   ucitaj_liniju(s, MAKS_LINIJA);
 
-  /* NAPOMENA: Postoji vise nacina za ucitavanje linije sa
-     standardnog ulaza koriscenjem funkcija iz standardne c
+  /* Napomena: Postoji vise nacina za ucitavanje linije sa
+     standardnog ulaza koriscenjem funkcija iz standardne C
      biblioteke. Jedan od njih je koriscenjem funkcije gets:
      gets(s); Postoje razlozi zasto ova funkcija nije bezbedna za
      koriscenje i oni ce biti objasnjeni u kasnijim poglavljima. U

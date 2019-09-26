@@ -24,7 +24,7 @@ int main() {
   if (k > 2)
     Fx = 2 * cos(Fx) - Fx * Fx * Fx;
 
-  /* Ispis rezultata. Napomena: ispis realnih brojeva sa %g
+  /* Ispis rezultata. Napomena: Ispis realnih brojeva sa %g
      rezultuje ispisom na onaj broj decimala koliko sam broj ima.
      Dakle, broj 1 ce se ispisati kao 1, broj 2.33 kao 2.33, broj
      0.9999 kao 0.9999. */

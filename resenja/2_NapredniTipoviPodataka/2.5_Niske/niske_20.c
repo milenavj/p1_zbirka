@@ -9,7 +9,7 @@
 int ucitaj_recenicu(char s[], int n) {
   int i = 0, c;
 
-  /* Preskacu se beline sa pocetka ako ih ima. Po zavrsetku ove
+  /* Ako postoje, preskacu se beline sa pocetka. Po zavrsetku ove
      petlje u c se nalazi prvi sledeci karakter koji nije belina. */
   do {
     c = getchar();
@@ -21,7 +21,7 @@ int ucitaj_recenicu(char s[], int n) {
 
   /* U nisku se smesta karakter, prelazi se na sledeci karakter i
      postupak se ponavlja sve dok se ne unese tacka, EOF ili dok se 
-     ne popuni maksimalan broj karaktera koje recenica moze da
+     ne smesti maksimalan broj karaktera koje recenica moze da
      sadrzi. */
   do {
     s[i] = c;

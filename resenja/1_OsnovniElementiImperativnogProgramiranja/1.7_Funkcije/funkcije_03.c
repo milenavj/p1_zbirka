@@ -7,9 +7,9 @@ int zbir_delilaca(int x) {
   /* Inicijalizacija zbira na 0. */
   int zbir = 0;
 
-  /* Svaki broj i izmedju 1 i sqrt(x) koji deli broj x se dodaje u
-     zbir. Ako je u pitanju broj koji za koji vazi da je i*i
-     jednako x, onda se dodaje samo vrednost i, a ako nije, onda se 
+  /* Svaki broj i izmedju 1 i sqrt(x) koji deli broj x se dodaje
+     zbiru. Ako je u pitanju broj za koji vazi da je i*i
+     jednako x, onda se dodaje samo vrednost i. U suprotnom se 
      pored vrednosti i dodaje i x/i. 
      Na primer, za x=6, kada je i=2, dodaju se i 2 i 6/2 = 3, 
      a za x = 4, kada je i=2, dodaje se samo 2. */

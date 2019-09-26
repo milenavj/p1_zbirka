@@ -19,8 +19,8 @@ int main() {
     broj_brojeva++;
   }
 
-  /* Ispis rezultata. Napomena: i suma i broj_brojeva su celi
-     brojevi neophodno je bar jednu od te dve vrednosti pretvoriti
+  /* Ispis rezultata. Napomena: I suma i broj brojeva su celi
+     brojevi pa je neophodno bar jednu od te dve vrednosti pretvoriti
      u realan broj kako deljenje ne bi bilo celobrojno. */
   if (broj_brojeva == 0)
     printf("Nisu uneti brojevi.\n");

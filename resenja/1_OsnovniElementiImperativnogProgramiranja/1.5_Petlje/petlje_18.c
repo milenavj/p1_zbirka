@@ -31,7 +31,7 @@ int main() {
     scanf("%lf", &trenutni);
 
     /* Provera da li je doslo do promene znaka izmedju prethodnog
-       i trenutnog. Oni su razlicitog znaka ako vazi: 
+       i trenutnog broja. Oni su razlicitog znaka ako vazi: 
        1. da im je proizvod negativan ILI 
        2. da im je proizvod nula, a jedan od njih je negativan. */
     if (prethodni * trenutni < 0)

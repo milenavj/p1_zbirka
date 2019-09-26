@@ -1,6 +1,14 @@
 #include <stdio.h>
 #include <math.h>
 
+/* Uvek kada se koristi neka funkcija iz matematicke bibilioteke
+  (na primer , funkcije sqrt , pow , sin , cos) potrebno je prilikom 
+  prevodjenja dodati i opciju -lm kojom se kompajler upucuje da je za
+  pravljenje izvrsne verzije programa potrebno da se program poveze 
+  sa matematickom bibliotekom. Ukoliko se ova opcija ne navede, 
+  kompajler prijavljuje gresku: collect2: error: ld returned 1 exit status
+*/
+
 int main() {
   /* Deklaracija potrebnih promenljivih. */
   float a, povrsina, obim;
