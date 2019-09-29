@@ -2,7 +2,7 @@
 
 int main() {
   /* Deklaracije potrebnih promenljivih. */
-  unsigned int n, novibroj;
+  unsigned int n, novi_broj;
   unsigned int levi, desni, m;
 
   /* Ucitavanje brojeva n i m. */
@@ -24,10 +24,10 @@ int main() {
      U navedenom primeru, rezultat se dobija nadovezivanjem 
      brojeva 12, 67 i 345. Ovo se radi mnozenjem delova
      odgovarajucim stepenom broja 10 i njihovim sabiranjem. */
-  novibroj = levi * 100000 + m * 1000 + desni;
+  novi_broj = levi * 100000 + m * 1000 + desni;
 
   /* Ispis rezultata. */
-  printf("Rezultat: %u\n", novibroj);
+  printf("Rezultat: %u\n", novi_broj);
 
   return 0;
 }

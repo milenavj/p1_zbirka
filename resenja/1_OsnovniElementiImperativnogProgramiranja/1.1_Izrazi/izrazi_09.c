@@ -15,7 +15,7 @@ int main() {
      promenu vrednosti promenljive a, u odnosu na pocetne vrednosti
      promenljivih a i b, vrednost ovog izraza je jednaka
      a + b - 2*b = a - b. */
-  b = a - 2*b; 
+  b = a - 2 * b; 
 
   /* Ispis rezultata. */
   printf("Nove vrednosti su: a=%d, b=%d\n", a, b);

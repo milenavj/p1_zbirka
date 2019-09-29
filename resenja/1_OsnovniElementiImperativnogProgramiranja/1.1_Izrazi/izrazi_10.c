@@ -23,13 +23,14 @@ int main() {
      char koristi se %d. Kada se stampa karakter ciji je ASCII 
      kod jednak vrednosti te promenljive, tada se koristi %c.
      U ovom slucaju je potrebno stampati numericku vrednost. */
-  printf("Cifra jedinica: %d\nCifra desetica: %d\nCifra stotina: %d\n", 
-         cifra_jedinica, cifra_desetica, cifra_stotina);
+  printf("Cifra jedinica: %d\n", cifra_jedinica);
+  printf("Cifra desetica: %d\n", cifra_desetica);
+  printf("Cifra stotina: %d\n", cifra_stotina);
 
   /* II nacin: Ispis rezultata bez uvodjenja dodatnih promenljivih
      cifra_jedinica, cifra_desetica i cifra_stotina:
-
-     printf("Cifre unetog broja su %d,%d,%d\n", x%10, (x/10)%10, x/100); */
+     printf("Cifre unetog broja su %d,%d,%d\n", x%10, (x/10)%10, 
+             x/100); */
 
   return 0;
 }

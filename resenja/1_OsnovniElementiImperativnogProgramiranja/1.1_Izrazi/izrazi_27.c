@@ -16,8 +16,7 @@ int main() {
   /* Povrsina za krecenje odgovara povrsini kvadra 
      umanjena za povrsinu poda jer se on ne kreci. */
   povrsina_za_krecenje = 0.8 * (duzina * sirina +
-                                2 * duzina * visina +
-                                2 * sirina * visina);
+    2 * duzina * visina + 2 * sirina * visina);
   
   /* Racunanje ukupne cene. */
   ukupna_cena = povrsina_za_krecenje * cena;
