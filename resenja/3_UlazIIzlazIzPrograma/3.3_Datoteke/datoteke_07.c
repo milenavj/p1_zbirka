@@ -43,11 +43,15 @@ int main() {
       maks = brojaci[i];
 
   /* Ispis rezultata. */
-  printf("Najcesce cifre: ");
-  for (i = 0; i < BROJ_CIFARA; i++)
-    if (brojaci[i] == maks)
-      printf("%d ", brojaci[i]);
-  printf("\n");
+  if(maks == 0)
+    printf("Datoteka ne sadrzi cifre.\n");
+  else {
+    printf("Najcesce cifre: ");
+    for (i = 0; i < BROJ_CIFARA; i++)
+      if (brojaci[i] == maks)
+        printf("%d ", i);
+    printf("\n");
+  }
     
   /* Zatvaranje datoteke. */
   fclose(ulaz);

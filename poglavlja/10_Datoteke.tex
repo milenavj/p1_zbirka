@@ -127,7 +127,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 #\naslovDat{sifra.txt}#
 #\datoteka{lZSDLZSHBJH EZJTKSDS}#
-#\datoteka{rSTCDMSRJH sQF 16}#
+#\datoteka{rSTCDMSRJH SQF 16}#
 #\datoteka{aDNFQZC}#
 \end{upotreba}
 \end{minitest}
@@ -199,7 +199,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{18. februar 2019.}#
 
 #\naslovDat{izlaz.txt}#
-#\datoteka{11220000000211112}
+#\datoteka{00221111111200002}
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -323,7 +323,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Beograd}#
 
 #\naslovIzlaz#
-#\izlaz{Broj malih slova je: 35}#
+#\izlaz{Broj malih slova je: 36}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
@@ -759,7 +759,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\datoteka{Ruma Sombor}#
 
 #\naslovDat{bez\_duplikata.txt:}#
-#\datoteka{Sombor Nis Beograd}#
+#\datoteka{Sombor Beograd Nis}#
 #\datoteka{Indjija Ruma}#
 \end{upotreba}
 \end{minitest}
@@ -874,7 +874,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 
 \begin{Exercise}[label=p3_iv4]         
-Prvi red datoteke $matrice.txt$ sadrži dva cela broja manja od
+Prvi red datoteke $matrica.txt$ sadrži dva cela broja manja od
 $50$ koji predstavljaju redom broj vrsta i broj kolona realne matrice
 $a$. Svaki sledeći red sadrži po jednu vrstu matrice. Napisati
 program koji pronalazi sve elemente matrice $a$ koji su jednaki zbiru
@@ -886,7 +886,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 \begin{minitest}
 \begin{upotreba}{1}
-#\naslovDat{matrice.txt}#
+#\naslovDat{matrica.txt}#
 #\datoteka{3 4}#
 #\datoteka{1  2  3  4}#
 #\datoteka{7  2 15 -3}#
@@ -899,7 +899,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
-#\naslovDat{matrice.txt}#
+#\naslovDat{matrica.txt}#
 #\datoteka{2 2}#
 #\datoteka{1  1 }#
 #\datoteka{-2  2}#
@@ -911,7 +911,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
-#\naslovDat{matrice.txt}#
+#\naslovDat{matrica.txt}#
 #\datoteka{1 4}#
 #\datoteka{9 3 5 2}#
 
@@ -952,7 +952,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{2}
-#\naslovDat{matrice.txt}#
+#\naslovDat{ulaz.txt}#
 #\datoteka{1 4}#
 #\datoteka{9 3 5 2}#
 
@@ -963,7 +963,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
-#\naslovDat{matrice.txt}#
+#\naslovDat{ulaz.txt}#
 #\datoteka{2 2}#
 #\datoteka{1  1 }#
 #\datoteka{-2  2}#
@@ -1031,14 +1031,13 @@ Pogledajte zadatak \ref{p3_iv4}.
 Definisati strukturu kojom se opisuje trodimenzioni vektor sa celobrojnim koordinatama $x$, $y$ i $z$.
 U datoteci $vektori.txt$ nalazi se nepoznati broj vektora. 
 Napisati program koji učitava vektore iz ove datoteke i na standardni izlaz ispisuje 
-koordinate vektora sa najvećom dužinom. 
+koordinate vektora sa najvećom dužinom. Ukoliko ima više takvih vektora, ispisati koordinate prvog.
 Dužina vektora se izračunava po formuli: $|v|= \sqrt{x^2+y^2+z^2}$.
 U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku.
 
 \begin{minitest}
 \begin{upotreba}{1}
 #\naslovDat{vektori.txt}#
-#\datoteka{2}#
 #\datoteka{4 -1 7}#
 #\datoteka{3 1 2}#
 
@@ -1049,17 +1048,16 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{2}
 #\naslovDat{vektori.txt}#
-#\datoteka{670}#
+#\datoteka{4 -4 4}#
+#\datoteka{-4 -4 -4}#
 
-#\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan broj}#
-#\izlaz{vektora.}#
+#\naslovIzlaz#
+#\izlaz{4 -4 4}#
 \end{upotreba}
 \end{minitest}
 \begin{minitest}
 \begin{upotreba}{3}
 #\naslovDat{vektori.txt}#
-#\datoteka{3}#
 #\datoteka{0 0 0}#
 #\datoteka{0 1 0}#
 #\datoteka{1 0 0}#
@@ -1072,7 +1070,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{4}
 #\naslovDat{vektori.txt}#
-#\datoteka{4}#
 #\datoteka{3 0 1}#
 #\datoteka{4 5 2}#
 #\datoteka{1 0 0}#
@@ -1094,7 +1091,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{minitest}
 \begin{upotreba}{6}
 #\naslovDat{vektori.txt}#
-#\datoteka{1}#
 #\datoteka{1 1 1}#
 
 #\naslovIzlaz#
@@ -1168,8 +1164,8 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 
 
 \begin{Exercise}[label=p3_06] 
- U prvom redu datoteke $studenti.txt$ se nalazi broj studenata, 
- a zatim u posebnim redovima za svakog studenta korisničko ime na Alas serveru i poslednjih pet ocena koje je dobio. 
+ U datoteci $studenti.txt$ se nalaze podaci o studentima.
+ Za svakog studenta je dato korisničko ime na Alas serveru i poslednjih pet ocena koje je dobio. 
  Napisati program koji pronalazi studenta koji je ostvario najbolji 
  uspeh i ispisuje njegove podatke. Ukoliko ima više takvih studenata, ispisati informacije o svima.
  Pretpostaviti da je maksimalni broj studenta $100$.
@@ -1178,7 +1174,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{1}
 #\naslovDat{studenti.txt}#
-#\datoteka{5}#
 #\datoteka{mr15239 10 9 9 8 10}#
 #\datoteka{mi14005 8 8 9 8 10}#
 #\datoteka{ml15112 9 8 8 7 10}#
@@ -1194,7 +1189,6 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 \begin{miditest}
 \begin{upotreba}{2}
 #\naslovDat{studenti.txt}#
-#\datoteka{3}#
 #\datoteka{mr16156 10 9 9 10 10}#
 #\datoteka{mi17234 9 9 10 10 10}#
 #\datoteka{ml17084 9 8 8 8 8}#
@@ -1411,9 +1405,9 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\naslovIzlaz#
 #\izlaz{Informacije o prosecnoj}#
 #\izlaz{ceni po markama:}#
-#\izlaz{renault 4266.67 3}#
-#\izlaz{dacia 6600.00 2}#
-#\izlaz{fiat 4595.00 2}#
+#\izlaz{renault 4266.67}#
+#\izlaz{dacia 6600.00}#
+#\izlaz{fiat 4595.00}#
 #\izlaz{}#
 #\izlaz{Kola u Vasem cenovnom rangu:}#
 #\izlaz{renault twingo 2900}#
@@ -1677,7 +1671,7 @@ U slučaju greške, na standardni izlaz za greške ispisati odgovarajuću poruku
 #\poziv{./a.out -k}#
 
 #\naslovIzlazZaGresku#
-#\izlaz{Greska: neispravan poziv.}#
+#\izlaz{Greska: neispravna opcija.}#
 \end{upotreba}
 \end{miditest}
 \begin{miditest}
@@ -1759,8 +1753,8 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 #\datoteka{razlicite duzine}#
 
 #\naslovDat{druga.dat}#
-#\datoteka{kada su}#
-#\datoteka{programiranje}#
+#\datoteka{ovo je primer kada}#
+#\datoteka{su}#
 #\datoteka{datoteke}#
 #\datoteka{razlicite}#
 #\datoteka{duzine}#
@@ -1768,7 +1762,7 @@ linije $200$ karaktera. Linije brojati počevši od {\tt 1}.
 #\datoteka{tih redova}#
 
 #\naslovIzlaz#
-#\izlaz{1 4 5 6 7}#
+#\izlaz{1 2 4 5 6 7}#
 \end{upotreba}
 \end{minitest}
 

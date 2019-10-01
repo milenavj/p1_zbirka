@@ -73,7 +73,7 @@ int main(int argc, char *argv[]) {
   while (fgets(linija, MAKS_LINIJA, ulaz) != NULL) {
     brojac = broj_pojavljivanja(linija, rec);
     if (brojac >= n)
-      fprintf(izlaz, "%d: %s\n", brojac, linija);
+      fprintf(izlaz, "%d: %s", brojac, linija);
   }
 
   /* Zatvaranje datoteka. */

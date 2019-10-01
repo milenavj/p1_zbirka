@@ -52,7 +52,7 @@ int main(int argc, char *argv[]) {
   /* Ukoliko je bilo ucitanih pravougaonika, ispisuje se povrsina
      najveceg. */
   if (maksimalna_povrsina != 0)
-    printf("Maksimalna povrsina: %u\n", maksimalna_povrsina);
+    printf("%u\n", maksimalna_povrsina);
   else
     printf("\n");
 

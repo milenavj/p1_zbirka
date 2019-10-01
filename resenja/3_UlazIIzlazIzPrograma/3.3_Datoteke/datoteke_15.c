@@ -31,7 +31,7 @@ int main() {
       najveci_broj = broj;
 
   /* Ispis rezultata. */
-  printf("Najveci broj je: %.2f\n", najveci_broj);
+  printf("Najveci broj je: %g\n", najveci_broj);
 
   /* Zatvaranje datoteke. */
   fclose(ulaz);
