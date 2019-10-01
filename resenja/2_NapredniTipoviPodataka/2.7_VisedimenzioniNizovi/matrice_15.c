@@ -65,9 +65,9 @@ int main() {
 
   /* Ispis rezultata. */
   if (uredjene_sume(a, n))
-    printf("Sume jesu uredjenje strogo rastuce.\n");
+    printf("Sume jesu uredjene strogo rastuce.\n");
   else
-    printf("Sume nisu uredjenje strogo rastuce.\n");
+    printf("Sume nisu uredjene strogo rastuce.\n");
 
   return 0;
 }

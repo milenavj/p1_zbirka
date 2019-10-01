@@ -29,7 +29,7 @@ int main() {
       suma += a[i][j] * a[i][j];
 
   /* Ispis rezultata. */
-  printf("Euklidska norma je %.3lf.\n", sqrt(suma));
+  printf("Euklidska norma: %.3lf\n", sqrt(suma));
 
   return 0;
 }
