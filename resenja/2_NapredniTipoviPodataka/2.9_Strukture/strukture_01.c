@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <math.h>
 
 /* Struktura koja opisuje kompleksni broj. */
 typedef struct {
@@ -84,8 +85,10 @@ KompleksanBroj podeli(const KompleksanBroj *a,
 /* Funkcija ispisuje kompleksan broj. */
 void ispisi(const KompleksanBroj *c){
     /* Ukoliko je imaginarni deo negativan, njegov zapis vec
-     ukljucuje znak, u suprotnom, broj je oblika a + b*i. */
-    printf("%.2f%c%.2f*i\n", c->re, c->im > 0 ? '+' : ' ', c->im);
+       ukljucuje znak, pa se zato uzima njegova apsolutna
+       vrednost. */
+    printf("%.2f%c%.2f*i\n", c->re, c->im > 0 ? '+' : '-', 
+           fabs(c->im));
 }
 
 int main() {
