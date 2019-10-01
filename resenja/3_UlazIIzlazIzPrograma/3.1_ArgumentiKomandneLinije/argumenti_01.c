@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
   int i;
 
   /* Ispis broja argumenata komandne linije. */
-  printf("Broj argumenata je: %d.\n", argc);
+  printf("Broj argumenata je %d.\n", argc);
 
   /* Ispis svakog od navedenih argumenata. */
   for (i = 0; i < argc; i++)
