@@ -32,7 +32,7 @@ int main() {
   char s[MAKS_NISKA];
 
   /* Ucitavanje niske. */
-  printf("Unesite nisku:");
+  printf("Unesite nisku: ");
   scanf("%s", s);
 
   /* Ispis rezultata. */
