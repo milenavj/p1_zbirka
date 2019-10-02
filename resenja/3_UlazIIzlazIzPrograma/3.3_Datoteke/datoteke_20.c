@@ -41,9 +41,8 @@ int main(int argc, char *argv[]) {
        standardni izlaz. */
     if (p.a == p.b)
       printf("%s ", p.ime);
-    else {
-      /* Ako je u pitanju pravougaonik, njegova povrsina se poredi
-         sa maksimalnom. */
+    else { /* Ako je u pitanju pravougaonik, njegova povrsina
+              se poredi sa maksimalnom. */
       if (p.a * p.b > maksimalna_povrsina)
         maksimalna_povrsina = p.a * p.b;
     }

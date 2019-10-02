@@ -8,7 +8,6 @@
    pomocu karaktera niske s. Na primer, t="programiranje",
    s="grupacija", rezultat je 2 jer niska s sadrzi prva dva
    karaktera niske t, ali ne i treci.
-
    Trazeni rezultat moze se dobiti koriscenjem funkcije strspn cija 
    se deklaracija nalazi u zaglavlju string.h. Funkcija
    strspn_klon predstavlja jednu mogucu implementaciju ove

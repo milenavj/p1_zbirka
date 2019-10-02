@@ -66,7 +66,6 @@ void iz_dekadnog_sistema(unsigned int broj, unsigned int osnova,
   } while (broj);
 
   rezultat[i] = '\0';
-
   obrni(rezultat);
 }
 

@@ -12,7 +12,6 @@
    karakteri se samo prepisuju. */
 void formiraj(char s[], char rezultat[], char c1, char c2) {
   int i, j;
-
   /* Brojac i se koristi za nisku s, a brojac j za rezultujucu
      nisku. */
   for (i = 0, j = 0; s[i]; i++) {

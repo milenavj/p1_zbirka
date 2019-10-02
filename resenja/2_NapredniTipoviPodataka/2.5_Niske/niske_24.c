@@ -32,7 +32,6 @@ char *strstr_klon(char s[], char t[]) {
     /* Unutrasnja petlja ide redom po niski t pomocu brojaca j i
        proverava da li se cela niska t poklapa sa delom niske s
        koji pocinje na poziciji i.
-
        Cim se naidje na situaciju da se karakteri ne poklapaju,
        izlazi se iz unutrasnje petlje. */
     for (j = 0; t[j] != '\0'; j++)
