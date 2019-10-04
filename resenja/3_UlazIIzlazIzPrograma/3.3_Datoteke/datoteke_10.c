@@ -45,5 +45,5 @@ int main() {
   /* Zatvaranje datoteke. */
   fclose(izlaz);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

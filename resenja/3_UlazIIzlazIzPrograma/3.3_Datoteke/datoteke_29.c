@@ -55,5 +55,5 @@ int main(int argc, char *argv[]) {
   /* Zatvaranje datoteke. */
   fclose(izlaz);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

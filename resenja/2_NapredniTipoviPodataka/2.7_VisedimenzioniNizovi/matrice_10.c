@@ -52,5 +52,5 @@ int main() {
   else
     printf("Matrica nije donje trougaona.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

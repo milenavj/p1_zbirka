@@ -53,5 +53,5 @@ int main() {
     printf("%g ", b[i]);
   printf("\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

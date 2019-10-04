@@ -78,5 +78,5 @@ int main() {
   printf("Rezultat mnozenja je:\n");
   ispisi(c, m, t);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

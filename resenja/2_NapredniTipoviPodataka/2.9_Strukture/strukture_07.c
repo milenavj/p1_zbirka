@@ -95,5 +95,5 @@ int main() {
     if (studenti[i].prosek == maks_prosek)
       ispisi(&studenti[i]);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

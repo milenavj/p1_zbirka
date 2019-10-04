@@ -42,5 +42,5 @@ int main() {
   /* Ispis rezultata. */
   printf("Razlika je: %.2f\n", gornji_trougao - donji_trougao);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

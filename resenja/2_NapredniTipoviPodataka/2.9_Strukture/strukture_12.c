@@ -106,5 +106,5 @@ int main() {
   printf("Povrsina poligona je %.3lf.\n",
          povrsina_poligona(poligon, n));
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

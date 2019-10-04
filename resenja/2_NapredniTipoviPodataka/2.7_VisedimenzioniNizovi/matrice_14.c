@@ -122,5 +122,5 @@ int main() {
   else
     printf("Elementi nisu sortirani po dijagonalama.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

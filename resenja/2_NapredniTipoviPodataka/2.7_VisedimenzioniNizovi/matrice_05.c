@@ -63,5 +63,5 @@ int main() {
   printf("Rezultujuca matrica:\n");
   ispisi(a, m, n);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

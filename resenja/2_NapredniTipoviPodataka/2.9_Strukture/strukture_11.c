@@ -70,5 +70,5 @@ int main() {
   printf("Ukupno crvenih lopti: %d\n",
          broj_lopti_u_boji(lopte, n, crvena));
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

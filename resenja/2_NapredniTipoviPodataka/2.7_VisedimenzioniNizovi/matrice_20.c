@@ -55,5 +55,5 @@ int main() {
       printf("Sedlo: %d %d %g\n", i, indeks_kolone, min_vrste);
   }
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

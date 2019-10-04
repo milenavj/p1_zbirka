@@ -71,5 +71,5 @@ int main() {
   else
     printf("Druga matrica nije sadrzana u prvoj matrici.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

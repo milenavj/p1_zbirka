@@ -127,5 +127,5 @@ int main() {
   printf("Prosecna cena potrosacke korpe: %.2f\n",
          prosek(korpe, n));
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

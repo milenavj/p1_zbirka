@@ -101,5 +101,5 @@ int main(int argc, char *argv[]) {
   fclose(ulaz);
   fclose(izlaz);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

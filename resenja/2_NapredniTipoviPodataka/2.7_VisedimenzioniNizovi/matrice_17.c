@@ -82,5 +82,5 @@ int main() {
   else
     printf("Matrica nije magicni kvadrat.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

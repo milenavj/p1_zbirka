@@ -69,5 +69,5 @@ int main() {
   else
     printf("Sume nisu uredjene strogo rastuce.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

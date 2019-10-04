@@ -91,5 +91,5 @@ int main() {
   printf("Proizvod svih razlomaka: %d/%d\n", proizvod.brojilac,
          proizvod.imenilac);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

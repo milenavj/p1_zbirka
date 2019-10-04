@@ -116,5 +116,5 @@ int main() {
     }
   }
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

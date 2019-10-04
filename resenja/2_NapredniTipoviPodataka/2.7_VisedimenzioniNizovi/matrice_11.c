@@ -61,5 +61,5 @@ int main() {
   /* Ispis rezultata. */
   printf("Indeks kolone je: %d\n", indeks_kolone);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

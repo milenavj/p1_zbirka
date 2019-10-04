@@ -86,5 +86,5 @@ int main() {
   printf("Suma ispod sporedne dijagonale: %.2f\n",
          suma_ispod(a, n));
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

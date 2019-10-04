@@ -72,5 +72,5 @@ int main(int argc, char **argv) {
   fclose(ulaz1);
   fclose(ulaz2);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

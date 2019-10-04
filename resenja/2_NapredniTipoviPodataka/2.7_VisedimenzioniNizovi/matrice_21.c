@@ -133,5 +133,5 @@ int main() {
   }
   printf("\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

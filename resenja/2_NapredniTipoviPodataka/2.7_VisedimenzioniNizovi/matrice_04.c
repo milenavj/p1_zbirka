@@ -53,5 +53,5 @@ int main() {
   printf("Transponovana matrica je:\n");
   ispisi(t, n, m);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

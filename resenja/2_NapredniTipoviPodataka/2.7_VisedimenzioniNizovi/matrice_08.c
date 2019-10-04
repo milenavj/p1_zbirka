@@ -100,5 +100,5 @@ int main() {
   else
     printf("Relacija nije ekvivalencija.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

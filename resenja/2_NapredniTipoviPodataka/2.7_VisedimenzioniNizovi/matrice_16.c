@@ -72,5 +72,5 @@ int main() {
   else
     printf("Matrica nije ortonormirana.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

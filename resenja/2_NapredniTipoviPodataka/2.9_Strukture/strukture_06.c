@@ -86,5 +86,5 @@ int main() {
     printf("Prosecna ocena je: %.3lf.\n",
            (double) suma / broj_dece);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

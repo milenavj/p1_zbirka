@@ -31,5 +31,5 @@ int main() {
   /* Ispis rezultata. */
   printf("Euklidska norma: %.3lf\n", sqrt(suma));
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

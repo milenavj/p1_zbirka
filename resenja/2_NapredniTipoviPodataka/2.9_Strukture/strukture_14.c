@@ -120,5 +120,5 @@ int main() {
     ispis(&tekuci_integral);
   }
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

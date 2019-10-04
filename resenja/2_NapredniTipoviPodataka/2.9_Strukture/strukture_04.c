@@ -55,5 +55,5 @@ int main() {
   /* Ispis rezultata. */
   ispisi(gradovi, n);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

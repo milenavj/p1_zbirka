@@ -42,5 +42,5 @@ int main() {
   /* Ispis ucitane matrice. */
   ispisi(a, m, n);
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }

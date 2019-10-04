@@ -83,5 +83,5 @@ int main() {
   if (!postoji_gmail_adresa)
     printf("Nema vlasnika gmail naloga.\n");
 
-  return 0;
+  exit(EXIT_SUCCESS);
 }
