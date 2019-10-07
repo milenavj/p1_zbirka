@@ -50,7 +50,7 @@ int main(int argc, char **argv) {
      1. Doslo se do kraja prve datoteke. 
      2. Doslo se do kraja druge datoteke. 
      3. Doslo se do kraja obeju datoteka. 
-     U slucaju da se desio treci slucaj, nijedna od naredne dve 
+     Ako se desio treci slucaj, nijedna od naredne dve 
      petlje se nece izvrsiti. U prvom slucaju ce se izvrsiti samo
      prva petlja, a u drugom slucaju druga. */
 

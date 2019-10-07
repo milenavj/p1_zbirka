@@ -31,11 +31,11 @@ int main() {
     /* Ako i deli n, treba razlikovati dva slucaja. */
     if (n % i == 0) {
       if (i == n / i) {
-        /* I slucaj: kada je i koren broja, ispisuje se samo broj i,
+        /* I slucaj: Kada je i koren broja, ispisuje se samo broj i,
            npr. za n = 16, i = 4, ispisuje se samo 4. */
         printf("%d ", i);
       } else {
-        /* II slucaj: kada i nije koren broja, ispisuje se i broj  
+        /* II slucaj: Kada i nije koren broja, ispisuje se i broj  
            i i broj n/i, npr. za n = 16, i = 2 ispisuju se i 2 i 8.
            */
         printf("%d %d ", i, n / i);
