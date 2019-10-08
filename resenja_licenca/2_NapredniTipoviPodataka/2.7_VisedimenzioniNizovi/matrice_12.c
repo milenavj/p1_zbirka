@@ -1,0 +1,54 @@
+/*****************************************************************
+* Ovo delo zaštićeno je licencom Creative Commons CC BY-NC-ND 4.0
+* (Attribution-NonCommercial-NoDerivatives 4.0 International License).
+* Za detalje pogledati LICENSE.TXT
+* Autori: Milena Vujosevic Janicic, Jovana Kovacevic,  
+*         Danijela Simic, Andjelka Zecevic, Aleksandra Kocic
+******************************************************************/
+
+#include <stdio.h>
+#include <stdlib.h>
+
+#define MAKS 50
+
+/* Funkcija ucitava elemente matrice dimenzije mxn. */
+void ucitaj(float a[][MAKS], int n) {
+  int i, j;
+  printf("Unesite elemente matrice:\n");
+  for (i = 0; i < n; i++)
+    for (j = 0; j < n; j++)
+      scanf("%f", &a[i][j]);
+}
+
+int main() {
+  /* Deklaracije potrebnih promenljivih. */
+  float a[MAKS][MAKS];
+  int n, i, j;
+  float gornji_trougao = 0, donji_trougao = 0;
+
+  /* Ucitavanje dimenzije matrice i provera ispravnosti ulaza. */
+  printf("Unesite broj vrsta matrice: ");
+  scanf("%d", &n);
+  if (n <= 0 || n > MAKS) {
+    printf("Greska: neispravan unos.\n");
+    exit(EXIT_FAILURE);
+  }
+
+  /* Ucitavanje elemenata matrice. */
+  ucitaj(a, n);
+
+  /* Racunanje sume gornjeg trougla. */
+  for (i = 0; i < n / 2; i++)
+    for (j = i + 1; j < n - i - 1; j++)
+      gornji_trougao += a[i][j];
+
+  /* Racunanje sume donjeg trougla. */
+  for (i = n / 2; i < n; i++)
+    for (j = n - i; j < i; j++)
+      donji_trougao += a[i][j];
+
+  /* Ispis rezultata. */
+  printf("Razlika je: %.2f\n", gornji_trougao - donji_trougao);
+
+  exit(EXIT_SUCCESS);
+}

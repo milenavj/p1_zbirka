@@ -1,0 +1,46 @@
+/*****************************************************************
+* Ovo delo zaštićeno je licencom Creative Commons CC BY-NC-ND 4.0
+* (Attribution-NonCommercial-NoDerivatives 4.0 International License).
+* Za detalje pogledati LICENSE.TXT
+* Autori: Milena Vujosevic Janicic, Jovana Kovacevic,  
+*         Danijela Simic, Andjelka Zecevic, Aleksandra Kocic
+******************************************************************/
+
+#include <stdio.h>
+
+int main() {
+  /* Deklaracija potrebne promenljive. */
+  char c;
+
+  /* I nacin ucitavanja: U samom uslovu petlje se vrsi ucitavanje
+     jednog karaktera, njegovo smestanje u promenljivu c i provera 
+     da li je ucitani karakter tacka. Zagrade oko (c=getchar()) su
+     obavezne jer relacioni operator != ima veci prioritet od
+     dodele i kada ne bi postojale zagrade, redosled operacija bi
+     bio: (c = (getchar() != '.')), sto znaci da bi se u c smestio
+     rezultat poredjenja, odnosno 0 ili 1. */
+  while ((c = getchar()) != '.') {
+    /* Provera uslova i ispis odgovarajuceg karaktera. */
+    if (c >= 'A' && c <= 'Z')
+      putchar(c + 'a' - 'A');
+    else if (c >= 'a' && c <= 'z')
+      putchar(c - 'a' + 'A');
+    else
+      putchar(c);
+  }
+
+  /* II nacin: 
+     while(1) { 
+       c = getchar(); 
+       if(c == '.') 
+         break;
+       
+       if (c >= 'A' && c <= 'Z') 
+         putchar(c + 'a' - 'A'); 
+       else if (c >= 'a' && c <= 'z')
+         putchar(c - 'a' + 'A'); 
+       else putchar(c); 
+     } */
+
+  return 0;
+}
