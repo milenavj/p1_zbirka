@@ -3,17 +3,17 @@
 %\documentclass[b5paper]{book}
 
 \newif\ifcrnobelo
-\crnobelotrue   %otkomentarisati za crno-belu varijantu
+%\crnobelotrue   %otkomentarisati za crno-belu varijantu
 
 \newif\ifuboji
-%\ubojitrue       %zakomentarisati za crno-belu varijantu
+\ubojitrue       %zakomentarisati za crno-belu varijantu
 
 \newif\ifrecenzija
 %\recenzijatrue
 
 \newif\ifstampanaverzija
-\stampanaverzijatrue
-%\stampanaverzijafalse
+%\stampanaverzijatrue
+\stampanaverzijafalse
 
 \newif\ifelektronskaverzija
 \elektronskaverzijatrue
@@ -32,14 +32,13 @@
 \newwatermark*[allpages,color=black!50,angle=45,scale=1]{Elektronsko izdanje (2019)}
 \fi
 
-\iffalse
 \ifelektronskaverzija
+\documentclass[pdftex,b5paper,twoside]{book}
   \usepackage{draftwatermark}
   \SetWatermarkText{Elektronsko izdanje (2019)}
   \SetWatermarkLightness{0.94}
   \SetWatermarkScale{0.36}
   \usepackage{pdfpages}
-\fi
 \fi
 
 
@@ -60,8 +59,8 @@
 
 %za ukljucivanje resenja u materijal
 \newif\ifresenja
-%\resenjafalse    %postaviti na false za izbacivanje resenja
-\resenjatrue    
+\resenjafalse    %postaviti na false za izbacivanje resenja
+%\resenjatrue    
 
 
 \usepackage{fancyhdr}
@@ -71,10 +70,8 @@
 
 \begin{document}
 
-\iffalse
 \ifelektronskaverzija
-  \includepdf[pages={-}]{naslovna.pdf}
-\fi
+%  \includepdf[pages={-}]{naslovna.pdf}
 \fi
 
 \pagenumbering{roman}
@@ -101,9 +98,8 @@
 \input{poglavlja/10_Datoteke.tex}
 \input{poglavlja/A_IspitniRokovi.tex}
 
-\iffalse
 \ifelektronskaverzija
-\includepdf[pages={-}]{poslednja.pdf}
+%\includepdf[pages={-}]{poslednja.pdf}
 \fi
-\fi
+
 \end{document}

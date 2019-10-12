@@ -18,7 +18,7 @@
 \definecolor{milena}{rgb}{0.0, 0.29, 0.29}
 \definecolor{danijela}{rgb}{0.6, 0.0, 0.0}
 
-\newcommand\sstrana{\ifstampanaverzija \newpage \fi}
+\newcommand\sstrana{\ifstampanaverzija \newpage \fi \ifelektronskaverzija \newpage \fi}
 \newcommand\estrana{\ifelektronskaverzija \newpage \fi}
 \newcommand\skrati[1]{\ifpdf \else \vspace*{-#1mm} \fi}
 \newcommand\kckod[1]{\texttt{\justify #1}}        % kratak c kod
