@@ -20,8 +20,11 @@
 
 \newcommand\ssstrana{\ifstampanaverzija \newpage \fi}
 \newcommand\sstrana{\ifstampanaverzija \newpage \fi \ifelektronskaverzija \newpage \fi}
-\newcommand\estrana{\ifelektronskaverzija \newpage \fi}
+\newcommand\estrana{\ifelektronskaverzija \ifresenja \else \newpage \fi \fi} %ako je bez resenja
+\newcommand\eestrana{\ifelektronskaverzija \ifresenja \newpage \fi \fi} %ako je sa resenjima
 \newcommand\skrati[1]{\ifpdf \else \vspace*{-#1mm} \fi}
+\newcommand\eskrati[1]{\ifelektronskaverzija \ifresenja \else \vspace*{-#1mm} \fi \fi}
+\newcommand\eeskrati[1]{\ifelektronskaverzija \ifresenja \vspace*{-#1mm} \fi \fi}
 \newcommand\kckod[1]{\texttt{\justify #1}}        % kratak c kod
 \newcommand\argf[1]{\texttt{#1}}         % argument funkcije
 \newcommand\komentar[1]{\textcolor{red}{#1}}         % komentar

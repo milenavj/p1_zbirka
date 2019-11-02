@@ -54,13 +54,13 @@
 \input{podesavanja/hyphenation.tex}
 
 \newif\ifpdf
-\pdffalse       %postaviti na false za izbacivanje linkova na resenja
-%\pdftrue %postaviti na true da bi bili prisutni linkovi na resenja
+%\pdffalse       %postaviti na false za izbacivanje linkova na resenja
+\pdftrue %postaviti na true da bi bili prisutni linkovi na resenja
 
 %za ukljucivanje resenja u materijal
 \newif\ifresenja
-\resenjafalse    %postaviti na false za izbacivanje resenja
-%\resenjatrue    
+%\resenjafalse    %postaviti na false za izbacivanje resenja
+\resenjatrue    
 
 
 \usepackage{fancyhdr}
@@ -71,7 +71,7 @@
 \begin{document}
 
 \ifelektronskaverzija
-%  \includepdf[pages={-}]{naslovna.pdf}
+  \includepdf[pages={-}]{naslovna.pdf}
 \fi
 
 \pagenumbering{roman}
@@ -99,7 +99,7 @@
 \input{poglavlja/A_IspitniRokovi.tex}
 
 \ifelektronskaverzija
-%\includepdf[pages={-}]{poslednja.pdf}
+\includepdf[pages={-}]{poslednja.pdf}
 \fi
 
 \end{document}
